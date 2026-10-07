@@ -1,0 +1,25 @@
+{
+  "port_names": ["Singapore", "Rotterdam", "Shanghai", "Los Angeles", "New York", "Jebel Ali"],
+  "history_days": 240,
+  "revision_overlap_days": 14,
+  "freshness_days": 10,
+  "baseline_days": 56,
+  "min_history": 28,
+  "shipments": 60,
+  "seed": 1729,
+  "draws": 512,
+  "propagation_horizon_hours": 720,
+  "propagation_decay": 0.65,
+  "scenario_assumptions": {
+    "speed_knots": 16,
+    "distance_factor": 1.25,
+    "stress_delay_hours": 36,
+    "delay_sigma": 0.4,
+    "expedite_cost": 1800,
+    "prioritize_cost": 600,
+    "reroute_cost": 1000,
+    "alternate_port_cost": 1500,
+    "alternate_last_mile_hours": 24,
+    "late_penalty_fraction": 0.02
+  }
+}

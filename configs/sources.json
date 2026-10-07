@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0",
+  "sources": [
+    {"source_id":"portwatch_ports","source_name":"IMF PortWatch ports","adapter":"arcgis_ports","source_url":"https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/PortWatch_ports_database/FeatureServer/0","classification":"OBSERVED","critical":true,"schema_version":"1","required_fields":["portid","portname","lat","lon","country","LOCODE"]},
+    {"source_id":"portwatch_activity","source_name":"IMF PortWatch daily port activity","adapter":"arcgis_activity","source_url":"https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Ports_Data/FeatureServer/0","classification":"OBSERVED","critical":true,"schema_version":"1","required_fields":["portid","date","portcalls"]},
+    {"source_id":"wpi","source_name":"NGA World Port Index","adapter":"wpi_csv","source_url":"https://msi.nga.mil/Publications/WPI","download_url":null,"classification":"OBSERVED","critical":false,"schema_version":"1","required_fields":["World Port Index Number","Main Port Name","Latitude","Longitude","UN/LOCODE"]},
+    {"source_id":"unlocode","source_name":"UNECE UN/LOCODE","adapter":"unlocode_zip","source_url":"https://unlocode.unece.org/publications/","download_url":null,"classification":"OBSERVED","critical":false,"schema_version":"2025-1","required_fields":[]},
+    {"source_id":"routes","source_name":"Operator supplied public maritime route geometry","adapter":"route_geojson","source_url":null,"classification":"DERIVED","critical":false,"schema_version":"1","required_fields":["route_id","origin","destination","distance_nm","transit_hours"]},
+    {"source_id":"weather","source_name":"Open-Meteo ERA5 historical reanalysis","adapter":"weather","source_url":"https://archive-api.open-meteo.com/v1/archive","classification":"DERIVED","critical":false,"schema_version":"1","required_fields":["daily"]}
+  ]
+}
