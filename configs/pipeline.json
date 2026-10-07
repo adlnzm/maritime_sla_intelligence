@@ -1,5 +1,5 @@
 {
-  "port_names": ["Singapore", "Rotterdam", "Shanghai", "Los Angeles", "New York", "Jebel Ali"],
+  "port_names": ["Singapore", "Rotterdam", "Shanghai", "Los Angeles-Long Beach", "New York-New Jersey", "Jebel Ali"],
   "history_days": 240,
   "revision_overlap_days": 14,
   "freshness_days": 10,

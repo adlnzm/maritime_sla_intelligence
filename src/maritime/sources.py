@@ -1,8 +1,8 @@
 """Public adapters retain exact HTTP responses; failed requests never return fake records."""
+
 import csv
 import hashlib
 import io
-import json
 import time
 import zipfile
 from datetime import date, datetime, timedelta, timezone
@@ -40,38 +40,71 @@ class Fetcher:
                 path = folder / (checksum + ".raw")
                 if not path.exists():
                     path.write_bytes(response.content)
-                event = {"source_id": source_id, "source_url": str(response.url),
-                         "retrieved_at": utcnow(), "checksum": checksum,
-                         "raw_path": str(path), "bytes": len(response.content),
-                         "duration_seconds": time.perf_counter() - started,
-                         "retries": attempt, "status": "SUCCESS",
-                         "dataset_version": response.headers.get("etag")}
+                event = {
+                    "source_id": source_id,
+                    "source_url": str(response.url),
+                    "retrieved_at": utcnow(),
+                    "checksum": checksum,
+                    "raw_path": str(path),
+                    "bytes": len(response.content),
+                    "duration_seconds": time.perf_counter() - started,
+                    "retries": attempt,
+                    "status": "SUCCESS",
+                    "dataset_version": response.headers.get("etag"),
+                }
                 self.events.append(event)
                 return response, event
             except (httpx.TransportError, httpx.HTTPStatusError) as exc:
                 if isinstance(exc, httpx.TimeoutException):
                     self.timeouts += 1
-                retryable = isinstance(exc, httpx.TransportError) or exc.response.status_code == 429 or exc.response.status_code >= 500
+                retryable = (
+                    isinstance(exc, httpx.TransportError)
+                    or exc.response.status_code == 429
+                    or exc.response.status_code >= 500
+                )
                 if attempt == 3 or not retryable:
-                    self.events.append({"source_id": source_id, "source_url": url,
-                                        "retrieved_at": utcnow(), "status": "FAILED",
-                                        "error": type(exc).__name__, "retries": attempt,
-                                        "duration_seconds": time.perf_counter() - started})
+                    self.events.append(
+                        {
+                            "source_id": source_id,
+                            "source_url": url,
+                            "retrieved_at": utcnow(),
+                            "status": "FAILED",
+                            "error": type(exc).__name__,
+                            "retries": attempt,
+                            "duration_seconds": time.perf_counter() - started,
+                        }
+                    )
                     raise SourceError(f"{source_id}: {type(exc).__name__}") from exc
                 self.retries += 1
-                retry_after = exc.response.headers.get("Retry-After", "") if isinstance(exc, httpx.HTTPStatusError) else ""
+                retry_after = (
+                    exc.response.headers.get("Retry-After", "")
+                    if isinstance(exc, httpx.HTTPStatusError)
+                    else ""
+                )
                 self.sleep(min(60, float(retry_after)) if retry_after.isdigit() else 2**attempt)
 
     def arcgis(self, source, where, fields="*", order="ObjectId"):
         rows = []
         offset = 0
         while True:
-            response, event = self.get(source["source_id"], source["source_url"] + "/query", {
-                "f": "json", "where": where, "outFields": fields, "returnGeometry": "false",
-                "orderByFields": order, "resultOffset": offset, "resultRecordCount": 1000})
+            response, event = self.get(
+                source["source_id"],
+                source["source_url"] + "/query",
+                {
+                    "f": "json",
+                    "where": where,
+                    "outFields": fields,
+                    "returnGeometry": "false",
+                    "orderByFields": order,
+                    "resultOffset": offset,
+                    "resultRecordCount": 1000,
+                },
+            )
             body = response.json()
             if "error" in body or "features" not in body:
-                raise SourceError(f"{source['source_id']}: ArcGIS contract error: {body.get('error')}")
+                raise SourceError(
+                    f"{source['source_id']}: ArcGIS contract error: {body.get('error')}"
+                )
             page = [f["attributes"] for f in body["features"]]
             for row in page:
                 missing = set(source["required_fields"]) - row.keys()
@@ -90,23 +123,46 @@ class Fetcher:
 
 def provenance(row, source_id, classification="OBSERVED"):
     meta = row["_metadata"]
-    return {"source_id": source_id, "classification": classification,
-            "retrieved_at": meta["retrieved_at"], "lineage_id": meta["checksum"]}
+    return {
+        "source_id": source_id,
+        "classification": classification,
+        "retrieved_at": meta["retrieved_at"],
+        "lineage_id": meta["checksum"],
+    }
 
 
 def normalize_ports(rows):
-    return [{"port_id": r["portid"], "name": r["portname"], "country": r["country"],
-             "latitude": r["lat"], "longitude": r["lon"], "unlocode": r.get("LOCODE"),
-             **provenance(r, "portwatch_ports")} for r in rows]
+    return [
+        {
+            "port_id": r["portid"],
+            "name": r["portname"],
+            "country": r["country"],
+            "latitude": r["lat"],
+            "longitude": r["lon"],
+            "unlocode": r.get("LOCODE"),
+            **provenance(r, "portwatch_ports"),
+        }
+        for r in rows
+    ]
 
 
 def normalize_activity(rows):
     output = []
     for r in rows:
         value = r["date"]
-        day = datetime.fromtimestamp(value / 1000, timezone.utc).date().isoformat() if isinstance(value, (int, float)) else str(value)[:10]
-        output.append({"port_id": r["portid"], "date": day, "vessel_calls": r["portcalls"],
-                       **provenance(r, "portwatch_activity")})
+        day = (
+            datetime.fromtimestamp(value / 1000, timezone.utc).date().isoformat()
+            if isinstance(value, (int, float))
+            else str(value)[:10]
+        )
+        output.append(
+            {
+                "port_id": r["portid"],
+                "date": day,
+                "vessel_calls": r["portcalls"],
+                **provenance(r, "portwatch_activity"),
+            }
+        )
     return output
 
 
@@ -136,7 +192,10 @@ def ingest_portwatch(fetcher, registry, config, store, as_of):
     merged = {(r["port_id"], r["date"]): r for r in prior if r["date"] < begin.isoformat()}
     merged.update({(r["port_id"], r["date"]): r for r in current})
     lower = (as_of - timedelta(days=config["history_days"])).isoformat()
-    activity = sorted([r for r in merged.values() if lower <= r["date"] <= as_of.isoformat()], key=lambda r: (r["port_id"], r["date"]))
+    activity = sorted(
+        [r for r in merged.values() if lower <= r["date"] <= as_of.isoformat()],
+        key=lambda r: (r["port_id"], r["date"]),
+    )
     # Caller commits checkpoint only after DQ succeeds.
     return ports, activity, ("activity_cache:" + scope, activity)
 
@@ -147,19 +206,36 @@ def ingest_optional(fetcher, source, ports, as_of):
     if adapter == "weather":
         rows = []
         for port in ports:
-            response, meta = fetcher.get(sid, source["source_url"], {
-                "latitude": port["latitude"], "longitude": port["longitude"],
-                "start_date": (as_of - timedelta(days=10)).isoformat(),
-                "end_date": (as_of - timedelta(days=5)).isoformat(),
-                "daily": "wind_speed_10m_max", "timezone": "UTC"})
+            response, meta = fetcher.get(
+                sid,
+                source["source_url"],
+                {
+                    "latitude": port["latitude"],
+                    "longitude": port["longitude"],
+                    "start_date": (as_of - timedelta(days=10)).isoformat(),
+                    "end_date": (as_of - timedelta(days=5)).isoformat(),
+                    "daily": "wind_speed_10m_max",
+                    "timezone": "UTC",
+                },
+            )
             body = response.json()
-            for day, wind in zip(body["daily"]["time"], body["daily"]["wind_speed_10m_max"], strict=True):
+            for day, wind in zip(
+                body["daily"]["time"], body["daily"]["wind_speed_10m_max"], strict=True
+            ):
                 if wind is None:
                     raise SourceError("Missing weather reanalysis value")
-                rows.append({"port_id": port["port_id"], "date": day, "wind_kmh": wind,
-                             **provenance({"_metadata": meta}, sid, "DERIVED")})
+                rows.append(
+                    {
+                        "port_id": port["port_id"],
+                        "date": day,
+                        "wind_kmh": wind,
+                        **provenance({"_metadata": meta}, sid, "DERIVED"),
+                    }
+                )
         return rows
-    url = source.get("download_url") or (source.get("source_url") if adapter == "route_geojson" else None)
+    url = source.get("download_url") or (
+        source.get("source_url") if adapter == "route_geojson" else None
+    )
     if not url:
         return None
     response, meta = fetcher.get(sid, url)
@@ -168,18 +244,30 @@ def ingest_optional(fetcher, source, ports, as_of):
         records = list(csv.DictReader(io.StringIO(response.content.decode("utf-8-sig"))))
         if not records or set(source["required_fields"]) - records[0].keys():
             raise SourceError("WPI header contract mismatch")
-        return [{"reference_id": r["World Port Index Number"], "name": r["Main Port Name"],
-                 "latitude": float(r["Latitude"]), "longitude": float(r["Longitude"]),
-                 "unlocode": r["UN/LOCODE"].replace(" ", ""), **origin} for r in records]
+        return [
+            {
+                "reference_id": r["World Port Index Number"],
+                "name": r["Main Port Name"],
+                "latitude": float(r["Latitude"]),
+                "longitude": float(r["Longitude"]),
+                "unlocode": r["UN/LOCODE"].replace(" ", ""),
+                **origin,
+            }
+            for r in records
+        ]
     if adapter == "unlocode_zip":
         rows = []
         with zipfile.ZipFile(io.BytesIO(response.content)) as archive:
             for name in archive.namelist():
                 if not name.lower().endswith(".csv") or "code" not in name.lower():
                     continue
-                for r in csv.reader(io.StringIO(archive.read(name).decode("utf-8-sig", errors="strict"))):
+                for r in csv.reader(
+                    io.StringIO(archive.read(name).decode("utf-8-sig", errors="strict"))
+                ):
                     if len(r) >= 12 and len(r[1]) == 2 and len(r[2]) == 3:
-                        rows.append({"unlocode": r[1] + r[2], "name": r[3], "function": r[6], **origin})
+                        rows.append(
+                            {"unlocode": r[1] + r[2], "name": r[3], "function": r[6], **origin}
+                        )
         if not rows:
             raise SourceError("UN/LOCODE archive contains no recognized location rows")
         return rows

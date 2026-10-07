@@ -1,0 +1,23 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      MARITIME_API_KEY: ${MARITIME_API_KEY:?Set MARITIME_API_KEY}
+      MARITIME_OPERATOR_KEY: ${MARITIME_OPERATOR_KEY:?Set MARITIME_OPERATOR_KEY}
+    volumes:
+      - maritime-data:/app/data
+    restart: unless-stopped
+  pipeline:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    command: ["maritime", "run"]
+    volumes:
+      - maritime-data:/app/data
+    profiles: ["pipeline"]
+volumes:
+  maritime-data:

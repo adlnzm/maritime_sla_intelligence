@@ -1,4 +1,5 @@
 """Transactional, run-versioned local store; published pointer prevents partial reads."""
+
 import json
 import sqlite3
 from pathlib import Path
@@ -44,32 +45,58 @@ class Store:
     def write(self, run_id, product, records):
         with self.connect() as con:
             con.execute("DELETE FROM products WHERE run_id=? AND product=?", (run_id, product))
-            con.executemany("INSERT INTO products VALUES (?,?,?,?)", [
-                (run_id, product, stable_id(i, record), json.dumps(record, default=str, allow_nan=False))
-                for i, record in enumerate(records)
-            ])
+            con.executemany(
+                "INSERT INTO products VALUES (?,?,?,?)",
+                [
+                    (
+                        run_id,
+                        product,
+                        stable_id(i, record),
+                        json.dumps(record, default=str, allow_nan=False),
+                    )
+                    for i, record in enumerate(records)
+                ],
+            )
 
     def read(self, product, run_id=None):
         run_id = run_id or self.metadata("published_run")
         with self.connect() as con:
-            rows = con.execute("SELECT payload FROM products WHERE run_id=? AND product=? ORDER BY rowid", (run_id, product)).fetchall()
+            rows = con.execute(
+                "SELECT payload FROM products WHERE run_id=? AND product=? ORDER BY rowid",
+                (run_id, product),
+            ).fetchall()
         return [json.loads(row[0]) for row in rows]
 
     def run(self, report):
         with self.connect() as con:
-            con.execute("INSERT OR REPLACE INTO runs VALUES (?,?,?,?,?)", (
-                report["run_id"], report["status"], report["start_time"], report.get("end_time"), json.dumps(report, default=str)))
+            con.execute(
+                "INSERT OR REPLACE INTO runs VALUES (?,?,?,?,?)",
+                (
+                    report["run_id"],
+                    report["status"],
+                    report["start_time"],
+                    report.get("end_time"),
+                    json.dumps(report, default=str),
+                ),
+            )
 
     def audit(self, kind, payload):
         at = utcnow()
         audit_id = stable_id(at, kind, payload)
         with self.connect() as con:
-            con.execute("INSERT INTO audit VALUES (?,?,?,?)", (audit_id, at, kind, json.dumps(payload)))
+            con.execute(
+                "INSERT INTO audit VALUES (?,?,?,?)", (audit_id, at, kind, json.dumps(payload))
+            )
         return audit_id
 
     def audits(self, kind):
         with self.connect() as con:
-            return [json.loads(r[0]) for r in con.execute("SELECT payload FROM audit WHERE kind=? ORDER BY created_at", (kind,))]
+            return [
+                json.loads(r[0])
+                for r in con.execute(
+                    "SELECT payload FROM audit WHERE kind=? ORDER BY created_at", (kind,)
+                )
+            ]
 
     def latest_report(self):
         with self.connect() as con:

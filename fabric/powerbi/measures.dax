@@ -1,0 +1,8 @@
+// Import the Gold tables via the Fabric SQL endpoint; filter one published run.
+At Risk Shipments = CALCULATE(DISTINCTCOUNT(fact_sla_risk[shipment_id]), fact_sla_risk[breach_probability] >= 0.5)
+Simulated Expected Loss = SUM(fact_sla_risk[expected_loss])
+Simulated Expected Benefit = SUM(fact_decisions[expected_benefit])
+Mean Expected Delay Hours = AVERAGE(fact_sla_risk[expected_delay_hours])
+Critical Ports = CALCULATE(DISTINCTCOUNT(fact_congestion[port_id]), fact_congestion[category] = "CRITICAL")
+Affected Ports = DISTINCTCOUNT(fact_exposure[port_id])
+Max Propagation Depth = MAX(fact_exposure[depth])

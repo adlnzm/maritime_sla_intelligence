@@ -1,7 +1,7 @@
-from datetime import date, datetime, timezone
-from enum import StrEnum
 import hashlib
 import json
+from datetime import date, datetime, timezone
+from enum import StrEnum
 
 from pydantic import BaseModel, ConfigDict, Field, field_validator
 
@@ -67,7 +67,9 @@ class Route(Record):
 class Review(BaseModel):
     model_config = ConfigDict(extra="forbid")
     status: str = Field(pattern="^(accept|reject|override)$")
-    action: str | None = Field(default=None, pattern="^(NO_ACTION|REROUTE|ALTERNATE_PORT|EXPEDITE|PRIORITIZE)$")
+    action: str | None = Field(
+        default=None, pattern="^(NO_ACTION|REROUTE|ALTERNATE_PORT|EXPEDITE|PRIORITIZE)$"
+    )
     reason: str = Field(min_length=5, max_length=2000)
     operator: str = Field(min_length=1, max_length=100)
 
