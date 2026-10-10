@@ -1,0 +1,2166 @@
+[
+  {
+    "shipment_id": "885fd8e3acf8217d32fd9527",
+    "origin": "port1114",
+    "destination": "port664",
+    "route": [
+      "port1114",
+      "port664"
+    ],
+    "planned_transit_hours": 378.3736185082632,
+    "planned_delivery": "2026-10-25T18:22:25.026630+00:00",
+    "promised_delivery": "2026-10-26T12:43:10.334223+00:00",
+    "sla_buffer_hours": 18.34591877590119,
+    "priority": 1,
+    "cargo_value": 148300.45836443407,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "52a1599deac17fea2cadb537",
+    "origin": "port744",
+    "destination": "port1201",
+    "route": [
+      "port744",
+      "port1201"
+    ],
+    "planned_transit_hours": 246.4374552305621,
+    "planned_delivery": "2026-10-20T06:26:14.838830+00:00",
+    "promised_delivery": "2026-10-21T07:58:03.061791+00:00",
+    "sla_buffer_hours": 25.53006193355967,
+    "priority": 3,
+    "cargo_value": 44576.610638305174,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "593b473b878e4617fb7615d1",
+    "origin": "port815",
+    "destination": "port1114",
+    "route": [
+      "port815",
+      "port1114"
+    ],
+    "planned_transit_hours": 246.93301428310508,
+    "planned_delivery": "2026-10-20T06:55:58.851419+00:00",
+    "promised_delivery": "2026-10-20T15:10:07.420124+00:00",
+    "sla_buffer_hours": 8.235713529116264,
+    "priority": 2,
+    "cargo_value": 48760.30852631731,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "e6714853fecd3892cac910a8",
+    "origin": "port815",
+    "destination": "port1188",
+    "route": [
+      "port815",
+      "port1188"
+    ],
+    "planned_transit_hours": 500.48312862545407,
+    "planned_delivery": "2026-10-30T20:28:59.263052+00:00",
+    "promised_delivery": "2026-10-31T23:54:12.522102+00:00",
+    "sla_buffer_hours": 27.42034973614614,
+    "priority": 3,
+    "cargo_value": 237271.3149511884,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "e4ebdce87eedfd2998ea09e5",
+    "origin": "port1188",
+    "destination": "port1114",
+    "route": [
+      "port1188",
+      "port1114"
+    ],
+    "planned_transit_hours": 377.7053615834835,
+    "planned_delivery": "2026-10-25T17:42:19.301701+00:00",
+    "promised_delivery": "2026-10-26T13:19:53.104169+00:00",
+    "sla_buffer_hours": 19.626056241215473,
+    "priority": 2,
+    "cargo_value": 63999.064065177205,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "b9892e65ca5232af7655b655",
+    "origin": "port744",
+    "destination": "port1201",
+    "route": [
+      "port744",
+      "port1201"
+    ],
+    "planned_transit_hours": 246.4374552305621,
+    "planned_delivery": "2026-10-20T06:26:14.838830+00:00",
+    "promised_delivery": "2026-10-22T04:04:59.259342+00:00",
+    "sla_buffer_hours": 45.64567236439817,
+    "priority": 2,
+    "cargo_value": 63429.181167396266,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "26a3e4382c859c2988b8e2d7",
+    "origin": "port815",
+    "destination": "port1188",
+    "route": [
+      "port815",
+      "port1188"
+    ],
+    "planned_transit_hours": 500.48312862545407,
+    "planned_delivery": "2026-10-30T20:28:59.263052+00:00",
+    "promised_delivery": "2026-11-01T00:44:55.240057+00:00",
+    "sla_buffer_hours": 28.265549168036664,
+    "priority": 1,
+    "cargo_value": 97079.79556791141,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "782976cc7439d013141a2485",
+    "origin": "port1188",
+    "destination": "port1201",
+    "route": [
+      "port1188",
+      "port1201"
+    ],
+    "planned_transit_hours": 161.3375829522384,
+    "planned_delivery": "2026-10-16T17:20:15.298628+00:00",
+    "promised_delivery": "2026-10-17T13:22:30.786348+00:00",
+    "sla_buffer_hours": 20.03763547777059,
+    "priority": 2,
+    "cargo_value": 57987.44825113483,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "a189f247df34ef10a68b486e",
+    "origin": "port1201",
+    "destination": "port664",
+    "route": [
+      "port1201",
+      "port664"
+    ],
+    "planned_transit_hours": 597.0734368237737,
+    "planned_delivery": "2026-11-03T21:04:24.372566+00:00",
+    "promised_delivery": "2026-11-04T08:53:55.406374+00:00",
+    "sla_buffer_hours": 11.825287168898418,
+    "priority": 2,
+    "cargo_value": 129480.60895955031,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "89805c3448a1ca2e4573c438",
+    "origin": "port1201",
+    "destination": "port815",
+    "route": [
+      "port1201",
+      "port815"
+    ],
+    "planned_transit_hours": 647.5494407289221,
+    "planned_delivery": "2026-11-05T23:32:57.986624+00:00",
+    "promised_delivery": "2026-11-07T10:24:00.866948+00:00",
+    "sla_buffer_hours": 34.85080008994588,
+    "priority": 3,
+    "cargo_value": 107986.30945433833,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "894792b175547204bd568a93",
+    "origin": "port1114",
+    "destination": "port1201",
+    "route": [
+      "port1114",
+      "port1201"
+    ],
+    "planned_transit_hours": 444.8179713098079,
+    "planned_delivery": "2026-10-28T12:49:04.696715+00:00",
+    "promised_delivery": "2026-10-30T04:16:30.127933+00:00",
+    "sla_buffer_hours": 39.45706422718646,
+    "priority": 3,
+    "cargo_value": 158166.3923710866,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "732587d91f14fe8a248fd3f4",
+    "origin": "port744",
+    "destination": "port664",
+    "route": [
+      "port744",
+      "port664"
+    ],
+    "planned_transit_hours": 567.1143121801997,
+    "planned_delivery": "2026-11-02T15:06:51.523849+00:00",
+    "promised_delivery": "2026-11-04T02:58:28.724006+00:00",
+    "sla_buffer_hours": 35.860333376918845,
+    "priority": 1,
+    "cargo_value": 148723.6618331667,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "dfccee72cd6cfeef23069a9e",
+    "origin": "port1188",
+    "destination": "port1114",
+    "route": [
+      "port1188",
+      "port1114"
+    ],
+    "planned_transit_hours": 377.7053615834835,
+    "planned_delivery": "2026-10-25T17:42:19.301701+00:00",
+    "promised_delivery": "2026-10-26T01:07:30.453671+00:00",
+    "sla_buffer_hours": 7.41976443631862,
+    "priority": 1,
+    "cargo_value": 30532.08721220506,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "27083e335a3d3fe5e435c869",
+    "origin": "port1114",
+    "destination": "port744",
+    "route": [
+      "port1114",
+      "port744"
+    ],
+    "planned_transit_hours": 219.18402228530005,
+    "planned_delivery": "2026-10-19T03:11:02.480227+00:00",
+    "promised_delivery": "2026-10-20T09:19:40.567452+00:00",
+    "sla_buffer_hours": 30.143913118131024,
+    "priority": 3,
+    "cargo_value": 134394.48506928576,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "f84580a9f31b2bd790934a21",
+    "origin": "port1188",
+    "destination": "port1114",
+    "route": [
+      "port1188",
+      "port1114"
+    ],
+    "planned_transit_hours": 377.7053615834835,
+    "planned_delivery": "2026-10-25T17:42:19.301701+00:00",
+    "promised_delivery": "2026-10-26T16:36:00.835135+00:00",
+    "sla_buffer_hours": 22.894870398354204,
+    "priority": 3,
+    "cargo_value": 146946.07332231905,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "160fc364e1aaa3f1d4692cd0",
+    "origin": "port1188",
+    "destination": "port664",
+    "route": [
+      "port1188",
+      "port664"
+    ],
+    "planned_transit_hours": 440.72919542278225,
+    "planned_delivery": "2026-10-28T08:43:45.103522+00:00",
+    "promised_delivery": "2026-10-28T23:00:10.854171+00:00",
+    "sla_buffer_hours": 14.27381962475221,
+    "priority": 2,
+    "cargo_value": 230552.12491547962,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "e3086c0fe438954b9852672d",
+    "origin": "port1201",
+    "destination": "port744",
+    "route": [
+      "port1201",
+      "port744"
+    ],
+    "planned_transit_hours": 246.4374552305621,
+    "planned_delivery": "2026-10-20T06:26:14.838830+00:00",
+    "promised_delivery": "2026-10-20T12:52:48.057796+00:00",
+    "sla_buffer_hours": 6.442560823762789,
+    "priority": 2,
+    "cargo_value": 20413.205288201993,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "ccf0d229edf029fdf2fa42e7",
+    "origin": "port1114",
+    "destination": "port1201",
+    "route": [
+      "port1114",
+      "port1201"
+    ],
+    "planned_transit_hours": 444.8179713098079,
+    "planned_delivery": "2026-10-28T12:49:04.696715+00:00",
+    "promised_delivery": "2026-10-28T22:03:40.544144+00:00",
+    "sla_buffer_hours": 9.24329095233573,
+    "priority": 3,
+    "cargo_value": 150548.18462451673,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "663c0ef6109ee874dabcb435",
+    "origin": "port664",
+    "destination": "port744",
+    "route": [
+      "port664",
+      "port744"
+    ],
+    "planned_transit_hours": 567.1143121801997,
+    "planned_delivery": "2026-11-02T15:06:51.523849+00:00",
+    "promised_delivery": "2026-11-04T07:03:49.736984+00:00",
+    "sla_buffer_hours": 39.94950364862826,
+    "priority": 3,
+    "cargo_value": 158580.61570213787,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "b8e6fc8d8b6f3c4ecf093483",
+    "origin": "port1188",
+    "destination": "port1201",
+    "route": [
+      "port1188",
+      "port1201"
+    ],
+    "planned_transit_hours": 161.3375829522384,
+    "planned_delivery": "2026-10-16T17:20:15.298628+00:00",
+    "promised_delivery": "2026-10-17T11:37:38.281411+00:00",
+    "sla_buffer_hours": 18.289717439749033,
+    "priority": 2,
+    "cargo_value": 223821.90746205178,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "080fe502d31c6779b384d8ce",
+    "origin": "port815",
+    "destination": "port1201",
+    "route": [
+      "port815",
+      "port1201"
+    ],
+    "planned_transit_hours": 647.5494407289221,
+    "planned_delivery": "2026-11-05T23:32:57.986624+00:00",
+    "promised_delivery": "2026-11-06T23:48:16.943619+00:00",
+    "sla_buffer_hours": 24.255265831821436,
+    "priority": 1,
+    "cargo_value": 82095.14550015435,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "aa35fd6d34a6fca07cbb4919",
+    "origin": "port1188",
+    "destination": "port744",
+    "route": [
+      "port1188",
+      "port744"
+    ],
+    "planned_transit_hours": 272.9208036187617,
+    "planned_delivery": "2026-10-21T08:55:14.893028+00:00",
+    "promised_delivery": "2026-10-22T17:35:28.145502+00:00",
+    "sla_buffer_hours": 32.67034790965572,
+    "priority": 3,
+    "cargo_value": 197120.68466809357,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "499f56e05a410e70dec1f966",
+    "origin": "port1201",
+    "destination": "port1114",
+    "route": [
+      "port1201",
+      "port1114"
+    ],
+    "planned_transit_hours": 444.8179713098079,
+    "planned_delivery": "2026-10-28T12:49:04.696715+00:00",
+    "promised_delivery": "2026-10-29T06:05:30.177714+00:00",
+    "sla_buffer_hours": 17.273744721784873,
+    "priority": 1,
+    "cargo_value": 237014.3874554546,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "9902ca6bf9c03144c6e8cfcb",
+    "origin": "port744",
+    "destination": "port1201",
+    "route": [
+      "port744",
+      "port1201"
+    ],
+    "planned_transit_hours": 246.4374552305621,
+    "planned_delivery": "2026-10-20T06:26:14.838830+00:00",
+    "promised_delivery": "2026-10-21T16:53:12.968310+00:00",
+    "sla_buffer_hours": 34.44948041096605,
+    "priority": 2,
+    "cargo_value": 45790.5773898905,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "5a364886ae2085f155c956fc",
+    "origin": "port744",
+    "destination": "port1201",
+    "route": [
+      "port744",
+      "port1201"
+    ],
+    "planned_transit_hours": 246.4374552305621,
+    "planned_delivery": "2026-10-20T06:26:14.838830+00:00",
+    "promised_delivery": "2026-10-20T21:42:59.720780+00:00",
+    "sla_buffer_hours": 15.279133874981772,
+    "priority": 1,
+    "cargo_value": 146064.3348860425,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "0e0bd8ebca0a54576913e06a",
+    "origin": "port1188",
+    "destination": "port1201",
+    "route": [
+      "port1188",
+      "port1201"
+    ],
+    "planned_transit_hours": 161.3375829522384,
+    "planned_delivery": "2026-10-16T17:20:15.298628+00:00",
+    "promised_delivery": "2026-10-17T17:01:34.937149+00:00",
+    "sla_buffer_hours": 23.68878847816407,
+    "priority": 3,
+    "cargo_value": 93585.93840384646,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "c44851791281211f8fd6ee27",
+    "origin": "port664",
+    "destination": "port815",
+    "route": [
+      "port664",
+      "port815"
+    ],
+    "planned_transit_hours": 166.00312061986673,
+    "planned_delivery": "2026-10-16T22:00:11.234232+00:00",
+    "promised_delivery": "2026-10-17T17:14:25.003748+00:00",
+    "sla_buffer_hours": 19.237158199144794,
+    "priority": 1,
+    "cargo_value": 240989.1559365359,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "e10e865fd7d4cf2f871646b0",
+    "origin": "port815",
+    "destination": "port1188",
+    "route": [
+      "port815",
+      "port1188"
+    ],
+    "planned_transit_hours": 500.48312862545407,
+    "planned_delivery": "2026-10-30T20:28:59.263052+00:00",
+    "promised_delivery": "2026-10-31T19:43:39.392756+00:00",
+    "sla_buffer_hours": 23.24448047347159,
+    "priority": 1,
+    "cargo_value": 164928.84119447862,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "62602ce40db7bce0d19a0b54",
+    "origin": "port1114",
+    "destination": "port1188",
+    "route": [
+      "port1114",
+      "port1188"
+    ],
+    "planned_transit_hours": 377.7053615834835,
+    "planned_delivery": "2026-10-25T17:42:19.301701+00:00",
+    "promised_delivery": "2026-10-26T07:06:49.627680+00:00",
+    "sla_buffer_hours": 13.408423883260477,
+    "priority": 3,
+    "cargo_value": 185103.38823075852,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "cecbb293710d01cc4e536116",
+    "origin": "port1188",
+    "destination": "port744",
+    "route": [
+      "port1188",
+      "port744"
+    ],
+    "planned_transit_hours": 272.9208036187617,
+    "planned_delivery": "2026-10-21T08:55:14.893028+00:00",
+    "promised_delivery": "2026-10-21T22:49:23.732252+00:00",
+    "sla_buffer_hours": 13.902455340036056,
+    "priority": 3,
+    "cargo_value": 184549.58459341055,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "e67fb867c6d59220d51f9387",
+    "origin": "port1114",
+    "destination": "port815",
+    "route": [
+      "port1114",
+      "port815"
+    ],
+    "planned_transit_hours": 246.93301428310508,
+    "planned_delivery": "2026-10-20T06:55:58.851419+00:00",
+    "promised_delivery": "2026-10-22T02:18:15.396160+00:00",
+    "sla_buffer_hours": 43.371262428056234,
+    "priority": 2,
+    "cargo_value": 66012.14362944182,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "385c9a08d851611e1158b7de",
+    "origin": "port1188",
+    "destination": "port815",
+    "route": [
+      "port1188",
+      "port815"
+    ],
+    "planned_transit_hours": 500.48312862545407,
+    "planned_delivery": "2026-10-30T20:28:59.263052+00:00",
+    "promised_delivery": "2026-10-31T10:36:25.953286+00:00",
+    "sla_buffer_hours": 14.12408062059037,
+    "priority": 1,
+    "cargo_value": 120214.24743458777,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "b6bc3238041887019181b460",
+    "origin": "port815",
+    "destination": "port1201",
+    "route": [
+      "port815",
+      "port1201"
+    ],
+    "planned_transit_hours": 647.5494407289221,
+    "planned_delivery": "2026-11-05T23:32:57.986624+00:00",
+    "promised_delivery": "2026-11-07T15:33:27.292384+00:00",
+    "sla_buffer_hours": 40.00814048883875,
+    "priority": 2,
+    "cargo_value": 109526.8090175837,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "452a2a5200ac181b7bf53167",
+    "origin": "port1188",
+    "destination": "port1114",
+    "route": [
+      "port1188",
+      "port1114"
+    ],
+    "planned_transit_hours": 377.7053615834835,
+    "planned_delivery": "2026-10-25T17:42:19.301701+00:00",
+    "promised_delivery": "2026-10-27T13:20:39.385919+00:00",
+    "sla_buffer_hours": 43.63891228301909,
+    "priority": 1,
+    "cargo_value": 246183.31860849913,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "9dc56eff42df88a83085054d",
+    "origin": "port664",
+    "destination": "port744",
+    "route": [
+      "port664",
+      "port744"
+    ],
+    "planned_transit_hours": 567.1143121801997,
+    "planned_delivery": "2026-11-02T15:06:51.523849+00:00",
+    "promised_delivery": "2026-11-03T13:28:24.831443+00:00",
+    "sla_buffer_hours": 22.359252109441815,
+    "priority": 1,
+    "cargo_value": 50731.75797410992,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "ee386ba922ae2ceaa050d70b",
+    "origin": "port1201",
+    "destination": "port1114",
+    "route": [
+      "port1201",
+      "port1114"
+    ],
+    "planned_transit_hours": 444.8179713098079,
+    "planned_delivery": "2026-10-28T12:49:04.696715+00:00",
+    "promised_delivery": "2026-10-29T04:01:58.631608+00:00",
+    "sla_buffer_hours": 15.214981914758807,
+    "priority": 1,
+    "cargo_value": 15231.652936153176,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "98a4465ce71d80fd4de3e9e9",
+    "origin": "port1114",
+    "destination": "port1201",
+    "route": [
+      "port1114",
+      "port1201"
+    ],
+    "planned_transit_hours": 444.8179713098079,
+    "planned_delivery": "2026-10-28T12:49:04.696715+00:00",
+    "promised_delivery": "2026-10-29T07:16:06.020446+00:00",
+    "sla_buffer_hours": 18.450367702982085,
+    "priority": 1,
+    "cargo_value": 19381.813204348648,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "35f64d685eac91c1644d9e49",
+    "origin": "port1188",
+    "destination": "port1201",
+    "route": [
+      "port1188",
+      "port1201"
+    ],
+    "planned_transit_hours": 161.3375829522384,
+    "planned_delivery": "2026-10-16T17:20:15.298628+00:00",
+    "promised_delivery": "2026-10-18T01:04:15.590597+00:00",
+    "sla_buffer_hours": 31.733414435721734,
+    "priority": 2,
+    "cargo_value": 190019.49872896296,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "4907c817aa96ae9faf8b6e66",
+    "origin": "port744",
+    "destination": "port815",
+    "route": [
+      "port744",
+      "port1114",
+      "port815"
+    ],
+    "planned_transit_hours": 466.1170365684051,
+    "planned_delivery": "2026-10-29T10:07:01.331646+00:00",
+    "promised_delivery": "2026-10-30T02:26:27.500381+00:00",
+    "sla_buffer_hours": 16.323935759660444,
+    "priority": 1,
+    "cargo_value": 18928.893018951618,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "4c26e02e52c8a5e5412176ec",
+    "origin": "port744",
+    "destination": "port815",
+    "route": [
+      "port744",
+      "port1114",
+      "port815"
+    ],
+    "planned_transit_hours": 466.1170365684051,
+    "planned_delivery": "2026-10-29T10:07:01.331646+00:00",
+    "promised_delivery": "2026-10-31T02:05:45.086979+00:00",
+    "sla_buffer_hours": 39.9788209256559,
+    "priority": 2,
+    "cargo_value": 158465.94349728327,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "15f3a921204452dbb4916e82",
+    "origin": "port815",
+    "destination": "port1188",
+    "route": [
+      "port815",
+      "port1188"
+    ],
+    "planned_transit_hours": 500.48312862545407,
+    "planned_delivery": "2026-10-30T20:28:59.263052+00:00",
+    "promised_delivery": "2026-11-01T02:07:48.557847+00:00",
+    "sla_buffer_hours": 29.647026331908762,
+    "priority": 1,
+    "cargo_value": 138929.25499236584,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "3895d8e5a0105ef3fd6ae16c",
+    "origin": "port1188",
+    "destination": "port1201",
+    "route": [
+      "port1188",
+      "port1201"
+    ],
+    "planned_transit_hours": 161.3375829522384,
+    "planned_delivery": "2026-10-16T17:20:15.298628+00:00",
+    "promised_delivery": "2026-10-18T07:25:07.158084+00:00",
+    "sla_buffer_hours": 38.08107207100025,
+    "priority": 3,
+    "cargo_value": 67763.82038609919,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "7b7d169a951b9d343f514074",
+    "origin": "port744",
+    "destination": "port664",
+    "route": [
+      "port744",
+      "port664"
+    ],
+    "planned_transit_hours": 567.1143121801997,
+    "planned_delivery": "2026-11-02T15:06:51.523849+00:00",
+    "promised_delivery": "2026-11-04T10:46:42.844393+00:00",
+    "sla_buffer_hours": 43.664255706684465,
+    "priority": 3,
+    "cargo_value": 233982.75340295353,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "de220f1cd9a8cc58e075e50f",
+    "origin": "port1201",
+    "destination": "port664",
+    "route": [
+      "port1201",
+      "port664"
+    ],
+    "planned_transit_hours": 597.0734368237737,
+    "planned_delivery": "2026-11-03T21:04:24.372566+00:00",
+    "promised_delivery": "2026-11-04T14:45:19.746545+00:00",
+    "sla_buffer_hours": 17.68204832755037,
+    "priority": 2,
+    "cargo_value": 203623.08297638685,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "e9b2cb5f2ff3d246c5f50ed1",
+    "origin": "port1188",
+    "destination": "port664",
+    "route": [
+      "port1188",
+      "port664"
+    ],
+    "planned_transit_hours": 440.72919542278225,
+    "planned_delivery": "2026-10-28T08:43:45.103522+00:00",
+    "promised_delivery": "2026-10-30T05:01:52.393677+00:00",
+    "sla_buffer_hours": 44.30202504310925,
+    "priority": 3,
+    "cargo_value": 27114.19959948909,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "87ae7efb069ec1daf9a38329",
+    "origin": "port1188",
+    "destination": "port1201",
+    "route": [
+      "port1188",
+      "port1201"
+    ],
+    "planned_transit_hours": 161.3375829522384,
+    "planned_delivery": "2026-10-16T17:20:15.298628+00:00",
+    "promised_delivery": "2026-10-17T17:21:33.613101+00:00",
+    "sla_buffer_hours": 24.02175402039719,
+    "priority": 3,
+    "cargo_value": 148549.65237953977,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "d61a62b960e757003fa23847",
+    "origin": "port1188",
+    "destination": "port815",
+    "route": [
+      "port1188",
+      "port815"
+    ],
+    "planned_transit_hours": 500.48312862545407,
+    "planned_delivery": "2026-10-30T20:28:59.263052+00:00",
+    "promised_delivery": "2026-11-01T06:50:21.866777+00:00",
+    "sla_buffer_hours": 34.35627881266343,
+    "priority": 3,
+    "cargo_value": 187495.363519533,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "80dd3968e96ae3195e9a9266",
+    "origin": "port1114",
+    "destination": "port1188",
+    "route": [
+      "port1114",
+      "port1188"
+    ],
+    "planned_transit_hours": 377.7053615834835,
+    "planned_delivery": "2026-10-25T17:42:19.301701+00:00",
+    "promised_delivery": "2026-10-26T01:11:50.173294+00:00",
+    "sla_buffer_hours": 7.491908776076939,
+    "priority": 2,
+    "cargo_value": 14454.74265366049,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "ca0c5962655631c78b96b868",
+    "origin": "port744",
+    "destination": "port815",
+    "route": [
+      "port744",
+      "port1114",
+      "port815"
+    ],
+    "planned_transit_hours": 466.1170365684051,
+    "planned_delivery": "2026-10-29T10:07:01.331646+00:00",
+    "promised_delivery": "2026-10-29T21:03:10.095668+00:00",
+    "sla_buffer_hours": 10.935767783897544,
+    "priority": 1,
+    "cargo_value": 112613.43942946801,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "24359da00eaf4c09eddfb570",
+    "origin": "port1114",
+    "destination": "port815",
+    "route": [
+      "port1114",
+      "port815"
+    ],
+    "planned_transit_hours": 246.93301428310508,
+    "planned_delivery": "2026-10-20T06:55:58.851419+00:00",
+    "promised_delivery": "2026-10-21T20:20:32.583068+00:00",
+    "sla_buffer_hours": 37.409369902337104,
+    "priority": 1,
+    "cargo_value": 247001.51766516606,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "b7288ed3dbf23baffd1a0084",
+    "origin": "port1188",
+    "destination": "port1201",
+    "route": [
+      "port1188",
+      "port1201"
+    ],
+    "planned_transit_hours": 161.3375829522384,
+    "planned_delivery": "2026-10-16T17:20:15.298628+00:00",
+    "promised_delivery": "2026-10-17T17:41:25.320949+00:00",
+    "sla_buffer_hours": 24.35278397806685,
+    "priority": 3,
+    "cargo_value": 58526.44716642357,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "4f6dd629a731a3cf95f2b61c",
+    "origin": "port744",
+    "destination": "port1201",
+    "route": [
+      "port744",
+      "port1201"
+    ],
+    "planned_transit_hours": 246.4374552305621,
+    "planned_delivery": "2026-10-20T06:26:14.838830+00:00",
+    "promised_delivery": "2026-10-20T20:59:20.565232+00:00",
+    "sla_buffer_hours": 14.55159066716161,
+    "priority": 2,
+    "cargo_value": 55966.03820653539,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "d49042947b55174c601804f6",
+    "origin": "port1188",
+    "destination": "port815",
+    "route": [
+      "port1188",
+      "port815"
+    ],
+    "planned_transit_hours": 500.48312862545407,
+    "planned_delivery": "2026-10-30T20:28:59.263052+00:00",
+    "promised_delivery": "2026-10-31T15:55:25.406238+00:00",
+    "sla_buffer_hours": 19.440595329585694,
+    "priority": 3,
+    "cargo_value": 99152.46219589333,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "3b9c343a39c6929d389e9b60",
+    "origin": "port1201",
+    "destination": "port664",
+    "route": [
+      "port1201",
+      "port664"
+    ],
+    "planned_transit_hours": 597.0734368237737,
+    "planned_delivery": "2026-11-03T21:04:24.372566+00:00",
+    "promised_delivery": "2026-11-04T07:37:01.340933+00:00",
+    "sla_buffer_hours": 10.543602324178135,
+    "priority": 1,
+    "cargo_value": 81663.37505542564,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "ecb78081e7616dec67495241",
+    "origin": "port744",
+    "destination": "port815",
+    "route": [
+      "port744",
+      "port1114",
+      "port815"
+    ],
+    "planned_transit_hours": 466.1170365684051,
+    "planned_delivery": "2026-10-29T10:07:01.331646+00:00",
+    "promised_delivery": "2026-10-30T09:08:51.290075+00:00",
+    "sla_buffer_hours": 23.03054400785803,
+    "priority": 1,
+    "cargo_value": 215858.70278577288,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "a7cdf4dc7a754a01a7643f6b",
+    "origin": "port664",
+    "destination": "port1201",
+    "route": [
+      "port664",
+      "port1201"
+    ],
+    "planned_transit_hours": 597.0734368237737,
+    "planned_delivery": "2026-11-03T21:04:24.372566+00:00",
+    "promised_delivery": "2026-11-05T06:38:57.510981+00:00",
+    "sla_buffer_hours": 33.57587178198061,
+    "priority": 3,
+    "cargo_value": 43520.861430860496,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "393878372a286fb85808cfd6",
+    "origin": "port1201",
+    "destination": "port664",
+    "route": [
+      "port1201",
+      "port664"
+    ],
+    "planned_transit_hours": 597.0734368237737,
+    "planned_delivery": "2026-11-03T21:04:24.372566+00:00",
+    "promised_delivery": "2026-11-05T09:43:09.201547+00:00",
+    "sla_buffer_hours": 36.645785828210336,
+    "priority": 2,
+    "cargo_value": 154717.28217876397,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "ac90e9c32fd8cf621c8fb59f",
+    "origin": "port1188",
+    "destination": "port664",
+    "route": [
+      "port1188",
+      "port664"
+    ],
+    "planned_transit_hours": 440.72919542278225,
+    "planned_delivery": "2026-10-28T08:43:45.103522+00:00",
+    "promised_delivery": "2026-10-29T21:58:00.111779+00:00",
+    "sla_buffer_hours": 37.237502293707735,
+    "priority": 1,
+    "cargo_value": 234123.73991022527,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "522337c7b54d0f5d5ea34566",
+    "origin": "port664",
+    "destination": "port1201",
+    "route": [
+      "port664",
+      "port1201"
+    ],
+    "planned_transit_hours": 597.0734368237737,
+    "planned_delivery": "2026-11-03T21:04:24.372566+00:00",
+    "promised_delivery": "2026-11-04T08:57:35.375948+00:00",
+    "sla_buffer_hours": 11.886389828544146,
+    "priority": 1,
+    "cargo_value": 188804.93537851048,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "shipment_id": "681aa5f97c3c35ceed3d3c04",
+    "origin": "port664",
+    "destination": "port1114",
+    "route": [
+      "port664",
+      "port1114"
+    ],
+    "planned_transit_hours": 378.3736185082632,
+    "planned_delivery": "2026-10-25T18:22:25.026630+00:00",
+    "promised_delivery": "2026-10-26T12:49:33.229263+00:00",
+    "sla_buffer_hours": 18.452278509341276,
+    "priority": 3,
+    "cargo_value": 120366.17063029812,
+    "current_state": "PLANNED",
+    "classification": "SIMULATED",
+    "source_id": "synthetic_shipments_v1",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "seed": 1729,
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "network": "306a1623a673bfaf8eaf6c897c9833abb4c5f6e69f83787f758bcdab64cabfff"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  }
+]

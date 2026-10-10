@@ -1,0 +1,94 @@
+{
+  "status": "BLOCKED",
+  "scope": "INDUSTRIAL_OPERATIONAL_RELEASE",
+  "local_analytical_status": "PASS_WITH_WARNINGS",
+  "live_acquisition": "LIVE_PUBLIC_DATA",
+  "release_id": "160ee6df39288465961e550ccf4717731bcbfcb471112914e36a3bba27aafd79",
+  "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+  "code": {
+    "git_commit": "2d02285b61c2b86fbebdcc8aa1b397bdcb92e3d0",
+    "working_tree_dirty": false,
+    "code_fingerprint": "2b336d78cca2e79d2d746523e5d570413285688db4ce41f43d4b2e4c45e40cd6",
+    "python": "3.11.9",
+    "dependencies": {
+      "numpy": "2.4.6",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.9.1",
+      "pydantic": "2.13.5"
+    }
+  },
+  "mandatory_failed_controls": [],
+  "mandatory_unevaluated_controls": [
+    {
+      "control": "fabric_runtime_and_readback",
+      "status": "NOT_EVALUATED"
+    },
+    {
+      "control": "azure_ml_lifecycle_and_return",
+      "status": "NOT_EVALUATED"
+    },
+    {
+      "control": "cloud_identity_and_least_privilege",
+      "status": "NOT_EVALUATED"
+    },
+    {
+      "control": "raw_and_audit_retention_enforcement",
+      "status": "NOT_EVALUATED"
+    },
+    {
+      "control": "production_slo_agreement_and_sustained_evidence",
+      "status": "NOT_EVALUATED"
+    }
+  ],
+  "campaign": {
+    "status": "PASS",
+    "checks": {
+      "successful_runs": true,
+      "expected_failures": true,
+      "prior_snapshot_preserved": true,
+      "accounting": true,
+      "audit_chain": true,
+      "independent_metrics": true
+    },
+    "attempts": [
+      {
+        "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+        "outcome": "PASS",
+        "mode": "LIVE_PUBLIC_DATA",
+        "duration_seconds": 13.02562750002835
+      },
+      {
+        "run_id": "0e73516a7329460684607b53d74b0f56",
+        "outcome": "PASS",
+        "mode": "REPLAY",
+        "duration_seconds": 6.304066400043666
+      },
+      {
+        "run_id": "635d20ecffa8470091291d7ac11f8c06",
+        "outcome": "EXPECTED_BLOCK",
+        "injection": "invalid_coordinate",
+        "pointer_preserved": true,
+        "duration_seconds": 0.31971880001947284
+      },
+      {
+        "run_id": "1e9d4ccdb9dd431ca192af1586477727",
+        "outcome": "EXPECTED_BLOCK",
+        "injection": "partial_persistence",
+        "pointer_preserved": true,
+        "duration_seconds": 6.638879099977203
+      },
+      {
+        "run_id": "882cd910685e48e59a921068f1f63a54",
+        "outcome": "PASS",
+        "mode": "RECOVERY_REPLAY",
+        "duration_seconds": 5.69038449996151
+      }
+    ],
+    "elapsed_seconds": 40.46535670000594,
+    "sustained_production_reliability": "NOT_ESTABLISHED"
+  },
+  "dataset_label": "LOCAL_ANALYTICAL_EVIDENCE_NOT_INDUSTRIALLY_VALIDATED",
+  "sla_ml": "DEFERRED \u2014 INSUFFICIENT OBSERVED OUTCOME DATA",
+  "validation_evidence": "validation/command-results.json",
+  "delivery_label": "DIAGNOSTIC EVIDENCE AND LOCAL ANALYTICAL DATA \u2014 NOT AN INDUSTRIAL OPERATIONAL RELEASE"
+}

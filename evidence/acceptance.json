@@ -19,72 +19,72 @@
     "errors": "0",
     "failures": "0",
     "skipped": "0",
-    "tests": "24",
-    "time": "27.885",
-    "timestamp": "2026-10-08T16:55:29.635314+03:00",
+    "tests": "36",
+    "time": "62.309",
+    "timestamp": "2026-10-10T12:06:14.690582+03:00",
     "hostname": "endelap"
   },
-  "run_id": "f74bcdb836d5492daa2c771d40df73ab",
+  "run_id": "35c44150de1247d8bca88041a7a756d5",
   "http": {
     "/health": {
       "status_code": 200,
-      "duration_seconds": 0.006558499997481704
+      "duration_seconds": 0.0067566001089289784
     },
     "/ready": {
       "status_code": 200,
-      "duration_seconds": 0.008660199993755668
+      "duration_seconds": 0.02005060005467385
     },
     "/ports": {
       "status_code": 200,
-      "duration_seconds": 0.020800800004508346
+      "duration_seconds": 0.02925579994916916
     },
     "/congestion": {
       "status_code": 200,
-      "duration_seconds": 0.01541900000302121
+      "duration_seconds": 0.026489500072784722
     },
     "/network": {
       "status_code": 200,
-      "duration_seconds": 0.018330699997022748
+      "duration_seconds": 0.033261200063861907
     },
     "/network/exposure": {
       "status_code": 200,
-      "duration_seconds": 0.016867000027559698
+      "duration_seconds": 0.028030999936163425
     },
     "/disruptions": {
       "status_code": 200,
-      "duration_seconds": 0.016594299988355488
+      "duration_seconds": 0.03287100000306964
     },
     "/scenarios": {
       "status_code": 200,
-      "duration_seconds": 0.029375399986747652
+      "duration_seconds": 0.0371197999920696
     },
     "/sla-risk": {
       "status_code": 200,
-      "duration_seconds": 0.03066500002751127
+      "duration_seconds": 0.05069139995612204
     },
     "/interventions": {
       "status_code": 200,
-      "duration_seconds": 0.06491240003379062
+      "duration_seconds": 0.08586649992503226
     },
     "/decisions": {
       "status_code": 200,
-      "duration_seconds": 0.03194600000279024
+      "duration_seconds": 0.04774820001330227
     },
     "/lineage": {
       "status_code": 200,
-      "duration_seconds": 0.04068019997794181
+      "duration_seconds": 0.04503359994851053
     },
     "/data-quality": {
       "status_code": 200,
-      "duration_seconds": 0.014516199997160584
+      "duration_seconds": 0.06310520006809384
     },
     "/metrics": {
       "status_code": 200,
-      "duration_seconds": 0.013030300033278763
+      "duration_seconds": 0.016331000020727515
     },
     "/signals": {
       "status_code": 200,
-      "duration_seconds": 0.010727600019890815
+      "duration_seconds": 0.007776599959470332
     }
   },
   "historical_propagation": {
@@ -135,5 +135,25 @@
   "azure_ml": "IMPLEMENTED_ENVIRONMENT_DEPENDENT_NOT_EXECUTED",
   "azure_application": "IMPLEMENTED_ENVIRONMENT_DEPENDENT_NOT_DEPLOYED",
   "genai_provider": "ENVIRONMENT_DEPENDENT_NOT_CONFIGURED",
-  "sla_ml": "DEFERRED \u2014 INSUFFICIENT OBSERVED OUTCOME DATA"
+  "sla_ml": "DEFERRED \u2014 INSUFFICIENT OBSERVED OUTCOME DATA",
+  "docker_final": {
+    "status": "PASS",
+    "run_id": "ac8b7e4eff1442e4ace63d54ad2b0379",
+    "http_checks": {
+      "/health": 200,
+      "/ready": 200,
+      "/ports": 200,
+      "/congestion": 200,
+      "/network/exposure": 200,
+      "/scenarios": 200,
+      "/sla-risk": 200,
+      "/interventions": 200,
+      "/decisions": 200,
+      "/lineage": 200,
+      "/data-quality": 200,
+      "/metrics": 200
+    },
+    "environment": "docker"
+  },
+  "industrial_governance": "BLOCKED: see governance-final/release-validation.json"
 }

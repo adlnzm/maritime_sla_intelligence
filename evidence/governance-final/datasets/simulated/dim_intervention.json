@@ -1,0 +1,87 @@
+[
+  {
+    "action": "NO_ACTION",
+    "classification": "SIMULATED",
+    "lineage_id": "539a7766972493c4ff47639e",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [],
+    "input_fingerprints": {},
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "action": "REROUTE",
+    "classification": "SIMULATED",
+    "lineage_id": "a7a08e5744be59aba8a83a40",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [],
+    "input_fingerprints": {},
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "action": "ALTERNATE_PORT",
+    "classification": "SIMULATED",
+    "lineage_id": "a98ae15ca4b85796fbd452f3",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [],
+    "input_fingerprints": {},
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "action": "EXPEDITE",
+    "classification": "SIMULATED",
+    "lineage_id": "1824a796b875ca9a5e291502",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [],
+    "input_fingerprints": {},
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "action": "PRIORITIZE",
+    "classification": "SIMULATED",
+    "lineage_id": "14b2282415939206f13a7db0",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [],
+    "input_fingerprints": {},
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  }
+]

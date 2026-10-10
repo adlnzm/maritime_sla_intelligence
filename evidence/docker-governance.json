@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "run_id": "ac8b7e4eff1442e4ace63d54ad2b0379",
+  "http_checks": {
+    "/health": 200,
+    "/ready": 200,
+    "/ports": 200,
+    "/congestion": 200,
+    "/network/exposure": 200,
+    "/scenarios": 200,
+    "/sla-risk": 200,
+    "/interventions": 200,
+    "/decisions": 200,
+    "/lineage": 200,
+    "/data-quality": 200,
+    "/metrics": 200
+  },
+  "environment": "docker"
+}

@@ -1,0 +1,932 @@
+[
+  {
+    "source_id": "scenario_topology_v1",
+    "classification": "SIMULATED",
+    "retrieved_at": "2026-10-10T09:03:51.617909Z",
+    "lineage_id": "a6ab6204ffd2d3b6341c9cc6",
+    "route_id": "5adcf764711a9acdadefc560",
+    "origin": "port1188",
+    "destination": "port744",
+    "distance_nm": 4366.732857900187,
+    "transit_hours": 272.9208036187617,
+    "available": true,
+    "valid_from": "2026-10-10",
+    "valid_to": null,
+    "geometry": null,
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "source_id": "scenario_topology_v1",
+    "classification": "SIMULATED",
+    "retrieved_at": "2026-10-10T09:03:51.617909Z",
+    "lineage_id": "a6ab6204ffd2d3b6341c9cc6",
+    "route_id": "7a39815aca48753850bed538",
+    "origin": "port1188",
+    "destination": "port815",
+    "distance_nm": 8007.730058007265,
+    "transit_hours": 500.48312862545407,
+    "available": true,
+    "valid_from": "2026-10-10",
+    "valid_to": null,
+    "geometry": null,
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "source_id": "scenario_topology_v1",
+    "classification": "SIMULATED",
+    "retrieved_at": "2026-10-10T09:03:51.617909Z",
+    "lineage_id": "a6ab6204ffd2d3b6341c9cc6",
+    "route_id": "5df470ec7997e17e4a27f5fb",
+    "origin": "port1188",
+    "destination": "port1114",
+    "distance_nm": 6043.285785335736,
+    "transit_hours": 377.7053615834835,
+    "available": true,
+    "valid_from": "2026-10-10",
+    "valid_to": null,
+    "geometry": null,
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "source_id": "scenario_topology_v1",
+    "classification": "SIMULATED",
+    "retrieved_at": "2026-10-10T09:03:51.617909Z",
+    "lineage_id": "a6ab6204ffd2d3b6341c9cc6",
+    "route_id": "478713a38b36df8464c2cd55",
+    "origin": "port1188",
+    "destination": "port664",
+    "distance_nm": 7051.667126764516,
+    "transit_hours": 440.72919542278225,
+    "available": true,
+    "valid_from": "2026-10-10",
+    "valid_to": null,
+    "geometry": null,
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "source_id": "scenario_topology_v1",
+    "classification": "SIMULATED",
+    "retrieved_at": "2026-10-10T09:03:51.617909Z",
+    "lineage_id": "a6ab6204ffd2d3b6341c9cc6",
+    "route_id": "07ef41d4590791b5ddd0ddba",
+    "origin": "port1188",
+    "destination": "port1201",
+    "distance_nm": 2581.4013272358143,
+    "transit_hours": 161.3375829522384,
+    "available": true,
+    "valid_from": "2026-10-10",
+    "valid_to": null,
+    "geometry": null,
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "source_id": "scenario_topology_v1",
+    "classification": "SIMULATED",
+    "retrieved_at": "2026-10-10T09:03:51.617909Z",
+    "lineage_id": "a6ab6204ffd2d3b6341c9cc6",
+    "route_id": "0189048c79be7f8b3955c797",
+    "origin": "port744",
+    "destination": "port1188",
+    "distance_nm": 4366.732857900187,
+    "transit_hours": 272.9208036187617,
+    "available": true,
+    "valid_from": "2026-10-10",
+    "valid_to": null,
+    "geometry": null,
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "source_id": "scenario_topology_v1",
+    "classification": "SIMULATED",
+    "retrieved_at": "2026-10-10T09:03:51.617909Z",
+    "lineage_id": "a6ab6204ffd2d3b6341c9cc6",
+    "route_id": "04ef4a4ba634633a88342517",
+    "origin": "port744",
+    "destination": "port815",
+    "distance_nm": 7445.67585727267,
+    "transit_hours": 465.3547410795419,
+    "available": true,
+    "valid_from": "2026-10-10",
+    "valid_to": null,
+    "geometry": null,
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "source_id": "scenario_topology_v1",
+    "classification": "SIMULATED",
+    "retrieved_at": "2026-10-10T09:03:51.617909Z",
+    "lineage_id": "a6ab6204ffd2d3b6341c9cc6",
+    "route_id": "12225cf999818cdfad70d616",
+    "origin": "port744",
+    "destination": "port1114",
+    "distance_nm": 3506.9443565648007,
+    "transit_hours": 219.18402228530005,
+    "available": true,
+    "valid_from": "2026-10-10",
+    "valid_to": null,
+    "geometry": null,
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "source_id": "scenario_topology_v1",
+    "classification": "SIMULATED",
+    "retrieved_at": "2026-10-10T09:03:51.617909Z",
+    "lineage_id": "a6ab6204ffd2d3b6341c9cc6",
+    "route_id": "3ae5514f9598fabe02449928",
+    "origin": "port744",
+    "destination": "port664",
+    "distance_nm": 9073.828994883195,
+    "transit_hours": 567.1143121801997,
+    "available": true,
+    "valid_from": "2026-10-10",
+    "valid_to": null,
+    "geometry": null,
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "source_id": "scenario_topology_v1",
+    "classification": "SIMULATED",
+    "retrieved_at": "2026-10-10T09:03:51.617909Z",
+    "lineage_id": "a6ab6204ffd2d3b6341c9cc6",
+    "route_id": "06714d34feaa5d6a9e228578",
+    "origin": "port744",
+    "destination": "port1201",
+    "distance_nm": 3942.9992836889937,
+    "transit_hours": 246.4374552305621,
+    "available": true,
+    "valid_from": "2026-10-10",
+    "valid_to": null,
+    "geometry": null,
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "source_id": "scenario_topology_v1",
+    "classification": "SIMULATED",
+    "retrieved_at": "2026-10-10T09:03:51.617909Z",
+    "lineage_id": "a6ab6204ffd2d3b6341c9cc6",
+    "route_id": "18784216f93af43c8ecb2c4e",
+    "origin": "port815",
+    "destination": "port1188",
+    "distance_nm": 8007.730058007265,
+    "transit_hours": 500.48312862545407,
+    "available": true,
+    "valid_from": "2026-10-10",
+    "valid_to": null,
+    "geometry": null,
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "source_id": "scenario_topology_v1",
+    "classification": "SIMULATED",
+    "retrieved_at": "2026-10-10T09:03:51.617909Z",
+    "lineage_id": "a6ab6204ffd2d3b6341c9cc6",
+    "route_id": "6b15b07b30b1159ed773aedd",
+    "origin": "port815",
+    "destination": "port744",
+    "distance_nm": 7445.67585727267,
+    "transit_hours": 465.3547410795419,
+    "available": true,
+    "valid_from": "2026-10-10",
+    "valid_to": null,
+    "geometry": null,
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "source_id": "scenario_topology_v1",
+    "classification": "SIMULATED",
+    "retrieved_at": "2026-10-10T09:03:51.617909Z",
+    "lineage_id": "a6ab6204ffd2d3b6341c9cc6",
+    "route_id": "78a365c869aa64aad24ec4aa",
+    "origin": "port815",
+    "destination": "port1114",
+    "distance_nm": 3950.9282285296813,
+    "transit_hours": 246.93301428310508,
+    "available": true,
+    "valid_from": "2026-10-10",
+    "valid_to": null,
+    "geometry": null,
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "source_id": "scenario_topology_v1",
+    "classification": "SIMULATED",
+    "retrieved_at": "2026-10-10T09:03:51.617909Z",
+    "lineage_id": "a6ab6204ffd2d3b6341c9cc6",
+    "route_id": "cbab734e23a5d77ede60851d",
+    "origin": "port815",
+    "destination": "port664",
+    "distance_nm": 2656.0499299178678,
+    "transit_hours": 166.00312061986673,
+    "available": true,
+    "valid_from": "2026-10-10",
+    "valid_to": null,
+    "geometry": null,
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "source_id": "scenario_topology_v1",
+    "classification": "SIMULATED",
+    "retrieved_at": "2026-10-10T09:03:51.617909Z",
+    "lineage_id": "a6ab6204ffd2d3b6341c9cc6",
+    "route_id": "4c4208a533b3f97bad18364b",
+    "origin": "port815",
+    "destination": "port1201",
+    "distance_nm": 10360.791051662754,
+    "transit_hours": 647.5494407289221,
+    "available": true,
+    "valid_from": "2026-10-10",
+    "valid_to": null,
+    "geometry": null,
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "source_id": "scenario_topology_v1",
+    "classification": "SIMULATED",
+    "retrieved_at": "2026-10-10T09:03:51.617909Z",
+    "lineage_id": "a6ab6204ffd2d3b6341c9cc6",
+    "route_id": "932393a4d162da09e106d8dc",
+    "origin": "port1114",
+    "destination": "port1188",
+    "distance_nm": 6043.285785335736,
+    "transit_hours": 377.7053615834835,
+    "available": true,
+    "valid_from": "2026-10-10",
+    "valid_to": null,
+    "geometry": null,
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "source_id": "scenario_topology_v1",
+    "classification": "SIMULATED",
+    "retrieved_at": "2026-10-10T09:03:51.617909Z",
+    "lineage_id": "a6ab6204ffd2d3b6341c9cc6",
+    "route_id": "1082c8ea10be4668cd89a020",
+    "origin": "port1114",
+    "destination": "port744",
+    "distance_nm": 3506.9443565648007,
+    "transit_hours": 219.18402228530005,
+    "available": true,
+    "valid_from": "2026-10-10",
+    "valid_to": null,
+    "geometry": null,
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "source_id": "scenario_topology_v1",
+    "classification": "SIMULATED",
+    "retrieved_at": "2026-10-10T09:03:51.617909Z",
+    "lineage_id": "a6ab6204ffd2d3b6341c9cc6",
+    "route_id": "8f1b3ab33b93e1e02113cda9",
+    "origin": "port1114",
+    "destination": "port815",
+    "distance_nm": 3950.9282285296813,
+    "transit_hours": 246.93301428310508,
+    "available": true,
+    "valid_from": "2026-10-10",
+    "valid_to": null,
+    "geometry": null,
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "source_id": "scenario_topology_v1",
+    "classification": "SIMULATED",
+    "retrieved_at": "2026-10-10T09:03:51.617909Z",
+    "lineage_id": "a6ab6204ffd2d3b6341c9cc6",
+    "route_id": "a78159a92af16c75b3e9a060",
+    "origin": "port1114",
+    "destination": "port664",
+    "distance_nm": 6053.977896132211,
+    "transit_hours": 378.3736185082632,
+    "available": true,
+    "valid_from": "2026-10-10",
+    "valid_to": null,
+    "geometry": null,
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "source_id": "scenario_topology_v1",
+    "classification": "SIMULATED",
+    "retrieved_at": "2026-10-10T09:03:51.617909Z",
+    "lineage_id": "a6ab6204ffd2d3b6341c9cc6",
+    "route_id": "7099f2a0d34044ad3bbc6ca8",
+    "origin": "port1114",
+    "destination": "port1201",
+    "distance_nm": 7117.087540956926,
+    "transit_hours": 444.8179713098079,
+    "available": true,
+    "valid_from": "2026-10-10",
+    "valid_to": null,
+    "geometry": null,
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "source_id": "scenario_topology_v1",
+    "classification": "SIMULATED",
+    "retrieved_at": "2026-10-10T09:03:51.617909Z",
+    "lineage_id": "a6ab6204ffd2d3b6341c9cc6",
+    "route_id": "0106efe70bed8d44a1b6403b",
+    "origin": "port664",
+    "destination": "port1188",
+    "distance_nm": 7051.667126764516,
+    "transit_hours": 440.72919542278225,
+    "available": true,
+    "valid_from": "2026-10-10",
+    "valid_to": null,
+    "geometry": null,
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "source_id": "scenario_topology_v1",
+    "classification": "SIMULATED",
+    "retrieved_at": "2026-10-10T09:03:51.617909Z",
+    "lineage_id": "a6ab6204ffd2d3b6341c9cc6",
+    "route_id": "f9e645ad3ef4c9225ca9c3dc",
+    "origin": "port664",
+    "destination": "port744",
+    "distance_nm": 9073.828994883195,
+    "transit_hours": 567.1143121801997,
+    "available": true,
+    "valid_from": "2026-10-10",
+    "valid_to": null,
+    "geometry": null,
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "source_id": "scenario_topology_v1",
+    "classification": "SIMULATED",
+    "retrieved_at": "2026-10-10T09:03:51.619019Z",
+    "lineage_id": "a6ab6204ffd2d3b6341c9cc6",
+    "route_id": "afad9bb322b744621817b243",
+    "origin": "port664",
+    "destination": "port815",
+    "distance_nm": 2656.0499299178678,
+    "transit_hours": 166.00312061986673,
+    "available": true,
+    "valid_from": "2026-10-10",
+    "valid_to": null,
+    "geometry": null,
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "source_id": "scenario_topology_v1",
+    "classification": "SIMULATED",
+    "retrieved_at": "2026-10-10T09:03:51.619019Z",
+    "lineage_id": "a6ab6204ffd2d3b6341c9cc6",
+    "route_id": "c4df812e800dd2d1d3588465",
+    "origin": "port664",
+    "destination": "port1114",
+    "distance_nm": 6053.977896132211,
+    "transit_hours": 378.3736185082632,
+    "available": true,
+    "valid_from": "2026-10-10",
+    "valid_to": null,
+    "geometry": null,
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "source_id": "scenario_topology_v1",
+    "classification": "SIMULATED",
+    "retrieved_at": "2026-10-10T09:03:51.619019Z",
+    "lineage_id": "a6ab6204ffd2d3b6341c9cc6",
+    "route_id": "c88324e861e808a320c31e8d",
+    "origin": "port664",
+    "destination": "port1201",
+    "distance_nm": 9553.17498918038,
+    "transit_hours": 597.0734368237737,
+    "available": true,
+    "valid_from": "2026-10-10",
+    "valid_to": null,
+    "geometry": null,
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "source_id": "scenario_topology_v1",
+    "classification": "SIMULATED",
+    "retrieved_at": "2026-10-10T09:03:51.619019Z",
+    "lineage_id": "a6ab6204ffd2d3b6341c9cc6",
+    "route_id": "a137132b9fdbab6b822f339a",
+    "origin": "port1201",
+    "destination": "port1188",
+    "distance_nm": 2581.4013272358143,
+    "transit_hours": 161.3375829522384,
+    "available": true,
+    "valid_from": "2026-10-10",
+    "valid_to": null,
+    "geometry": null,
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "source_id": "scenario_topology_v1",
+    "classification": "SIMULATED",
+    "retrieved_at": "2026-10-10T09:03:51.619019Z",
+    "lineage_id": "a6ab6204ffd2d3b6341c9cc6",
+    "route_id": "1c14e1ed89ce7831f640c83a",
+    "origin": "port1201",
+    "destination": "port744",
+    "distance_nm": 3942.9992836889937,
+    "transit_hours": 246.4374552305621,
+    "available": true,
+    "valid_from": "2026-10-10",
+    "valid_to": null,
+    "geometry": null,
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "source_id": "scenario_topology_v1",
+    "classification": "SIMULATED",
+    "retrieved_at": "2026-10-10T09:03:51.619019Z",
+    "lineage_id": "a6ab6204ffd2d3b6341c9cc6",
+    "route_id": "dd659a9418ac73aa6e0b1c9e",
+    "origin": "port1201",
+    "destination": "port815",
+    "distance_nm": 10360.791051662754,
+    "transit_hours": 647.5494407289221,
+    "available": true,
+    "valid_from": "2026-10-10",
+    "valid_to": null,
+    "geometry": null,
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "source_id": "scenario_topology_v1",
+    "classification": "SIMULATED",
+    "retrieved_at": "2026-10-10T09:03:51.619019Z",
+    "lineage_id": "a6ab6204ffd2d3b6341c9cc6",
+    "route_id": "5d7de655035acf0a232cae11",
+    "origin": "port1201",
+    "destination": "port1114",
+    "distance_nm": 7117.087540956926,
+    "transit_hours": 444.8179713098079,
+    "available": true,
+    "valid_from": "2026-10-10",
+    "valid_to": null,
+    "geometry": null,
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "source_id": "scenario_topology_v1",
+    "classification": "SIMULATED",
+    "retrieved_at": "2026-10-10T09:03:51.619019Z",
+    "lineage_id": "a6ab6204ffd2d3b6341c9cc6",
+    "route_id": "e140e9f8e51813e26541398e",
+    "origin": "port1201",
+    "destination": "port664",
+    "distance_nm": 9553.17498918038,
+    "transit_hours": 597.0734368237737,
+    "available": true,
+    "valid_from": "2026-10-10",
+    "valid_to": null,
+    "geometry": null,
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  }
+]

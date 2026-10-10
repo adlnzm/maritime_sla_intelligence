@@ -1,0 +1,902 @@
+[
+  {
+    "port_id": "port1188",
+    "date": "2026-09-30",
+    "wind_kmh": 13.2,
+    "source_id": "weather",
+    "classification": "DERIVED",
+    "retrieved_at": "2026-10-10T09:03:50.661129+00:00",
+    "lineage_id": "8072c50d342dcbfa3842a8790c2a1d7f8057ab0da4af544cacf7e7eaacd9c380",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port1188",
+    "date": "2026-10-01",
+    "wind_kmh": 17.0,
+    "source_id": "weather",
+    "classification": "DERIVED",
+    "retrieved_at": "2026-10-10T09:03:50.661129+00:00",
+    "lineage_id": "8072c50d342dcbfa3842a8790c2a1d7f8057ab0da4af544cacf7e7eaacd9c380",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port1188",
+    "date": "2026-10-02",
+    "wind_kmh": 14.2,
+    "source_id": "weather",
+    "classification": "DERIVED",
+    "retrieved_at": "2026-10-10T09:03:50.661129+00:00",
+    "lineage_id": "8072c50d342dcbfa3842a8790c2a1d7f8057ab0da4af544cacf7e7eaacd9c380",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port1188",
+    "date": "2026-10-03",
+    "wind_kmh": 14.6,
+    "source_id": "weather",
+    "classification": "DERIVED",
+    "retrieved_at": "2026-10-10T09:03:50.661129+00:00",
+    "lineage_id": "8072c50d342dcbfa3842a8790c2a1d7f8057ab0da4af544cacf7e7eaacd9c380",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port1188",
+    "date": "2026-10-04",
+    "wind_kmh": 14.8,
+    "source_id": "weather",
+    "classification": "DERIVED",
+    "retrieved_at": "2026-10-10T09:03:50.661129+00:00",
+    "lineage_id": "8072c50d342dcbfa3842a8790c2a1d7f8057ab0da4af544cacf7e7eaacd9c380",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port1188",
+    "date": "2026-10-05",
+    "wind_kmh": 17.5,
+    "source_id": "weather",
+    "classification": "DERIVED",
+    "retrieved_at": "2026-10-10T09:03:50.661129+00:00",
+    "lineage_id": "8072c50d342dcbfa3842a8790c2a1d7f8057ab0da4af544cacf7e7eaacd9c380",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port744",
+    "date": "2026-09-30",
+    "wind_kmh": 20.4,
+    "source_id": "weather",
+    "classification": "DERIVED",
+    "retrieved_at": "2026-10-10T09:03:50.771114+00:00",
+    "lineage_id": "0f6348fabc90402d74d036a5ea18f4e99d63649999c11ab7e30db43d55ae6687",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port744",
+    "date": "2026-10-01",
+    "wind_kmh": 23.4,
+    "source_id": "weather",
+    "classification": "DERIVED",
+    "retrieved_at": "2026-10-10T09:03:50.771114+00:00",
+    "lineage_id": "0f6348fabc90402d74d036a5ea18f4e99d63649999c11ab7e30db43d55ae6687",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port744",
+    "date": "2026-10-02",
+    "wind_kmh": 22.0,
+    "source_id": "weather",
+    "classification": "DERIVED",
+    "retrieved_at": "2026-10-10T09:03:50.771114+00:00",
+    "lineage_id": "0f6348fabc90402d74d036a5ea18f4e99d63649999c11ab7e30db43d55ae6687",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port744",
+    "date": "2026-10-03",
+    "wind_kmh": 25.6,
+    "source_id": "weather",
+    "classification": "DERIVED",
+    "retrieved_at": "2026-10-10T09:03:50.771114+00:00",
+    "lineage_id": "0f6348fabc90402d74d036a5ea18f4e99d63649999c11ab7e30db43d55ae6687",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port744",
+    "date": "2026-10-04",
+    "wind_kmh": 19.7,
+    "source_id": "weather",
+    "classification": "DERIVED",
+    "retrieved_at": "2026-10-10T09:03:50.771114+00:00",
+    "lineage_id": "0f6348fabc90402d74d036a5ea18f4e99d63649999c11ab7e30db43d55ae6687",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port744",
+    "date": "2026-10-05",
+    "wind_kmh": 18.0,
+    "source_id": "weather",
+    "classification": "DERIVED",
+    "retrieved_at": "2026-10-10T09:03:50.771114+00:00",
+    "lineage_id": "0f6348fabc90402d74d036a5ea18f4e99d63649999c11ab7e30db43d55ae6687",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port815",
+    "date": "2026-09-30",
+    "wind_kmh": 9.4,
+    "source_id": "weather",
+    "classification": "DERIVED",
+    "retrieved_at": "2026-10-10T09:03:50.919414+00:00",
+    "lineage_id": "8a5fe83e3f6b203b4c527d23b80360b7bfd4717f577c3e78274415caec198c40",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port815",
+    "date": "2026-10-01",
+    "wind_kmh": 8.9,
+    "source_id": "weather",
+    "classification": "DERIVED",
+    "retrieved_at": "2026-10-10T09:03:50.919414+00:00",
+    "lineage_id": "8a5fe83e3f6b203b4c527d23b80360b7bfd4717f577c3e78274415caec198c40",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port815",
+    "date": "2026-10-02",
+    "wind_kmh": 14.1,
+    "source_id": "weather",
+    "classification": "DERIVED",
+    "retrieved_at": "2026-10-10T09:03:50.919414+00:00",
+    "lineage_id": "8a5fe83e3f6b203b4c527d23b80360b7bfd4717f577c3e78274415caec198c40",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port815",
+    "date": "2026-10-03",
+    "wind_kmh": 14.2,
+    "source_id": "weather",
+    "classification": "DERIVED",
+    "retrieved_at": "2026-10-10T09:03:50.919414+00:00",
+    "lineage_id": "8a5fe83e3f6b203b4c527d23b80360b7bfd4717f577c3e78274415caec198c40",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port815",
+    "date": "2026-10-04",
+    "wind_kmh": 11.2,
+    "source_id": "weather",
+    "classification": "DERIVED",
+    "retrieved_at": "2026-10-10T09:03:50.919414+00:00",
+    "lineage_id": "8a5fe83e3f6b203b4c527d23b80360b7bfd4717f577c3e78274415caec198c40",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port815",
+    "date": "2026-10-05",
+    "wind_kmh": 21.6,
+    "source_id": "weather",
+    "classification": "DERIVED",
+    "retrieved_at": "2026-10-10T09:03:50.919414+00:00",
+    "lineage_id": "8a5fe83e3f6b203b4c527d23b80360b7bfd4717f577c3e78274415caec198c40",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port1114",
+    "date": "2026-09-30",
+    "wind_kmh": 13.9,
+    "source_id": "weather",
+    "classification": "DERIVED",
+    "retrieved_at": "2026-10-10T09:03:51.024656+00:00",
+    "lineage_id": "d779ce4afc2df3866e68b7a40c595191fce68f97975ad9c47d38c0d2e77c62c1",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port1114",
+    "date": "2026-10-01",
+    "wind_kmh": 15.0,
+    "source_id": "weather",
+    "classification": "DERIVED",
+    "retrieved_at": "2026-10-10T09:03:51.024656+00:00",
+    "lineage_id": "d779ce4afc2df3866e68b7a40c595191fce68f97975ad9c47d38c0d2e77c62c1",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port1114",
+    "date": "2026-10-02",
+    "wind_kmh": 8.7,
+    "source_id": "weather",
+    "classification": "DERIVED",
+    "retrieved_at": "2026-10-10T09:03:51.024656+00:00",
+    "lineage_id": "d779ce4afc2df3866e68b7a40c595191fce68f97975ad9c47d38c0d2e77c62c1",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port1114",
+    "date": "2026-10-03",
+    "wind_kmh": 6.3,
+    "source_id": "weather",
+    "classification": "DERIVED",
+    "retrieved_at": "2026-10-10T09:03:51.024656+00:00",
+    "lineage_id": "d779ce4afc2df3866e68b7a40c595191fce68f97975ad9c47d38c0d2e77c62c1",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port1114",
+    "date": "2026-10-04",
+    "wind_kmh": 4.9,
+    "source_id": "weather",
+    "classification": "DERIVED",
+    "retrieved_at": "2026-10-10T09:03:51.024656+00:00",
+    "lineage_id": "d779ce4afc2df3866e68b7a40c595191fce68f97975ad9c47d38c0d2e77c62c1",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port1114",
+    "date": "2026-10-05",
+    "wind_kmh": 14.4,
+    "source_id": "weather",
+    "classification": "DERIVED",
+    "retrieved_at": "2026-10-10T09:03:51.024656+00:00",
+    "lineage_id": "d779ce4afc2df3866e68b7a40c595191fce68f97975ad9c47d38c0d2e77c62c1",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port664",
+    "date": "2026-09-30",
+    "wind_kmh": 10.6,
+    "source_id": "weather",
+    "classification": "DERIVED",
+    "retrieved_at": "2026-10-10T09:03:51.130704+00:00",
+    "lineage_id": "cddea020fc47d6d2b5a86259a1102209b99bbaf755e9f3cbf769984466f68b52",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port664",
+    "date": "2026-10-01",
+    "wind_kmh": 12.3,
+    "source_id": "weather",
+    "classification": "DERIVED",
+    "retrieved_at": "2026-10-10T09:03:51.130704+00:00",
+    "lineage_id": "cddea020fc47d6d2b5a86259a1102209b99bbaf755e9f3cbf769984466f68b52",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port664",
+    "date": "2026-10-02",
+    "wind_kmh": 12.8,
+    "source_id": "weather",
+    "classification": "DERIVED",
+    "retrieved_at": "2026-10-10T09:03:51.130704+00:00",
+    "lineage_id": "cddea020fc47d6d2b5a86259a1102209b99bbaf755e9f3cbf769984466f68b52",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port664",
+    "date": "2026-10-03",
+    "wind_kmh": 12.6,
+    "source_id": "weather",
+    "classification": "DERIVED",
+    "retrieved_at": "2026-10-10T09:03:51.130704+00:00",
+    "lineage_id": "cddea020fc47d6d2b5a86259a1102209b99bbaf755e9f3cbf769984466f68b52",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port664",
+    "date": "2026-10-04",
+    "wind_kmh": 11.7,
+    "source_id": "weather",
+    "classification": "DERIVED",
+    "retrieved_at": "2026-10-10T09:03:51.130704+00:00",
+    "lineage_id": "cddea020fc47d6d2b5a86259a1102209b99bbaf755e9f3cbf769984466f68b52",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port664",
+    "date": "2026-10-05",
+    "wind_kmh": 14.8,
+    "source_id": "weather",
+    "classification": "DERIVED",
+    "retrieved_at": "2026-10-10T09:03:51.130704+00:00",
+    "lineage_id": "cddea020fc47d6d2b5a86259a1102209b99bbaf755e9f3cbf769984466f68b52",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port1201",
+    "date": "2026-09-30",
+    "wind_kmh": 11.5,
+    "source_id": "weather",
+    "classification": "DERIVED",
+    "retrieved_at": "2026-10-10T09:03:51.247050+00:00",
+    "lineage_id": "e705998a6e04f4994b11fac69320b79fec8c3655ea6de0e646149fe2599776ec",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port1201",
+    "date": "2026-10-01",
+    "wind_kmh": 13.0,
+    "source_id": "weather",
+    "classification": "DERIVED",
+    "retrieved_at": "2026-10-10T09:03:51.247050+00:00",
+    "lineage_id": "e705998a6e04f4994b11fac69320b79fec8c3655ea6de0e646149fe2599776ec",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port1201",
+    "date": "2026-10-02",
+    "wind_kmh": 10.6,
+    "source_id": "weather",
+    "classification": "DERIVED",
+    "retrieved_at": "2026-10-10T09:03:51.247050+00:00",
+    "lineage_id": "e705998a6e04f4994b11fac69320b79fec8c3655ea6de0e646149fe2599776ec",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port1201",
+    "date": "2026-10-03",
+    "wind_kmh": 11.2,
+    "source_id": "weather",
+    "classification": "DERIVED",
+    "retrieved_at": "2026-10-10T09:03:51.247050+00:00",
+    "lineage_id": "e705998a6e04f4994b11fac69320b79fec8c3655ea6de0e646149fe2599776ec",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port1201",
+    "date": "2026-10-04",
+    "wind_kmh": 12.7,
+    "source_id": "weather",
+    "classification": "DERIVED",
+    "retrieved_at": "2026-10-10T09:03:51.247050+00:00",
+    "lineage_id": "e705998a6e04f4994b11fac69320b79fec8c3655ea6de0e646149fe2599776ec",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port1201",
+    "date": "2026-10-05",
+    "wind_kmh": 12.8,
+    "source_id": "weather",
+    "classification": "DERIVED",
+    "retrieved_at": "2026-10-10T09:03:51.247050+00:00",
+    "lineage_id": "e705998a6e04f4994b11fac69320b79fec8c3655ea6de0e646149fe2599776ec",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "d4d51168d5e9fdc8b8aab09849f7fb5a14321d47bcf81040d96aef943eceb850"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  }
+]

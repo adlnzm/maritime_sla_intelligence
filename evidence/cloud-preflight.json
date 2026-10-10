@@ -1,0 +1,32 @@
+{
+  "status": "BLOCKED",
+  "scope": "CLOUD_RUNTIME_PREFLIGHT",
+  "configured": {
+    "FABRIC_WORKSPACE_ID": false,
+    "FABRIC_LAKEHOUSE_ID": false,
+    "AZURE_SUBSCRIPTION_ID": false,
+    "AZURE_RESOURCE_GROUP": false,
+    "AZURE_ML_WORKSPACE": false,
+    "AZURE_API_AUDIENCE": false,
+    "AZURE_STORAGE_ACCOUNT_URL": false,
+    "AZURE_OPENAI_ENDPOINT": false,
+    "AZURE_OPENAI_DEPLOYMENT": false
+  },
+  "missing_configuration": [
+    "FABRIC_WORKSPACE_ID",
+    "FABRIC_LAKEHOUSE_ID",
+    "AZURE_SUBSCRIPTION_ID",
+    "AZURE_RESOURCE_GROUP",
+    "AZURE_ML_WORKSPACE",
+    "AZURE_API_AUDIENCE",
+    "AZURE_STORAGE_ACCOUNT_URL",
+    "AZURE_OPENAI_ENDPOINT",
+    "AZURE_OPENAI_DEPLOYMENT"
+  ],
+  "authentication": "DefaultAzureCredential configured in code; token acquisition NOT_EVALUATED",
+  "permissions": "NOT_EVALUATED",
+  "fabric_runtime": "NOT_EVALUATED",
+  "azure_ml_runtime": "NOT_EVALUATED",
+  "azure_openai_runtime": "NOT_EVALUATED",
+  "remediation": "Configure named IDs/resources and authenticated identity, then execute docs/azure.md and docs/governance.md tenant acceptance steps."
+}

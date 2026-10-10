@@ -1,0 +1,38 @@
+{
+  "source_commit": "2d02285b61c2b86fbebdcc8aa1b397bdcb92e3d0",
+  "commands": [
+    {
+      "command": "python -m pytest -q (run inside scripts/validate_release.py)",
+      "exit_code": 0,
+      "result": "36 passed; 1 Starlette deprecation warning"
+    },
+    {
+      "command": "python scripts/validate_release.py",
+      "exit_code": 0,
+      "result": "lint, format, 36 tests and 15 real HTTP endpoints passed"
+    },
+    {
+      "command": "python scripts/governance_release.py --root data/governance-final-20261010 --output evidence/governance-final --as-of 2026-10-10",
+      "exit_code": 0,
+      "result": "3 successful runs and 2 expected blocked injections; industrial release remains BLOCKED"
+    },
+    {
+      "command": "docker build --build-arg BUILD_COMMIT=2d02285 -f docker/Dockerfile -t maritime-sla:governance .",
+      "exit_code": 0,
+      "image_id": "sha256:7a3046199d619270b17b12db8f1da91670af0e4495857d89b1f1cbbe9ed678a6"
+    },
+    {
+      "command": "docker run --name maritime-governance-final-20261010 maritime-sla:governance python scripts/container_smoke.py",
+      "exit_code": 0,
+      "result": "Pipeline and 12 real HTTP endpoints passed"
+    },
+    {
+      "command": "uv build",
+      "exit_code": 0,
+      "result": "Wheel and sdist built; wheel governance contract verified"
+    }
+  ],
+  "type_checks": "NOT_CONFIGURED in existing project",
+  "resource_usage": "NOT_MEASURED; campaign latency is measured, no capacity or resource SLO claimed",
+  "cloud_runtime": "NOT_EVALUATED"
+}

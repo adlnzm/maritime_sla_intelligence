@@ -1,0 +1,1 @@
+{"latitude":51.915638,"longitude":4.2857146,"generationtime_ms":0.26285648345947266,"utc_offset_seconds":0,"timezone":"GMT","timezone_abbreviation":"GMT","elevation":0.0,"daily_units":{"time":"iso8601","wind_speed_10m_max":"km/h"},"daily":{"time":["2026-09-30","2026-10-01","2026-10-02","2026-10-03","2026-10-04","2026-10-05"],"wind_speed_10m_max":[13.9,15.0,8.7,6.3,4.9,14.4]}}

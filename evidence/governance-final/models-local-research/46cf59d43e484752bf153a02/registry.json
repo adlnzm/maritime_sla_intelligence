@@ -1,0 +1,199 @@
+{
+  "status": "VALIDATED_TEMPORAL_HOLDOUT",
+  "target": "next-day vessel_calls",
+  "training_records": 948,
+  "calibration_records": 204,
+  "validation_records": 204,
+  "model": "forest_4",
+  "model_version": "46cf59d43e484752bf153a02",
+  "feature_version": "portcalls-lags-v1",
+  "features": [
+    "lag1",
+    "lag7",
+    "mean7",
+    "std7",
+    "day_of_week"
+  ],
+  "dataset_version": "b967799c318ca1788f4ba942",
+  "training_start": "2026-02-19",
+  "training_end": "2026-07-26",
+  "calibration_start": "2026-07-27",
+  "calibration_end": "2026-08-29",
+  "validation_start": "2026-08-30",
+  "validation_end": "2026-10-02",
+  "metrics": {
+    "mae": 5.92282571981091,
+    "rmse": 8.529662901267663,
+    "persistence_mae": 8.215686274509803
+  },
+  "calibration": {
+    "method": "split conformal absolute residual",
+    "nominal_coverage": 0.9,
+    "empirical_holdout_coverage": 0.9362745098039216,
+    "radius": 18.287951404015786,
+    "caveat": "Temporal dependence invalidates exchangeability guarantees"
+  },
+  "drift": {
+    "standardized_mean_shift": {
+      "lag1": 0.07225081569898101,
+      "lag7": 0.08194106299589475,
+      "mean7": 0.08280179744468062,
+      "std7": 0.08209279900842918,
+      "day_of_week": 0.048484637940249674
+    },
+    "alert": false
+  },
+  "comparisons": [
+    {
+      "name": "persistence",
+      "mae": 8.643274853801168,
+      "folds": [
+        {
+          "train_end": "2026-05-08",
+          "validation_start": "2026-05-09",
+          "validation_end": "2026-05-27",
+          "mae": 10.859649122807017
+        },
+        {
+          "train_end": "2026-05-31",
+          "validation_start": "2026-06-01",
+          "validation_end": "2026-06-19",
+          "mae": 6.271929824561403
+        },
+        {
+          "train_end": "2026-06-24",
+          "validation_start": "2026-06-25",
+          "validation_end": "2026-07-13",
+          "mae": 8.798245614035087
+        }
+      ]
+    },
+    {
+      "name": "ridge_1",
+      "mae": 6.785392523948921,
+      "folds": [
+        {
+          "train_end": "2026-05-08",
+          "validation_start": "2026-05-09",
+          "validation_end": "2026-05-27",
+          "mae": 7.684440885632631
+        },
+        {
+          "train_end": "2026-05-31",
+          "validation_start": "2026-06-01",
+          "validation_end": "2026-06-19",
+          "mae": 4.777098257660947
+        },
+        {
+          "train_end": "2026-06-24",
+          "validation_start": "2026-06-25",
+          "validation_end": "2026-07-13",
+          "mae": 7.894638428553184
+        }
+      ]
+    },
+    {
+      "name": "ridge_10",
+      "mae": 6.893528966896053,
+      "folds": [
+        {
+          "train_end": "2026-05-08",
+          "validation_start": "2026-05-09",
+          "validation_end": "2026-05-27",
+          "mae": 7.782239707010521
+        },
+        {
+          "train_end": "2026-05-31",
+          "validation_start": "2026-06-01",
+          "validation_end": "2026-06-19",
+          "mae": 5.148164845157437
+        },
+        {
+          "train_end": "2026-06-24",
+          "validation_start": "2026-06-25",
+          "validation_end": "2026-07-13",
+          "mae": 7.750182348520201
+        }
+      ]
+    },
+    {
+      "name": "forest_4",
+      "mae": 6.769886903558155,
+      "folds": [
+        {
+          "train_end": "2026-05-08",
+          "validation_start": "2026-05-09",
+          "validation_end": "2026-05-27",
+          "mae": 7.40034351456276
+        },
+        {
+          "train_end": "2026-05-31",
+          "validation_start": "2026-06-01",
+          "validation_end": "2026-06-19",
+          "mae": 5.038851724694307
+        },
+        {
+          "train_end": "2026-06-24",
+          "validation_start": "2026-06-25",
+          "validation_end": "2026-07-13",
+          "mae": 7.870465471417398
+        }
+      ]
+    },
+    {
+      "name": "forest_8",
+      "mae": 6.846648897369749,
+      "folds": [
+        {
+          "train_end": "2026-05-08",
+          "validation_start": "2026-05-09",
+          "validation_end": "2026-05-27",
+          "mae": 7.343604201825057
+        },
+        {
+          "train_end": "2026-05-31",
+          "validation_start": "2026-06-01",
+          "validation_end": "2026-06-19",
+          "mae": 5.422788932488448
+        },
+        {
+          "train_end": "2026-06-24",
+          "validation_start": "2026-06-25",
+          "validation_end": "2026-07-13",
+          "mae": 7.773553557795742
+        }
+      ]
+    }
+  ],
+  "selection_rationale": "Lowest mean expanding-window MAE before calibration and untouched holdout",
+  "hyperparameters": {
+    "bootstrap": true,
+    "ccp_alpha": 0.0,
+    "criterion": "squared_error",
+    "max_depth": 4,
+    "max_features": 1.0,
+    "max_leaf_nodes": null,
+    "max_samples": null,
+    "min_impurity_decrease": 0.0,
+    "min_samples_leaf": 5,
+    "min_samples_split": 2,
+    "min_weight_fraction_leaf": 0.0,
+    "monotonic_cst": null,
+    "n_estimators": 80,
+    "n_jobs": 1,
+    "oob_score": false,
+    "random_state": 1729,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "error_analysis": {
+    "port1114": 8.524472074753014,
+    "port1188": 9.323438607308242,
+    "port1201": 10.078134467414323,
+    "port664": 2.739588374837831,
+    "port744": 1.9414824709728615,
+    "port815": 2.929838323579194
+  },
+  "duration_seconds": 1.7192095998907462,
+  "sla_model_status": "DEFERRED \u2014 INSUFFICIENT OBSERVED OUTCOME DATA"
+}

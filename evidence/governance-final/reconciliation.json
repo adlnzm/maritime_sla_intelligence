@@ -1,0 +1,160 @@
+{
+  "canonical": {
+    "received": 1434,
+    "accepted": 1434,
+    "rejected": 0,
+    "quarantined": 0,
+    "balanced": true
+  },
+  "products": {
+    "ports": {
+      "input": 6,
+      "persisted_expected": 6,
+      "invalid": 0
+    },
+    "activity": {
+      "input": 1398,
+      "persisted_expected": 1398,
+      "invalid": 0
+    },
+    "routes": {
+      "input": 30,
+      "persisted_expected": 30,
+      "invalid": 0
+    },
+    "congestion_history": {
+      "input": 1398,
+      "persisted_expected": 1398,
+      "invalid": 0
+    },
+    "congestion": {
+      "input": 6,
+      "persisted_expected": 6,
+      "invalid": 0
+    },
+    "network": {
+      "input": 30,
+      "persisted_expected": 30,
+      "invalid": 0
+    },
+    "exposure": {
+      "input": 0,
+      "persisted_expected": 0,
+      "invalid": 0
+    },
+    "scenarios": {
+      "input": 60,
+      "persisted_expected": 60,
+      "invalid": 0
+    },
+    "interventions": {
+      "input": 300,
+      "persisted_expected": 300,
+      "invalid": 0
+    },
+    "sla_risk": {
+      "input": 60,
+      "persisted_expected": 60,
+      "invalid": 0
+    },
+    "decisions": {
+      "input": 60,
+      "persisted_expected": 60,
+      "invalid": 0
+    },
+    "predictions": {
+      "input": 6,
+      "persisted_expected": 6,
+      "invalid": 0
+    },
+    "disruptions": {
+      "input": 0,
+      "persisted_expected": 0,
+      "invalid": 0
+    },
+    "early_warning": {
+      "input": 0,
+      "persisted_expected": 0,
+      "invalid": 0
+    },
+    "sources": {
+      "input": 6,
+      "persisted_expected": 6,
+      "invalid": 0
+    },
+    "data_quality": {
+      "input": 1,
+      "persisted_expected": 1,
+      "invalid": 0
+    },
+    "reference_weather": {
+      "input": 36,
+      "persisted_expected": 36,
+      "invalid": 0
+    },
+    "lineage": {
+      "input": 222,
+      "persisted_expected": 222,
+      "invalid": 0
+    },
+    "dim_location": {
+      "input": 6,
+      "persisted_expected": 6,
+      "invalid": 0
+    },
+    "dim_time": {
+      "input": 233,
+      "persisted_expected": 233,
+      "invalid": 0
+    },
+    "dim_intervention": {
+      "input": 5,
+      "persisted_expected": 5,
+      "invalid": 0
+    }
+  },
+  "independent_metrics": [
+    {
+      "port_id": "port1114",
+      "date": "2026-10-02",
+      "independent_baseline": 83.35714285714286,
+      "independent_z_score": -0.034083075813000026,
+      "passed": true
+    },
+    {
+      "port_id": "port1188",
+      "date": "2026-10-02",
+      "independent_baseline": 79.42857142857143,
+      "independent_z_score": -0.3428340143396546,
+      "passed": true
+    },
+    {
+      "port_id": "port1201",
+      "date": "2026-10-02",
+      "independent_baseline": 116.0,
+      "independent_z_score": -0.6107556641289641,
+      "passed": true
+    },
+    {
+      "port_id": "port664",
+      "date": "2026-10-02",
+      "independent_baseline": 10.232142857142858,
+      "independent_z_score": 0.5551033396334509,
+      "passed": true
+    },
+    {
+      "port_id": "port744",
+      "date": "2026-10-02",
+      "independent_baseline": 4.464285714285714,
+      "independent_z_score": 1.3034656043534056,
+      "passed": true
+    },
+    {
+      "port_id": "port815",
+      "date": "2026-10-02",
+      "independent_baseline": 9.821428571428571,
+      "independent_z_score": -0.8397130853781438,
+      "passed": true
+    }
+  ]
+}

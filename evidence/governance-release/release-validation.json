@@ -1,0 +1,92 @@
+{
+  "status": "BLOCKED",
+  "scope": "INDUSTRIAL_OPERATIONAL_RELEASE",
+  "local_analytical_status": "PASS_WITH_WARNINGS",
+  "live_acquisition": "LIVE_PUBLIC_DATA",
+  "release_id": "521eb1a82b56966b45fce27bad8c860a03f948757bf1b6b1783b613fb04482f3",
+  "run_id": "e6756ab653594b8d942a17083dd9c50f",
+  "code": {
+    "git_commit": "0227da89d1d32d314992f840d6bc81c254ca9d84",
+    "working_tree_dirty": false,
+    "code_fingerprint": "ff685feb0eac430d419a338c1c7da5d8534fa0d571e67e80ad1e9d99906adbcf",
+    "python": "3.11.9",
+    "dependencies": {
+      "numpy": "2.4.6",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.9.1",
+      "pydantic": "2.13.5"
+    }
+  },
+  "mandatory_failed_controls": [],
+  "mandatory_unevaluated_controls": [
+    {
+      "control": "fabric_runtime_and_readback",
+      "status": "NOT_EVALUATED"
+    },
+    {
+      "control": "azure_ml_lifecycle_and_return",
+      "status": "NOT_EVALUATED"
+    },
+    {
+      "control": "cloud_identity_and_least_privilege",
+      "status": "NOT_EVALUATED"
+    },
+    {
+      "control": "raw_and_audit_retention_enforcement",
+      "status": "NOT_EVALUATED"
+    },
+    {
+      "control": "production_slo_agreement_and_sustained_evidence",
+      "status": "NOT_EVALUATED"
+    }
+  ],
+  "campaign": {
+    "status": "PASS",
+    "checks": {
+      "successful_runs": true,
+      "expected_failures": true,
+      "prior_snapshot_preserved": true,
+      "accounting": true,
+      "audit_chain": true,
+      "independent_metrics": true
+    },
+    "attempts": [
+      {
+        "run_id": "e6756ab653594b8d942a17083dd9c50f",
+        "outcome": "PASS",
+        "mode": "LIVE_PUBLIC_DATA",
+        "duration_seconds": 22.723789300071076
+      },
+      {
+        "run_id": "02e21206e3da4e5ebe8165b66cf63ca5",
+        "outcome": "PASS",
+        "mode": "REPLAY",
+        "duration_seconds": 4.7807358000427485
+      },
+      {
+        "run_id": "fb9b93b630fb466b9dd0603bac3b673f",
+        "outcome": "EXPECTED_BLOCK",
+        "injection": "invalid_coordinate",
+        "pointer_preserved": true,
+        "duration_seconds": 0.2372369000222534
+      },
+      {
+        "run_id": "85ada6fadaf348bba3c91ab2772b30ce",
+        "outcome": "EXPECTED_BLOCK",
+        "injection": "partial_persistence",
+        "pointer_preserved": true,
+        "duration_seconds": 8.101487900014035
+      },
+      {
+        "run_id": "33abcc84414a4d39b80fc391476ceffa",
+        "outcome": "PASS",
+        "mode": "RECOVERY_REPLAY",
+        "duration_seconds": 15.436708099907264
+      }
+    ],
+    "elapsed_seconds": 58.87967930000741,
+    "sustained_production_reliability": "NOT_ESTABLISHED"
+  },
+  "dataset_label": "LOCAL_ANALYTICAL_EVIDENCE_NOT_INDUSTRIALLY_VALIDATED",
+  "sla_ml": "DEFERRED \u2014 INSUFFICIENT OBSERVED OUTCOME DATA"
+}

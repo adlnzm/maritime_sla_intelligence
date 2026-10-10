@@ -1,0 +1,5361 @@
+[
+  {
+    "date": "2026-02-12",
+    "year": 2026,
+    "month": 2,
+    "classification": "DERIVED",
+    "lineage_id": "602a373bf2f322c3d8865250",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-02-13",
+    "year": 2026,
+    "month": 2,
+    "classification": "DERIVED",
+    "lineage_id": "f7c9570e944d6b1c944d295b",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-02-14",
+    "year": 2026,
+    "month": 2,
+    "classification": "DERIVED",
+    "lineage_id": "4dbf4c741f8c3019b497b1f6",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-02-15",
+    "year": 2026,
+    "month": 2,
+    "classification": "DERIVED",
+    "lineage_id": "669f392305da69776c1f36c4",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-02-16",
+    "year": 2026,
+    "month": 2,
+    "classification": "DERIVED",
+    "lineage_id": "eb293e0fd5f2f5d39ac4e85f",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-02-17",
+    "year": 2026,
+    "month": 2,
+    "classification": "DERIVED",
+    "lineage_id": "8ab425aeccadce27d1376355",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-02-18",
+    "year": 2026,
+    "month": 2,
+    "classification": "DERIVED",
+    "lineage_id": "05281aaa9dc3852e113039df",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-02-19",
+    "year": 2026,
+    "month": 2,
+    "classification": "DERIVED",
+    "lineage_id": "12f3245f45e003ace2b298f9",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-02-20",
+    "year": 2026,
+    "month": 2,
+    "classification": "DERIVED",
+    "lineage_id": "faba15a0166feb60689f8a4d",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-02-21",
+    "year": 2026,
+    "month": 2,
+    "classification": "DERIVED",
+    "lineage_id": "13a1b5b8d073f6cd9f4c601f",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-02-22",
+    "year": 2026,
+    "month": 2,
+    "classification": "DERIVED",
+    "lineage_id": "5ace2941ffda5d969c63bc11",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-02-23",
+    "year": 2026,
+    "month": 2,
+    "classification": "DERIVED",
+    "lineage_id": "5a8cb49c656e44d4e9eb55c7",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-02-24",
+    "year": 2026,
+    "month": 2,
+    "classification": "DERIVED",
+    "lineage_id": "88656fa0d93a476180d1c87a",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-02-25",
+    "year": 2026,
+    "month": 2,
+    "classification": "DERIVED",
+    "lineage_id": "8e84c3e19015305de7c38424",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-02-26",
+    "year": 2026,
+    "month": 2,
+    "classification": "DERIVED",
+    "lineage_id": "e8f1532a6c5ef9dc2c7d9884",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-02-27",
+    "year": 2026,
+    "month": 2,
+    "classification": "DERIVED",
+    "lineage_id": "86e80bf34c054dd108b7760b",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-02-28",
+    "year": 2026,
+    "month": 2,
+    "classification": "DERIVED",
+    "lineage_id": "1fa33f70dbe4a47972f12e1b",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-03-01",
+    "year": 2026,
+    "month": 3,
+    "classification": "DERIVED",
+    "lineage_id": "6e536f66797be79d14cddbeb",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-03-02",
+    "year": 2026,
+    "month": 3,
+    "classification": "DERIVED",
+    "lineage_id": "0193de47bcdb772dc269c692",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-03-03",
+    "year": 2026,
+    "month": 3,
+    "classification": "DERIVED",
+    "lineage_id": "cf3bd9144c80ee7c4fb70025",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-03-04",
+    "year": 2026,
+    "month": 3,
+    "classification": "DERIVED",
+    "lineage_id": "6cc39038a2c73e39710d2f8a",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-03-05",
+    "year": 2026,
+    "month": 3,
+    "classification": "DERIVED",
+    "lineage_id": "61a33d5871eb4f117a609e71",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-03-06",
+    "year": 2026,
+    "month": 3,
+    "classification": "DERIVED",
+    "lineage_id": "74a905f3ed747816368ff869",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-03-07",
+    "year": 2026,
+    "month": 3,
+    "classification": "DERIVED",
+    "lineage_id": "40e0d532ed2cabcce775188d",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-03-08",
+    "year": 2026,
+    "month": 3,
+    "classification": "DERIVED",
+    "lineage_id": "eb80edd4bac40d0d973db0b9",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-03-09",
+    "year": 2026,
+    "month": 3,
+    "classification": "DERIVED",
+    "lineage_id": "905b60fe9a2b3ddaf0c1cb9d",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-03-10",
+    "year": 2026,
+    "month": 3,
+    "classification": "DERIVED",
+    "lineage_id": "2cbb3efa98bfbcdad844d151",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-03-11",
+    "year": 2026,
+    "month": 3,
+    "classification": "DERIVED",
+    "lineage_id": "fa94fd378a6d9a66aa43bc14",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-03-12",
+    "year": 2026,
+    "month": 3,
+    "classification": "DERIVED",
+    "lineage_id": "18dce7772d851a2a993c8b86",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-03-13",
+    "year": 2026,
+    "month": 3,
+    "classification": "DERIVED",
+    "lineage_id": "a9e29b9352d66cfbadd21c80",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-03-14",
+    "year": 2026,
+    "month": 3,
+    "classification": "DERIVED",
+    "lineage_id": "c7c0d378204f7c7c693052b5",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-03-15",
+    "year": 2026,
+    "month": 3,
+    "classification": "DERIVED",
+    "lineage_id": "2e256c5e7c8caf96d9805b33",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-03-16",
+    "year": 2026,
+    "month": 3,
+    "classification": "DERIVED",
+    "lineage_id": "05768be6994980681cbd1f5f",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-03-17",
+    "year": 2026,
+    "month": 3,
+    "classification": "DERIVED",
+    "lineage_id": "9dd36ae93732056199c8ce5f",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-03-18",
+    "year": 2026,
+    "month": 3,
+    "classification": "DERIVED",
+    "lineage_id": "554bd9522bfa16ca85a631fd",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-03-19",
+    "year": 2026,
+    "month": 3,
+    "classification": "DERIVED",
+    "lineage_id": "c1b7e58a5e50da3b180d4b6b",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-03-20",
+    "year": 2026,
+    "month": 3,
+    "classification": "DERIVED",
+    "lineage_id": "7ba123f9b63e19dc3e860f65",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-03-21",
+    "year": 2026,
+    "month": 3,
+    "classification": "DERIVED",
+    "lineage_id": "ed887fd6e10c50e73966387f",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-03-22",
+    "year": 2026,
+    "month": 3,
+    "classification": "DERIVED",
+    "lineage_id": "fed94ad5573c70e0ec42fbd9",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-03-23",
+    "year": 2026,
+    "month": 3,
+    "classification": "DERIVED",
+    "lineage_id": "630a7cb04180e7919106fd87",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-03-24",
+    "year": 2026,
+    "month": 3,
+    "classification": "DERIVED",
+    "lineage_id": "5931345e9f4f1d057b5897b1",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-03-25",
+    "year": 2026,
+    "month": 3,
+    "classification": "DERIVED",
+    "lineage_id": "775fb30e047ae8311874b9ea",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-03-26",
+    "year": 2026,
+    "month": 3,
+    "classification": "DERIVED",
+    "lineage_id": "13c552e740530e5c974cb8de",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-03-27",
+    "year": 2026,
+    "month": 3,
+    "classification": "DERIVED",
+    "lineage_id": "9d10c75f568a2a821f5774f3",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-03-28",
+    "year": 2026,
+    "month": 3,
+    "classification": "DERIVED",
+    "lineage_id": "f64ac8c096ac87e6362e0aeb",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-03-29",
+    "year": 2026,
+    "month": 3,
+    "classification": "DERIVED",
+    "lineage_id": "7ec275a452aa2cc6233fe085",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-03-30",
+    "year": 2026,
+    "month": 3,
+    "classification": "DERIVED",
+    "lineage_id": "3e5c3c63e6d3fcc0ca713492",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-03-31",
+    "year": 2026,
+    "month": 3,
+    "classification": "DERIVED",
+    "lineage_id": "57693a8012c09d34500056dc",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-04-01",
+    "year": 2026,
+    "month": 4,
+    "classification": "DERIVED",
+    "lineage_id": "1fa26bb5421cdddd32669614",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-04-02",
+    "year": 2026,
+    "month": 4,
+    "classification": "DERIVED",
+    "lineage_id": "18f397bc2e8cee1e57e0de5a",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-04-03",
+    "year": 2026,
+    "month": 4,
+    "classification": "DERIVED",
+    "lineage_id": "fc1c5cd9241c08ec9fe0c1a2",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-04-04",
+    "year": 2026,
+    "month": 4,
+    "classification": "DERIVED",
+    "lineage_id": "d53de75ef9488f55755382d5",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-04-05",
+    "year": 2026,
+    "month": 4,
+    "classification": "DERIVED",
+    "lineage_id": "a4cf133eef7f88e98d4c8166",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-04-06",
+    "year": 2026,
+    "month": 4,
+    "classification": "DERIVED",
+    "lineage_id": "5a6c976a91829b0891274f49",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-04-07",
+    "year": 2026,
+    "month": 4,
+    "classification": "DERIVED",
+    "lineage_id": "04a3e19ea5d7683436a4cd12",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-04-08",
+    "year": 2026,
+    "month": 4,
+    "classification": "DERIVED",
+    "lineage_id": "76e6a0d6d0e9d6a20d08dd61",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-04-09",
+    "year": 2026,
+    "month": 4,
+    "classification": "DERIVED",
+    "lineage_id": "8c3132958ef25d0015b08352",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-04-10",
+    "year": 2026,
+    "month": 4,
+    "classification": "DERIVED",
+    "lineage_id": "186fb1083d4a0894b5d28030",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-04-11",
+    "year": 2026,
+    "month": 4,
+    "classification": "DERIVED",
+    "lineage_id": "658bdf75ef7dd8843ebcc495",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-04-12",
+    "year": 2026,
+    "month": 4,
+    "classification": "DERIVED",
+    "lineage_id": "b55a83ceaf74a87f709547ae",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-04-13",
+    "year": 2026,
+    "month": 4,
+    "classification": "DERIVED",
+    "lineage_id": "8fe368cb297d613bfc115546",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-04-14",
+    "year": 2026,
+    "month": 4,
+    "classification": "DERIVED",
+    "lineage_id": "38515c1396db6c823c94c4b4",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-04-15",
+    "year": 2026,
+    "month": 4,
+    "classification": "DERIVED",
+    "lineage_id": "7433a1ad1099c820b5c01b7f",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-04-16",
+    "year": 2026,
+    "month": 4,
+    "classification": "DERIVED",
+    "lineage_id": "bb1ce96a9673e1ac32e7e6c4",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-04-17",
+    "year": 2026,
+    "month": 4,
+    "classification": "DERIVED",
+    "lineage_id": "a80c35c7315c5231d954a71d",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-04-18",
+    "year": 2026,
+    "month": 4,
+    "classification": "DERIVED",
+    "lineage_id": "835e9c2db6bd0011732d8f29",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-04-19",
+    "year": 2026,
+    "month": 4,
+    "classification": "DERIVED",
+    "lineage_id": "ba8ea7c70cc4a3e8fc2109f9",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-04-20",
+    "year": 2026,
+    "month": 4,
+    "classification": "DERIVED",
+    "lineage_id": "5b569333a648da07c95eb2a3",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-04-21",
+    "year": 2026,
+    "month": 4,
+    "classification": "DERIVED",
+    "lineage_id": "04b36ec0f52df5863b141ac9",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-04-22",
+    "year": 2026,
+    "month": 4,
+    "classification": "DERIVED",
+    "lineage_id": "07d7c6521d639c9ad0baeba0",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-04-23",
+    "year": 2026,
+    "month": 4,
+    "classification": "DERIVED",
+    "lineage_id": "c7cadd4bf8148b4eb9d04e1b",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-04-24",
+    "year": 2026,
+    "month": 4,
+    "classification": "DERIVED",
+    "lineage_id": "e2160a0f37f0c0894705f86e",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-04-25",
+    "year": 2026,
+    "month": 4,
+    "classification": "DERIVED",
+    "lineage_id": "67c2575345b97835ef47c1e1",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-04-26",
+    "year": 2026,
+    "month": 4,
+    "classification": "DERIVED",
+    "lineage_id": "cf1baf01e2bca0f63ad926e8",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-04-27",
+    "year": 2026,
+    "month": 4,
+    "classification": "DERIVED",
+    "lineage_id": "bea37abf737e32028c9472d9",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-04-28",
+    "year": 2026,
+    "month": 4,
+    "classification": "DERIVED",
+    "lineage_id": "9a40efff0496502d6727e40f",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-04-29",
+    "year": 2026,
+    "month": 4,
+    "classification": "DERIVED",
+    "lineage_id": "b963b7b0cc8e37f9340d22a7",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-04-30",
+    "year": 2026,
+    "month": 4,
+    "classification": "DERIVED",
+    "lineage_id": "98b9171bb5f24a52b994b0be",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-05-01",
+    "year": 2026,
+    "month": 5,
+    "classification": "DERIVED",
+    "lineage_id": "942dd684d892d2757d6db837",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-05-02",
+    "year": 2026,
+    "month": 5,
+    "classification": "DERIVED",
+    "lineage_id": "8977cf3a5ac4196476dc2445",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-05-03",
+    "year": 2026,
+    "month": 5,
+    "classification": "DERIVED",
+    "lineage_id": "0f3799cb00f2753e71cfe3b9",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-05-04",
+    "year": 2026,
+    "month": 5,
+    "classification": "DERIVED",
+    "lineage_id": "1acb881991afdca3bb20a363",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-05-05",
+    "year": 2026,
+    "month": 5,
+    "classification": "DERIVED",
+    "lineage_id": "1179fb881091bcbc0ef5b790",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-05-06",
+    "year": 2026,
+    "month": 5,
+    "classification": "DERIVED",
+    "lineage_id": "f170d28f9b816e5e9eec61c9",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-05-07",
+    "year": 2026,
+    "month": 5,
+    "classification": "DERIVED",
+    "lineage_id": "701b7d0e0ef6f35826aad511",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-05-08",
+    "year": 2026,
+    "month": 5,
+    "classification": "DERIVED",
+    "lineage_id": "fa92bec06afe7d7bcfa569a6",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-05-09",
+    "year": 2026,
+    "month": 5,
+    "classification": "DERIVED",
+    "lineage_id": "5ade25f107351d4577c4f92e",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-05-10",
+    "year": 2026,
+    "month": 5,
+    "classification": "DERIVED",
+    "lineage_id": "1318dc82c1d7e0efb02385f6",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-05-11",
+    "year": 2026,
+    "month": 5,
+    "classification": "DERIVED",
+    "lineage_id": "3f3344c81dee5e65860a3abb",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-05-12",
+    "year": 2026,
+    "month": 5,
+    "classification": "DERIVED",
+    "lineage_id": "97fd5a63741346217c5b6a99",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-05-13",
+    "year": 2026,
+    "month": 5,
+    "classification": "DERIVED",
+    "lineage_id": "35ea7dbb120135b744f1b9ed",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-05-14",
+    "year": 2026,
+    "month": 5,
+    "classification": "DERIVED",
+    "lineage_id": "85af5b65b38971287bf0730e",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-05-15",
+    "year": 2026,
+    "month": 5,
+    "classification": "DERIVED",
+    "lineage_id": "66ac06729ea50a86178da699",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-05-16",
+    "year": 2026,
+    "month": 5,
+    "classification": "DERIVED",
+    "lineage_id": "fa78e489e4525b8b6e53deeb",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-05-17",
+    "year": 2026,
+    "month": 5,
+    "classification": "DERIVED",
+    "lineage_id": "553cf593a75ea2692cbb7947",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-05-18",
+    "year": 2026,
+    "month": 5,
+    "classification": "DERIVED",
+    "lineage_id": "1453a1e67ae7658c7cb474f6",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-05-19",
+    "year": 2026,
+    "month": 5,
+    "classification": "DERIVED",
+    "lineage_id": "5715560243dccb51c34b51d6",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-05-20",
+    "year": 2026,
+    "month": 5,
+    "classification": "DERIVED",
+    "lineage_id": "96f8cca4f8e1faa824c9b667",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-05-21",
+    "year": 2026,
+    "month": 5,
+    "classification": "DERIVED",
+    "lineage_id": "5bceb0a48a94cc63ba539be4",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-05-22",
+    "year": 2026,
+    "month": 5,
+    "classification": "DERIVED",
+    "lineage_id": "0746adeabc865be970401a06",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-05-23",
+    "year": 2026,
+    "month": 5,
+    "classification": "DERIVED",
+    "lineage_id": "32ac86fb33f33384540561dc",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-05-24",
+    "year": 2026,
+    "month": 5,
+    "classification": "DERIVED",
+    "lineage_id": "c0bf48257f45dc470951b3fb",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-05-25",
+    "year": 2026,
+    "month": 5,
+    "classification": "DERIVED",
+    "lineage_id": "44026bccdab80720357b105b",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-05-26",
+    "year": 2026,
+    "month": 5,
+    "classification": "DERIVED",
+    "lineage_id": "2f68a82f50b033676dffc06c",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-05-27",
+    "year": 2026,
+    "month": 5,
+    "classification": "DERIVED",
+    "lineage_id": "99d422f8ae0871ad906f1d1b",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-05-28",
+    "year": 2026,
+    "month": 5,
+    "classification": "DERIVED",
+    "lineage_id": "6d1dad625585b6795fc76238",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-05-29",
+    "year": 2026,
+    "month": 5,
+    "classification": "DERIVED",
+    "lineage_id": "dd75a10a5825f596f15c0ae0",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-05-30",
+    "year": 2026,
+    "month": 5,
+    "classification": "DERIVED",
+    "lineage_id": "2eb4b59542208630d421318b",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-05-31",
+    "year": 2026,
+    "month": 5,
+    "classification": "DERIVED",
+    "lineage_id": "8ff20afbb95e064ce66387ee",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-06-01",
+    "year": 2026,
+    "month": 6,
+    "classification": "DERIVED",
+    "lineage_id": "650bca9359b83ea918c8daeb",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-06-02",
+    "year": 2026,
+    "month": 6,
+    "classification": "DERIVED",
+    "lineage_id": "15ad58b10f2715d5af17db05",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-06-03",
+    "year": 2026,
+    "month": 6,
+    "classification": "DERIVED",
+    "lineage_id": "d4474f9c3e9d1e1c386d5b9d",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-06-04",
+    "year": 2026,
+    "month": 6,
+    "classification": "DERIVED",
+    "lineage_id": "b314d59fd5547232063a9e9c",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-06-05",
+    "year": 2026,
+    "month": 6,
+    "classification": "DERIVED",
+    "lineage_id": "faf26ea99860ff0787e848a0",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-06-06",
+    "year": 2026,
+    "month": 6,
+    "classification": "DERIVED",
+    "lineage_id": "07e9f4576ab7b7b0079bcbd2",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-06-07",
+    "year": 2026,
+    "month": 6,
+    "classification": "DERIVED",
+    "lineage_id": "109b1d987aa4347883f8a19e",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-06-08",
+    "year": 2026,
+    "month": 6,
+    "classification": "DERIVED",
+    "lineage_id": "ef81b095c10013a47a4ef15d",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-06-09",
+    "year": 2026,
+    "month": 6,
+    "classification": "DERIVED",
+    "lineage_id": "30a39ca15d4e53b2ee14b8d5",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-06-10",
+    "year": 2026,
+    "month": 6,
+    "classification": "DERIVED",
+    "lineage_id": "7cd3e84d493a2896fc87543f",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-06-11",
+    "year": 2026,
+    "month": 6,
+    "classification": "DERIVED",
+    "lineage_id": "97aaeb3e14fdf29bd338e840",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-06-12",
+    "year": 2026,
+    "month": 6,
+    "classification": "DERIVED",
+    "lineage_id": "ddb65350717ebc6456aba74c",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-06-13",
+    "year": 2026,
+    "month": 6,
+    "classification": "DERIVED",
+    "lineage_id": "8f260872e234b6c815ff9a15",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-06-14",
+    "year": 2026,
+    "month": 6,
+    "classification": "DERIVED",
+    "lineage_id": "190778c30e822d713b78b1bc",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-06-15",
+    "year": 2026,
+    "month": 6,
+    "classification": "DERIVED",
+    "lineage_id": "78b5959e388d5aa0f7141e78",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-06-16",
+    "year": 2026,
+    "month": 6,
+    "classification": "DERIVED",
+    "lineage_id": "cfc9cff446794317b943a3b7",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-06-17",
+    "year": 2026,
+    "month": 6,
+    "classification": "DERIVED",
+    "lineage_id": "e9d00e86c47fc6e1351eaac3",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-06-18",
+    "year": 2026,
+    "month": 6,
+    "classification": "DERIVED",
+    "lineage_id": "f88b3b858bf1d8dc912419ba",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-06-19",
+    "year": 2026,
+    "month": 6,
+    "classification": "DERIVED",
+    "lineage_id": "a1fe77beb328a87525fe4f35",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-06-20",
+    "year": 2026,
+    "month": 6,
+    "classification": "DERIVED",
+    "lineage_id": "30e58ad28e619ceec46a0cb9",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-06-21",
+    "year": 2026,
+    "month": 6,
+    "classification": "DERIVED",
+    "lineage_id": "05588daff87fb5f9f3fd546e",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-06-22",
+    "year": 2026,
+    "month": 6,
+    "classification": "DERIVED",
+    "lineage_id": "3ac20c2d2cf9097e6badebdf",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-06-23",
+    "year": 2026,
+    "month": 6,
+    "classification": "DERIVED",
+    "lineage_id": "f621acfcd62c68eb5498efeb",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-06-24",
+    "year": 2026,
+    "month": 6,
+    "classification": "DERIVED",
+    "lineage_id": "67f1c450eff34f8d5084653d",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-06-25",
+    "year": 2026,
+    "month": 6,
+    "classification": "DERIVED",
+    "lineage_id": "06cdc1034b4d31e715f18fc7",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-06-26",
+    "year": 2026,
+    "month": 6,
+    "classification": "DERIVED",
+    "lineage_id": "90670c93c5c09b88ce0866dc",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-06-27",
+    "year": 2026,
+    "month": 6,
+    "classification": "DERIVED",
+    "lineage_id": "ac5789297c47396b71bb612f",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-06-28",
+    "year": 2026,
+    "month": 6,
+    "classification": "DERIVED",
+    "lineage_id": "7a81b5d9fe6a36cfa05f3dc6",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-06-29",
+    "year": 2026,
+    "month": 6,
+    "classification": "DERIVED",
+    "lineage_id": "fdc7222736da599da9ba102b",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-06-30",
+    "year": 2026,
+    "month": 6,
+    "classification": "DERIVED",
+    "lineage_id": "c7badf198fe5c8f83b6fb4fd",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-07-01",
+    "year": 2026,
+    "month": 7,
+    "classification": "DERIVED",
+    "lineage_id": "5ac224d076538a5d234cec58",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-07-02",
+    "year": 2026,
+    "month": 7,
+    "classification": "DERIVED",
+    "lineage_id": "97dfbff1d2b9500899b918a7",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-07-03",
+    "year": 2026,
+    "month": 7,
+    "classification": "DERIVED",
+    "lineage_id": "31f131145d792c1a4951b5c8",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-07-04",
+    "year": 2026,
+    "month": 7,
+    "classification": "DERIVED",
+    "lineage_id": "009048be2286b6e8403be400",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-07-05",
+    "year": 2026,
+    "month": 7,
+    "classification": "DERIVED",
+    "lineage_id": "918a7702e25308a22e82c21a",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-07-06",
+    "year": 2026,
+    "month": 7,
+    "classification": "DERIVED",
+    "lineage_id": "0f057949dda1963b6f436a23",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-07-07",
+    "year": 2026,
+    "month": 7,
+    "classification": "DERIVED",
+    "lineage_id": "711ddf63498f99ccd41d9dd4",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-07-08",
+    "year": 2026,
+    "month": 7,
+    "classification": "DERIVED",
+    "lineage_id": "cbbf8bfb2ba69cdc0a3b6191",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-07-09",
+    "year": 2026,
+    "month": 7,
+    "classification": "DERIVED",
+    "lineage_id": "341d3458c3d56b1fa4153902",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-07-10",
+    "year": 2026,
+    "month": 7,
+    "classification": "DERIVED",
+    "lineage_id": "4d5b14c051a29d4fa0ef0ee2",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-07-11",
+    "year": 2026,
+    "month": 7,
+    "classification": "DERIVED",
+    "lineage_id": "ea60dd3e40278e83e594239d",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-07-12",
+    "year": 2026,
+    "month": 7,
+    "classification": "DERIVED",
+    "lineage_id": "ab6f6fda45588e919977b434",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-07-13",
+    "year": 2026,
+    "month": 7,
+    "classification": "DERIVED",
+    "lineage_id": "34cda87fc243ec42350921c2",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-07-14",
+    "year": 2026,
+    "month": 7,
+    "classification": "DERIVED",
+    "lineage_id": "3e48abe0f283d76df9f571c1",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-07-15",
+    "year": 2026,
+    "month": 7,
+    "classification": "DERIVED",
+    "lineage_id": "d9f66accbf84fb1684a959f6",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-07-16",
+    "year": 2026,
+    "month": 7,
+    "classification": "DERIVED",
+    "lineage_id": "f1a7617bed3a5fa5501fb10e",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-07-17",
+    "year": 2026,
+    "month": 7,
+    "classification": "DERIVED",
+    "lineage_id": "8328b9f9500ae1833f726f79",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-07-18",
+    "year": 2026,
+    "month": 7,
+    "classification": "DERIVED",
+    "lineage_id": "aa47142422e3bfbb381af270",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-07-19",
+    "year": 2026,
+    "month": 7,
+    "classification": "DERIVED",
+    "lineage_id": "0733a5a1d69f8d215f832ad0",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-07-20",
+    "year": 2026,
+    "month": 7,
+    "classification": "DERIVED",
+    "lineage_id": "9a8e9f4c95547bab1399d31c",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-07-21",
+    "year": 2026,
+    "month": 7,
+    "classification": "DERIVED",
+    "lineage_id": "b64bb930b47674a65add4e17",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-07-22",
+    "year": 2026,
+    "month": 7,
+    "classification": "DERIVED",
+    "lineage_id": "c934cb8d2dde592c226af190",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-07-23",
+    "year": 2026,
+    "month": 7,
+    "classification": "DERIVED",
+    "lineage_id": "ed4f381c53aeeb953c4f03b7",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-07-24",
+    "year": 2026,
+    "month": 7,
+    "classification": "DERIVED",
+    "lineage_id": "ab26d8997f2a3d2e9d683916",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-07-25",
+    "year": 2026,
+    "month": 7,
+    "classification": "DERIVED",
+    "lineage_id": "8c58a5810147851e59ecd308",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-07-26",
+    "year": 2026,
+    "month": 7,
+    "classification": "DERIVED",
+    "lineage_id": "37bafbbeae0aa4ddbf3dc5d0",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-07-27",
+    "year": 2026,
+    "month": 7,
+    "classification": "DERIVED",
+    "lineage_id": "cabf1ff16fc5d4157039b058",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-07-28",
+    "year": 2026,
+    "month": 7,
+    "classification": "DERIVED",
+    "lineage_id": "da9876a66024ed0ef3d18119",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-07-29",
+    "year": 2026,
+    "month": 7,
+    "classification": "DERIVED",
+    "lineage_id": "84fa5e96b48f6a4120e049ff",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-07-30",
+    "year": 2026,
+    "month": 7,
+    "classification": "DERIVED",
+    "lineage_id": "06341675bc90e34f8abb365d",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-07-31",
+    "year": 2026,
+    "month": 7,
+    "classification": "DERIVED",
+    "lineage_id": "b350f332a8056e79a70b1c55",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-08-01",
+    "year": 2026,
+    "month": 8,
+    "classification": "DERIVED",
+    "lineage_id": "78f52424add95e2a7467e131",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-08-02",
+    "year": 2026,
+    "month": 8,
+    "classification": "DERIVED",
+    "lineage_id": "6af34a72253bff95356a3b82",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-08-03",
+    "year": 2026,
+    "month": 8,
+    "classification": "DERIVED",
+    "lineage_id": "1f45f5789a453c186c99aa8b",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-08-04",
+    "year": 2026,
+    "month": 8,
+    "classification": "DERIVED",
+    "lineage_id": "ecdaa4ad89c44bbdac8149ee",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-08-05",
+    "year": 2026,
+    "month": 8,
+    "classification": "DERIVED",
+    "lineage_id": "15fb926c7e91bf59d04c616a",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-08-06",
+    "year": 2026,
+    "month": 8,
+    "classification": "DERIVED",
+    "lineage_id": "057ddd19128652403edfa614",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-08-07",
+    "year": 2026,
+    "month": 8,
+    "classification": "DERIVED",
+    "lineage_id": "7c258d67f40ad1aeb3fa8c67",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-08-08",
+    "year": 2026,
+    "month": 8,
+    "classification": "DERIVED",
+    "lineage_id": "4bd8f6f600e75baced020d79",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-08-09",
+    "year": 2026,
+    "month": 8,
+    "classification": "DERIVED",
+    "lineage_id": "0ecdb6d4cf20e566e721f86f",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-08-10",
+    "year": 2026,
+    "month": 8,
+    "classification": "DERIVED",
+    "lineage_id": "56010f361e003684403cbe52",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-08-11",
+    "year": 2026,
+    "month": 8,
+    "classification": "DERIVED",
+    "lineage_id": "2d736c0c39db7c4da0bb53d4",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-08-12",
+    "year": 2026,
+    "month": 8,
+    "classification": "DERIVED",
+    "lineage_id": "cb3ed765a3e7505e053c4b64",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-08-13",
+    "year": 2026,
+    "month": 8,
+    "classification": "DERIVED",
+    "lineage_id": "c39970410cd9e31472be83f6",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-08-14",
+    "year": 2026,
+    "month": 8,
+    "classification": "DERIVED",
+    "lineage_id": "3ce16bc77889aad6b998ef7c",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-08-15",
+    "year": 2026,
+    "month": 8,
+    "classification": "DERIVED",
+    "lineage_id": "69ef2c61fd5cacd0f3f990ce",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-08-16",
+    "year": 2026,
+    "month": 8,
+    "classification": "DERIVED",
+    "lineage_id": "70e6b68eeb8b77003767605a",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-08-17",
+    "year": 2026,
+    "month": 8,
+    "classification": "DERIVED",
+    "lineage_id": "cb143ba36c844d6b1dee9253",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-08-18",
+    "year": 2026,
+    "month": 8,
+    "classification": "DERIVED",
+    "lineage_id": "e0813481e9ab7c6050bd7045",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-08-19",
+    "year": 2026,
+    "month": 8,
+    "classification": "DERIVED",
+    "lineage_id": "4f5052d167dec309464c22d1",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-08-20",
+    "year": 2026,
+    "month": 8,
+    "classification": "DERIVED",
+    "lineage_id": "b9439be82b875a19f206b026",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-08-21",
+    "year": 2026,
+    "month": 8,
+    "classification": "DERIVED",
+    "lineage_id": "a94d42c0e5af6ee5fb72ecd6",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-08-22",
+    "year": 2026,
+    "month": 8,
+    "classification": "DERIVED",
+    "lineage_id": "284c8b896df3374d0a10ccb5",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-08-23",
+    "year": 2026,
+    "month": 8,
+    "classification": "DERIVED",
+    "lineage_id": "506ae112693eb053fbbc1d2c",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-08-24",
+    "year": 2026,
+    "month": 8,
+    "classification": "DERIVED",
+    "lineage_id": "b5173f928c06052a6be08da7",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-08-25",
+    "year": 2026,
+    "month": 8,
+    "classification": "DERIVED",
+    "lineage_id": "401527fc3e1de0bb066e1479",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-08-26",
+    "year": 2026,
+    "month": 8,
+    "classification": "DERIVED",
+    "lineage_id": "a12b6128dad9d9cfbfa074e4",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-08-27",
+    "year": 2026,
+    "month": 8,
+    "classification": "DERIVED",
+    "lineage_id": "ad02f3f8e9fd4851f4531af9",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-08-28",
+    "year": 2026,
+    "month": 8,
+    "classification": "DERIVED",
+    "lineage_id": "19b66adf213e377437994a98",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-08-29",
+    "year": 2026,
+    "month": 8,
+    "classification": "DERIVED",
+    "lineage_id": "8fd996401289a7a1af735a74",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-08-30",
+    "year": 2026,
+    "month": 8,
+    "classification": "DERIVED",
+    "lineage_id": "41d79c749f5534003f5869bf",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-08-31",
+    "year": 2026,
+    "month": 8,
+    "classification": "DERIVED",
+    "lineage_id": "c5a62e5781419c9a17fa5e2f",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-09-01",
+    "year": 2026,
+    "month": 9,
+    "classification": "DERIVED",
+    "lineage_id": "36e014b5747029012be25ac3",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-09-02",
+    "year": 2026,
+    "month": 9,
+    "classification": "DERIVED",
+    "lineage_id": "b985e60db6e4885d52298bf2",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-09-03",
+    "year": 2026,
+    "month": 9,
+    "classification": "DERIVED",
+    "lineage_id": "80c540b7d3715887084e990e",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-09-04",
+    "year": 2026,
+    "month": 9,
+    "classification": "DERIVED",
+    "lineage_id": "5fe9f4081e2f925a82e75499",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-09-05",
+    "year": 2026,
+    "month": 9,
+    "classification": "DERIVED",
+    "lineage_id": "6f1430cf89f16470d6fae2ab",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-09-06",
+    "year": 2026,
+    "month": 9,
+    "classification": "DERIVED",
+    "lineage_id": "6669f55356a2524b3c9a4362",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-09-07",
+    "year": 2026,
+    "month": 9,
+    "classification": "DERIVED",
+    "lineage_id": "06e78828053dee4e3148a456",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-09-08",
+    "year": 2026,
+    "month": 9,
+    "classification": "DERIVED",
+    "lineage_id": "892ee2bc06058ecc010a430f",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-09-09",
+    "year": 2026,
+    "month": 9,
+    "classification": "DERIVED",
+    "lineage_id": "f97cf27024fe82f057f7331d",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-09-10",
+    "year": 2026,
+    "month": 9,
+    "classification": "DERIVED",
+    "lineage_id": "c9fe22cf3ea91a5b12d6a7bc",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-09-11",
+    "year": 2026,
+    "month": 9,
+    "classification": "DERIVED",
+    "lineage_id": "ae70c2528f12d7a62aa73510",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-09-12",
+    "year": 2026,
+    "month": 9,
+    "classification": "DERIVED",
+    "lineage_id": "bd3b7f06d52f5101237c9de8",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-09-13",
+    "year": 2026,
+    "month": 9,
+    "classification": "DERIVED",
+    "lineage_id": "1d3464da2992f0cc312366d3",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-09-14",
+    "year": 2026,
+    "month": 9,
+    "classification": "DERIVED",
+    "lineage_id": "e636d62090121329fd9da8fa",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-09-15",
+    "year": 2026,
+    "month": 9,
+    "classification": "DERIVED",
+    "lineage_id": "f4f6ea686e92f5ddafbb7fc0",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-09-16",
+    "year": 2026,
+    "month": 9,
+    "classification": "DERIVED",
+    "lineage_id": "742a14c52f65f0cc78bfb4b5",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-09-17",
+    "year": 2026,
+    "month": 9,
+    "classification": "DERIVED",
+    "lineage_id": "aff4f5e33a6c1584534e43a4",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-09-18",
+    "year": 2026,
+    "month": 9,
+    "classification": "DERIVED",
+    "lineage_id": "3d936d83181409f63e102cd0",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-09-19",
+    "year": 2026,
+    "month": 9,
+    "classification": "DERIVED",
+    "lineage_id": "38a2eddb2bd11d855012865d",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-09-20",
+    "year": 2026,
+    "month": 9,
+    "classification": "DERIVED",
+    "lineage_id": "d509aa8c383788431f32918f",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-09-21",
+    "year": 2026,
+    "month": 9,
+    "classification": "DERIVED",
+    "lineage_id": "5544acc0970715388404240a",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-09-22",
+    "year": 2026,
+    "month": 9,
+    "classification": "DERIVED",
+    "lineage_id": "f2be9a0a6a5c86221b6ad86a",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-09-23",
+    "year": 2026,
+    "month": 9,
+    "classification": "DERIVED",
+    "lineage_id": "39af7f92a8ffa059981267da",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-09-24",
+    "year": 2026,
+    "month": 9,
+    "classification": "DERIVED",
+    "lineage_id": "9e5e8f7fb6ce1f602f2698ed",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-09-25",
+    "year": 2026,
+    "month": 9,
+    "classification": "DERIVED",
+    "lineage_id": "d2d031a1579a79e5b8e32af3",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-09-26",
+    "year": 2026,
+    "month": 9,
+    "classification": "DERIVED",
+    "lineage_id": "b1786ff52f4cac5b76444edd",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-09-27",
+    "year": 2026,
+    "month": 9,
+    "classification": "DERIVED",
+    "lineage_id": "8a36c33b3562c3545a019c6e",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-09-28",
+    "year": 2026,
+    "month": 9,
+    "classification": "DERIVED",
+    "lineage_id": "1fcea203ec58f97de7142feb",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-09-29",
+    "year": 2026,
+    "month": 9,
+    "classification": "DERIVED",
+    "lineage_id": "b25dc8b99e4f27b95cd6ff55",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-09-30",
+    "year": 2026,
+    "month": 9,
+    "classification": "DERIVED",
+    "lineage_id": "c57c8e102441fe7da73806c4",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-10-01",
+    "year": 2026,
+    "month": 10,
+    "classification": "DERIVED",
+    "lineage_id": "6ca6e0a38db22422cce032ae",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "date": "2026-10-02",
+    "year": 2026,
+    "month": 10,
+    "classification": "DERIVED",
+    "lineage_id": "a8c439cc7f472c3d112b93da",
+    "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:06:13.469764+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "c412e7d6a03a95f87e61c4af99a0d16b793e8c9309413490abbb3f394cf09651"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  }
+]

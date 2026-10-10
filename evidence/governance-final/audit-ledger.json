@@ -1,0 +1,1745 @@
+[
+  {
+    "id": "bbe55b75d9214966b9a928ad",
+    "created_at": "2026-10-10T09:06:15.095788+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+      "stage": "acquisition",
+      "transition": "STARTED"
+    },
+    "previous_hash": "GENESIS",
+    "digest": "9ec4586ba746d2aa6f9954b851de1454cf34d32ecbd2cb8fd11068a0eee72b39"
+  },
+  {
+    "id": "fae8303ae298f411428815bc",
+    "created_at": "2026-10-10T09:06:20.194848+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+      "stage": "acquisition",
+      "status": "PASS_WITH_WARNINGS",
+      "execution_id": "20e6c097c393ed222e65055c",
+      "started_at": "2026-10-10T09:06:15.095788+00:00",
+      "attempt": 1,
+      "checks": {
+        "nonempty_critical_sources": true,
+        "registry_version": true,
+        "source_failure_policy": true
+      },
+      "failed_rules": [],
+      "warnings": [
+        "OPTIONAL_SOURCE_UNAVAILABLE"
+      ],
+      "counts": {
+        "received_ports": 6,
+        "received_activity": 1398
+      },
+      "completed_at": "2026-10-10T09:06:20.194848+00:00",
+      "duration_seconds": 5.099396399920806
+    },
+    "previous_hash": "9ec4586ba746d2aa6f9954b851de1454cf34d32ecbd2cb8fd11068a0eee72b39",
+    "digest": "4c9e40f21cb64d5ab2400eb6198a2315e0e7c1f5fd280891b7be944d27ba9bd1"
+  },
+  {
+    "id": "f9841de4509104355f8d4180",
+    "created_at": "2026-10-10T09:06:20.204276+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+      "stage": "bronze",
+      "transition": "STARTED"
+    },
+    "previous_hash": "4c9e40f21cb64d5ab2400eb6198a2315e0e7c1f5fd280891b7be944d27ba9bd1",
+    "digest": "99c8a8f163d57e9b6fff97d05abf407c6aa3bc15701e149e7bfbcccc5d70e6c5"
+  },
+  {
+    "id": "95b1332841a03f4890e13656",
+    "created_at": "2026-10-10T09:06:20.394043+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+      "stage": "bronze",
+      "status": "PASS",
+      "execution_id": "b3c82227a21dac1e04b37235",
+      "started_at": "2026-10-10T09:06:20.204276+00:00",
+      "attempt": 1,
+      "checks": {
+        "evidence_retained": true,
+        "payload_hashes_verified": true
+      },
+      "failed_rules": [],
+      "warnings": [],
+      "counts": {
+        "payloads": 11
+      },
+      "completed_at": "2026-10-10T09:06:20.394043+00:00",
+      "duration_seconds": 0.1896041000727564
+    },
+    "previous_hash": "99c8a8f163d57e9b6fff97d05abf407c6aa3bc15701e149e7bfbcccc5d70e6c5",
+    "digest": "b512f966899478059e1b188dc37f529a10e2bec61319b9674e06c720841545e2"
+  },
+  {
+    "id": "6d74e9cc5c24b8e9887dfe5f",
+    "created_at": "2026-10-10T09:06:20.415382+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+      "stage": "silver",
+      "transition": "STARTED"
+    },
+    "previous_hash": "b512f966899478059e1b188dc37f529a10e2bec61319b9674e06c720841545e2",
+    "digest": "21f7bf90a74500858511039dc076218f295ea9951bbc98708176fdc77e630828"
+  },
+  {
+    "id": "f1f5ba6ac053a8c28f28e133",
+    "created_at": "2026-10-10T09:06:20.626196+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+      "stage": "silver",
+      "status": "PASS",
+      "execution_id": "ecc4d5c5f64c40e9d56162d7",
+      "started_at": "2026-10-10T09:06:20.415382+00:00",
+      "attempt": 1,
+      "checks": {
+        "canonical_dq": true,
+        "record_accounting": true
+      },
+      "failed_rules": [],
+      "warnings": [],
+      "counts": {
+        "received": 1434,
+        "accepted": 1434,
+        "rejected": 0,
+        "quarantined": 0,
+        "balanced": true
+      },
+      "completed_at": "2026-10-10T09:06:20.626196+00:00",
+      "duration_seconds": 0.21132500004023314
+    },
+    "previous_hash": "21f7bf90a74500858511039dc076218f295ea9951bbc98708176fdc77e630828",
+    "digest": "f4df1b7169e56f89ebfd2a6d2f32b2063b35df45d37e9be14d90a6b4c397f131"
+  },
+  {
+    "id": "ba2feef515b4ce7cf8ba74aa",
+    "created_at": "2026-10-10T09:06:20.653692+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+      "stage": "metrics",
+      "transition": "STARTED"
+    },
+    "previous_hash": "f4df1b7169e56f89ebfd2a6d2f32b2063b35df45d37e9be14d90a6b4c397f131",
+    "digest": "ac1c882fa1bbfcb0acdc51822d5ec6819efa17b59ee27452952fbd3cf9c58858"
+  },
+  {
+    "id": "48725d9f9063212a9ef6e698",
+    "created_at": "2026-10-10T09:06:22.283868+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+      "stage": "metrics",
+      "status": "PASS",
+      "execution_id": "9f0f8341e048ba87fc8a40df",
+      "started_at": "2026-10-10T09:06:20.653692+00:00",
+      "attempt": 1,
+      "checks": {
+        "independent_current_metrics": true,
+        "port_coverage": true
+      },
+      "failed_rules": [],
+      "warnings": [],
+      "counts": {},
+      "completed_at": "2026-10-10T09:06:22.283868+00:00",
+      "duration_seconds": 1.6304047999437898
+    },
+    "previous_hash": "ac1c882fa1bbfcb0acdc51822d5ec6819efa17b59ee27452952fbd3cf9c58858",
+    "digest": "a286d2678d63b36a79650c090cbf20d632c31c076187d50c9c7c3edf6debd363"
+  },
+  {
+    "id": "cc8a9eb463acb7720ae97a9a",
+    "created_at": "2026-10-10T09:06:22.331549+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+      "stage": "scenario",
+      "transition": "STARTED"
+    },
+    "previous_hash": "a286d2678d63b36a79650c090cbf20d632c31c076187d50c9c7c3edf6debd363",
+    "digest": "cdd0da190f45b5f983bacc1134d17067237dd16dd2d048637b846eff00463ed6"
+  },
+  {
+    "id": "2dab6e1a5dd6681ab275e9c2",
+    "created_at": "2026-10-10T09:06:22.776522+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+      "stage": "scenario",
+      "status": "PASS",
+      "execution_id": "240a29e9f809daf00a478a8b",
+      "started_at": "2026-10-10T09:06:22.331549+00:00",
+      "attempt": 1,
+      "checks": {
+        "shipment_action_accounting": true,
+        "all_outputs_simulated": true
+      },
+      "failed_rules": [],
+      "warnings": [],
+      "counts": {},
+      "completed_at": "2026-10-10T09:06:22.776522+00:00",
+      "duration_seconds": 0.4450429000426084
+    },
+    "previous_hash": "cdd0da190f45b5f983bacc1134d17067237dd16dd2d048637b846eff00463ed6",
+    "digest": "918bf9540854700dc4e99fec48f25f5c89b1fd63cd5b11e94e70f8c563e95916"
+  },
+  {
+    "id": "6a00d24dd99b1c2cf5dc8383",
+    "created_at": "2026-10-10T09:06:22.806225+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+      "stage": "features_ml",
+      "transition": "STARTED"
+    },
+    "previous_hash": "918bf9540854700dc4e99fec48f25f5c89b1fd63cd5b11e94e70f8c563e95916",
+    "digest": "360ebd2fa50b216f8da609be05b8210b7ca4e3ec223bfa6e50678bf069ae341b"
+  },
+  {
+    "id": "196fcafb24b1eafb7be17536",
+    "created_at": "2026-10-10T09:06:25.676319+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+      "stage": "features_ml",
+      "status": "PASS_WITH_WARNINGS",
+      "execution_id": "d52f788537208db32a9e4694",
+      "started_at": "2026-10-10T09:06:22.806225+00:00",
+      "attempt": 1,
+      "checks": {
+        "sla_not_trained": true,
+        "prediction_classification": true
+      },
+      "failed_rules": [],
+      "warnings": [
+        "LOCAL_RESEARCH_MODEL"
+      ],
+      "counts": {
+        "predictions": 6
+      },
+      "completed_at": "2026-10-10T09:06:25.676319+00:00",
+      "duration_seconds": 2.870115999947302
+    },
+    "previous_hash": "360ebd2fa50b216f8da609be05b8210b7ca4e3ec223bfa6e50678bf069ae341b",
+    "digest": "31b6b6e876ca7bca2e22fd27c5dccec69d158efebcd33f525d84d7206b05a1ba"
+  },
+  {
+    "id": "e18fac4b0bf0c74a2aaf6b03",
+    "created_at": "2026-10-10T09:06:25.730103+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+      "stage": "gold",
+      "transition": "STARTED"
+    },
+    "previous_hash": "31b6b6e876ca7bca2e22fd27c5dccec69d158efebcd33f525d84d7206b05a1ba",
+    "digest": "4ec39c64632941d4f839418343a90757d16c0f950e2726fd7b4581ff27f5accb"
+  },
+  {
+    "id": "5222084281c977fc29b06618",
+    "created_at": "2026-10-10T09:06:26.407077+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+      "stage": "gold",
+      "status": "PASS",
+      "execution_id": "837b2cd2a910635e6224e414",
+      "started_at": "2026-10-10T09:06:25.730103+00:00",
+      "attempt": 1,
+      "checks": {
+        "dataset_contracts_and_independent_checks": true
+      },
+      "failed_rules": [],
+      "warnings": [],
+      "counts": {
+        "ports": {
+          "input": 6,
+          "persisted_expected": 6,
+          "invalid": 0
+        },
+        "activity": {
+          "input": 1398,
+          "persisted_expected": 1398,
+          "invalid": 0
+        },
+        "routes": {
+          "input": 30,
+          "persisted_expected": 30,
+          "invalid": 0
+        },
+        "congestion_history": {
+          "input": 1398,
+          "persisted_expected": 1398,
+          "invalid": 0
+        },
+        "congestion": {
+          "input": 6,
+          "persisted_expected": 6,
+          "invalid": 0
+        },
+        "network": {
+          "input": 30,
+          "persisted_expected": 30,
+          "invalid": 0
+        },
+        "exposure": {
+          "input": 0,
+          "persisted_expected": 0,
+          "invalid": 0
+        },
+        "scenarios": {
+          "input": 60,
+          "persisted_expected": 60,
+          "invalid": 0
+        },
+        "interventions": {
+          "input": 300,
+          "persisted_expected": 300,
+          "invalid": 0
+        },
+        "sla_risk": {
+          "input": 60,
+          "persisted_expected": 60,
+          "invalid": 0
+        },
+        "decisions": {
+          "input": 60,
+          "persisted_expected": 60,
+          "invalid": 0
+        },
+        "predictions": {
+          "input": 6,
+          "persisted_expected": 6,
+          "invalid": 0
+        },
+        "disruptions": {
+          "input": 0,
+          "persisted_expected": 0,
+          "invalid": 0
+        },
+        "early_warning": {
+          "input": 0,
+          "persisted_expected": 0,
+          "invalid": 0
+        },
+        "sources": {
+          "input": 6,
+          "persisted_expected": 6,
+          "invalid": 0
+        },
+        "data_quality": {
+          "input": 1,
+          "persisted_expected": 1,
+          "invalid": 0
+        },
+        "reference_weather": {
+          "input": 36,
+          "persisted_expected": 36,
+          "invalid": 0
+        },
+        "lineage": {
+          "input": 222,
+          "persisted_expected": 222,
+          "invalid": 0
+        },
+        "dim_location": {
+          "input": 6,
+          "persisted_expected": 6,
+          "invalid": 0
+        },
+        "dim_time": {
+          "input": 233,
+          "persisted_expected": 233,
+          "invalid": 0
+        },
+        "dim_intervention": {
+          "input": 5,
+          "persisted_expected": 5,
+          "invalid": 0
+        }
+      },
+      "completed_at": "2026-10-10T09:06:26.407077+00:00",
+      "duration_seconds": 0.6775271000806242
+    },
+    "previous_hash": "4ec39c64632941d4f839418343a90757d16c0f950e2726fd7b4581ff27f5accb",
+    "digest": "46ad0f91adb36b51415aeaf7d94070e5183dc07e0a24b525a6e59254c0d7a017"
+  },
+  {
+    "id": "e5e66f42bf6fcf42f5b7e1dc",
+    "created_at": "2026-10-10T09:06:27.588626+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+      "stage": "publication",
+      "transition": "STARTED"
+    },
+    "previous_hash": "46ad0f91adb36b51415aeaf7d94070e5183dc07e0a24b525a6e59254c0d7a017",
+    "digest": "691ec1e515f8a242953992dc63bd91a88f970ca43027e151945a6406a9912bfb"
+  },
+  {
+    "id": "1300b9b587325b6eb11e471d",
+    "created_at": "2026-10-10T09:06:28.106534+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "1e30c60049c448ca8335ea1d54b7a869",
+      "stage": "publication",
+      "status": "PASS",
+      "execution_id": "7457b32e768a98deb378c45c",
+      "started_at": "2026-10-10T09:06:27.588626+00:00",
+      "attempt": 1,
+      "checks": {
+        "persisted_readback": true,
+        "audit_chain": true
+      },
+      "failed_rules": [],
+      "warnings": [],
+      "counts": {},
+      "completed_at": "2026-10-10T09:06:28.105062+00:00",
+      "duration_seconds": 0.5172658000374213
+    },
+    "previous_hash": "691ec1e515f8a242953992dc63bd91a88f970ca43027e151945a6406a9912bfb",
+    "digest": "e3a804068e9d277cab6c9ce882183ff82bcc2f8c9ded73ece4fa9a7e2bc6bc00"
+  },
+  {
+    "id": "339c380656c1e74a1b6a2f28",
+    "created_at": "2026-10-10T09:06:29.548119+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "0e73516a7329460684607b53d74b0f56",
+      "stage": "acquisition",
+      "transition": "STARTED"
+    },
+    "previous_hash": "e3a804068e9d277cab6c9ce882183ff82bcc2f8c9ded73ece4fa9a7e2bc6bc00",
+    "digest": "979b7d44680bdcb8b23ce7ceee5fc76e82b79048f1be69598f35ba46dc1fa425"
+  },
+  {
+    "id": "a3fc56baeba6ec185cdee227",
+    "created_at": "2026-10-10T09:06:29.633347+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "0e73516a7329460684607b53d74b0f56",
+      "stage": "acquisition",
+      "status": "PASS_WITH_WARNINGS",
+      "execution_id": "4fbfdc7989fb54e4d8d28183",
+      "started_at": "2026-10-10T09:06:29.548119+00:00",
+      "attempt": 1,
+      "checks": {
+        "nonempty_critical_sources": true,
+        "registry_version": true,
+        "source_failure_policy": true
+      },
+      "failed_rules": [],
+      "warnings": [
+        "REPLAY_NOT_LIVE",
+        "OPTIONAL_SOURCE_UNAVAILABLE"
+      ],
+      "counts": {
+        "received_ports": 6,
+        "received_activity": 1398
+      },
+      "completed_at": "2026-10-10T09:06:29.633347+00:00",
+      "duration_seconds": 0.08516690006945282
+    },
+    "previous_hash": "979b7d44680bdcb8b23ce7ceee5fc76e82b79048f1be69598f35ba46dc1fa425",
+    "digest": "9104ffe9a8c3b3843e495e1b65a0448a54f4385ce2431d9b5be5eae3939d2143"
+  },
+  {
+    "id": "18205c06ce93903a902ab3a4",
+    "created_at": "2026-10-10T09:06:29.658306+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "0e73516a7329460684607b53d74b0f56",
+      "stage": "bronze",
+      "transition": "STARTED"
+    },
+    "previous_hash": "9104ffe9a8c3b3843e495e1b65a0448a54f4385ce2431d9b5be5eae3939d2143",
+    "digest": "f300ee43fd3fe447dcc43a1940228df29b8ce4c226b1f99d2d3b7257437014e3"
+  },
+  {
+    "id": "8fd1dbec0b697e2bc44170fb",
+    "created_at": "2026-10-10T09:06:29.691762+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "0e73516a7329460684607b53d74b0f56",
+      "stage": "bronze",
+      "status": "PASS",
+      "execution_id": "308c978e724aeeeb1ae934a7",
+      "started_at": "2026-10-10T09:06:29.658306+00:00",
+      "attempt": 1,
+      "checks": {
+        "evidence_retained": true,
+        "payload_hashes_verified": true
+      },
+      "failed_rules": [],
+      "warnings": [],
+      "counts": {
+        "payloads": 1
+      },
+      "completed_at": "2026-10-10T09:06:29.691762+00:00",
+      "duration_seconds": 0.03288309997878969
+    },
+    "previous_hash": "f300ee43fd3fe447dcc43a1940228df29b8ce4c226b1f99d2d3b7257437014e3",
+    "digest": "4d125849869ec96548b8637d002ed63c50a4d74a1b34e990e8847cb094e8a398"
+  },
+  {
+    "id": "333103e2a76b13a829e506e1",
+    "created_at": "2026-10-10T09:06:29.716053+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "0e73516a7329460684607b53d74b0f56",
+      "stage": "silver",
+      "transition": "STARTED"
+    },
+    "previous_hash": "4d125849869ec96548b8637d002ed63c50a4d74a1b34e990e8847cb094e8a398",
+    "digest": "c994f3553184c31d54341c86a7aa268b48971466da267b585717ed0148ce2c25"
+  },
+  {
+    "id": "d5c9f714e36f47bcd29e3efd",
+    "created_at": "2026-10-10T09:06:29.897978+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "0e73516a7329460684607b53d74b0f56",
+      "stage": "silver",
+      "status": "PASS",
+      "execution_id": "7261031a9aa7801faf45f636",
+      "started_at": "2026-10-10T09:06:29.715052+00:00",
+      "attempt": 1,
+      "checks": {
+        "canonical_dq": true,
+        "record_accounting": true
+      },
+      "failed_rules": [],
+      "warnings": [],
+      "counts": {
+        "received": 1434,
+        "accepted": 1434,
+        "rejected": 0,
+        "quarantined": 0,
+        "balanced": true
+      },
+      "completed_at": "2026-10-10T09:06:29.897978+00:00",
+      "duration_seconds": 0.1830760999582708
+    },
+    "previous_hash": "c994f3553184c31d54341c86a7aa268b48971466da267b585717ed0148ce2c25",
+    "digest": "f0c9a59e77399e5a987a6e9a43ce1b571d9332d2c0579808534241c0a05d94c4"
+  },
+  {
+    "id": "e72bf5754f207d47076daa26",
+    "created_at": "2026-10-10T09:06:29.926770+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "0e73516a7329460684607b53d74b0f56",
+      "stage": "metrics",
+      "transition": "STARTED"
+    },
+    "previous_hash": "f0c9a59e77399e5a987a6e9a43ce1b571d9332d2c0579808534241c0a05d94c4",
+    "digest": "5e2902666e30c778eb11b5913e61b03bef8909925d3435d0921070db744e429b"
+  },
+  {
+    "id": "836b68b9c79b0333dbc30b73",
+    "created_at": "2026-10-10T09:06:30.858430+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "0e73516a7329460684607b53d74b0f56",
+      "stage": "metrics",
+      "status": "PASS",
+      "execution_id": "97eddd67492aa9084997c15f",
+      "started_at": "2026-10-10T09:06:29.926770+00:00",
+      "attempt": 1,
+      "checks": {
+        "independent_current_metrics": true,
+        "port_coverage": true
+      },
+      "failed_rules": [],
+      "warnings": [],
+      "counts": {},
+      "completed_at": "2026-10-10T09:06:30.858430+00:00",
+      "duration_seconds": 0.9328879000386223
+    },
+    "previous_hash": "5e2902666e30c778eb11b5913e61b03bef8909925d3435d0921070db744e429b",
+    "digest": "a181354dc6df25b86afb27439757a9caf6fd42ae1ef4b2bb1d16d83ea69c9025"
+  },
+  {
+    "id": "6cb1552471844f77ae30caed",
+    "created_at": "2026-10-10T09:06:30.885193+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "0e73516a7329460684607b53d74b0f56",
+      "stage": "scenario",
+      "transition": "STARTED"
+    },
+    "previous_hash": "a181354dc6df25b86afb27439757a9caf6fd42ae1ef4b2bb1d16d83ea69c9025",
+    "digest": "87e4095d13e8ec97fdcf13c1e42e583a27a257d83780c1b696d71d95ed779942"
+  },
+  {
+    "id": "cbb112abd6f46648c8f2e7cc",
+    "created_at": "2026-10-10T09:06:31.092639+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "0e73516a7329460684607b53d74b0f56",
+      "stage": "scenario",
+      "status": "PASS",
+      "execution_id": "bf3e845d0c397d9559135c18",
+      "started_at": "2026-10-10T09:06:30.885193+00:00",
+      "attempt": 1,
+      "checks": {
+        "shipment_action_accounting": true,
+        "all_outputs_simulated": true
+      },
+      "failed_rules": [],
+      "warnings": [],
+      "counts": {},
+      "completed_at": "2026-10-10T09:06:31.092639+00:00",
+      "duration_seconds": 0.20694090006873012
+    },
+    "previous_hash": "87e4095d13e8ec97fdcf13c1e42e583a27a257d83780c1b696d71d95ed779942",
+    "digest": "a7d45cc08d898c1a1e77f461690734cb5747ea60b1ce71bc662f8aaed521ef13"
+  },
+  {
+    "id": "47e964c45bcfa2085e48e33c",
+    "created_at": "2026-10-10T09:06:31.126154+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "0e73516a7329460684607b53d74b0f56",
+      "stage": "features_ml",
+      "transition": "STARTED"
+    },
+    "previous_hash": "a7d45cc08d898c1a1e77f461690734cb5747ea60b1ce71bc662f8aaed521ef13",
+    "digest": "f830c9ca13443a687192a6842f72c4638e01c71351e7db96416140099ce3445a"
+  },
+  {
+    "id": "0b7456f779cfccc314cd6826",
+    "created_at": "2026-10-10T09:06:33.397821+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "0e73516a7329460684607b53d74b0f56",
+      "stage": "features_ml",
+      "status": "PASS_WITH_WARNINGS",
+      "execution_id": "7c37c7d3f79696ebe384aefa",
+      "started_at": "2026-10-10T09:06:31.126154+00:00",
+      "attempt": 1,
+      "checks": {
+        "sla_not_trained": true,
+        "prediction_classification": true
+      },
+      "failed_rules": [],
+      "warnings": [
+        "LOCAL_RESEARCH_MODEL"
+      ],
+      "counts": {
+        "predictions": 6
+      },
+      "completed_at": "2026-10-10T09:06:33.397821+00:00",
+      "duration_seconds": 2.2714965000050142
+    },
+    "previous_hash": "f830c9ca13443a687192a6842f72c4638e01c71351e7db96416140099ce3445a",
+    "digest": "e933db311a1308e1543b853bc630012f0175ada62804d6a10b8a51fb4180a79d"
+  },
+  {
+    "id": "3690f483bbe14488900bbaf3",
+    "created_at": "2026-10-10T09:06:33.418339+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "0e73516a7329460684607b53d74b0f56",
+      "stage": "gold",
+      "transition": "STARTED"
+    },
+    "previous_hash": "e933db311a1308e1543b853bc630012f0175ada62804d6a10b8a51fb4180a79d",
+    "digest": "a1b6d0569456b131fe5ce83f537b772fae207b6a64cbbef3ef2465ff9e1403ea"
+  },
+  {
+    "id": "286d77ea48d89803bd0d4b51",
+    "created_at": "2026-10-10T09:06:34.146110+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "0e73516a7329460684607b53d74b0f56",
+      "stage": "gold",
+      "status": "PASS",
+      "execution_id": "339c328d9d8b9326d97437e7",
+      "started_at": "2026-10-10T09:06:33.418339+00:00",
+      "attempt": 1,
+      "checks": {
+        "dataset_contracts_and_independent_checks": true
+      },
+      "failed_rules": [],
+      "warnings": [],
+      "counts": {
+        "ports": {
+          "input": 6,
+          "persisted_expected": 6,
+          "invalid": 0
+        },
+        "activity": {
+          "input": 1398,
+          "persisted_expected": 1398,
+          "invalid": 0
+        },
+        "routes": {
+          "input": 30,
+          "persisted_expected": 30,
+          "invalid": 0
+        },
+        "congestion_history": {
+          "input": 1398,
+          "persisted_expected": 1398,
+          "invalid": 0
+        },
+        "congestion": {
+          "input": 6,
+          "persisted_expected": 6,
+          "invalid": 0
+        },
+        "network": {
+          "input": 30,
+          "persisted_expected": 30,
+          "invalid": 0
+        },
+        "exposure": {
+          "input": 0,
+          "persisted_expected": 0,
+          "invalid": 0
+        },
+        "scenarios": {
+          "input": 60,
+          "persisted_expected": 60,
+          "invalid": 0
+        },
+        "interventions": {
+          "input": 300,
+          "persisted_expected": 300,
+          "invalid": 0
+        },
+        "sla_risk": {
+          "input": 60,
+          "persisted_expected": 60,
+          "invalid": 0
+        },
+        "decisions": {
+          "input": 60,
+          "persisted_expected": 60,
+          "invalid": 0
+        },
+        "predictions": {
+          "input": 6,
+          "persisted_expected": 6,
+          "invalid": 0
+        },
+        "disruptions": {
+          "input": 0,
+          "persisted_expected": 0,
+          "invalid": 0
+        },
+        "early_warning": {
+          "input": 0,
+          "persisted_expected": 0,
+          "invalid": 0
+        },
+        "sources": {
+          "input": 6,
+          "persisted_expected": 6,
+          "invalid": 0
+        },
+        "data_quality": {
+          "input": 1,
+          "persisted_expected": 1,
+          "invalid": 0
+        },
+        "lineage": {
+          "input": 215,
+          "persisted_expected": 215,
+          "invalid": 0
+        },
+        "dim_location": {
+          "input": 6,
+          "persisted_expected": 6,
+          "invalid": 0
+        },
+        "dim_time": {
+          "input": 233,
+          "persisted_expected": 233,
+          "invalid": 0
+        },
+        "dim_intervention": {
+          "input": 5,
+          "persisted_expected": 5,
+          "invalid": 0
+        }
+      },
+      "completed_at": "2026-10-10T09:06:34.146110+00:00",
+      "duration_seconds": 0.7273784999269992
+    },
+    "previous_hash": "a1b6d0569456b131fe5ce83f537b772fae207b6a64cbbef3ef2465ff9e1403ea",
+    "digest": "ba49754019d0345a70c8cce0411784c07fbfae1f1363b3c66c9fa76b08810dca"
+  },
+  {
+    "id": "cc538bd3accfb3ee90d1ea98",
+    "created_at": "2026-10-10T09:06:35.423795+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "0e73516a7329460684607b53d74b0f56",
+      "stage": "publication",
+      "transition": "STARTED"
+    },
+    "previous_hash": "ba49754019d0345a70c8cce0411784c07fbfae1f1363b3c66c9fa76b08810dca",
+    "digest": "7521d976ca0473c64fafd0aff5316d2fbb29b3f98081d29341a68a6ddcad32dc"
+  },
+  {
+    "id": "61bf7b7f3c9b69033de43bf3",
+    "created_at": "2026-10-10T09:06:35.839738+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "0e73516a7329460684607b53d74b0f56",
+      "stage": "publication",
+      "status": "PASS",
+      "execution_id": "7c10b3b151a5db5baad4cfcd",
+      "started_at": "2026-10-10T09:06:35.423795+00:00",
+      "attempt": 1,
+      "checks": {
+        "persisted_readback": true,
+        "audit_chain": true
+      },
+      "failed_rules": [],
+      "warnings": [],
+      "counts": {},
+      "completed_at": "2026-10-10T09:06:35.839738+00:00",
+      "duration_seconds": 0.41628419992048293
+    },
+    "previous_hash": "7521d976ca0473c64fafd0aff5316d2fbb29b3f98081d29341a68a6ddcad32dc",
+    "digest": "ac62344333b5a91acdb9186ac1a29bc435f8987d48f63ea544f45f123809c1e3"
+  },
+  {
+    "id": "3f4af8623064c59d954f9c6e",
+    "created_at": "2026-10-10T09:06:37.277692+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "635d20ecffa8470091291d7ac11f8c06",
+      "stage": "acquisition",
+      "transition": "STARTED"
+    },
+    "previous_hash": "ac62344333b5a91acdb9186ac1a29bc435f8987d48f63ea544f45f123809c1e3",
+    "digest": "380dd7eb306dbd9d8c8221a224c5f2f60ab366af8d30e99662064fb2a19af3df"
+  },
+  {
+    "id": "d2d09927b4e71a09de7f2a2c",
+    "created_at": "2026-10-10T09:06:37.355735+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "635d20ecffa8470091291d7ac11f8c06",
+      "stage": "acquisition",
+      "status": "PASS_WITH_WARNINGS",
+      "execution_id": "23ce13dfc66abd652dbd3f90",
+      "started_at": "2026-10-10T09:06:37.277692+00:00",
+      "attempt": 1,
+      "checks": {
+        "nonempty_critical_sources": true,
+        "registry_version": true,
+        "source_failure_policy": true
+      },
+      "failed_rules": [],
+      "warnings": [
+        "REPLAY_NOT_LIVE",
+        "OPTIONAL_SOURCE_UNAVAILABLE"
+      ],
+      "counts": {
+        "received_ports": 6,
+        "received_activity": 1398
+      },
+      "completed_at": "2026-10-10T09:06:37.355735+00:00",
+      "duration_seconds": 0.07748029998037964
+    },
+    "previous_hash": "380dd7eb306dbd9d8c8221a224c5f2f60ab366af8d30e99662064fb2a19af3df",
+    "digest": "184ba051a4681d0e235a2fa87c4be6da5992bd75071386b4cab84a4d10bcc750"
+  },
+  {
+    "id": "d4758107dbcbdbe407a1b591",
+    "created_at": "2026-10-10T09:06:37.393363+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "635d20ecffa8470091291d7ac11f8c06",
+      "stage": "bronze",
+      "transition": "STARTED"
+    },
+    "previous_hash": "184ba051a4681d0e235a2fa87c4be6da5992bd75071386b4cab84a4d10bcc750",
+    "digest": "4c319ebf73d415a42b1517cfea001915a9355c5008f015b085d1b7e662ed592f"
+  },
+  {
+    "id": "4e5575e318cd312f47044f5f",
+    "created_at": "2026-10-10T09:06:37.421180+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "635d20ecffa8470091291d7ac11f8c06",
+      "stage": "bronze",
+      "status": "PASS",
+      "execution_id": "dc6399d390574283f43d7698",
+      "started_at": "2026-10-10T09:06:37.393363+00:00",
+      "attempt": 1,
+      "checks": {
+        "evidence_retained": true,
+        "payload_hashes_verified": true
+      },
+      "failed_rules": [],
+      "warnings": [],
+      "counts": {
+        "payloads": 1
+      },
+      "completed_at": "2026-10-10T09:06:37.421180+00:00",
+      "duration_seconds": 0.027178099961020052
+    },
+    "previous_hash": "4c319ebf73d415a42b1517cfea001915a9355c5008f015b085d1b7e662ed592f",
+    "digest": "aa23fbb962026674dca1f6e56bec29b8a72d5e16944981953b8c0968aff089cd"
+  },
+  {
+    "id": "4f8583d8de1af79ca15189e1",
+    "created_at": "2026-10-10T09:06:37.441715+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "635d20ecffa8470091291d7ac11f8c06",
+      "stage": "silver",
+      "transition": "STARTED"
+    },
+    "previous_hash": "aa23fbb962026674dca1f6e56bec29b8a72d5e16944981953b8c0968aff089cd",
+    "digest": "8958d7e58984b6f16c1b46cf37a691c3efbc46d9c1f516780211711bf09a74a9"
+  },
+  {
+    "id": "39510c97ead9e97b4e65c1b6",
+    "created_at": "2026-10-10T09:06:37.576194+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "635d20ecffa8470091291d7ac11f8c06",
+      "stage": "silver",
+      "status": "BLOCKED",
+      "execution_id": "745216fbae86a5b59fafa8c5",
+      "started_at": "2026-10-10T09:06:37.441715+00:00",
+      "attempt": 1,
+      "failed_rules": [
+        "execution_completed"
+      ],
+      "failure_type": "ValueError",
+      "completed_at": "2026-10-10T09:06:37.576194+00:00",
+      "duration_seconds": 0.13443780003581196
+    },
+    "previous_hash": "8958d7e58984b6f16c1b46cf37a691c3efbc46d9c1f516780211711bf09a74a9",
+    "digest": "4ad052db2f5afd518419734d4b28fcd377de541ab0c76540c7e15febecf732d2"
+  },
+  {
+    "id": "8c7a6a597102a2d3ae7d0a52",
+    "created_at": "2026-10-10T09:06:38.505768+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "1e9d4ccdb9dd431ca192af1586477727",
+      "stage": "acquisition",
+      "transition": "STARTED"
+    },
+    "previous_hash": "4ad052db2f5afd518419734d4b28fcd377de541ab0c76540c7e15febecf732d2",
+    "digest": "ca59d912e92a6bb88a436ba85edb636e723d46004d1c2653d2b01ad15b5ce815"
+  },
+  {
+    "id": "5b92b9d8c0cd6474e2dde2f7",
+    "created_at": "2026-10-10T09:06:38.699191+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "1e9d4ccdb9dd431ca192af1586477727",
+      "stage": "acquisition",
+      "status": "PASS_WITH_WARNINGS",
+      "execution_id": "4ad20da260df341a6d55c8ff",
+      "started_at": "2026-10-10T09:06:38.505768+00:00",
+      "attempt": 1,
+      "checks": {
+        "nonempty_critical_sources": true,
+        "registry_version": true,
+        "source_failure_policy": true
+      },
+      "failed_rules": [],
+      "warnings": [
+        "REPLAY_NOT_LIVE",
+        "OPTIONAL_SOURCE_UNAVAILABLE"
+      ],
+      "counts": {
+        "received_ports": 6,
+        "received_activity": 1398
+      },
+      "completed_at": "2026-10-10T09:06:38.699191+00:00",
+      "duration_seconds": 0.1934584000846371
+    },
+    "previous_hash": "ca59d912e92a6bb88a436ba85edb636e723d46004d1c2653d2b01ad15b5ce815",
+    "digest": "4712dc3b3a92761dec703a538d045628e00c183dec2b60da5c8229734737dc5c"
+  },
+  {
+    "id": "51620c0eba27717a1f9ae81e",
+    "created_at": "2026-10-10T09:06:38.717836+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "1e9d4ccdb9dd431ca192af1586477727",
+      "stage": "bronze",
+      "transition": "STARTED"
+    },
+    "previous_hash": "4712dc3b3a92761dec703a538d045628e00c183dec2b60da5c8229734737dc5c",
+    "digest": "b204c7172e7e62ad972a61445e488679f8163dc910e3306085b743c4068cf22c"
+  },
+  {
+    "id": "e839fbea43cc6873fcb7b8b9",
+    "created_at": "2026-10-10T09:06:39.027187+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "1e9d4ccdb9dd431ca192af1586477727",
+      "stage": "bronze",
+      "status": "PASS",
+      "execution_id": "18033913dc951fc8d14c8155",
+      "started_at": "2026-10-10T09:06:38.717836+00:00",
+      "attempt": 1,
+      "checks": {
+        "evidence_retained": true,
+        "payload_hashes_verified": true
+      },
+      "failed_rules": [],
+      "warnings": [],
+      "counts": {
+        "payloads": 1
+      },
+      "completed_at": "2026-10-10T09:06:39.027187+00:00",
+      "duration_seconds": 0.30953779991250485
+    },
+    "previous_hash": "b204c7172e7e62ad972a61445e488679f8163dc910e3306085b743c4068cf22c",
+    "digest": "b7967b7cec95eeb7f1d6146e8ab90986f096e7fde0a7c751bb6bcdc340308b2e"
+  },
+  {
+    "id": "a07bd514ef2d09887e836de8",
+    "created_at": "2026-10-10T09:06:39.052372+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "1e9d4ccdb9dd431ca192af1586477727",
+      "stage": "silver",
+      "transition": "STARTED"
+    },
+    "previous_hash": "b7967b7cec95eeb7f1d6146e8ab90986f096e7fde0a7c751bb6bcdc340308b2e",
+    "digest": "7315958e8d0486e58732cf1b36e1e5cb1b62d8356104f9c9e42e6b300ccae963"
+  },
+  {
+    "id": "4f6fec77f6c3cfd448739fd0",
+    "created_at": "2026-10-10T09:06:39.726981+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "1e9d4ccdb9dd431ca192af1586477727",
+      "stage": "silver",
+      "status": "PASS",
+      "execution_id": "9f77e94be880bea437f25a81",
+      "started_at": "2026-10-10T09:06:39.052372+00:00",
+      "attempt": 1,
+      "checks": {
+        "canonical_dq": true,
+        "record_accounting": true
+      },
+      "failed_rules": [],
+      "warnings": [],
+      "counts": {
+        "received": 1434,
+        "accepted": 1434,
+        "rejected": 0,
+        "quarantined": 0,
+        "balanced": true
+      },
+      "completed_at": "2026-10-10T09:06:39.726981+00:00",
+      "duration_seconds": 0.6744257999816909
+    },
+    "previous_hash": "7315958e8d0486e58732cf1b36e1e5cb1b62d8356104f9c9e42e6b300ccae963",
+    "digest": "59a6cdf054da37a4b683b739acf0e90798a63a49722ec398e040b1bb7b8800cc"
+  },
+  {
+    "id": "a2ca234d8091cfa48e056e6d",
+    "created_at": "2026-10-10T09:06:39.751760+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "1e9d4ccdb9dd431ca192af1586477727",
+      "stage": "metrics",
+      "transition": "STARTED"
+    },
+    "previous_hash": "59a6cdf054da37a4b683b739acf0e90798a63a49722ec398e040b1bb7b8800cc",
+    "digest": "9f47096d8665bdc819747f66ce0b8dc884a532b3cbf688a80bba26e0e668eba9"
+  },
+  {
+    "id": "923953509f9a1f36066ef95c",
+    "created_at": "2026-10-10T09:06:40.150240+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "1e9d4ccdb9dd431ca192af1586477727",
+      "stage": "metrics",
+      "status": "PASS",
+      "execution_id": "ab887be5460f43583ae44675",
+      "started_at": "2026-10-10T09:06:39.751760+00:00",
+      "attempt": 1,
+      "checks": {
+        "independent_current_metrics": true,
+        "port_coverage": true
+      },
+      "failed_rules": [],
+      "warnings": [],
+      "counts": {},
+      "completed_at": "2026-10-10T09:06:40.150240+00:00",
+      "duration_seconds": 0.39902979996986687
+    },
+    "previous_hash": "9f47096d8665bdc819747f66ce0b8dc884a532b3cbf688a80bba26e0e668eba9",
+    "digest": "4d6e17fa0edbb64fa1a8a7acec998d8e8537b9690c75633e0dbc3f4c210caacb"
+  },
+  {
+    "id": "4c7982ff202067e60e4943ac",
+    "created_at": "2026-10-10T09:06:40.462397+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "1e9d4ccdb9dd431ca192af1586477727",
+      "stage": "scenario",
+      "transition": "STARTED"
+    },
+    "previous_hash": "4d6e17fa0edbb64fa1a8a7acec998d8e8537b9690c75633e0dbc3f4c210caacb",
+    "digest": "c26c2b2a95ae3d6560c19e017ffc7acd5cea5068fad17f541d6f45b358a93c68"
+  },
+  {
+    "id": "6503febd4c1653f390b7d476",
+    "created_at": "2026-10-10T09:06:40.588876+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "1e9d4ccdb9dd431ca192af1586477727",
+      "stage": "scenario",
+      "status": "PASS",
+      "execution_id": "d4a9dc25a0f5355d4586ce92",
+      "started_at": "2026-10-10T09:06:40.461397+00:00",
+      "attempt": 1,
+      "checks": {
+        "shipment_action_accounting": true,
+        "all_outputs_simulated": true
+      },
+      "failed_rules": [],
+      "warnings": [],
+      "counts": {},
+      "completed_at": "2026-10-10T09:06:40.588876+00:00",
+      "duration_seconds": 0.12675599998328835
+    },
+    "previous_hash": "c26c2b2a95ae3d6560c19e017ffc7acd5cea5068fad17f541d6f45b358a93c68",
+    "digest": "b9fef5eed2a9c6b579816d59356fee94119b335d83c32104578ed5e584ecbcc9"
+  },
+  {
+    "id": "4bb02340277cc4500f3ebd1c",
+    "created_at": "2026-10-10T09:06:40.831954+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "1e9d4ccdb9dd431ca192af1586477727",
+      "stage": "features_ml",
+      "transition": "STARTED"
+    },
+    "previous_hash": "b9fef5eed2a9c6b579816d59356fee94119b335d83c32104578ed5e584ecbcc9",
+    "digest": "28eac165afcde102d8ec064d6265f2a2c505cdc32070340ae4edbf80962c263c"
+  },
+  {
+    "id": "d445869f69fbc84be472e859",
+    "created_at": "2026-10-10T09:06:42.068962+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "1e9d4ccdb9dd431ca192af1586477727",
+      "stage": "features_ml",
+      "status": "PASS_WITH_WARNINGS",
+      "execution_id": "c244d4cabd78432b4e816515",
+      "started_at": "2026-10-10T09:06:40.831954+00:00",
+      "attempt": 1,
+      "checks": {
+        "sla_not_trained": true,
+        "prediction_classification": true
+      },
+      "failed_rules": [],
+      "warnings": [
+        "LOCAL_RESEARCH_MODEL"
+      ],
+      "counts": {
+        "predictions": 6
+      },
+      "completed_at": "2026-10-10T09:06:42.068962+00:00",
+      "duration_seconds": 1.23696339991875
+    },
+    "previous_hash": "28eac165afcde102d8ec064d6265f2a2c505cdc32070340ae4edbf80962c263c",
+    "digest": "7ceb06aae9b4b5091e6e3e617a5cdbbc318230e7fa919d91f6d18726daeacac8"
+  },
+  {
+    "id": "362c09b3135855c8b3c54c30",
+    "created_at": "2026-10-10T09:06:42.333206+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "1e9d4ccdb9dd431ca192af1586477727",
+      "stage": "gold",
+      "transition": "STARTED"
+    },
+    "previous_hash": "7ceb06aae9b4b5091e6e3e617a5cdbbc318230e7fa919d91f6d18726daeacac8",
+    "digest": "4e6ae3eec412c988e84d26af338ca79423e5f1d52bed8d0b6bf324f0410cd6dc"
+  },
+  {
+    "id": "0766c541f8bd0435e9da5008",
+    "created_at": "2026-10-10T09:06:42.579018+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "1e9d4ccdb9dd431ca192af1586477727",
+      "stage": "gold",
+      "status": "PASS",
+      "execution_id": "cfe889dfbfb1850d05f39aa9",
+      "started_at": "2026-10-10T09:06:42.333206+00:00",
+      "attempt": 1,
+      "checks": {
+        "dataset_contracts_and_independent_checks": true
+      },
+      "failed_rules": [],
+      "warnings": [],
+      "counts": {
+        "ports": {
+          "input": 6,
+          "persisted_expected": 6,
+          "invalid": 0
+        },
+        "activity": {
+          "input": 1398,
+          "persisted_expected": 1398,
+          "invalid": 0
+        },
+        "routes": {
+          "input": 30,
+          "persisted_expected": 30,
+          "invalid": 0
+        },
+        "congestion_history": {
+          "input": 1398,
+          "persisted_expected": 1398,
+          "invalid": 0
+        },
+        "congestion": {
+          "input": 6,
+          "persisted_expected": 6,
+          "invalid": 0
+        },
+        "network": {
+          "input": 30,
+          "persisted_expected": 30,
+          "invalid": 0
+        },
+        "exposure": {
+          "input": 0,
+          "persisted_expected": 0,
+          "invalid": 0
+        },
+        "scenarios": {
+          "input": 60,
+          "persisted_expected": 60,
+          "invalid": 0
+        },
+        "interventions": {
+          "input": 300,
+          "persisted_expected": 300,
+          "invalid": 0
+        },
+        "sla_risk": {
+          "input": 60,
+          "persisted_expected": 60,
+          "invalid": 0
+        },
+        "decisions": {
+          "input": 60,
+          "persisted_expected": 60,
+          "invalid": 0
+        },
+        "predictions": {
+          "input": 6,
+          "persisted_expected": 6,
+          "invalid": 0
+        },
+        "disruptions": {
+          "input": 0,
+          "persisted_expected": 0,
+          "invalid": 0
+        },
+        "early_warning": {
+          "input": 0,
+          "persisted_expected": 0,
+          "invalid": 0
+        },
+        "sources": {
+          "input": 6,
+          "persisted_expected": 6,
+          "invalid": 0
+        },
+        "data_quality": {
+          "input": 1,
+          "persisted_expected": 1,
+          "invalid": 0
+        },
+        "lineage": {
+          "input": 215,
+          "persisted_expected": 215,
+          "invalid": 0
+        },
+        "dim_location": {
+          "input": 6,
+          "persisted_expected": 6,
+          "invalid": 0
+        },
+        "dim_time": {
+          "input": 233,
+          "persisted_expected": 233,
+          "invalid": 0
+        },
+        "dim_intervention": {
+          "input": 5,
+          "persisted_expected": 5,
+          "invalid": 0
+        }
+      },
+      "completed_at": "2026-10-10T09:06:42.579018+00:00",
+      "duration_seconds": 0.24640929989982396
+    },
+    "previous_hash": "4e6ae3eec412c988e84d26af338ca79423e5f1d52bed8d0b6bf324f0410cd6dc",
+    "digest": "2939d483eb0b4e554440b69672b2ad83ad64a45abcc8625c50fbd2e805f4846c"
+  },
+  {
+    "id": "e75bf0452da6a124faf37df2",
+    "created_at": "2026-10-10T09:06:44.747503+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "1e9d4ccdb9dd431ca192af1586477727",
+      "stage": "publication",
+      "transition": "STARTED"
+    },
+    "previous_hash": "2939d483eb0b4e554440b69672b2ad83ad64a45abcc8625c50fbd2e805f4846c",
+    "digest": "788f496efca4d215b89fbff61ed174572760163800729b40de19913d2a3ec2f3"
+  },
+  {
+    "id": "040a7c319c22f02783d9ed33",
+    "created_at": "2026-10-10T09:06:45.129002+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "1e9d4ccdb9dd431ca192af1586477727",
+      "stage": "publication",
+      "status": "BLOCKED",
+      "execution_id": "6f6e2ed7071ff74e21d92f4a",
+      "started_at": "2026-10-10T09:06:44.747503+00:00",
+      "attempt": 1,
+      "failed_rules": [
+        "execution_completed"
+      ],
+      "failure_type": "GovernanceError",
+      "completed_at": "2026-10-10T09:06:45.129002+00:00",
+      "duration_seconds": 0.38148300000466406
+    },
+    "previous_hash": "788f496efca4d215b89fbff61ed174572760163800729b40de19913d2a3ec2f3",
+    "digest": "45d6fe2db5bc2836a65ac3f5c61ff5e9ded0e25e2a44681edabbb98510da9679"
+  },
+  {
+    "id": "32e7df15eed9dbb3c71a426d",
+    "created_at": "2026-10-10T09:06:46.183935+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "882cd910685e48e59a921068f1f63a54",
+      "stage": "acquisition",
+      "transition": "STARTED"
+    },
+    "previous_hash": "45d6fe2db5bc2836a65ac3f5c61ff5e9ded0e25e2a44681edabbb98510da9679",
+    "digest": "cddfedd391d126dd71a1bb6826f8d5fa648da98cc69a57d8ca33c95fac2f15b5"
+  },
+  {
+    "id": "7004632bc9fe4200bbb60e54",
+    "created_at": "2026-10-10T09:06:46.245290+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "882cd910685e48e59a921068f1f63a54",
+      "stage": "acquisition",
+      "status": "PASS_WITH_WARNINGS",
+      "execution_id": "ab2d9191821b23dd64faa43e",
+      "started_at": "2026-10-10T09:06:46.183935+00:00",
+      "attempt": 1,
+      "checks": {
+        "nonempty_critical_sources": true,
+        "registry_version": true,
+        "source_failure_policy": true
+      },
+      "failed_rules": [],
+      "warnings": [
+        "REPLAY_NOT_LIVE",
+        "OPTIONAL_SOURCE_UNAVAILABLE"
+      ],
+      "counts": {
+        "received_ports": 6,
+        "received_activity": 1398
+      },
+      "completed_at": "2026-10-10T09:06:46.245290+00:00",
+      "duration_seconds": 0.061135999974794686
+    },
+    "previous_hash": "cddfedd391d126dd71a1bb6826f8d5fa648da98cc69a57d8ca33c95fac2f15b5",
+    "digest": "8d72a1c96ba076e3f78593b479d9ec9a2522b4da7570c33b6cb466bc01c11374"
+  },
+  {
+    "id": "cbb1647e962ff218050d91a5",
+    "created_at": "2026-10-10T09:06:46.260617+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "882cd910685e48e59a921068f1f63a54",
+      "stage": "bronze",
+      "transition": "STARTED"
+    },
+    "previous_hash": "8d72a1c96ba076e3f78593b479d9ec9a2522b4da7570c33b6cb466bc01c11374",
+    "digest": "cd2803f1a14a7bd5889dd332fab47863512765dc42fc47b3c3fb323fa72bfe8a"
+  },
+  {
+    "id": "e4be6837421d8b1470e3bbd5",
+    "created_at": "2026-10-10T09:06:46.286271+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "882cd910685e48e59a921068f1f63a54",
+      "stage": "bronze",
+      "status": "PASS",
+      "execution_id": "4da84c72f3dbe61c4d195c27",
+      "started_at": "2026-10-10T09:06:46.260617+00:00",
+      "attempt": 1,
+      "checks": {
+        "evidence_retained": true,
+        "payload_hashes_verified": true
+      },
+      "failed_rules": [],
+      "warnings": [],
+      "counts": {
+        "payloads": 1
+      },
+      "completed_at": "2026-10-10T09:06:46.286271+00:00",
+      "duration_seconds": 0.025399900041520596
+    },
+    "previous_hash": "cd2803f1a14a7bd5889dd332fab47863512765dc42fc47b3c3fb323fa72bfe8a",
+    "digest": "1bc525373a97dad1af219b5edc2fbcdde08679c8a83445567e61581ad06745ca"
+  },
+  {
+    "id": "5e398370c72c75873aeae9c3",
+    "created_at": "2026-10-10T09:06:46.314660+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "882cd910685e48e59a921068f1f63a54",
+      "stage": "silver",
+      "transition": "STARTED"
+    },
+    "previous_hash": "1bc525373a97dad1af219b5edc2fbcdde08679c8a83445567e61581ad06745ca",
+    "digest": "14a55d55d0a3371c537adec550013075d368bf0f1bd7edaa0fa6e3f1a2a85076"
+  },
+  {
+    "id": "45688e1d856939afae270a6a",
+    "created_at": "2026-10-10T09:06:46.488712+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "882cd910685e48e59a921068f1f63a54",
+      "stage": "silver",
+      "status": "PASS",
+      "execution_id": "482eb5856adae8ee62ca9ec9",
+      "started_at": "2026-10-10T09:06:46.314660+00:00",
+      "attempt": 1,
+      "checks": {
+        "canonical_dq": true,
+        "record_accounting": true
+      },
+      "failed_rules": [],
+      "warnings": [],
+      "counts": {
+        "received": 1434,
+        "accepted": 1434,
+        "rejected": 0,
+        "quarantined": 0,
+        "balanced": true
+      },
+      "completed_at": "2026-10-10T09:06:46.488712+00:00",
+      "duration_seconds": 0.17403180000837892
+    },
+    "previous_hash": "14a55d55d0a3371c537adec550013075d368bf0f1bd7edaa0fa6e3f1a2a85076",
+    "digest": "02834b710a2c2f19ea1f3b78b0c25e31ac498cd6f023564513de62a2edbf5e0c"
+  },
+  {
+    "id": "8cd5ae86a540bfb9c2c1bc6f",
+    "created_at": "2026-10-10T09:06:46.509182+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "882cd910685e48e59a921068f1f63a54",
+      "stage": "metrics",
+      "transition": "STARTED"
+    },
+    "previous_hash": "02834b710a2c2f19ea1f3b78b0c25e31ac498cd6f023564513de62a2edbf5e0c",
+    "digest": "c8bc2f8472f5e632dc32fbdf53f9e980c68fd937ba6aef45135e20f56cb7e3e7"
+  },
+  {
+    "id": "bc0a05c1bf5da56be07258ab",
+    "created_at": "2026-10-10T09:06:47.250629+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "882cd910685e48e59a921068f1f63a54",
+      "stage": "metrics",
+      "status": "PASS",
+      "execution_id": "c602e7c7aa13018dab2630c4",
+      "started_at": "2026-10-10T09:06:46.507667+00:00",
+      "attempt": 1,
+      "checks": {
+        "independent_current_metrics": true,
+        "port_coverage": true
+      },
+      "failed_rules": [],
+      "warnings": [],
+      "counts": {},
+      "completed_at": "2026-10-10T09:06:47.250629+00:00",
+      "duration_seconds": 0.7417309999000281
+    },
+    "previous_hash": "c8bc2f8472f5e632dc32fbdf53f9e980c68fd937ba6aef45135e20f56cb7e3e7",
+    "digest": "e44ca5e02a58eb48eafe87131c86b158af2aac2dd07b082bce0c22b893a7dc0a"
+  },
+  {
+    "id": "5fa43e64706ae39b21ae37c6",
+    "created_at": "2026-10-10T09:06:47.271150+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "882cd910685e48e59a921068f1f63a54",
+      "stage": "scenario",
+      "transition": "STARTED"
+    },
+    "previous_hash": "e44ca5e02a58eb48eafe87131c86b158af2aac2dd07b082bce0c22b893a7dc0a",
+    "digest": "c573a0d90d6257b652f54bb67b4bab7a2b80b7ab79b1d9bae4df8f99d48fef98"
+  },
+  {
+    "id": "81f40890a21cf36ae62710a0",
+    "created_at": "2026-10-10T09:06:47.436756+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "882cd910685e48e59a921068f1f63a54",
+      "stage": "scenario",
+      "status": "PASS",
+      "execution_id": "85752b80878944b062ec8d7c",
+      "started_at": "2026-10-10T09:06:47.271150+00:00",
+      "attempt": 1,
+      "checks": {
+        "shipment_action_accounting": true,
+        "all_outputs_simulated": true
+      },
+      "failed_rules": [],
+      "warnings": [],
+      "counts": {},
+      "completed_at": "2026-10-10T09:06:47.436756+00:00",
+      "duration_seconds": 0.16655990004073828
+    },
+    "previous_hash": "c573a0d90d6257b652f54bb67b4bab7a2b80b7ab79b1d9bae4df8f99d48fef98",
+    "digest": "97b93408c71b07c88ff26adc3ede46e7b903c1556189a4854a243cb701c454ac"
+  },
+  {
+    "id": "44a6fe916e6e614c55b4e550",
+    "created_at": "2026-10-10T09:06:47.458512+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "882cd910685e48e59a921068f1f63a54",
+      "stage": "features_ml",
+      "transition": "STARTED"
+    },
+    "previous_hash": "97b93408c71b07c88ff26adc3ede46e7b903c1556189a4854a243cb701c454ac",
+    "digest": "6adb49fc79e31c9d6f86c3c46e4910c51b8efbd81cc86501a45d191993a5b96e"
+  },
+  {
+    "id": "8a136e18e19ae4208df9f37a",
+    "created_at": "2026-10-10T09:06:49.310860+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "882cd910685e48e59a921068f1f63a54",
+      "stage": "features_ml",
+      "status": "PASS_WITH_WARNINGS",
+      "execution_id": "61d3f9a3e3d3b3ef7d241dc8",
+      "started_at": "2026-10-10T09:06:47.458512+00:00",
+      "attempt": 1,
+      "checks": {
+        "sla_not_trained": true,
+        "prediction_classification": true
+      },
+      "failed_rules": [],
+      "warnings": [
+        "LOCAL_RESEARCH_MODEL"
+      ],
+      "counts": {
+        "predictions": 6
+      },
+      "completed_at": "2026-10-10T09:06:49.310860+00:00",
+      "duration_seconds": 1.8525450000306591
+    },
+    "previous_hash": "6adb49fc79e31c9d6f86c3c46e4910c51b8efbd81cc86501a45d191993a5b96e",
+    "digest": "c9236893d415d48d76af3d56b83fb852d23fb01c23c3bba50d90a0325f951f43"
+  },
+  {
+    "id": "b31bfdfafb63d7b52fe9659f",
+    "created_at": "2026-10-10T09:06:49.327780+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "882cd910685e48e59a921068f1f63a54",
+      "stage": "gold",
+      "transition": "STARTED"
+    },
+    "previous_hash": "c9236893d415d48d76af3d56b83fb852d23fb01c23c3bba50d90a0325f951f43",
+    "digest": "aeea1ed07499247fe2fa1f9b4eee77e4c8c59d1a2a9dce62925d2aa2f3f26c8b"
+  },
+  {
+    "id": "9f939e9f0377ca77f104b317",
+    "created_at": "2026-10-10T09:06:49.885831+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "882cd910685e48e59a921068f1f63a54",
+      "stage": "gold",
+      "status": "PASS",
+      "execution_id": "685efef5e4d6389e44c17710",
+      "started_at": "2026-10-10T09:06:49.327780+00:00",
+      "attempt": 1,
+      "checks": {
+        "dataset_contracts_and_independent_checks": true
+      },
+      "failed_rules": [],
+      "warnings": [],
+      "counts": {
+        "ports": {
+          "input": 6,
+          "persisted_expected": 6,
+          "invalid": 0
+        },
+        "activity": {
+          "input": 1398,
+          "persisted_expected": 1398,
+          "invalid": 0
+        },
+        "routes": {
+          "input": 30,
+          "persisted_expected": 30,
+          "invalid": 0
+        },
+        "congestion_history": {
+          "input": 1398,
+          "persisted_expected": 1398,
+          "invalid": 0
+        },
+        "congestion": {
+          "input": 6,
+          "persisted_expected": 6,
+          "invalid": 0
+        },
+        "network": {
+          "input": 30,
+          "persisted_expected": 30,
+          "invalid": 0
+        },
+        "exposure": {
+          "input": 0,
+          "persisted_expected": 0,
+          "invalid": 0
+        },
+        "scenarios": {
+          "input": 60,
+          "persisted_expected": 60,
+          "invalid": 0
+        },
+        "interventions": {
+          "input": 300,
+          "persisted_expected": 300,
+          "invalid": 0
+        },
+        "sla_risk": {
+          "input": 60,
+          "persisted_expected": 60,
+          "invalid": 0
+        },
+        "decisions": {
+          "input": 60,
+          "persisted_expected": 60,
+          "invalid": 0
+        },
+        "predictions": {
+          "input": 6,
+          "persisted_expected": 6,
+          "invalid": 0
+        },
+        "disruptions": {
+          "input": 0,
+          "persisted_expected": 0,
+          "invalid": 0
+        },
+        "early_warning": {
+          "input": 0,
+          "persisted_expected": 0,
+          "invalid": 0
+        },
+        "sources": {
+          "input": 6,
+          "persisted_expected": 6,
+          "invalid": 0
+        },
+        "data_quality": {
+          "input": 1,
+          "persisted_expected": 1,
+          "invalid": 0
+        },
+        "lineage": {
+          "input": 215,
+          "persisted_expected": 215,
+          "invalid": 0
+        },
+        "dim_location": {
+          "input": 6,
+          "persisted_expected": 6,
+          "invalid": 0
+        },
+        "dim_time": {
+          "input": 233,
+          "persisted_expected": 233,
+          "invalid": 0
+        },
+        "dim_intervention": {
+          "input": 5,
+          "persisted_expected": 5,
+          "invalid": 0
+        }
+      },
+      "completed_at": "2026-10-10T09:06:49.885831+00:00",
+      "duration_seconds": 0.5584702000487596
+    },
+    "previous_hash": "aeea1ed07499247fe2fa1f9b4eee77e4c8c59d1a2a9dce62925d2aa2f3f26c8b",
+    "digest": "4e5aceba99c32eec04d3e9603b663cbc8371f7df7c8a433707ddb10b9f5959c9"
+  },
+  {
+    "id": "5bdb188df7c0cc21d24cb39f",
+    "created_at": "2026-10-10T09:06:51.187898+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "882cd910685e48e59a921068f1f63a54",
+      "stage": "publication",
+      "transition": "STARTED"
+    },
+    "previous_hash": "4e5aceba99c32eec04d3e9603b663cbc8371f7df7c8a433707ddb10b9f5959c9",
+    "digest": "8666b26f3aa3d5f92acd21088088b37589279607727486fde93c575bab40a1f5"
+  },
+  {
+    "id": "ae81860f2af21f1a11f46fdd",
+    "created_at": "2026-10-10T09:06:51.861391+00:00",
+    "kind": "stage",
+    "payload": {
+      "run_id": "882cd910685e48e59a921068f1f63a54",
+      "stage": "publication",
+      "status": "PASS",
+      "execution_id": "2cd6ff026bca0a422179381d",
+      "started_at": "2026-10-10T09:06:51.187898+00:00",
+      "attempt": 1,
+      "checks": {
+        "persisted_readback": true,
+        "audit_chain": true
+      },
+      "failed_rules": [],
+      "warnings": [],
+      "counts": {},
+      "completed_at": "2026-10-10T09:06:51.861391+00:00",
+      "duration_seconds": 0.673251900007017
+    },
+    "previous_hash": "8666b26f3aa3d5f92acd21088088b37589279607727486fde93c575bab40a1f5",
+    "digest": "7bad90ff171fc81129673c99add9f0337887238faf0f6c15b9e63cef66e3e955"
+  }
+]

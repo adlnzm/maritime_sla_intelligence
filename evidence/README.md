@@ -2,7 +2,7 @@
 
 Baseline reports predate the stage-governance mandate and are retained for provenance, not reused
 as proof of the new controls. The authoritative governance result is
-`governance-release/release-validation.json` when present. Its declared scope and status govern
+`governance-final/release-validation.json` when present. Its declared scope and status govern
 the datasets alongside it; a BLOCKED industrial release must not be described as validated
 production data.
 
@@ -14,3 +14,5 @@ independent metric comparisons, failed-run/recovery evidence and separated analy
 See [governance reproduction and acceptance](../docs/governance.md). Cloud checks remain
 NOT_EVALUATED until actual tenant execution supplies their evidence. No Azure/Fabric success,
 regulatory certification, immutable cloud retention or sustained production reliability is implied.
+
+Final pack: [governance-evidence.zip](governance-evidence.zip). Read the [scope and result](governance-final/README.md) before using its data.

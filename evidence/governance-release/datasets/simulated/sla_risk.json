@@ -1,0 +1,3486 @@
+[
+  {
+    "scenario_id": "ecdacb3dcee803500a6a2ad6",
+    "shipment_id": "885fd8e3acf8217d32fd9527",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port1114",
+      "port664"
+    ],
+    "expected_delay_hours": 7.111188785910306,
+    "delay_p10": 4.024963236239126,
+    "delay_p50": 6.593139864690329,
+    "delay_p90": 10.625834496621492,
+    "breach_probability": 0.001953125,
+    "monte_carlo_standard_error": 0.0019512167191340064,
+    "breach_indicator": false,
+    "expected_delivery": "2026-10-26T01:29:05.306259+00:00",
+    "planned_delivery": "2026-10-25T18:22:25.026630+00:00",
+    "sla_buffer_hours": 18.34591877590119,
+    "operational_cost": 0.0,
+    "expected_loss": 5.792986654860706,
+    "total_expected_cost": 5.792986654860706,
+    "priority": 1,
+    "cargo_exposure": 148300.45836443407,
+    "explanation": "P(delay > 18.35h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "bf6388301a11807011228352",
+    "shipment_id": "52a1599deac17fea2cadb537",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port744",
+      "port1201"
+    ],
+    "expected_delay_hours": 23.137964601133312,
+    "delay_p10": 13.106826268237654,
+    "delay_p50": 21.35046083246874,
+    "delay_p90": 36.28169038315647,
+    "breach_probability": 0.310546875,
+    "monte_carlo_standard_error": 0.02044941899330012,
+    "breach_indicator": false,
+    "expected_delivery": "2026-10-21T05:34:31.511394+00:00",
+    "planned_delivery": "2026-10-20T06:26:14.838830+00:00",
+    "sla_buffer_hours": 25.53006193355967,
+    "operational_cost": 0.0,
+    "expected_loss": 830.5876279090456,
+    "total_expected_cost": 830.5876279090456,
+    "priority": 3,
+    "cargo_exposure": 44576.610638305174,
+    "explanation": "P(delay > 25.53h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "cd1c3ff788ec606efc9d31f7",
+    "shipment_id": "593b473b878e4617fb7615d1",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port815",
+      "port1114"
+    ],
+    "expected_delay_hours": 10.198249750265397,
+    "delay_p10": 5.308009148389488,
+    "delay_p50": 9.230226974237638,
+    "delay_p90": 15.870460826153153,
+    "breach_probability": 0.623046875,
+    "monte_carlo_standard_error": 0.021417513758856543,
+    "breach_indicator": true,
+    "expected_delivery": "2026-10-20T17:07:52.550520+00:00",
+    "planned_delivery": "2026-10-20T06:55:58.851419+00:00",
+    "sla_buffer_hours": 8.235713529116264,
+    "operational_cost": 0.0,
+    "expected_loss": 1215.1983140543143,
+    "total_expected_cost": 1215.1983140543143,
+    "priority": 2,
+    "cargo_exposure": 48760.30852631731,
+    "explanation": "P(delay > 8.24h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "20f4a3d9afaa84d2f3f39832",
+    "shipment_id": "e6714853fecd3892cac910a8",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port815",
+      "port1188"
+    ],
+    "expected_delay_hours": 14.31436123448393,
+    "delay_p10": 8.219913550793796,
+    "delay_p50": 13.182277993057426,
+    "delay_p90": 22.619470909493625,
+    "breach_probability": 0.0390625,
+    "monte_carlo_standard_error": 0.008562342732788174,
+    "breach_indicator": false,
+    "expected_delivery": "2026-10-31T10:47:50.963496+00:00",
+    "planned_delivery": "2026-10-30T20:28:59.263052+00:00",
+    "sla_buffer_hours": 27.42034973614614,
+    "operational_cost": 0.0,
+    "expected_loss": 556.1046444168478,
+    "total_expected_cost": 556.1046444168478,
+    "priority": 3,
+    "cargo_exposure": 237271.3149511884,
+    "explanation": "P(delay > 27.42h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "cff0fb0a23129b493faac9c6",
+    "shipment_id": "e4ebdce87eedfd2998ea09e5",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port1188",
+      "port1114"
+    ],
+    "expected_delay_hours": 4.3976976041164,
+    "delay_p10": 2.4783063031257826,
+    "delay_p50": 4.051364081910151,
+    "delay_p90": 6.926556702194451,
+    "breach_probability": 0.0,
+    "monte_carlo_standard_error": 0.0,
+    "breach_indicator": false,
+    "expected_delivery": "2026-10-25T22:06:11.013076+00:00",
+    "planned_delivery": "2026-10-25T17:42:19.301701+00:00",
+    "sla_buffer_hours": 19.626056241215473,
+    "operational_cost": 0.0,
+    "expected_loss": 0.0,
+    "total_expected_cost": 0.0,
+    "priority": 2,
+    "cargo_exposure": 63999.064065177205,
+    "explanation": "P(delay > 19.63h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "598caa04cb557516943f1864",
+    "shipment_id": "b9892e65ca5232af7655b655",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port744",
+      "port1201"
+    ],
+    "expected_delay_hours": 22.833565536670527,
+    "delay_p10": 12.770855654099535,
+    "delay_p50": 21.913813555910707,
+    "delay_p90": 33.784514821330404,
+    "breach_probability": 0.025390625,
+    "monte_carlo_standard_error": 0.006952115960788117,
+    "breach_indicator": false,
+    "expected_delivery": "2026-10-21T05:16:15.674762+00:00",
+    "planned_delivery": "2026-10-20T06:26:14.838830+00:00",
+    "sla_buffer_hours": 45.64567236439817,
+    "operational_cost": 0.0,
+    "expected_loss": 64.42026212313684,
+    "total_expected_cost": 64.42026212313684,
+    "priority": 2,
+    "cargo_exposure": 63429.181167396266,
+    "explanation": "P(delay > 45.65h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "d91467491eed215f3fff605e",
+    "shipment_id": "26a3e4382c859c2988b8e2d7",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port815",
+      "port1188"
+    ],
+    "expected_delay_hours": 14.287897096434016,
+    "delay_p10": 8.153197606706522,
+    "delay_p50": 13.198570299782602,
+    "delay_p90": 20.963154306721208,
+    "breach_probability": 0.021484375,
+    "monte_carlo_standard_error": 0.006407819416123337,
+    "breach_indicator": false,
+    "expected_delivery": "2026-10-31T10:46:15.692599+00:00",
+    "planned_delivery": "2026-10-30T20:28:59.263052+00:00",
+    "sla_buffer_hours": 28.265549168036664,
+    "operational_cost": 0.0,
+    "expected_loss": 41.71397465808693,
+    "total_expected_cost": 41.71397465808693,
+    "priority": 1,
+    "cargo_exposure": 97079.79556791141,
+    "explanation": "P(delay > 28.27h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "48a60a6e293a1c86e8bbff83",
+    "shipment_id": "782976cc7439d013141a2485",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port1188",
+      "port1201"
+    ],
+    "expected_delay_hours": 11.464452456152621,
+    "delay_p10": 6.280799691813797,
+    "delay_p50": 10.42320056702691,
+    "delay_p90": 17.806866094427228,
+    "breach_probability": 0.05859375,
+    "monte_carlo_standard_error": 0.010379566244863922,
+    "breach_indicator": false,
+    "expected_delivery": "2026-10-17T04:48:07.327470+00:00",
+    "planned_delivery": "2026-10-16T17:20:15.298628+00:00",
+    "sla_buffer_hours": 20.03763547777059,
+    "operational_cost": 0.0,
+    "expected_loss": 135.90808183859727,
+    "total_expected_cost": 135.90808183859727,
+    "priority": 2,
+    "cargo_exposure": 57987.44825113483,
+    "explanation": "P(delay > 20.04h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "4b3d33979c630f52c5beca67",
+    "shipment_id": "a189f247df34ef10a68b486e",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port1201",
+      "port664"
+    ],
+    "expected_delay_hours": 13.654021998917822,
+    "delay_p10": 7.656012010538779,
+    "delay_p50": 12.744800513353425,
+    "delay_p90": 21.614289286367892,
+    "breach_probability": 0.58203125,
+    "monte_carlo_standard_error": 0.021797670192638164,
+    "breach_indicator": true,
+    "expected_delivery": "2026-11-04T10:43:38.851762+00:00",
+    "planned_delivery": "2026-11-03T21:04:24.372566+00:00",
+    "sla_buffer_hours": 11.825287168898418,
+    "operational_cost": 0.0,
+    "expected_loss": 3014.470427339531,
+    "total_expected_cost": 3014.470427339531,
+    "priority": 2,
+    "cargo_exposure": 129480.60895955031,
+    "explanation": "P(delay > 11.83h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "dd64a16faeac44dd7a226d54",
+    "shipment_id": "89805c3448a1ca2e4573c438",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port1201",
+      "port815"
+    ],
+    "expected_delay_hours": 17.27258849221081,
+    "delay_p10": 9.795893762140645,
+    "delay_p50": 15.749004874310742,
+    "delay_p90": 26.84243485194552,
+    "breach_probability": 0.025390625,
+    "monte_carlo_standard_error": 0.006952115960788117,
+    "breach_indicator": false,
+    "expected_delivery": "2026-11-06T16:49:19.305196+00:00",
+    "planned_delivery": "2026-11-05T23:32:57.986624+00:00",
+    "sla_buffer_hours": 34.85080008994588,
+    "operational_cost": 0.0,
+    "expected_loss": 164.51039330934356,
+    "total_expected_cost": 164.51039330934356,
+    "priority": 3,
+    "cargo_exposure": 107986.30945433833,
+    "explanation": "P(delay > 34.85h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "458e03c6c32445847642f95f",
+    "shipment_id": "894792b175547204bd568a93",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port1114",
+      "port1201"
+    ],
+    "expected_delay_hours": 7.524966500065148,
+    "delay_p10": 4.313571871334034,
+    "delay_p50": 6.9895291881096,
+    "delay_p90": 11.426836768828942,
+    "breach_probability": 0.0,
+    "monte_carlo_standard_error": 0.0,
+    "breach_indicator": false,
+    "expected_delivery": "2026-10-28T20:20:34.576115+00:00",
+    "planned_delivery": "2026-10-28T12:49:04.696715+00:00",
+    "sla_buffer_hours": 39.45706422718646,
+    "operational_cost": 0.0,
+    "expected_loss": 0.0,
+    "total_expected_cost": 0.0,
+    "priority": 3,
+    "cargo_exposure": 158166.3923710866,
+    "explanation": "P(delay > 39.46h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "ae0abe878f65b6bd7d0ed9d1",
+    "shipment_id": "732587d91f14fe8a248fd3f4",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port744",
+      "port664"
+    ],
+    "expected_delay_hours": 21.778134910673373,
+    "delay_p10": 11.924227688801476,
+    "delay_p50": 20.598182092733225,
+    "delay_p90": 32.766868318311474,
+    "breach_probability": 0.056640625,
+    "monte_carlo_standard_error": 0.010215688054218965,
+    "breach_indicator": false,
+    "expected_delivery": "2026-11-03T12:53:32.809527+00:00",
+    "planned_delivery": "2026-11-02T15:06:51.523849+00:00",
+    "sla_buffer_hours": 35.860333376918845,
+    "operational_cost": 0.0,
+    "expected_loss": 168.47602317038414,
+    "total_expected_cost": 168.47602317038414,
+    "priority": 1,
+    "cargo_exposure": 148723.6618331667,
+    "explanation": "P(delay > 35.86h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "ba64205552d67f4d1021883d",
+    "shipment_id": "dfccee72cd6cfeef23069a9e",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port1188",
+      "port1114"
+    ],
+    "expected_delay_hours": 4.51103559025872,
+    "delay_p10": 2.3624556807847115,
+    "delay_p50": 4.115608924983718,
+    "delay_p90": 7.1371162781066575,
+    "breach_probability": 0.083984375,
+    "monte_carlo_standard_error": 0.012257889659242445,
+    "breach_indicator": false,
+    "expected_delivery": "2026-10-25T22:12:59.029826+00:00",
+    "planned_delivery": "2026-10-25T17:42:19.301701+00:00",
+    "sla_buffer_hours": 7.41976443631862,
+    "operational_cost": 0.0,
+    "expected_loss": 51.28436523925069,
+    "total_expected_cost": 51.28436523925069,
+    "priority": 1,
+    "cargo_exposure": 30532.08721220506,
+    "explanation": "P(delay > 7.42h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "ac8d5396f08fd85a2488dd03",
+    "shipment_id": "27083e335a3d3fe5e435c869",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port1114",
+      "port744"
+    ],
+    "expected_delay_hours": 15.730197853416643,
+    "delay_p10": 8.749087697498462,
+    "delay_p50": 14.3575347915002,
+    "delay_p90": 25.002765788126823,
+    "breach_probability": 0.037109375,
+    "monte_carlo_standard_error": 0.008354016306626742,
+    "breach_indicator": false,
+    "expected_delivery": "2026-10-19T18:54:51.192499+00:00",
+    "planned_delivery": "2026-10-19T03:11:02.480227+00:00",
+    "sla_buffer_hours": 30.143913118131024,
+    "operational_cost": 0.0,
+    "expected_loss": 299.23772066208164,
+    "total_expected_cost": 299.23772066208164,
+    "priority": 3,
+    "cargo_exposure": 134394.48506928576,
+    "explanation": "P(delay > 30.14h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "96f12f8cc34c902dd1c1c3f3",
+    "shipment_id": "f84580a9f31b2bd790934a21",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port1188",
+      "port1114"
+    ],
+    "expected_delay_hours": 4.557086889315445,
+    "delay_p10": 2.387290406201578,
+    "delay_p50": 4.198938315040124,
+    "delay_p90": 7.12024880562978,
+    "breach_probability": 0.0,
+    "monte_carlo_standard_error": 0.0,
+    "breach_indicator": false,
+    "expected_delivery": "2026-10-25T22:15:44.814503+00:00",
+    "planned_delivery": "2026-10-25T17:42:19.301701+00:00",
+    "sla_buffer_hours": 22.894870398354204,
+    "operational_cost": 0.0,
+    "expected_loss": 0.0,
+    "total_expected_cost": 0.0,
+    "priority": 3,
+    "cargo_exposure": 146946.07332231905,
+    "explanation": "P(delay > 22.89h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "88f45cfb5abfc5fbefe8958e",
+    "shipment_id": "160fc364e1aaa3f1d4692cd0",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port1188",
+      "port664"
+    ],
+    "expected_delay_hours": 10.921653242666716,
+    "delay_p10": 5.732560703192627,
+    "delay_p50": 9.82401418372342,
+    "delay_p90": 17.402664791491052,
+    "breach_probability": 0.197265625,
+    "monte_carlo_standard_error": 0.017586388235192155,
+    "breach_indicator": false,
+    "expected_delivery": "2026-10-28T19:39:03.055196+00:00",
+    "planned_delivery": "2026-10-28T08:43:45.103522+00:00",
+    "sla_buffer_hours": 14.27381962475221,
+    "operational_cost": 0.0,
+    "expected_loss": 1819.2003606612066,
+    "total_expected_cost": 1819.2003606612066,
+    "priority": 2,
+    "cargo_exposure": 230552.12491547962,
+    "explanation": "P(delay > 14.27h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "b97d6eb9e5a5f3bcc8c05c88",
+    "shipment_id": "e3086c0fe438954b9852672d",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port1201",
+      "port744"
+    ],
+    "expected_delay_hours": 22.803533085596044,
+    "delay_p10": 12.557923671090686,
+    "delay_p50": 20.94872070672747,
+    "delay_p90": 35.029325529103446,
+    "breach_probability": 0.998046875,
+    "monte_carlo_standard_error": 0.0019512167191340064,
+    "breach_indicator": true,
+    "expected_delivery": "2026-10-21T05:14:27.557938+00:00",
+    "planned_delivery": "2026-10-20T06:26:14.838830+00:00",
+    "sla_buffer_hours": 6.442560823762789,
+    "operational_cost": 0.0,
+    "expected_loss": 814.933429864939,
+    "total_expected_cost": 814.933429864939,
+    "priority": 2,
+    "cargo_exposure": 20413.205288201993,
+    "explanation": "P(delay > 6.44h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "f3612900851b80957e1a95b6",
+    "shipment_id": "ccf0d229edf029fdf2fa42e7",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port1114",
+      "port1201"
+    ],
+    "expected_delay_hours": 7.6130316669924065,
+    "delay_p10": 4.1638250102483765,
+    "delay_p50": 7.160985545815464,
+    "delay_p90": 11.624989249840912,
+    "breach_probability": 0.240234375,
+    "monte_carlo_standard_error": 0.01888088795107408,
+    "breach_indicator": false,
+    "expected_delivery": "2026-10-28T20:25:51.610716+00:00",
+    "planned_delivery": "2026-10-28T12:49:04.696715+00:00",
+    "sla_buffer_hours": 9.24329095233573,
+    "operational_cost": 0.0,
+    "expected_loss": 2170.010942439323,
+    "total_expected_cost": 2170.010942439323,
+    "priority": 3,
+    "cargo_exposure": 150548.18462451673,
+    "explanation": "P(delay > 9.24h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "bc99fe479880e49630ff7ccc",
+    "shipment_id": "663c0ef6109ee874dabcb435",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port664",
+      "port744"
+    ],
+    "expected_delay_hours": 22.969592704528008,
+    "delay_p10": 12.54298046873556,
+    "delay_p50": 20.906941722015233,
+    "delay_p90": 35.79147646423307,
+    "breach_probability": 0.064453125,
+    "monte_carlo_standard_error": 0.010852249881733047,
+    "breach_indicator": false,
+    "expected_delivery": "2026-11-03T14:05:02.057585+00:00",
+    "planned_delivery": "2026-11-02T15:06:51.523849+00:00",
+    "sla_buffer_hours": 39.94950364862826,
+    "operational_cost": 0.0,
+    "expected_loss": 613.2609747856113,
+    "total_expected_cost": 613.2609747856113,
+    "priority": 3,
+    "cargo_exposure": 158580.61570213787,
+    "explanation": "P(delay > 39.95h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "e10633115c8aac5f4853daf6",
+    "shipment_id": "b8e6fc8d8b6f3c4ecf093483",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port1188",
+      "port1201"
+    ],
+    "expected_delay_hours": 11.16230920066661,
+    "delay_p10": 6.176221806938733,
+    "delay_p50": 10.35880569211406,
+    "delay_p90": 17.383496995409097,
+    "breach_probability": 0.0625,
+    "monte_carlo_standard_error": 0.010697706201272776,
+    "breach_indicator": false,
+    "expected_delivery": "2026-10-17T04:29:59.611750+00:00",
+    "planned_delivery": "2026-10-16T17:20:15.298628+00:00",
+    "sla_buffer_hours": 18.289717439749033,
+    "operational_cost": 0.0,
+    "expected_loss": 559.5547686551295,
+    "total_expected_cost": 559.5547686551295,
+    "priority": 2,
+    "cargo_exposure": 223821.90746205178,
+    "explanation": "P(delay > 18.29h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "bec8376b2608b17bd0479102",
+    "shipment_id": "080fe502d31c6779b384d8ce",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port815",
+      "port1201"
+    ],
+    "expected_delay_hours": 17.490012752814557,
+    "delay_p10": 9.910281184246605,
+    "delay_p50": 16.069440626387006,
+    "delay_p90": 26.300652790091803,
+    "breach_probability": 0.142578125,
+    "monte_carlo_standard_error": 0.015452144070957206,
+    "breach_indicator": false,
+    "expected_delivery": "2026-11-06T17:02:22.032534+00:00",
+    "planned_delivery": "2026-11-05T23:32:57.986624+00:00",
+    "sla_buffer_hours": 24.255265831821436,
+    "operational_cost": 0.0,
+    "expected_loss": 234.0994383402839,
+    "total_expected_cost": 234.0994383402839,
+    "priority": 1,
+    "cargo_exposure": 82095.14550015435,
+    "explanation": "P(delay > 24.26h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "9610981e0a7d2f174d0261a2",
+    "shipment_id": "aa35fd6d34a6fca07cbb4919",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port1188",
+      "port744"
+    ],
+    "expected_delay_hours": 19.311132231052284,
+    "delay_p10": 11.048306208675342,
+    "delay_p50": 17.946059407240796,
+    "delay_p90": 28.312796079277632,
+    "breach_probability": 0.052734375,
+    "monte_carlo_standard_error": 0.009877517548286995,
+    "breach_indicator": false,
+    "expected_delivery": "2026-10-22T04:13:54.969060+00:00",
+    "planned_delivery": "2026-10-21T08:55:14.893028+00:00",
+    "sla_buffer_hours": 32.67034790965572,
+    "operational_cost": 0.0,
+    "expected_loss": 623.7021663326398,
+    "total_expected_cost": 623.7021663326398,
+    "priority": 3,
+    "cargo_exposure": 197120.68466809357,
+    "explanation": "P(delay > 32.67h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "fa24706ce5557a57db306e68",
+    "shipment_id": "499f56e05a410e70dec1f966",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port1201",
+      "port1114"
+    ],
+    "expected_delay_hours": 7.696105142093444,
+    "delay_p10": 4.125352499383484,
+    "delay_p50": 7.163794807649623,
+    "delay_p90": 12.297940733681411,
+    "breach_probability": 0.00390625,
+    "monte_carlo_standard_error": 0.0027567357887295445,
+    "breach_indicator": false,
+    "expected_delivery": "2026-10-28T20:30:50.675227+00:00",
+    "planned_delivery": "2026-10-28T12:49:04.696715+00:00",
+    "sla_buffer_hours": 17.273744721784873,
+    "operational_cost": 0.0,
+    "expected_loss": 18.51674901995739,
+    "total_expected_cost": 18.51674901995739,
+    "priority": 1,
+    "cargo_exposure": 237014.3874554546,
+    "explanation": "P(delay > 17.27h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "9fc814243a5f08ca5c7f7ad2",
+    "shipment_id": "9902ca6bf9c03144c6e8cfcb",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port744",
+      "port1201"
+    ],
+    "expected_delay_hours": 22.717384317697977,
+    "delay_p10": 12.855223477650622,
+    "delay_p50": 20.85086285345909,
+    "delay_p90": 34.65177816958362,
+    "breach_probability": 0.103515625,
+    "monte_carlo_standard_error": 0.013462922200672705,
+    "breach_indicator": false,
+    "expected_delivery": "2026-10-21T05:09:17.422374+00:00",
+    "planned_delivery": "2026-10-20T06:26:14.838830+00:00",
+    "sla_buffer_hours": 34.44948041096605,
+    "operational_cost": 0.0,
+    "expected_loss": 189.60160950501535,
+    "total_expected_cost": 189.60160950501535,
+    "priority": 2,
+    "cargo_exposure": 45790.5773898905,
+    "explanation": "P(delay > 34.45h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "017a500a07a8b84205aac166",
+    "shipment_id": "5a364886ae2085f155c956fc",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port744",
+      "port1201"
+    ],
+    "expected_delay_hours": 23.044974839288805,
+    "delay_p10": 12.577200964180907,
+    "delay_p50": 21.227174232866957,
+    "delay_p90": 36.56216360616045,
+    "breach_probability": 0.79296875,
+    "monte_carlo_standard_error": 0.01790651240664172,
+    "breach_indicator": true,
+    "expected_delivery": "2026-10-21T05:28:56.748251+00:00",
+    "planned_delivery": "2026-10-20T06:26:14.838830+00:00",
+    "sla_buffer_hours": 15.279133874981772,
+    "operational_cost": 0.0,
+    "expected_loss": 2316.4890610833304,
+    "total_expected_cost": 2316.4890610833304,
+    "priority": 1,
+    "cargo_exposure": 146064.3348860425,
+    "explanation": "P(delay > 15.28h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "a376d0bb32b4bd730f2d089c",
+    "shipment_id": "0e0bd8ebca0a54576913e06a",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port1188",
+      "port1201"
+    ],
+    "expected_delay_hours": 11.150972714154957,
+    "delay_p10": 6.23339808287426,
+    "delay_p50": 10.550686758598573,
+    "delay_p90": 16.567394505032176,
+    "breach_probability": 0.0234375,
+    "monte_carlo_standard_error": 0.006686066375795485,
+    "breach_indicator": false,
+    "expected_delivery": "2026-10-17T04:29:18.800399+00:00",
+    "planned_delivery": "2026-10-16T17:20:15.298628+00:00",
+    "sla_buffer_hours": 23.68878847816407,
+    "operational_cost": 0.0,
+    "expected_loss": 131.60522588040908,
+    "total_expected_cost": 131.60522588040908,
+    "priority": 3,
+    "cargo_exposure": 93585.93840384646,
+    "explanation": "P(delay > 23.69h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "928c5e4477d242d5c3a0b4a5",
+    "shipment_id": "c44851791281211f8fd6ee27",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port664",
+      "port815"
+    ],
+    "expected_delay_hours": 16.86371701804984,
+    "delay_p10": 9.130485180277029,
+    "delay_p50": 15.765721895765651,
+    "delay_p90": 25.94579268385395,
+    "breach_probability": 0.310546875,
+    "monte_carlo_standard_error": 0.02044941899330012,
+    "breach_indicator": false,
+    "expected_delivery": "2026-10-17T14:52:00.615497+00:00",
+    "planned_delivery": "2026-10-16T22:00:11.234232+00:00",
+    "sla_buffer_hours": 19.237158199144794,
+    "operational_cost": 0.0,
+    "expected_loss": 1496.7685856995786,
+    "total_expected_cost": 1496.7685856995786,
+    "priority": 1,
+    "cargo_exposure": 240989.1559365359,
+    "explanation": "P(delay > 19.24h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "f690bf2fb29aad6301ede4e2",
+    "shipment_id": "e10e865fd7d4cf2f871646b0",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port815",
+      "port1188"
+    ],
+    "expected_delay_hours": 14.082611674394379,
+    "delay_p10": 8.0913132229393,
+    "delay_p50": 12.969844880169603,
+    "delay_p90": 21.104053255160853,
+    "breach_probability": 0.06640625,
+    "monte_carlo_standard_error": 0.011003946376696229,
+    "breach_indicator": false,
+    "expected_delivery": "2026-10-31T10:33:56.665080+00:00",
+    "planned_delivery": "2026-10-30T20:28:59.263052+00:00",
+    "sla_buffer_hours": 23.24448047347159,
+    "operational_cost": 0.0,
+    "expected_loss": 219.0461172114169,
+    "total_expected_cost": 219.0461172114169,
+    "priority": 1,
+    "cargo_exposure": 164928.84119447862,
+    "explanation": "P(delay > 23.24h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "736d4034007a3c827c5ac15b",
+    "shipment_id": "62602ce40db7bce0d19a0b54",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port1114",
+      "port1188"
+    ],
+    "expected_delay_hours": 4.64068970050559,
+    "delay_p10": 2.6580370614988853,
+    "delay_p50": 4.264225125837868,
+    "delay_p90": 6.866913628872346,
+    "breach_probability": 0.0,
+    "monte_carlo_standard_error": 0.0,
+    "breach_indicator": false,
+    "expected_delivery": "2026-10-25T22:20:45.784623+00:00",
+    "planned_delivery": "2026-10-25T17:42:19.301701+00:00",
+    "sla_buffer_hours": 13.408423883260477,
+    "operational_cost": 0.0,
+    "expected_loss": 0.0,
+    "total_expected_cost": 0.0,
+    "priority": 3,
+    "cargo_exposure": 185103.38823075852,
+    "explanation": "P(delay > 13.41h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "eb830e34bd6916125264a024",
+    "shipment_id": "cecbb293710d01cc4e536116",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port1188",
+      "port744"
+    ],
+    "expected_delay_hours": 19.59741679510578,
+    "delay_p10": 11.180207786752982,
+    "delay_p50": 18.582902985156068,
+    "delay_p90": 29.73152989661586,
+    "breach_probability": 0.775390625,
+    "monte_carlo_standard_error": 0.018443325544829418,
+    "breach_indicator": true,
+    "expected_delivery": "2026-10-22T04:31:05.593490+00:00",
+    "planned_delivery": "2026-10-21T08:55:14.893028+00:00",
+    "sla_buffer_hours": 13.902455340036056,
+    "operational_cost": 0.0,
+    "expected_loss": 8585.881064482499,
+    "total_expected_cost": 8585.881064482499,
+    "priority": 3,
+    "cargo_exposure": 184549.58459341055,
+    "explanation": "P(delay > 13.90h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "9e6745f99ee8663cb5d04308",
+    "shipment_id": "e67fb867c6d59220d51f9387",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port1114",
+      "port815"
+    ],
+    "expected_delay_hours": 10.475155013224372,
+    "delay_p10": 5.902346387388533,
+    "delay_p50": 9.695422582820953,
+    "delay_p90": 16.28977080782022,
+    "breach_probability": 0.0,
+    "monte_carlo_standard_error": 0.0,
+    "breach_indicator": false,
+    "expected_delivery": "2026-10-20T17:24:29.409467+00:00",
+    "planned_delivery": "2026-10-20T06:55:58.851419+00:00",
+    "sla_buffer_hours": 43.371262428056234,
+    "operational_cost": 0.0,
+    "expected_loss": 0.0,
+    "total_expected_cost": 0.0,
+    "priority": 2,
+    "cargo_exposure": 66012.14362944182,
+    "explanation": "P(delay > 43.37h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "16011773189abfc1e84201e6",
+    "shipment_id": "385c9a08d851611e1158b7de",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port1188",
+      "port815"
+    ],
+    "expected_delay_hours": 14.253987496895121,
+    "delay_p10": 7.8999690672927105,
+    "delay_p50": 12.87423946678058,
+    "delay_p90": 22.165932061390645,
+    "breach_probability": 0.40625,
+    "monte_carlo_standard_error": 0.021705186299700068,
+    "breach_indicator": true,
+    "expected_delivery": "2026-10-31T10:44:13.618041+00:00",
+    "planned_delivery": "2026-10-30T20:28:59.263052+00:00",
+    "sla_buffer_hours": 14.12408062059037,
+    "operational_cost": 0.0,
+    "expected_loss": 976.7407604060256,
+    "total_expected_cost": 976.7407604060256,
+    "priority": 1,
+    "cargo_exposure": 120214.24743458777,
+    "explanation": "P(delay > 14.12h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "7e8c310977d5adf338789566",
+    "shipment_id": "b6bc3238041887019181b460",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port815",
+      "port1201"
+    ],
+    "expected_delay_hours": 17.616543962022444,
+    "delay_p10": 9.478307023182333,
+    "delay_p50": 16.028876709883207,
+    "delay_p90": 27.423231540761282,
+    "breach_probability": 0.01171875,
+    "monte_carlo_standard_error": 0.004756044858100136,
+    "breach_indicator": false,
+    "expected_delivery": "2026-11-06T17:09:57.544887+00:00",
+    "planned_delivery": "2026-11-05T23:32:57.986624+00:00",
+    "sla_buffer_hours": 40.00814048883875,
+    "operational_cost": 0.0,
+    "expected_loss": 51.34069172699236,
+    "total_expected_cost": 51.34069172699236,
+    "priority": 2,
+    "cargo_exposure": 109526.8090175837,
+    "explanation": "P(delay > 40.01h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "4c5cd50c37868216a7d42f83",
+    "shipment_id": "452a2a5200ac181b7bf53167",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port1188",
+      "port1114"
+    ],
+    "expected_delay_hours": 4.561777332222384,
+    "delay_p10": 2.421551497174994,
+    "delay_p50": 4.1667625513617,
+    "delay_p90": 7.153512325324463,
+    "breach_probability": 0.0,
+    "monte_carlo_standard_error": 0.0,
+    "breach_indicator": false,
+    "expected_delivery": "2026-10-25T22:16:01.700097+00:00",
+    "planned_delivery": "2026-10-25T17:42:19.301701+00:00",
+    "sla_buffer_hours": 43.63891228301909,
+    "operational_cost": 0.0,
+    "expected_loss": 0.0,
+    "total_expected_cost": 0.0,
+    "priority": 1,
+    "cargo_exposure": 246183.31860849913,
+    "explanation": "P(delay > 43.64h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "156b706acd0d773993022d58",
+    "shipment_id": "9dc56eff42df88a83085054d",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port664",
+      "port744"
+    ],
+    "expected_delay_hours": 22.046646065094244,
+    "delay_p10": 12.303162004799185,
+    "delay_p50": 20.608148339991658,
+    "delay_p90": 32.83456956530967,
+    "breach_probability": 0.41015625,
+    "monte_carlo_standard_error": 0.021737429044321438,
+    "breach_indicator": false,
+    "expected_delivery": "2026-11-03T13:09:39.449683+00:00",
+    "planned_delivery": "2026-11-02T15:06:51.523849+00:00",
+    "sla_buffer_hours": 22.359252109441815,
+    "operational_cost": 0.0,
+    "expected_loss": 416.1589521313704,
+    "total_expected_cost": 416.1589521313704,
+    "priority": 1,
+    "cargo_exposure": 50731.75797410992,
+    "explanation": "P(delay > 22.36h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "89e0b99ee4c8abd9e3b8c459",
+    "shipment_id": "ee386ba922ae2ceaa050d70b",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port1201",
+      "port1114"
+    ],
+    "expected_delay_hours": 7.882879300693114,
+    "delay_p10": 4.561022534224622,
+    "delay_p50": 7.171498629283633,
+    "delay_p90": 12.30644912195455,
+    "breach_probability": 0.037109375,
+    "monte_carlo_standard_error": 0.008354016306626742,
+    "breach_indicator": false,
+    "expected_delivery": "2026-10-28T20:42:03.062197+00:00",
+    "planned_delivery": "2026-10-28T12:49:04.696715+00:00",
+    "sla_buffer_hours": 15.214981914758807,
+    "operational_cost": 0.0,
+    "expected_loss": 11.304742413551185,
+    "total_expected_cost": 11.304742413551185,
+    "priority": 1,
+    "cargo_exposure": 15231.652936153176,
+    "explanation": "P(delay > 15.21h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "8ed747fefef9031540919102",
+    "shipment_id": "98a4465ce71d80fd4de3e9e9",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port1114",
+      "port1201"
+    ],
+    "expected_delay_hours": 7.614735735196823,
+    "delay_p10": 4.17775431385158,
+    "delay_p50": 7.063960795021018,
+    "delay_p90": 11.852687759616465,
+    "breach_probability": 0.009765625,
+    "monte_carlo_standard_error": 0.004345943144267065,
+    "breach_indicator": false,
+    "expected_delivery": "2026-10-28T20:25:57.745362+00:00",
+    "planned_delivery": "2026-10-28T12:49:04.696715+00:00",
+    "sla_buffer_hours": 18.450367702982085,
+    "operational_cost": 0.0,
+    "expected_loss": 3.7855103914743453,
+    "total_expected_cost": 3.7855103914743453,
+    "priority": 1,
+    "cargo_exposure": 19381.813204348648,
+    "explanation": "P(delay > 18.45h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "b80dd62e5bcd63906fab3672",
+    "shipment_id": "35f64d685eac91c1644d9e49",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port1188",
+      "port1201"
+    ],
+    "expected_delay_hours": 11.695839728737752,
+    "delay_p10": 6.433777624381756,
+    "delay_p50": 10.770446831992459,
+    "delay_p90": 17.855727202544728,
+    "breach_probability": 0.005859375,
+    "monte_carlo_standard_error": 0.0033729862987422117,
+    "breach_indicator": false,
+    "expected_delivery": "2026-10-17T05:02:00.321651+00:00",
+    "planned_delivery": "2026-10-16T17:20:15.298628+00:00",
+    "sla_buffer_hours": 31.733414435721734,
+    "operational_cost": 0.0,
+    "expected_loss": 44.535820014600695,
+    "total_expected_cost": 44.535820014600695,
+    "priority": 2,
+    "cargo_exposure": 190019.49872896296,
+    "explanation": "P(delay > 31.73h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "3868171ecb4a9fb5f78a703d",
+    "shipment_id": "4907c817aa96ae9faf8b6e66",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port744",
+      "port1114",
+      "port815"
+    ],
+    "expected_delay_hours": 26.171552710038704,
+    "delay_p10": 14.00309585312778,
+    "delay_p50": 24.395759769729864,
+    "delay_p90": 41.032055475968534,
+    "breach_probability": 0.83203125,
+    "monte_carlo_standard_error": 0.01652148512540266,
+    "breach_indicator": true,
+    "expected_delivery": "2026-10-30T12:17:18.921402+00:00",
+    "planned_delivery": "2026-10-29T10:07:01.331646+00:00",
+    "sla_buffer_hours": 16.323935759660444,
+    "operational_cost": 0.0,
+    "expected_loss": 314.98861039349174,
+    "total_expected_cost": 314.98861039349174,
+    "priority": 1,
+    "cargo_exposure": 18928.893018951618,
+    "explanation": "P(delay > 16.32h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "15b2f3562ed9bb476b0d82a7",
+    "shipment_id": "4c26e02e52c8a5e5412176ec",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port744",
+      "port1114",
+      "port815"
+    ],
+    "expected_delay_hours": 25.91485680403143,
+    "delay_p10": 14.054018823012921,
+    "delay_p50": 23.670747924603006,
+    "delay_p90": 39.8316572725928,
+    "breach_probability": 0.09765625,
+    "monte_carlo_standard_error": 0.013119009558230393,
+    "breach_indicator": false,
+    "expected_delivery": "2026-10-30T12:01:54.816141+00:00",
+    "planned_delivery": "2026-10-29T10:07:01.331646+00:00",
+    "sla_buffer_hours": 39.9788209256559,
+    "operational_cost": 0.0,
+    "expected_loss": 619.0075917862628,
+    "total_expected_cost": 619.0075917862628,
+    "priority": 2,
+    "cargo_exposure": 158465.94349728327,
+    "explanation": "P(delay > 39.98h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "6406afe37e4a38c23136f693",
+    "shipment_id": "15f3a921204452dbb4916e82",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port815",
+      "port1188"
+    ],
+    "expected_delay_hours": 14.481805475609143,
+    "delay_p10": 7.906611121108687,
+    "delay_p50": 13.84053527281361,
+    "delay_p90": 22.426087992487112,
+    "breach_probability": 0.015625,
+    "monte_carlo_standard_error": 0.005480943437657141,
+    "breach_indicator": false,
+    "expected_delivery": "2026-10-31T10:57:53.762764+00:00",
+    "planned_delivery": "2026-10-30T20:28:59.263052+00:00",
+    "sla_buffer_hours": 29.647026331908762,
+    "operational_cost": 0.0,
+    "expected_loss": 43.41539218511433,
+    "total_expected_cost": 43.41539218511433,
+    "priority": 1,
+    "cargo_exposure": 138929.25499236584,
+    "explanation": "P(delay > 29.65h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "26ed2e7511ee61fc6551b750",
+    "shipment_id": "3895d8e5a0105ef3fd6ae16c",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port1188",
+      "port1201"
+    ],
+    "expected_delay_hours": 11.464381979755895,
+    "delay_p10": 6.344821514620273,
+    "delay_p50": 10.461481325757987,
+    "delay_p90": 17.942770133213195,
+    "breach_probability": 0.001953125,
+    "monte_carlo_standard_error": 0.0019512167191340064,
+    "breach_indicator": false,
+    "expected_delivery": "2026-10-17T04:48:07.073755+00:00",
+    "planned_delivery": "2026-10-16T17:20:15.298628+00:00",
+    "sla_buffer_hours": 38.08107207100025,
+    "operational_cost": 0.0,
+    "expected_loss": 7.941072701495999,
+    "total_expected_cost": 7.941072701495999,
+    "priority": 3,
+    "cargo_exposure": 67763.82038609919,
+    "explanation": "P(delay > 38.08h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "2dd3f93f90f610894023d57d",
+    "shipment_id": "7b7d169a951b9d343f514074",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port744",
+      "port664"
+    ],
+    "expected_delay_hours": 21.327317783177662,
+    "delay_p10": 11.971489396475944,
+    "delay_p50": 19.47484444756236,
+    "delay_p90": 32.44413426161452,
+    "breach_probability": 0.02734375,
+    "monte_carlo_standard_error": 0.007207319052307378,
+    "breach_indicator": false,
+    "expected_delivery": "2026-11-03T12:26:29.867868+00:00",
+    "planned_delivery": "2026-11-02T15:06:51.523849+00:00",
+    "sla_buffer_hours": 43.664255706684465,
+    "operational_cost": 0.0,
+    "expected_loss": 383.87795480172065,
+    "total_expected_cost": 383.87795480172065,
+    "priority": 3,
+    "cargo_exposure": 233982.75340295353,
+    "explanation": "P(delay > 43.66h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "e3d5e57bcfa3bf1086f577ea",
+    "shipment_id": "de220f1cd9a8cc58e075e50f",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port1201",
+      "port664"
+    ],
+    "expected_delay_hours": 13.900272783358844,
+    "delay_p10": 7.367497612019361,
+    "delay_p50": 12.936808603717509,
+    "delay_p90": 21.42675967217462,
+    "breach_probability": 0.21875,
+    "monte_carlo_standard_error": 0.018269811458857137,
+    "breach_indicator": false,
+    "expected_delivery": "2026-11-04T10:58:25.354586+00:00",
+    "planned_delivery": "2026-11-03T21:04:24.372566+00:00",
+    "sla_buffer_hours": 17.68204832755037,
+    "operational_cost": 0.0,
+    "expected_loss": 1781.701976043385,
+    "total_expected_cost": 1781.701976043385,
+    "priority": 2,
+    "cargo_exposure": 203623.08297638685,
+    "explanation": "P(delay > 17.68h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "dc7044e4c2715e0e9f00f89b",
+    "shipment_id": "e9b2cb5f2ff3d246c5f50ed1",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port1188",
+      "port664"
+    ],
+    "expected_delay_hours": 10.66131657618352,
+    "delay_p10": 5.857428626797469,
+    "delay_p50": 9.74701199547681,
+    "delay_p90": 16.15975210176269,
+    "breach_probability": 0.0,
+    "monte_carlo_standard_error": 0.0,
+    "breach_indicator": false,
+    "expected_delivery": "2026-10-28T19:23:25.843196+00:00",
+    "planned_delivery": "2026-10-28T08:43:45.103522+00:00",
+    "sla_buffer_hours": 44.30202504310925,
+    "operational_cost": 0.0,
+    "expected_loss": 0.0,
+    "total_expected_cost": 0.0,
+    "priority": 3,
+    "cargo_exposure": 27114.19959948909,
+    "explanation": "P(delay > 44.30h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "17e78bf1da1a89c0443f8868",
+    "shipment_id": "87ae7efb069ec1daf9a38329",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port1188",
+      "port1201"
+    ],
+    "expected_delay_hours": 11.441981268740264,
+    "delay_p10": 6.1271564822784255,
+    "delay_p50": 10.601772285125804,
+    "delay_p90": 17.97719396987156,
+    "breach_probability": 0.017578125,
+    "monte_carlo_standard_error": 0.005807648264338515,
+    "breach_indicator": false,
+    "expected_delivery": "2026-10-17T04:46:46.431195+00:00",
+    "planned_delivery": "2026-10-16T17:20:15.298628+00:00",
+    "sla_buffer_hours": 24.02175402039719,
+    "operational_cost": 0.0,
+    "expected_loss": 156.67346149404585,
+    "total_expected_cost": 156.67346149404585,
+    "priority": 3,
+    "cargo_exposure": 148549.65237953977,
+    "explanation": "P(delay > 24.02h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "726166c14fd13f4fc3242ce6",
+    "shipment_id": "d61a62b960e757003fa23847",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port1188",
+      "port815"
+    ],
+    "expected_delay_hours": 14.160747052498301,
+    "delay_p10": 7.739239928661232,
+    "delay_p50": 13.280216156291488,
+    "delay_p90": 21.933237730186704,
+    "breach_probability": 0.001953125,
+    "monte_carlo_standard_error": 0.0019512167191340064,
+    "breach_indicator": false,
+    "expected_delivery": "2026-10-31T10:38:37.952441+00:00",
+    "planned_delivery": "2026-10-30T20:28:59.263052+00:00",
+    "sla_buffer_hours": 34.35627881266343,
+    "operational_cost": 0.0,
+    "expected_loss": 21.972112912445276,
+    "total_expected_cost": 21.972112912445276,
+    "priority": 3,
+    "cargo_exposure": 187495.363519533,
+    "explanation": "P(delay > 34.36h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "c97efb1723c1ac5def2a455a",
+    "shipment_id": "80dd3968e96ae3195e9a9266",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port1114",
+      "port1188"
+    ],
+    "expected_delay_hours": 4.412132595596716,
+    "delay_p10": 2.4591176393394845,
+    "delay_p50": 4.150691697484746,
+    "delay_p90": 6.72595961883709,
+    "breach_probability": 0.052734375,
+    "monte_carlo_standard_error": 0.009877517548286995,
+    "breach_indicator": false,
+    "expected_delivery": "2026-10-25T22:07:02.979045+00:00",
+    "planned_delivery": "2026-10-25T17:42:19.301701+00:00",
+    "sla_buffer_hours": 7.491908776076939,
+    "operational_cost": 0.0,
+    "expected_loss": 30.4904727850651,
+    "total_expected_cost": 30.4904727850651,
+    "priority": 2,
+    "cargo_exposure": 14454.74265366049,
+    "explanation": "P(delay > 7.49h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "f6f19f37463d12ecb72855d6",
+    "shipment_id": "ca0c5962655631c78b96b868",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port744",
+      "port1114",
+      "port815"
+    ],
+    "expected_delay_hours": 25.433256810926082,
+    "delay_p10": 13.7168605714759,
+    "delay_p50": 23.514203089171474,
+    "delay_p90": 38.43347094940931,
+    "breach_probability": 0.978515625,
+    "monte_carlo_standard_error": 0.006407819416123337,
+    "breach_indicator": true,
+    "expected_delivery": "2026-10-30T11:33:01.056165+00:00",
+    "planned_delivery": "2026-10-29T10:07:01.331646+00:00",
+    "sla_buffer_hours": 10.935767783897544,
+    "operational_cost": 0.0,
+    "expected_loss": 2203.8802013345107,
+    "total_expected_cost": 2203.8802013345107,
+    "priority": 1,
+    "cargo_exposure": 112613.43942946801,
+    "explanation": "P(delay > 10.94h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "2fa160ca52885428114c2d49",
+    "shipment_id": "24359da00eaf4c09eddfb570",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port1114",
+      "port815"
+    ],
+    "expected_delay_hours": 10.559995683906378,
+    "delay_p10": 5.83075211916628,
+    "delay_p50": 9.596636080359588,
+    "delay_p90": 16.40385185975441,
+    "breach_probability": 0.0,
+    "monte_carlo_standard_error": 0.0,
+    "breach_indicator": false,
+    "expected_delivery": "2026-10-20T17:29:34.835881+00:00",
+    "planned_delivery": "2026-10-20T06:55:58.851419+00:00",
+    "sla_buffer_hours": 37.409369902337104,
+    "operational_cost": 0.0,
+    "expected_loss": 0.0,
+    "total_expected_cost": 0.0,
+    "priority": 1,
+    "cargo_exposure": 247001.51766516606,
+    "explanation": "P(delay > 37.41h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "a3806046e3cf016b7fb816e4",
+    "shipment_id": "b7288ed3dbf23baffd1a0084",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port1188",
+      "port1201"
+    ],
+    "expected_delay_hours": 11.71047474082803,
+    "delay_p10": 6.427368496401376,
+    "delay_p50": 10.549134425839313,
+    "delay_p90": 17.929703018203416,
+    "breach_probability": 0.025390625,
+    "monte_carlo_standard_error": 0.006952115960788117,
+    "breach_indicator": false,
+    "expected_delivery": "2026-10-17T05:02:53.007695+00:00",
+    "planned_delivery": "2026-10-16T17:20:15.298628+00:00",
+    "sla_buffer_hours": 24.35278397806685,
+    "operational_cost": 0.0,
+    "expected_loss": 89.16138435509839,
+    "total_expected_cost": 89.16138435509839,
+    "priority": 3,
+    "cargo_exposure": 58526.44716642357,
+    "explanation": "P(delay > 24.35h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "d9a9d6ba8209837b244d7d57",
+    "shipment_id": "4f6dd629a731a3cf95f2b61c",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port744",
+      "port1201"
+    ],
+    "expected_delay_hours": 22.801459638011373,
+    "delay_p10": 12.95449209407148,
+    "delay_p50": 21.400102920118997,
+    "delay_p90": 35.845087868780595,
+    "breach_probability": 0.833984375,
+    "monte_carlo_standard_error": 0.016444416157630842,
+    "breach_indicator": true,
+    "expected_delivery": "2026-10-21T05:14:20.093527+00:00",
+    "planned_delivery": "2026-10-20T06:26:14.838830+00:00",
+    "sla_buffer_hours": 14.55159066716161,
+    "operational_cost": 0.0,
+    "expected_loss": 1866.9920557961416,
+    "total_expected_cost": 1866.9920557961416,
+    "priority": 2,
+    "cargo_exposure": 55966.03820653539,
+    "explanation": "P(delay > 14.55h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "620534a2bfcaecdb6506c04a",
+    "shipment_id": "d49042947b55174c601804f6",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port1188",
+      "port815"
+    ],
+    "expected_delay_hours": 14.074476159372928,
+    "delay_p10": 8.204436778793104,
+    "delay_p50": 12.866540996170897,
+    "delay_p90": 21.584949694948765,
+    "breach_probability": 0.173828125,
+    "monte_carlo_standard_error": 0.016747895621014343,
+    "breach_indicator": false,
+    "expected_delivery": "2026-10-31T10:33:27.377226+00:00",
+    "planned_delivery": "2026-10-30T20:28:59.263052+00:00",
+    "sla_buffer_hours": 19.440595329585694,
+    "operational_cost": 0.0,
+    "expected_loss": 1034.129195558731,
+    "total_expected_cost": 1034.129195558731,
+    "priority": 3,
+    "cargo_exposure": 99152.46219589333,
+    "explanation": "P(delay > 19.44h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "b5e8750aeb672e8ef267ace5",
+    "shipment_id": "3b9c343a39c6929d389e9b60",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port1201",
+      "port664"
+    ],
+    "expected_delay_hours": 13.534151879842014,
+    "delay_p10": 7.779238430265434,
+    "delay_p50": 12.632100701741763,
+    "delay_p90": 20.9879101134571,
+    "breach_probability": 0.673828125,
+    "monte_carlo_standard_error": 0.020718716202790324,
+    "breach_indicator": true,
+    "expected_delivery": "2026-11-04T10:36:27.319333+00:00",
+    "planned_delivery": "2026-11-03T21:04:24.372566+00:00",
+    "sla_buffer_hours": 10.543602324178135,
+    "operational_cost": 0.0,
+    "expected_loss": 1100.5415778953845,
+    "total_expected_cost": 1100.5415778953845,
+    "priority": 1,
+    "cargo_exposure": 81663.37505542564,
+    "explanation": "P(delay > 10.54h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "638512843f1114e7d3896be0",
+    "shipment_id": "ecb78081e7616dec67495241",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port744",
+      "port1114",
+      "port815"
+    ],
+    "expected_delay_hours": 26.32414782826975,
+    "delay_p10": 13.877834441960596,
+    "delay_p50": 23.458629505551983,
+    "delay_p90": 41.34561857523565,
+    "breach_probability": 0.525390625,
+    "monte_carlo_standard_error": 0.022068577250904053,
+    "breach_indicator": true,
+    "expected_delivery": "2026-10-30T12:26:28.263828+00:00",
+    "planned_delivery": "2026-10-29T10:07:01.331646+00:00",
+    "sla_buffer_hours": 23.03054400785803,
+    "operational_cost": 0.0,
+    "expected_loss": 2268.202775366129,
+    "total_expected_cost": 2268.202775366129,
+    "priority": 1,
+    "cargo_exposure": 215858.70278577288,
+    "explanation": "P(delay > 23.03h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "cdfff4b9e59587ea34435eec",
+    "shipment_id": "a7cdf4dc7a754a01a7643f6b",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port664",
+      "port1201"
+    ],
+    "expected_delay_hours": 13.690568217326565,
+    "delay_p10": 7.674477097864747,
+    "delay_p50": 12.836150866452215,
+    "delay_p90": 21.27179646466664,
+    "breach_probability": 0.00390625,
+    "monte_carlo_standard_error": 0.0027567357887295445,
+    "breach_indicator": false,
+    "expected_delivery": "2026-11-04T10:45:50.418148+00:00",
+    "planned_delivery": "2026-11-03T21:04:24.372566+00:00",
+    "sla_buffer_hours": 33.57587178198061,
+    "operational_cost": 0.0,
+    "expected_loss": 10.20020189785793,
+    "total_expected_cost": 10.20020189785793,
+    "priority": 3,
+    "cargo_exposure": 43520.861430860496,
+    "explanation": "P(delay > 33.58h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "b4200fb5cdb518f3f6ccc484",
+    "shipment_id": "393878372a286fb85808cfd6",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port1201",
+      "port664"
+    ],
+    "expected_delay_hours": 13.895145050118277,
+    "delay_p10": 7.769419135113833,
+    "delay_p50": 12.816677111369245,
+    "delay_p90": 21.343095657871146,
+    "breach_probability": 0.00390625,
+    "monte_carlo_standard_error": 0.0027567357887295445,
+    "breach_indicator": false,
+    "expected_delivery": "2026-11-04T10:58:06.894746+00:00",
+    "planned_delivery": "2026-11-03T21:04:24.372566+00:00",
+    "sla_buffer_hours": 36.645785828210336,
+    "operational_cost": 0.0,
+    "expected_loss": 24.174575340431872,
+    "total_expected_cost": 24.174575340431872,
+    "priority": 2,
+    "cargo_exposure": 154717.28217876397,
+    "explanation": "P(delay > 36.65h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "fc519dc69d18190b038a62c4",
+    "shipment_id": "ac90e9c32fd8cf621c8fb59f",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port1188",
+      "port664"
+    ],
+    "expected_delay_hours": 10.641353107593433,
+    "delay_p10": 5.939882606434589,
+    "delay_p50": 9.623564527035057,
+    "delay_p90": 16.414639336834934,
+    "breach_probability": 0.0,
+    "monte_carlo_standard_error": 0.0,
+    "breach_indicator": false,
+    "expected_delivery": "2026-10-28T19:22:13.974709+00:00",
+    "planned_delivery": "2026-10-28T08:43:45.103522+00:00",
+    "sla_buffer_hours": 37.237502293707735,
+    "operational_cost": 0.0,
+    "expected_loss": 0.0,
+    "total_expected_cost": 0.0,
+    "priority": 1,
+    "cargo_exposure": 234123.73991022527,
+    "explanation": "P(delay > 37.24h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "e82de5650593e09a2541c4aa",
+    "shipment_id": "522337c7b54d0f5d5ea34566",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port664",
+      "port1201"
+    ],
+    "expected_delay_hours": 13.927868867514217,
+    "delay_p10": 7.66161006094926,
+    "delay_p50": 13.02667065701371,
+    "delay_p90": 20.896972072647326,
+    "breach_probability": 0.59765625,
+    "monte_carlo_standard_error": 0.021671520447529527,
+    "breach_indicator": true,
+    "expected_delivery": "2026-11-04T11:00:04.700489+00:00",
+    "planned_delivery": "2026-11-03T21:04:24.372566+00:00",
+    "sla_buffer_hours": 11.886389828544146,
+    "operational_cost": 0.0,
+    "expected_loss": 2256.808993196258,
+    "total_expected_cost": 2256.808993196258,
+    "priority": 1,
+    "cargo_exposure": 188804.93537851048,
+    "explanation": "P(delay > 11.89h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "scenario_id": "e44262422dd9b45cd51abb80",
+    "shipment_id": "681aa5f97c3c35ceed3d3c04",
+    "action": "NO_ACTION",
+    "feasible": true,
+    "classification": "SIMULATED",
+    "lineage_id": "bcde300f8c76d212d91e07eb",
+    "methodology": "paired lognormal simulation v1",
+    "assumptions": {
+      "speed_knots": 16,
+      "distance_factor": 1.25,
+      "stress_delay_hours": 36,
+      "delay_sigma": 0.4,
+      "expedite_cost": 1800,
+      "prioritize_cost": 600,
+      "reroute_cost": 1000,
+      "alternate_port_cost": 1500,
+      "alternate_last_mile_hours": 24,
+      "late_penalty_fraction": 0.02
+    },
+    "draws": 512,
+    "route": [
+      "port664",
+      "port1114"
+    ],
+    "expected_delay_hours": 7.281595175189455,
+    "delay_p10": 4.183233870331373,
+    "delay_p50": 6.884755129734771,
+    "delay_p90": 11.082281016640707,
+    "breach_probability": 0.00390625,
+    "monte_carlo_standard_error": 0.0027567357887295445,
+    "breach_indicator": false,
+    "expected_delivery": "2026-10-26T01:39:18.769261+00:00",
+    "planned_delivery": "2026-10-25T18:22:25.026630+00:00",
+    "sla_buffer_hours": 18.452278509341276,
+    "operational_cost": 0.0,
+    "expected_loss": 28.210821241476122,
+    "total_expected_cost": 28.210821241476122,
+    "priority": 3,
+    "cargo_exposure": 120366.17063029812,
+    "explanation": "P(delay > 18.45h) from 512 assumed draws; expected loss = probability x cargo value x penalty fraction x priority. Not a learned probability.",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "d0b461dc96377ee5268204ce525d7ce704062461737467fce088ec8ccc1b6ade"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  }
+]

@@ -1,0 +1,176 @@
+[
+  {
+    "port_id": "port1114",
+    "date": "2026-10-03",
+    "vessel_calls": 83.57230243841947,
+    "lower": 65.28435103440368,
+    "upper": 101.86025384243526,
+    "classification": "PREDICTED",
+    "model_version": "46cf59d43e484752bf153a02",
+    "feature_version": "portcalls-lags-v1",
+    "generated_at": "2026-10-10T09:03:55.195555+00:00",
+    "approval_status": "LOCAL_RESEARCH_ONLY",
+    "lineage_id": "b967799c318ca1788f4ba942",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "6cfcedaab6ef7ecbe6af9516059426eccdd0a0227ac7cd40fb361dc064bd5e76"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port1188",
+    "date": "2026-10-03",
+    "vessel_calls": 83.18495683147385,
+    "lower": 64.89700542745807,
+    "upper": 101.47290823548964,
+    "classification": "PREDICTED",
+    "model_version": "46cf59d43e484752bf153a02",
+    "feature_version": "portcalls-lags-v1",
+    "generated_at": "2026-10-10T09:03:55.206263+00:00",
+    "approval_status": "LOCAL_RESEARCH_ONLY",
+    "lineage_id": "b967799c318ca1788f4ba942",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "6cfcedaab6ef7ecbe6af9516059426eccdd0a0227ac7cd40fb361dc064bd5e76"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port1201",
+    "date": "2026-10-03",
+    "vessel_calls": 109.74863691838928,
+    "lower": 91.4606855143735,
+    "upper": 128.03658832240507,
+    "classification": "PREDICTED",
+    "model_version": "46cf59d43e484752bf153a02",
+    "feature_version": "portcalls-lags-v1",
+    "generated_at": "2026-10-10T09:03:55.215407+00:00",
+    "approval_status": "LOCAL_RESEARCH_ONLY",
+    "lineage_id": "b967799c318ca1788f4ba942",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "6cfcedaab6ef7ecbe6af9516059426eccdd0a0227ac7cd40fb361dc064bd5e76"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port664",
+    "date": "2026-10-03",
+    "vessel_calls": 9.846879078326563,
+    "lower": 0,
+    "upper": 28.13483048234235,
+    "classification": "PREDICTED",
+    "model_version": "46cf59d43e484752bf153a02",
+    "feature_version": "portcalls-lags-v1",
+    "generated_at": "2026-10-10T09:03:55.225998+00:00",
+    "approval_status": "LOCAL_RESEARCH_ONLY",
+    "lineage_id": "b967799c318ca1788f4ba942",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "6cfcedaab6ef7ecbe6af9516059426eccdd0a0227ac7cd40fb361dc064bd5e76"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port744",
+    "date": "2026-10-03",
+    "vessel_calls": 5.159887166949763,
+    "lower": 0,
+    "upper": 23.447838570965548,
+    "classification": "PREDICTED",
+    "model_version": "46cf59d43e484752bf153a02",
+    "feature_version": "portcalls-lags-v1",
+    "generated_at": "2026-10-10T09:03:55.236855+00:00",
+    "approval_status": "LOCAL_RESEARCH_ONLY",
+    "lineage_id": "b967799c318ca1788f4ba942",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "6cfcedaab6ef7ecbe6af9516059426eccdd0a0227ac7cd40fb361dc064bd5e76"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port815",
+    "date": "2026-10-03",
+    "vessel_calls": 9.27060308369309,
+    "lower": 0,
+    "upper": 27.558554487708875,
+    "classification": "PREDICTED",
+    "model_version": "46cf59d43e484752bf153a02",
+    "feature_version": "portcalls-lags-v1",
+    "generated_at": "2026-10-10T09:03:55.244882+00:00",
+    "approval_status": "LOCAL_RESEARCH_ONLY",
+    "lineage_id": "b967799c318ca1788f4ba942",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "activity": "6cfcedaab6ef7ecbe6af9516059426eccdd0a0227ac7cd40fb361dc064bd5e76"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  }
+]

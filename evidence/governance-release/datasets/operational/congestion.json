@@ -1,0 +1,230 @@
+[
+  {
+    "state_id": "5e62eae4400b92d1e9cf509e",
+    "port_id": "port1114",
+    "date": "2026-10-02",
+    "current_activity": 83.0,
+    "baseline": 83.35714285714286,
+    "z_score": -0.034083075812999984,
+    "deviation_fraction": -0.004284490145672714,
+    "percentile": 0.5357142857142857,
+    "history_records": 56,
+    "persistence_days": 0,
+    "category": "NORMAL",
+    "stress_score": 0.011361025270999995,
+    "trend": "BELOW_BASELINE",
+    "evidence_coverage": 1.0,
+    "methodology": "activity-deviation proxy for port stress/congestion; v1",
+    "classification": "DERIVED",
+    "lineage_id": "273d58055d94a51bcea629b60b5b85f571f3b27b4928a8f7456cb9f6859cf148",
+    "source_id": "portwatch_activity",
+    "valid_from": "2026-10-02",
+    "valid_to": "2026-10-02",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "DERIVED"
+    ],
+    "input_fingerprints": {
+      "congestion_history": "c19740481f7863f2e9244d3d24d587bdb962a5f99db77438bf4cbc177c3f0a8d"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "state_id": "d59d03c3b3e6dca9d185802e",
+    "port_id": "port1188",
+    "date": "2026-10-02",
+    "current_activity": 70.0,
+    "baseline": 79.42857142857143,
+    "z_score": -0.3428340143396543,
+    "deviation_fraction": -0.11870503597122305,
+    "percentile": 0.25,
+    "history_records": 56,
+    "persistence_days": 0,
+    "category": "NORMAL",
+    "stress_score": 0.11427800477988477,
+    "trend": "BELOW_BASELINE",
+    "evidence_coverage": 1.0,
+    "methodology": "activity-deviation proxy for port stress/congestion; v1",
+    "classification": "DERIVED",
+    "lineage_id": "273d58055d94a51bcea629b60b5b85f571f3b27b4928a8f7456cb9f6859cf148",
+    "source_id": "portwatch_activity",
+    "valid_from": "2026-10-02",
+    "valid_to": "2026-10-02",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "DERIVED"
+    ],
+    "input_fingerprints": {
+      "congestion_history": "c19740481f7863f2e9244d3d24d587bdb962a5f99db77438bf4cbc177c3f0a8d"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "state_id": "1e0d93346183121730b39e7f",
+    "port_id": "port1201",
+    "date": "2026-10-02",
+    "current_activity": 108.0,
+    "baseline": 116.0,
+    "z_score": -0.6107556641289622,
+    "deviation_fraction": -0.06896551724137931,
+    "percentile": 0.30357142857142855,
+    "history_records": 56,
+    "persistence_days": 0,
+    "category": "NORMAL",
+    "stress_score": 0.20358522137632074,
+    "trend": "BELOW_BASELINE",
+    "evidence_coverage": 1.0,
+    "methodology": "activity-deviation proxy for port stress/congestion; v1",
+    "classification": "DERIVED",
+    "lineage_id": "58820aa8efed38707a28712197229fccf3b244943c2f379bf8b124cf2c19ce50",
+    "source_id": "portwatch_activity",
+    "valid_from": "2026-10-02",
+    "valid_to": "2026-10-02",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "DERIVED"
+    ],
+    "input_fingerprints": {
+      "congestion_history": "c19740481f7863f2e9244d3d24d587bdb962a5f99db77438bf4cbc177c3f0a8d"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "state_id": "15388b71d0b0a6ca60910bc1",
+    "port_id": "port664",
+    "date": "2026-10-02",
+    "current_activity": 12.0,
+    "baseline": 10.232142857142858,
+    "z_score": 0.5551033396334509,
+    "deviation_fraction": 0.17277486910994758,
+    "percentile": 0.7857142857142857,
+    "history_records": 56,
+    "persistence_days": 0,
+    "category": "NORMAL",
+    "stress_score": 0.18503444654448364,
+    "trend": "ABOVE_BASELINE",
+    "evidence_coverage": 1.0,
+    "methodology": "activity-deviation proxy for port stress/congestion; v1",
+    "classification": "DERIVED",
+    "lineage_id": "58820aa8efed38707a28712197229fccf3b244943c2f379bf8b124cf2c19ce50",
+    "source_id": "portwatch_activity",
+    "valid_from": "2026-10-02",
+    "valid_to": "2026-10-02",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "DERIVED"
+    ],
+    "input_fingerprints": {
+      "congestion_history": "c19740481f7863f2e9244d3d24d587bdb962a5f99db77438bf4cbc177c3f0a8d"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "state_id": "74eed9c62f3cbb0a235f9ef7",
+    "port_id": "port744",
+    "date": "2026-10-02",
+    "current_activity": 7.0,
+    "baseline": 4.464285714285714,
+    "z_score": 1.3034656043534332,
+    "deviation_fraction": 0.568,
+    "percentile": 0.9285714285714286,
+    "history_records": 56,
+    "persistence_days": 1,
+    "category": "ELEVATED",
+    "stress_score": 0.43448853478447774,
+    "trend": "ABOVE_BASELINE",
+    "evidence_coverage": 1.0,
+    "methodology": "activity-deviation proxy for port stress/congestion; v1",
+    "classification": "DERIVED",
+    "lineage_id": "273d58055d94a51bcea629b60b5b85f571f3b27b4928a8f7456cb9f6859cf148",
+    "source_id": "portwatch_activity",
+    "valid_from": "2026-10-02",
+    "valid_to": "2026-10-02",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "DERIVED"
+    ],
+    "input_fingerprints": {
+      "congestion_history": "c19740481f7863f2e9244d3d24d587bdb962a5f99db77438bf4cbc177c3f0a8d"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "state_id": "1c3b09c5e8102c4695299a11",
+    "port_id": "port815",
+    "date": "2026-10-02",
+    "current_activity": 7.0,
+    "baseline": 9.821428571428571,
+    "z_score": -0.839713085378144,
+    "deviation_fraction": -0.28727272727272724,
+    "percentile": 0.23214285714285715,
+    "history_records": 56,
+    "persistence_days": 0,
+    "category": "NORMAL",
+    "stress_score": 0.27990436179271466,
+    "trend": "BELOW_BASELINE",
+    "evidence_coverage": 1.0,
+    "methodology": "activity-deviation proxy for port stress/congestion; v1",
+    "classification": "DERIVED",
+    "lineage_id": "273d58055d94a51bcea629b60b5b85f571f3b27b4928a8f7456cb9f6859cf148",
+    "source_id": "portwatch_activity",
+    "valid_from": "2026-10-02",
+    "valid_to": "2026-10-02",
+    "run_id": "e6756ab653594b8d942a17083dd9c50f",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T09:03:33.801217+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "DERIVED"
+    ],
+    "input_fingerprints": {
+      "congestion_history": "c19740481f7863f2e9244d3d24d587bdb962a5f99db77438bf4cbc177c3f0a8d"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  }
+]
