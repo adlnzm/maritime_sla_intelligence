@@ -86,6 +86,10 @@ class Fabric:
         token = self.credential.get_token("https://storage.azure.com/.default").token
         url = f"https://onelake.dfs.fabric.microsoft.com/{self.workspace}/{lakehouse}/Files/{path}"
         headers = {"Authorization": "Bearer " + token, "x-ms-version": "2021-06-08"}
+        parent = url.rsplit("/", 1)[0]
+        directory = self.client.put(parent, params={"resource": "directory"}, headers=headers)
+        if directory.status_code != 409:
+            directory.raise_for_status()
         # ADLS path create, append, flush. Writes only the owned maritime package paths.
         for method, params, data in [
             ("PUT", {"resource": "file"}, b""),
@@ -134,7 +138,7 @@ def deploy(execute=False):
             archive.write(file, file.as_posix())
     fabric.upload(lakehouse, "maritime/configs.zip", package.read_bytes())
     notebook_ids = {}
-    for stage in ("bronze", "silver", "gold", "acceptance"):
+    for stage in ("bronze", "silver", "gold", "acceptance", "import_predictions"):
         notebook = json.loads(Path(f"fabric/notebooks/{stage}.ipynb").read_text())
         notebook["metadata"]["dependencies"] = {
             "lakehouse": {
@@ -151,6 +155,8 @@ def deploy(execute=False):
     activities = []
     previous = None
     for stage, notebook_id in notebook_ids.items():
+        if stage == "import_predictions":
+            continue  # Runs after Azure ML batch output returns, not before it exists.
         activities.append(
             {
                 "name": stage,

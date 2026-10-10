@@ -1,0 +1,420 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "bicep",
+      "version": "0.48.1.52935",
+      "templateHash": "5611161482249961130"
+    }
+  },
+  "parameters": {
+    "prefix": {
+      "type": "string",
+      "defaultValue": "maritime",
+      "maxLength": 10,
+      "metadata": {
+        "description": "Lowercase short deployment prefix, globally unique storage names are derived."
+      }
+    },
+    "location": {
+      "type": "string",
+      "defaultValue": "[resourceGroup().location]"
+    },
+    "apiImage": {
+      "type": "string",
+      "metadata": {
+        "description": "Prebuilt public or accessible container image, preferably pinned by digest."
+      }
+    },
+    "tenantId": {
+      "type": "string",
+      "defaultValue": "[tenant().tenantId]"
+    },
+    "apiAudience": {
+      "type": "string",
+      "metadata": {
+        "description": "Entra application audience. Register Maritime.Reader and Maritime.Operator app roles."
+      }
+    },
+    "openAIAccountName": {
+      "type": "string",
+      "metadata": {
+        "description": "Existing Azure OpenAI resource name in this resource group."
+      }
+    },
+    "openAIDeployment": {
+      "type": "string"
+    },
+    "computeSku": {
+      "type": "string",
+      "defaultValue": "Standard_DS3_v2"
+    }
+  },
+  "variables": {
+    "suffix": "[uniqueString(resourceGroup().id)]"
+  },
+  "resources": [
+    {
+      "type": "Microsoft.OperationalInsights/workspaces",
+      "apiVersion": "2023-09-01",
+      "name": "[format('{0}-logs', parameters('prefix'))]",
+      "location": "[parameters('location')]",
+      "properties": {
+        "retentionInDays": 30,
+        "sku": {
+          "name": "PerGB2018"
+        }
+      }
+    },
+    {
+      "type": "Microsoft.Insights/components",
+      "apiVersion": "2020-02-02",
+      "name": "[format('{0}-insights', parameters('prefix'))]",
+      "location": "[parameters('location')]",
+      "kind": "web",
+      "properties": {
+        "Application_Type": "web",
+        "WorkspaceResourceId": "[resourceId('Microsoft.OperationalInsights/workspaces', format('{0}-logs', parameters('prefix')))]"
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.OperationalInsights/workspaces', format('{0}-logs', parameters('prefix')))]"
+      ]
+    },
+    {
+      "type": "Microsoft.Storage/storageAccounts",
+      "apiVersion": "2023-05-01",
+      "name": "[format('{0}{1}', parameters('prefix'), variables('suffix'))]",
+      "location": "[parameters('location')]",
+      "sku": {
+        "name": "Standard_LRS"
+      },
+      "kind": "StorageV2",
+      "properties": {
+        "minimumTlsVersion": "TLS1_2",
+        "allowBlobPublicAccess": false,
+        "supportsHttpsTrafficOnly": true
+      }
+    },
+    {
+      "type": "Microsoft.Storage/storageAccounts/blobServices",
+      "apiVersion": "2023-05-01",
+      "name": "[format('{0}/{1}', format('{0}{1}', parameters('prefix'), variables('suffix')), 'default')]",
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts', format('{0}{1}', parameters('prefix'), variables('suffix')))]"
+      ]
+    },
+    {
+      "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
+      "apiVersion": "2023-05-01",
+      "name": "[format('{0}/{1}/{2}', format('{0}{1}', parameters('prefix'), variables('suffix')), 'default', 'maritime-serving')]",
+      "properties": {
+        "publicAccess": "None"
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts/blobServices', format('{0}{1}', parameters('prefix'), variables('suffix')), 'default')]"
+      ]
+    },
+    {
+      "type": "Microsoft.KeyVault/vaults",
+      "apiVersion": "2023-07-01",
+      "name": "[format('{0}-{1}', parameters('prefix'), variables('suffix'))]",
+      "location": "[parameters('location')]",
+      "properties": {
+        "tenantId": "[parameters('tenantId')]",
+        "sku": {
+          "family": "A",
+          "name": "standard"
+        },
+        "enableRbacAuthorization": true,
+        "enableSoftDelete": true,
+        "enablePurgeProtection": true,
+        "softDeleteRetentionInDays": 90,
+        "accessPolicies": []
+      }
+    },
+    {
+      "type": "Microsoft.MachineLearningServices/workspaces",
+      "apiVersion": "2024-04-01",
+      "name": "[format('{0}-ml', parameters('prefix'))]",
+      "location": "[parameters('location')]",
+      "identity": {
+        "type": "SystemAssigned"
+      },
+      "properties": {
+        "friendlyName": "Maritime ML",
+        "storageAccount": "[resourceId('Microsoft.Storage/storageAccounts', format('{0}{1}', parameters('prefix'), variables('suffix')))]",
+        "keyVault": "[resourceId('Microsoft.KeyVault/vaults', format('{0}-{1}', parameters('prefix'), variables('suffix')))]",
+        "applicationInsights": "[resourceId('Microsoft.Insights/components', format('{0}-insights', parameters('prefix')))]"
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Insights/components', format('{0}-insights', parameters('prefix')))]",
+        "[resourceId('Microsoft.Storage/storageAccounts', format('{0}{1}', parameters('prefix'), variables('suffix')))]",
+        "[resourceId('Microsoft.KeyVault/vaults', format('{0}-{1}', parameters('prefix'), variables('suffix')))]"
+      ]
+    },
+    {
+      "type": "Microsoft.MachineLearningServices/workspaces/computes",
+      "apiVersion": "2024-04-01",
+      "name": "[format('{0}/{1}', format('{0}-ml', parameters('prefix')), 'maritime-cpu')]",
+      "location": "[parameters('location')]",
+      "properties": {
+        "computeType": "AmlCompute",
+        "properties": {
+          "vmSize": "[parameters('computeSku')]",
+          "vmPriority": "Dedicated",
+          "scaleSettings": {
+            "minNodeCount": 0,
+            "maxNodeCount": 2,
+            "nodeIdleTimeBeforeScaleDown": "PT5M"
+          }
+        }
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.MachineLearningServices/workspaces', format('{0}-ml', parameters('prefix')))]"
+      ]
+    },
+    {
+      "type": "Microsoft.ManagedIdentity/userAssignedIdentities",
+      "apiVersion": "2023-01-31",
+      "name": "[format('{0}-api-identity', parameters('prefix'))]",
+      "location": "[parameters('location')]"
+    },
+    {
+      "type": "Microsoft.Authorization/roleAssignments",
+      "apiVersion": "2022-04-01",
+      "scope": "[resourceId('Microsoft.Storage/storageAccounts/blobServices/containers', format('{0}{1}', parameters('prefix'), variables('suffix')), 'default', 'maritime-serving')]",
+      "name": "[guid(resourceId('Microsoft.Storage/storageAccounts/blobServices/containers', format('{0}{1}', parameters('prefix'), variables('suffix')), 'default', 'maritime-serving'), resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', format('{0}-api-identity', parameters('prefix'))), 'blob-reader')]",
+      "properties": {
+        "principalId": "[reference(resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', format('{0}-api-identity', parameters('prefix'))), '2023-01-31').principalId]",
+        "principalType": "ServicePrincipal",
+        "roleDefinitionId": "[subscriptionResourceId('Microsoft.Authorization/roleDefinitions', '2a2b9908-6ea1-4ae2-8e65-a410df84e7d1')]"
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', format('{0}-api-identity', parameters('prefix')))]",
+        "[resourceId('Microsoft.Storage/storageAccounts/blobServices/containers', format('{0}{1}', parameters('prefix'), variables('suffix')), 'default', 'maritime-serving')]"
+      ]
+    },
+    {
+      "type": "Microsoft.Authorization/roleAssignments",
+      "apiVersion": "2022-04-01",
+      "scope": "[resourceId('Microsoft.KeyVault/vaults', format('{0}-{1}', parameters('prefix'), variables('suffix')))]",
+      "name": "[guid(resourceId('Microsoft.KeyVault/vaults', format('{0}-{1}', parameters('prefix'), variables('suffix'))), resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', format('{0}-api-identity', parameters('prefix'))), 'secrets-user')]",
+      "properties": {
+        "principalId": "[reference(resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', format('{0}-api-identity', parameters('prefix'))), '2023-01-31').principalId]",
+        "principalType": "ServicePrincipal",
+        "roleDefinitionId": "[subscriptionResourceId('Microsoft.Authorization/roleDefinitions', '4633458b-17de-408a-b874-0445c86b69e6')]"
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', format('{0}-api-identity', parameters('prefix')))]",
+        "[resourceId('Microsoft.KeyVault/vaults', format('{0}-{1}', parameters('prefix'), variables('suffix')))]"
+      ]
+    },
+    {
+      "type": "Microsoft.Authorization/roleAssignments",
+      "apiVersion": "2022-04-01",
+      "scope": "[resourceId('Microsoft.CognitiveServices/accounts', parameters('openAIAccountName'))]",
+      "name": "[guid(resourceId('Microsoft.CognitiveServices/accounts', parameters('openAIAccountName')), resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', format('{0}-api-identity', parameters('prefix'))), 'openai-user')]",
+      "properties": {
+        "principalId": "[reference(resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', format('{0}-api-identity', parameters('prefix'))), '2023-01-31').principalId]",
+        "principalType": "ServicePrincipal",
+        "roleDefinitionId": "[subscriptionResourceId('Microsoft.Authorization/roleDefinitions', '5e0bd9bd-7b93-4f28-af87-19fc36ad61bd')]"
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', format('{0}-api-identity', parameters('prefix')))]"
+      ]
+    },
+    {
+      "type": "Microsoft.App/managedEnvironments",
+      "apiVersion": "2024-03-01",
+      "name": "[format('{0}-environment', parameters('prefix'))]",
+      "location": "[parameters('location')]",
+      "properties": {
+        "appLogsConfiguration": {
+          "destination": "log-analytics",
+          "logAnalyticsConfiguration": {
+            "customerId": "[reference(resourceId('Microsoft.OperationalInsights/workspaces', format('{0}-logs', parameters('prefix'))), '2023-09-01').customerId]",
+            "sharedKey": "[listKeys(resourceId('Microsoft.OperationalInsights/workspaces', format('{0}-logs', parameters('prefix'))), '2023-09-01').primarySharedKey]"
+          }
+        }
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.OperationalInsights/workspaces', format('{0}-logs', parameters('prefix')))]"
+      ]
+    },
+    {
+      "type": "Microsoft.App/containerApps",
+      "apiVersion": "2024-03-01",
+      "name": "[format('{0}-api', parameters('prefix'))]",
+      "location": "[parameters('location')]",
+      "identity": {
+        "type": "UserAssigned",
+        "userAssignedIdentities": {
+          "[format('{0}', resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', format('{0}-api-identity', parameters('prefix'))))]": {}
+        }
+      },
+      "properties": {
+        "managedEnvironmentId": "[resourceId('Microsoft.App/managedEnvironments', format('{0}-environment', parameters('prefix')))]",
+        "configuration": {
+          "activeRevisionsMode": "Single",
+          "ingress": {
+            "external": true,
+            "targetPort": 8000,
+            "allowInsecure": false,
+            "transport": "auto"
+          }
+        },
+        "template": {
+          "scale": {
+            "minReplicas": 1,
+            "maxReplicas": 2
+          },
+          "containers": [
+            {
+              "name": "api",
+              "image": "[parameters('apiImage')]",
+              "resources": {
+                "cpu": "[json('0.5')]",
+                "memory": "1Gi"
+              },
+              "env": [
+                {
+                  "name": "MARITIME_AUTH_MODE",
+                  "value": "entra"
+                },
+                {
+                  "name": "AZURE_TENANT_ID",
+                  "value": "[parameters('tenantId')]"
+                },
+                {
+                  "name": "AZURE_API_AUDIENCE",
+                  "value": "[parameters('apiAudience')]"
+                },
+                {
+                  "name": "AZURE_CLIENT_ID",
+                  "value": "[reference(resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', format('{0}-api-identity', parameters('prefix'))), '2023-01-31').clientId]"
+                },
+                {
+                  "name": "AZURE_STORAGE_ACCOUNT_URL",
+                  "value": "[reference(resourceId('Microsoft.Storage/storageAccounts', format('{0}{1}', parameters('prefix'), variables('suffix'))), '2023-05-01').primaryEndpoints.blob]"
+                },
+                {
+                  "name": "MARITIME_STORAGE_BACKEND",
+                  "value": "azure_blob"
+                },
+                {
+                  "name": "AZURE_KEY_VAULT_URL",
+                  "value": "[reference(resourceId('Microsoft.KeyVault/vaults', format('{0}-{1}', parameters('prefix'), variables('suffix'))), '2023-07-01').vaultUri]"
+                },
+                {
+                  "name": "AZURE_OPENAI_ENDPOINT",
+                  "value": "[reference(resourceId('Microsoft.CognitiveServices/accounts', parameters('openAIAccountName')), '2023-05-01').endpoint]"
+                },
+                {
+                  "name": "AZURE_OPENAI_DEPLOYMENT",
+                  "value": "[parameters('openAIDeployment')]"
+                },
+                {
+                  "name": "APPLICATIONINSIGHTS_CONNECTION_STRING",
+                  "value": "[reference(resourceId('Microsoft.Insights/components', format('{0}-insights', parameters('prefix'))), '2020-02-02').ConnectionString]"
+                }
+              ],
+              "probes": [
+                {
+                  "type": "Liveness",
+                  "httpGet": {
+                    "path": "/health",
+                    "port": 8000
+                  },
+                  "initialDelaySeconds": 20,
+                  "periodSeconds": 30
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.App/managedEnvironments', format('{0}-environment', parameters('prefix')))]",
+        "[resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', format('{0}-api-identity', parameters('prefix')))]",
+        "[resourceId('Microsoft.Insights/components', format('{0}-insights', parameters('prefix')))]",
+        "[resourceId('Microsoft.Storage/storageAccounts', format('{0}{1}', parameters('prefix'), variables('suffix')))]",
+        "[resourceId('Microsoft.KeyVault/vaults', format('{0}-{1}', parameters('prefix'), variables('suffix')))]"
+      ]
+    },
+    {
+      "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
+      "apiVersion": "2023-05-01",
+      "name": "[format('{0}/{1}/{2}', format('{0}{1}', parameters('prefix'), variables('suffix')), 'default', 'maritime-audit')]",
+      "properties": {
+        "publicAccess": "None"
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts/blobServices', format('{0}{1}', parameters('prefix'), variables('suffix')), 'default')]"
+      ]
+    },
+    {
+      "type": "Microsoft.Authorization/roleAssignments",
+      "apiVersion": "2022-04-01",
+      "scope": "[resourceId('Microsoft.Storage/storageAccounts/blobServices/containers', format('{0}{1}', parameters('prefix'), variables('suffix')), 'default', 'maritime-audit')]",
+      "name": "[guid(resourceId('Microsoft.Storage/storageAccounts/blobServices/containers', format('{0}{1}', parameters('prefix'), variables('suffix')), 'default', 'maritime-audit'), resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', format('{0}-api-identity', parameters('prefix'))), 'audit-contributor')]",
+      "properties": {
+        "principalId": "[reference(resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', format('{0}-api-identity', parameters('prefix'))), '2023-01-31').principalId]",
+        "principalType": "ServicePrincipal",
+        "roleDefinitionId": "[subscriptionResourceId('Microsoft.Authorization/roleDefinitions', 'ba92f5b4-2d11-453d-a403-e96b0029c9fe')]"
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts/blobServices/containers', format('{0}{1}', parameters('prefix'), variables('suffix')), 'default', 'maritime-audit')]",
+        "[resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', format('{0}-api-identity', parameters('prefix')))]"
+      ]
+    },
+    {
+      "type": "Microsoft.Authorization/roleAssignments",
+      "apiVersion": "2022-04-01",
+      "scope": "[resourceId('Microsoft.Storage/storageAccounts', format('{0}{1}', parameters('prefix'), variables('suffix')))]",
+      "name": "[guid(resourceId('Microsoft.Storage/storageAccounts', format('{0}{1}', parameters('prefix'), variables('suffix'))), resourceId('Microsoft.MachineLearningServices/workspaces', format('{0}-ml', parameters('prefix'))), 'ml-storage')]",
+      "properties": {
+        "principalId": "[reference(resourceId('Microsoft.MachineLearningServices/workspaces', format('{0}-ml', parameters('prefix'))), '2024-04-01', 'full').identity.principalId]",
+        "principalType": "ServicePrincipal",
+        "roleDefinitionId": "[subscriptionResourceId('Microsoft.Authorization/roleDefinitions', 'ba92f5b4-2d11-453d-a403-e96b0029c9fe')]"
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.MachineLearningServices/workspaces', format('{0}-ml', parameters('prefix')))]",
+        "[resourceId('Microsoft.Storage/storageAccounts', format('{0}{1}', parameters('prefix'), variables('suffix')))]"
+      ]
+    },
+    {
+      "type": "Microsoft.Authorization/roleAssignments",
+      "apiVersion": "2022-04-01",
+      "scope": "[resourceId('Microsoft.KeyVault/vaults', format('{0}-{1}', parameters('prefix'), variables('suffix')))]",
+      "name": "[guid(resourceId('Microsoft.KeyVault/vaults', format('{0}-{1}', parameters('prefix'), variables('suffix'))), resourceId('Microsoft.MachineLearningServices/workspaces', format('{0}-ml', parameters('prefix'))), 'ml-secrets')]",
+      "properties": {
+        "principalId": "[reference(resourceId('Microsoft.MachineLearningServices/workspaces', format('{0}-ml', parameters('prefix'))), '2024-04-01', 'full').identity.principalId]",
+        "principalType": "ServicePrincipal",
+        "roleDefinitionId": "[subscriptionResourceId('Microsoft.Authorization/roleDefinitions', 'b86a8fe4-44ce-4948-aee5-eccb2c155cd7')]"
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.MachineLearningServices/workspaces', format('{0}-ml', parameters('prefix')))]",
+        "[resourceId('Microsoft.KeyVault/vaults', format('{0}-{1}', parameters('prefix'), variables('suffix')))]"
+      ]
+    }
+  ],
+  "outputs": {
+    "mlWorkspace": {
+      "type": "string",
+      "value": "[format('{0}-ml', parameters('prefix'))]"
+    },
+    "apiUrl": {
+      "type": "string",
+      "value": "[format('https://{0}', reference(resourceId('Microsoft.App/containerApps', format('{0}-api', parameters('prefix'))), '2024-03-01').configuration.ingress.fqdn)]"
+    },
+    "storageUrl": {
+      "type": "string",
+      "value": "[reference(resourceId('Microsoft.Storage/storageAccounts', format('{0}{1}', parameters('prefix'), variables('suffix'))), '2023-05-01').primaryEndpoints.blob]"
+    },
+    "keyVaultUrl": {
+      "type": "string",
+      "value": "[reference(resourceId('Microsoft.KeyVault/vaults', format('{0}-{1}', parameters('prefix'), variables('suffix'))), '2023-07-01').vaultUri]"
+    }
+  }
+}

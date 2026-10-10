@@ -77,13 +77,24 @@ on holdout: that result is retained, not hidden.
 
 ## GenAI and learning loop
 
-`genai.extract` accepts text plus its source and retrieval time and calls a configured compatible
-chat endpoint. Quote, event, location and time must each be exact source spans. Invalid outputs
+`genai.extract` accepts text plus its source and retrieval time and calls a configured Azure OpenAI
+v1 chat endpoint. Quote, event, location and time must each be exact source spans. Invalid outputs
 are rejected and counted. Accepted extraction is ANTICIPATED and UNCONFIRMED; literal grounding
 does not establish truth or entailment. It cannot mutate observed state automatically.
+
+Run `maritime extract-evidence --input article.txt --source https://publisher.example/article`
+after setting AZURE_OPENAI_ENDPOINT and AZURE_OPENAI_DEPLOYMENT (plus managed identity or an optional API key). The original text is retained in
+Bronze and accepted/rejected extraction metrics are persisted in the extraction audit. `/signals`
+exposes those audit results to authenticated readers. No provider call is claimed validated without
+configured credentials and an actual response.
 
 Operator reviews record accept/reject/override and reason. Outcomes record actual action, delay,
 loss and evidence. Comparison produces delay/loss errors and Brier score for simulated probability
 calibration. Synthetic shipments reject OBSERVED outcomes. Causal effectiveness remains unknown
 because the unchosen action's outcome is unobserved. The architecture retains the information
 needed for future observed-shipment integration; it does not invent that history.
+
+Production training and registration execute in Azure ML using the same temporal experiment.
+Fabric exports the versioned observed feature contract; it does not run production training.
+See [Azure lifecycle](azure.md) for promotion, batch return and monitoring. Local artifacts
+remain available for reproducible validation.

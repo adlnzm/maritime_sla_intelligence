@@ -1,0 +1,9 @@
+name: maritime-ml
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - mlflow>=2.19,<4
+      - azureml-mlflow>=1.59,<2

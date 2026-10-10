@@ -12,11 +12,27 @@ from maritime.store import Store
 
 
 def create_app(root=None):
-    store = Store(root or os.getenv("MARITIME_DATA_DIR", "data"))
+    from maritime.azure_security import configure_telemetry
+
+    if os.getenv("MARITIME_AUTH_MODE", "key") not in {"key", "entra"}:
+        raise ValueError("Unknown authentication mode")
+    if os.getenv("MARITIME_STORAGE_BACKEND", "sqlite") not in {"sqlite", "azure_blob"}:
+        raise ValueError("Unknown storage backend")
+    configure_telemetry()
+    if os.getenv("MARITIME_STORAGE_BACKEND") == "azure_blob":
+        from maritime.azure_store import AzureStore
+
+        store = AzureStore()
+    else:
+        store = Store(root or os.getenv("MARITIME_DATA_DIR", "data"))
     app = FastAPI(title="Maritime Congestion & SLA Intelligence", version="0.1.0")
     counters = {"requests": 0, "errors": 0, "duration_seconds": 0.0}
 
-    def authenticate(x_api_key: str = Header(default="")):
+    def authenticate(x_api_key: str = Header(default=""), authorization: str = Header(default="")):
+        if os.getenv("MARITIME_AUTH_MODE") == "entra":
+            from maritime.azure_security import verify_entra
+
+            return verify_entra(authorization, "reader")
         expected = os.getenv("MARITIME_API_KEY")
         operator = os.getenv("MARITIME_OPERATOR_KEY")
         if not expected:
@@ -26,7 +42,13 @@ def create_app(root=None):
         ):
             raise HTTPException(401, "Invalid API key")
 
-    def authorize_operator(x_api_key: str = Header(default="")):
+    def authorize_operator(
+        x_api_key: str = Header(default=""), authorization: str = Header(default="")
+    ):
+        if os.getenv("MARITIME_AUTH_MODE") == "entra":
+            from maritime.azure_security import verify_entra
+
+            return verify_entra(authorization, "operator")
         expected = os.getenv("MARITIME_OPERATOR_KEY")
         if not expected or not hmac.compare_digest(x_api_key, expected):
             raise HTTPException(403, "Operator role required")
@@ -72,6 +94,22 @@ def create_app(root=None):
             if not (run_id or store.metadata("published_run")):
                 raise HTTPException(503, "No published data")
             rows = store.read(product, run_id)
+            if product == "decisions":
+                selected_run = run_id or store.metadata("published_run")
+                reviews = {
+                    a["decision_id"]: a
+                    for a in store.audits("review")
+                    if a["run_id"] == selected_run
+                }
+                for row in rows:
+                    if row["decision_id"] in reviews:
+                        review = reviews[row["decision_id"]]
+                        row["review"] = review
+                        row["status"] = {
+                            "accept": "ACCEPTED",
+                            "reject": "REJECTED",
+                            "override": "OVERRIDDEN",
+                        }[review["status"]]
             return {
                 "run_id": run_id or store.metadata("published_run"),
                 "total": len(rows),
@@ -100,7 +138,7 @@ def create_app(root=None):
         register(path, product)
 
     @app.post("/decisions/{decision_id}/review", dependencies=[Depends(authorize_operator)])
-    def review(decision_id: str, body: Review):
+    def review(decision_id: str, body: Review, actor=Depends(authorize_operator)):
         decision = next(
             (r for r in store.read("decisions") if r["decision_id"] == decision_id), None
         )
@@ -121,10 +159,12 @@ def create_app(root=None):
             "decision_id": decision_id,
             "run_id": store.metadata("published_run"),
         }
+        if actor:
+            payload["operator"] = actor["oid"]
         return {"audit_id": store.audit("review", payload), **payload}
 
-    @app.post("/outcomes", dependencies=[Depends(authorize_operator)])
-    def outcome(body: Outcome):
+    @app.post("/outcomes")
+    def outcome(body: Outcome, actor=Depends(authorize_operator)):
         decisions = store.read("decisions")
         decision = next((d for d in decisions if d["decision_id"] == body.decision_id), None)
         if decision is None:
@@ -156,6 +196,8 @@ def create_app(root=None):
             "causal_intervention_effectiveness": None,
             "effectiveness_status": "COUNTERFACTUAL_OUTCOME_UNOBSERVABLE",
         }
+        if actor:
+            payload["operator"] = actor["oid"]
         return {"audit_id": store.audit("outcome", payload), **payload}
 
     @app.get("/audit", dependencies=[Depends(authorize_operator)])
@@ -166,9 +208,14 @@ def create_app(root=None):
     def run_report():
         return store.latest_report()
 
+    @app.get("/signals", dependencies=[Depends(authenticate)])
+    def signals():
+        return {"items": store.audits("extraction"), "classification": "ANTICIPATED"}
+
     @app.get("/metrics", response_class=PlainTextResponse, dependencies=[Depends(authenticate)])
     def metrics():
         report = store.latest_report() or {}
+        reviews = store.audits("review")
         values = {
             "api_requests_total": counters["requests"],
             "api_errors_total": counters["errors"],
@@ -177,6 +224,8 @@ def create_app(root=None):
             "dq_score": report.get("data_quality", {}).get("overall_dq_score", 0),
             "scenario_executions": report.get("scenarios", {}).get("executions", 0),
             "decision_count": report.get("decision", {}).get("count", 0),
+            "decision_override_rate": sum(r["status"] == "override" for r in reviews)
+            / max(1, len(reviews)),
         }
         return "\n".join(f"maritime_{key} {value}" for key, value in values.items()) + "\n"
 

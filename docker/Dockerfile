@@ -1,10 +1,12 @@
 FROM python:3.11-slim
 WORKDIR /app
-COPY --from=ghcr.io/astral-sh/uv:0.11.13 /uv /usr/local/bin/uv
+COPY --from=ghcr.io/astral-sh/uv:0.12.18 /uv /usr/local/bin/uv
 COPY pyproject.toml uv.lock README.md ./
 COPY src ./src
-RUN uv sync --frozen --no-dev
+RUN uv sync --frozen --no-dev --extra azure
 COPY configs ./configs
+COPY tests/data ./samples
+COPY scripts/container_smoke.py ./scripts/container_smoke.py
 RUN useradd --create-home --uid 10001 maritime && mkdir -p /app/data && chown maritime:maritime /app/data
 USER maritime
 ENV PATH="/app/.venv/bin:$PATH" MARITIME_DATA_DIR=/app/data

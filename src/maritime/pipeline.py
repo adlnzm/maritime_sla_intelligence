@@ -3,7 +3,7 @@ import logging
 import time
 import uuid
 from collections import Counter
-from datetime import date
+from datetime import date, datetime, timezone
 from pathlib import Path
 
 from maritime import __version__
@@ -16,7 +16,7 @@ from maritime.intelligence import (
     scenario_routes,
 )
 from maritime.ml import experiment
-from maritime.models import stable_id, utcnow
+from maritime.models import json_default, stable_id, utcnow
 from maritime.quality import validate
 from maritime.scenarios import ACTIONS, evaluate, rank, shipments
 from maritime.sources import Fetcher, ingest_optional, ingest_portwatch
@@ -32,7 +32,9 @@ def load_json(path):
 def write_json(path, value):
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(value, indent=2, default=str, allow_nan=False), encoding="utf-8")
+    path.write_text(
+        json.dumps(value, indent=2, default=json_default, allow_nan=False), encoding="utf-8"
+    )
 
 
 def report_files(store, report):
@@ -44,7 +46,9 @@ def report_files(store, report):
         "Public port activity; synthetic shipments and counterfactuals. Activity deviation is not measured waiting time.",
     ]
     for key, value in report.items():
-        sections.append(f"## {key}\n\n```json\n{json.dumps(value, indent=2, default=str)}\n```")
+        sections.append(
+            f"## {key}\n\n```json\n{json.dumps(value, indent=2, default=json_default)}\n```"
+        )
     (folder / "report.md").write_text("\n\n".join(sections), encoding="utf-8")
 
 
@@ -92,6 +96,7 @@ def run(
     as_of=None,
     fetcher=None,
     run_id=None,
+    ml_backend="local",
 ):
     config, registry = load_json(config_path), load_json(registry_path)
     store = Store(root)
@@ -122,13 +127,13 @@ def run(
             report["execution_mode"] = "REPLAY"
             supplied_routes = bundle.get("routes")
         else:
-            as_of = as_of or date.today()
+            as_of = as_of or datetime.now(timezone.utc).date()
             ports, activity, checkpoint = ingest_portwatch(fetcher, registry, config, store, as_of)
             report["execution_mode"] = "LIVE_PUBLIC_DATA"
             supplied_routes = None
         report["as_of"] = as_of.isoformat()
         report["stage_status"]["bronze"] = "PASS"
-        optional = {}
+        optional = bundle.get("optional", {}) if fixture else {}
         if not fixture:
             for source in registry["sources"]:
                 if source["critical"]:
@@ -185,7 +190,20 @@ def run(
             interventions.extend(outcomes)
             decisions.append(rank(outcomes))
         baseline = [o for o in interventions if o["action"] == "NO_ACTION"]
-        ml_report, predictions = experiment(activity, store.root / "models")
+        if ml_backend == "azure_ml":
+            from maritime.ml_contract import export_features
+
+            manifest = export_features(activity, store.root / "azure_features" / run_id, run_id)
+            ml_report = {
+                "status": "EXPORTED_FOR_AZURE_ML",
+                "feature_manifest": manifest,
+                "sla_model_status": "DEFERRED — INSUFFICIENT OBSERVED OUTCOME DATA",
+            }
+            predictions = []
+        elif ml_backend == "local":
+            ml_report, predictions = experiment(activity, store.root / "models")
+        else:
+            raise ValueError("Unsupported ML backend")
         disruptions = [
             {**s, "signal_type": "ACTIVITY_DEVIATION_PROXY", "confirmed_disruption": False}
             for s in states
@@ -357,6 +375,14 @@ def run(
         raise
     finally:
         report["source_status"].extend(fetcher.events)
+        source_definitions = {s["source_id"]: s for s in registry["sources"]}
+        for event in report["source_status"]:
+            definition = source_definitions.get(event["source_id"], {})
+            for key in ("source_name", "source_url", "schema_version", "classification"):
+                event.setdefault(key, definition.get(key))
+            event.setdefault("dataset_version", definition.get("dataset_version"))
+            event.setdefault("record_count", 0)
+            event["run_id"] = run_id
         report["reliability"] = {
             "failures": len(report["failures"]),
             "retries": fetcher.retries,

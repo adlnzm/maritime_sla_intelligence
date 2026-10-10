@@ -18,6 +18,17 @@ def utcnow() -> str:
     return datetime.now(timezone.utc).isoformat()
 
 
+def json_default(value):
+    """Preserve numeric types in evidence; never stringify unknown objects silently."""
+    import numpy as np
+
+    if isinstance(value, np.generic):
+        return value.item()
+    if isinstance(value, (date, datetime)):
+        return value.isoformat()
+    raise TypeError(f"Unsupported JSON value: {type(value).__name__}")
+
+
 def stable_id(*values) -> str:
     return hashlib.sha256(json.dumps(values, sort_keys=True, default=str).encode()).hexdigest()[:24]
 

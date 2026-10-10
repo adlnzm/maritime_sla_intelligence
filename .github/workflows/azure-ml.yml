@@ -1,0 +1,69 @@
+name: Azure ML lifecycle
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        type: choice
+        options: [train, promote, batch]
+        required: true
+      fabric_run_id:
+        description: Accepted Fabric Gold run ID
+        required: true
+      model_version:
+        description: Pinned registered version for promotion or batch
+        required: false
+permissions:
+  contents: read
+  id-token: write
+jobs:
+  lifecycle:
+    runs-on: ubuntu-latest
+    environment: azure-ml
+    env:
+      PYTHONPATH: src
+      AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+      AZURE_RESOURCE_GROUP: ${{ vars.AZURE_RESOURCE_GROUP }}
+      AZURE_ML_WORKSPACE: ${{ vars.AZURE_ML_WORKSPACE }}
+      FABRIC_WORKSPACE_ID: ${{ vars.FABRIC_WORKSPACE_ID }}
+      FABRIC_LAKEHOUSE_ID: ${{ vars.FABRIC_LAKEHOUSE_ID }}
+      FABRIC_PREDICTION_NOTEBOOK_ID: ${{ vars.FABRIC_PREDICTION_NOTEBOOK_ID }}
+      AZURE_STORAGE_ACCOUNT_URL: ${{ vars.AZURE_STORAGE_ACCOUNT_URL }}
+      RUN_ID: ${{ inputs.fabric_run_id }}
+      MODE: ${{ inputs.mode }}
+      MODEL_VERSION: ${{ inputs.model_version }}
+      APPROVER: ${{ github.actor }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+      - run: uv sync --frozen --extra ml --extra fabric --extra azure
+      - if: inputs.mode != 'promote'
+        run: uv run python scripts/fabric_ml_bridge.py download-features --run-id "$RUN_ID" --folder data/azure-features
+      - name: Submit and await actual Azure ML execution
+        run: |
+          args=("$MODE" --output data/azure-results)
+          if [ "$MODE" = promote ]; then
+            args+=(--model-version "$MODEL_VERSION" --approver "$APPROVER")
+          else
+            args+=(--data data/azure-features)
+            if [ "$MODE" = batch ]; then args+=(--model-version "$MODEL_VERSION"); fi
+          fi
+          uv run python scripts/azure_ml.py "${args[@]}"
+      - name: Return predictions and publish accepted serving copy
+        if: inputs.mode == 'batch'
+        run: |
+          mapfile -t outputs < <(find data/azure-results -name predictions.json)
+          test "${#outputs[@]}" -eq 1
+          uv run python scripts/fabric_ml_bridge.py upload-predictions --run-id "$RUN_ID" --folder "$(dirname "${outputs[0]}")"
+          uv run python scripts/fabric_ml_bridge.py publish-serving --run-id "$RUN_ID" --folder data/serving
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: azure-ml-execution-evidence
+          path: |
+            data/azure-results
+            data/serving/serving-publication.json

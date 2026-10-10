@@ -19,16 +19,17 @@ Python 3.11+ and [uv](https://docs.astral.sh/uv/) are required. Commands run fro
 The committed `uv.lock` resolves direct and transitive dependencies.
 
 ```powershell
-# Windows: needed for Python 3.11 editable imports under non-ASCII paths.
+# UTF-8 console output; regular wheel install avoids Python 3.11 .pth locale issues.
 $env:PYTHONUTF8 = "1"
-uv sync --frozen --extra dev --extra fabric
-uv run pytest -q
-uv run ruff check src tests scripts
-uv run ruff format --check src tests scripts
+$env:UV_LINK_MODE = "copy"
+uv sync --frozen --no-editable --extra dev --extra fabric
+uv run --no-editable pytest -q
+uv run --no-editable ruff check src tests scripts
+uv run --no-editable ruff format --check src tests scripts
 uv build
 ```
 
-On Linux/macOS, use `export PYTHONUTF8=1` instead of the PowerShell assignment.
+On Linux/macOS, use `export PYTHONUTF8=1 UV_LINK_MODE=copy` instead of the PowerShell assignments.
 No database server is required locally. The first run initializes SQLite with WAL and migrations
 defined in `Store`. Use one pipeline writer per data directory.
 
@@ -36,14 +37,14 @@ defined in `Store`. Use one pipeline writer per data directory.
 
 ```powershell
 # Live public observations; critical source failure stops publication.
-uv run maritime run --as-of 2026-10-07
+uv run --no-editable maritime run --as-of 2026-10-07
 # Later dates: omit --as-of to use the current UTC date.
 
 # Historical replay of retained public observations, when the sample is present:
-uv run maritime run --fixture tests/data/portwatch_sample.json --data-dir data/replay
+uv run --no-editable maritime run --fixture tests/data/portwatch_sample.json --data-dir data/replay
 
 # Latest attempt, including failures:
-uv run maritime report
+uv run --no-editable maritime report
 ```
 
 Raw responses are in `data/bronze/`; validated snapshots in `data/silver/<run_id>/`;
@@ -66,7 +67,7 @@ documents names but is not automatically loaded by the Python process.
 ```powershell
 $env:MARITIME_API_KEY = [guid]::NewGuid().ToString("N")
 $env:MARITIME_OPERATOR_KEY = [guid]::NewGuid().ToString("N")
-uv run maritime serve
+uv run --no-editable maritime serve
 Invoke-RestMethod http://127.0.0.1:8000/ports -Headers @{"X-API-Key"=$env:MARITIME_API_KEY}
 ```
 
@@ -78,8 +79,8 @@ Lists support `limit` (1–1000), `offset`, and optional `run_id`.
 
 Operator endpoints: `POST /decisions/{id}/review` (accept/reject/override with reason),
 `POST /outcomes`, and `GET /audit`. Outcomes for synthetic shipments must remain SIMULATED.
-Review is an audit record; it never sends a carrier instruction. API-key roles are a foundation;
-deploy behind TLS and an identity gateway for named-user RBAC and centralized audit retention.
+Review is an audit record; it never sends a carrier instruction. Production uses Entra JWT
+reader/operator roles, verified operator IDs and separate durable Azure audit storage.
 
 ## Containers
 
@@ -97,19 +98,29 @@ Docker availability and runtime validation are separately recorded in the eviden
 
 ```powershell
 uv build
-uv run python scripts/build_fabric_assets.py
+uv run --no-editable python scripts/build_fabric_assets.py
 $env:FABRIC_WORKSPACE_ID = "<your-workspace-uuid>"
 # Optional existing Lakehouse; otherwise creates MaritimeIntelligence.
 $env:FABRIC_LAKEHOUSE_ID = "<your-lakehouse-uuid>"
 # Authenticate with az login or the AZURE_* environment variables in .env.example.
-uv run python scripts/deploy_fabric.py --execute
+uv run --no-editable python scripts/deploy_fabric.py --execute
 ```
 
-Deployment uploads the wheel and configuration, creates/updates four notebooks and a Data
+Deployment uploads the wheel and configuration, creates/updates five notebooks and a Data
 Factory pipeline, runs Bronze → Silver → Gold → acceptance, polls the real job, and persists
 deployment/job evidence. No settings means a nonzero preflight exit, not a false success.
 The acceptance notebook verifies actual Delta row counts before recording a published run.
 See [Fabric deployment](docs/fabric.md) for identity, capacity, reporting and known limits.
+
+## Fabric + Azure production target
+
+Fabric owns the data and analytics plane. Azure ML owns production training, evaluation,
+tracking, registration, promotion, batch inference and monitoring. Azure OpenAI supplies
+grounded extraction; Container Apps, Entra, Key Vault and Application Insights support the API.
+The existing forecasting logic is retained. Fabric exports observed Gold features, and Azure ML
+predictions return to Fabric and the decision engine. SLA ML remains **DEFERRED — INSUFFICIENT
+OBSERVED OUTCOME DATA**. See [Azure deployment and lifecycle](docs/azure.md) for executable steps,
+identity requirements and the remaining tenant acceptance checks.
 
 ## Further documentation
 

@@ -1,0 +1,139 @@
+{
+  "status": "PASS_LOCAL_ACCEPTANCE",
+  "checks": {
+    "lint": {
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    "format": {
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    "tests": {
+      "exit_code": 0,
+      "status": "PASS"
+    }
+  },
+  "tests": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "24",
+    "time": "27.885",
+    "timestamp": "2026-10-08T16:55:29.635314+03:00",
+    "hostname": "endelap"
+  },
+  "run_id": "f74bcdb836d5492daa2c771d40df73ab",
+  "http": {
+    "/health": {
+      "status_code": 200,
+      "duration_seconds": 0.006558499997481704
+    },
+    "/ready": {
+      "status_code": 200,
+      "duration_seconds": 0.008660199993755668
+    },
+    "/ports": {
+      "status_code": 200,
+      "duration_seconds": 0.020800800004508346
+    },
+    "/congestion": {
+      "status_code": 200,
+      "duration_seconds": 0.01541900000302121
+    },
+    "/network": {
+      "status_code": 200,
+      "duration_seconds": 0.018330699997022748
+    },
+    "/network/exposure": {
+      "status_code": 200,
+      "duration_seconds": 0.016867000027559698
+    },
+    "/disruptions": {
+      "status_code": 200,
+      "duration_seconds": 0.016594299988355488
+    },
+    "/scenarios": {
+      "status_code": 200,
+      "duration_seconds": 0.029375399986747652
+    },
+    "/sla-risk": {
+      "status_code": 200,
+      "duration_seconds": 0.03066500002751127
+    },
+    "/interventions": {
+      "status_code": 200,
+      "duration_seconds": 0.06491240003379062
+    },
+    "/decisions": {
+      "status_code": 200,
+      "duration_seconds": 0.03194600000279024
+    },
+    "/lineage": {
+      "status_code": 200,
+      "duration_seconds": 0.04068019997794181
+    },
+    "/data-quality": {
+      "status_code": 200,
+      "duration_seconds": 0.014516199997160584
+    },
+    "/metrics": {
+      "status_code": 200,
+      "duration_seconds": 0.013030300033278763
+    },
+    "/signals": {
+      "status_code": 200,
+      "duration_seconds": 0.010727600019890815
+    }
+  },
+  "historical_propagation": {
+    "as_of": "2026-09-30",
+    "nodes": 6,
+    "edges": 30,
+    "affected_nodes": 6,
+    "affected_edges": 10,
+    "propagation_depth": 1,
+    "propagation_results": 6,
+    "topology": "SIMULATED_CONNECTIVITY",
+    "alternative_routes": 60
+  },
+  "gates": {
+    "1_data_foundation": "VALIDATED",
+    "2_data_platform": "VALIDATED",
+    "3_congestion": "VALIDATED",
+    "4_network": "VALIDATED_WITH_REFERENCE_OR_SIMULATED_TOPOLOGY",
+    "5_scenario": "VALIDATED_SIMULATED",
+    "6_counterfactual": "VALIDATED_SIMULATED",
+    "7_sla": "VALIDATED_SIMULATED",
+    "8_ml": "VALIDATED_PORT_CALL_FORECAST_ONLY",
+    "9_decision": "VALIDATED_SIMULATED_AND_OPERATOR_AUDIT",
+    "10_api_bi": "HTTP_AND_MARTS_VALIDATED_POWER_BI_TENANT_UNVALIDATED",
+    "11_reliability": "REGRESSION_TESTS_VALIDATED",
+    "12_e2e": "LOCAL_EXECUTION_VALIDATED_FABRIC_ENVIRONMENT_DEPENDENT"
+  },
+  "fabric": "ENVIRONMENT_DEPENDENT_NO_WORKSPACE_ID",
+  "docker": {
+    "status": "PASS",
+    "run_id": "d83d8b331fc248559f15f181adfc3309",
+    "http_checks": {
+      "/health": 200,
+      "/ready": 200,
+      "/ports": 200,
+      "/congestion": 200,
+      "/network/exposure": 200,
+      "/scenarios": 200,
+      "/sla-risk": 200,
+      "/interventions": 200,
+      "/decisions": 200,
+      "/lineage": 200,
+      "/data-quality": 200,
+      "/metrics": 200
+    },
+    "environment": "docker"
+  },
+  "azure_ml": "IMPLEMENTED_ENVIRONMENT_DEPENDENT_NOT_EXECUTED",
+  "azure_application": "IMPLEMENTED_ENVIRONMENT_DEPENDENT_NOT_DEPLOYED",
+  "genai_provider": "ENVIRONMENT_DEPENDENT_NOT_CONFIGURED",
+  "sla_ml": "DEFERRED \u2014 INSUFFICIENT OBSERVED OUTCOME DATA"
+}

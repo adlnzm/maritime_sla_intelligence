@@ -176,7 +176,7 @@ def experiment(activity, output_dir, minimum_days=120):
             for p, idx in test.groupby("port_id").groups.items()
         },
         "duration_seconds": time.perf_counter() - started,
-        "sla_model_status": "DEFERRED_NO_OBSERVED_SHIPMENT_OUTCOMES",
+        "sla_model_status": "DEFERRED — INSUFFICIENT OBSERVED OUTCOME DATA",
     }
     folder = Path(output_dir) / version
     folder.mkdir(parents=True, exist_ok=True)

@@ -7,7 +7,7 @@ from pathlib import Path
 def build():
     output = Path("fabric/notebooks")
     output.mkdir(parents=True, exist_ok=True)
-    for stage in ("bronze", "silver", "gold", "acceptance"):
+    for stage in ("bronze", "silver", "gold", "acceptance", "import_predictions"):
         cells = []
 
         def cell(source, metadata=None):
@@ -33,6 +33,7 @@ def build():
             "silver": "spark, root, run_id, config_path",
             "gold": "spark, root, run_id, config_path, registry_path",
             "acceptance": "spark, root, run_id",
+            "import_predictions": "spark, root, run_id",
         }[stage]
         cell(f"from maritime.fabric_runtime import {stage}\nresult = {stage}({args})\n")
         notebook = {

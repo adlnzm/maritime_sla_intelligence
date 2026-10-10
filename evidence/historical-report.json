@@ -1,0 +1,531 @@
+{
+  "run_id": "28e76098277d48bea621f0f0c34fddbd",
+  "environment": "local",
+  "version": "0.1.0",
+  "start_time": "2026-10-08T13:56:04.813682+00:00",
+  "status": "SUCCESS",
+  "stage_status": {
+    "bronze": "PASS",
+    "silver": "PASS",
+    "gold": "PASS",
+    "intelligence": "PASS",
+    "scenario": "PASS",
+    "decision": "PASS"
+  },
+  "source_status": [
+    {
+      "source_id": "wpi",
+      "status": "NOT_CONFIGURED",
+      "record_count": 0,
+      "source_name": "NGA World Port Index",
+      "source_url": "https://msi.nga.mil/Publications/WPI",
+      "schema_version": "1",
+      "classification": "OBSERVED",
+      "dataset_version": null,
+      "run_id": "28e76098277d48bea621f0f0c34fddbd"
+    },
+    {
+      "source_id": "unlocode",
+      "status": "NOT_CONFIGURED",
+      "record_count": 0,
+      "source_name": "UNECE UN/LOCODE",
+      "source_url": "https://unlocode.unece.org/publications/",
+      "schema_version": "2025-1",
+      "classification": "OBSERVED",
+      "dataset_version": null,
+      "run_id": "28e76098277d48bea621f0f0c34fddbd"
+    },
+    {
+      "source_id": "routes",
+      "status": "NOT_CONFIGURED",
+      "record_count": 0,
+      "source_name": "Operator supplied public maritime route geometry",
+      "source_url": null,
+      "schema_version": "1",
+      "classification": "DERIVED",
+      "dataset_version": null,
+      "run_id": "28e76098277d48bea621f0f0c34fddbd"
+    },
+    {
+      "source_id": "weather",
+      "status": "SUCCESS",
+      "record_count": 36,
+      "source_name": "Open-Meteo ERA5 historical reanalysis",
+      "source_url": "https://archive-api.open-meteo.com/v1/archive",
+      "schema_version": "1",
+      "classification": "DERIVED",
+      "dataset_version": null,
+      "run_id": "28e76098277d48bea621f0f0c34fddbd"
+    },
+    {
+      "source_id": "portwatch_ports",
+      "source_url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/PortWatch_ports_database/FeatureServer/0/query?f=json&where=portname+IN+%28%27Singapore%27%2C%27Rotterdam%27%2C%27Shanghai%27%2C%27Los+Angeles-Long+Beach%27%2C%27New+York-New+Jersey%27%2C%27Jebel+Ali%27%29&outFields=%2A&returnGeometry=false&orderByFields=ObjectId&resultOffset=0&resultRecordCount=1000",
+      "retrieved_at": "2026-10-07T10:28:33.123514+00:00",
+      "checksum": "1c44bc66f5f1dcc8e724ad3eb28534fe0fa28da7178eea4851f42c36f8da2ed9",
+      "bytes": 7659,
+      "duration_seconds": 1.0532825000118464,
+      "retries": 0,
+      "status": "SUCCESS",
+      "dataset_version": "sd1201_-802421151",
+      "record_count": 6,
+      "source_name": "IMF PortWatch ports",
+      "schema_version": "1",
+      "classification": "OBSERVED",
+      "run_id": "28e76098277d48bea621f0f0c34fddbd"
+    },
+    {
+      "source_id": "portwatch_activity",
+      "source_url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Ports_Data/FeatureServer/0/query?f=json&where=portid+IN+%28%27port1188%27%2C%27port744%27%2C%27port815%27%2C%27port1114%27%2C%27port664%27%2C%27port1201%27%29+AND+date+%3E%3D+DATE+%272026-02-09%27+AND+date+%3C%3D+DATE+%272026-10-07%27&outFields=%2A&returnGeometry=false&orderByFields=ObjectId&resultOffset=0&resultRecordCount=1000",
+      "retrieved_at": "2026-10-07T10:28:37.363280+00:00",
+      "checksum": "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+      "bytes": 625238,
+      "duration_seconds": 4.220538800000213,
+      "retries": 0,
+      "status": "SUCCESS",
+      "dataset_version": "sd2069_1720379017",
+      "record_count": 1000,
+      "source_name": "IMF PortWatch daily port activity",
+      "schema_version": "1",
+      "classification": "OBSERVED",
+      "run_id": "28e76098277d48bea621f0f0c34fddbd"
+    },
+    {
+      "source_id": "portwatch_activity",
+      "source_url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Ports_Data/FeatureServer/0/query?f=json&where=portid+IN+%28%27port1188%27%2C%27port744%27%2C%27port815%27%2C%27port1114%27%2C%27port664%27%2C%27port1201%27%29+AND+date+%3E%3D+DATE+%272026-02-09%27+AND+date+%3C%3D+DATE+%272026-10-07%27&outFields=%2A&returnGeometry=false&orderByFields=ObjectId&resultOffset=1000&resultRecordCount=1000",
+      "retrieved_at": "2026-10-07T10:28:39.009834+00:00",
+      "checksum": "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46",
+      "bytes": 265614,
+      "duration_seconds": 1.6362298000021838,
+      "retries": 0,
+      "status": "SUCCESS",
+      "dataset_version": "sd2069_1720379017",
+      "record_count": 416,
+      "source_name": "IMF PortWatch daily port activity",
+      "schema_version": "1",
+      "classification": "OBSERVED",
+      "run_id": "28e76098277d48bea621f0f0c34fddbd"
+    },
+    {
+      "source_id": "weather",
+      "source_url": "https://archive-api.open-meteo.com/v1/archive?latitude=31.19179536&longitude=121.6441968&start_date=2026-09-27&end_date=2026-10-02&daily=wind_speed_10m_max&timezone=UTC",
+      "retrieved_at": "2026-10-07T10:28:39.565274+00:00",
+      "checksum": "5372d26863134b9d593b2ece9d07517d635e9358dd511818d333658ebc3ec1c7",
+      "bytes": 381,
+      "duration_seconds": 0.5431462000124156,
+      "retries": 0,
+      "status": "SUCCESS",
+      "dataset_version": null,
+      "source_name": "Open-Meteo ERA5 historical reanalysis",
+      "schema_version": "1",
+      "classification": "DERIVED",
+      "record_count": 0,
+      "run_id": "28e76098277d48bea621f0f0c34fddbd"
+    },
+    {
+      "source_id": "weather",
+      "source_url": "https://archive-api.open-meteo.com/v1/archive?latitude=24.99941947&longitude=55.07781687&start_date=2026-09-27&end_date=2026-10-02&daily=wind_speed_10m_max&timezone=UTC",
+      "retrieved_at": "2026-10-07T10:28:39.692631+00:00",
+      "checksum": "b9f17dfe5a2c12b52bf8e3c704cc710330b6ae8e2af4c8404d6e1d8364654dc5",
+      "bytes": 378,
+      "duration_seconds": 0.12731340003665537,
+      "retries": 0,
+      "status": "SUCCESS",
+      "dataset_version": null,
+      "source_name": "Open-Meteo ERA5 historical reanalysis",
+      "schema_version": "1",
+      "classification": "DERIVED",
+      "record_count": 0,
+      "run_id": "28e76098277d48bea621f0f0c34fddbd"
+    },
+    {
+      "source_id": "weather",
+      "source_url": "https://archive-api.open-meteo.com/v1/archive?latitude=40.63298387&longitude=-74.17942126&start_date=2026-09-27&end_date=2026-10-02&daily=wind_speed_10m_max&timezone=UTC",
+      "retrieved_at": "2026-10-07T10:28:39.823520+00:00",
+      "checksum": "269cb63ec4010cee934fe1234a686ac67a9b9992d306b1aaf56ee223e5ff9558",
+      "bytes": 379,
+      "duration_seconds": 0.1313236000132747,
+      "retries": 0,
+      "status": "SUCCESS",
+      "dataset_version": null,
+      "source_name": "Open-Meteo ERA5 historical reanalysis",
+      "schema_version": "1",
+      "classification": "DERIVED",
+      "record_count": 0,
+      "run_id": "28e76098277d48bea621f0f0c34fddbd"
+    },
+    {
+      "source_id": "weather",
+      "source_url": "https://archive-api.open-meteo.com/v1/archive?latitude=51.92228121&longitude=4.215144967&start_date=2026-09-27&end_date=2026-10-02&daily=wind_speed_10m_max&timezone=UTC",
+      "retrieved_at": "2026-10-07T10:28:39.952000+00:00",
+      "checksum": "8ca2995347a213c91ecf303d1134cb71dd17caf875fbb0bbe82a5433a8daae9c",
+      "bytes": 380,
+      "duration_seconds": 0.12751149997347966,
+      "retries": 0,
+      "status": "SUCCESS",
+      "dataset_version": null,
+      "source_name": "Open-Meteo ERA5 historical reanalysis",
+      "schema_version": "1",
+      "classification": "DERIVED",
+      "record_count": 0,
+      "run_id": "28e76098277d48bea621f0f0c34fddbd"
+    },
+    {
+      "source_id": "weather",
+      "source_url": "https://archive-api.open-meteo.com/v1/archive?latitude=33.75569193&longitude=-118.2437881&start_date=2026-09-27&end_date=2026-10-02&daily=wind_speed_10m_max&timezone=UTC",
+      "retrieved_at": "2026-10-07T10:28:40.080059+00:00",
+      "checksum": "5d0ac13afca4f2d137e385d398d182410467ac734697a494655f978c5ab1c224",
+      "bytes": 383,
+      "duration_seconds": 0.12804040004266426,
+      "retries": 0,
+      "status": "SUCCESS",
+      "dataset_version": null,
+      "source_name": "Open-Meteo ERA5 historical reanalysis",
+      "schema_version": "1",
+      "classification": "DERIVED",
+      "record_count": 0,
+      "run_id": "28e76098277d48bea621f0f0c34fddbd"
+    },
+    {
+      "source_id": "weather",
+      "source_url": "https://archive-api.open-meteo.com/v1/archive?latitude=1.271989257&longitude=103.7074816&start_date=2026-09-27&end_date=2026-10-02&daily=wind_speed_10m_max&timezone=UTC",
+      "retrieved_at": "2026-10-07T10:28:40.207307+00:00",
+      "checksum": "5e619dd4d80ebcc9e225bea4d783ddb2d8dca5c0e5e56a16d7b8da4ccf072052",
+      "bytes": 380,
+      "duration_seconds": 0.12716909998562187,
+      "retries": 0,
+      "status": "SUCCESS",
+      "dataset_version": null,
+      "source_name": "Open-Meteo ERA5 historical reanalysis",
+      "schema_version": "1",
+      "classification": "DERIVED",
+      "record_count": 0,
+      "run_id": "28e76098277d48bea621f0f0c34fddbd"
+    }
+  ],
+  "failures": [],
+  "execution_mode": "REPLAY",
+  "as_of": "2026-09-30",
+  "data_quality": {
+    "status": "PASS",
+    "records_processed": 1440,
+    "records_rejected": 0,
+    "completeness_rate": 1.0,
+    "duplicate_rate": 0.0,
+    "referential_integrity_rate": 1.0,
+    "freshness_status": "PASS",
+    "schema_status": "PASS",
+    "cross_source_reconciliation": "NOT_CONFIGURED",
+    "overall_dq_score": 1.0,
+    "latest_by_port": {
+      "port664": "2026-09-30",
+      "port815": "2026-09-30",
+      "port744": "2026-09-30",
+      "port1114": "2026-09-30",
+      "port1188": "2026-09-30",
+      "port1201": "2026-09-30"
+    },
+    "history_counts": {
+      "port1114": 234,
+      "port1188": 234,
+      "port1201": 234,
+      "port664": 234,
+      "port744": 234,
+      "port815": 234
+    },
+    "errors": [],
+    "run_id": "28e76098277d48bea621f0f0c34fddbd"
+  },
+  "data": {
+    "records_ingested": 1410,
+    "records_rejected": 0,
+    "dq_score": 1.0,
+    "freshness": "PASS"
+  },
+  "congestion": {
+    "ports_evaluated": 6,
+    "categories": {
+      "ELEVATED": 2,
+      "NORMAL": 3,
+      "HIGH": 1
+    },
+    "persistence_days": {
+      "port1114": 1,
+      "port1188": 0,
+      "port1201": 0,
+      "port664": 0,
+      "port744": 1,
+      "port815": 3
+    }
+  },
+  "network": {
+    "nodes": 6,
+    "edges": 30,
+    "affected_nodes": 6,
+    "affected_edges": 10,
+    "propagation_depth": 1,
+    "propagation_results": 6,
+    "topology": "SIMULATED_CONNECTIVITY",
+    "alternative_routes": 60
+  },
+  "scenarios": {
+    "shipments": 60,
+    "executions": 300,
+    "success": 300,
+    "failures": 0,
+    "infeasible": 60,
+    "seed": 1729
+  },
+  "sla": {
+    "at_risk_shipments": 21,
+    "expected_delay_hours": 23.344467727203728,
+    "expected_breaches": 24.125,
+    "expected_loss": 103065.66582268452,
+    "classification": "SIMULATED"
+  },
+  "counterfactual": {
+    "NO_ACTION": {
+      "evaluated": 60,
+      "feasible": 60
+    },
+    "REROUTE": {
+      "evaluated": 60,
+      "feasible": 60
+    },
+    "ALTERNATE_PORT": {
+      "evaluated": 60,
+      "feasible": 0
+    },
+    "EXPEDITE": {
+      "evaluated": 60,
+      "feasible": 60
+    },
+    "PRIORITIZE": {
+      "evaluated": 60,
+      "feasible": 60
+    }
+  },
+  "decision": {
+    "recommendations": {
+      "PRIORITIZE": 8,
+      "NO_ACTION": 36,
+      "EXPEDITE": 16
+    },
+    "count": 60,
+    "expected_benefit": 45494.89962482228,
+    "expected_delay_avoided": 559.9801216162908,
+    "decision_confidence": "NOT_CALIBRATED",
+    "operator_overrides": 0
+  },
+  "ml": {
+    "status": "VALIDATED_TEMPORAL_HOLDOUT",
+    "target": "next-day vessel_calls",
+    "training_records": 948,
+    "calibration_records": 204,
+    "validation_records": 210,
+    "model": "ridge_1",
+    "model_version": "e3fa12abd2a99306e67214d8",
+    "feature_version": "portcalls-lags-v1",
+    "features": [
+      "lag1",
+      "lag7",
+      "mean7",
+      "std7",
+      "day_of_week"
+    ],
+    "dataset_version": "d97b28a7805aae2afa694db6",
+    "training_start": "2026-02-16",
+    "training_end": "2026-07-23",
+    "calibration_start": "2026-07-24",
+    "calibration_end": "2026-08-26",
+    "validation_start": "2026-08-27",
+    "validation_end": "2026-09-30",
+    "metrics": {
+      "mae": 6.701603903594326,
+      "rmse": 11.06268739655631,
+      "persistence_mae": 8.89047619047619
+    },
+    "calibration": {
+      "method": "split conformal absolute residual",
+      "nominal_coverage": 0.9,
+      "empirical_holdout_coverage": 0.9380952380952381,
+      "radius": 18.319244411989033,
+      "caveat": "Temporal dependence invalidates exchangeability guarantees"
+    },
+    "drift": {
+      "standardized_mean_shift": {
+        "lag1": 0.08797477008387157,
+        "lag7": 0.08338182669035751,
+        "mean7": 0.0878159407431175,
+        "std7": 0.1296116265424299,
+        "day_of_week": 0.019020896422713436
+      },
+      "alert": false
+    },
+    "comparisons": [
+      {
+        "name": "persistence",
+        "mae": 8.301169590643275,
+        "folds": [
+          {
+            "train_end": "2026-05-05",
+            "validation_start": "2026-05-06",
+            "validation_end": "2026-05-24",
+            "mae": 9.307017543859649
+          },
+          {
+            "train_end": "2026-05-28",
+            "validation_start": "2026-05-29",
+            "validation_end": "2026-06-16",
+            "mae": 6.728070175438597
+          },
+          {
+            "train_end": "2026-06-21",
+            "validation_start": "2026-06-22",
+            "validation_end": "2026-07-10",
+            "mae": 8.868421052631579
+          }
+        ]
+      },
+      {
+        "name": "ridge_1",
+        "mae": 5.981490090278747,
+        "folds": [
+          {
+            "train_end": "2026-05-05",
+            "validation_start": "2026-05-06",
+            "validation_end": "2026-05-24",
+            "mae": 6.488539367641295
+          },
+          {
+            "train_end": "2026-05-28",
+            "validation_start": "2026-05-29",
+            "validation_end": "2026-06-16",
+            "mae": 4.840246769935138
+          },
+          {
+            "train_end": "2026-06-21",
+            "validation_start": "2026-06-22",
+            "validation_end": "2026-07-10",
+            "mae": 6.61568413325981
+          }
+        ]
+      },
+      {
+        "name": "ridge_10",
+        "mae": 6.194479486739515,
+        "folds": [
+          {
+            "train_end": "2026-05-05",
+            "validation_start": "2026-05-06",
+            "validation_end": "2026-05-24",
+            "mae": 6.729891789906317
+          },
+          {
+            "train_end": "2026-05-28",
+            "validation_start": "2026-05-29",
+            "validation_end": "2026-06-16",
+            "mae": 5.1837000966058495
+          },
+          {
+            "train_end": "2026-06-21",
+            "validation_start": "2026-06-22",
+            "validation_end": "2026-07-10",
+            "mae": 6.669846573706379
+          }
+        ]
+      },
+      {
+        "name": "forest_4",
+        "mae": 6.066972848406761,
+        "folds": [
+          {
+            "train_end": "2026-05-05",
+            "validation_start": "2026-05-06",
+            "validation_end": "2026-05-24",
+            "mae": 6.288277784959549
+          },
+          {
+            "train_end": "2026-05-28",
+            "validation_start": "2026-05-29",
+            "validation_end": "2026-06-16",
+            "mae": 5.314460303577318
+          },
+          {
+            "train_end": "2026-06-21",
+            "validation_start": "2026-06-22",
+            "validation_end": "2026-07-10",
+            "mae": 6.5981804566834175
+          }
+        ]
+      },
+      {
+        "name": "forest_8",
+        "mae": 6.1246666084451,
+        "folds": [
+          {
+            "train_end": "2026-05-05",
+            "validation_start": "2026-05-06",
+            "validation_end": "2026-05-24",
+            "mae": 6.178134103682852
+          },
+          {
+            "train_end": "2026-05-28",
+            "validation_start": "2026-05-29",
+            "validation_end": "2026-06-16",
+            "mae": 5.5495284933723665
+          },
+          {
+            "train_end": "2026-06-21",
+            "validation_start": "2026-06-22",
+            "validation_end": "2026-07-10",
+            "mae": 6.646337228280082
+          }
+        ]
+      }
+    ],
+    "selection_rationale": "Lowest mean expanding-window MAE before calibration and untouched holdout",
+    "hyperparameters": {
+      "candidate": "ridge_1"
+    },
+    "error_analysis": {
+      "port1114": 8.232587098736092,
+      "port1188": 11.512953048594726,
+      "port1201": 11.428787484324896,
+      "port664": 3.170403790350988,
+      "port744": 2.4206193894353127,
+      "port815": 3.444272610123943
+    },
+    "duration_seconds": 1.5524606999824755,
+    "sla_model_status": "DEFERRED \u2014 INSUFFICIENT OBSERVED OUTCOME DATA"
+  },
+  "genai": {
+    "status": "NOT_CONFIGURED_OR_EXECUTED",
+    "signals_processed": 0,
+    "verified": 0,
+    "rejected": 0,
+    "grounding_rate": null
+  },
+  "gates": {
+    "data_foundation": "PASS_EXECUTION",
+    "data_platform": "PASS_EXECUTION",
+    "congestion": "PASS_EXECUTION",
+    "network": "PASS_EXECUTION",
+    "scenario": "PASS_EXECUTION",
+    "counterfactual": "PASS_EXECUTION",
+    "sla": "PASS_EXECUTION",
+    "ml": "VALIDATED_TEMPORAL_HOLDOUT",
+    "decision": "PASS_EXECUTION_HUMAN_REVIEW_PENDING",
+    "api_bi": "MARTS_EXPORTED_API_TEST_REQUIRED",
+    "reliability": "TEST_EVIDENCE_REQUIRED",
+    "e2e": "PASS_LOCAL_PIPELINE",
+    "fabric": "ENVIRONMENT_DEPENDENT_NOT_VALIDATED"
+  },
+  "reliability": {
+    "failures": 0,
+    "retries": 0,
+    "timeouts": 0,
+    "recoveries": 0
+  },
+  "end_time": "2026-10-08T13:56:09.097756+00:00",
+  "duration_seconds": 3.665652099996805
+}

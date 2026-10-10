@@ -37,13 +37,19 @@ Fabric Python library/runtime compatibility, OneLake permissions, notebook attac
 activity schema must be tested in the actual tenant. Shared logic runs locally but no local mock
 establishes those cloud properties. APIs and capacity policies can change independently.
 
-Fabric Bronze currently reloads the bounded configured history on each pipeline run; local
-PortWatch execution has revision-window incremental caching. Delta output is idempotent by run
+Fabric Bronze restores its revision-window checkpoint from OneLake; Silver advances it only after
+shared DQ succeeds. Local execution uses the same cache semantics. Delta output is idempotent by run
 partition, but scheduling should prevent concurrent publication. Graph/scenario/ML stages use
 bounded driver memory; Spark handles the scalable baseline and table transformations.
-Optional WPI/weather/UNLOCODE ingestion is currently executed by the local orchestrator, not
-automatically by Fabric Bronze; configure and promote source-backed snapshots deliberately.
+Optional WPI/weather/UNLOCODE ingestion runs independently in Fabric Bronze and local execution;
+configure public download versions and promote source-backed snapshots deliberately.
 
 SQL views and Power BI measures are supplied, but tenant report publication remains separate.
-The API currently reads its local SQLite adapter; serving Fabric directly requires exporting a
-verified Gold run to that adapter or adding a SQL endpoint adapter. Do not point SQLite at OneLake.
+The API reads its local SQLite adapter. Download the verified Gold run directory from
+`Files/maritime/runs/<run_id>/evidence/gold/<run_id>/` and its `fabric-report.json`, then execute:
+
+```sh
+maritime import-gold --folder exported-gold --report fabric-report.json --data-dir data
+```
+
+This validates run identity and required products before publication. Do not point SQLite at OneLake.

@@ -181,7 +181,7 @@ def propagate(graph, states, horizon_hours=720, decay=0.65, max_depth=4):
             continue
         origin = state["port_id"]
         frontier = [(origin, 0, 0.0, state["stress_score"], [origin])]
-        best = {origin: state["stress_score"]}
+        best = {origin: [(state["stress_score"], 0.0)]}
         while frontier:
             node, depth, elapsed, exposure, path = frontier.pop(0)
             results.append(
@@ -211,9 +211,12 @@ def propagate(graph, states, horizon_hours=720, decay=0.65, max_depth=4):
                 if (
                     successor not in path
                     and arrival <= horizon_hours
-                    and next_exposure > best.get(successor, -1)
+                    and not any(
+                        score >= next_exposure and at <= arrival
+                        for score, at in best.get(successor, [])
+                    )
                 ):
-                    best[successor] = next_exposure
+                    best.setdefault(successor, []).append((next_exposure, arrival))
                     frontier.append(
                         (successor, depth + 1, arrival, next_exposure, path + [successor])
                     )

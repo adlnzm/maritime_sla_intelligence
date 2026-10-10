@@ -55,6 +55,7 @@ def test_full_pipeline_api_override_and_recovery(tmp_path, fixture_path, monkeyp
     }
     assert client.post(path, json=body, headers=reader).status_code == 403
     assert client.post(path, json=body, headers=operator).status_code == 200
+    assert client.get("/decisions", headers=reader).json()["items"][0]["status"] == "OVERRIDDEN"
     observed = {
         "decision_id": decision["decision_id"],
         "actual_action": "NO_ACTION",

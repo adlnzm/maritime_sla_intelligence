@@ -19,4 +19,5 @@ SELECT s.shipment_id, s.origin, s.destination, s.promised_delivery,
        r.classification, r.lineage_id, r.run_id
 FROM dbo.dim_scenarios s
 JOIN dbo.fact_sla_risk r ON r.shipment_id=s.shipment_id AND r.run_id=s.run_id
-JOIN dbo.fact_decisions d ON d.shipment_id=s.shipment_id AND d.run_id=s.run_id;
+JOIN dbo.fact_decisions d ON d.shipment_id=s.shipment_id AND d.run_id=s.run_id
+WHERE s.run_id = (SELECT TOP (1) run_id FROM dbo.maritime_published_runs WHERE status='SUCCESS' ORDER BY published_at DESC);

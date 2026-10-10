@@ -4,6 +4,7 @@ import argparse
 import json
 from datetime import date
 
+from maritime.models import json_default
 from maritime.pipeline import run
 
 parser = argparse.ArgumentParser()
@@ -29,5 +30,6 @@ print(
             )
         },
         indent=2,
+        default=json_default,
     )
 )

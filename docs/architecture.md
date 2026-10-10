@@ -61,11 +61,18 @@ Routes include valid_from/valid_to. Historical states remain queryable by run an
 
 Local writes are transactional per product. Failed attempts remain inspectable, while the API
 reads only the last fully published run. A single writer per data directory is required; concurrent
-API readers use SQLite WAL. For horizontally scaled API writes, replace the storage adapter with
-a managed transactional database. Fabric performs distributed casts, duplicate validation and
+API readers use SQLite WAL. The Azure production adapter reads validated Blob serving snapshots and writes unique
+operator audit blobs in a separate container. Fabric remains authoritative. Fabric performs distributed casts, duplicate validation and
 calendar rolling baselines in Spark; the graph/scenario workload is bounded on the driver.
 The million-record guard is explicit. This is not an unlimited global graph execution engine.
 
 No API request initiates arbitrary source retrieval or loads an untrusted model file.
-Model artifacts must come from the local training registry: joblib is not a safe format for
+Model artifacts must come from the trusted local or Azure ML training registry: joblib is not a safe format for
 untrusted artifacts.
+
+## Required production boundary
+
+Fabric Gold feature data flows into Azure ML training/evaluation/registry, then Azure ML batch
+inference returns PREDICTED records to Fabric and the decision engine. Power BI consumes
+governed Fabric marts. Azure OpenAI extracts grounded ANTICIPATED signals. The Azure application
+plane hosts FastAPI with Entra, Key Vault and Application Insights. See [deployment](azure.md).

@@ -4,7 +4,7 @@ import json
 import sqlite3
 from pathlib import Path
 
-from maritime.models import stable_id, utcnow
+from maritime.models import json_default, stable_id, utcnow
 
 
 class Store:
@@ -52,7 +52,7 @@ class Store:
                         run_id,
                         product,
                         stable_id(i, record),
-                        json.dumps(record, default=str, allow_nan=False),
+                        json.dumps(record, default=json_default, allow_nan=False),
                     )
                     for i, record in enumerate(records)
                 ],
@@ -76,7 +76,7 @@ class Store:
                     report["status"],
                     report["start_time"],
                     report.get("end_time"),
-                    json.dumps(report, default=str),
+                    json.dumps(report, default=json_default, allow_nan=False),
                 ),
             )
 

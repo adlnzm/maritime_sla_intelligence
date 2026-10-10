@@ -1,0 +1,10 @@
+{
+  "subscription_id": null,
+  "resource_group": null,
+  "workspace_name": null,
+  "compute": "maritime-cpu",
+  "model_name": "maritime-port-calls",
+  "experiment_name": "maritime-port-call-forecast",
+  "promotion": {"max_mae_ratio_to_persistence": 1.0, "min_interval_coverage": 0.8, "max_interval_coverage": 1.0},
+  "sla_ml_status": "DEFERRED — INSUFFICIENT OBSERVED OUTCOME DATA"
+}

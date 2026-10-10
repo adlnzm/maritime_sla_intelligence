@@ -37,13 +37,36 @@ def verify_signal(payload, text, source, retrieved_at):
 
 
 def extract(text, source, retrieved_at=None, client=None):
-    base, key, model = (os.getenv(k) for k in ("GENAI_BASE_URL", "GENAI_API_KEY", "GENAI_MODEL"))
-    if not all((base, key, model)):
-        raise ValueError("GENAI_BASE_URL, GENAI_API_KEY and GENAI_MODEL required")
+    base, model = (os.getenv(k) for k in ("AZURE_OPENAI_ENDPOINT", "AZURE_OPENAI_DEPLOYMENT"))
+    if not base or not model:
+        raise ValueError("AZURE_OPENAI_ENDPOINT and AZURE_OPENAI_DEPLOYMENT required")
+    from urllib.parse import urlparse
+
+    parsed = urlparse(base)
+    if (
+        parsed.scheme != "https"
+        or not parsed.hostname
+        or not parsed.hostname.endswith((".openai.azure.com", ".services.ai.azure.com"))
+    ):
+        raise ValueError("An HTTPS Azure OpenAI endpoint is required")
+    key = os.getenv("AZURE_OPENAI_API_KEY")
+    if os.getenv("AZURE_OPENAI_KEY_SECRET"):
+        from maritime.azure_security import secret
+
+        key = secret(os.environ["AZURE_OPENAI_KEY_SECRET"])
+    if key:
+        headers = {"api-key": key}
+    else:
+        from maritime.azure_security import credential
+
+        headers = {
+            "Authorization": "Bearer "
+            + credential().get_token("https://ai.azure.com/.default").token
+        }
     client = client or httpx.Client(timeout=60)
     response = client.post(
-        base.rstrip("/") + "/chat/completions",
-        headers={"Authorization": "Bearer " + key},
+        base.rstrip("/") + "/openai/v1/chat/completions",
+        headers=headers,
         json={
             "model": model,
             "temperature": 0,

@@ -10,9 +10,10 @@ from datetime import date
 from pathlib import Path
 
 from maritime.intelligence import scenario_routes
+from maritime.models import utcnow
 from maritime.pipeline import load_json, run, write_json
 from maritime.quality import validate
-from maritime.sources import Fetcher, ingest_portwatch
+from maritime.sources import Fetcher, ingest_optional, ingest_portwatch
 from maritime.store import Store
 
 
@@ -40,16 +41,44 @@ def bronze(spark, root, run_id, config_path, registry_path, as_of):
     # SQLite stays on the driver disk, never on the OneLake FUSE mount.
     with tempfile.TemporaryDirectory() as temp:
         store = Store(temp)
+        checkpoint_path = root / "activity-checkpoint.json"
+        if checkpoint_path.exists():
+            key, value = load_json(checkpoint_path)
+            store.set_metadata(key, value)
         fetcher = Fetcher(root)
         try:
-            ports, activity, _ = ingest_portwatch(
+            ports, activity, checkpoint = ingest_portwatch(
                 fetcher, registry, config, store, date.fromisoformat(as_of)
             )
+            optional, statuses = {}, []
+            for source in registry["sources"]:
+                if source["critical"]:
+                    continue
+                try:
+                    rows = ingest_optional(fetcher, source, ports, date.fromisoformat(as_of))
+                    optional[source["source_id"]] = rows
+                    statuses.append(
+                        {
+                            "source_id": source["source_id"],
+                            "status": "SUCCESS" if rows is not None else "NOT_CONFIGURED",
+                            "record_count": len(rows or []),
+                        }
+                    )
+                except (ValueError, KeyError, RuntimeError, OSError) as exc:
+                    statuses.append(
+                        {
+                            "source_id": source["source_id"],
+                            "status": "FAILED_OPTIONAL",
+                            "error": str(exc),
+                        }
+                    )
             bundle = {
                 "ports": ports,
                 "activity": activity,
                 "as_of": as_of,
-                "source_status": fetcher.events,
+                "source_status": statuses + fetcher.events,
+                "optional": optional,
+                "checkpoint": checkpoint,
             }
             write_json(root / "runs" / run_id / "bronze.json", bundle)
             delta_write(spark, ports, "bronze_ports", run_id)
@@ -76,15 +105,18 @@ def silver(spark, root, run_id, config_path):
     ).count()
     if duplicates or invalid:
         raise ValueError(f"Spark silver DQ failed: duplicates={duplicates}, invalid={invalid}")
-    routes = scenario_routes(
-        bundle["ports"], date.fromisoformat(bundle["as_of"]), config["scenario_assumptions"]
-    )
+    routes = bundle["optional"].get("routes")
+    if routes is None:
+        routes = scenario_routes(
+            bundle["ports"], date.fromisoformat(bundle["as_of"]), config["scenario_assumptions"]
+        )
     clean, dq = validate(
         bundle["ports"],
         bundle["activity"],
         routes,
         date.fromisoformat(bundle["as_of"]),
         config["freshness_days"],
+        bundle["optional"].get("unlocode"),
     )
     write_json(Path(root) / "runs" / run_id / "dq.json", dq)
     if dq["status"] != "PASS":
@@ -93,8 +125,14 @@ def silver(spark, root, run_id, config_path):
         delta_write(spark, rows, "silver_" + name, run_id)
     write_json(
         Path(root) / "runs" / run_id / "silver.json",
-        {**clean, "as_of": bundle["as_of"], "source_status": bundle["source_status"]},
+        {
+            **clean,
+            "as_of": bundle["as_of"],
+            "source_status": bundle["source_status"],
+            "optional": bundle["optional"],
+        },
     )
+    write_json(Path(root) / "activity-checkpoint.json", bundle["checkpoint"])
 
 
 def gold(spark, root, run_id, config_path, registry_path):
@@ -127,7 +165,12 @@ def gold(spark, root, run_id, config_path, registry_path):
         raise ValueError("Driver intelligence limit exceeded; partition configured port scope")
     with tempfile.TemporaryDirectory() as temp:
         report = run(
-            temp, config_path, registry_path, root / "runs" / run_id / "silver.json", run_id=run_id
+            temp,
+            config_path,
+            registry_path,
+            root / "runs" / run_id / "silver.json",
+            run_id=run_id,
+            ml_backend="azure_ml",
         )
         report["environment"] = "fabric"
         report["gates"]["fabric"] = "EXECUTED_AWAITING_ACCEPTANCE_NOTEBOOK"
@@ -149,7 +192,12 @@ def gold(spark, root, run_id, config_path, registry_path):
             ignore=shutil.ignore_patterns("*.db", "*.db-wal", "*.db-shm"),
         )
         write_json(
-            root / "runs" / run_id / "fabric-report.json", {**report, "delta_counts": counts}
+            root / "runs" / run_id / "fabric-report.json",
+            {
+                **report,
+                "delta_counts": counts,
+                "serving_products": sorted(p.stem for p in folder.glob("*.json")),
+            },
         )
 
 
@@ -167,8 +215,63 @@ def acceptance(spark, root, run_id):
     write_json(root / "runs" / run_id / "fabric-report.json", report)
     delta_write(
         spark,
-        [{"status": "SUCCESS", "report_path": str(root / "runs" / run_id / "fabric-report.json")}],
+        [
+            {
+                "status": "SUCCESS",
+                "published_at": utcnow(),
+                "report_path": str(root / "runs" / run_id / "fabric-report.json"),
+            }
+        ],
         "maritime_published_runs",
         run_id,
     )
     return report
+
+
+def import_predictions(spark, root, run_id):
+    from maritime.ml import FEATURE_VERSION
+
+    rows = load_json(Path(root) / "runs" / run_id / "azure-ml-predictions.json")
+    if not rows:
+        raise ValueError("No Azure ML predictions supplied")
+    for row in rows:
+        if (
+            row["classification"] != "PREDICTED"
+            or row["fabric_run_id"] != run_id
+            or row["feature_version"] != FEATURE_VERSION
+        ):
+            raise ValueError("Prediction lineage or feature contract mismatch")
+        if not row["model_version"] or not 0 <= row["lower"] <= row["vessel_calls"] <= row["upper"]:
+            raise ValueError("Invalid prediction model or interval")
+    count = delta_write(spark, rows, "fact_predictions", run_id)
+    from pyspark.sql import functions as F
+
+    if spark.table("fact_predictions").filter(F.col("run_id") == run_id).count() != count:
+        raise ValueError("Prediction Delta readback failed")
+    export_folder = Path(root) / "runs" / run_id / "evidence" / "gold" / run_id
+    write_json(export_folder / "predictions.json", [{**row, "run_id": run_id} for row in rows])
+    decisions = load_json(export_folder / "decisions.json")
+    shipments = {r["shipment_id"]: r for r in load_json(export_folder / "scenarios.json")}
+    by_port = {r["port_id"]: r for r in rows}
+    for decision in decisions:
+        shipment = shipments[decision["shipment_id"]]
+        decision["forecast_evidence"] = [by_port[p] for p in shipment["route"] if p in by_port]
+        decision["forecast_usage"] = "SUPPLEMENTAL_PORT_ACTIVITY_EVIDENCE_NOT_SLA_PROBABILITY"
+    delta_write(spark, decisions, "fact_decisions", run_id)
+    write_json(export_folder / "decisions.json", decisions)
+    write_json(
+        Path(root) / "runs" / run_id / "prediction-return.json",
+        {"status": "IMPORTED_TO_FABRIC", "prediction_count": count, "run_id": run_id},
+    )
+    report_path = Path(root) / "runs" / run_id / "fabric-report.json"
+    report = load_json(report_path)
+    report["ml"].update(
+        {
+            "status": "AZURE_ML_PREDICTIONS_IMPORTED",
+            "prediction_count": count,
+            "model_versions": sorted({r["model_version"] for r in rows}),
+        }
+    )
+    report["delta_counts"]["fact_predictions"] = count
+    write_json(report_path, report)
+    return count
