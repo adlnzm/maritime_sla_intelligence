@@ -5,6 +5,7 @@ import os
 import subprocess
 import sys
 import time
+import uuid
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
@@ -47,9 +48,10 @@ def main():
         if completed.returncode:
             raise RuntimeError(f"{name} failed; inspect evidence/{name}.log")
 
-    report = run("data/acceptance", fixture="tests/data/portwatch_sample.json")
+    root = Path("data/release-validation") / uuid.uuid4().hex
+    report = run(root / "acceptance", fixture="tests/data/portwatch_sample.json")
 
-    store = Store("data/acceptance")
+    store = Store(root / "acceptance")
 
     # Build an actual historical stress case by truncating retained public data.
 
@@ -68,16 +70,16 @@ def main():
 
     historical["activity"] = [r for r in historical["activity"] if r["date"] <= day]
 
-    write_json("data/historical-replay.json", historical)
+    write_json(root / "historical-replay.json", historical)
 
-    historic_report = run("data/historical", fixture="data/historical-replay.json")
+    historic_report = run(root / "historical", fixture=root / "historical-replay.json")
 
     if not historic_report["network"]["propagation_results"]:
         raise RuntimeError("Historical propagation acceptance failed")
 
     environment = {
         **os.environ,
-        "MARITIME_DATA_DIR": "data/acceptance",
+        "MARITIME_DATA_DIR": str(root / "acceptance"),
         "MARITIME_API_KEY": "validation-reader-only",
         "MARITIME_OPERATOR_KEY": "validation-operator-only",
         "PYTHONUTF8": "1",

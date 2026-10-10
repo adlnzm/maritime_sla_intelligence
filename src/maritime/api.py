@@ -37,11 +37,12 @@ def create_app(root=None):
                 from maritime.governance import contract
 
                 if (
-                    datetime.now(timezone.utc).date() - date.fromisoformat(manifest["as_of"])
+                    datetime.now(timezone.utc).date()
+                    - date.fromisoformat(min(manifest["source_latest_by_port"].values()))
                 ).days > contract()["freshness_days"]:
                     raise ValueError("Published live snapshot is stale")
             return store.read_approved(product, run_id)
-        except ValueError as exc:
+        except (ValueError, KeyError) as exc:
             raise HTTPException(503, str(exc)) from exc
 
     def published_report():

@@ -448,6 +448,7 @@ def release_manifest(products, report):
         "scope": "LOCAL_ANALYTICAL",
         "execution_mode": report["execution_mode"],
         "as_of": report["as_of"],
+        "source_latest_by_port": report["data_quality"]["latest_by_port"],
         "approved_at": utcnow(),
         "code": governance["code"],
         "contract_fingerprint": governance["contract_fingerprint"],
