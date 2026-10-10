@@ -25,6 +25,30 @@ def create_app(root=None):
         store = AzureStore()
     else:
         store = Store(root or os.getenv("MARITIME_DATA_DIR", "data"))
+
+    def verified_read(product, run_id=None):
+        try:
+            manifest = store.release(run_id)
+            if not manifest:
+                raise ValueError("Requested run is not approved")
+            if manifest["execution_mode"] == "LIVE_PUBLIC_DATA":
+                from datetime import date, datetime, timezone
+
+                from maritime.governance import contract
+
+                if (
+                    datetime.now(timezone.utc).date() - date.fromisoformat(manifest["as_of"])
+                ).days > contract()["freshness_days"]:
+                    raise ValueError("Published live snapshot is stale")
+            return store.read_approved(product, run_id)
+        except ValueError as exc:
+            raise HTTPException(503, str(exc)) from exc
+
+    def published_report():
+        if hasattr(store, "published_report"):
+            return store.published_report()
+        return store.latest_report()
+
     app = FastAPI(title="Maritime Congestion & SLA Intelligence", version="0.1.0")
     counters = {"requests": 0, "errors": 0, "duration_seconds": 0.0}
 
@@ -83,7 +107,8 @@ def create_app(root=None):
         run_id = store.metadata("published_run")
         if not run_id:
             raise HTTPException(503, "No successfully published pipeline run")
-        return {"status": "ready", "run_id": run_id}
+        verified_read("ports", run_id)
+        return {"status": "ready", "run_id": run_id, "release": store.release(run_id)}
 
     def register(path, product):
         def endpoint(
@@ -93,7 +118,7 @@ def create_app(root=None):
         ):
             if not (run_id or store.metadata("published_run")):
                 raise HTTPException(503, "No published data")
-            rows = store.read(product, run_id)
+            rows = verified_read(product, run_id)
             if product == "decisions":
                 selected_run = run_id or store.metadata("published_run")
                 reviews = {
@@ -112,6 +137,7 @@ def create_app(root=None):
                         }[review["status"]]
             return {
                 "run_id": run_id or store.metadata("published_run"),
+                "release": store.release(run_id),
                 "total": len(rows),
                 "items": rows[offset : offset + limit],
             }
@@ -140,14 +166,14 @@ def create_app(root=None):
     @app.post("/decisions/{decision_id}/review", dependencies=[Depends(authorize_operator)])
     def review(decision_id: str, body: Review, actor=Depends(authorize_operator)):
         decision = next(
-            (r for r in store.read("decisions") if r["decision_id"] == decision_id), None
+            (r for r in verified_read("decisions") if r["decision_id"] == decision_id), None
         )
         if decision is None:
             raise HTTPException(404, "Decision not found")
         if body.status == "override":
             options = [
                 r
-                for r in store.read("interventions")
+                for r in verified_read("interventions")
                 if r["shipment_id"] == decision["shipment_id"] and r["feasible"]
             ]
             if body.action not in {r["action"] for r in options}:
@@ -165,7 +191,7 @@ def create_app(root=None):
 
     @app.post("/outcomes")
     def outcome(body: Outcome, actor=Depends(authorize_operator)):
-        decisions = store.read("decisions")
+        decisions = verified_read("decisions")
         decision = next((d for d in decisions if d["decision_id"] == body.decision_id), None)
         if decision is None:
             raise HTTPException(404, "Decision not found")
@@ -176,7 +202,7 @@ def create_app(root=None):
         action = next(
             (
                 o
-                for o in store.read("interventions")
+                for o in verified_read("interventions")
                 if o["shipment_id"] == decision["shipment_id"]
                 and o["action"] == body.actual_action
                 and o["feasible"]
@@ -206,7 +232,7 @@ def create_app(root=None):
 
     @app.get("/run-report", dependencies=[Depends(authenticate)])
     def run_report():
-        return store.latest_report()
+        return published_report()
 
     @app.get("/signals", dependencies=[Depends(authenticate)])
     def signals():
@@ -214,7 +240,7 @@ def create_app(root=None):
 
     @app.get("/metrics", response_class=PlainTextResponse, dependencies=[Depends(authenticate)])
     def metrics():
-        report = store.latest_report() or {}
+        report = published_report() or {}
         reviews = store.audits("review")
         values = {
             "api_requests_total": counters["requests"],

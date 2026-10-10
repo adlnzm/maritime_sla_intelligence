@@ -7,6 +7,15 @@ from datetime import date, datetime, timezone
 from pathlib import Path
 
 from maritime import __version__
+from maritime.governance import (
+    Gates,
+    GovernanceError,
+    enrich,
+    exclusive_run,
+    fingerprint,
+    release_manifest,
+    verify_products,
+)
 from maritime.intelligence import (
     congestion,
     geojson,
@@ -88,7 +97,7 @@ def field_lineage(products, run_id):
     return result
 
 
-def run(
+def _run(
     root="data",
     config_path="configs/pipeline.json",
     registry_path="configs/sources.json",
@@ -97,6 +106,7 @@ def run(
     fetcher=None,
     run_id=None,
     ml_backend="local",
+    request_fingerprint=None,
 ):
     config, registry = load_json(config_path), load_json(registry_path)
     store = Store(root)
@@ -111,11 +121,14 @@ def run(
         "source_status": [],
         "failures": [],
     }
+    report["request_fingerprint"] = request_fingerprint
+    gates = Gates(store, report, config)
     store.run(report)
     fetcher = fetcher or Fetcher(root)
     started = time.perf_counter()
     checkpoint = None
     try:
+        gates.start("acquisition")
         if fixture:
             bundle = load_json(fixture)
             as_of = as_of or date.fromisoformat(bundle["as_of"])
@@ -157,6 +170,62 @@ def run(
                         }
                     )
             supplied_routes = optional.get("routes")
+        report["degraded_sources"] = sorted(
+            {
+                e["source_id"]
+                for e in report["source_status"]
+                if e["status"] in {"FAILED_OPTIONAL", "NOT_CONFIGURED"}
+            }
+        )
+        warnings = (["REPLAY_NOT_LIVE"] if fixture else []) + (
+            ["OPTIONAL_SOURCE_UNAVAILABLE"] if report["degraded_sources"] else []
+        )
+        gates.finish(
+            "acquisition",
+            {
+                "nonempty_critical_sources": bool(ports and activity),
+                "registry_version": registry.get("schema_version") == "1.0",
+                "source_failure_policy": all(
+                    s.get("failure_policy") in {"BLOCK", "DECLARED_DEGRADED"}
+                    for s in registry["sources"]
+                ),
+            },
+            {"received_ports": len(ports), "received_activity": len(activity)},
+            warnings,
+        )
+        gates.start("bronze")
+        import hashlib
+
+        evidence = []
+        for event in fetcher.events:
+            if event.get("raw_path"):
+                path = Path(event["raw_path"])
+                actual = hashlib.sha256(path.read_bytes()).hexdigest()
+                if actual != event["checksum"]:
+                    raise GovernanceError("Bronze checksum mismatch")
+                evidence.append(
+                    {
+                        "source_id": event["source_id"],
+                        "checksum": actual,
+                        "path": str(path.relative_to(store.root)),
+                        "retrieved_at": event["retrieved_at"],
+                    }
+                )
+        if fixture:
+            evidence.append(
+                {
+                    "source_id": "replay_bundle",
+                    "checksum": hashlib.sha256(Path(fixture).read_bytes()).hexdigest(),
+                    "scope": "NORMALIZED_REPLAY_NOT_LIVE_SOURCE",
+                }
+            )
+        report["bronze_manifest"] = evidence
+        gates.finish(
+            "bronze",
+            {"evidence_retained": bool(evidence), "payload_hashes_verified": True},
+            {"payloads": len(evidence)},
+        )
+        gates.start("silver")
         routes = (
             supplied_routes
             if supplied_routes is not None
@@ -167,6 +236,7 @@ def run(
         )
         report["data_quality"] = dq
         store.write(run_id, "data_quality", [dq])
+        write_json(store.root / "quarantine" / run_id / "dispositions.json", dq["dispositions"])
         if dq["status"] != "PASS":
             raise ValueError(f"Critical DQ failed: {len(dq['errors'])} checks; inspect run report")
         ports, activity, routes = clean["ports"], clean["activity"], clean["routes"]
@@ -175,12 +245,33 @@ def run(
         for name, rows in clean.items():
             write_json(store.root / "silver" / run_id / (name + ".json"), rows)
         report["stage_status"]["silver"] = "PASS"
+        gates.finish(
+            "silver",
+            {
+                "canonical_dq": dq["status"] == "PASS",
+                "record_accounting": dq["accounting"]["balanced"],
+            },
+            dq["accounting"],
+        )
+        gates.start("metrics")
         history = congestion(activity, config["baseline_days"], config["min_history"])
         states = latest_states(history)
         graph, edges = network_state(ports, routes, states, as_of)
         exposure = propagate(
             graph, states, config["propagation_horizon_hours"], config["propagation_decay"]
         )
+        from maritime.governance import verify_current_metrics
+
+        verification = verify_current_metrics(activity, states, config)
+        report["independent_metrics"] = verification
+        gates.finish(
+            "metrics",
+            {
+                "independent_current_metrics": all(v["passed"] for v in verification),
+                "port_coverage": len(states) == len(ports),
+            },
+        )
+        gates.start("scenario")
         generated = shipments(graph, config["shipments"], config["seed"], as_of)
         interventions, decisions = [], []
         for shipment in generated:
@@ -190,6 +281,16 @@ def run(
             interventions.extend(outcomes)
             decisions.append(rank(outcomes))
         baseline = [o for o in interventions if o["action"] == "NO_ACTION"]
+        gates.finish(
+            "scenario",
+            {
+                "shipment_action_accounting": len(interventions) == len(generated) * len(ACTIONS),
+                "all_outputs_simulated": all(
+                    o["classification"] == "SIMULATED" for o in interventions + decisions
+                ),
+            },
+        )
+        gates.start("features_ml")
         if ml_backend == "azure_ml":
             from maritime.ml_contract import export_features
 
@@ -204,6 +305,18 @@ def run(
             ml_report, predictions = experiment(activity, store.root / "models")
         else:
             raise ValueError("Unsupported ML backend")
+        gates.finish(
+            "features_ml",
+            {
+                "sla_not_trained": ml_report.get("sla_model_status", "").startswith("DEFERRED"),
+                "prediction_classification": all(
+                    p["classification"] == "PREDICTED" for p in predictions
+                ),
+            },
+            {"predictions": len(predictions)},
+            ["LOCAL_RESEARCH_MODEL"] if predictions else [],
+        )
+        gates.start("gold")
         disruptions = [
             {**s, "signal_type": "ACTIVITY_DEVIATION_PROXY", "confirmed_disruption": False}
             for s in states
@@ -233,7 +346,7 @@ def run(
                 }
                 for s in disruptions
             ],
-            "sources": registry["sources"],
+            "sources": [dict(s) for s in registry["sources"]],
             "data_quality": [dq],
         }
         for name, rows in optional.items():
@@ -274,6 +387,18 @@ def run(
             }
             for a in ACTIONS
         ]
+        # Classification follows the most uncertain computational component.
+        for row in products["early_warning"]:
+            if any(e["classification"] == "SIMULATED" for e in exposure):
+                row["classification"] = "SIMULATED"
+        enrich(products, report, config)
+        verification = verify_products(products, config, as_of)
+        report["product_verification"] = verification
+        gates.finish(
+            "gold",
+            {"dataset_contracts_and_independent_checks": verification["status"] == "PASS"},
+            verification["reconciliation"],
+        )
         for name, rows in products.items():
             for row in rows:
                 row.setdefault("run_id", run_id)
@@ -366,10 +491,23 @@ def run(
             "e2e": "PASS_LOCAL_PIPELINE",
             "fabric": "ENVIRONMENT_DEPENDENT_NOT_VALIDATED",
         }
+        gates.start("publication")
+        manifest = release_manifest(products, report)
+        from maritime.governance import verify_manifest
+
+        verify_manifest({name: store.read(name, run_id) for name in products}, manifest)
+        gates.finish(
+            "publication",
+            {"persisted_readback": True, "audit_chain": store.verify_audit()["status"] == "PASS"},
+        )
+        report["governance"]["status"] = manifest["status"]
+        report["release"] = manifest
         report["status"] = "SUCCESS"
-        store.set_metadata("published_run", run_id)
+        report["end_time"] = utcnow()
+        write_json(store.root / "releases" / (run_id + ".json"), manifest)
     except Exception as exc:
         report["status"] = "FAILED"
+        gates.fail(exc)
         report["failures"].append({"type": type(exc).__name__, "message": str(exc)})
         logger.exception("pipeline_failed", extra={"run_id": run_id})
         raise
@@ -395,4 +533,67 @@ def run(
         report["duration_seconds"] = time.perf_counter() - started
         store.run(report)
         report_files(store, report)
+        if report["status"] == "SUCCESS":
+            try:
+                store.publish(report, report["release"])
+            except Exception as exc:
+                report["status"] = "FAILED"
+                report["governance"]["status"] = "BLOCKED"
+                report["failures"].append({"type": type(exc).__name__, "message": str(exc)})
+                store.run(report)
+                report_files(store, report)
+                raise
     return report
+
+
+def run(*args, **kwargs):
+    import inspect
+    import re
+
+    bound = inspect.signature(_run).bind(*args, **kwargs)
+    bound.apply_defaults()
+    root = bound.arguments["root"]
+    run_id = bound.arguments["run_id"]
+    if run_id and not re.fullmatch(r"[A-Za-z0-9_-]+", run_id):
+        raise GovernanceError("Invalid run identifier")
+    request = {
+        k: str(v)
+        for k, v in bound.arguments.items()
+        if k not in {"fetcher", "request_fingerprint", "root", "run_id"}
+    }
+    for k in ("config_path", "registry_path", "fixture"):
+        path = bound.arguments[k]
+        if path:
+            request[k] = fingerprint(load_json(path))
+    request_id = fingerprint(request)
+    with exclusive_run(root):
+        store = Store(root)
+        with store.connect() as con:
+            if run_id:
+                prior = con.execute("SELECT report FROM runs WHERE run_id=?", (run_id,)).fetchone()
+                if prior:
+                    prior = json.loads(prior[0])
+                    if (
+                        prior["status"] == "SUCCESS"
+                        and prior.get("request_fingerprint") == request_id
+                        and store.release(run_id)
+                    ):
+                        for name in store.release(run_id)["datasets"]:
+                            store.read_approved(name, run_id)
+                        return prior
+                    raise GovernanceError("Conflicting or failed run ID; use a new retry run ID")
+            abandoned = con.execute("SELECT report FROM runs WHERE status='RUNNING'").fetchall()
+        for row in abandoned:
+            previous = json.loads(row[0])
+            previous.update(status="ABANDONED", end_time=utcnow())
+            store.run(previous)
+            store.audit(
+                "recovery",
+                {
+                    "run_id": previous["run_id"],
+                    "status": "ABANDONED",
+                    "reason": "OS lock reacquired after interrupted execution",
+                },
+            )
+        bound.arguments["request_fingerprint"] = request_id
+        return _run(**bound.arguments)

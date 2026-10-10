@@ -164,6 +164,13 @@ def network_state(ports, routes, states, as_of, disruptions=()):
             "stress_score": score,
             "as_of": as_of.isoformat(),
             "state_id": stable_id(route["route_id"], as_of, score, available),
+            "classification": "SIMULATED"
+            if route["classification"] == "SIMULATED"
+            or any(
+                stress[p]["classification"] == "SIMULATED"
+                for p in (route["origin"], route["destination"])
+            )
+            else "DERIVED",
             "weight": route["transit_hours"] * (1 + score * 0.25),
         }
         edges.append(edge)
@@ -194,7 +201,10 @@ def propagate(graph, states, horizon_hours=720, decay=0.65, max_depth=4):
                     "propagation_confidence": decay**depth,
                     "confidence_type": "ASSUMED_ATTENUATION_NOT_CALIBRATED",
                     "path": path,
-                    "classification": "DERIVED",
+                    "classification": "SIMULATED"
+                    if state["classification"] == "SIMULATED"
+                    or any(e["classification"] == "SIMULATED" for _, _, e in graph.edges(data=True))
+                    else "DERIVED",
                     "input_classifications": sorted(
                         {e["classification"] for _, _, e in graph.edges(data=True)}
                     ),

@@ -33,6 +33,9 @@ def verify_signal(payload, text, source, retrieved_at):
         "classification": "ANTICIPATED",
         "lineage_id": stable_id(text),
         "review_status": "UNCONFIRMED",
+        "confidence_meaning": "LLM_SELF_REPORTED_NOT_CALIBRATED_PROBABILITY",
+        "extracted_at": utcnow(),
+        "prompt_template_version": "grounded-spans-v1",
     }
 
 
@@ -81,11 +84,25 @@ def extract(text, source, retrieved_at=None, client=None):
         },
     )
     response.raise_for_status()
-    payload = json.loads(response.json()["choices"][0]["message"]["content"])
+    response_body = response.json()
+    payload = json.loads(response_body["choices"][0]["message"]["content"])
+    if (
+        not isinstance(payload, dict)
+        or set(payload) != {"signals"}
+        or not isinstance(payload["signals"], list)
+    ):
+        raise ValueError("Malformed extraction output envelope")
     accepted, rejected = [], []
     for raw in payload["signals"]:
         try:
-            accepted.append(verify_signal(raw, text, source, retrieved_at or utcnow()))
+            verified = verify_signal(raw, text[:60000], source, retrieved_at or utcnow())
+            verified.update(
+                provider="AZURE_OPENAI",
+                deployment=model,
+                provider_model=response_body.get("model", "NOT_RETURNED"),
+                source_text_sha256=__import__("hashlib").sha256(text.encode()).hexdigest(),
+            )
+            accepted.append(verified)
         except ValueError as exc:
             rejected.append({"payload": raw, "reason": str(exc)})
     total = len(accepted) + len(rejected)

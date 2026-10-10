@@ -4,6 +4,7 @@ import hashlib
 import json
 from pathlib import Path
 
+from maritime.governance import code_identity, fingerprint
 from maritime.ml import FEATURE_VERSION, FEATURES, features
 from maritime.models import Activity, utcnow
 from maritime.pipeline import write_json
@@ -37,6 +38,9 @@ def export_features(activity, folder, run_id):
         "fabric_run_id": run_id,
         "exported_at": utcnow(),
         "records": len(clean),
+        "code": code_identity(),
+        "source_lineage": sorted({r["lineage_id"] for r in clean}),
+        "date_range": [min(r["date"] for r in clean), max(r["date"] for r in clean)],
         "files": {
             name: hashlib.sha256((folder / name).read_bytes()).hexdigest()
             for name in ("activity.json", "features.csv")
@@ -64,7 +68,87 @@ def load_features(folder):
         raise ValueError("Invalid feature asset record count or classification")
     for row in rows:
         Activity.model_validate(row)
+    if manifest.get("contract_version") != "1" or not manifest.get("fabric_run_id"):
+        raise ValueError("Unknown feature contract or missing run lineage")
+    keys = [(r["port_id"], r["date"]) for r in rows]
+    if len(keys) != len(set(keys)):
+        raise ValueError("Duplicate feature entity/date")
+    if features(rows).to_csv(index=False).encode() != (folder / "features.csv").read_bytes():
+        raise ValueError("Feature computation skew detected")
     return rows, manifest
+
+
+def prediction_manifest(rows, activity, run_id, approved_model_id=None, job_id=None):
+    return {
+        "contract_version": "1.0",
+        "fabric_run_id": run_id,
+        "feature_version": FEATURE_VERSION,
+        "prediction_sha256": fingerprint(rows),
+        "record_count": len(rows),
+        "input_sha256": fingerprint(activity),
+        "approved_model_id": approved_model_id,
+        "azure_ml_job_id": job_id,
+        "approval_status": "REGISTRY_APPROVED"
+        if approved_model_id and job_id
+        else "LOCAL_UNAPPROVED",
+    }
+
+
+def validate_predictions(rows, manifest, activity, run_id):
+    import math
+    from datetime import date, datetime, timedelta
+
+    if (
+        manifest.get("contract_version") != "1.0"
+        or manifest.get("fabric_run_id") != run_id
+        or manifest.get("feature_version") != FEATURE_VERSION
+    ):
+        raise ValueError("Prediction manifest contract/run mismatch")
+    if (
+        manifest.get("approval_status") != "REGISTRY_APPROVED"
+        or not manifest.get("approved_model_id")
+        or not manifest.get("azure_ml_job_id")
+    ):
+        raise ValueError("Unapproved model or missing Azure ML execution lineage")
+    if (
+        manifest.get("record_count") != len(rows)
+        or manifest.get("prediction_sha256") != fingerprint(rows)
+        or manifest.get("input_sha256") != fingerprint(activity)
+    ):
+        raise ValueError("Prediction checksum or input snapshot mismatch")
+    latest = {}
+    for r in activity:
+        latest[r["port_id"]] = max(latest.get(r["port_id"], r["date"]), r["date"])
+    expected = {
+        (p, (date.fromisoformat(d) + timedelta(days=1)).isoformat()) for p, d in latest.items()
+    }
+    keys = []
+    versions = set()
+    for r in rows:
+        if (
+            r.get("classification") != "PREDICTED"
+            or r.get("fabric_run_id") != run_id
+            or r.get("feature_version") != FEATURE_VERSION
+            or not r.get("model_version")
+            or not r.get("lineage_id")
+        ):
+            raise ValueError("Prediction row schema/classification/lineage mismatch")
+        if datetime.fromisoformat(r["generated_at"]).tzinfo is None:
+            raise ValueError("Prediction timestamp must be timezone aware")
+        values = [r[k] for k in ("lower", "vessel_calls", "upper")]
+        if (
+            not all(
+                isinstance(v, (int, float)) and not isinstance(v, bool) and math.isfinite(v)
+                for v in values
+            )
+            or not 0 <= values[0] <= values[1] <= values[2]
+        ):
+            raise ValueError("Invalid prediction interval")
+        keys.append((r["port_id"], r["date"]))
+        versions.add(r["model_version"])
+    if len(keys) != len(set(keys)) or set(keys) != expected or len(versions) != 1:
+        raise ValueError("Prediction completeness/uniqueness/model-version mismatch")
+    return {"status": "PASS", "expected_rows": len(expected), "received_rows": len(rows)}
 
 
 def promotion_check(report, policy):

@@ -124,6 +124,8 @@ identity requirements and the remaining tenant acceptance checks.
 
 ## Further documentation
 
+- [Enforced stage governance and evidence-gated release](docs/governance.md)
+- [Baseline governance gap analysis](docs/governance-gap-analysis.md)
 - [Architecture, data model and contracts](docs/architecture.md)
 - [Intelligence, scenario, SLA, ML and GenAI methods](docs/methodology.md)
 - [Sources, classification, provenance and licensing](docs/sources.md)

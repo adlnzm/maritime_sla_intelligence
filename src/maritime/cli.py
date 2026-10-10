@@ -77,6 +77,8 @@ def main():
         )
         print(json.dumps({"audit_id": audit_id, "signals": signals, "metrics": metrics}, indent=2))
     elif args.command == "import-gold":
+        from maritime.governance import verify_manifest
+
         report = load_json(args.report)
         if report["status"] != "SUCCESS" or report["data_quality"]["status"] != "PASS":
             raise ValueError("Only a successfully validated run can be imported")
@@ -97,13 +99,16 @@ def main():
         found = {file.stem for file in folder.glob("*.json")}
         if required - found:
             raise ValueError(f"Missing required products: {required - found}")
+        verify_manifest(
+            {p.stem: load_json(p) for p in folder.glob("*.json")}, report.get("release", {})
+        )
         for file in folder.glob("*.json"):
             rows = load_json(file)
             if any(row.get("run_id") != report["run_id"] for row in rows):
                 raise ValueError("Gold run ID mismatch")
             store.write(report["run_id"], file.stem, rows)
         store.run(report)
-        store.set_metadata("published_run", report["run_id"])
+        store.publish(report, report["release"])
         print(json.dumps({"status": "IMPORTED", "run_id": report["run_id"]}))
 
 

@@ -25,8 +25,11 @@ class Fetcher:
         self.events = []
         self.retries = 0
         self.timeouts = 0
+        self.open_circuits = set()
 
     def get(self, source_id, url, params=None):
+        if source_id in self.open_circuits:
+            raise SourceError(f"{source_id}: circuit open for this run after retry exhaustion")
         started = time.perf_counter()
         for attempt in range(4):
             try:
@@ -38,9 +41,17 @@ class Fetcher:
                 folder = self.root / "bronze" / source_id
                 folder.mkdir(parents=True, exist_ok=True)
                 path = folder / (checksum + ".raw")
-                if not path.exists():
+                duplicate = path.exists()
+                if duplicate and hashlib.sha256(path.read_bytes()).hexdigest() != checksum:
+                    raise SourceError("Existing Bronze content was modified")
+                if not duplicate:
                     path.write_bytes(response.content)
                 event = {
+                    "acquisition_id": stable_id(source_id, utcnow(), params),
+                    "request_parameters": params or {},
+                    "response_status": response.status_code,
+                    "duplicate_payload": duplicate,
+                    "source_timestamp": response.headers.get("Last-Modified"),
                     "source_id": source_id,
                     "source_url": str(response.url),
                     "retrieved_at": utcnow(),
@@ -63,6 +74,7 @@ class Fetcher:
                     or exc.response.status_code >= 500
                 )
                 if attempt == 3 or not retryable:
+                    self.open_circuits.add(source_id)
                     self.events.append(
                         {
                             "source_id": source_id,
@@ -85,6 +97,20 @@ class Fetcher:
 
     def arcgis(self, source, where, fields="*", order="ObjectId"):
         rows = []
+        expected = None
+        if source.get("reconcile_count"):
+            response, event = self.get(
+                source["source_id"],
+                source["source_url"] + "/query",
+                {"f": "json", "where": where, "returnCountOnly": "true"},
+            )
+            body = response.json()
+            if not isinstance(body.get("count"), int) or body["count"] < 0:
+                raise SourceError("Source count query failed")
+            expected = body["count"]
+            event["record_count"] = 0
+            event["expected_extract_count"] = expected
+        seen_pages = set()
         offset = 0
         while True:
             response, event = self.get(
@@ -106,6 +132,12 @@ class Fetcher:
                     f"{source['source_id']}: ArcGIS contract error: {body.get('error')}"
                 )
             page = [f["attributes"] for f in body["features"]]
+            page_hash = stable_id(page)
+            if page and page_hash in seen_pages:
+                raise SourceError("Repeated pagination page")
+            seen_pages.add(page_hash)
+            if len(seen_pages) > 10000:
+                raise SourceError("Pagination bound exceeded")
             for row in page:
                 missing = set(source["required_fields"]) - row.keys()
                 if missing:
@@ -118,6 +150,8 @@ class Fetcher:
             if not page:
                 raise SourceError("Pagination did not advance")
             offset += len(page)
+        if expected is not None and len(rows) != expected:
+            raise SourceError(f"Partial extract: expected {expected}, received {len(rows)}")
         return rows
 
 
@@ -188,6 +222,15 @@ def ingest_portwatch(fetcher, registry, config, store, as_of):
     where = f"portid IN ({ids}) AND date >= DATE '{begin}' AND date <= DATE '{as_of}'"
     raw = fetcher.arcgis(sources["portwatch_activity"], where)
     current = normalize_activity(raw)
+    keys = [(r["port_id"], r["date"]) for r in current]
+    if len(keys) != len(set(keys)):
+        raise SourceError("Duplicate/conflicting activity records before cache merge")
+    if not current:
+        raise SourceError("Unexpected empty critical activity extract")
+    if any(not begin.isoformat() <= r["date"] <= as_of.isoformat() for r in current):
+        raise SourceError("Source returned records outside extraction window")
+    if len(prior) != len({(r["port_id"], r["date"]) for r in prior}):
+        raise SourceError("Duplicate checkpoint entities")
     # Replace queried window entirely so publisher deletions also propagate.
     merged = {(r["port_id"], r["date"]): r for r in prior if r["date"] < begin.isoformat()}
     merged.update({(r["port_id"], r["date"]): r for r in current})
@@ -196,6 +239,28 @@ def ingest_portwatch(fetcher, registry, config, store, as_of):
         [r for r in merged.values() if lower <= r["date"] <= as_of.isoformat()],
         key=lambda r: (r["port_id"], r["date"]),
     )
+    replaced = sum(r["date"] >= begin.isoformat() for r in prior)
+    expired = sum(
+        r["date"] < begin.isoformat() and not lower <= r["date"] <= as_of.isoformat() for r in prior
+    )
+    if len(prior) + len(current) != len(activity) + replaced + expired:
+        raise SourceError("Incremental accounting discrepancy")
+    if hasattr(fetcher, "events"):
+        fetcher.events.append(
+            {
+                "source_id": "portwatch_activity",
+                "status": "CANONICALIZED",
+                "retrieved_at": utcnow(),
+                "record_count": len(activity),
+                "accounting": {
+                    "input": len(prior) + len(current),
+                    "persisted_expected": len(activity),
+                    "replaced_revision_window": replaced,
+                    "filtered_expired": expired,
+                    "balanced": True,
+                },
+            }
+        )
     # Caller commits checkpoint only after DQ succeeds.
     return ports, activity, ("activity_cache:" + scope, activity)
 

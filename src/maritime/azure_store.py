@@ -60,6 +60,24 @@ class AzureStore:
             raise ValueError("Serving snapshot checksum mismatch")
         return json.loads(raw)
 
+    def release(self, run_id=None):
+        run_id = run_id or self.metadata("published_run")
+        return (
+            self._json(f"runs/{run_id}/manifest.json").get("governance_release") if run_id else None
+        )
+
+    def read_approved(self, product, run_id=None):
+        from maritime.governance import contract, fingerprint
+
+        manifest = self.release(run_id)
+        if not manifest or manifest.get("status") not in contract()["allowed_release_states"]:
+            raise ValueError("No approved cloud serving release")
+        rows = self.read(product, run_id)
+        expected = manifest["datasets"].get(product)
+        if not expected or fingerprint(rows) != expected["sha256"] or len(rows) != expected["rows"]:
+            raise ValueError("Cloud serving release integrity failure")
+        return rows
+
     def latest_report(self):
         run_id = self.metadata("published_run")
         return self._json(f"runs/{run_id}/report.json") if run_id else None
@@ -84,6 +102,10 @@ class AzureStore:
         return sorted(rows, key=lambda r: r["created_at"])
 
     def publish(self, folder, report):
+        from azure.core.exceptions import ResourceNotFoundError
+
+        from maritime.governance import verify_manifest
+
         if report["status"] != "SUCCESS" or report["data_quality"]["status"] != "PASS":
             raise ValueError("Only validated Gold runs may be published")
         run_id = report["run_id"]
@@ -103,7 +125,23 @@ class AzureStore:
         }
         if required - {p.stem for p in files}:
             raise ValueError("Missing required serving products")
-        manifest = {"run_id": run_id, "products": {}, "published_at": utcnow()}
+        if "release" not in report:
+            raise ValueError("Missing mandatory governance release evidence")
+        verify_manifest({p.stem: json.loads(p.read_bytes()) for p in files}, report["release"])
+        try:
+            existing = self._json(f"runs/{run_id}/manifest.json")
+        except ResourceNotFoundError:
+            existing = None
+        if existing:
+            if existing.get("governance_release") != report["release"]:
+                raise ValueError("Approved run is immutable; publish a new run ID")
+            return existing
+        manifest = {
+            "run_id": run_id,
+            "products": {},
+            "published_at": utcnow(),
+            "governance_release": report["release"],
+        }
         for file in files:
             raw = file.read_bytes()
             rows = json.loads(raw)

@@ -38,8 +38,6 @@ def test_store_atomic_publication(tmp_path):
     store = Store(tmp_path)
     store.write("a", "ports", [{"id": 1}])
     assert store.read("ports") == []
-    store.set_metadata("published_run", "a")
-    store.write("b", "ports", [{"id": 2}])
-    assert store.read("ports") == [{"id": 1}]
-    store.write("a", "ports", [{"id": 1}])
-    assert len(store.read("ports")) == 1
+    with pytest.raises(ValueError, match="approved release"):
+        store.set_metadata("published_run", "a")
+    assert store.read("ports") == []

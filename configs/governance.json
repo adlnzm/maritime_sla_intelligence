@@ -1,0 +1,2393 @@
+{
+  "version": "1.0",
+  "allowed_release_states": [
+    "PASS",
+    "PASS_WITH_WARNINGS"
+  ],
+  "permitted_warnings": [
+    "OPTIONAL_SOURCE_UNAVAILABLE",
+    "LOCAL_RESEARCH_MODEL",
+    "REPLAY_NOT_LIVE"
+  ],
+  "stages": [
+    "acquisition",
+    "bronze",
+    "silver",
+    "metrics",
+    "scenario",
+    "features_ml",
+    "gold",
+    "publication"
+  ],
+  "freshness_days": 10,
+  "baseline_days": 56,
+  "min_history": 28,
+  "coverage_policy": "Every canonical port must have consecutive dates from its first to last observation, same latest day and at least min_history prior observations for a current metric. Publication never infers missing values.",
+  "classification_policy": "SIMULATED input contaminates dependent metrics; metadata remains DERIVED with component classifications. PREDICTED and ANTICIPATED never become OBSERVED.",
+  "slo_status": "REQUIRES_OWNER_AGREEMENT",
+  "industrial_mandatory_external_controls": [
+    "fabric_runtime_and_readback",
+    "azure_ml_lifecycle_and_return",
+    "cloud_identity_and_least_privilege",
+    "raw_and_audit_retention_enforcement",
+    "production_slo_agreement_and_sustained_evidence"
+  ],
+  "datasets": {
+    "ports": {
+      "version": "1.0",
+      "keys": [
+        "port_id"
+      ],
+      "classifications": [
+        "OBSERVED",
+        "SIMULATED"
+      ],
+      "grain": "port",
+      "units": "degree",
+      "definition": "Source port reference coordinates; not berth capacity",
+      "dependencies": [],
+      "required_fields": [
+        "port_id",
+        "classification",
+        "lineage_id",
+        "run_id",
+        "processed_at",
+        "contract_version",
+        "configuration_fingerprint"
+      ],
+      "empty_allowed": false,
+      "release_consequence": "BLOCKED on schema/classification/lineage/key/range/reconciliation failure",
+      "permitted_use": "Local analytical research; industrial use requires external mandatory controls",
+      "limitations": "Source port reference coordinates; not berth capacity",
+      "field_types": {
+        "source_id": [
+          "string"
+        ],
+        "classification": [
+          "string"
+        ],
+        "retrieved_at": [
+          "string"
+        ],
+        "lineage_id": [
+          "string"
+        ],
+        "port_id": [
+          "string"
+        ],
+        "name": [
+          "string"
+        ],
+        "country": [
+          "string"
+        ],
+        "latitude": [
+          "number"
+        ],
+        "longitude": [
+          "number"
+        ],
+        "unlocode": [
+          "null",
+          "string"
+        ],
+        "run_id": [
+          "string"
+        ],
+        "contract_version": [
+          "string"
+        ],
+        "processed_at": [
+          "string"
+        ],
+        "configuration_fingerprint": [
+          "string"
+        ],
+        "component_classifications": [
+          "array"
+        ],
+        "input_fingerprints": [
+          "object",
+          "null"
+        ],
+        "degraded_sources": [
+          "array"
+        ],
+        "execution_mode": [
+          "string"
+        ]
+      }
+    },
+    "activity": {
+      "version": "1.0",
+      "keys": [
+        "port_id",
+        "date"
+      ],
+      "classifications": [
+        "OBSERVED",
+        "SIMULATED"
+      ],
+      "grain": "port / UTC day",
+      "units": "vessel calls",
+      "definition": "Publisher estimated daily port calls; not waiting time",
+      "dependencies": [
+        "ports"
+      ],
+      "required_fields": [
+        "port_id",
+        "date",
+        "classification",
+        "lineage_id",
+        "run_id",
+        "processed_at",
+        "contract_version",
+        "configuration_fingerprint"
+      ],
+      "empty_allowed": false,
+      "release_consequence": "BLOCKED on schema/classification/lineage/key/range/reconciliation failure",
+      "permitted_use": "Local analytical research; industrial use requires external mandatory controls",
+      "limitations": "Publisher estimated daily port calls; not waiting time",
+      "field_types": {
+        "source_id": [
+          "string"
+        ],
+        "classification": [
+          "string"
+        ],
+        "retrieved_at": [
+          "string"
+        ],
+        "lineage_id": [
+          "string"
+        ],
+        "port_id": [
+          "string"
+        ],
+        "date": [
+          "string"
+        ],
+        "vessel_calls": [
+          "number"
+        ],
+        "run_id": [
+          "string"
+        ],
+        "contract_version": [
+          "string"
+        ],
+        "processed_at": [
+          "string"
+        ],
+        "configuration_fingerprint": [
+          "string"
+        ],
+        "component_classifications": [
+          "array"
+        ],
+        "input_fingerprints": [
+          "object",
+          "null"
+        ],
+        "degraded_sources": [
+          "array"
+        ],
+        "execution_mode": [
+          "string"
+        ]
+      }
+    },
+    "routes": {
+      "version": "1.0",
+      "keys": [
+        "route_id"
+      ],
+      "classifications": [
+        "DERIVED",
+        "SIMULATED"
+      ],
+      "grain": "directed route",
+      "units": "nautical miles / hours",
+      "definition": "Reference or assumed connectivity; never observed traffic",
+      "dependencies": [
+        "ports"
+      ],
+      "required_fields": [
+        "route_id",
+        "classification",
+        "lineage_id",
+        "run_id",
+        "processed_at",
+        "contract_version",
+        "configuration_fingerprint"
+      ],
+      "empty_allowed": false,
+      "release_consequence": "BLOCKED on schema/classification/lineage/key/range/reconciliation failure",
+      "permitted_use": "Local analytical research; industrial use requires external mandatory controls",
+      "limitations": "Reference or assumed connectivity; never observed traffic",
+      "field_types": {
+        "source_id": [
+          "string"
+        ],
+        "classification": [
+          "string"
+        ],
+        "retrieved_at": [
+          "string"
+        ],
+        "lineage_id": [
+          "string"
+        ],
+        "route_id": [
+          "string"
+        ],
+        "origin": [
+          "string"
+        ],
+        "destination": [
+          "string"
+        ],
+        "distance_nm": [
+          "number"
+        ],
+        "transit_hours": [
+          "number"
+        ],
+        "available": [
+          "boolean"
+        ],
+        "valid_from": [
+          "string"
+        ],
+        "valid_to": [
+          "null",
+          "string"
+        ],
+        "geometry": [
+          "null",
+          "object"
+        ],
+        "run_id": [
+          "string"
+        ],
+        "contract_version": [
+          "string"
+        ],
+        "processed_at": [
+          "string"
+        ],
+        "configuration_fingerprint": [
+          "string"
+        ],
+        "component_classifications": [
+          "array"
+        ],
+        "input_fingerprints": [
+          "object",
+          "null"
+        ],
+        "degraded_sources": [
+          "array"
+        ],
+        "execution_mode": [
+          "string"
+        ]
+      }
+    },
+    "congestion_history": {
+      "version": "1.0",
+      "keys": [
+        "port_id",
+        "date"
+      ],
+      "classifications": [
+        "DERIVED",
+        "SIMULATED"
+      ],
+      "grain": "port / UTC day",
+      "units": "dimensionless",
+      "definition": "Prior-calendar mean and population std; z=(calls-mean)/max(1,std), thresholds 1/2/3; not queue or dwell time",
+      "dependencies": [
+        "activity"
+      ],
+      "required_fields": [
+        "port_id",
+        "date",
+        "classification",
+        "lineage_id",
+        "run_id",
+        "processed_at",
+        "contract_version",
+        "configuration_fingerprint"
+      ],
+      "empty_allowed": false,
+      "release_consequence": "BLOCKED on schema/classification/lineage/key/range/reconciliation failure",
+      "permitted_use": "Local analytical research; industrial use requires external mandatory controls",
+      "limitations": "Prior-calendar mean and population std; z=(calls-mean)/max(1,std), thresholds 1/2/3; not queue or dwell time",
+      "field_types": {
+        "state_id": [
+          "string"
+        ],
+        "port_id": [
+          "string"
+        ],
+        "date": [
+          "string"
+        ],
+        "current_activity": [
+          "number"
+        ],
+        "baseline": [
+          "null",
+          "number"
+        ],
+        "z_score": [
+          "null",
+          "number"
+        ],
+        "deviation_fraction": [
+          "null",
+          "number"
+        ],
+        "percentile": [
+          "null",
+          "number"
+        ],
+        "history_records": [
+          "number"
+        ],
+        "persistence_days": [
+          "number"
+        ],
+        "category": [
+          "string"
+        ],
+        "stress_score": [
+          "null",
+          "number"
+        ],
+        "trend": [
+          "string"
+        ],
+        "evidence_coverage": [
+          "number"
+        ],
+        "methodology": [
+          "string"
+        ],
+        "classification": [
+          "string"
+        ],
+        "lineage_id": [
+          "string"
+        ],
+        "source_id": [
+          "string"
+        ],
+        "valid_from": [
+          "string"
+        ],
+        "valid_to": [
+          "string"
+        ],
+        "run_id": [
+          "string"
+        ],
+        "contract_version": [
+          "string"
+        ],
+        "processed_at": [
+          "string"
+        ],
+        "configuration_fingerprint": [
+          "string"
+        ],
+        "component_classifications": [
+          "array"
+        ],
+        "input_fingerprints": [
+          "object",
+          "null"
+        ],
+        "degraded_sources": [
+          "array"
+        ],
+        "execution_mode": [
+          "string"
+        ]
+      }
+    },
+    "congestion": {
+      "version": "1.0",
+      "keys": [
+        "port_id"
+      ],
+      "classifications": [
+        "DERIVED",
+        "SIMULATED"
+      ],
+      "grain": "port / latest day",
+      "units": "dimensionless",
+      "definition": "Latest activity-deviation proxy; not measured congestion",
+      "dependencies": [
+        "congestion_history"
+      ],
+      "required_fields": [
+        "port_id",
+        "classification",
+        "lineage_id",
+        "run_id",
+        "processed_at",
+        "contract_version",
+        "configuration_fingerprint"
+      ],
+      "empty_allowed": false,
+      "release_consequence": "BLOCKED on schema/classification/lineage/key/range/reconciliation failure",
+      "permitted_use": "Local analytical research; industrial use requires external mandatory controls",
+      "limitations": "Latest activity-deviation proxy; not measured congestion",
+      "field_types": {
+        "state_id": [
+          "string"
+        ],
+        "port_id": [
+          "string"
+        ],
+        "date": [
+          "string"
+        ],
+        "current_activity": [
+          "number"
+        ],
+        "baseline": [
+          "number"
+        ],
+        "z_score": [
+          "number"
+        ],
+        "deviation_fraction": [
+          "number"
+        ],
+        "percentile": [
+          "number"
+        ],
+        "history_records": [
+          "number"
+        ],
+        "persistence_days": [
+          "number"
+        ],
+        "category": [
+          "string"
+        ],
+        "stress_score": [
+          "number"
+        ],
+        "trend": [
+          "string"
+        ],
+        "evidence_coverage": [
+          "number"
+        ],
+        "methodology": [
+          "string"
+        ],
+        "classification": [
+          "string"
+        ],
+        "lineage_id": [
+          "string"
+        ],
+        "source_id": [
+          "string"
+        ],
+        "valid_from": [
+          "string"
+        ],
+        "valid_to": [
+          "string"
+        ],
+        "run_id": [
+          "string"
+        ],
+        "contract_version": [
+          "string"
+        ],
+        "processed_at": [
+          "string"
+        ],
+        "configuration_fingerprint": [
+          "string"
+        ],
+        "component_classifications": [
+          "array"
+        ],
+        "input_fingerprints": [
+          "object",
+          "null"
+        ],
+        "degraded_sources": [
+          "array"
+        ],
+        "execution_mode": [
+          "string"
+        ]
+      }
+    },
+    "network": {
+      "version": "1.0",
+      "keys": [
+        "route_id"
+      ],
+      "classifications": [
+        "DERIVED",
+        "SIMULATED"
+      ],
+      "grain": "route / run",
+      "units": "hours / dimensionless",
+      "definition": "Reference exposure network; no observed cargo flow",
+      "dependencies": [
+        "ports",
+        "routes",
+        "congestion"
+      ],
+      "required_fields": [
+        "route_id",
+        "classification",
+        "lineage_id",
+        "run_id",
+        "processed_at",
+        "contract_version",
+        "configuration_fingerprint"
+      ],
+      "empty_allowed": false,
+      "release_consequence": "BLOCKED on schema/classification/lineage/key/range/reconciliation failure",
+      "permitted_use": "Local analytical research; industrial use requires external mandatory controls",
+      "limitations": "Reference exposure network; no observed cargo flow",
+      "field_types": {
+        "source_id": [
+          "string"
+        ],
+        "classification": [
+          "string"
+        ],
+        "retrieved_at": [
+          "string"
+        ],
+        "lineage_id": [
+          "string"
+        ],
+        "route_id": [
+          "string"
+        ],
+        "origin": [
+          "string"
+        ],
+        "destination": [
+          "string"
+        ],
+        "distance_nm": [
+          "number"
+        ],
+        "transit_hours": [
+          "number"
+        ],
+        "available": [
+          "boolean"
+        ],
+        "valid_from": [
+          "string"
+        ],
+        "valid_to": [
+          "null",
+          "string"
+        ],
+        "geometry": [
+          "null",
+          "object"
+        ],
+        "stress_score": [
+          "number"
+        ],
+        "as_of": [
+          "string"
+        ],
+        "state_id": [
+          "string"
+        ],
+        "weight": [
+          "number"
+        ],
+        "run_id": [
+          "string"
+        ],
+        "contract_version": [
+          "string"
+        ],
+        "processed_at": [
+          "string"
+        ],
+        "configuration_fingerprint": [
+          "string"
+        ],
+        "component_classifications": [
+          "array"
+        ],
+        "input_fingerprints": [
+          "object",
+          "null"
+        ],
+        "degraded_sources": [
+          "array"
+        ],
+        "execution_mode": [
+          "string"
+        ]
+      }
+    },
+    "exposure": {
+      "version": "1.0",
+      "keys": [
+        "origin",
+        "port_id",
+        "path"
+      ],
+      "classifications": [
+        "DERIVED",
+        "SIMULATED"
+      ],
+      "grain": "origin / exposed path",
+      "units": "hours / dimensionless",
+      "definition": "Bounded exposure attenuation; assumed decay not probability",
+      "dependencies": [
+        "network",
+        "congestion"
+      ],
+      "required_fields": [
+        "origin",
+        "port_id",
+        "path",
+        "classification",
+        "lineage_id",
+        "run_id",
+        "processed_at",
+        "contract_version",
+        "configuration_fingerprint"
+      ],
+      "empty_allowed": true,
+      "release_consequence": "BLOCKED on schema/classification/lineage/key/range/reconciliation failure",
+      "permitted_use": "Local analytical research; industrial use requires external mandatory controls",
+      "limitations": "Bounded exposure attenuation; assumed decay not probability",
+      "field_types": {
+        "contract_version": [
+          "string"
+        ],
+        "processed_at": [
+          "string"
+        ],
+        "configuration_fingerprint": [
+          "string"
+        ],
+        "component_classifications": [
+          "array"
+        ],
+        "input_fingerprints": [
+          "object",
+          "null"
+        ],
+        "degraded_sources": [
+          "array"
+        ],
+        "execution_mode": [
+          "string"
+        ],
+        "lineage_id": [
+          "string"
+        ],
+        "classification": [
+          "string"
+        ],
+        "run_id": [
+          "string"
+        ],
+        "origin": [
+          "string"
+        ],
+        "port_id": [
+          "string"
+        ],
+        "depth": [
+          "number"
+        ],
+        "arrival_hours": [
+          "number"
+        ],
+        "exposure_score": [
+          "number"
+        ],
+        "propagation_confidence": [
+          "number"
+        ],
+        "confidence_type": [
+          "string"
+        ],
+        "path": [
+          "array"
+        ],
+        "input_classifications": [
+          "array"
+        ],
+        "as_of": [
+          "string"
+        ],
+        "methodology": [
+          "string"
+        ]
+      }
+    },
+    "scenarios": {
+      "version": "1.0",
+      "keys": [
+        "shipment_id"
+      ],
+      "classifications": [
+        "SIMULATED"
+      ],
+      "grain": "synthetic shipment",
+      "units": "hours / assumed currency",
+      "definition": "Seeded research scenarios, never real shipments",
+      "dependencies": [
+        "network"
+      ],
+      "required_fields": [
+        "shipment_id",
+        "classification",
+        "lineage_id",
+        "run_id",
+        "processed_at",
+        "contract_version",
+        "configuration_fingerprint"
+      ],
+      "empty_allowed": false,
+      "release_consequence": "BLOCKED on schema/classification/lineage/key/range/reconciliation failure",
+      "permitted_use": "Local analytical research; industrial use requires external mandatory controls",
+      "limitations": "Seeded research scenarios, never real shipments",
+      "field_types": {
+        "shipment_id": [
+          "string"
+        ],
+        "origin": [
+          "string"
+        ],
+        "destination": [
+          "string"
+        ],
+        "route": [
+          "array"
+        ],
+        "planned_transit_hours": [
+          "number"
+        ],
+        "planned_delivery": [
+          "string"
+        ],
+        "promised_delivery": [
+          "string"
+        ],
+        "sla_buffer_hours": [
+          "number"
+        ],
+        "priority": [
+          "number"
+        ],
+        "cargo_value": [
+          "number"
+        ],
+        "current_state": [
+          "string"
+        ],
+        "classification": [
+          "string"
+        ],
+        "source_id": [
+          "string"
+        ],
+        "lineage_id": [
+          "string"
+        ],
+        "seed": [
+          "number"
+        ],
+        "run_id": [
+          "string"
+        ],
+        "contract_version": [
+          "string"
+        ],
+        "processed_at": [
+          "string"
+        ],
+        "configuration_fingerprint": [
+          "string"
+        ],
+        "component_classifications": [
+          "array"
+        ],
+        "input_fingerprints": [
+          "object",
+          "null"
+        ],
+        "degraded_sources": [
+          "array"
+        ],
+        "execution_mode": [
+          "string"
+        ]
+      }
+    },
+    "interventions": {
+      "version": "1.0",
+      "keys": [
+        "scenario_id"
+      ],
+      "classifications": [
+        "SIMULATED"
+      ],
+      "grain": "shipment / action",
+      "units": "hours / assumed currency",
+      "definition": "Paired lognormal counterfactuals; loss=p*value*penalty*priority",
+      "dependencies": [
+        "scenarios",
+        "network",
+        "congestion"
+      ],
+      "required_fields": [
+        "scenario_id",
+        "classification",
+        "lineage_id",
+        "run_id",
+        "processed_at",
+        "contract_version",
+        "configuration_fingerprint"
+      ],
+      "empty_allowed": false,
+      "release_consequence": "BLOCKED on schema/classification/lineage/key/range/reconciliation failure",
+      "permitted_use": "Local analytical research; industrial use requires external mandatory controls",
+      "limitations": "Paired lognormal counterfactuals; loss=p*value*penalty*priority",
+      "field_types": {
+        "scenario_id": [
+          "string"
+        ],
+        "shipment_id": [
+          "string"
+        ],
+        "action": [
+          "string"
+        ],
+        "feasible": [
+          "boolean"
+        ],
+        "classification": [
+          "string"
+        ],
+        "lineage_id": [
+          "string"
+        ],
+        "methodology": [
+          "string"
+        ],
+        "assumptions": [
+          "object"
+        ],
+        "draws": [
+          "number"
+        ],
+        "route": [
+          "array",
+          "null"
+        ],
+        "expected_delay_hours": [
+          "number"
+        ],
+        "delay_p10": [
+          "number"
+        ],
+        "delay_p50": [
+          "number"
+        ],
+        "delay_p90": [
+          "number"
+        ],
+        "breach_probability": [
+          "number"
+        ],
+        "monte_carlo_standard_error": [
+          "number"
+        ],
+        "breach_indicator": [
+          "boolean"
+        ],
+        "expected_delivery": [
+          "string"
+        ],
+        "planned_delivery": [
+          "string"
+        ],
+        "sla_buffer_hours": [
+          "number"
+        ],
+        "operational_cost": [
+          "number"
+        ],
+        "expected_loss": [
+          "number"
+        ],
+        "total_expected_cost": [
+          "number"
+        ],
+        "priority": [
+          "number"
+        ],
+        "cargo_exposure": [
+          "number"
+        ],
+        "explanation": [
+          "string"
+        ],
+        "run_id": [
+          "string"
+        ],
+        "reason": [
+          "string"
+        ],
+        "contract_version": [
+          "string"
+        ],
+        "processed_at": [
+          "string"
+        ],
+        "configuration_fingerprint": [
+          "string"
+        ],
+        "component_classifications": [
+          "array"
+        ],
+        "input_fingerprints": [
+          "object",
+          "null"
+        ],
+        "degraded_sources": [
+          "array"
+        ],
+        "execution_mode": [
+          "string"
+        ]
+      }
+    },
+    "sla_risk": {
+      "version": "1.0",
+      "keys": [
+        "scenario_id"
+      ],
+      "classifications": [
+        "SIMULATED"
+      ],
+      "grain": "shipment / no action",
+      "units": "hours / assumed currency",
+      "definition": "Simulated baseline loss and breach rate; no observed SLA accuracy",
+      "dependencies": [
+        "interventions"
+      ],
+      "required_fields": [
+        "scenario_id",
+        "classification",
+        "lineage_id",
+        "run_id",
+        "processed_at",
+        "contract_version",
+        "configuration_fingerprint"
+      ],
+      "empty_allowed": false,
+      "release_consequence": "BLOCKED on schema/classification/lineage/key/range/reconciliation failure",
+      "permitted_use": "Local analytical research; industrial use requires external mandatory controls",
+      "limitations": "Simulated baseline loss and breach rate; no observed SLA accuracy",
+      "field_types": {
+        "scenario_id": [
+          "string"
+        ],
+        "shipment_id": [
+          "string"
+        ],
+        "action": [
+          "string"
+        ],
+        "feasible": [
+          "boolean"
+        ],
+        "classification": [
+          "string"
+        ],
+        "lineage_id": [
+          "string"
+        ],
+        "methodology": [
+          "string"
+        ],
+        "assumptions": [
+          "object"
+        ],
+        "draws": [
+          "number"
+        ],
+        "route": [
+          "array"
+        ],
+        "expected_delay_hours": [
+          "number"
+        ],
+        "delay_p10": [
+          "number"
+        ],
+        "delay_p50": [
+          "number"
+        ],
+        "delay_p90": [
+          "number"
+        ],
+        "breach_probability": [
+          "number"
+        ],
+        "monte_carlo_standard_error": [
+          "number"
+        ],
+        "breach_indicator": [
+          "boolean"
+        ],
+        "expected_delivery": [
+          "string"
+        ],
+        "planned_delivery": [
+          "string"
+        ],
+        "sla_buffer_hours": [
+          "number"
+        ],
+        "operational_cost": [
+          "number"
+        ],
+        "expected_loss": [
+          "number"
+        ],
+        "total_expected_cost": [
+          "number"
+        ],
+        "priority": [
+          "number"
+        ],
+        "cargo_exposure": [
+          "number"
+        ],
+        "explanation": [
+          "string"
+        ],
+        "run_id": [
+          "string"
+        ],
+        "contract_version": [
+          "string"
+        ],
+        "processed_at": [
+          "string"
+        ],
+        "configuration_fingerprint": [
+          "string"
+        ],
+        "component_classifications": [
+          "array"
+        ],
+        "input_fingerprints": [
+          "object",
+          "null"
+        ],
+        "degraded_sources": [
+          "array"
+        ],
+        "execution_mode": [
+          "string"
+        ]
+      }
+    },
+    "decisions": {
+      "version": "1.0",
+      "keys": [
+        "decision_id"
+      ],
+      "classifications": [
+        "SIMULATED"
+      ],
+      "grain": "shipment recommendation",
+      "units": "assumed currency",
+      "definition": "Lowest feasible cost+loss; expected benefit is simulated, not measured savings",
+      "dependencies": [
+        "interventions",
+        "sla_risk"
+      ],
+      "required_fields": [
+        "decision_id",
+        "classification",
+        "lineage_id",
+        "run_id",
+        "processed_at",
+        "contract_version",
+        "configuration_fingerprint"
+      ],
+      "empty_allowed": false,
+      "release_consequence": "BLOCKED on schema/classification/lineage/key/range/reconciliation failure",
+      "permitted_use": "Local analytical research; industrial use requires external mandatory controls",
+      "limitations": "Lowest feasible cost+loss; expected benefit is simulated, not measured savings",
+      "field_types": {
+        "decision_id": [
+          "string"
+        ],
+        "shipment_id": [
+          "string"
+        ],
+        "recommended_action": [
+          "string"
+        ],
+        "scenario_id": [
+          "string"
+        ],
+        "ranked_alternatives": [
+          "array"
+        ],
+        "expected_benefit": [
+          "number"
+        ],
+        "expected_delay_avoided": [
+          "number"
+        ],
+        "breach_reduction": [
+          "number"
+        ],
+        "decision_score": [
+          "number"
+        ],
+        "expected_loss": [
+          "number"
+        ],
+        "expected_delay_hours": [
+          "number"
+        ],
+        "breach_probability": [
+          "number"
+        ],
+        "decision_confidence": [
+          "null"
+        ],
+        "confidence_status": [
+          "string"
+        ],
+        "rationale": [
+          "string"
+        ],
+        "classification": [
+          "string"
+        ],
+        "lineage_id": [
+          "string"
+        ],
+        "status": [
+          "string"
+        ],
+        "run_id": [
+          "string"
+        ],
+        "forecast_evidence": [
+          "array"
+        ],
+        "forecast_usage": [
+          "string"
+        ],
+        "contract_version": [
+          "string"
+        ],
+        "processed_at": [
+          "string"
+        ],
+        "configuration_fingerprint": [
+          "string"
+        ],
+        "component_classifications": [
+          "array"
+        ],
+        "input_fingerprints": [
+          "object",
+          "null"
+        ],
+        "degraded_sources": [
+          "array"
+        ],
+        "execution_mode": [
+          "string"
+        ]
+      }
+    },
+    "predictions": {
+      "version": "1.0",
+      "keys": [
+        "port_id",
+        "date"
+      ],
+      "classifications": [
+        "PREDICTED"
+      ],
+      "grain": "port / forecast day",
+      "units": "vessel calls",
+      "definition": "Port-call estimate with uncertainty, not SLA outcome",
+      "dependencies": [
+        "activity"
+      ],
+      "required_fields": [
+        "port_id",
+        "date",
+        "classification",
+        "lineage_id",
+        "run_id",
+        "processed_at",
+        "contract_version",
+        "configuration_fingerprint"
+      ],
+      "empty_allowed": true,
+      "release_consequence": "BLOCKED on schema/classification/lineage/key/range/reconciliation failure",
+      "permitted_use": "Local analytical research; industrial use requires external mandatory controls",
+      "limitations": "Port-call estimate with uncertainty, not SLA outcome",
+      "field_types": {
+        "port_id": [
+          "string"
+        ],
+        "date": [
+          "string"
+        ],
+        "vessel_calls": [
+          "number"
+        ],
+        "lower": [
+          "number"
+        ],
+        "upper": [
+          "number"
+        ],
+        "classification": [
+          "string"
+        ],
+        "model_version": [
+          "string"
+        ],
+        "lineage_id": [
+          "string"
+        ],
+        "run_id": [
+          "string"
+        ],
+        "feature_version": [
+          "string"
+        ],
+        "generated_at": [
+          "string"
+        ],
+        "approval_status": [
+          "string"
+        ],
+        "fabric_run_id": [
+          "string"
+        ],
+        "contract_version": [
+          "string"
+        ],
+        "processed_at": [
+          "string"
+        ],
+        "configuration_fingerprint": [
+          "string"
+        ],
+        "component_classifications": [
+          "array"
+        ],
+        "input_fingerprints": [
+          "object",
+          "null"
+        ],
+        "degraded_sources": [
+          "array"
+        ],
+        "execution_mode": [
+          "string"
+        ]
+      }
+    },
+    "disruptions": {
+      "version": "1.0",
+      "keys": [
+        "state_id"
+      ],
+      "classifications": [
+        "DERIVED",
+        "SIMULATED"
+      ],
+      "grain": "port / activity signal",
+      "units": "dimensionless",
+      "definition": "Unconfirmed activity proxy, not confirmed disruption",
+      "dependencies": [
+        "congestion"
+      ],
+      "required_fields": [
+        "state_id",
+        "classification",
+        "lineage_id",
+        "run_id",
+        "processed_at",
+        "contract_version",
+        "configuration_fingerprint"
+      ],
+      "empty_allowed": true,
+      "release_consequence": "BLOCKED on schema/classification/lineage/key/range/reconciliation failure",
+      "permitted_use": "Local analytical research; industrial use requires external mandatory controls",
+      "limitations": "Unconfirmed activity proxy, not confirmed disruption",
+      "field_types": {
+        "contract_version": [
+          "string"
+        ],
+        "processed_at": [
+          "string"
+        ],
+        "configuration_fingerprint": [
+          "string"
+        ],
+        "component_classifications": [
+          "array"
+        ],
+        "input_fingerprints": [
+          "object",
+          "null"
+        ],
+        "degraded_sources": [
+          "array"
+        ],
+        "execution_mode": [
+          "string"
+        ],
+        "lineage_id": [
+          "string"
+        ],
+        "classification": [
+          "string"
+        ],
+        "run_id": [
+          "string"
+        ],
+        "state_id": [
+          "string"
+        ],
+        "port_id": [
+          "string"
+        ],
+        "date": [
+          "string"
+        ],
+        "current_activity": [
+          "number"
+        ],
+        "baseline": [
+          "number"
+        ],
+        "z_score": [
+          "number"
+        ],
+        "deviation_fraction": [
+          "number"
+        ],
+        "percentile": [
+          "number"
+        ],
+        "history_records": [
+          "number"
+        ],
+        "persistence_days": [
+          "number"
+        ],
+        "category": [
+          "string"
+        ],
+        "stress_score": [
+          "number"
+        ],
+        "trend": [
+          "string"
+        ],
+        "evidence_coverage": [
+          "number"
+        ],
+        "methodology": [
+          "string"
+        ],
+        "source_id": [
+          "string"
+        ],
+        "valid_from": [
+          "string"
+        ],
+        "valid_to": [
+          "string"
+        ],
+        "signal_type": [
+          "string"
+        ],
+        "confirmed_disruption": [
+          "boolean"
+        ]
+      }
+    },
+    "early_warning": {
+      "version": "1.0",
+      "keys": [
+        "warning_id"
+      ],
+      "classifications": [
+        "DERIVED",
+        "SIMULATED"
+      ],
+      "grain": "port / warning",
+      "units": "count",
+      "definition": "Count exposed downstream ports under modeled topology",
+      "dependencies": [
+        "disruptions",
+        "exposure"
+      ],
+      "required_fields": [
+        "warning_id",
+        "classification",
+        "lineage_id",
+        "run_id",
+        "processed_at",
+        "contract_version",
+        "configuration_fingerprint"
+      ],
+      "empty_allowed": true,
+      "release_consequence": "BLOCKED on schema/classification/lineage/key/range/reconciliation failure",
+      "permitted_use": "Local analytical research; industrial use requires external mandatory controls",
+      "limitations": "Count exposed downstream ports under modeled topology",
+      "field_types": {
+        "contract_version": [
+          "string"
+        ],
+        "processed_at": [
+          "string"
+        ],
+        "configuration_fingerprint": [
+          "string"
+        ],
+        "component_classifications": [
+          "array"
+        ],
+        "input_fingerprints": [
+          "object",
+          "null"
+        ],
+        "degraded_sources": [
+          "array"
+        ],
+        "execution_mode": [
+          "string"
+        ],
+        "lineage_id": [
+          "string"
+        ],
+        "classification": [
+          "string"
+        ],
+        "run_id": [
+          "string"
+        ],
+        "state_id": [
+          "string"
+        ],
+        "port_id": [
+          "string"
+        ],
+        "date": [
+          "string"
+        ],
+        "current_activity": [
+          "number"
+        ],
+        "baseline": [
+          "number"
+        ],
+        "z_score": [
+          "number"
+        ],
+        "deviation_fraction": [
+          "number"
+        ],
+        "percentile": [
+          "number"
+        ],
+        "history_records": [
+          "number"
+        ],
+        "persistence_days": [
+          "number"
+        ],
+        "category": [
+          "string"
+        ],
+        "stress_score": [
+          "number"
+        ],
+        "trend": [
+          "string"
+        ],
+        "evidence_coverage": [
+          "number"
+        ],
+        "methodology": [
+          "string"
+        ],
+        "source_id": [
+          "string"
+        ],
+        "valid_from": [
+          "string"
+        ],
+        "valid_to": [
+          "string"
+        ],
+        "signal_type": [
+          "string"
+        ],
+        "confirmed_disruption": [
+          "boolean"
+        ],
+        "warning_id": [
+          "string"
+        ],
+        "downstream_ports": [
+          "number"
+        ]
+      }
+    },
+    "sources": {
+      "version": "1.0",
+      "keys": [
+        "source_id"
+      ],
+      "classifications": [
+        "DERIVED"
+      ],
+      "grain": "source registry entry",
+      "units": "metadata",
+      "definition": "Source contract inventory; classification describes inventory, source_classification describes source",
+      "dependencies": [],
+      "required_fields": [
+        "source_id",
+        "classification",
+        "lineage_id",
+        "run_id",
+        "processed_at",
+        "contract_version",
+        "configuration_fingerprint"
+      ],
+      "empty_allowed": false,
+      "release_consequence": "BLOCKED on schema/classification/lineage/key/range/reconciliation failure",
+      "permitted_use": "Local analytical research; industrial use requires external mandatory controls",
+      "limitations": "Source contract inventory; classification describes inventory, source_classification describes source",
+      "field_types": {
+        "source_id": [
+          "string"
+        ],
+        "source_name": [
+          "string"
+        ],
+        "adapter": [
+          "string"
+        ],
+        "source_url": [
+          "null",
+          "string"
+        ],
+        "classification": [
+          "string"
+        ],
+        "critical": [
+          "boolean"
+        ],
+        "schema_version": [
+          "string"
+        ],
+        "required_fields": [
+          "array"
+        ],
+        "run_id": [
+          "string"
+        ],
+        "download_url": [
+          "null"
+        ],
+        "failure_policy": [
+          "string"
+        ],
+        "purpose": [
+          "string"
+        ],
+        "freshness_days": [
+          "null",
+          "number"
+        ],
+        "timestamp_semantics": [
+          "string"
+        ],
+        "usage_constraints": [
+          "string"
+        ],
+        "limitation": [
+          "string"
+        ],
+        "reconcile_count": [
+          "boolean"
+        ],
+        "source_classification": [
+          "string"
+        ],
+        "contract_version": [
+          "string"
+        ],
+        "processed_at": [
+          "string"
+        ],
+        "configuration_fingerprint": [
+          "string"
+        ],
+        "component_classifications": [
+          "array"
+        ],
+        "input_fingerprints": [
+          "object",
+          "null"
+        ],
+        "degraded_sources": [
+          "array"
+        ],
+        "execution_mode": [
+          "string"
+        ],
+        "lineage_id": [
+          "string"
+        ]
+      }
+    },
+    "data_quality": {
+      "version": "1.0",
+      "keys": [
+        "run_id"
+      ],
+      "classifications": [
+        "DERIVED"
+      ],
+      "grain": "run quality report",
+      "units": "count / fraction",
+      "definition": "Mutually exclusive record dispositions",
+      "dependencies": [],
+      "required_fields": [
+        "run_id",
+        "classification",
+        "lineage_id",
+        "run_id",
+        "processed_at",
+        "contract_version",
+        "configuration_fingerprint"
+      ],
+      "empty_allowed": false,
+      "release_consequence": "BLOCKED on schema/classification/lineage/key/range/reconciliation failure",
+      "permitted_use": "Local analytical research; industrial use requires external mandatory controls",
+      "limitations": "Mutually exclusive record dispositions",
+      "field_types": {
+        "status": [
+          "string"
+        ],
+        "records_processed": [
+          "number"
+        ],
+        "records_rejected": [
+          "number"
+        ],
+        "completeness_rate": [
+          "number"
+        ],
+        "duplicate_rate": [
+          "number"
+        ],
+        "referential_integrity_rate": [
+          "number"
+        ],
+        "freshness_status": [
+          "string"
+        ],
+        "schema_status": [
+          "string"
+        ],
+        "cross_source_reconciliation": [
+          "string"
+        ],
+        "overall_dq_score": [
+          "number"
+        ],
+        "latest_by_port": [
+          "object"
+        ],
+        "history_counts": [
+          "object"
+        ],
+        "errors": [
+          "array"
+        ],
+        "run_id": [
+          "string"
+        ],
+        "accounting": [
+          "object"
+        ],
+        "dispositions": [
+          "array"
+        ],
+        "contract_version": [
+          "string"
+        ],
+        "processed_at": [
+          "string"
+        ],
+        "configuration_fingerprint": [
+          "string"
+        ],
+        "component_classifications": [
+          "array"
+        ],
+        "input_fingerprints": [
+          "object",
+          "null"
+        ],
+        "degraded_sources": [
+          "array"
+        ],
+        "execution_mode": [
+          "string"
+        ],
+        "lineage_id": [
+          "string"
+        ],
+        "classification": [
+          "string"
+        ]
+      }
+    },
+    "lineage": {
+      "version": "1.0",
+      "keys": [
+        "lineage_id"
+      ],
+      "classifications": [
+        "DERIVED"
+      ],
+      "grain": "output field / run",
+      "units": "metadata",
+      "definition": "Cross-stage dependency graph",
+      "dependencies": [],
+      "required_fields": [
+        "lineage_id",
+        "classification",
+        "lineage_id",
+        "run_id",
+        "processed_at",
+        "contract_version",
+        "configuration_fingerprint"
+      ],
+      "empty_allowed": false,
+      "release_consequence": "BLOCKED on schema/classification/lineage/key/range/reconciliation failure",
+      "permitted_use": "Local analytical research; industrial use requires external mandatory controls",
+      "limitations": "Cross-stage dependency graph",
+      "field_types": {
+        "lineage_id": [
+          "string"
+        ],
+        "run_id": [
+          "string"
+        ],
+        "resulting_field": [
+          "string"
+        ],
+        "input_tables": [
+          "array"
+        ],
+        "source_ids": [
+          "array"
+        ],
+        "input_lineage_ids": [
+          "array"
+        ],
+        "transformation": [
+          "string"
+        ],
+        "methodology_version": [
+          "string"
+        ],
+        "classification": [
+          "string"
+        ],
+        "downstream_product": [
+          "string"
+        ],
+        "contract_version": [
+          "string"
+        ],
+        "processed_at": [
+          "string"
+        ],
+        "configuration_fingerprint": [
+          "string"
+        ],
+        "component_classifications": [
+          "array"
+        ],
+        "input_fingerprints": [
+          "object",
+          "null"
+        ],
+        "degraded_sources": [
+          "array"
+        ],
+        "execution_mode": [
+          "string"
+        ]
+      }
+    },
+    "dim_location": {
+      "version": "1.0",
+      "keys": [
+        "port_id"
+      ],
+      "classifications": [
+        "OBSERVED",
+        "SIMULATED"
+      ],
+      "grain": "port",
+      "units": "degree",
+      "definition": "Copied canonical coordinates",
+      "dependencies": [
+        "ports"
+      ],
+      "required_fields": [
+        "port_id",
+        "classification",
+        "lineage_id",
+        "run_id",
+        "processed_at",
+        "contract_version",
+        "configuration_fingerprint"
+      ],
+      "empty_allowed": false,
+      "release_consequence": "BLOCKED on schema/classification/lineage/key/range/reconciliation failure",
+      "permitted_use": "Local analytical research; industrial use requires external mandatory controls",
+      "limitations": "Copied canonical coordinates",
+      "field_types": {
+        "port_id": [
+          "string"
+        ],
+        "country": [
+          "string"
+        ],
+        "latitude": [
+          "number"
+        ],
+        "longitude": [
+          "number"
+        ],
+        "unlocode": [
+          "null",
+          "string"
+        ],
+        "classification": [
+          "string"
+        ],
+        "lineage_id": [
+          "string"
+        ],
+        "run_id": [
+          "string"
+        ],
+        "contract_version": [
+          "string"
+        ],
+        "processed_at": [
+          "string"
+        ],
+        "configuration_fingerprint": [
+          "string"
+        ],
+        "component_classifications": [
+          "array"
+        ],
+        "input_fingerprints": [
+          "object",
+          "null"
+        ],
+        "degraded_sources": [
+          "array"
+        ],
+        "execution_mode": [
+          "string"
+        ]
+      }
+    },
+    "dim_time": {
+      "version": "1.0",
+      "keys": [
+        "date"
+      ],
+      "classifications": [
+        "DERIVED"
+      ],
+      "grain": "UTC calendar day",
+      "units": "day",
+      "definition": "Calendar dimension",
+      "dependencies": [
+        "activity"
+      ],
+      "required_fields": [
+        "date",
+        "classification",
+        "lineage_id",
+        "run_id",
+        "processed_at",
+        "contract_version",
+        "configuration_fingerprint"
+      ],
+      "empty_allowed": false,
+      "release_consequence": "BLOCKED on schema/classification/lineage/key/range/reconciliation failure",
+      "permitted_use": "Local analytical research; industrial use requires external mandatory controls",
+      "limitations": "Calendar dimension",
+      "field_types": {
+        "date": [
+          "string"
+        ],
+        "year": [
+          "number"
+        ],
+        "month": [
+          "number"
+        ],
+        "classification": [
+          "string"
+        ],
+        "lineage_id": [
+          "string"
+        ],
+        "run_id": [
+          "string"
+        ],
+        "contract_version": [
+          "string"
+        ],
+        "processed_at": [
+          "string"
+        ],
+        "configuration_fingerprint": [
+          "string"
+        ],
+        "component_classifications": [
+          "array"
+        ],
+        "input_fingerprints": [
+          "object",
+          "null"
+        ],
+        "degraded_sources": [
+          "array"
+        ],
+        "execution_mode": [
+          "string"
+        ]
+      }
+    },
+    "dim_intervention": {
+      "version": "1.0",
+      "keys": [
+        "action"
+      ],
+      "classifications": [
+        "SIMULATED"
+      ],
+      "grain": "action type",
+      "units": "metadata",
+      "definition": "Scenario action definitions",
+      "dependencies": [],
+      "required_fields": [
+        "action",
+        "classification",
+        "lineage_id",
+        "run_id",
+        "processed_at",
+        "contract_version",
+        "configuration_fingerprint"
+      ],
+      "empty_allowed": false,
+      "release_consequence": "BLOCKED on schema/classification/lineage/key/range/reconciliation failure",
+      "permitted_use": "Local analytical research; industrial use requires external mandatory controls",
+      "limitations": "Scenario action definitions",
+      "field_types": {
+        "action": [
+          "string"
+        ],
+        "classification": [
+          "string"
+        ],
+        "lineage_id": [
+          "string"
+        ],
+        "run_id": [
+          "string"
+        ],
+        "contract_version": [
+          "string"
+        ],
+        "processed_at": [
+          "string"
+        ],
+        "configuration_fingerprint": [
+          "string"
+        ],
+        "component_classifications": [
+          "array"
+        ],
+        "input_fingerprints": [
+          "object",
+          "null"
+        ],
+        "degraded_sources": [
+          "array"
+        ],
+        "execution_mode": [
+          "string"
+        ]
+      }
+    },
+    "reference_weather": {
+      "version": "1.0",
+      "keys": [
+        "port_id",
+        "date"
+      ],
+      "classifications": [
+        "DERIVED"
+      ],
+      "grain": "port / day",
+      "units": "km/h",
+      "definition": "ERA5 reanalysis wind estimate; not direct measurement",
+      "dependencies": [
+        "ports"
+      ],
+      "required_fields": [
+        "port_id",
+        "date",
+        "classification",
+        "lineage_id",
+        "run_id",
+        "processed_at",
+        "contract_version",
+        "configuration_fingerprint"
+      ],
+      "empty_allowed": true,
+      "release_consequence": "BLOCKED on schema/classification/lineage/key/range/reconciliation failure",
+      "permitted_use": "Local analytical research; industrial use requires external mandatory controls",
+      "limitations": "ERA5 reanalysis wind estimate; not direct measurement",
+      "field_types": {
+        "port_id": [
+          "string"
+        ],
+        "date": [
+          "string"
+        ],
+        "source_id": [
+          "string"
+        ],
+        "retrieved_at": [
+          "string"
+        ],
+        "wind_kmh": [
+          "number"
+        ],
+        "contract_version": [
+          "string"
+        ],
+        "processed_at": [
+          "string"
+        ],
+        "configuration_fingerprint": [
+          "string"
+        ],
+        "component_classifications": [
+          "array"
+        ],
+        "input_fingerprints": [
+          "object",
+          "null"
+        ],
+        "degraded_sources": [
+          "array"
+        ],
+        "execution_mode": [
+          "string"
+        ],
+        "lineage_id": [
+          "string"
+        ],
+        "classification": [
+          "string"
+        ],
+        "run_id": [
+          "string"
+        ]
+      }
+    },
+    "reference_wpi": {
+      "version": "1.0",
+      "keys": [
+        "reference_id"
+      ],
+      "classifications": [
+        "OBSERVED"
+      ],
+      "grain": "reference port",
+      "units": "degree",
+      "definition": "NGA port reference data",
+      "dependencies": [],
+      "required_fields": [
+        "reference_id",
+        "classification",
+        "lineage_id",
+        "run_id",
+        "processed_at",
+        "contract_version",
+        "configuration_fingerprint"
+      ],
+      "empty_allowed": true,
+      "release_consequence": "BLOCKED on schema/classification/lineage/key/range/reconciliation failure",
+      "permitted_use": "Local analytical research; industrial use requires external mandatory controls",
+      "limitations": "NGA port reference data",
+      "field_types": {
+        "reference_id": [
+          "string"
+        ],
+        "source_id": [
+          "string"
+        ],
+        "retrieved_at": [
+          "string"
+        ],
+        "name": [
+          "string"
+        ],
+        "latitude": [
+          "number"
+        ],
+        "longitude": [
+          "number"
+        ],
+        "unlocode": [
+          "string"
+        ],
+        "contract_version": [
+          "string"
+        ],
+        "processed_at": [
+          "string"
+        ],
+        "configuration_fingerprint": [
+          "string"
+        ],
+        "component_classifications": [
+          "array"
+        ],
+        "input_fingerprints": [
+          "object",
+          "null"
+        ],
+        "degraded_sources": [
+          "array"
+        ],
+        "execution_mode": [
+          "string"
+        ],
+        "lineage_id": [
+          "string"
+        ],
+        "classification": [
+          "string"
+        ],
+        "run_id": [
+          "string"
+        ]
+      }
+    },
+    "reference_unlocode": {
+      "version": "1.0",
+      "keys": [
+        "unlocode"
+      ],
+      "classifications": [
+        "OBSERVED"
+      ],
+      "grain": "location code",
+      "units": "metadata",
+      "definition": "UNECE reference location",
+      "dependencies": [],
+      "required_fields": [
+        "unlocode",
+        "classification",
+        "lineage_id",
+        "run_id",
+        "processed_at",
+        "contract_version",
+        "configuration_fingerprint"
+      ],
+      "empty_allowed": true,
+      "release_consequence": "BLOCKED on schema/classification/lineage/key/range/reconciliation failure",
+      "permitted_use": "Local analytical research; industrial use requires external mandatory controls",
+      "limitations": "UNECE reference location",
+      "field_types": {
+        "unlocode": [
+          "string"
+        ],
+        "source_id": [
+          "string"
+        ],
+        "retrieved_at": [
+          "string"
+        ],
+        "name": [
+          "string"
+        ],
+        "function": [
+          "string"
+        ],
+        "contract_version": [
+          "string"
+        ],
+        "processed_at": [
+          "string"
+        ],
+        "configuration_fingerprint": [
+          "string"
+        ],
+        "component_classifications": [
+          "array"
+        ],
+        "input_fingerprints": [
+          "object",
+          "null"
+        ],
+        "degraded_sources": [
+          "array"
+        ],
+        "execution_mode": [
+          "string"
+        ],
+        "lineage_id": [
+          "string"
+        ],
+        "classification": [
+          "string"
+        ],
+        "run_id": [
+          "string"
+        ]
+      }
+    },
+    "reference_routes": {
+      "version": "1.0",
+      "keys": [
+        "route_id"
+      ],
+      "classifications": [
+        "DERIVED"
+      ],
+      "grain": "reference route",
+      "units": "nautical miles / hours",
+      "definition": "Geometry is reference data, not traffic",
+      "dependencies": [
+        "ports"
+      ],
+      "required_fields": [
+        "route_id",
+        "classification",
+        "lineage_id",
+        "run_id",
+        "processed_at",
+        "contract_version",
+        "configuration_fingerprint"
+      ],
+      "empty_allowed": true,
+      "release_consequence": "BLOCKED on schema/classification/lineage/key/range/reconciliation failure",
+      "permitted_use": "Local analytical research; industrial use requires external mandatory controls",
+      "limitations": "Geometry is reference data, not traffic",
+      "field_types": {
+        "geometry": [
+          "null",
+          "object"
+        ],
+        "valid_to": [
+          "null",
+          "string"
+        ],
+        "route_id": [
+          "string"
+        ],
+        "source_id": [
+          "string"
+        ],
+        "retrieved_at": [
+          "string"
+        ],
+        "contract_version": [
+          "string"
+        ],
+        "processed_at": [
+          "string"
+        ],
+        "configuration_fingerprint": [
+          "string"
+        ],
+        "component_classifications": [
+          "array"
+        ],
+        "input_fingerprints": [
+          "object",
+          "null"
+        ],
+        "degraded_sources": [
+          "array"
+        ],
+        "execution_mode": [
+          "string"
+        ],
+        "lineage_id": [
+          "string"
+        ],
+        "classification": [
+          "string"
+        ],
+        "run_id": [
+          "string"
+        ]
+      }
+    }
+  }
+}

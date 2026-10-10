@@ -17,10 +17,70 @@ from maritime.sources import Fetcher, ingest_optional, ingest_portwatch
 from maritime.store import Store
 
 
+def fabric_gate(stage):
+    """Stage receipts supplement Data Factory status; failed data gates stop dependencies."""
+    import functools
+    import inspect
+    import uuid
+
+    from maritime.governance import contract, fingerprint
+
+    def decorate(function):
+        @functools.wraps(function)
+        def guarded(*args, **kwargs):
+            parameters = inspect.signature(function).bind(*args, **kwargs).arguments
+            folder = Path(parameters["root"]) / "runs" / parameters["run_id"] / "stage-evidence"
+            folder.mkdir(parents=True, exist_ok=True)
+            dependency = {
+                "silver": "bronze",
+                "gold": "silver",
+                "acceptance": "gold",
+                "import_predictions": "acceptance",
+            }.get(stage)
+            if dependency:
+                previous = sorted(folder.glob(dependency + "-*-completed.json"))
+                if not previous or load_json(previous[-1])["status"] not in {
+                    "PASS",
+                    "PASS_WITH_WARNINGS",
+                }:
+                    raise ValueError(f"Fabric dependency not approved: {dependency}")
+            execution = utcnow().replace(":", "-") + "-" + uuid.uuid4().hex
+            receipt = {
+                "run_id": parameters["run_id"],
+                "stage": stage,
+                "execution_id": execution,
+                "status": "NOT_EVALUATED",
+                "start_time": utcnow(),
+                "contract_fingerprint": fingerprint(contract()),
+            }
+            write_json(folder / f"{stage}-{execution}-started.json", receipt)
+            try:
+                result = function(*args, **kwargs)
+                receipt["status"] = "PASS"
+                return result
+            except Exception as exc:
+                receipt.update(
+                    status="BLOCKED", failure_type=type(exc).__name__, failure_reason=str(exc)
+                )
+                raise
+            finally:
+                receipt["end_time"] = utcnow()
+                write_json(folder / f"{stage}-{execution}-completed.json", receipt)
+
+        return guarded
+
+    return decorate
+
+
 def delta_write(spark, rows, table, run_id):
     from pyspark.sql import functions as F
 
     if not rows:
+        if (
+            spark.catalog.tableExists(table)
+            and spark.table(table).filter(F.col("run_id") == run_id).count()
+        ):
+            raise ValueError("Empty output conflicts with existing partition")
         return 0
     # JSON reader infers nested structures and handles null-only columns consistently.
     serialized = spark.sparkContext.parallelize([json.dumps(r, default=str) for r in rows])
@@ -31,9 +91,13 @@ def delta_write(spark, rows, table, run_id):
         ).option("mergeSchema", "true").saveAsTable(table)
     else:
         frame.write.format("delta").partitionBy("run_id").mode("overwrite").saveAsTable(table)
-    return frame.count()
+    readback = spark.table(table).filter(F.col("run_id") == run_id).select(*frame.columns)
+    if frame.exceptAll(readback).count() or readback.exceptAll(frame).count():
+        raise ValueError(f"Delta content readback failed: {table}")
+    return readback.count()
 
 
+@fabric_gate("bronze")
 def bronze(spark, root, run_id, config_path, registry_path, as_of):
     root = Path(root)
     root.mkdir(parents=True, exist_ok=True)
@@ -87,6 +151,7 @@ def bronze(spark, root, run_id, config_path, registry_path, as_of):
             write_json(root / "runs" / run_id / "ingestion.json", fetcher.events)
 
 
+@fabric_gate("silver")
 def silver(spark, root, run_id, config_path):
     from pyspark.sql import functions as F
 
@@ -135,6 +200,7 @@ def silver(spark, root, run_id, config_path):
     write_json(Path(root) / "activity-checkpoint.json", bundle["checkpoint"])
 
 
+@fabric_gate("gold")
 def gold(spark, root, run_id, config_path, registry_path):
     from pyspark.sql import functions as F
     from pyspark.sql.window import Window
@@ -201,6 +267,7 @@ def gold(spark, root, run_id, config_path, registry_path):
         )
 
 
+@fabric_gate("acceptance")
 def acceptance(spark, root, run_id):
     from pyspark.sql import functions as F
 
@@ -228,26 +295,41 @@ def acceptance(spark, root, run_id):
     return report
 
 
+@fabric_gate("import_predictions")
 def import_predictions(spark, root, run_id):
-    from maritime.ml import FEATURE_VERSION
+    from maritime.governance import fingerprint, verify_manifest
+    from maritime.ml_contract import load_features, validate_predictions
 
-    rows = load_json(Path(root) / "runs" / run_id / "azure-ml-predictions.json")
-    if not rows:
-        raise ValueError("No Azure ML predictions supplied")
+    root = Path(root)
+    rows = load_json(root / "runs" / run_id / "azure-ml-predictions.json")
+    manifest = load_json(root / "runs" / run_id / "azure-ml-prediction-manifest.json")
+    activity, _ = load_features(root / "runs" / run_id / "evidence" / "azure_features" / run_id)
+    validate_predictions(rows, manifest, activity, run_id)
+    original_report = load_json(root / "runs" / run_id / "fabric-report.json")
     for row in rows:
-        if (
-            row["classification"] != "PREDICTED"
-            or row["fabric_run_id"] != run_id
-            or row["feature_version"] != FEATURE_VERSION
-        ):
-            raise ValueError("Prediction lineage or feature contract mismatch")
-        if not row["model_version"] or not 0 <= row["lower"] <= row["vessel_calls"] <= row["upper"]:
-            raise ValueError("Invalid prediction model or interval")
+        row.update(
+            contract_version="1.0",
+            processed_at=utcnow(),
+            configuration_fingerprint=original_report["release"]["configuration_fingerprint"],
+            component_classifications=["OBSERVED"],
+            input_fingerprints={"activity": fingerprint(activity)},
+            degraded_sources=original_report.get("degraded_sources", []),
+            execution_mode="FABRIC_AZURE_ML",
+        )
     count = delta_write(spark, rows, "fact_predictions", run_id)
     from pyspark.sql import functions as F
 
     if spark.table("fact_predictions").filter(F.col("run_id") == run_id).count() != count:
         raise ValueError("Prediction Delta readback failed")
+    returned = [
+        r.asDict(recursive=True)
+        for r in spark.table("fact_predictions").filter(F.col("run_id") == run_id).collect()
+    ]
+    expected = [{**r, "run_id": run_id} for r in rows]
+    if fingerprint(sorted(returned, key=lambda r: r["port_id"])) != fingerprint(
+        sorted(expected, key=lambda r: r["port_id"])
+    ):
+        raise ValueError("Prediction Delta content readback failed")
     export_folder = Path(root) / "runs" / run_id / "evidence" / "gold" / run_id
     write_json(export_folder / "predictions.json", [{**row, "run_id": run_id} for row in rows])
     decisions = load_json(export_folder / "decisions.json")
@@ -273,5 +355,19 @@ def import_predictions(spark, root, run_id):
         }
     )
     report["delta_counts"]["fact_predictions"] = count
+    products = {p.stem: load_json(p) for p in export_folder.glob("*.json")}
+    # A new release identity preserves the parent release and the AML import evidence.
+    report["release"]["parent_release_id"] = report["release"]["release_id"]
+    report["release"]["release_id"] = fingerprint(
+        [report["release"]["parent_release_id"], manifest]
+    )
+    report["release"]["prediction_return"] = manifest
+    for name in ("predictions", "decisions"):
+        report["release"]["datasets"][name] = {
+            "rows": len(products[name]),
+            "sha256": fingerprint(products[name]),
+            "classifications": sorted({r["classification"] for r in products[name]}),
+        }
+    verify_manifest(products, report["release"])
     write_json(report_path, report)
     return count

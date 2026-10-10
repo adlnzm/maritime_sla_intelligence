@@ -71,7 +71,7 @@ def train(data, output, policy, tracking=True):
     return report
 
 
-def batch(data, model_dir, output):
+def batch(data, model_dir, output, approved_model_id=None):
     activity, manifest = load_features(data)
     artifact = joblib.load(Path(model_dir) / "model.joblib")
     import sklearn
@@ -113,6 +113,20 @@ def batch(data, model_dir, output):
             }
         )
     write_json(Path(output) / "predictions.json", rows)
+    import os
+
+    from maritime.ml_contract import prediction_manifest
+
+    write_json(
+        Path(output) / "prediction-manifest.json",
+        prediction_manifest(
+            rows,
+            activity,
+            manifest["fabric_run_id"],
+            approved_model_id,
+            os.getenv("AZUREML_RUN_ID"),
+        ),
+    )
     frame = features(activity)
     shifts = {
         f: float(
@@ -162,12 +176,13 @@ def main():
     parser.add_argument("--output", required=True)
     parser.add_argument("--model")
     parser.add_argument("--predictions")
+    parser.add_argument("--approved-model-id")
     parser.add_argument("--policy", default="configs/azure.json")
     args = parser.parse_args()
     if args.mode == "train":
         train(args.data, args.output, load_json(args.policy)["promotion"])
     elif args.mode == "batch":
-        batch(args.data, args.model, args.output)
+        batch(args.data, args.model, args.output, args.approved_model_id)
     else:
         monitor(args.predictions, args.data, args.output)
 

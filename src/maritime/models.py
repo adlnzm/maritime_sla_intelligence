@@ -35,10 +35,10 @@ def stable_id(*values) -> str:
 
 class Record(BaseModel):
     model_config = ConfigDict(extra="forbid", allow_inf_nan=False)
-    source_id: str
+    source_id: str = Field(min_length=1)
     classification: Classification
     retrieved_at: datetime
-    lineage_id: str
+    lineage_id: str = Field(min_length=1)
 
     @field_validator("retrieved_at")
     @classmethod
@@ -73,6 +73,26 @@ class Route(Record):
     valid_from: date
     valid_to: date | None = None
     geometry: dict | None = None
+
+    @field_validator("geometry")
+    @classmethod
+    def geometry_coordinates(cls, geometry):
+        if geometry is None:
+            return geometry
+        if geometry.get("type") not in {"LineString", "MultiLineString"}:
+            raise ValueError("Route geometry must be a line")
+        lines = (
+            [geometry["coordinates"]]
+            if geometry["type"] == "LineString"
+            else geometry["coordinates"]
+        )
+        if not lines or any(len(line) < 2 for line in lines):
+            raise ValueError("Route geometry requires at least two points per line")
+        for line in lines:
+            for point in line:
+                if len(point) != 2 or not -180 <= point[0] <= 180 or not -90 <= point[1] <= 90:
+                    raise ValueError("Invalid route coordinate")
+        return geometry
 
 
 class Review(BaseModel):

@@ -73,6 +73,7 @@ def experiment(activity, output_dir, minimum_days=120):
     observed = [r for r in activity if r["classification"] == "OBSERVED"]
     deferred = {
         "status": "DEFERRED — INSUFFICIENT VALIDATED HISTORY",
+        "sla_model_status": "DEFERRED — INSUFFICIENT OBSERVED OUTCOME DATA",
         "training_records": 0,
         "validation_records": 0,
         "target": "next-day vessel_calls",
@@ -206,6 +207,9 @@ def experiment(activity, output_dir, minimum_days=120):
                 "upper": value + radius,
                 "classification": "PREDICTED",
                 "model_version": version,
+                "feature_version": FEATURE_VERSION,
+                "generated_at": __import__("maritime.models", fromlist=["utcnow"]).utcnow(),
+                "approval_status": "LOCAL_RESEARCH_ONLY",
                 "lineage_id": dataset_version,
             }
         )

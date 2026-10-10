@@ -73,15 +73,29 @@ def main():
             r["fabric_run_id"] != args.run_id or r["classification"] != "PREDICTED" for r in rows
         ):
             raise ValueError("Azure ML prediction run/classification mismatch")
-        data = (folder / "predictions.json").read_bytes()
-        url = root + "/azure-ml-predictions.json"
-        for method, params, content in [
-            ("PUT", {"resource": "file"}, b""),
-            ("PATCH", {"action": "append", "position": 0}, data),
-            ("PATCH", {"action": "flush", "position": len(data)}, b""),
+        from maritime.ml_contract import validate_predictions
+
+        manifest = load_json(folder / "prediction-manifest.json")
+        response = client.get(
+            root + f"/evidence/azure_features/{args.run_id}/activity.json", headers=headers
+        )
+        response.raise_for_status()
+        validate_predictions(rows, manifest, response.json(), args.run_id)
+        for filename, target in [
+            ("predictions.json", "azure-ml-predictions.json"),
+            ("prediction-manifest.json", "azure-ml-prediction-manifest.json"),
         ]:
-            response = client.request(method, url, params=params, headers=headers, content=content)
-            response.raise_for_status()
+            data = (folder / filename).read_bytes()
+            url = root + "/" + target
+            for method, params, content in [
+                ("PUT", {"resource": "file"}, b""),
+                ("PATCH", {"action": "append", "position": 0}, data),
+                ("PATCH", {"action": "flush", "position": len(data)}, b""),
+            ]:
+                response = client.request(
+                    method, url, params=params, headers=headers, content=content
+                )
+                response.raise_for_status()
         # The deployed prediction-import notebook validates and materializes Delta predictions.
         from deploy_fabric import Fabric
 

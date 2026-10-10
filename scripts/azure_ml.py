@@ -47,7 +47,9 @@ def main():
         store = Store(args.data_dir)
         print(
             json.dumps(
-                export_features(store.read("activity"), args.data, store.metadata("published_run"))
+                export_features(
+                    store.read_approved("activity"), args.data, store.metadata("published_run")
+                )
             )
         )
         return
@@ -116,6 +118,7 @@ def main():
                 raise ValueError("Only an approved registered model may score production data")
             inputs["model"] = Input(type="custom_model", path=model.id)
             cmd += " --model ${{inputs.model}}"
+            cmd += " --approved-model-id " + model.id
         if args.mode == "monitor":
             if not args.predictions:
                 raise ValueError("Monitoring requires prior predictions")

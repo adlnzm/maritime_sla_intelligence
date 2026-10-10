@@ -136,9 +136,9 @@ def test_fabric_mode_exports_features_instead_of_training(tmp_path):
     assert (tmp_path / "azure_features" / report["run_id"] / "manifest.json").exists()
 
 
-def test_azure_serving_checksum_publication_and_audit_isolation(tmp_path):
+def test_azure_serving_checksum_publication_and_audit_isolation(tmp_path, fixture_path):
     from maritime.azure_store import AzureStore
-    from maritime.pipeline import write_json
+    from maritime.pipeline import run
 
     class Container:
         def __init__(self):
@@ -149,6 +149,10 @@ def test_azure_serving_checksum_publication_and_audit_isolation(tmp_path):
             self.blobs[name] = data.encode() if isinstance(data, str) else data
 
         def download_blob(self, name):
+            from azure.core.exceptions import ResourceNotFoundError
+
+            if name not in self.blobs:
+                raise ResourceNotFoundError("missing")
             return SimpleNamespace(readall=lambda: self.blobs[name])
 
         def list_blobs(self, name_starts_with):
@@ -160,21 +164,11 @@ def test_azure_serving_checksum_publication_and_audit_isolation(tmp_path):
     with pytest.raises(ValueError, match="Missing required"):
         store.publish(tmp_path, report)
     assert "published.json" not in serving.blobs
-    for product in (
-        "ports",
-        "congestion",
-        "network",
-        "scenarios",
-        "sla_risk",
-        "interventions",
-        "decisions",
-        "lineage",
-        "data_quality",
-    ):
-        write_json(tmp_path / f"{product}.json", [{"run_id": "test"}])
-    manifest = store.publish(tmp_path, report)
-    assert store.metadata("published_run") == "test"
-    assert store.read("ports") == [{"run_id": "test"}]
+    report = run(tmp_path / "pipeline", fixture=fixture_path)
+    run_id = report["run_id"]
+    manifest = store.publish(tmp_path / "pipeline/gold" / run_id, report)
+    assert store.metadata("published_run") == run_id
+    assert store.read_approved("ports")[0]["run_id"] == run_id
     store.audit("review", {"operator": "verified-actor"})
     assert len(store.audits("review")) == 1
     assert not any(n.startswith("audit/") for n in serving.blobs)
