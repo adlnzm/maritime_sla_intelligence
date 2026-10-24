@@ -1,0 +1,154 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "details",
+  "position": {
+    "x": 20,
+    "y": 180,
+    "z": 0,
+    "width": 1560,
+    "height": 690,
+    "tabOrder": 200
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_congestion_history"
+                    }
+                  },
+                  "Property": "port_id"
+                }
+              },
+              "queryRef": "fact_congestion_history.port_id"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_congestion_history"
+                    }
+                  },
+                  "Property": "date"
+                }
+              },
+              "queryRef": "fact_congestion_history.date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_congestion_history"
+                    }
+                  },
+                  "Property": "current_activity"
+                }
+              },
+              "queryRef": "fact_congestion_history.current_activity"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_congestion_history"
+                    }
+                  },
+                  "Property": "baseline"
+                }
+              },
+              "queryRef": "fact_congestion_history.baseline"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_congestion_history"
+                    }
+                  },
+                  "Property": "deviation_fraction"
+                }
+              },
+              "queryRef": "fact_congestion_history.deviation_fraction"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_congestion_history"
+                    }
+                  },
+                  "Property": "persistence_days"
+                }
+              },
+              "queryRef": "fact_congestion_history.persistence_days"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_congestion_history"
+                    }
+                  },
+                  "Property": "category"
+                }
+              },
+              "queryRef": "fact_congestion_history.category"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_congestion_history"
+                    }
+                  },
+                  "Property": "classification"
+                }
+              },
+              "queryRef": "fact_congestion_history.classification"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_congestion_history"
+                    }
+                  },
+                  "Property": "lineage_id"
+                }
+              },
+              "queryRef": "fact_congestion_history.lineage_id"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_congestion_history"
+                    }
+                  },
+                  "Property": "run_id"
+                }
+              },
+              "queryRef": "fact_congestion_history.run_id"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

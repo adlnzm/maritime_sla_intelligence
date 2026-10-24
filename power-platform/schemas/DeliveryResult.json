@@ -1,0 +1,37 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "lease_token": {
+      "title": "Lease Token",
+      "type": "string"
+    },
+    "outcome": {
+      "enum": [
+        "SENT",
+        "FAILED",
+        "EXCEPTION"
+      ],
+      "title": "Outcome",
+      "type": "string"
+    },
+    "failure_reason": {
+      "anyOf": [
+        {
+          "maxLength": 500,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Failure Reason"
+    }
+  },
+  "required": [
+    "lease_token",
+    "outcome"
+  ],
+  "title": "DeliveryResult",
+  "type": "object"
+}

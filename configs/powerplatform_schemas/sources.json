@@ -1,0 +1,9 @@
+{
+  "canvas": "https://raw.githubusercontent.com/microsoft/PowerApps-Tooling/refs/heads/master/schemas/pa-yaml/v3.0/pa.schema.yaml",
+  "flow": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json",
+  "canvas_schema_correction": {
+    "reason": "Upstream CodeComponent-ComponentName pattern contains an unmatched closing parenthesis, invalid under JSON Schema regex validation. Corrected optional publisher-prefix group only; all other schema constraints retained.",
+    "original_evidence": "evidence/power-platform-20261022-implementation/canvas-schema-original.json",
+    "field": "$defs.CodeComponent-ComponentName.pattern"
+  }
+}

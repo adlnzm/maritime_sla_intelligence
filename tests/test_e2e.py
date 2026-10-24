@@ -68,6 +68,19 @@ def test_full_pipeline_api_override_and_recovery(tmp_path, fixture_path, monkeyp
     observed["classification"] = "SIMULATED"
     assert client.post("/outcomes", json=observed, headers=operator).status_code == 200
     assert store.audits("outcome")[0]["causal_intervention_effectiveness"] is None
+    exported = client.get("/learning/export", headers=operator)
+    assert exported.status_code == 200
+    packet = exported.json()
+    assert packet["record_count"] == 2
+    assert {r["classification"] for r in packet["records"]} == {"SIMULATED"}
+    assert client.get("/learning/export", headers=reader).status_code == 403
+    from maritime.feedback import validate_feedback
+    from maritime.governance import fingerprint
+
+    packet["records"][1]["classification"] = "OBSERVED"
+    packet["sha256"] = fingerprint(packet["records"])
+    with pytest.raises(ValueError, match="Synthetic"):
+        validate_feedback(packet, store.read("decisions"))
     bad = json.loads(fixture_path.read_text())
     bad["ports"][0]["latitude"] = 100
     fixture_path.write_text(json.dumps(bad))
@@ -75,4 +88,5 @@ def test_full_pipeline_api_override_and_recovery(tmp_path, fixture_path, monkeyp
         run(root, fixture=fixture_path)
     assert store.metadata("published_run") == second["run_id"]
     assert store.latest_report()["status"] == "FAILED"
+    assert "maritime_latest_attempt_failed 1" in client.get("/metrics", headers=reader).text
     assert (root / "gold" / report["run_id"] / "operational.geojson").is_file()

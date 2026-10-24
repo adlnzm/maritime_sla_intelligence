@@ -1,0 +1,919 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-10-22T10:30:40.174145+03:00",
+  "timezone": "Asia/Qatar",
+  "audit_source": "evidence/component-audit-20261018-084805",
+  "branch": "codex/build-maritime-platform",
+  "commit": "4b50f50769b08e763015064c53d91b6bda4ae079",
+  "verdict": "CODE-INTEGRATED AND VALIDATED",
+  "scope": "Implemented local analytical product and explicitly tested offline adapter contracts; no live runtime, cloud-service, reporting-engine or production certification.",
+  "required_local_disconnected_components": [],
+  "component_count": 49,
+  "components": [
+    {
+      "id": "C01",
+      "name": "PortWatch port/activity acquisition",
+      "source_paths": [
+        "src/maritime/sources.py",
+        "configs/sources.json",
+        "configs/pipeline.json"
+      ],
+      "scope": "required_local",
+      "required_for_current_local_product": true,
+      "integration_path": "Fetcher.arcgis -> ingest_portwatch -> pipeline.run -> validate -> Store checkpoint/Gold -> publication -> API",
+      "verification": "AUTOMATED_LOCAL_AND_OR_MOCK_CONTRACT",
+      "tests": [
+        "tests.test_code_integration::test_acquisition_to_publication_api_and_failed_refresh"
+      ],
+      "boundary": "Synthetic ArcGIS HTTP responses; not a new public acquisition.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C02",
+      "name": "WPI reference connector",
+      "source_paths": [
+        "src/maritime/sources.py",
+        "configs/sources.json"
+      ],
+      "scope": "optional",
+      "required_for_current_local_product": false,
+      "integration_path": "ingest_optional(wpi_csv) -> reference_wpi -> governed Gold export",
+      "verification": "STATIC_SCOPE_REVIEW",
+      "tests": [],
+      "boundary": "No configured URL; source parsing inspected, no live or dedicated WPI fixture execution claimed.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C03",
+      "name": "UN/LOCODE connector",
+      "source_paths": [
+        "src/maritime/sources.py",
+        "configs/sources.json"
+      ],
+      "scope": "optional",
+      "required_for_current_local_product": false,
+      "integration_path": "ingest_optional(unlocode_zip) -> validate(reference) -> reference_unlocode",
+      "verification": "STATIC_SCOPE_REVIEW",
+      "tests": [],
+      "boundary": "No configured URL; optional reconciliation code inspected.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C04",
+      "name": "Reference route connector",
+      "source_paths": [
+        "src/maritime/sources.py",
+        "configs/sources.json"
+      ],
+      "scope": "optional",
+      "required_for_current_local_product": false,
+      "integration_path": "ingest_optional(route_geojson) -> supplied_routes -> validate -> graph",
+      "verification": "STATIC_SCOPE_REVIEW",
+      "tests": [],
+      "boundary": "No configured URL; default route generation remains SIMULATED.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C05",
+      "name": "Weather reanalysis",
+      "source_paths": [
+        "src/maritime/sources.py",
+        "configs/sources.json"
+      ],
+      "scope": "optional",
+      "required_for_current_local_product": false,
+      "integration_path": "ingest_optional(weather) -> reference_weather -> governed publication",
+      "verification": "STATIC_SCOPE_REVIEW",
+      "tests": [],
+      "boundary": "Optional derived reanalysis; live provider and entitlement unverified.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C06",
+      "name": "WTO / UN Comtrade context",
+      "source_paths": [
+        "evidence/trade-qualification-20261017-160824/ASSESSMENT.md"
+      ],
+      "scope": "deferred",
+      "required_for_current_local_product": false,
+      "integration_path": "No runtime ingestion path by the existing scope decision",
+      "verification": "STATIC_SCOPE_REVIEW",
+      "tests": [],
+      "boundary": "WTO/Comtrade remains research only.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C07",
+      "name": "Source contracts / UTC normalization / freshness",
+      "source_paths": [
+        "src/maritime/models.py",
+        "src/maritime/sources.py",
+        "src/maritime/quality.py",
+        "configs/governance.json"
+      ],
+      "scope": "required_local",
+      "required_for_current_local_product": true,
+      "integration_path": "normalize_activity -> UTC observation dates -> validate -> Gates",
+      "verification": "AUTOMATED_LOCAL_AND_OR_MOCK_CONTRACT",
+      "tests": [
+        "tests.test_code_integration::test_pipeline_rejects_freshness_configuration_drift[9]",
+        "tests.test_code_integration::test_pipeline_rejects_freshness_configuration_drift[11]",
+        "tests.test_source_contracts::test_observation_dates_are_parsed_completely_in_utc[2026-10-09-2026-10-09]",
+        "tests.test_source_contracts::test_observation_dates_are_parsed_completely_in_utc[2026-10-07T00:30:00+03:00-2026-10-06]",
+        "tests.test_source_contracts::test_observation_dates_are_parsed_completely_in_utc[2026-10-06T23:30:00-03:00-2026-10-07]",
+        "tests.test_source_contracts::test_observation_dates_are_parsed_completely_in_utc[2026-10-09T00:00:00Z-2026-10-09]",
+        "tests.test_source_contracts::test_observation_dates_are_parsed_completely_in_utc[1791504000000-2026-10-09]",
+        "tests.test_source_contracts::test_freshness_uses_each_ports_observation_not_retrieval"
+      ],
+      "boundary": "Ten-day threshold and per-port observation dates preserved.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C08",
+      "name": "DQ / quarantine / reconciliation",
+      "source_paths": [
+        "src/maritime/quality.py",
+        "src/maritime/governance.py",
+        "src/maritime/pipeline.py"
+      ],
+      "scope": "required_local",
+      "required_for_current_local_product": true,
+      "integration_path": "validate -> exclusive dispositions/quarantine -> silver gate -> publication gate",
+      "verification": "AUTOMATED_LOCAL_AND_OR_MOCK_CONTRACT",
+      "tests": [
+        "tests.test_governance::test_exclusive_dispositions_and_temporal_coverage",
+        "tests.test_governance::test_canonical_adverse_controls[stale]",
+        "tests.test_governance::test_canonical_adverse_controls[schema]",
+        "tests.test_governance::test_canonical_adverse_controls[classification]",
+        "tests.test_governance::test_canonical_adverse_controls[coordinates]",
+        "tests.test_governance::test_canonical_adverse_controls[missing_lineage]"
+      ],
+      "boundary": "Invalid inputs block publication; no assertion weakening.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C09",
+      "name": "Classification / lineage",
+      "source_paths": [
+        "src/maritime/models.py",
+        "src/maritime/governance.py",
+        "src/maritime/pipeline.py"
+      ],
+      "scope": "required_local",
+      "required_for_current_local_product": true,
+      "integration_path": "field_lineage/enrich -> Gold/Store -> API; prediction return -> updated lineage/manifest",
+      "verification": "AUTOMATED_LOCAL_AND_OR_MOCK_CONTRACT",
+      "tests": [
+        "tests.test_code_integration::test_prediction_return_to_fabric_decisions_and_serving_contract",
+        "tests.test_e2e::test_full_pipeline_api_override_and_recovery"
+      ],
+      "boundary": "Cloud return persistence is a mocked Delta contract.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C10",
+      "name": "Bronze raw retention / replay",
+      "source_paths": [
+        "src/maritime/sources.py",
+        "src/maritime/pipeline.py"
+      ],
+      "scope": "required_local",
+      "required_for_current_local_product": true,
+      "integration_path": "Fetcher.get -> content-addressed Bronze -> checksum evidence; fixture -> declared REPLAY",
+      "verification": "AUTOMATED_LOCAL_AND_OR_MOCK_CONTRACT",
+      "tests": [
+        "tests.test_foundation::test_raw_retention_retry_and_idempotency",
+        "tests.test_governance::test_raw_mutation_and_partial_extract_block",
+        "tests.test_public_replay::test_retained_public_data_end_to_end_and_model_loading"
+      ],
+      "boundary": "Replay is not new acquisition.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C11",
+      "name": "Silver canonical layer",
+      "source_paths": [
+        "src/maritime/pipeline.py",
+        "src/maritime/quality.py"
+      ],
+      "scope": "required_local",
+      "required_for_current_local_product": true,
+      "integration_path": "canonical validate output -> run-isolated Silver -> analytical functions",
+      "verification": "AUTOMATED_LOCAL_AND_OR_MOCK_CONTRACT",
+      "tests": [
+        "tests.test_e2e::test_full_pipeline_api_override_and_recovery"
+      ],
+      "boundary": "Real temporary filesystem and SQLite.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C12",
+      "name": "Gold marts / GIS / publication",
+      "source_paths": [
+        "src/maritime/pipeline.py",
+        "src/maritime/intelligence.py",
+        "src/maritime/store.py"
+      ],
+      "scope": "required_local",
+      "required_for_current_local_product": true,
+      "integration_path": "analytics/scenarios/ML -> enrich -> verify_products -> persisted readback -> release -> Store.publish",
+      "verification": "AUTOMATED_LOCAL_AND_OR_MOCK_CONTRACT",
+      "tests": [
+        "tests.test_e2e::test_full_pipeline_api_override_and_recovery",
+        "tests.test_governance::test_interrupted_persistence_does_not_publish"
+      ],
+      "boundary": "Gold/GIS/report outputs are generated only in disposable test roots.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C13",
+      "name": "SQLite persistence / schema",
+      "source_paths": [
+        "src/maritime/store.py"
+      ],
+      "scope": "required_local",
+      "required_for_current_local_product": true,
+      "integration_path": "Store schema -> transaction -> immutable approved products -> approved reads",
+      "verification": "AUTOMATED_LOCAL_AND_OR_MOCK_CONTRACT",
+      "tests": [
+        "tests.test_foundation::test_store_atomic_publication",
+        "tests.test_production_controls::test_empty_legacy_and_future_database_schema"
+      ],
+      "boundary": "No existing database opened for mutation.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C14",
+      "name": "Incremental checkpoints / revision merge",
+      "source_paths": [
+        "src/maritime/sources.py",
+        "src/maritime/pipeline.py",
+        "src/maritime/store.py"
+      ],
+      "scope": "required_local",
+      "required_for_current_local_product": true,
+      "integration_path": "stored activity_cache -> overlap-window replacement -> accounting -> DQ-approved checkpoint",
+      "verification": "AUTOMATED_LOCAL_AND_OR_MOCK_CONTRACT",
+      "tests": [
+        "tests.test_code_integration::test_acquisition_to_publication_api_and_failed_refresh",
+        "tests.test_source_contracts::test_incremental_replaces_revisions_and_deleted_rows"
+      ],
+      "boundary": "Publisher revisions/deletions and duplicate failures covered.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C15",
+      "name": "Exclusive writer / interruption recovery",
+      "source_paths": [
+        "src/maritime/governance.py",
+        "src/maritime/pipeline.py"
+      ],
+      "scope": "required_local",
+      "required_for_current_local_product": true,
+      "integration_path": "exclusive_run -> run identity -> recovery receipt -> verified idempotent return",
+      "verification": "AUTOMATED_LOCAL_AND_OR_MOCK_CONTRACT",
+      "tests": [
+        "tests.test_governance::test_fail_closed_publication_idempotency_recovery_and_audit"
+      ],
+      "boundary": "Lock/recovery tests use temporary roots.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C16",
+      "name": "Local CLI orchestration",
+      "source_paths": [
+        "src/maritime/cli.py",
+        "src/maritime/pipeline.py",
+        "scripts/run_live.py"
+      ],
+      "scope": "required_local",
+      "required_for_current_local_product": true,
+      "integration_path": "cli.main run arguments -> pipeline.run -> _run stages -> report/result/failure",
+      "verification": "AUTOMATED_LOCAL_AND_OR_MOCK_CONTRACT",
+      "tests": [
+        "tests.test_e2e::test_full_pipeline_api_override_and_recovery",
+        "tests.test_startup::test_invalid_configuration_is_retained",
+        "tests.test_startup::test_gate_initialization_failure_is_retained"
+      ],
+      "boundary": "Pipeline task/result path executed; CLI wrapper inspected/imported. No unrestricted CLI run.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C17",
+      "name": "Scheduled acquisition",
+      "source_paths": [
+        ".github/workflows/ci.yml",
+        ".github/workflows/fabric.yml",
+        ".github/workflows/azure-ml.yml"
+      ],
+      "scope": "optional",
+      "required_for_current_local_product": false,
+      "integration_path": "No recurring scheduler in existing scope",
+      "verification": "STATIC_SCOPE_REVIEW",
+      "tests": [],
+      "boundary": "Manual orchestration retained.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C18",
+      "name": "API product endpoints / OpenAPI",
+      "source_paths": [
+        "src/maritime/api.py",
+        "src/maritime/http_limits.py"
+      ],
+      "scope": "required_local",
+      "required_for_current_local_product": true,
+      "integration_path": "create_app routes -> verified_read -> Store/AzureStore approved snapshots",
+      "verification": "AUTOMATED_LOCAL_AND_OR_MOCK_CONTRACT",
+      "tests": [
+        "tests.test_code_integration::test_api_cloud_dependency_errors_are_redacted_503[/ready]",
+        "tests.test_code_integration::test_api_cloud_dependency_errors_are_redacted_503[/ports]",
+        "tests.test_code_integration::test_api_cloud_dependency_errors_are_redacted_503[/audit]",
+        "tests.test_code_integration::test_api_cloud_dependency_errors_are_redacted_503[/metrics]",
+        "tests.test_code_integration::test_api_cloud_dependency_errors_are_redacted_503[/run-report]",
+        "tests.test_e2e::test_full_pipeline_api_override_and_recovery"
+      ],
+      "boundary": "In-process TestClient; no server launched.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C19",
+      "name": "Local key auth / request limits",
+      "source_paths": [
+        "src/maritime/api.py",
+        "src/maritime/http_limits.py",
+        ".env.example"
+      ],
+      "scope": "required_local",
+      "required_for_current_local_product": true,
+      "integration_path": "key/role dependencies -> body limits -> review/outcome audit",
+      "verification": "AUTOMATED_LOCAL_AND_OR_MOCK_CONTRACT",
+      "tests": [
+        "tests.test_production_controls::test_api_large_and_chunked_requests_are_rejected",
+        "tests.test_startup::test_startup_requires_auth_and_separates_roles"
+      ],
+      "boundary": "Test-only credentials, no credential values read or emitted.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C20",
+      "name": "Liveness / readiness",
+      "source_paths": [
+        "src/maritime/api.py",
+        "src/maritime/store.py",
+        "compose.demo.yml"
+      ],
+      "scope": "required_local",
+      "required_for_current_local_product": true,
+      "integration_path": "health/ready -> approved read/freshness/dependency response",
+      "verification": "AUTOMATED_LOCAL_AND_OR_MOCK_CONTRACT",
+      "tests": [
+        "tests.test_code_integration::test_api_cloud_dependency_errors_are_redacted_503[/ready]",
+        "tests.test_code_integration::test_api_cloud_dependency_errors_are_redacted_503[/ports]",
+        "tests.test_code_integration::test_api_cloud_dependency_errors_are_redacted_503[/audit]",
+        "tests.test_code_integration::test_api_cloud_dependency_errors_are_redacted_503[/metrics]",
+        "tests.test_code_integration::test_api_cloud_dependency_errors_are_redacted_503[/run-report]",
+        "tests.test_startup::test_startup_requires_auth_and_separates_roles"
+      ],
+      "boundary": "Liveness survives storage outage; freshness remains enforced.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C21",
+      "name": "Activity stress / early warning",
+      "source_paths": [
+        "src/maritime/intelligence.py",
+        "src/maritime/pipeline.py",
+        "configs/pipeline.json"
+      ],
+      "scope": "required_local",
+      "required_for_current_local_product": true,
+      "integration_path": "activity -> congestion/history -> latest states -> disruptions/early_warning",
+      "verification": "AUTOMATED_LOCAL_AND_OR_MOCK_CONTRACT",
+      "tests": [
+        "tests.test_e2e::test_full_pipeline_api_override_and_recovery",
+        "tests.test_intelligence::test_no_future_leakage_and_proxy_persistence"
+      ],
+      "boundary": "Derived activity stress, never directly measured waiting/dwell.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C22",
+      "name": "Network / propagation / exposure",
+      "source_paths": [
+        "src/maritime/intelligence.py",
+        "configs/pipeline.json"
+      ],
+      "scope": "required_local",
+      "required_for_current_local_product": true,
+      "integration_path": "validated ports/routes/states -> network_state -> propagate -> exposure/API",
+      "verification": "AUTOMATED_LOCAL_AND_OR_MOCK_CONTRACT",
+      "tests": [
+        "tests.test_intelligence::test_network_closure_and_temporal_propagation"
+      ],
+      "boundary": "Default topology remains simulated.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C23",
+      "name": "Shipment scenarios / SLA simulation",
+      "source_paths": [
+        "src/maritime/scenarios.py",
+        "configs/pipeline.json"
+      ],
+      "scope": "required_local",
+      "required_for_current_local_product": true,
+      "integration_path": "graph -> seeded shipments -> evaluate -> simulated SLA risk",
+      "verification": "AUTOMATED_LOCAL_AND_OR_MOCK_CONTRACT",
+      "tests": [
+        "tests.test_intelligence::test_scenarios_reproducible_and_counterfactuals"
+      ],
+      "boundary": "No observed commercial shipment performance claim.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C24",
+      "name": "Interventions / decisions / explanations",
+      "source_paths": [
+        "src/maritime/scenarios.py",
+        "src/maritime/pipeline.py"
+      ],
+      "scope": "required_local",
+      "required_for_current_local_product": true,
+      "integration_path": "evaluated interventions -> rank -> decisions -> published API",
+      "verification": "AUTOMATED_LOCAL_AND_OR_MOCK_CONTRACT",
+      "tests": [
+        "tests.test_code_integration::test_forecasts_are_supplemental_and_failure_preserves_publication",
+        "tests.test_intelligence::test_scenarios_reproducible_and_counterfactuals"
+      ],
+      "boundary": "Forecast changes do not affect recommendation ranking.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C25",
+      "name": "Review / outcome / learning audit",
+      "source_paths": [
+        "src/maritime/api.py",
+        "src/maritime/feedback.py",
+        "src/maritime/store.py"
+      ],
+      "scope": "required_local",
+      "required_for_current_local_product": true,
+      "integration_path": "API review/outcome -> append-only audit -> export_feedback -> validation -> destination persistence",
+      "verification": "AUTOMATED_LOCAL_AND_OR_MOCK_CONTRACT",
+      "tests": [
+        "tests.test_production_controls::test_response_pins_decision_release_and_audit_during_publication[decisions]",
+        "tests.test_production_controls::test_response_pins_decision_release_and_audit_during_publication[review]",
+        "tests.test_production_controls::test_response_pins_decision_release_and_audit_during_publication[outcome]",
+        "tests.test_production_controls::test_feedback_real_destination_replay_and_atomic_conflict"
+      ],
+      "boundary": "Observed labels cannot be attached to simulated shipments.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C26",
+      "name": "Local model training / evaluation / artifact registry",
+      "source_paths": [
+        "src/maritime/ml.py",
+        "src/maritime/ml_contract.py"
+      ],
+      "scope": "required_local",
+      "required_for_current_local_product": true,
+      "integration_path": "observed activity -> temporal features/evaluation -> artifact -> predictions -> Gold",
+      "verification": "AUTOMATED_LOCAL_AND_OR_MOCK_CONTRACT",
+      "tests": [
+        "tests.test_ml_genai::test_ml_cannot_train_on_simulation",
+        "tests.test_public_replay::test_retained_public_data_end_to_end_and_model_loading"
+      ],
+      "boundary": "Research port-call prediction only; not commercial SLA ML.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C27",
+      "name": "Forecast-to-decision influence",
+      "source_paths": [
+        "src/maritime/pipeline.py",
+        "src/maritime/scenarios.py"
+      ],
+      "scope": "deferred",
+      "required_for_current_local_product": false,
+      "integration_path": "No forecast-to-ranking connection; explicit NOT_USED_FOR_RANKING and supplemental evidence only",
+      "verification": "AUTOMATED_LOCAL_AND_OR_MOCK_CONTRACT",
+      "tests": [
+        "tests.test_code_integration::test_forecasts_are_supplemental_and_failure_preserves_publication",
+        "tests.test_code_integration::test_prediction_return_to_fabric_decisions_and_serving_contract"
+      ],
+      "boundary": "No coupling introduced or claimed.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C28",
+      "name": "Observed shipment SLA ML",
+      "source_paths": [
+        "src/maritime/ml.py",
+        "src/maritime/ml_contract.py",
+        "configs/azure.json"
+      ],
+      "scope": "deferred",
+      "required_for_current_local_product": false,
+      "integration_path": "Observed shipment-SLA model intentionally absent; production feature boundary rejects simulated activity",
+      "verification": "AUTOMATED_LOCAL_AND_OR_MOCK_CONTRACT",
+      "tests": [
+        "tests.test_azure_contracts::test_synthetic_data_rejected_at_production_ml_boundary"
+      ],
+      "boundary": "Representative lawful observed shipment labels remain unavailable.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C29",
+      "name": "Fabric notebooks / Delta runtime",
+      "source_paths": [
+        "src/maritime/fabric_runtime.py",
+        "fabric/notebooks",
+        "scripts/build_fabric_assets.py"
+      ],
+      "scope": "conditional_cloud",
+      "required_for_current_local_product": false,
+      "integration_path": "parameterized notebooks -> fabric_gate -> Bronze/Silver/Gold/acceptance/import runtime -> Delta boundary",
+      "verification": "AUTOMATED_LOCAL_AND_OR_MOCK_CONTRACT",
+      "tests": [
+        "tests.test_code_integration::test_fabric_task_dependency_retry_receipts_and_run_identity",
+        "tests.test_code_integration::test_prediction_return_to_fabric_decisions_and_serving_contract",
+        "tests.test_fabric_assets::test_notebooks_are_connected_to_runtime_and_parameterized",
+        "tests.test_fabric_assets::test_generated_notebooks_match_retained_assets"
+      ],
+      "boundary": "Actual Spark/Delta engine execution and multi-table runtime behavior not verified.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C30",
+      "name": "Fabric DataPipeline deployment",
+      "source_paths": [
+        "scripts/deploy_fabric.py",
+        ".github/workflows/fabric.yml"
+      ],
+      "scope": "conditional_cloud",
+      "required_for_current_local_product": false,
+      "integration_path": "Fabric identity -> REST item/job requests -> bounded retries/polling -> four-stage notebook dependency definition",
+      "verification": "AUTOMATED_LOCAL_AND_OR_MOCK_CONTRACT",
+      "tests": [
+        "tests.test_code_integration::test_fabric_rest_identity_retry_polling_and_timeout_contract"
+      ],
+      "boundary": "Mock HTTP contract plus static deployment-definition inspection; no item deployment.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C31",
+      "name": "Azure ML lifecycle / promotion",
+      "source_paths": [
+        "scripts/azure_ml.py",
+        "src/maritime/azure_ml_job.py",
+        "configs/azure.json",
+        "azure/ml/conda.yml",
+        ".github/workflows/azure-ml.yml"
+      ],
+      "scope": "conditional_cloud",
+      "required_for_current_local_product": false,
+      "integration_path": "Azure config -> identity/MLClient; features -> train/evaluate/batch/monitor -> promotion contract",
+      "verification": "AUTOMATED_LOCAL_AND_OR_MOCK_CONTRACT",
+      "tests": [
+        "tests.test_azure_contracts::test_azure_ml_job_logic_preserves_model_and_classifications",
+        "tests.test_code_integration::test_azure_ml_configuration_precedes_sdk_and_maps_identity"
+      ],
+      "boundary": "SDK client fake and real local job functions; no Azure ML job/registration/promotion.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C32",
+      "name": "Fabric–AML feature/prediction bridge",
+      "source_paths": [
+        "scripts/fabric_ml_bridge.py",
+        "src/maritime/ml_contract.py",
+        "src/maritime/fabric_runtime.py"
+      ],
+      "scope": "conditional_cloud",
+      "required_for_current_local_product": false,
+      "integration_path": "export_features/load_features -> approved prediction manifest -> import_predictions -> supplemental decisions/lineage -> AzureStore",
+      "verification": "AUTOMATED_LOCAL_AND_OR_MOCK_CONTRACT",
+      "tests": [
+        "tests.test_azure_contracts::test_fabric_mode_exports_features_instead_of_training",
+        "tests.test_code_integration::test_prediction_return_to_fabric_decisions_and_serving_contract",
+        "tests.test_governance::test_prediction_import_contract_adverse_cases"
+      ],
+      "boundary": "Real importer/manifest/serving code with mocked Delta/Blob; OneLake transfer and service lifecycle unverified.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C33",
+      "name": "Azure audit–Fabric feedback bridge",
+      "source_paths": [
+        "scripts/fabric_feedback.py",
+        "src/maritime/feedback.py",
+        "src/maritime/fabric_runtime.py",
+        "fabric/notebooks/import_feedback.ipynb"
+      ],
+      "scope": "conditional_cloud",
+      "required_for_current_local_product": false,
+      "integration_path": "AzureStore audits -> export_feedback/validate_feedback -> Fabric feedback packet -> Delta MERGE/readback interface",
+      "verification": "AUTOMATED_LOCAL_AND_OR_MOCK_CONTRACT",
+      "tests": [
+        "tests.test_e2e::test_full_pipeline_api_override_and_recovery",
+        "tests.test_production_controls::test_feedback_real_destination_replay_and_atomic_conflict"
+      ],
+      "boundary": "Local SQLite destination executed. Fabric MERGE and OneLake transfer inspected, not executed on Spark.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C34",
+      "name": "Azure OpenAI grounded extraction",
+      "source_paths": [
+        "src/maritime/genai.py",
+        "src/maritime/azure_security.py",
+        "src/maritime/cli.py"
+      ],
+      "scope": "conditional_cloud",
+      "required_for_current_local_product": false,
+      "integration_path": "extract -> endpoint/key or identity -> bounded AOAI request -> grounded ANTICIPATED signals -> audit interface",
+      "verification": "AUTOMATED_LOCAL_AND_OR_MOCK_CONTRACT",
+      "tests": [
+        "tests.test_azure_contracts::test_azure_openai_request_and_grounding",
+        "tests.test_production_controls::test_aoai_bounded_retry_timeout_and_no_fabricated_fallback"
+      ],
+      "boundary": "Mocked HTTP, never a fabricated live response.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C35",
+      "name": "Entra JWT / application roles",
+      "source_paths": [
+        "src/maritime/azure_security.py",
+        "src/maritime/api.py",
+        "azure/main.bicep"
+      ],
+      "scope": "conditional_cloud",
+      "required_for_current_local_product": false,
+      "integration_path": "API auth -> JWKS/JWT signature/audience/expiry/tenant/role checks",
+      "verification": "AUTOMATED_LOCAL_AND_OR_MOCK_CONTRACT",
+      "tests": [
+        "tests.test_azure_contracts::test_entra_signature_audience_expiry_and_roles"
+      ],
+      "boundary": "Locally generated signed JWT and mocked key lookup; tenant grants unverified.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C36",
+      "name": "Azure Blob serving / audit backend",
+      "source_paths": [
+        "src/maritime/azure_store.py",
+        "scripts/publish_azure.py",
+        "azure/main.bicep"
+      ],
+      "scope": "conditional_cloud",
+      "required_for_current_local_product": false,
+      "integration_path": "configuration -> credential -> Blob clients -> immutable products/readback -> pointer -> approved API reads and audit",
+      "verification": "AUTOMATED_LOCAL_AND_OR_MOCK_CONTRACT",
+      "tests": [
+        "tests.test_azure_contracts::test_azure_serving_checksum_publication_and_audit_isolation",
+        "tests.test_code_integration::test_blob_interrupted_pointer_retry_and_corrupt_readback",
+        "tests.test_code_integration::test_blob_read_pins_publication",
+        "tests.test_code_integration::test_blob_configuration_rejected_before_authentication[]",
+        "tests.test_code_integration::test_blob_configuration_rejected_before_authentication[http://account.blob.core.windows.net]",
+        "tests.test_code_integration::test_blob_configuration_rejected_before_authentication[https://user:secret@account.example]",
+        "tests.test_code_integration::test_blob_configuration_rejected_before_authentication[https://account.example/?sig=test]",
+        "tests.test_code_integration::test_blob_configuration_rejected_before_authentication[https://account.example/container]",
+        "tests.test_code_integration::test_blob_identity_configuration_and_timeouts"
+      ],
+      "boundary": "In-memory Blob SDK boundary; no Azure storage live access or concurrency/ETag guarantee claimed.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C37",
+      "name": "Azure infrastructure / managed identity / Key Vault",
+      "source_paths": [
+        "azure/main.bicep",
+        "azure/main.json",
+        "src/maritime/azure_security.py",
+        "scripts/deployment_preflight.ps1"
+      ],
+      "scope": "conditional_cloud",
+      "required_for_current_local_product": false,
+      "integration_path": "Bicep configuration -> managed identity/account endpoints -> credential/Key Vault/telemetry integration points",
+      "verification": "AUTOMATED_LOCAL_AND_OR_MOCK_CONTRACT",
+      "tests": [
+        "tests.test_code_integration::test_blob_identity_configuration_and_timeouts",
+        "tests.test_code_integration::test_azure_ml_configuration_precedes_sdk_and_maps_identity"
+      ],
+      "boundary": "Application auth/config contracts tested; template deployment, Key Vault and telemetry reception not executed.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C38",
+      "name": "Cloud immutable retention",
+      "source_paths": [
+        "azure/main.bicep",
+        "docs/operations/deployment_acceptance.md"
+      ],
+      "scope": "external_operational",
+      "required_for_current_local_product": false,
+      "integration_path": "Retention policy template -> owner-approved cloud policy",
+      "verification": "STATIC_SCOPE_REVIEW",
+      "tests": [],
+      "boundary": "Duration/locking/denial/expiry verification remains external.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C39",
+      "name": "SQL views / DAX / Power Query",
+      "source_paths": [
+        "sql/reporting.sql",
+        "fabric/powerbi/measures.dax",
+        "fabric/powerbi/local-import.pq"
+      ],
+      "scope": "required_reporting_assets",
+      "required_for_current_local_product": true,
+      "integration_path": "published run-scoped Gold -> SQL views/Power Query/DAX references",
+      "verification": "AUTOMATED_LOCAL_AND_OR_MOCK_CONTRACT",
+      "tests": [
+        "tests.test_production_controls::test_powerbi_schemas_and_governed_field_bindings"
+      ],
+      "boundary": "Generated data contracts tested; SQL Server/DAX/M engine execution unverified.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C40",
+      "name": "PBIR report pages",
+      "source_paths": [
+        "scripts/build_powerbi.py",
+        "fabric/powerbi/Maritime.Report",
+        "configs/powerbi_schemas"
+      ],
+      "scope": "required_reporting_assets",
+      "required_for_current_local_product": true,
+      "integration_path": "build_powerbi -> 29 PBIR/schema assets -> published mart field bindings",
+      "verification": "AUTOMATED_LOCAL_AND_OR_MOCK_CONTRACT",
+      "tests": [
+        "tests.test_production_controls::test_powerbi_schemas_and_governed_field_bindings"
+      ],
+      "boundary": "No Desktop rendering or service binding claimed.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C41",
+      "name": "Semantic model / refresh / RLS / publishing",
+      "source_paths": [
+        "fabric/powerbi/Maritime.Report/definition.pbir.template",
+        "docs/reporting.md"
+      ],
+      "scope": "external_operational",
+      "required_for_current_local_product": false,
+      "integration_path": "Semantic model binding/refresh/RLS requires target Power BI environment",
+      "verification": "STATIC_SCOPE_REVIEW",
+      "tests": [],
+      "boundary": "Placeholder template remains explicit; no published dashboard claimed.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C42",
+      "name": "Dedicated web dashboard",
+      "source_paths": [
+        "src/maritime/api.py",
+        "docs/requirements/feature_traceability.md"
+      ],
+      "scope": "optional",
+      "required_for_current_local_product": false,
+      "integration_path": "No dedicated browser UI required by implemented scope; API/OpenAPI available",
+      "verification": "STATIC_SCOPE_REVIEW",
+      "tests": [],
+      "boundary": "No new UI introduced.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C43",
+      "name": "Logs / metrics / request correlation",
+      "source_paths": [
+        "src/maritime/api.py",
+        "src/maritime/pipeline.py",
+        "src/maritime/azure_security.py"
+      ],
+      "scope": "required_local",
+      "required_for_current_local_product": true,
+      "integration_path": "pipeline reports/reliability -> API metrics; middleware -> correlation and counters",
+      "verification": "AUTOMATED_LOCAL_AND_OR_MOCK_CONTRACT",
+      "tests": [
+        "tests.test_code_integration::test_api_cloud_dependency_errors_are_redacted_503[/ready]",
+        "tests.test_code_integration::test_api_cloud_dependency_errors_are_redacted_503[/ports]",
+        "tests.test_code_integration::test_api_cloud_dependency_errors_are_redacted_503[/audit]",
+        "tests.test_code_integration::test_api_cloud_dependency_errors_are_redacted_503[/metrics]",
+        "tests.test_code_integration::test_api_cloud_dependency_errors_are_redacted_503[/run-report]",
+        "tests.test_e2e::test_full_pipeline_api_override_and_recovery"
+      ],
+      "boundary": "Local output contracts tested; Azure Monitor reception unverified.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C44",
+      "name": "Alert rules / delivery / on-call",
+      "source_paths": [
+        "docs/operations/production_closure.md",
+        "azure/main.bicep"
+      ],
+      "scope": "external_operational",
+      "required_for_current_local_product": false,
+      "integration_path": "No configured alert delivery/action group/on-call path in current scope",
+      "verification": "STATIC_SCOPE_REVIEW",
+      "tests": [],
+      "boundary": "No delivered notification claim; owners/routing require external decisions.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C45",
+      "name": "Backup / restore / publication integrity",
+      "source_paths": [
+        "src/maritime/recovery.py",
+        "src/maritime/store.py",
+        "src/maritime/cli.py"
+      ],
+      "scope": "required_local",
+      "required_for_current_local_product": true,
+      "integration_path": "backup -> checksummed snapshot -> fresh restore -> audit/publication verification",
+      "verification": "AUTOMATED_LOCAL_AND_OR_MOCK_CONTRACT",
+      "tests": [
+        "tests.test_production_controls::test_actual_backup_restore_and_tamper"
+      ],
+      "boundary": "Disposable data only; not a backup/restore of operational data.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C46",
+      "name": "Offsite DR / RPO / RTO / failover",
+      "source_paths": [
+        "docs/operations/production_closure.md"
+      ],
+      "scope": "external_operational",
+      "required_for_current_local_product": false,
+      "integration_path": "Offsite DR/RPO/RTO/failover remains unconfigured",
+      "verification": "STATIC_SCOPE_REVIEW",
+      "tests": [],
+      "boundary": "No target DR or retention changes.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C47",
+      "name": "Docker / Compose local packaging",
+      "source_paths": [
+        "docker/Dockerfile",
+        "docker-compose.yml",
+        "compose.demo.yml",
+        "scripts/docker_demo.py"
+      ],
+      "scope": "packaging",
+      "required_for_current_local_product": true,
+      "integration_path": "Docker/Compose config -> existing packaged app entry points; wheel/sdist source contracts",
+      "verification": "AUTOMATED_LOCAL_AND_OR_MOCK_CONTRACT",
+      "tests": [
+        "tests.test_startup::test_startup_requires_auth_and_separates_roles"
+      ],
+      "boundary": "Package build verified; Docker build/engine/Compose execution deliberately not performed.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C48",
+      "name": "Testing / security / evidence packaging",
+      "source_paths": [
+        "tests",
+        "src/maritime/release_evidence.py",
+        "scripts/production_release.py",
+        "scripts/package_readiness.py",
+        "pyproject.toml",
+        "uv.lock"
+      ],
+      "scope": "required_local",
+      "required_for_current_local_product": true,
+      "integration_path": "locked clean environment -> pytest/Ruff/build -> source-bound evidence",
+      "verification": "AUTOMATED_LOCAL_AND_OR_MOCK_CONTRACT",
+      "tests": [
+        "tests.test_production_controls::test_release_rejects_source_mismatch"
+      ],
+      "boundary": "85 tests pass. Old .venv defects preserved; clean validation environment passes. No fresh vulnerability-feed scan.",
+      "live_runtime_verified": false
+    },
+    {
+      "id": "C49",
+      "name": "GitHub CI / deployment workflows",
+      "source_paths": [
+        ".github/workflows/ci.yml",
+        ".github/workflows/fabric.yml",
+        ".github/workflows/azure-ml.yml"
+      ],
+      "scope": "external_operational",
+      "required_for_current_local_product": false,
+      "integration_path": "CI source -> same pytest/lint/format/build/notebook checks; manual deployment workflows",
+      "verification": "AUTOMATED_LOCAL_AND_OR_MOCK_CONTRACT",
+      "tests": [
+        "tests.test_fabric_assets::test_generated_notebooks_match_retained_assets"
+      ],
+      "boundary": "Local CI-equivalent checks executed; GitHub workflow/deployment execution unverified.",
+      "live_runtime_verified": false
+    }
+  ]
+}

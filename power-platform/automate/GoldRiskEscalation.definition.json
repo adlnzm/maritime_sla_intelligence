@@ -1,0 +1,166 @@
+{
+  "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "$connections": {
+      "type": "Object",
+      "defaultValue": {}
+    }
+  },
+  "triggers": {
+    "PollGoldTransitions": {
+      "type": "Recurrence",
+      "recurrence": {
+        "frequency": "Minute",
+        "interval": 5
+      },
+      "runtimeConfiguration": {
+        "concurrency": {
+          "runs": 1
+        }
+      }
+    }
+  },
+  "actions": {
+    "Claim": {
+      "type": "ApiConnection",
+      "inputs": {
+        "host": {
+          "connection": {
+            "name": "@parameters('$connections')['maritimeoperations']['connectionId']"
+          }
+        },
+        "method": "post",
+        "path": "/operations/events/claim",
+        "body": {},
+        "retryPolicy": {
+          "type": "Fixed",
+          "count": 3,
+          "interval": "PT10S"
+        }
+      }
+    },
+    "IfEvent": {
+      "type": "If",
+      "expression": "@not(equals(body('Claim')?['event'],null))",
+      "runAfter": {
+        "Claim": [
+          "Succeeded"
+        ]
+      },
+      "actions": {
+        "HasRecipients": {
+          "type": "If",
+          "expression": "@greater(length(body('Claim')?['event']?['recipients']),0)",
+          "actions": {
+            "Send": {
+              "type": "ApiConnection",
+              "inputs": {
+                "host": {
+                  "connection": {
+                    "name": "@parameters('$connections')['office365']['connectionId']"
+                  }
+                },
+                "method": "post",
+                "path": "/v2/Mail",
+                "body": {
+                  "To": "@join(body('Claim')?['event']?['recipients'],';')",
+                  "Subject": "@concat('Maritime ', body('Claim')?['event']?['risk_level'],' — ', body('Claim')?['event']?['port_name'],' — event ', body('Claim')?['event']?['event_id'])",
+                  "Body": "@concat('Week: ', body('Claim')?['event']?['week_start'], '<br>Drivers: ', join(body('Claim')?['event']?['risk_drivers'], ', '), '<br>Source latest: ', body('Claim')?['event']?['source_latest_observation'], '<br>Freshness: ', body('Claim')?['event']?['freshness_status'], '<br>Review reference: ', body('Claim')?['event']?['review_reference'], '<br>Classification: ', body('Claim')?['event']?['classification'])"
+                },
+                "retryPolicy": {
+                  "type": "None"
+                }
+              }
+            },
+            "RecordSuccess": {
+              "type": "ApiConnection",
+              "inputs": {
+                "host": {
+                  "connection": {
+                    "name": "@parameters('$connections')['maritimeoperations']['connectionId']"
+                  }
+                },
+                "method": "post",
+                "path": "@concat('/operations/events/',body('Claim')?['event']?['event_id'],'/result')",
+                "body": {
+                  "lease_token": "@body('Claim')?['event']?['lease_token']",
+                  "outcome": "SENT",
+                  "failure_reason": null
+                },
+                "retryPolicy": {
+                  "type": "Fixed",
+                  "count": 3,
+                  "interval": "PT10S"
+                }
+              },
+              "runAfter": {
+                "Send": [
+                  "Succeeded"
+                ]
+              }
+            },
+            "RecordFailure": {
+              "type": "ApiConnection",
+              "inputs": {
+                "host": {
+                  "connection": {
+                    "name": "@parameters('$connections')['maritimeoperations']['connectionId']"
+                  }
+                },
+                "method": "post",
+                "path": "@concat('/operations/events/',body('Claim')?['event']?['event_id'],'/result')",
+                "body": {
+                  "lease_token": "@body('Claim')?['event']?['lease_token']",
+                  "outcome": "FAILED",
+                  "failure_reason": "NOTIFICATION_CONNECTOR_FAILED"
+                },
+                "retryPolicy": {
+                  "type": "Fixed",
+                  "count": 3,
+                  "interval": "PT10S"
+                }
+              },
+              "runAfter": {
+                "Send": [
+                  "Failed",
+                  "TimedOut"
+                ]
+              }
+            }
+          },
+          "else": {
+            "actions": {
+              "RecordException": {
+                "type": "ApiConnection",
+                "inputs": {
+                  "host": {
+                    "connection": {
+                      "name": "@parameters('$connections')['maritimeoperations']['connectionId']"
+                    }
+                  },
+                  "method": "post",
+                  "path": "@concat('/operations/events/',body('Claim')?['event']?['event_id'],'/result')",
+                  "body": {
+                    "lease_token": "@body('Claim')?['event']?['lease_token']",
+                    "outcome": "EXCEPTION",
+                    "failure_reason": "RECIPIENTS_NOT_CONFIGURED"
+                  },
+                  "retryPolicy": {
+                    "type": "Fixed",
+                    "count": 3,
+                    "interval": "PT10S"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "else": {
+        "actions": {}
+      }
+    }
+  },
+  "outputs": {}
+}

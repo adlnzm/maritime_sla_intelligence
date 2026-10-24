@@ -1,0 +1,3391 @@
+{
+  "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+  "release": {
+    "contract_version": "1.0",
+    "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+    "release_id": "62db080ed28d05d5ed0d1159a94afaed046952e4f43077e510a7ede43ef51e5b",
+    "status": "PASS_WITH_WARNINGS",
+    "scope": "LOCAL_ANALYTICAL",
+    "execution_mode": "REPLAY",
+    "as_of": "2026-10-07",
+    "source_latest_by_port": {
+      "port1201": "2026-10-02",
+      "port1114": "2026-10-02",
+      "port815": "2026-10-02",
+      "port664": "2026-10-02",
+      "port744": "2026-10-02",
+      "port1188": "2026-10-02"
+    },
+    "approved_at": "2026-10-17T07:19:18.586960+00:00",
+    "code": {
+      "git_commit": "UNAVAILABLE",
+      "working_tree_dirty": null,
+      "code_fingerprint": "5f9ff99f330f6f5054071fb62af28a27963437989cb6aa1f136dc2f3da64c906",
+      "python": "3.11.17",
+      "dependencies": {
+        "numpy": "2.4.6",
+        "pandas": "2.3.3",
+        "scikit-learn": "1.9.1",
+        "pydantic": "2.13.5"
+      }
+    },
+    "contract_fingerprint": "6f2853e4a8c2ec8371012e0704bf3b7c13eb1022817823ddf075dfbfe0912e8b",
+    "stage_evidence": {
+      "acquisition": {
+        "status": "PASS_WITH_WARNINGS",
+        "execution_id": "1731a8f309a27a5f0cbae553",
+        "started_at": "2026-10-17T07:19:11.313299+00:00",
+        "attempt": 1,
+        "checks": {
+          "nonempty_critical_sources": true,
+          "registry_version": true,
+          "source_failure_policy": true
+        },
+        "failed_rules": [],
+        "warnings": [
+          "REPLAY_NOT_LIVE",
+          "OPTIONAL_SOURCE_UNAVAILABLE"
+        ],
+        "counts": {
+          "received_ports": 6,
+          "received_activity": 1416
+        },
+        "completed_at": "2026-10-17T07:19:11.691779+00:00",
+        "duration_seconds": 0.37863387800001647
+      },
+      "bronze": {
+        "status": "PASS",
+        "execution_id": "579bd3819dcab1bc4bf975af",
+        "started_at": "2026-10-17T07:19:11.702443+00:00",
+        "attempt": 1,
+        "checks": {
+          "evidence_retained": true,
+          "payload_hashes_verified": true
+        },
+        "failed_rules": [],
+        "warnings": [],
+        "counts": {
+          "payloads": 1
+        },
+        "completed_at": "2026-10-17T07:19:11.718254+00:00",
+        "duration_seconds": 0.015934301999948275
+      },
+      "silver": {
+        "status": "PASS",
+        "execution_id": "111644e468d2c371d55474cb",
+        "started_at": "2026-10-17T07:19:11.734998+00:00",
+        "attempt": 1,
+        "checks": {
+          "canonical_dq": true,
+          "record_accounting": true
+        },
+        "failed_rules": [],
+        "warnings": [],
+        "counts": {
+          "received": 1452,
+          "accepted": 1452,
+          "rejected": 0,
+          "quarantined": 0,
+          "balanced": true
+        },
+        "completed_at": "2026-10-17T07:19:11.873966+00:00",
+        "duration_seconds": 0.13908742299997812
+      },
+      "metrics": {
+        "status": "PASS",
+        "execution_id": "4c7525f5caac9df300bb2be7",
+        "started_at": "2026-10-17T07:19:11.888073+00:00",
+        "attempt": 1,
+        "checks": {
+          "independent_current_metrics": true,
+          "port_coverage": true
+        },
+        "failed_rules": [],
+        "warnings": [],
+        "counts": {},
+        "completed_at": "2026-10-17T07:19:12.344526+00:00",
+        "duration_seconds": 0.4565981860000079
+      },
+      "scenario": {
+        "status": "PASS",
+        "execution_id": "3323fef4a21d326841dee621",
+        "started_at": "2026-10-17T07:19:12.788785+00:00",
+        "attempt": 1,
+        "checks": {
+          "shipment_action_accounting": true,
+          "all_outputs_simulated": true
+        },
+        "failed_rules": [],
+        "warnings": [],
+        "counts": {},
+        "completed_at": "2026-10-17T07:19:12.997681+00:00",
+        "duration_seconds": 0.20915593099999796
+      },
+      "features_ml": {
+        "status": "PASS_WITH_WARNINGS",
+        "execution_id": "74664df7d092f3dbdc6aac79",
+        "started_at": "2026-10-17T07:19:13.027831+00:00",
+        "attempt": 1,
+        "checks": {
+          "sla_not_trained": true,
+          "prediction_classification": true
+        },
+        "failed_rules": [],
+        "warnings": [
+          "LOCAL_RESEARCH_MODEL"
+        ],
+        "counts": {
+          "predictions": 6
+        },
+        "completed_at": "2026-10-17T07:19:14.115022+00:00",
+        "duration_seconds": 1.087331461999952
+      },
+      "gold": {
+        "status": "PASS",
+        "execution_id": "0a2e89ce5cc0f7040e5dbca4",
+        "started_at": "2026-10-17T07:19:14.348719+00:00",
+        "attempt": 1,
+        "checks": {
+          "dataset_contracts_and_independent_checks": true
+        },
+        "failed_rules": [],
+        "warnings": [],
+        "counts": {
+          "ports": {
+            "input": 6,
+            "persisted_expected": 6,
+            "invalid": 0
+          },
+          "activity": {
+            "input": 1416,
+            "persisted_expected": 1416,
+            "invalid": 0
+          },
+          "routes": {
+            "input": 30,
+            "persisted_expected": 30,
+            "invalid": 0
+          },
+          "congestion_history": {
+            "input": 1416,
+            "persisted_expected": 1416,
+            "invalid": 0
+          },
+          "congestion": {
+            "input": 6,
+            "persisted_expected": 6,
+            "invalid": 0
+          },
+          "network": {
+            "input": 30,
+            "persisted_expected": 30,
+            "invalid": 0
+          },
+          "exposure": {
+            "input": 0,
+            "persisted_expected": 0,
+            "invalid": 0
+          },
+          "scenarios": {
+            "input": 60,
+            "persisted_expected": 60,
+            "invalid": 0
+          },
+          "interventions": {
+            "input": 300,
+            "persisted_expected": 300,
+            "invalid": 0
+          },
+          "sla_risk": {
+            "input": 60,
+            "persisted_expected": 60,
+            "invalid": 0
+          },
+          "decisions": {
+            "input": 60,
+            "persisted_expected": 60,
+            "invalid": 0
+          },
+          "predictions": {
+            "input": 6,
+            "persisted_expected": 6,
+            "invalid": 0
+          },
+          "disruptions": {
+            "input": 0,
+            "persisted_expected": 0,
+            "invalid": 0
+          },
+          "early_warning": {
+            "input": 0,
+            "persisted_expected": 0,
+            "invalid": 0
+          },
+          "sources": {
+            "input": 6,
+            "persisted_expected": 6,
+            "invalid": 0
+          },
+          "data_quality": {
+            "input": 1,
+            "persisted_expected": 1,
+            "invalid": 0
+          },
+          "lineage": {
+            "input": 215,
+            "persisted_expected": 215,
+            "invalid": 0
+          },
+          "dim_location": {
+            "input": 6,
+            "persisted_expected": 6,
+            "invalid": 0
+          },
+          "dim_time": {
+            "input": 236,
+            "persisted_expected": 236,
+            "invalid": 0
+          },
+          "dim_intervention": {
+            "input": 5,
+            "persisted_expected": 5,
+            "invalid": 0
+          }
+        },
+        "completed_at": "2026-10-17T07:19:14.847365+00:00",
+        "duration_seconds": 0.49877826400000913
+      }
+    },
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "datasets": {
+      "ports": {
+        "rows": 6,
+        "sha256": "701038aafcb0c7f78c0bb053c3267ac25cf66287f5c4822955b5609053417b5f",
+        "classifications": [
+          "OBSERVED"
+        ]
+      },
+      "activity": {
+        "rows": 1416,
+        "sha256": "3efe6a188b92b1ed1cbd6340b03325c7813b61f13d272b017c7cd77a19d82199",
+        "classifications": [
+          "OBSERVED"
+        ]
+      },
+      "routes": {
+        "rows": 30,
+        "sha256": "ae31af6d2dfb960dfea75a8cc2be071663449e1010a1594f2157ce1e620169ba",
+        "classifications": [
+          "SIMULATED"
+        ]
+      },
+      "congestion_history": {
+        "rows": 1416,
+        "sha256": "71e085fa2b57673f31ad4afd633d60a4a70bcc63963053d0fd1974d36e370836",
+        "classifications": [
+          "DERIVED"
+        ]
+      },
+      "congestion": {
+        "rows": 6,
+        "sha256": "6c1c7721533cebcb815c8383742119c30b98c99b7e485b4689b4dda9baf3204b",
+        "classifications": [
+          "DERIVED"
+        ]
+      },
+      "network": {
+        "rows": 30,
+        "sha256": "0656e51ef599c2b9b0c32ef146c5b17f7a884c21f005abde965eaf248c2ae0d8",
+        "classifications": [
+          "SIMULATED"
+        ]
+      },
+      "exposure": {
+        "rows": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "classifications": []
+      },
+      "scenarios": {
+        "rows": 60,
+        "sha256": "bb7c8249fe8f8c1fd31237248a89cbdabd6636e3820eee838a050ff4b0967a30",
+        "classifications": [
+          "SIMULATED"
+        ]
+      },
+      "interventions": {
+        "rows": 300,
+        "sha256": "3a84f02c4c9f8ed8b3db87dabef606acf5690da0eb822804214cd3e00ac8acbb",
+        "classifications": [
+          "SIMULATED"
+        ]
+      },
+      "sla_risk": {
+        "rows": 60,
+        "sha256": "8d0087503e1efc5d1dbf2fc1ad83e18dc455d5b841c4abc32d07d53991df2e0f",
+        "classifications": [
+          "SIMULATED"
+        ]
+      },
+      "decisions": {
+        "rows": 60,
+        "sha256": "eaa9bacb0b243faa6495cec4ee3b8deae011fde4ef132e30af8d992a27b2addb",
+        "classifications": [
+          "SIMULATED"
+        ]
+      },
+      "predictions": {
+        "rows": 6,
+        "sha256": "f6c75f9ea64eec50d3ba802aa9f7f3d04bea387a8bdd33212fb5124922b877c4",
+        "classifications": [
+          "PREDICTED"
+        ]
+      },
+      "disruptions": {
+        "rows": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "classifications": []
+      },
+      "early_warning": {
+        "rows": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "classifications": []
+      },
+      "sources": {
+        "rows": 6,
+        "sha256": "00b73a465e0343774e2ada44fe6a791f52268283aa896f7033bf760f5cf7f9eb",
+        "classifications": [
+          "DERIVED"
+        ]
+      },
+      "data_quality": {
+        "rows": 1,
+        "sha256": "79edbb4183c188f7b865f5d79dd117b8faacebabc9f926a208e7467ee089e09f",
+        "classifications": [
+          "DERIVED"
+        ]
+      },
+      "lineage": {
+        "rows": 215,
+        "sha256": "019310e2939882e69c8bf7815a3b72dc312714eafb0ef747e5948cb42afceb1c",
+        "classifications": [
+          "DERIVED"
+        ]
+      },
+      "dim_location": {
+        "rows": 6,
+        "sha256": "19e01c4e227f39507f046bfcf3e2722934d73f218904a24727b0f285a0f1f07b",
+        "classifications": [
+          "OBSERVED"
+        ]
+      },
+      "dim_time": {
+        "rows": 236,
+        "sha256": "ffe19cbcdb4518cfe1679799f6580a5248d1f0207ae0eac47d41be88a0217fa8",
+        "classifications": [
+          "DERIVED"
+        ]
+      },
+      "dim_intervention": {
+        "rows": 5,
+        "sha256": "dca3863e6ae04c096d1fc506851c69a9cad0111347e69cc977ac83f74c0ba983",
+        "classifications": [
+          "SIMULATED"
+        ]
+      }
+    },
+    "industrial_release": {
+      "status": "BLOCKED",
+      "unevaluated_mandatory_controls": [
+        "fabric_runtime_and_readback",
+        "azure_ml_lifecycle_and_return",
+        "cloud_identity_and_least_privilege",
+        "raw_and_audit_retention_enforcement",
+        "production_slo_agreement_and_sustained_evidence"
+      ]
+    }
+  },
+  "total": 215,
+  "items": [
+    {
+      "lineage_id": "6d58d10db52f8d585c1f2ece",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "ports.classification",
+      "input_tables": [
+        "bronze"
+      ],
+      "source_ids": [
+        "portwatch_ports"
+      ],
+      "input_lineage_ids": [
+        "1c44bc66f5f1dcc8e724ad3eb28534fe0fa28da7178eea4851f42c36f8da2ed9"
+      ],
+      "transformation": "ports",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "2b4b5eede46af591ab582c17",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "ports.country",
+      "input_tables": [
+        "bronze"
+      ],
+      "source_ids": [
+        "portwatch_ports"
+      ],
+      "input_lineage_ids": [
+        "1c44bc66f5f1dcc8e724ad3eb28534fe0fa28da7178eea4851f42c36f8da2ed9"
+      ],
+      "transformation": "ports",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "27e9efa15b0e6d4a9127cb76",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "ports.latitude",
+      "input_tables": [
+        "bronze"
+      ],
+      "source_ids": [
+        "portwatch_ports"
+      ],
+      "input_lineage_ids": [
+        "1c44bc66f5f1dcc8e724ad3eb28534fe0fa28da7178eea4851f42c36f8da2ed9"
+      ],
+      "transformation": "ports",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "67207e7972e398b7a0b70a3e",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "ports.lineage_id",
+      "input_tables": [
+        "bronze"
+      ],
+      "source_ids": [
+        "portwatch_ports"
+      ],
+      "input_lineage_ids": [
+        "1c44bc66f5f1dcc8e724ad3eb28534fe0fa28da7178eea4851f42c36f8da2ed9"
+      ],
+      "transformation": "ports",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "78822b288138f674e11c0c7d",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "ports.longitude",
+      "input_tables": [
+        "bronze"
+      ],
+      "source_ids": [
+        "portwatch_ports"
+      ],
+      "input_lineage_ids": [
+        "1c44bc66f5f1dcc8e724ad3eb28534fe0fa28da7178eea4851f42c36f8da2ed9"
+      ],
+      "transformation": "ports",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "30bf27704d17175ef9024445",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "ports.name",
+      "input_tables": [
+        "bronze"
+      ],
+      "source_ids": [
+        "portwatch_ports"
+      ],
+      "input_lineage_ids": [
+        "1c44bc66f5f1dcc8e724ad3eb28534fe0fa28da7178eea4851f42c36f8da2ed9"
+      ],
+      "transformation": "ports",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "07a37b9c81d17795400eb86f",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "ports.port_id",
+      "input_tables": [
+        "bronze"
+      ],
+      "source_ids": [
+        "portwatch_ports"
+      ],
+      "input_lineage_ids": [
+        "1c44bc66f5f1dcc8e724ad3eb28534fe0fa28da7178eea4851f42c36f8da2ed9"
+      ],
+      "transformation": "ports",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "ffc34a653d921d3f748739ee",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "ports.retrieved_at",
+      "input_tables": [
+        "bronze"
+      ],
+      "source_ids": [
+        "portwatch_ports"
+      ],
+      "input_lineage_ids": [
+        "1c44bc66f5f1dcc8e724ad3eb28534fe0fa28da7178eea4851f42c36f8da2ed9"
+      ],
+      "transformation": "ports",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "6b595e587302e97dfe6e004f",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "ports.source_id",
+      "input_tables": [
+        "bronze"
+      ],
+      "source_ids": [
+        "portwatch_ports"
+      ],
+      "input_lineage_ids": [
+        "1c44bc66f5f1dcc8e724ad3eb28534fe0fa28da7178eea4851f42c36f8da2ed9"
+      ],
+      "transformation": "ports",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "fa55505a20380bd6e30535f6",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "ports.unlocode",
+      "input_tables": [
+        "bronze"
+      ],
+      "source_ids": [
+        "portwatch_ports"
+      ],
+      "input_lineage_ids": [
+        "1c44bc66f5f1dcc8e724ad3eb28534fe0fa28da7178eea4851f42c36f8da2ed9"
+      ],
+      "transformation": "ports",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "25d597dfb021ba6ee9cccdb8",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "activity.classification",
+      "input_tables": [
+        "bronze"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "activity",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "d52c1d59cf4a6fcfcb890006",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "activity.date",
+      "input_tables": [
+        "bronze"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "activity",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "ca1f51653dabcbefbaca1df2",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "activity.lineage_id",
+      "input_tables": [
+        "bronze"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "activity",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "fbec258729314be09ffbe55c",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "activity.port_id",
+      "input_tables": [
+        "bronze"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "activity",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "9110da10d6125dd865f95cb5",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "activity.retrieved_at",
+      "input_tables": [
+        "bronze"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "activity",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "8d0131c570b5f223dbf9651b",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "activity.source_id",
+      "input_tables": [
+        "bronze"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "activity",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "c78ddc7f1ec58a17549aa75b",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "activity.vessel_calls",
+      "input_tables": [
+        "bronze"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "activity",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "042d75c2150b5a2e761fde34",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "routes.available",
+      "input_tables": [
+        "bronze"
+      ],
+      "source_ids": [
+        "scenario_topology_v1"
+      ],
+      "input_lineage_ids": [
+        "a6ab6204ffd2d3b6341c9cc6"
+      ],
+      "transformation": "routes",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "378b3b5f48a5e3a3c8826ab3",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "routes.classification",
+      "input_tables": [
+        "bronze"
+      ],
+      "source_ids": [
+        "scenario_topology_v1"
+      ],
+      "input_lineage_ids": [
+        "a6ab6204ffd2d3b6341c9cc6"
+      ],
+      "transformation": "routes",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "42b2487803f5a9cbde1d3077",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "routes.destination",
+      "input_tables": [
+        "bronze"
+      ],
+      "source_ids": [
+        "scenario_topology_v1"
+      ],
+      "input_lineage_ids": [
+        "a6ab6204ffd2d3b6341c9cc6"
+      ],
+      "transformation": "routes",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "3292f1d86f841abed59a1a40",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "routes.distance_nm",
+      "input_tables": [
+        "bronze"
+      ],
+      "source_ids": [
+        "scenario_topology_v1"
+      ],
+      "input_lineage_ids": [
+        "a6ab6204ffd2d3b6341c9cc6"
+      ],
+      "transformation": "routes",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "7a06ae8af77da249272d9331",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "routes.geometry",
+      "input_tables": [
+        "bronze"
+      ],
+      "source_ids": [
+        "scenario_topology_v1"
+      ],
+      "input_lineage_ids": [
+        "a6ab6204ffd2d3b6341c9cc6"
+      ],
+      "transformation": "routes",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "b1df03209c279808143bddda",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "routes.lineage_id",
+      "input_tables": [
+        "bronze"
+      ],
+      "source_ids": [
+        "scenario_topology_v1"
+      ],
+      "input_lineage_ids": [
+        "a6ab6204ffd2d3b6341c9cc6"
+      ],
+      "transformation": "routes",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "ec7f1f561a3d79b7c6f1b67d",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "routes.origin",
+      "input_tables": [
+        "bronze"
+      ],
+      "source_ids": [
+        "scenario_topology_v1"
+      ],
+      "input_lineage_ids": [
+        "a6ab6204ffd2d3b6341c9cc6"
+      ],
+      "transformation": "routes",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "097a3ac17bbe1ea0be650885",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "routes.retrieved_at",
+      "input_tables": [
+        "bronze"
+      ],
+      "source_ids": [
+        "scenario_topology_v1"
+      ],
+      "input_lineage_ids": [
+        "a6ab6204ffd2d3b6341c9cc6"
+      ],
+      "transformation": "routes",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "e12d7052f777d0b11d9f8f99",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "routes.route_id",
+      "input_tables": [
+        "bronze"
+      ],
+      "source_ids": [
+        "scenario_topology_v1"
+      ],
+      "input_lineage_ids": [
+        "a6ab6204ffd2d3b6341c9cc6"
+      ],
+      "transformation": "routes",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "33b26ad22fd8d935cbc56f34",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "routes.source_id",
+      "input_tables": [
+        "bronze"
+      ],
+      "source_ids": [
+        "scenario_topology_v1"
+      ],
+      "input_lineage_ids": [
+        "a6ab6204ffd2d3b6341c9cc6"
+      ],
+      "transformation": "routes",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "38a994d22bc8653dc3d2137c",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "routes.transit_hours",
+      "input_tables": [
+        "bronze"
+      ],
+      "source_ids": [
+        "scenario_topology_v1"
+      ],
+      "input_lineage_ids": [
+        "a6ab6204ffd2d3b6341c9cc6"
+      ],
+      "transformation": "routes",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "7c90baa73ac5618ed4091667",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "routes.valid_from",
+      "input_tables": [
+        "bronze"
+      ],
+      "source_ids": [
+        "scenario_topology_v1"
+      ],
+      "input_lineage_ids": [
+        "a6ab6204ffd2d3b6341c9cc6"
+      ],
+      "transformation": "routes",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "6995bad50314d3a0e505f01c",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "routes.valid_to",
+      "input_tables": [
+        "bronze"
+      ],
+      "source_ids": [
+        "scenario_topology_v1"
+      ],
+      "input_lineage_ids": [
+        "a6ab6204ffd2d3b6341c9cc6"
+      ],
+      "transformation": "routes",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "1a17d3a0489f909965a794ed",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "congestion_history.baseline",
+      "input_tables": [
+        "activity"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "congestion_history",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "c5c74e04bc1661d40b14e388",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "congestion_history.category",
+      "input_tables": [
+        "activity"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "congestion_history",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "e1a4a74f2a52ad5374b796ac",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "congestion_history.classification",
+      "input_tables": [
+        "activity"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "congestion_history",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "a0042154e992467a24e81eb6",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "congestion_history.current_activity",
+      "input_tables": [
+        "activity"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "congestion_history",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "81aef4d9ca80d76f75893091",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "congestion_history.date",
+      "input_tables": [
+        "activity"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "congestion_history",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "0aa4fb23ae4432900111832c",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "congestion_history.deviation_fraction",
+      "input_tables": [
+        "activity"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "congestion_history",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "9e71475d6747a956c56465af",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "congestion_history.evidence_coverage",
+      "input_tables": [
+        "activity"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "congestion_history",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "b692aecc0719a55f077833ca",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "congestion_history.history_records",
+      "input_tables": [
+        "activity"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "congestion_history",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "c110af15e9e68498de7e885d",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "congestion_history.lineage_id",
+      "input_tables": [
+        "activity"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "congestion_history",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "46aaa2a3085920ad47c784b9",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "congestion_history.methodology",
+      "input_tables": [
+        "activity"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "congestion_history",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "4ecce4090ff7e73ca67c77ba",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "congestion_history.percentile",
+      "input_tables": [
+        "activity"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "congestion_history",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "1283522c4e3bedb89b7adb0a",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "congestion_history.persistence_days",
+      "input_tables": [
+        "activity"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "congestion_history",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "7d077e941fa9ba0af8d8c4df",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "congestion_history.port_id",
+      "input_tables": [
+        "activity"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "congestion_history",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "ae9e4971c6f903f2148b04f9",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "congestion_history.source_id",
+      "input_tables": [
+        "activity"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "congestion_history",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "3f31c2ec0434b09521d371b6",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "congestion_history.state_id",
+      "input_tables": [
+        "activity"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "congestion_history",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "05158d7117925a51e17aed1a",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "congestion_history.stress_score",
+      "input_tables": [
+        "activity"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "congestion_history",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "be7cee69a1eee20690bcb4fa",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "congestion_history.trend",
+      "input_tables": [
+        "activity"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "congestion_history",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "68e043689a2a72b54c7db40d",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "congestion_history.valid_from",
+      "input_tables": [
+        "activity"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "congestion_history",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "f6c85f899537661519f6b119",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "congestion_history.valid_to",
+      "input_tables": [
+        "activity"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "congestion_history",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "73ab18742ff241e2e1b595dc",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "congestion_history.z_score",
+      "input_tables": [
+        "activity"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "congestion_history",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "38af39edf9effee822c647a4",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "congestion.baseline",
+      "input_tables": [
+        "activity"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "congestion",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "c83e44d32d18d5f622a65698",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "congestion.category",
+      "input_tables": [
+        "activity"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "congestion",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "615389969d2e991d1525ea00",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "congestion.classification",
+      "input_tables": [
+        "activity"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "congestion",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "001a4461e31277966db84cbd",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "congestion.current_activity",
+      "input_tables": [
+        "activity"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "congestion",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "15c7fcc35e5cb86d135fac13",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "congestion.date",
+      "input_tables": [
+        "activity"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "congestion",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "b2187f4570191f220b1b0333",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "congestion.deviation_fraction",
+      "input_tables": [
+        "activity"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "congestion",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "67d88bbcffb09a04cc338f4e",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "congestion.evidence_coverage",
+      "input_tables": [
+        "activity"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "congestion",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "693eff8e5b103a4f6c47fcb4",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "congestion.history_records",
+      "input_tables": [
+        "activity"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "congestion",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "c19cf47ebbde0d65d3450e4a",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "congestion.lineage_id",
+      "input_tables": [
+        "activity"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "congestion",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "fd9aaf266cd73059da843cd9",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "congestion.methodology",
+      "input_tables": [
+        "activity"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "congestion",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "9e16d58afa55cea185337ad8",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "congestion.percentile",
+      "input_tables": [
+        "activity"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "congestion",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "e2911e31be3f95630c7c573a",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "congestion.persistence_days",
+      "input_tables": [
+        "activity"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "congestion",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "74343e0cae44a230e6d357ef",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "congestion.port_id",
+      "input_tables": [
+        "activity"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "congestion",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "371cdd027905e449bde26b8e",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "congestion.source_id",
+      "input_tables": [
+        "activity"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "congestion",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "dd1a0c9c28f5156c2cc7e16c",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "congestion.state_id",
+      "input_tables": [
+        "activity"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "congestion",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "742e109a1c3678e9d6aaf836",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "congestion.stress_score",
+      "input_tables": [
+        "activity"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "congestion",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "c0f67e94cc711daab75b4189",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "congestion.trend",
+      "input_tables": [
+        "activity"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "congestion",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "6c137e147cdd0998484e905e",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "congestion.valid_from",
+      "input_tables": [
+        "activity"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "congestion",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "4bfe23d257c2a782ac430a33",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "congestion.valid_to",
+      "input_tables": [
+        "activity"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "congestion",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "9b583eee4efb21296d4ea322",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "congestion.z_score",
+      "input_tables": [
+        "activity"
+      ],
+      "source_ids": [
+        "portwatch_activity"
+      ],
+      "input_lineage_ids": [
+        "a2479b2ca8cd3fe197d0496702ff0d3a242f9e7729b41b1e9e5c56c5e0744096",
+        "c2334d624f91a69547d40472fd94b86b52719c777f32f28b8918f86d1307af46"
+      ],
+      "transformation": "congestion",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "029f4d62d279eb12cbbd5d18",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "network.as_of",
+      "input_tables": [
+        "routes",
+        "ports",
+        "congestion"
+      ],
+      "source_ids": [
+        "scenario_topology_v1"
+      ],
+      "input_lineage_ids": [
+        "a6ab6204ffd2d3b6341c9cc6"
+      ],
+      "transformation": "network",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "8f83bfae36c3b3516a62c762",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "network.available",
+      "input_tables": [
+        "routes",
+        "ports",
+        "congestion"
+      ],
+      "source_ids": [
+        "scenario_topology_v1"
+      ],
+      "input_lineage_ids": [
+        "a6ab6204ffd2d3b6341c9cc6"
+      ],
+      "transformation": "network",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "2a84a9db89533b36066342cf",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "network.classification",
+      "input_tables": [
+        "routes",
+        "ports",
+        "congestion"
+      ],
+      "source_ids": [
+        "scenario_topology_v1"
+      ],
+      "input_lineage_ids": [
+        "a6ab6204ffd2d3b6341c9cc6"
+      ],
+      "transformation": "network",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "ba88acee6a3a50060ed58428",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "network.destination",
+      "input_tables": [
+        "routes",
+        "ports",
+        "congestion"
+      ],
+      "source_ids": [
+        "scenario_topology_v1"
+      ],
+      "input_lineage_ids": [
+        "a6ab6204ffd2d3b6341c9cc6"
+      ],
+      "transformation": "network",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "592362d58af30030f14d6209",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "network.distance_nm",
+      "input_tables": [
+        "routes",
+        "ports",
+        "congestion"
+      ],
+      "source_ids": [
+        "scenario_topology_v1"
+      ],
+      "input_lineage_ids": [
+        "a6ab6204ffd2d3b6341c9cc6"
+      ],
+      "transformation": "network",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "d07f307d6d4565e327426212",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "network.geometry",
+      "input_tables": [
+        "routes",
+        "ports",
+        "congestion"
+      ],
+      "source_ids": [
+        "scenario_topology_v1"
+      ],
+      "input_lineage_ids": [
+        "a6ab6204ffd2d3b6341c9cc6"
+      ],
+      "transformation": "network",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "26234869fcb3749b25c5c6f5",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "network.lineage_id",
+      "input_tables": [
+        "routes",
+        "ports",
+        "congestion"
+      ],
+      "source_ids": [
+        "scenario_topology_v1"
+      ],
+      "input_lineage_ids": [
+        "a6ab6204ffd2d3b6341c9cc6"
+      ],
+      "transformation": "network",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "66786e2795b03f3d373f87c6",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "network.origin",
+      "input_tables": [
+        "routes",
+        "ports",
+        "congestion"
+      ],
+      "source_ids": [
+        "scenario_topology_v1"
+      ],
+      "input_lineage_ids": [
+        "a6ab6204ffd2d3b6341c9cc6"
+      ],
+      "transformation": "network",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "6c20ba77db6cf56b8d0d6199",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "network.retrieved_at",
+      "input_tables": [
+        "routes",
+        "ports",
+        "congestion"
+      ],
+      "source_ids": [
+        "scenario_topology_v1"
+      ],
+      "input_lineage_ids": [
+        "a6ab6204ffd2d3b6341c9cc6"
+      ],
+      "transformation": "network",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "469f259f925c8336b8dbc4ad",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "network.route_id",
+      "input_tables": [
+        "routes",
+        "ports",
+        "congestion"
+      ],
+      "source_ids": [
+        "scenario_topology_v1"
+      ],
+      "input_lineage_ids": [
+        "a6ab6204ffd2d3b6341c9cc6"
+      ],
+      "transformation": "network",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "2e92f25db8fed6bb7035b3c7",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "network.source_id",
+      "input_tables": [
+        "routes",
+        "ports",
+        "congestion"
+      ],
+      "source_ids": [
+        "scenario_topology_v1"
+      ],
+      "input_lineage_ids": [
+        "a6ab6204ffd2d3b6341c9cc6"
+      ],
+      "transformation": "network",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "2e805173ce46d35b06e5137c",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "network.state_id",
+      "input_tables": [
+        "routes",
+        "ports",
+        "congestion"
+      ],
+      "source_ids": [
+        "scenario_topology_v1"
+      ],
+      "input_lineage_ids": [
+        "a6ab6204ffd2d3b6341c9cc6"
+      ],
+      "transformation": "network",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "09dc248a5132041dc4f6d494",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "network.stress_score",
+      "input_tables": [
+        "routes",
+        "ports",
+        "congestion"
+      ],
+      "source_ids": [
+        "scenario_topology_v1"
+      ],
+      "input_lineage_ids": [
+        "a6ab6204ffd2d3b6341c9cc6"
+      ],
+      "transformation": "network",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "b83a305405af571f9d89e516",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "network.transit_hours",
+      "input_tables": [
+        "routes",
+        "ports",
+        "congestion"
+      ],
+      "source_ids": [
+        "scenario_topology_v1"
+      ],
+      "input_lineage_ids": [
+        "a6ab6204ffd2d3b6341c9cc6"
+      ],
+      "transformation": "network",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "b50bd42f0336218184eed5a8",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "network.valid_from",
+      "input_tables": [
+        "routes",
+        "ports",
+        "congestion"
+      ],
+      "source_ids": [
+        "scenario_topology_v1"
+      ],
+      "input_lineage_ids": [
+        "a6ab6204ffd2d3b6341c9cc6"
+      ],
+      "transformation": "network",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "81219cecf8c012476094c0bf",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "network.valid_to",
+      "input_tables": [
+        "routes",
+        "ports",
+        "congestion"
+      ],
+      "source_ids": [
+        "scenario_topology_v1"
+      ],
+      "input_lineage_ids": [
+        "a6ab6204ffd2d3b6341c9cc6"
+      ],
+      "transformation": "network",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "ad3ac526aca860b174e6a2e8",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "network.weight",
+      "input_tables": [
+        "routes",
+        "ports",
+        "congestion"
+      ],
+      "source_ids": [
+        "scenario_topology_v1"
+      ],
+      "input_lineage_ids": [
+        "a6ab6204ffd2d3b6341c9cc6"
+      ],
+      "transformation": "network",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "4e54f3b7ed0f570800e260ab",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "scenarios.cargo_value",
+      "input_tables": [
+        "network"
+      ],
+      "source_ids": [
+        "synthetic_shipments_v1"
+      ],
+      "input_lineage_ids": [
+        "ea85fe7d93ee2f3f45c0a089"
+      ],
+      "transformation": "scenarios",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "dc89b0019f6ea27f9bc058d5",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "scenarios.classification",
+      "input_tables": [
+        "network"
+      ],
+      "source_ids": [
+        "synthetic_shipments_v1"
+      ],
+      "input_lineage_ids": [
+        "ea85fe7d93ee2f3f45c0a089"
+      ],
+      "transformation": "scenarios",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "aac5fb445ed60dec7dfe9a5a",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "scenarios.current_state",
+      "input_tables": [
+        "network"
+      ],
+      "source_ids": [
+        "synthetic_shipments_v1"
+      ],
+      "input_lineage_ids": [
+        "ea85fe7d93ee2f3f45c0a089"
+      ],
+      "transformation": "scenarios",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "afb5048fc4f12d6af7b92b4c",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "scenarios.destination",
+      "input_tables": [
+        "network"
+      ],
+      "source_ids": [
+        "synthetic_shipments_v1"
+      ],
+      "input_lineage_ids": [
+        "ea85fe7d93ee2f3f45c0a089"
+      ],
+      "transformation": "scenarios",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "5060ab3d7b440f00a63c7129",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "scenarios.lineage_id",
+      "input_tables": [
+        "network"
+      ],
+      "source_ids": [
+        "synthetic_shipments_v1"
+      ],
+      "input_lineage_ids": [
+        "ea85fe7d93ee2f3f45c0a089"
+      ],
+      "transformation": "scenarios",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "8c1c5d31fc62c6ec41bbeadd",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "scenarios.origin",
+      "input_tables": [
+        "network"
+      ],
+      "source_ids": [
+        "synthetic_shipments_v1"
+      ],
+      "input_lineage_ids": [
+        "ea85fe7d93ee2f3f45c0a089"
+      ],
+      "transformation": "scenarios",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "125cab27976e96defb8ce213",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "scenarios.planned_delivery",
+      "input_tables": [
+        "network"
+      ],
+      "source_ids": [
+        "synthetic_shipments_v1"
+      ],
+      "input_lineage_ids": [
+        "ea85fe7d93ee2f3f45c0a089"
+      ],
+      "transformation": "scenarios",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "f1cf9eb16b61faacddc18fe9",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "scenarios.planned_transit_hours",
+      "input_tables": [
+        "network"
+      ],
+      "source_ids": [
+        "synthetic_shipments_v1"
+      ],
+      "input_lineage_ids": [
+        "ea85fe7d93ee2f3f45c0a089"
+      ],
+      "transformation": "scenarios",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "e02c34d77467ceb76aa1dfb6",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "scenarios.priority",
+      "input_tables": [
+        "network"
+      ],
+      "source_ids": [
+        "synthetic_shipments_v1"
+      ],
+      "input_lineage_ids": [
+        "ea85fe7d93ee2f3f45c0a089"
+      ],
+      "transformation": "scenarios",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "0efe41a51c19a861adcd25cb",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "scenarios.promised_delivery",
+      "input_tables": [
+        "network"
+      ],
+      "source_ids": [
+        "synthetic_shipments_v1"
+      ],
+      "input_lineage_ids": [
+        "ea85fe7d93ee2f3f45c0a089"
+      ],
+      "transformation": "scenarios",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "40a7f9c49afe2662c205ba42",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "scenarios.route",
+      "input_tables": [
+        "network"
+      ],
+      "source_ids": [
+        "synthetic_shipments_v1"
+      ],
+      "input_lineage_ids": [
+        "ea85fe7d93ee2f3f45c0a089"
+      ],
+      "transformation": "scenarios",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "e310b2eb772b0166fcd49a23",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "scenarios.seed",
+      "input_tables": [
+        "network"
+      ],
+      "source_ids": [
+        "synthetic_shipments_v1"
+      ],
+      "input_lineage_ids": [
+        "ea85fe7d93ee2f3f45c0a089"
+      ],
+      "transformation": "scenarios",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "lineage_id": "8884d8af85f37a4a0fb33713",
+      "run_id": "8278b50f53e74d44bbd38e625a2fd3df",
+      "resulting_field": "scenarios.shipment_id",
+      "input_tables": [
+        "network"
+      ],
+      "source_ids": [
+        "synthetic_shipments_v1"
+      ],
+      "input_lineage_ids": [
+        "ea85fe7d93ee2f3f45c0a089"
+      ],
+      "transformation": "scenarios",
+      "methodology_version": "v1",
+      "classification": "DERIVED",
+      "downstream_product": "API / reporting marts / GIS",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-17T07:19:11.175513+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [],
+      "input_fingerprints": {},
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    }
+  ]
+}

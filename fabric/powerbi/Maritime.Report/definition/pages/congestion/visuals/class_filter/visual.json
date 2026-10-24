@@ -1,0 +1,37 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "class_filter",
+  "position": {
+    "x": 1080,
+    "y": 20,
+    "z": 0,
+    "width": 500,
+    "height": 140,
+    "tabOrder": 1100
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_congestion_history"
+                    }
+                  },
+                  "Property": "classification"
+                }
+              },
+              "queryRef": "fact_congestion_history.classification"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

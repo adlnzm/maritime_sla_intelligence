@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "assessed_date": "2026-10-18",
+  "timezone": "Asia/Qatar",
+  "git_revision": "4b50f50769b08e763015064c53d91b6bda4ae079",
+  "branch": "codex/build-maritime-platform",
+  "working_tree": "DIRTY; preserved",
+  "public_release_approved": false,
+  "production_ready": false,
+  "files": {
+    "artifact-screening.json": "66f7a1cbbe8946f4f9f305e4fb3dd366fa95f9b7f63d2dd4193ad442167663dc",
+    "check_freshness.py": "85f380eca47f1aeb2347bc481834a2f18a0f9c831cb167ecbbf3dca53793db06",
+    "CLAIM_EVIDENCE_MATRIX.md": "9380b3291149e6e179f9056d178aa80c403791dc3cf82ff53b0e918b341d181d",
+    "freshness.exitcode": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+    "freshness.json": "c4b8d41b9c847d4c5d10185e35cee16eef8fefa0a4a389ef530a5d28274116cf",
+    "freshness.log": "7c576321799ff9cc602f740e7aab0a33b90485800df8ba3b85cd6f20c8f55c75",
+    "git-status-after.txt": "d39508fbd36b28ca8eea121260b789bbf970eea00345f365149dd738ad892574",
+    "git-status-before.txt": "9a59f6c01260956a48663875856d7e382d759c02da6b1086e83bd807d67d56a0",
+    "ignored-before.txt": "01fe1d49f5573f6abcb73eced95d20b9f2491a0ccadeadcdefba3ea5e76fd7fa",
+    "inspect_artifacts.py": "59844654b2fc40afa34020cb0f779bd4701d20737e69229142db0672a41d38e2",
+    "latest-port1114.json": "50ac50a14d48ce59479eb09857f8ed1a0312428c6b9eaa4e5f0aa4f558b9dc0b",
+    "latest-port1188.json": "4e7867541acad9b1e485d5fea266a2488d42747977cf04dd7dcc8e86870efb7f",
+    "latest-port1201.json": "30dcb26e75ce2f670b6a3a32b286ecf9cceeac28837589fa8069ad51bae2bc8c",
+    "latest-port664.json": "a59b2cac2512f385ccb67aba62afaad2eab4e39ada20ff286a2e90e3f8a60e62",
+    "latest-port744.json": "e8c34e75f60bbc0bead8f4b61937b8d217865b07084fc4eb063fb39af9729fa6",
+    "latest-port815.json": "e898652176c7bf9d9d65fdfef84803a0ee06803bb8039bef0416f57243611475",
+    "PORTFOLIO_RELEASE_AUDIT.md": "be4ecf90954d9a05e67bb941a33bf613421e4a488698f42e31dddc0a05c2bbff",
+    "PUBLICATION_BLOCKERS.md": "c495d9f04941915d4ef3baa52f5fbc4ff183e6bbcf0ea8f822dcb70ef834fe73",
+    "retained-activity-dates.json": "f4f3d1a164d2683cf2092c0d9a081cc1d88d6a8513278411d2bb5a33481dc158",
+    "screening-batch.exitcode": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+    "screening-batch.log": "b9d79515f863a20085b734e2069cf64bfd0412cfc15ee76fb1e01d6cbe631cc2",
+    "screening.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "referenced_inputs_sha256": {
+    "evidence/local-release-20261017-freshness-01/result.json": "cb9f409818b369e360673d5c2bef11f7114d79cc6136727ff8e21d76dd706884",
+    "evidence/local-release-20261017-freshness-01/tests.xml": "9c31e4e612f224a022e338eb76188c25d7b52f5f5094d7a719f4bedec8e9ca78",
+    "evidence/local-release-20261017-freshness-01/evidence-manifest.json": "7f9c17d81873c614a65510a193b4604bc76c366c92ea7022173ecd8ed7b7edc4",
+    "evidence/local-release-20261017-freshness-01/powerbi.log": "3f80fbc1d618af50052254ca9a896b5adcc6c47da0e5ce38113a5ec987d804c1",
+    "evidence/licensing-readiness-20261017-162403/evidence-manifest.json": "e3c06135caaefc60a917f096ae7880d276675114b34625d99df8772e7755b9b3",
+    "evidence/licensing-readiness-20261017-162403/PRODUCTION_READINESS_GAPS.md": "da1ccf39929ef98d16e7823536c5d3a57193e131c3c04ec1c2e8dcb987af1603",
+    "evidence/trade-qualification-20261017-160824/ASSESSMENT.md": "a771fa5e2b526c9478c694efeaac6091a3d5dc548a6b240f6d61594d98ffaace",
+    "evidence/freshness-diagnosis-20261017-131acd0c/diagnosis.json": "bfbeecb41d31e531b3e007450aaa490c08f68dab0fb5287ec65fbd4c457f0fff",
+    "README.md": "98b4f35fd4a7c2bbebb7f62f918c66b42fbaa1f1ca2b781fcb23f1d4db530ebb",
+    "evidence/README.md": "9e012e79766da3dc2ffa46d270474934b4d368ed1ebdfeeee99e459254ae9140",
+    "tests/data/portwatch_sample.json": "e68526853c8010853a12f8ad7a8927435437626eb1e0a8de5fc1ededff96e0c8",
+    "docker/Dockerfile": "d048932f2bce92ffc8102df83430eb2d7bacab4159ee4295a24861e0180918a7",
+    ".env.example": "5e26201ae5a06140aaedb25fac8ac69f1ed35a138b631cc3ec9bdfa04731534d",
+    "docs/testing/verification_report.md": "039f4f4382e8315afe3b280336b3f67a8da30d3128fcffbb209454012e20956b"
+  },
+  "verification": {
+    "previous_git_entries_preserved": true,
+    "raw_freshness_hashes_verified": 6,
+    "tests_rerun": false,
+    "current_freshness_pass": true,
+    "application_changes": false,
+    "source_hashes_matching_release": 146,
+    "source_observation_date": "2026-10-09",
+    "age_days": 9,
+    "new_entries_confined_to_assessment": true,
+    "no_publication_performed": true
+  },
+  "commands": [
+    {
+      "command": "python inspect_artifacts.py (original per-object version)",
+      "scope": "Interrupted slow attempt, not completed; original log retained",
+      "exit_code": 1
+    },
+    {
+      "command": ".venv/Scripts/python.exe evidence/portfolio-release-20261018-083345/inspect_artifacts.py",
+      "exit_code": 0,
+      "log": "screening-batch.log"
+    },
+    {
+      "command": ".venv/Scripts/python.exe evidence/portfolio-release-20261018-083345/check_freshness.py",
+      "exit_code": 0,
+      "log": "freshness.log"
+    },
+    {
+      "command": "PowerShell SHA256/source/raw-response/Git inventory checks",
+      "exit_code": 0
+    }
+  ],
+  "screening": {
+    "limits": {
+      "file_bytes": 5000000,
+      "archive_total_bytes": 100000000
+    },
+    "commits": 6,
+    "reachable_blobs": 262,
+    "recorded_omissions": 56,
+    "certification": "NOT a secret-free or rights clearance",
+    "exclusions": [
+      ".git internals except reachable Git blobs and author/committer metadata",
+      ".venv",
+      "release-environment-*",
+      "node_modules",
+      "Python/tool caches",
+      "this new evidence directory"
+    ],
+    "files": 1786,
+    "findings": 124
+  },
+  "official_source_access": [
+    {
+      "url": "https://www.imf.org/external/terms.htm",
+      "date": "2026-10-18",
+      "result": "403; rights not resolved"
+    },
+    {
+      "url": "https://open-meteo.com/en/terms",
+      "date": "2026-10-18",
+      "result": "Read official terms; data licence versus live-service entitlement distinguished"
+    },
+    {
+      "url": "https://uncomtrade.org/docs/re-dissemination-of-data/",
+      "date": "2026-10-18",
+      "result": "Reviewed; no permission obtained"
+    }
+  ],
+  "self_hash_excluded": true
+}

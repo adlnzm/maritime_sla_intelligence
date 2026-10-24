@@ -12,3 +12,21 @@ data/
 !tests/data/**
 fabric/deployment.json
 *.db*
+
+# Generated temporary integration-test runs
+evidence/code-integration-*/final-temp/
+evidence/code-integration-*/target-temp/
+evidence/code-integration-*/target-temp-clean/
+evidence/code-integration-*/verified-temp/
+evidence/**/final-temp/
+evidence/**/full-temp*/
+evidence/**/regression-temp/
+evidence/code-integration-*/git-status-before.txt
+evidence/code-integration-*/git-status-after.txt
+
+# Local test outputs and release archives
+evidence/code-integration-*/test-temp-*/
+evidence/power-platform-20261022-implementation/ops-temp*/
+evidence/power-platform-20261022-implementation/git-status-before.txt
+evidence/power-platform-20261022-implementation/git-status-after.txt
+evidence/*.zip

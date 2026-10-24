@@ -1,0 +1,40 @@
+{
+  "decision": "NO-GO",
+  "revision": "4b50f50769b08e763015064c53d91b6bda4ae079",
+  "branch": "codex/build-maritime-platform",
+  "dirty_tree": true,
+  "created_at": "2026-10-18T05:45:33.5065873+00:00",
+  "files": {
+    "database_readonly.py": "9abe18f4bd787813c77a4fc67cdadb91af1e7efeed56ab038b2bedf2e9fcc70a",
+    "database-readonly.exitcode": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+    "database-readonly.json": "a9a25cc408d496e3e5722ec32020d7e0b7e1b74632fb3c260585493aec874465",
+    "database-readonly.log": "be3a8f70ca20450e52744fecc9aa2be4f79c8df59cb40abec70624f861c4ec7d",
+    "EXECUTION_PLAN.md": "231c1665878841e9531878f796f474671de4cbcf4f143fda767338ccc7b5a6ad",
+    "FULL_RUN_READINESS.md": "f6ff4b2426cbc2693021f4d7ce4c35b48032e483aa3d12e7890ed5e713bed17c",
+    "GATE_RESULTS.json": "8d5e2ffd89abbe2145a8fe49e5a9405fb49998b4cb511d8268e0f28cede98c35",
+    "git-status-after.txt": "3773cdab3b6072dd0d835e07317d163df1b7f32dce804be3e5e811a57fa8ffb8",
+    "git-status-before.txt": "e924272022bc1ed4509842e805a446244a650aa1622789c5a891deac142d2225",
+    "host.json": "e31acb3ae85d4ffc9062d8c4a951459309f1f3f37d39a98fa82680c8588d6090",
+    "preflight-02.exitcode": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+    "preflight-02.log": "a588a652397ed30bb981fcc1822182571bd649af8c3e37ff3e6ec91301092fab",
+    "preflight.exitcode": "f1b2f662800122bed0ff255693df89c4487fbdcf453d3524a42d4ec20c3d9c04",
+    "preflight.json": "485063b8d77291035b68793aa5ea6448ae8cdef4134383e0da026451356047dd",
+    "preflight.log": "ffedf8ab034529cdf3a66d7d697a2d08ff4c7db95d6faae5b69d0583b676af8b",
+    "preflight.py": "0b616191c16ce2d100c584c278b7c32ff6c8b9e360ab67f58017ef4dcf71c8d6"
+  },
+  "referenced_evidence_sha256": {
+    "evidence/local-release-20261017-freshness-01/result.json": "cb9f409818b369e360673d5c2bef11f7114d79cc6136727ff8e21d76dd706884",
+    "evidence/local-release-20261017-freshness-01/live/release-validation.json": "08300cfe0f9d405f6a55a9cc9a225faa6379d0f3b3a50323b25a7f1085c68775",
+    "evidence/local-release-20261017-freshness-01/docker/maritime-demo-4836fad43b/result.json": "10145f009ebe610cd5318a501614ba265ca14faa82c237a575875773f16587f1",
+    "evidence/local-release-20261017-freshness-01/docker/maritime-demo-4836fad43b/backup-restore.json": "0055797bc426b0622cbd4434f39343790b8f336a199c36e854d2a6ca117baa7d",
+    "evidence/portfolio-release-20261018-083345/freshness.json": "c4b8d41b9c847d4c5d10185e35cee16eef8fefa0a4a389ef530a5d28274116cf"
+  },
+  "verified_source_hashes": 146,
+  "freshness_raw_hashes_verified": 6,
+  "prior_git_entries_preserved": true,
+  "database_main_hashes_stable": true,
+  "verification_scope": "Immutable main-file reads with empty WAL; not all stored release/audit hashes or exclusive writer ownership",
+  "full_run_executed": false,
+  "tests_rerun": false,
+  "self_hash_excluded": true
+}

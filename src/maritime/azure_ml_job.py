@@ -1,6 +1,7 @@
 """Azure ML command-job entry points reuse the existing temporal experiment."""
 
 import argparse
+import hashlib
 import shutil
 import uuid
 from pathlib import Path
@@ -44,6 +45,16 @@ def train(data, output, policy, tracking=True):
     }
     (output / "model").mkdir(parents=True, exist_ok=True)
     joblib.dump(artifact, output / "model" / "model.joblib")
+    write_json(
+        output / "model" / "artifact-manifest.json",
+        {
+            "model_sha256": hashlib.sha256(
+                (output / "model" / "model.joblib").read_bytes()
+            ).hexdigest(),
+            "model_version": report["model_version"],
+            "serialization": "joblib-trusted-registry-only",
+        },
+    )
     report["azure_ml_job_id"] = __import__("os").getenv("AZUREML_RUN_ID")
     report["fabric_manifest"] = manifest
     report["promotion"] = promotion_check(report, policy)
@@ -73,7 +84,19 @@ def train(data, output, policy, tracking=True):
 
 def batch(data, model_dir, output, approved_model_id=None):
     activity, manifest = load_features(data)
-    artifact = joblib.load(Path(model_dir) / "model.joblib")
+    model_path = Path(model_dir) / "model.joblib"
+    integrity = load_json(Path(model_dir) / "artifact-manifest.json")
+    if (
+        model_path.is_symlink()
+        or model_path.stat().st_size > 268435456
+        or hashlib.sha256(model_path.read_bytes()).hexdigest() != integrity["model_sha256"]
+    ):
+        raise ValueError("Model artifact integrity verification failed")
+    # A checksum detects transfer corruption, not a malicious registry owner.
+    # Only the approved AML registry artifact may reach this deserialization boundary.
+    artifact = joblib.load(model_path)
+    if artifact["version"] != integrity["model_version"]:
+        raise ValueError("Model artifact version mismatch")
     import sklearn
 
     runtime = {

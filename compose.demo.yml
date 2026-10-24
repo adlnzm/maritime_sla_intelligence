@@ -1,0 +1,45 @@
+services:
+  seed:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    command: ["maritime", "run", "--fixture", "/app/samples/portwatch_sample.json"]
+    volumes:
+      - demo-data:/app/data
+    restart: "no"
+    read_only: true
+    tmpfs: ["/tmp:size=128m,mode=1777"]
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    mem_limit: 2g
+    cpus: 2
+    pids_limit: 128
+  api:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    depends_on:
+      seed:
+        condition: service_completed_successfully
+    ports:
+      - "127.0.0.1:${MARITIME_DEMO_PORT:-18081}:8000"
+    environment:
+      MARITIME_API_KEY: ${MARITIME_API_KEY:?Set a reader key}
+      MARITIME_OPERATOR_KEY: ${MARITIME_OPERATOR_KEY:?Set a distinct operator key}
+    volumes:
+      - demo-data:/app/data
+    healthcheck:
+      test: ["CMD", "python", "-c", "import os,urllib.request; urllib.request.urlopen(urllib.request.Request('http://127.0.0.1:8000/ready',headers={'X-API-Key':os.environ['MARITIME_API_KEY']}),timeout=4)"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+    restart: unless-stopped
+    read_only: true
+    tmpfs: ["/tmp:size=128m,mode=1777"]
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    mem_limit: 1g
+    cpus: 1
+    pids_limit: 128
+volumes:
+  demo-data:

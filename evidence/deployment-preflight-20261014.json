@@ -1,0 +1,17 @@
+{
+    "status":  "BLOCKED_DEPLOYMENT_ACTION_REQUIRED",
+    "checked_at":  "2026-10-14T03:51:53.5324220Z",
+    "checks":  {
+                   "azure_cli":  false,
+                   "AZURE_OPENAI_ENDPOINT":  false,
+                   "FABRIC_WORKSPACE_ID":  false,
+                   "FABRIC_LAKEHOUSE_ID":  false,
+                   "AZURE_TENANT_ID":  false,
+                   "AZURE_RESOURCE_GROUP":  false,
+                   "AZURE_SUBSCRIPTION_ID":  false,
+                   "AZURE_OPENAI_DEPLOYMENT":  false,
+                   "AZURE_API_AUDIENCE":  false,
+                   "AZURE_ML_WORKSPACE":  false
+               },
+    "permissions":  "Effective data permissions require target execution; configuration is not authorization."
+}

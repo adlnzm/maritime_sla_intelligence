@@ -17,22 +17,41 @@ API = "https://api.fabric.microsoft.com/v1"
 
 
 class Fabric:
-    def __init__(self, workspace):
+    def __init__(self, workspace, credential=None, client=None):
         self.workspace = str(uuid.UUID(workspace))
-        self.credential = DefaultAzureCredential()
-        self.client = httpx.Client(timeout=60)
+        self.credential = credential or DefaultAzureCredential()
+        self.client = client or httpx.Client(timeout=60)
+
+    @staticmethod
+    def retry_delay(response, fallback, maximum=60):
+        try:
+            return max(0, min(maximum, int(response.headers.get("Retry-After", fallback))))
+        except (ValueError, TypeError):
+            return fallback
 
     def request(self, method, path, **kwargs):
+        if not path.startswith(API + "/") and not (
+            path.startswith("/") and not path.startswith("//")
+        ):
+            raise ValueError("Unexpected Fabric request URL")
         url = path if path.startswith(API + "/") else API + path
         for attempt in range(4):
             token = self.credential.get_token("https://api.fabric.microsoft.com/.default").token
-            response = self.client.request(
-                method, url, headers={"Authorization": "Bearer " + token}, **kwargs
-            )
+            try:
+                response = self.client.request(
+                    method, url, headers={"Authorization": "Bearer " + token}, **kwargs
+                )
+            except httpx.TransportError:
+                # Mutating calls may have succeeded before the connection broke.
+                # Only safe reads can be retried without an idempotency contract.
+                if method.upper() not in {"GET", "HEAD"} or attempt == 3:
+                    raise
+                time.sleep(2**attempt)
+                continue
             if response.status_code not in {429, 502, 503, 504} or attempt == 3:
                 response.raise_for_status()
                 return response
-            time.sleep(min(60, int(response.headers.get("Retry-After", 2**attempt))))
+            time.sleep(self.retry_delay(response, 2**attempt))
         raise RuntimeError("Retry limit reached")
 
     def finish(self, response):
@@ -42,7 +61,7 @@ class Fabric:
         if not location.startswith(API + "/"):
             raise ValueError("Unexpected Fabric operation polling URL")
         for _ in range(120):
-            time.sleep(min(30, int(response.headers.get("Retry-After", "5"))))
+            time.sleep(self.retry_delay(response, 5, maximum=30))
             response = self.request("GET", location)
             body = response.json()
             if body.get("status") in {"Failed", "Cancelled"}:
@@ -138,7 +157,14 @@ def deploy(execute=False):
             archive.write(file, file.as_posix())
     fabric.upload(lakehouse, "maritime/configs.zip", package.read_bytes())
     notebook_ids = {}
-    for stage in ("bronze", "silver", "gold", "acceptance", "import_predictions"):
+    for stage in (
+        "bronze",
+        "silver",
+        "gold",
+        "acceptance",
+        "import_predictions",
+        "import_feedback",
+    ):
         notebook = json.loads(Path(f"fabric/notebooks/{stage}.ipynb").read_text())
         notebook["metadata"]["dependencies"] = {
             "lakehouse": {
@@ -155,7 +181,7 @@ def deploy(execute=False):
     activities = []
     previous = None
     for stage, notebook_id in notebook_ids.items():
-        if stage == "import_predictions":
+        if stage in {"import_predictions", "import_feedback"}:
             continue  # Runs after Azure ML batch output returns, not before it exists.
         activities.append(
             {

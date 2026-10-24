@@ -1,0 +1,39 @@
+[
+  {
+    "name": "hamad-reference",
+    "url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/PortWatch_ports_database/FeatureServer/0/query?f=json&where=UPPER%28country%29+LIKE+%27%25QATAR%25%27+OR+UPPER%28portname%29+LIKE+%27%25HAMAD%25%27+OR+UPPER%28portname%29+LIKE+%27%25DOHA%25%27+OR+LOCODE+%3D+%27QAHMD%27&outFields=%2A&returnGeometry=false",
+    "parameters": {
+      "f": "json",
+      "where": "UPPER(country) LIKE '%QATAR%' OR UPPER(portname) LIKE '%HAMAD%' OR UPPER(portname) LIKE '%DOHA%' OR LOCODE = 'QAHMD'",
+      "outFields": "*",
+      "returnGeometry": "false"
+    },
+    "retrieved_at": "2026-10-22T07:32:31.130463+00:00",
+    "sha256": "f2f2fbab2d8e4695e8206d0328e94a1601b0c43752bfd588cd1001eb21755012"
+  },
+  {
+    "name": "hamad-activity-range",
+    "url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Ports_Data/FeatureServer/0/query?f=json&where=portid+%3D+%27port2026%27&outStatistics=%5B%7B%22statisticType%22%3A+%22min%22%2C+%22onStatisticField%22%3A+%22date%22%2C+%22outStatisticFieldName%22%3A+%22first_date%22%7D%2C+%7B%22statisticType%22%3A+%22max%22%2C+%22onStatisticField%22%3A+%22date%22%2C+%22outStatisticFieldName%22%3A+%22latest_date%22%7D%2C+%7B%22statisticType%22%3A+%22count%22%2C+%22onStatisticField%22%3A+%22date%22%2C+%22outStatisticFieldName%22%3A+%22observations%22%7D%5D",
+    "parameters": {
+      "f": "json",
+      "where": "portid = 'port2026'",
+      "outStatistics": "[{\"statisticType\": \"min\", \"onStatisticField\": \"date\", \"outStatisticFieldName\": \"first_date\"}, {\"statisticType\": \"max\", \"onStatisticField\": \"date\", \"outStatisticFieldName\": \"latest_date\"}, {\"statisticType\": \"count\", \"onStatisticField\": \"date\", \"outStatisticFieldName\": \"observations\"}]"
+    },
+    "retrieved_at": "2026-10-22T07:33:00.221556+00:00",
+    "sha256": "52db41e87371aa6cba44c213721696c1ddbc80e79415dcc4c50438aacdc240e9"
+  },
+  {
+    "name": "hamad-activity-latest",
+    "url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Ports_Data/FeatureServer/0/query?f=json&where=portid+%3D+%27port2026%27&outFields=%2A&orderByFields=date+DESC&resultRecordCount=14&returnGeometry=false",
+    "parameters": {
+      "f": "json",
+      "where": "portid = 'port2026'",
+      "outFields": "*",
+      "orderByFields": "date DESC",
+      "resultRecordCount": 14,
+      "returnGeometry": "false"
+    },
+    "retrieved_at": "2026-10-22T07:33:03.038615+00:00",
+    "sha256": "f6008ca604dd24fc975a1acd8df67dc5412e02281902b66044b9ba38ac9f3232"
+  }
+]

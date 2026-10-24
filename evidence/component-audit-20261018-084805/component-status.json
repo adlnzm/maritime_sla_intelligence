@@ -1,0 +1,1043 @@
+{
+  "observed_at": "2026-10-18T08:01:22.727307+00:00",
+  "repository": "C:\\Users\\User\\OneDrive\\\u6587\u6863\\ChatGPT\\maritime_sla_intelligence",
+  "branch": "codex/build-maritime-platform",
+  "revision": "4b50f50769b08e763015064c53d91b6bda4ae079",
+  "working_tree": "DIRTY; existing work preserved",
+  "component_count": 49,
+  "counts": {
+    "existence_status": {
+      "PRESENT": 40,
+      "MISSING": 8,
+      "PARTIAL": 1
+    },
+    "configuration_status": {
+      "CONFIGURED": 14,
+      "NOT_CONFIGURED": 19,
+      "PARTIAL": 16
+    },
+    "integration_status": {
+      "CONNECTED": 23,
+      "DISCONNECTED": 9,
+      "PARTIALLY_CONNECTED": 4,
+      "UNKNOWN": 13
+    },
+    "verification_status": {
+      "END_TO_END_VERIFIED": 22,
+      "NOT_TESTED": 5,
+      "BLOCKED": 6,
+      "LOCALLY_TESTED": 9,
+      "STATICALLY_CHECKED": 7
+    }
+  },
+  "status_semantics": "CONNECTED means an evidenced local data path, usually from Oct 17 actual execution, not currently running service. UNKNOWN means target runtime connection cannot be established. END_TO_END_VERIFIED is limited to the stated local/replay/live-source path, never the whole cloud product. All historical test outcomes are explicitly dated; no tests rerun.",
+  "current_configuration_observation": "2026-10-18T05:47:44Z: inspected Fabric/Azure/telemetry/local-key environment variables absent; configuration files contain cloud placeholders. This does not inventory credentials outside this process.",
+  "components": [
+    {
+      "id": "C01",
+      "name": "PortWatch port/activity acquisition",
+      "purpose": "Six-port real activity ingestion",
+      "paths": [
+        "src/maritime/sources.py",
+        "configs/sources.json",
+        "configs/pipeline.json"
+      ],
+      "existence_status": "PRESENT",
+      "configuration_status": "CONFIGURED",
+      "integration_status": "CONNECTED",
+      "verification_status": "END_TO_END_VERIFIED",
+      "evidence": [
+        "evidence/local-release-20261017-freshness-01/live/release-validation.json",
+        "evidence/portfolio-release-20261018-083345/freshness.json"
+      ],
+      "dependencies": "Public IMF ArcGIS; network",
+      "limitations": "Real acquisition verified Oct 17; latest-one probes Oct 18 show Oct 9 age 9. Activity is not waiting time. Connection is historical, not continuous uptime.",
+      "minimum_verification": "Repeat bounded contract/freshness check at execution; retain full-window reconciliation for new ingestion."
+    },
+    {
+      "id": "C02",
+      "name": "WPI reference connector",
+      "purpose": "Port reference reconciliation",
+      "paths": [
+        "src/maritime/sources.py",
+        "configs/sources.json"
+      ],
+      "existence_status": "PRESENT",
+      "configuration_status": "NOT_CONFIGURED",
+      "integration_status": "DISCONNECTED",
+      "verification_status": "NOT_TESTED",
+      "evidence": [
+        "configs/sources.json"
+      ],
+      "dependencies": "Approved NGA download URL and rights",
+      "limitations": "Adapter exists; download_url null; no actual WPI round trip demonstrated.",
+      "minimum_verification": "Configure authorized source and inspect real parsed sample, schema and reconciliation."
+    },
+    {
+      "id": "C03",
+      "name": "UN/LOCODE connector",
+      "purpose": "Location-code reconciliation",
+      "paths": [
+        "src/maritime/sources.py",
+        "configs/sources.json"
+      ],
+      "existence_status": "PRESENT",
+      "configuration_status": "NOT_CONFIGURED",
+      "integration_status": "DISCONNECTED",
+      "verification_status": "NOT_TESTED",
+      "evidence": [
+        "configs/sources.json"
+      ],
+      "dependencies": "Approved UNECE release ZIP",
+      "limitations": "Null download URL; optional source absent, not fabricated.",
+      "minimum_verification": "Run bounded authorized real ZIP contract and mapping validation."
+    },
+    {
+      "id": "C04",
+      "name": "Reference route connector",
+      "purpose": "Optional reference lane geometry",
+      "paths": [
+        "src/maritime/sources.py",
+        "configs/sources.json"
+      ],
+      "existence_status": "PRESENT",
+      "configuration_status": "NOT_CONFIGURED",
+      "integration_status": "DISCONNECTED",
+      "verification_status": "NOT_TESTED",
+      "evidence": [
+        "configs/sources.json"
+      ],
+      "dependencies": "Authorized GeoJSON and provenance",
+      "limitations": "No route source URL; assumed topology is simulated, not observed traffic.",
+      "minimum_verification": "Validate authorized geometry and temporal/ID contracts separately."
+    },
+    {
+      "id": "C05",
+      "name": "Weather reanalysis",
+      "purpose": "Derived reference weather",
+      "paths": [
+        "src/maritime/sources.py",
+        "configs/sources.json"
+      ],
+      "existence_status": "PRESENT",
+      "configuration_status": "CONFIGURED",
+      "integration_status": "CONNECTED",
+      "verification_status": "END_TO_END_VERIFIED",
+      "evidence": [
+        "evidence/local-release-20261017-freshness-01/live/release-validation.json"
+      ],
+      "dependencies": "Open-Meteo archive API",
+      "limitations": "Historical live campaign captured weather; optional failure degrades; free-service portfolio/commercial entitlement unresolved.",
+      "minimum_verification": "Recheck actual response and intended-use entitlement; no weather-derived closure claims."
+    },
+    {
+      "id": "C06",
+      "name": "WTO / UN Comtrade context",
+      "purpose": "Potential national trade context",
+      "paths": [
+        "evidence/trade-qualification-20261017-160824/ASSESSMENT.md"
+      ],
+      "existence_status": "MISSING",
+      "configuration_status": "NOT_CONFIGURED",
+      "integration_status": "DISCONNECTED",
+      "verification_status": "BLOCKED",
+      "evidence": [
+        "evidence/trade-qualification-20261017-160824/sample-verification.json",
+        "evidence/licensing-readiness-20261017-162403/LICENSING_DECISION.md"
+      ],
+      "dependencies": "Provider access/rights and independent period/unit contract",
+      "limitations": "Research/sample only; no adapter integrated; WTO probe 401; Comtrade annual sample does not establish product licence.",
+      "minimum_verification": "Resolve applicable rights and contract if integration is chosen; source-link-only remains valid scope."
+    },
+    {
+      "id": "C07",
+      "name": "Source contracts / UTC normalization / freshness",
+      "purpose": "Fail closed per port",
+      "paths": [
+        "src/maritime/models.py",
+        "src/maritime/sources.py",
+        "src/maritime/quality.py",
+        "configs/governance.json"
+      ],
+      "existence_status": "PRESENT",
+      "configuration_status": "CONFIGURED",
+      "integration_status": "CONNECTED",
+      "verification_status": "END_TO_END_VERIFIED",
+      "evidence": [
+        "evidence/local-release-20261017-freshness-01/tests.xml",
+        "evidence/portfolio-release-20261018-083345/freshness.json"
+      ],
+      "dependencies": "Source observation dates; fixed 10-day contract",
+      "limitations": "Date/timezone and stale tests pass historically; probes are not a full current pipeline.",
+      "minimum_verification": "Retain six independent dates and current full-input validation at next authorized run."
+    },
+    {
+      "id": "C08",
+      "name": "DQ / quarantine / reconciliation",
+      "purpose": "Exclusive row dispositions and integrity",
+      "paths": [
+        "src/maritime/quality.py",
+        "src/maritime/governance.py",
+        "src/maritime/pipeline.py"
+      ],
+      "existence_status": "PRESENT",
+      "configuration_status": "CONFIGURED",
+      "integration_status": "CONNECTED",
+      "verification_status": "END_TO_END_VERIFIED",
+      "evidence": [
+        "evidence/local-release-20261017-freshness-01/live/release-validation.json",
+        "evidence/local-release-20261017-freshness-01/tests.xml"
+      ],
+      "dependencies": "Canonical input, governance contracts",
+      "limitations": "Historical invalid-coordinate/partial-write injections blocked publication; current full candidate not acquired.",
+      "minimum_verification": "Run isolated current candidate through gates and inspect counts/dispositions."
+    },
+    {
+      "id": "C09",
+      "name": "Classification / lineage",
+      "purpose": "Preserve provenance and five evidence classes",
+      "paths": [
+        "src/maritime/models.py",
+        "src/maritime/governance.py",
+        "src/maritime/pipeline.py"
+      ],
+      "existence_status": "PRESENT",
+      "configuration_status": "CONFIGURED",
+      "integration_status": "CONNECTED",
+      "verification_status": "END_TO_END_VERIFIED",
+      "evidence": [
+        "evidence/local-release-20261017-freshness-01/live/release-validation.json",
+        "evidence/local-release-20261017-freshness-01/docker/maritime-demo-4836fad43b/lineage.json"
+      ],
+      "dependencies": "Source metadata and transformation fingerprints",
+      "limitations": "Lineage is traceability, not causal truth; simulated dependencies remain simulated.",
+      "minimum_verification": "Compare accepted input and API/report classifications in next run."
+    },
+    {
+      "id": "C10",
+      "name": "Bronze raw retention / replay",
+      "purpose": "Content-addressed evidence storage",
+      "paths": [
+        "src/maritime/sources.py",
+        "src/maritime/pipeline.py"
+      ],
+      "existence_status": "PRESENT",
+      "configuration_status": "CONFIGURED",
+      "integration_status": "CONNECTED",
+      "verification_status": "END_TO_END_VERIFIED",
+      "evidence": [
+        "evidence/local-release-20261017-freshness-01/live/release-validation.json",
+        "evidence/local-release-20261017-freshness-01/tests.xml"
+      ],
+      "dependencies": "Local filesystem and source responses",
+      "limitations": "Local hash verification is not cloud WORM; redistributable rights not established.",
+      "minimum_verification": "Verify raw hash-to-receipt binding for selected run."
+    },
+    {
+      "id": "C11",
+      "name": "Silver canonical layer",
+      "purpose": "Validated versioned intermediate data",
+      "paths": [
+        "src/maritime/pipeline.py",
+        "src/maritime/quality.py"
+      ],
+      "existence_status": "PRESENT",
+      "configuration_status": "CONFIGURED",
+      "integration_status": "CONNECTED",
+      "verification_status": "END_TO_END_VERIFIED",
+      "evidence": [
+        "evidence/local-release-20261017-freshness-01/live/release-validation.json"
+      ],
+      "dependencies": "Local run directory; canonical contracts",
+      "limitations": "Local files and SQLite path differ from unverified Fabric Delta path.",
+      "minimum_verification": "Read back new accepted run types/counts and lineage."
+    },
+    {
+      "id": "C12",
+      "name": "Gold marts / GIS / publication",
+      "purpose": "Approved analytical products",
+      "paths": [
+        "src/maritime/pipeline.py",
+        "src/maritime/intelligence.py",
+        "src/maritime/store.py"
+      ],
+      "existence_status": "PRESENT",
+      "configuration_status": "CONFIGURED",
+      "integration_status": "CONNECTED",
+      "verification_status": "END_TO_END_VERIFIED",
+      "evidence": [
+        "evidence/local-release-20261017-freshness-01/live/release-validation.json",
+        "evidence/local-release-20261017-freshness-01/docker/maritime-demo-4836fad43b/decisions.json"
+      ],
+      "dependencies": "Validated intermediates and manifest",
+      "limitations": "Gold/GIS verified locally; no rendered GIS dashboard implied.",
+      "minimum_verification": "Verify manifest/readback for selected target publication."
+    },
+    {
+      "id": "C13",
+      "name": "SQLite persistence / schema",
+      "purpose": "Runs, products, metadata and audits",
+      "paths": [
+        "src/maritime/store.py"
+      ],
+      "existence_status": "PRESENT",
+      "configuration_status": "PARTIAL",
+      "integration_status": "CONNECTED",
+      "verification_status": "END_TO_END_VERIFIED",
+      "evidence": [
+        "evidence/full-run-readiness-20261018-084056/database-readonly.json",
+        "evidence/local-release-20261017-freshness-01/docker/maritime-demo-4836fad43b/result.json",
+        "evidence/local-release-20261017-freshness-01/tests.xml"
+      ],
+      "dependencies": "SQLite/local writable root",
+      "limitations": "Historical runtime verified; current default DB version 0 requires startup writes; operational root unresolved.",
+      "minimum_verification": "Approve root, validate full release/audit hashes and backup before schema initialization."
+    },
+    {
+      "id": "C14",
+      "name": "Incremental checkpoints / revision merge",
+      "purpose": "Overlap, replacements and expired rows",
+      "paths": [
+        "src/maritime/sources.py",
+        "src/maritime/pipeline.py",
+        "src/maritime/store.py"
+      ],
+      "existence_status": "PRESENT",
+      "configuration_status": "PARTIAL",
+      "integration_status": "CONNECTED",
+      "verification_status": "LOCALLY_TESTED",
+      "evidence": [
+        "evidence/local-release-20261017-freshness-01/tests.xml",
+        "evidence/full-run-readiness-20261018-084056/database-readonly.json"
+      ],
+      "dependencies": "activity_cache metadata per six-port scope",
+      "limitations": "Default cache latest Oct 2; updated after DQ before subsequent failures. CLI retry is a new UUID.",
+      "minimum_verification": "Verify checkpoint window and duplicate/accounting receipts against selected target."
+    },
+    {
+      "id": "C15",
+      "name": "Exclusive writer / interruption recovery",
+      "purpose": "Prevent overlapping pipeline writers",
+      "paths": [
+        "src/maritime/governance.py",
+        "src/maritime/pipeline.py"
+      ],
+      "existence_status": "PRESENT",
+      "configuration_status": "CONFIGURED",
+      "integration_status": "CONNECTED",
+      "verification_status": "LOCALLY_TESTED",
+      "evidence": [
+        "evidence/local-release-20261017-freshness-01/tests.xml"
+      ],
+      "dependencies": "OS root lock and SQLite",
+      "limitations": "RUNNING can remain after interrupt; recovery marks ABANDONED. API writes are separate.",
+      "minimum_verification": "Isolated process-interruption/lock test on chosen environment; no lock-file deletion."
+    },
+    {
+      "id": "C16",
+      "name": "Local CLI orchestration",
+      "purpose": "Ordered ingestion-to-publication tasks",
+      "paths": [
+        "src/maritime/cli.py",
+        "src/maritime/pipeline.py",
+        "scripts/run_live.py"
+      ],
+      "existence_status": "PRESENT",
+      "configuration_status": "PARTIAL",
+      "integration_status": "CONNECTED",
+      "verification_status": "END_TO_END_VERIFIED",
+      "evidence": [
+        "evidence/local-release-20261017-freshness-01/live/release-validation.json",
+        "evidence/full-run-readiness-20261018-084056/preflight.json"
+      ],
+      "dependencies": "Working interpreter, source network, chosen root",
+      "limitations": "Current .venv inconsistent; historical execution does not clear current run.",
+      "minimum_verification": "Repair via separate environment and verify scoped preflight before any full run."
+    },
+    {
+      "id": "C17",
+      "name": "Scheduled acquisition",
+      "purpose": "Recurring unattended pipeline trigger",
+      "paths": [
+        ".github/workflows/ci.yml",
+        ".github/workflows/fabric.yml",
+        ".github/workflows/azure-ml.yml"
+      ],
+      "existence_status": "MISSING",
+      "configuration_status": "NOT_CONFIGURED",
+      "integration_status": "DISCONNECTED",
+      "verification_status": "NOT_TESTED",
+      "evidence": [
+        ".github/workflows/ci.yml"
+      ],
+      "dependencies": "Scheduler/owner/timezone/retry policy if desired",
+      "limitations": "Inspected workflows are push/PR or manual dispatch, not cron. No external scheduler inspected.",
+      "minimum_verification": "Owner decides necessity; inventory external scheduler if one is claimed."
+    },
+    {
+      "id": "C18",
+      "name": "API product endpoints / OpenAPI",
+      "purpose": "Paginated accepted data reads",
+      "paths": [
+        "src/maritime/api.py",
+        "src/maritime/http_limits.py"
+      ],
+      "existence_status": "PRESENT",
+      "configuration_status": "PARTIAL",
+      "integration_status": "CONNECTED",
+      "verification_status": "END_TO_END_VERIFIED",
+      "evidence": [
+        "evidence/local-release-20261017-freshness-01/docker/maritime-demo-4836fad43b/result.json",
+        "evidence/local-release-20261017-freshness-01/tests.xml"
+      ],
+      "dependencies": "Serving root and reader/operator credentials",
+      "limitations": "Previously real HTTP tested; current keys absent and no current running API acceptance.",
+      "minimum_verification": "Start only under separate authorization, then test authenticated reads against selected publication."
+    },
+    {
+      "id": "C19",
+      "name": "Local key auth / request limits",
+      "purpose": "Role separation and bounded HTTP",
+      "paths": [
+        "src/maritime/api.py",
+        "src/maritime/http_limits.py",
+        ".env.example"
+      ],
+      "existence_status": "PRESENT",
+      "configuration_status": "NOT_CONFIGURED",
+      "integration_status": "PARTIALLY_CONNECTED",
+      "verification_status": "END_TO_END_VERIFIED",
+      "evidence": [
+        "evidence/local-release-20261017-freshness-01/docker/maritime-demo-4836fad43b/result.json",
+        "evidence/local-release-20261017-freshness-01/tests.xml"
+      ],
+      "dependencies": "Distinct local keys",
+      "limitations": "Historical temporary keys used; current presence checks false; no secret values inspected.",
+      "minimum_verification": "Configure secrets privately and verify no-token/Reader/Operator/oversize behavior."
+    },
+    {
+      "id": "C20",
+      "name": "Liveness / readiness",
+      "purpose": "Separate process health from usable data",
+      "paths": [
+        "src/maritime/api.py",
+        "src/maritime/store.py",
+        "compose.demo.yml"
+      ],
+      "existence_status": "PRESENT",
+      "configuration_status": "PARTIAL",
+      "integration_status": "CONNECTED",
+      "verification_status": "END_TO_END_VERIFIED",
+      "evidence": [
+        "evidence/local-release-20261017-freshness-01/docker/maritime-demo-4836fad43b/result.json"
+      ],
+      "dependencies": "Approved fresh release and dependency access",
+      "limitations": "Historical dependency outage 503 while liveness 200, then recovery 200. Current service not established.",
+      "minimum_verification": "Check /health, /health/ready and /ready against current target, including outage."
+    },
+    {
+      "id": "C21",
+      "name": "Activity stress / early warning",
+      "purpose": "Historical deviations and persistence",
+      "paths": [
+        "src/maritime/intelligence.py",
+        "src/maritime/pipeline.py",
+        "configs/pipeline.json"
+      ],
+      "existence_status": "PRESENT",
+      "configuration_status": "CONFIGURED",
+      "integration_status": "CONNECTED",
+      "verification_status": "END_TO_END_VERIFIED",
+      "evidence": [
+        "evidence/local-release-20261017-freshness-01/tests.xml",
+        "evidence/local-release-20261017-freshness-01/docker/maritime-demo-4836fad43b/congestion.json"
+      ],
+      "dependencies": "Adequate daily activity history",
+      "limitations": "Derived activity-deviation proxy; not vessel waiting measurements or confirmed disruption.",
+      "minimum_verification": "Recompute baseline/scalar metrics for selected accepted dataset."
+    },
+    {
+      "id": "C22",
+      "name": "Network / propagation / exposure",
+      "purpose": "Time-valid graph and downstream effects",
+      "paths": [
+        "src/maritime/intelligence.py",
+        "configs/pipeline.json"
+      ],
+      "existence_status": "PRESENT",
+      "configuration_status": "CONFIGURED",
+      "integration_status": "CONNECTED",
+      "verification_status": "END_TO_END_VERIFIED",
+      "evidence": [
+        "evidence/local-release-20261017-freshness-01/tests.xml",
+        "evidence/local-release-20261017-freshness-01/docker/maritime-demo-4836fad43b/network-exposure.json"
+      ],
+      "dependencies": "Ports and assumed/reference routes",
+      "limitations": "Default topology and movement assumptions are simulated; driver-bounded scaling.",
+      "minimum_verification": "Verify graph/time constraints and declared route provenance on new input."
+    },
+    {
+      "id": "C23",
+      "name": "Shipment scenarios / SLA simulation",
+      "purpose": "Seeded delays, breaches and losses",
+      "paths": [
+        "src/maritime/scenarios.py",
+        "configs/pipeline.json"
+      ],
+      "existence_status": "PRESENT",
+      "configuration_status": "CONFIGURED",
+      "integration_status": "CONNECTED",
+      "verification_status": "END_TO_END_VERIFIED",
+      "evidence": [
+        "evidence/local-release-20261017-freshness-01/tests.xml",
+        "evidence/local-release-20261017-freshness-01/docker/maritime-demo-4836fad43b/sla-risk.json"
+      ],
+      "dependencies": "Seeded synthetic shipments and assumptions",
+      "limitations": "SIMULATED Monte Carlo outcomes, not calibrated observed commercial SLA probabilities.",
+      "minimum_verification": "Repeat reproducibility and classification checks if assumptions change."
+    },
+    {
+      "id": "C24",
+      "name": "Interventions / decisions / explanations",
+      "purpose": "Rank feasible counterfactual actions",
+      "paths": [
+        "src/maritime/scenarios.py",
+        "src/maritime/pipeline.py"
+      ],
+      "existence_status": "PRESENT",
+      "configuration_status": "CONFIGURED",
+      "integration_status": "CONNECTED",
+      "verification_status": "END_TO_END_VERIFIED",
+      "evidence": [
+        "evidence/local-release-20261017-freshness-01/tests.xml",
+        "evidence/local-release-20261017-freshness-01/docker/maritime-demo-4836fad43b/interventions.json",
+        "evidence/local-release-20261017-freshness-01/docker/maritime-demo-4836fad43b/decisions.json"
+      ],
+      "dependencies": "Scenario outcomes, graph and costs",
+      "limitations": "Deterministic research decision support; no carrier action execution.",
+      "minimum_verification": "Verify feasibility, ranking and explanation trace for accepted run."
+    },
+    {
+      "id": "C25",
+      "name": "Review / outcome / learning audit",
+      "purpose": "Operator feedback and error metrics",
+      "paths": [
+        "src/maritime/api.py",
+        "src/maritime/feedback.py",
+        "src/maritime/store.py"
+      ],
+      "existence_status": "PRESENT",
+      "configuration_status": "PARTIAL",
+      "integration_status": "CONNECTED",
+      "verification_status": "END_TO_END_VERIFIED",
+      "evidence": [
+        "evidence/local-release-20261017-freshness-01/docker/maritime-demo-4836fad43b/result.json",
+        "evidence/local-release-20261017-freshness-01/docker/maritime-demo-4836fad43b/learning-transfer.json",
+        "evidence/local-release-20261017-freshness-01/tests.xml"
+      ],
+      "dependencies": "Operator auth and accepted decision",
+      "limitations": "Local real SQLite transfer tested; synthetic outcomes remain simulated; causal effects not observed.",
+      "minimum_verification": "Verify authenticated review/outcome/replay against selected current root."
+    },
+    {
+      "id": "C26",
+      "name": "Local model training / evaluation / artifact registry",
+      "purpose": "Chronological port-call forecast candidates",
+      "paths": [
+        "src/maritime/ml.py",
+        "src/maritime/ml_contract.py"
+      ],
+      "existence_status": "PRESENT",
+      "configuration_status": "CONFIGURED",
+      "integration_status": "CONNECTED",
+      "verification_status": "END_TO_END_VERIFIED",
+      "evidence": [
+        "evidence/local-release-20261017-freshness-01/tests.xml",
+        "evidence/local-release-20261017-freshness-01/docker/maritime-demo-4836fad43b/predictions.json"
+      ],
+      "dependencies": "Observed activity and sklearn/joblib environment",
+      "limitations": "Local research models, not production-approved models; current environment needs repair.",
+      "minimum_verification": "Validate artifact hash, temporal evaluation and inference contract on new selected run."
+    },
+    {
+      "id": "C27",
+      "name": "Forecast-to-decision influence",
+      "purpose": "Use predicted calls to change recommendations",
+      "paths": [
+        "src/maritime/pipeline.py",
+        "src/maritime/scenarios.py"
+      ],
+      "existence_status": "MISSING",
+      "configuration_status": "NOT_CONFIGURED",
+      "integration_status": "DISCONNECTED",
+      "verification_status": "STATICALLY_CHECKED",
+      "evidence": [
+        "src/maritime/pipeline.py:280",
+        "src/maritime/pipeline.py:305"
+      ],
+      "dependencies": "Explicit design/validation if desired",
+      "limitations": "Scenario decisions are ranked before predictions are generated; forecasts published alongside, not consumed by current local ranking. Not assumed mandatory.",
+      "minimum_verification": "Owner defines intended coupling; trace/test data dependency before claiming forecast-driven decisions."
+    },
+    {
+      "id": "C28",
+      "name": "Observed shipment SLA ML",
+      "purpose": "Train on actual commercial shipment outcomes",
+      "paths": [
+        "src/maritime/ml.py",
+        "src/maritime/ml_contract.py",
+        "configs/azure.json"
+      ],
+      "existence_status": "MISSING",
+      "configuration_status": "NOT_CONFIGURED",
+      "integration_status": "DISCONNECTED",
+      "verification_status": "BLOCKED",
+      "evidence": [
+        "evidence/local-release-20261017-freshness-01/tests.xml",
+        "configs/azure.json"
+      ],
+      "dependencies": "Representative lawful observed outcome labels",
+      "limitations": "Deferred by design; rejection boundary exists, trainer does not.",
+      "minimum_verification": "Obtain approved labels/contract and separate model qualification; do not use simulated outcomes."
+    },
+    {
+      "id": "C29",
+      "name": "Fabric notebooks / Delta runtime",
+      "purpose": "Bronze/Silver/Gold/acceptance plus imports",
+      "paths": [
+        "src/maritime/fabric_runtime.py",
+        "fabric/notebooks",
+        "scripts/build_fabric_assets.py"
+      ],
+      "existence_status": "PRESENT",
+      "configuration_status": "PARTIAL",
+      "integration_status": "UNKNOWN",
+      "verification_status": "STATICALLY_CHECKED",
+      "evidence": [
+        "evidence/local-release-20261017-freshness-01/fabric-assets.log",
+        "evidence/local-release-20261017-freshness-01/tests.xml"
+      ],
+      "dependencies": "Capacity/workspace/lakehouse, Spark/Delta and identity",
+      "limitations": "Six notebooks and runtime code exist; asset checks do not execute real Spark/Delta.",
+      "minimum_verification": "Deploy authorized package/notebooks, execute each stage and inspect actual Delta receipts/readback."
+    },
+    {
+      "id": "C30",
+      "name": "Fabric DataPipeline deployment",
+      "purpose": "Service task dependencies and job polling",
+      "paths": [
+        "scripts/deploy_fabric.py",
+        ".github/workflows/fabric.yml"
+      ],
+      "existence_status": "PRESENT",
+      "configuration_status": "NOT_CONFIGURED",
+      "integration_status": "UNKNOWN",
+      "verification_status": "STATICALLY_CHECKED",
+      "evidence": [
+        "scripts/deploy_fabric.py:170",
+        "evidence/local-release-20261017-freshness-01/tests.xml"
+      ],
+      "dependencies": "Fabric REST authorization and capacity",
+      "limitations": "Pipeline definition built in code; four sequential main stages; imports separate. No deployed pipeline evidence.",
+      "minimum_verification": "Execute actual authorized deployment/job and retain IDs, terminal state and stage readback."
+    },
+    {
+      "id": "C31",
+      "name": "Azure ML lifecycle / promotion",
+      "purpose": "Cloud jobs, registration and explicit approval",
+      "paths": [
+        "scripts/azure_ml.py",
+        "src/maritime/azure_ml_job.py",
+        "configs/azure.json",
+        "azure/ml/conda.yml",
+        ".github/workflows/azure-ml.yml"
+      ],
+      "existence_status": "PRESENT",
+      "configuration_status": "PARTIAL",
+      "integration_status": "UNKNOWN",
+      "verification_status": "LOCALLY_TESTED",
+      "evidence": [
+        "evidence/local-release-20261017-freshness-01/tests.xml",
+        "evidence/local-release-20261017-freshness-01/cloud-preflight.json"
+      ],
+      "dependencies": "AML workspace/compute/quota, identity/storage and named approver",
+      "limitations": "Local train/batch/promotion contracts tested; no real job or approved production model.",
+      "minimum_verification": "Submit/train/evaluate/register, approve version, run batch and inspect outputs in target."
+    },
+    {
+      "id": "C32",
+      "name": "Fabric\u2013AML feature/prediction bridge",
+      "purpose": "Versioned features out and predictions back",
+      "paths": [
+        "scripts/fabric_ml_bridge.py",
+        "src/maritime/ml_contract.py",
+        "src/maritime/fabric_runtime.py"
+      ],
+      "existence_status": "PRESENT",
+      "configuration_status": "NOT_CONFIGURED",
+      "integration_status": "UNKNOWN",
+      "verification_status": "LOCALLY_TESTED",
+      "evidence": [
+        "evidence/local-release-20261017-freshness-01/tests.xml"
+      ],
+      "dependencies": "OneLake, AML outputs, prediction-import notebook identity",
+      "limitations": "Contracts tested; real transfer/Delta/serving round trip absent.",
+      "minimum_verification": "Verify checksums and run/model identities through real upload, job, import and readback."
+    },
+    {
+      "id": "C33",
+      "name": "Azure audit\u2013Fabric feedback bridge",
+      "purpose": "Return review/outcome facts to analytical mart",
+      "paths": [
+        "scripts/fabric_feedback.py",
+        "src/maritime/feedback.py",
+        "src/maritime/fabric_runtime.py",
+        "fabric/notebooks/import_feedback.ipynb"
+      ],
+      "existence_status": "PRESENT",
+      "configuration_status": "NOT_CONFIGURED",
+      "integration_status": "UNKNOWN",
+      "verification_status": "LOCALLY_TESTED",
+      "evidence": [
+        "evidence/local-release-20261017-freshness-01/tests.xml",
+        "evidence/local-release-20261017-freshness-01/docker/maritime-demo-4836fad43b/learning-transfer.json"
+      ],
+      "dependencies": "Azure audit storage, Fabric identity/lakehouse",
+      "limitations": "Local genuine destination replay tested; cloud bridge not end-to-end verified.",
+      "minimum_verification": "Transfer same packet twice and subset; verify real Delta counts/hashes, preserved prior rows."
+    },
+    {
+      "id": "C34",
+      "name": "Azure OpenAI grounded extraction",
+      "purpose": "Evidence text to anticipated signals",
+      "paths": [
+        "src/maritime/genai.py",
+        "src/maritime/azure_security.py",
+        "src/maritime/cli.py"
+      ],
+      "existence_status": "PRESENT",
+      "configuration_status": "NOT_CONFIGURED",
+      "integration_status": "UNKNOWN",
+      "verification_status": "LOCALLY_TESTED",
+      "evidence": [
+        "evidence/local-release-20261017-freshness-01/tests.xml"
+      ],
+      "dependencies": "Authorized endpoint/deployment/identity or secret; quota/network",
+      "limitations": "Mocked request/grounding/failure contracts only; explicit extraction command, not automatic full-run dependency.",
+      "minimum_verification": "Make authorized real request and controlled failure checks; retain redacted grounding/audit receipt."
+    },
+    {
+      "id": "C35",
+      "name": "Entra JWT / application roles",
+      "purpose": "Verified identity and Reader/Operator authorization",
+      "paths": [
+        "src/maritime/azure_security.py",
+        "src/maritime/api.py",
+        "azure/main.bicep"
+      ],
+      "existence_status": "PRESENT",
+      "configuration_status": "NOT_CONFIGURED",
+      "integration_status": "UNKNOWN",
+      "verification_status": "LOCALLY_TESTED",
+      "evidence": [
+        "evidence/local-release-20261017-freshness-01/tests.xml"
+      ],
+      "dependencies": "Tenant/audience/app roles/JWKS and deployed identity",
+      "limitations": "Signature/audience/expiry/role tests use local fixtures; effective tenant authorization unknown.",
+      "minimum_verification": "Test actual valid/expired/wrong-audience/wrong-role tokens in target without logging them."
+    },
+    {
+      "id": "C36",
+      "name": "Azure Blob serving / audit backend",
+      "purpose": "Durable cloud publication and separated audit",
+      "paths": [
+        "src/maritime/azure_store.py",
+        "scripts/publish_azure.py",
+        "azure/main.bicep"
+      ],
+      "existence_status": "PRESENT",
+      "configuration_status": "NOT_CONFIGURED",
+      "integration_status": "UNKNOWN",
+      "verification_status": "LOCALLY_TESTED",
+      "evidence": [
+        "evidence/local-release-20261017-freshness-01/tests.xml"
+      ],
+      "dependencies": "Storage URL, containers and least-privilege identities",
+      "limitations": "Local adapter tests do not establish real Blob consistency/permissions.",
+      "minimum_verification": "Publish/read real manifest, fail dependency, verify denied unauthorized writes and audit isolation."
+    },
+    {
+      "id": "C37",
+      "name": "Azure infrastructure / managed identity / Key Vault",
+      "purpose": "Hosted API and supporting resources",
+      "paths": [
+        "azure/main.bicep",
+        "azure/main.json",
+        "src/maritime/azure_security.py",
+        "scripts/deployment_preflight.ps1"
+      ],
+      "existence_status": "PRESENT",
+      "configuration_status": "PARTIAL",
+      "integration_status": "UNKNOWN",
+      "verification_status": "STATICALLY_CHECKED",
+      "evidence": [
+        "evidence/local-release-20261017-freshness-01/bicep.log",
+        "evidence/local-release-20261017-freshness-01/cloud-preflight.json"
+      ],
+      "dependencies": "Subscription/RG/region, image digest, roles, network, existing AOAI account",
+      "limitations": "Compiled campaign template; checked-in azure/main.json not assumed freshly equivalent; private networking/registry choices unresolved.",
+      "minimum_verification": "Validate deployed parameters/what-if, deploy and inspect effective resources/IAM/secrets/network."
+    },
+    {
+      "id": "C38",
+      "name": "Cloud immutable retention",
+      "purpose": "Retention policy and destructive-operation denial",
+      "paths": [
+        "azure/main.bicep",
+        "docs/operations/deployment_acceptance.md"
+      ],
+      "existence_status": "PARTIAL",
+      "configuration_status": "NOT_CONFIGURED",
+      "integration_status": "UNKNOWN",
+      "verification_status": "BLOCKED",
+      "evidence": [
+        "azure/main.bicep:376",
+        "docs/operations/production_closure.md"
+      ],
+      "dependencies": "Owner-approved duration/locking, storage identity",
+      "limitations": "Template does not establish locked enforced policy; overwrite/delete/expiry not proven.",
+      "minimum_verification": "Approve then deploy/lock and test identity denials and actual expiry; retain break-glass procedure."
+    },
+    {
+      "id": "C39",
+      "name": "SQL views / DAX / Power Query",
+      "purpose": "Reporting consumption definitions",
+      "paths": [
+        "sql/reporting.sql",
+        "fabric/powerbi/measures.dax",
+        "fabric/powerbi/local-import.pq"
+      ],
+      "existence_status": "PRESENT",
+      "configuration_status": "PARTIAL",
+      "integration_status": "PARTIALLY_CONNECTED",
+      "verification_status": "STATICALLY_CHECKED",
+      "evidence": [
+        "evidence/local-release-20261017-freshness-01/powerbi.log",
+        "sql/reporting.sql"
+      ],
+      "dependencies": "Accepted Gold tables and real reporting engine/model",
+      "limitations": "Definitions reference run-scoped marts; runtime SQL/DAX/M evaluation not verified.",
+      "minimum_verification": "Execute views/measures/import and reconcile units/filters/counts against accepted run."
+    },
+    {
+      "id": "C40",
+      "name": "PBIR report pages",
+      "purpose": "Five authored report-page assets",
+      "paths": [
+        "scripts/build_powerbi.py",
+        "fabric/powerbi/Maritime.Report",
+        "configs/powerbi_schemas"
+      ],
+      "existence_status": "PRESENT",
+      "configuration_status": "PARTIAL",
+      "integration_status": "PARTIALLY_CONNECTED",
+      "verification_status": "STATICALLY_CHECKED",
+      "evidence": [
+        "evidence/local-release-20261017-freshness-01/powerbi.log",
+        "evidence/local-release-20261017-freshness-01/tests.xml"
+      ],
+      "dependencies": "Microsoft schemas and bound semantic model",
+      "limitations": "29 files/five pages validated; placeholder binding and no Desktop render; some intended visuals remain incomplete.",
+      "minimum_verification": "Bind actual model, render all pages and test fields/relationships/filter behavior."
+    },
+    {
+      "id": "C41",
+      "name": "Semantic model / refresh / RLS / publishing",
+      "purpose": "Operational Power BI data connection",
+      "paths": [
+        "fabric/powerbi/Maritime.Report/definition.pbir.template",
+        "docs/reporting.md"
+      ],
+      "existence_status": "MISSING",
+      "configuration_status": "NOT_CONFIGURED",
+      "integration_status": "UNKNOWN",
+      "verification_status": "BLOCKED",
+      "evidence": [
+        "fabric/powerbi/Maritime.Report/definition.pbir.template",
+        "evidence/local-release-20261017-freshness-01/powerbi.log"
+      ],
+      "dependencies": "Power BI Desktop/service access, model Build/publish, credentials, approved RLS scope",
+      "limitations": "No deployed model or successful refresh evidence; placeholder is not connection.",
+      "minimum_verification": "Create/bind model, execute refresh and positive/negative access tests; retain IDs/history."
+    },
+    {
+      "id": "C42",
+      "name": "Dedicated web dashboard",
+      "purpose": "Custom interactive front-end beyond OpenAPI",
+      "paths": [
+        "src/maritime/api.py",
+        "docs/requirements/feature_traceability.md"
+      ],
+      "existence_status": "MISSING",
+      "configuration_status": "NOT_CONFIGURED",
+      "integration_status": "DISCONNECTED",
+      "verification_status": "NOT_TESTED",
+      "evidence": [
+        "docs/requirements/feature_traceability.md"
+      ],
+      "dependencies": "Product scope decision",
+      "limitations": "OpenAPI interface exists; separate web dashboard not implemented or assumed required.",
+      "minimum_verification": "Confirm intended UI scope; do not describe API docs as an authored dashboard."
+    },
+    {
+      "id": "C43",
+      "name": "Logs / metrics / request correlation",
+      "purpose": "Local operational observability",
+      "paths": [
+        "src/maritime/api.py",
+        "src/maritime/pipeline.py",
+        "src/maritime/azure_security.py"
+      ],
+      "existence_status": "PRESENT",
+      "configuration_status": "PARTIAL",
+      "integration_status": "CONNECTED",
+      "verification_status": "END_TO_END_VERIFIED",
+      "evidence": [
+        "evidence/local-release-20261017-freshness-01/docker/maritime-demo-4836fad43b/metrics.json",
+        "evidence/local-release-20261017-freshness-01/tests.xml"
+      ],
+      "dependencies": "Running API/pipeline; telemetry connection for Azure export",
+      "limitations": "Local counters/report evidence verified; counters reset; telemetry env absent.",
+      "minimum_verification": "Verify current metrics/correlation and target telemetry reception if enabled."
+    },
+    {
+      "id": "C44",
+      "name": "Alert rules / delivery / on-call",
+      "purpose": "Turn failures into received notifications",
+      "paths": [
+        "docs/operations/production_closure.md",
+        "azure/main.bicep"
+      ],
+      "existence_status": "MISSING",
+      "configuration_status": "NOT_CONFIGURED",
+      "integration_status": "DISCONNECTED",
+      "verification_status": "BLOCKED",
+      "evidence": [
+        "docs/operations/production_closure.md",
+        "azure/main.bicep"
+      ],
+      "dependencies": "Action group/rules, named owners and routing",
+      "limitations": "Monitor workspace/Insights resources are not alert rules or delivery; no alert resources found.",
+      "minimum_verification": "Configure approved rules/routing and inject authorized failure; capture actual delivered/resolved alert."
+    },
+    {
+      "id": "C45",
+      "name": "Backup / restore / publication integrity",
+      "purpose": "Verified non-destructive local recovery",
+      "paths": [
+        "src/maritime/recovery.py",
+        "src/maritime/store.py",
+        "src/maritime/cli.py"
+      ],
+      "existence_status": "PRESENT",
+      "configuration_status": "PARTIAL",
+      "integration_status": "CONNECTED",
+      "verification_status": "END_TO_END_VERIFIED",
+      "evidence": [
+        "evidence/local-release-20261017-freshness-01/docker/maritime-demo-4836fad43b/backup-restore.json",
+        "evidence/local-release-20261017-freshness-01/tests.xml"
+      ],
+      "dependencies": "Selected root and fresh non-overlapping destinations",
+      "limitations": "Historical real local restore with chain/publication checks; current chosen target backup absent; not offsite DR.",
+      "minimum_verification": "Verify backup and restore of the selected operational root before mutation."
+    },
+    {
+      "id": "C46",
+      "name": "Offsite DR / RPO / RTO / failover",
+      "purpose": "Recover from loss of primary environment",
+      "paths": [
+        "docs/operations/production_closure.md"
+      ],
+      "existence_status": "MISSING",
+      "configuration_status": "NOT_CONFIGURED",
+      "integration_status": "UNKNOWN",
+      "verification_status": "BLOCKED",
+      "evidence": [
+        "docs/operations/production_closure.md"
+      ],
+      "dependencies": "Owner-approved targets, offsite encrypted storage and recovery identity",
+      "limitations": "Procedures and questions exist, no configured/tested system.",
+      "minimum_verification": "Approve targets and execute measured offsite restore/failover."
+    },
+    {
+      "id": "C47",
+      "name": "Docker / Compose local packaging",
+      "purpose": "Isolated seed/API and persistent volume",
+      "paths": [
+        "docker/Dockerfile",
+        "docker-compose.yml",
+        "compose.demo.yml",
+        "scripts/docker_demo.py"
+      ],
+      "existence_status": "PRESENT",
+      "configuration_status": "PARTIAL",
+      "integration_status": "PARTIALLY_CONNECTED",
+      "verification_status": "END_TO_END_VERIFIED",
+      "evidence": [
+        "evidence/local-release-20261017-freshness-01/docker/maritime-demo-4836fad43b/result.json",
+        "evidence/full-run-readiness-20261018-084056/preflight.json"
+      ],
+      "dependencies": "Linux Docker engine, keys, images, named volume",
+      "limitations": "Real historical clean build/HTTP/restart verified; latest engine unavailable; volume state unknown.",
+      "minimum_verification": "With separate authorization start engine, inspect selected project/volume and repeat bounded readiness checks."
+    },
+    {
+      "id": "C48",
+      "name": "Testing / security / evidence packaging",
+      "purpose": "Regression suite, audit, source-bound releases",
+      "paths": [
+        "tests",
+        "src/maritime/release_evidence.py",
+        "scripts/production_release.py",
+        "scripts/package_readiness.py",
+        "pyproject.toml",
+        "uv.lock"
+      ],
+      "existence_status": "PRESENT",
+      "configuration_status": "PARTIAL",
+      "integration_status": "CONNECTED",
+      "verification_status": "LOCALLY_TESTED",
+      "evidence": [
+        "evidence/local-release-20261017-freshness-01/tests.xml",
+        "evidence/local-release-20261017-freshness-01/dependency-audit.log",
+        "evidence/local-release-20261017-freshness-01/result.json",
+        "evidence/full-run-readiness-20261018-084056/preflight.json"
+      ],
+      "dependencies": "Working locked environment; audit feed for fresh vulnerability scan",
+      "limitations": "63 historical tests, one warning; advisory scan historical; current .venv has duplicate/incomplete packages. No static type checker configured.",
+      "minimum_verification": "Use separate intact environment; rerun relevant checks after changes; preserve manifest/source binding."
+    },
+    {
+      "id": "C49",
+      "name": "GitHub CI / deployment workflows",
+      "purpose": "Push/PR validation and manual cloud execution",
+      "paths": [
+        ".github/workflows/ci.yml",
+        ".github/workflows/fabric.yml",
+        ".github/workflows/azure-ml.yml"
+      ],
+      "existence_status": "PRESENT",
+      "configuration_status": "PARTIAL",
+      "integration_status": "UNKNOWN",
+      "verification_status": "STATICALLY_CHECKED",
+      "evidence": [
+        ".github/workflows/ci.yml",
+        ".github/workflows/fabric.yml",
+        ".github/workflows/azure-ml.yml"
+      ],
+      "dependencies": "Remote repo/environments/OIDC/vars/secrets",
+      "limitations": "YAML exists; no actual GitHub run evidence inspected; no recurring schedule.",
+      "minimum_verification": "Inspect authorized workflow runs/artifacts and configured environments, not just YAML."
+    }
+  ]
+}

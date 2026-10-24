@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "assessed_at_qatar": "2026-10-17T16:27:46.0864924+03:00",
+  "scope": "Documentation and existing-evidence review only",
+  "git_revision": "4b50f50769b08e763015064c53d91b6bda4ae079",
+  "branch": "codex/build-maritime-platform",
+  "working_tree": "DIRTY; preserved",
+  "files": {
+    "branch.txt": "431d73deb2db24cc17010630f2ff2ec02b0bf4be0532e0cf64626f09c29f393e",
+    "git-ignored-after.txt": "a682816c0a30b311ab75f6d242d08cbf85bd2c195057e19099c87c4dbb5d1a56",
+    "git-ignored-before.txt": "a682816c0a30b311ab75f6d242d08cbf85bd2c195057e19099c87c4dbb5d1a56",
+    "git-status-after.txt": "a240e8240deb430bd32151541c2089fed3e8ae72674273655135e57a49f62564",
+    "git-status-before.txt": "db7bbcfc2456fb3094e86877559c765a48ef3bcbcdbe57d9b919ca59133d404f",
+    "LICENSING_CLARIFICATION_REQUEST.md": "65324fcae3147af961fc2ec7c45aac54543b01aca29214c14cd44962ab5f3c14",
+    "LICENSING_DECISION.md": "7a1e9e86aac65c9934b5cc350e1d8e0d413f3d4eb1aa101327c620e60b2e0de9",
+    "PRODUCTION_READINESS_GAPS.md": "da1ccf39929ef98d16e7823536c5d3a57193e131c3c04ec1c2e8dcb987af1603",
+    "revision.txt": "609b6b572df24aaffe95f769230748fe737f927bce14fd3f3aef028a4a084819"
+  },
+  "referenced_evidence_sha256": {
+    "evidence/local-release-20261017-freshness-01/result.json": "cb9f409818b369e360673d5c2bef11f7114d79cc6136727ff8e21d76dd706884",
+    "evidence/local-release-20261017-freshness-01/evidence-manifest.json": "7f9c17d81873c614a65510a193b4604bc76c366c92ea7022173ecd8ed7b7edc4",
+    "evidence/local-release-20261017-freshness-01/tests.xml": "9c31e4e612f224a022e338eb76188c25d7b52f5f5094d7a719f4bedec8e9ca78",
+    "evidence/local-release-20261017-freshness-01/cloud-preflight.json": "275a5ce36b5c535fc9ccc0916169451398fce68568909ff86909368414eae64b",
+    "evidence/local-release-20261017-freshness-01/live/release-validation.json": "08300cfe0f9d405f6a55a9cc9a225faa6379d0f3b3a50323b25a7f1085c68775",
+    "evidence/local-release-20261017-freshness-01/docker/maritime-demo-4836fad43b/result.json": "10145f009ebe610cd5318a501614ba265ca14faa82c237a575875773f16587f1",
+    "evidence/local-release-20261017-freshness-01/docker/maritime-demo-4836fad43b/backup-restore.json": "0055797bc426b0622cbd4434f39343790b8f336a199c36e854d2a6ca117baa7d",
+    "evidence/trade-qualification-20261017-160824/ASSESSMENT.md": "a771fa5e2b526c9478c694efeaac6091a3d5dc548a6b240f6d61594d98ffaace",
+    "evidence/trade-qualification-20261017-160824/verification.json": "85457a5be5e5fcf69ba7d0dbb319e5d737f94fe7ea58f06b181bd93d0764c501",
+    "evidence/trade-qualification-20261017-160824/sample-verification.json": "6d64a3df483ea375b4234db21fdea41c08d1b7b97513aaad8c47ebb9a895060d",
+    "evidence/trade-qualification-20261017-160824/manifest.json": "7ec0fba1bf6bf50ef2d1d10cababdbd5acd492ac502fa97e235790c67f4f7ced",
+    "evidence/official-source-assessment-20261017/verification.json": "6dd50f2886a39f9cfa941951dd8a8b0cfb47cf50608e843b3f5aae0c4be2ff9b",
+    "evidence/freshness-diagnosis-20261017-131acd0c/diagnosis.json": "bfbeecb41d31e531b3e007450aaa490c08f68dab0fb5287ec65fbd4c457f0fff",
+    "docs/operations/deployment_acceptance.md": "3c80b00a9ca9de7c243848c0976959d0a58e44473be1ba7a05b0f00c9a72098a",
+    "docs/operations/production_closure.md": "613594874d2a9ca097b67a66af827f66c85c0a1cdbbb63be2a9b089349ed2890",
+    "docs/requirements/production_acceptance.json": "7b34152904ece464ec5d8dffb4fffce75636521de2568622aa6a972b3e6d1847"
+  },
+  "verification": {
+    "source_files_matching_release": 146,
+    "ignored_inventory_preserved": true,
+    "application_changes": false,
+    "status": "PASS",
+    "verification_scope_limit": "Ignored file contents were not exhaustively hashed; prior ZIP verification is cited, not rerun",
+    "messages_sent": false,
+    "trade_assessment_files_verified": 13,
+    "method": "PowerShell Get-FileHash SHA256 comparison against saved manifests; Git status inventory comparison",
+    "prior_git_entries_preserved": true,
+    "campaign_files_verified": 111,
+    "new_git_entries_confined_to_assessment": true,
+    "tests_rerun": false
+  },
+  "official_sources": [
+    {
+      "accessed_date": "2026-10-17",
+      "method": "web open; content inspected",
+      "url": "https://uncomtrade.org/docs/re-dissemination-of-data/"
+    },
+    {
+      "accessed_date": "2026-10-17",
+      "method": "web open",
+      "url": "https://uncomtrade.org/docs/policy-on-comtrade-data-use/"
+    },
+    {
+      "accessed_date": "2026-10-17",
+      "method": "web click from official policy",
+      "url": "https://uncomtrade.org/docs/subscriptions/"
+    },
+    {
+      "accessed_date": "2026-10-17",
+      "method": "web open",
+      "url": "https://uncomtrade.org/docs/what-is-data-preview/"
+    }
+  ],
+  "self_hash_excluded": true,
+  "production_ready": false
+}

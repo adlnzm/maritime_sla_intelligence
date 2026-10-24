@@ -1,0 +1,13 @@
+maritime_api_requests_total 13
+maritime_api_errors_total 1
+maritime_api_duration_seconds_sum 0.1837085820000084
+maritime_pipeline_duration_seconds 3.653146642000138
+maritime_dq_score 1.0
+maritime_scenario_executions 300
+maritime_decision_count 60
+maritime_latest_attempt_failed 0
+maritime_latest_attempt_retries 0
+maritime_latest_attempt_timeouts 0
+maritime_records_processed 1452
+maritime_records_rejected 0
+maritime_decision_override_rate 0.0

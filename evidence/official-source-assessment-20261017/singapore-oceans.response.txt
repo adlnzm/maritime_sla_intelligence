@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>MPA Oceans X</title>
+
+        <!-- Google Search Console ownership verification (HTML tag method)
+             Token derived from googlec1e4d2129e367180.html verification file.
+             The HTML file is also served at /googlec1e4d2129e367180.html (public/).
+             GA4 gtag.js below provides a third verification option.
+        -->
+        <meta name="google-site-verification" content="c1e4d2129e367180" />
+
+        <!-- Clickjacking protection for legacy browsers -->
+        <script>
+            // Enhanced framebusting script to prevent clickjacking
+            if (top !== self) {
+                try {
+                    top.location.replace(self.location.href);
+                } catch (e) {
+                    // Fallback if replace fails
+                    top.location = self.location.href;
+                }
+            }
+        </script>
+
+        <!-- WOGAA (Whole-of-Government Analytics and AI)
+             VITE_WOGAA_SCRIPT_URL is replaced at build time.
+             Test/Dev/UAT : https://assets.dcube.cloud/scripts/wogaa.js
+             Production   : https://assets.wogaa.sg/scripts/wogaa.js
+             Empty string : WOGAA disabled (no script loaded)
+             Injected via inline script to guard against empty URL —
+             a bare <script src=""> would fetch the current page as a script.
+             https://docs.wogaa.sg/web-implementation/setup-guide/website-implementation-test
+        -->
+        <script>
+            (function () {
+                var wogaaUrl = "";
+                if (wogaaUrl) {
+                    var s = document.createElement("script");
+                    s.src = wogaaUrl;
+                    document.head.appendChild(s);
+                }
+            })();
+        </script>
+
+        <!-- Google Analytics 4: load gtag.js only when a Measurement ID is configured.
+             VITE_GA_MEASUREMENT_ID is replaced at build time.
+             Empty string : GA disabled (no script loaded, no network request).
+             Injected via inline script — a bare <script src="...?id="> would still
+             fire a request with an empty id, polluting analytics and wasting bandwidth.
+        -->
+        <script>
+            (function () {
+                var gaMeasurementId = "G-M3R3WZFKX2";
+                if (gaMeasurementId) {
+                    var s = document.createElement("script");
+                    s.async = true;
+                    s.src = "https://www.googletagmanager.com/gtag/js?id=" + gaMeasurementId;
+                    document.head.appendChild(s);
+                }
+            })();
+        </script>
+        <!-- Synchronously initialise window.dataLayer and gtag() so they are
+             available before the async gtag.js finishes loading. -->
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+        </script>
+
+        <!-- 
+            Security: Local vendor scripts bundled with deployment
+            - No external CDN dependencies (eliminates Checkmarx security concerns)
+            - Scripts downloaded from verified sources and committed to repository
+            - Deployed to Azure Blob Storage with application bundle
+        -->
+        <script type="module" src="/vendor/sgds-masthead.umd.js"></script>
+      <script type="module" crossorigin src="/assets/index-DGgFRr98.js"></script>
+      <link rel="stylesheet" crossorigin href="/assets/index-BzYr-rln.css">
+    </head>
+    <body>
+        <div id="root"></div>
+        <!-- ref: https://www.npmjs.com/package/sgds-govtech -->
+        <script src="/vendor/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1688482189" async></script></body>
+</html>

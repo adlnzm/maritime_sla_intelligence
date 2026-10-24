@@ -1,0 +1,11 @@
+{
+  "status": "BLOCKED",
+  "mandatory_failed_controls": [
+    {
+      "control": "local_campaign",
+      "reason": "Critical DQ failed: 6 checks; inspect run report",
+      "type": "ValueError"
+    }
+  ],
+  "attempts": []
+}

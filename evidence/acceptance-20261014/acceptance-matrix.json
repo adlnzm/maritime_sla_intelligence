@@ -1,0 +1,450 @@
+[
+  {
+    "id": "SRC-01",
+    "requirement": "Registered source identity, schema, classification and acquisition provenance",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\tests.xml",
+    "scope_or_remediation": "Local contract/algorithm scope only; see current tests and campaign logs. No cloud runtime claim."
+  },
+  {
+    "id": "SRC-02",
+    "requirement": "PortWatch paginated, count-reconciled acquisition with timeout/retry and retained failures",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\tests.xml",
+    "scope_or_remediation": "Local contract/algorithm scope only; see current tests and campaign logs. No cloud runtime claim."
+  },
+  {
+    "id": "SRC-03",
+    "requirement": "Incremental overlap, source revisions and expired-row accounting",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\tests.xml",
+    "scope_or_remediation": "Local contract/algorithm scope only; see current tests and campaign logs. No cloud runtime claim."
+  },
+  {
+    "id": "SRC-04",
+    "requirement": "Optional WPI, UN/LOCODE and reference route adapters",
+    "status": "BLOCKED",
+    "evidence": "evidence/deployment-preflight-20261014.json; docs/operations/deployment_acceptance.md",
+    "scope_or_remediation": "Optional approved source downloads/URLs absent; configure and execute WPI, UN/LOCODE and reference geometry."
+  },
+  {
+    "id": "SRC-05",
+    "requirement": "Public weather acquisition retained as DERIVED reanalysis",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\live\\failed-reports",
+    "scope_or_remediation": "Weather acquisition succeeded; the overall live publication failed activity freshness."
+  },
+  {
+    "id": "BRZ-01",
+    "requirement": "Immutable-content raw retention, checksum verification and replay",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\tests.xml",
+    "scope_or_remediation": "Local contract/algorithm scope only; see current tests and campaign logs. No cloud runtime claim."
+  },
+  {
+    "id": "SLV-01",
+    "requirement": "Canonical types, ranges, coordinates, temporal validity, stable IDs and UTC",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\tests.xml",
+    "scope_or_remediation": "Local contract/algorithm scope only; see current tests and campaign logs. No cloud runtime claim."
+  },
+  {
+    "id": "SLV-02",
+    "requirement": "Exclusive persisted/duplicate/rejected/quarantined/failed dispositions",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\tests.xml",
+    "scope_or_remediation": "Local contract/algorithm scope only; see current tests and campaign logs. No cloud runtime claim."
+  },
+  {
+    "id": "SLV-03",
+    "requirement": "Completeness, duplicates, FK, freshness and consecutive coverage gates",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\tests.xml",
+    "scope_or_remediation": "Local contract/algorithm scope only; see current tests and campaign logs. No cloud runtime claim."
+  },
+  {
+    "id": "GOV-01",
+    "requirement": "Five classifications preserved across all downstream products",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\tests.xml",
+    "scope_or_remediation": "Local contract/algorithm scope only; see current tests and campaign logs. No cloud runtime claim."
+  },
+  {
+    "id": "GOV-02",
+    "requirement": "Queryable field lineage and product/feature/config fingerprints",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\tests.xml",
+    "scope_or_remediation": "Local contract/algorithm scope only; see current tests and campaign logs. No cloud runtime claim."
+  },
+  {
+    "id": "GOV-03",
+    "requirement": "Continuous stage gates and immutable approved publication",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\tests.xml",
+    "scope_or_remediation": "Local contract/algorithm scope only; see current tests and campaign logs. No cloud runtime claim."
+  },
+  {
+    "id": "GOV-04",
+    "requirement": "Single writer, replay idempotency, interrupted-run recovery",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\tests.xml",
+    "scope_or_remediation": "Local contract/algorithm scope only; see current tests and campaign logs. No cloud runtime claim."
+  },
+  {
+    "id": "GOV-05",
+    "requirement": "Append-only audit, hash chain and approved-product SQL protection",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\tests.xml",
+    "scope_or_remediation": "Local contract/algorithm scope only; see current tests and campaign logs. No cloud runtime claim."
+  },
+  {
+    "id": "GOV-06",
+    "requirement": "Production retention enforcement and administrator separation",
+    "status": "BLOCKED",
+    "evidence": "evidence/deployment-preflight-20261014.json; docs/operations/deployment_acceptance.md",
+    "scope_or_remediation": "Owner-approved retention/lock and effective target permissions/expiry evidence required."
+  },
+  {
+    "id": "DET-01",
+    "requirement": "56-day historical baseline, deviation/rank, persistence and stress categories",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\tests.xml",
+    "scope_or_remediation": "Local contract/algorithm scope only; see current tests and campaign logs. No cloud runtime claim."
+  },
+  {
+    "id": "DET-02",
+    "requirement": "Independent recomputation prevents corrupt metrics reaching decisions",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\tests.xml",
+    "scope_or_remediation": "Local contract/algorithm scope only; see current tests and campaign logs. No cloud runtime claim."
+  },
+  {
+    "id": "NET-01",
+    "requirement": "Time-valid network state, availability, closures, stress and alternatives",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\tests.xml",
+    "scope_or_remediation": "Local contract/algorithm scope only; see current tests and campaign logs. No cloud runtime claim."
+  },
+  {
+    "id": "NET-02",
+    "requirement": "Bounded temporal propagation and downstream exposure with assumptions",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\tests.xml",
+    "scope_or_remediation": "Local contract/algorithm scope only; see current tests and campaign logs. No cloud runtime claim."
+  },
+  {
+    "id": "SCN-01",
+    "requirement": "Seeded synthetic shipments, promised delivery, buffer, priority and cargo",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\tests.xml",
+    "scope_or_remediation": "Local contract/algorithm scope only; see current tests and campaign logs. No cloud runtime claim."
+  },
+  {
+    "id": "SCN-02",
+    "requirement": "Five counterfactual interventions with paired outcome distributions",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\tests.xml",
+    "scope_or_remediation": "Local contract/algorithm scope only; see current tests and campaign logs. No cloud runtime claim."
+  },
+  {
+    "id": "SLA-01",
+    "requirement": "Non-ML expected delay, breach probability, loss and priority exposure",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\tests.xml",
+    "scope_or_remediation": "Local contract/algorithm scope only; see current tests and campaign logs. No cloud runtime claim."
+  },
+  {
+    "id": "SLA-02",
+    "requirement": "Observed shipment SLA training",
+    "status": "BLOCKED",
+    "evidence": "evidence/deployment-preflight-20261014.json; docs/operations/deployment_acceptance.md",
+    "scope_or_remediation": "Deferred by design: representative observed shipment outcomes and label approval unavailable."
+  },
+  {
+    "id": "ML-01",
+    "requirement": "Lagged/versioned features, preprocessing and provenance",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\tests.xml",
+    "scope_or_remediation": "Local contract/algorithm scope only; see current tests and campaign logs. No cloud runtime claim."
+  },
+  {
+    "id": "ML-02",
+    "requirement": "Candidate search, chronological/walk-forward selection and error evaluation",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\tests.xml",
+    "scope_or_remediation": "Local contract/algorithm scope only; see current tests and campaign logs. No cloud runtime claim."
+  },
+  {
+    "id": "ML-03",
+    "requirement": "Calibration intervals, drift and port-call batch predictions",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\tests.xml",
+    "scope_or_remediation": "Local contract/algorithm scope only; see current tests and campaign logs. No cloud runtime claim."
+  },
+  {
+    "id": "ML-04",
+    "requirement": "Azure ML jobs, tracking, registry/version/promotion and monitoring",
+    "status": "BLOCKED",
+    "evidence": "evidence/deployment-preflight-20261014.json; docs/operations/deployment_acceptance.md",
+    "scope_or_remediation": "Azure ML workspace, compute/quota, runner permissions and real jobs/registration/promotion required."
+  },
+  {
+    "id": "ML-05",
+    "requirement": "Feature/model compatibility and verified predictions returned to Fabric",
+    "status": "BLOCKED",
+    "evidence": "evidence/deployment-preflight-20261014.json; docs/operations/deployment_acceptance.md",
+    "scope_or_remediation": "Local inference contracts passed; real prediction return and Fabric Delta readback still required."
+  },
+  {
+    "id": "GEN-01",
+    "requirement": "AOAI extraction verifies exact quote/event/location/time evidence",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\tests.xml",
+    "scope_or_remediation": "Local contract/algorithm scope only; see current tests and campaign logs. No cloud runtime claim."
+  },
+  {
+    "id": "GEN-02",
+    "requirement": "Authenticated Azure OpenAI service round trip",
+    "status": "BLOCKED",
+    "evidence": "evidence/deployment-preflight-20261014.json; docs/operations/deployment_acceptance.md",
+    "scope_or_remediation": "Authorized Azure OpenAI endpoint/deployment, identity, quota and real round trip required."
+  },
+  {
+    "id": "DEC-01",
+    "requirement": "Cost/loss ranked feasible interventions and deterministic explanation",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\tests.xml",
+    "scope_or_remediation": "Local contract/algorithm scope only; see current tests and campaign logs. No cloud runtime claim."
+  },
+  {
+    "id": "DEC-02",
+    "requirement": "Operator accept/reject/feasible override with reason and audit",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\tests.xml",
+    "scope_or_remediation": "Local contract/algorithm scope only; see current tests and campaign logs. No cloud runtime claim."
+  },
+  {
+    "id": "LRN-01",
+    "requirement": "Actual-vs-modeled error, Brier score, recommendation adherence",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\tests.xml",
+    "scope_or_remediation": "Local contract/algorithm scope only; see current tests and campaign logs. No cloud runtime claim."
+  },
+  {
+    "id": "LRN-02",
+    "requirement": "API learning audit transferred into Fabric analytical marts",
+    "status": "BLOCKED",
+    "evidence": "evidence/deployment-preflight-20261014.json; docs/operations/deployment_acceptance.md",
+    "scope_or_remediation": "Local transfer/replay passed; actual Fabric notebook and persisted readback require target access."
+  },
+  {
+    "id": "API-01",
+    "requirement": "Authenticated paginated product endpoints and OpenAPI interface",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\tests.xml",
+    "scope_or_remediation": "Local contract/algorithm scope only; see current tests and campaign logs. No cloud runtime claim."
+  },
+  {
+    "id": "API-02",
+    "requirement": "Startup configuration failure and request correlation IDs",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\tests.xml",
+    "scope_or_remediation": "Local contract/algorithm scope only; see current tests and campaign logs. No cloud runtime claim."
+  },
+  {
+    "id": "API-03",
+    "requirement": "Readiness rejects missing/unapproved/stale/corrupt products",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\tests.xml",
+    "scope_or_remediation": "Local contract/algorithm scope only; see current tests and campaign logs. No cloud runtime claim."
+  },
+  {
+    "id": "FAB-01",
+    "requirement": "Lakehouse Bronze/Silver/Gold PySpark and governed Delta readback",
+    "status": "BLOCKED",
+    "evidence": "evidence/deployment-preflight-20261014.json; docs/operations/deployment_acceptance.md",
+    "scope_or_remediation": "Notebook generation/contracts passed; actual capacity, Spark and Delta execution required."
+  },
+  {
+    "id": "FAB-02",
+    "requirement": "Data Factory dependencies, parameters, retry gates and deployment",
+    "status": "BLOCKED",
+    "evidence": "evidence/deployment-preflight-20261014.json; docs/operations/deployment_acceptance.md",
+    "scope_or_remediation": "Static orchestration contracts passed; actual deployment/job execution required."
+  },
+  {
+    "id": "BI-01",
+    "requirement": "Dimensional marts, SQL views, DAX, Power Query and GIS export",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\tests.xml",
+    "scope_or_remediation": "Local contract/algorithm scope only; see current tests and campaign logs. No cloud runtime claim."
+  },
+  {
+    "id": "BI-02",
+    "requirement": "Five Power BI report pages and deployed semantic model",
+    "status": "BLOCKED",
+    "evidence": "evidence/deployment-preflight-20261014.json; docs/operations/deployment_acceptance.md",
+    "scope_or_remediation": "29 PBIR files/5 pages validated; Desktop rendering, real model binding, RLS and refresh/publish required."
+  },
+  {
+    "id": "AZ-01",
+    "requirement": "Azure container application, Entra, Key Vault and Monitor",
+    "status": "BLOCKED",
+    "evidence": "evidence/deployment-preflight-20261014.json; docs/operations/deployment_acceptance.md",
+    "scope_or_remediation": "Bicep compiled; tenant/resources/identity/secrets/network and deployed authentication tests required."
+  },
+  {
+    "id": "OPS-01",
+    "requirement": "Structured logs, health, pipeline/DQ/API operational metrics",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\tests.xml",
+    "scope_or_remediation": "Local contract/algorithm scope only; see current tests and campaign logs. No cloud runtime claim."
+  },
+  {
+    "id": "OPS-02",
+    "requirement": "Actionable cloud alerts and workload-grounded SLOs",
+    "status": "BLOCKED",
+    "evidence": "evidence/deployment-preflight-20261014.json; docs/operations/deployment_acceptance.md",
+    "scope_or_remediation": "Named owners/contacts, approved targets, deployed alert rules and received notifications required."
+  },
+  {
+    "id": "OPS-03",
+    "requirement": "Reproducible locked dependencies and documented startup",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\tests.xml",
+    "scope_or_remediation": "Local contract/algorithm scope only; see current tests and campaign logs. No cloud runtime claim."
+  },
+  {
+    "id": "OPS-04",
+    "requirement": "Clean isolated demo, authenticated E2E and restart persistence",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\docker\\maritime-demo-08571d8c19\\result.json",
+    "scope_or_remediation": "Real clean Compose build/start, HTTP, dependency failure/recovery, restart and persistent audits passed."
+  },
+  {
+    "id": "OPS-05",
+    "requirement": "Safe shutdown/reset/recovery and retained evidence",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\tests.xml",
+    "scope_or_remediation": "Local contract/algorithm scope only; see current tests and campaign logs. No cloud runtime claim."
+  },
+  {
+    "id": "OPS-06",
+    "requirement": "Dependency/security checks and reproducible quality evidence",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\tests.xml",
+    "scope_or_remediation": "Local contract/algorithm scope only; see current tests and campaign logs. No cloud runtime claim."
+  },
+  {
+    "id": "OPS-07",
+    "requirement": "Configuration failures retained before acquisition",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\tests.xml",
+    "scope_or_remediation": "Local contract/algorithm scope only; see current tests and campaign logs. No cloud runtime claim."
+  },
+  {
+    "id": "ARCH-01",
+    "requirement": "Fabric data plane / Azure ML / Azure OpenAI / Azure application boundary",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\tests.xml",
+    "scope_or_remediation": "Local contract/algorithm scope only; see current tests and campaign logs. No cloud runtime claim."
+  },
+  {
+    "id": "ARCH-02",
+    "requirement": "PostgreSQL persistence",
+    "status": "NOT RUN",
+    "evidence": "evidence\\local-release-20261014-final\\tests.xml",
+    "scope_or_remediation": "PostgreSQL is not an implemented or selected backend; SQLite local and Azure Blob target remain the declared architecture."
+  },
+  {
+    "id": "PC-01",
+    "requirement": "Idempotent operator writes and complete audit chain verification",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\tests.xml",
+    "scope_or_remediation": "Local contract/algorithm scope only; see current tests and campaign logs. No cloud runtime claim."
+  },
+  {
+    "id": "PC-02",
+    "requirement": "Feedback destination preserves prior events on replay",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\tests.xml",
+    "scope_or_remediation": "Local contract/algorithm scope only; see current tests and campaign logs. No cloud runtime claim."
+  },
+  {
+    "id": "PC-03",
+    "requirement": "Executable backup and verified restore",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\tests.xml",
+    "scope_or_remediation": "Local contract/algorithm scope only; see current tests and campaign logs. No cloud runtime claim."
+  },
+  {
+    "id": "PC-04",
+    "requirement": "Versioned safe database initialization",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\tests.xml",
+    "scope_or_remediation": "Local contract/algorithm scope only; see current tests and campaign logs. No cloud runtime claim."
+  },
+  {
+    "id": "PC-05",
+    "requirement": "Bounded GenAI service failures and input/resource limits",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\tests.xml",
+    "scope_or_remediation": "Local contract/algorithm scope only; see current tests and campaign logs. No cloud runtime claim."
+  },
+  {
+    "id": "PC-06",
+    "requirement": "Evidence matches source executed by release checks",
+    "status": "PASS",
+    "evidence": "evidence\\acceptance-20261014\\verification.json",
+    "scope_or_remediation": "Final source hashes, all manifest entries and ZIP bytes independently verified."
+  },
+  {
+    "id": "PC-07",
+    "requirement": "Authored Power BI report assets",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\tests.xml",
+    "scope_or_remediation": "Local contract/algorithm scope only; see current tests and campaign logs. No cloud runtime claim."
+  },
+  {
+    "id": "LIVE-FRESHNESS",
+    "requirement": "Current public-data release campaign",
+    "status": "FAIL",
+    "evidence": "evidence\\local-release-20261014-final\\live\\failed-reports",
+    "scope_or_remediation": "Latest PortWatch observations are 2026-10-02 for all six ports, 12 days old against the unchanged 10-day gate. Obtain fresher source data, then rerun the complete campaign; do not relabel replay as live."
+  },
+  {
+    "id": "LIVE-FOLLOWUP",
+    "requirement": "Post-publication live replay/failure campaign",
+    "status": "NOT RUN",
+    "evidence": "evidence\\local-release-20261014-final\\live\\release-validation.json",
+    "scope_or_remediation": "Initial live DQ blocked publication before these steps. Restore fresh source input and rerun."
+  },
+  {
+    "id": "OFFSITE-DR",
+    "requirement": "Offsite backup/failover and approved production RPO/RTO",
+    "status": "BLOCKED",
+    "evidence": "docs/operations/deployment_acceptance.md",
+    "scope_or_remediation": "Owner, targets, offsite destination, recovery identity and target restore/failover execution required."
+  },
+  {
+    "id": "IMAGES",
+    "requirement": "Application independence from optional image generation",
+    "status": "PASS",
+    "evidence": "evidence\\local-release-20261014-final\\docker\\maritime-demo-08571d8c19\\result.json",
+    "scope_or_remediation": "No images generated and no image-generation service/dependencies/assets added; clean build/runtime independent of such an environment."
+  },
+  {
+    "id": "OS-SCAN",
+    "requirement": "Container operating-system vulnerability scan",
+    "status": "NOT RUN",
+    "evidence": "evidence\\local-release-20261014-final\\dependency-audit.log",
+    "scope_or_remediation": "Existing repository audit covers Python dependencies. OS-layer scanning is not configured; do not infer an OS vulnerability pass."
+  },
+  {
+    "id": "TYPECHECK",
+    "requirement": "Dedicated static type checker",
+    "status": "NOT RUN",
+    "evidence": "pyproject.toml",
+    "scope_or_remediation": "No standalone type checker is configured; lint/build/runtime contracts were executed."
+  }
+]

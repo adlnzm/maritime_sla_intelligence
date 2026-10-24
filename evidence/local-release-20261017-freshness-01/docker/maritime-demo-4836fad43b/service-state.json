@@ -1,0 +1,30 @@
+{
+  "Command": "\"maritime serve --ho…\"",
+  "CreatedAt": "2026-10-17 10:19:00 +0300 +03",
+  "Engine": "",
+  "ExitCode": 0,
+  "Health": "healthy",
+  "ID": "a4a68c2ad44c",
+  "Image": "maritime-demo-4836fad43b-api",
+  "Labels": "com.docker.compose.config-hash=fa82682308d4a50b11a75c331eb1097e76b1be438e42e0cbaba297072fc5314d,com.docker.compose.container-number=1,com.docker.compose.image=sha256:22084eafee94c0a6b3cad5d3fc9be50776c5e7eee74be0f2edbfae2e714ec0b3,com.docker.compose.oneoff=False,com.docker.compose.project=maritime-demo-4836fad43b,com.docker.compose.project.working_dir=C:\\Users\\User\\OneDrive\\文档\\ChatGPT\\maritime_sla_intelligence,com.docker.compose.service=api,com.docker.compose.version=5.5.1,com.docker.compose.depends_on=seed:service_completed_successfully:false,com.docker.compose.project.config_files=C:\\Users\\User\\OneDrive\\文档\\ChatGPT\\maritime_sla_intelligence\\compose.demo.yml,desktop.docker.io/ports.scheme=v2,desktop.docker.io/ports/8000/tcp=127.0.0.1:18084",
+  "LocalVolumes": "1",
+  "Mounts": "maritime-demo-…",
+  "Name": "maritime-demo-4836fad43b-api-1",
+  "Names": "maritime-demo-4836fad43b-api-1",
+  "Networks": "maritime-demo-4836fad43b_default",
+  "Ports": "127.0.0.1:18084->8000/tcp",
+  "Project": "maritime-demo-4836fad43b",
+  "Publishers": [
+    {
+      "URL": "127.0.0.1",
+      "TargetPort": 8000,
+      "PublishedPort": 18084,
+      "Protocol": "tcp"
+    }
+  ],
+  "RunningFor": "34 seconds ago",
+  "Service": "api",
+  "Size": "0B",
+  "State": "running",
+  "Status": "Up 12 seconds (healthy)"
+}

@@ -1,0 +1,152 @@
+[
+  {
+    "port_id": "port1188",
+    "country": "China",
+    "latitude": 31.19179536,
+    "longitude": 121.6441968,
+    "unlocode": "CN SGH",
+    "classification": "OBSERVED",
+    "lineage_id": "1c44bc66f5f1dcc8e724ad3eb28534fe0fa28da7178eea4851f42c36f8da2ed9",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "a64b3b7aea72ef0fb710fc320c37e56c0ab8bcfe91c4ba73884c632a4de483b5"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port744",
+    "country": "United Arab Emirates",
+    "latitude": 24.99941947,
+    "longitude": 55.07781687,
+    "unlocode": "AE JEA",
+    "classification": "OBSERVED",
+    "lineage_id": "1c44bc66f5f1dcc8e724ad3eb28534fe0fa28da7178eea4851f42c36f8da2ed9",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "a64b3b7aea72ef0fb710fc320c37e56c0ab8bcfe91c4ba73884c632a4de483b5"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port815",
+    "country": "United States",
+    "latitude": 40.63298387,
+    "longitude": -74.17942126,
+    "unlocode": null,
+    "classification": "OBSERVED",
+    "lineage_id": "1c44bc66f5f1dcc8e724ad3eb28534fe0fa28da7178eea4851f42c36f8da2ed9",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "a64b3b7aea72ef0fb710fc320c37e56c0ab8bcfe91c4ba73884c632a4de483b5"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port1114",
+    "country": "The Netherlands",
+    "latitude": 51.92228121,
+    "longitude": 4.215144967,
+    "unlocode": "NL RTM",
+    "classification": "OBSERVED",
+    "lineage_id": "1c44bc66f5f1dcc8e724ad3eb28534fe0fa28da7178eea4851f42c36f8da2ed9",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "a64b3b7aea72ef0fb710fc320c37e56c0ab8bcfe91c4ba73884c632a4de483b5"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port664",
+    "country": "United States",
+    "latitude": 33.75569193,
+    "longitude": -118.2437881,
+    "unlocode": "US LAX",
+    "classification": "OBSERVED",
+    "lineage_id": "1c44bc66f5f1dcc8e724ad3eb28534fe0fa28da7178eea4851f42c36f8da2ed9",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "a64b3b7aea72ef0fb710fc320c37e56c0ab8bcfe91c4ba73884c632a4de483b5"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "port_id": "port1201",
+    "country": "Singapore",
+    "latitude": 1.271989257,
+    "longitude": 103.7074816,
+    "unlocode": "SG SIN",
+    "classification": "OBSERVED",
+    "lineage_id": "1c44bc66f5f1dcc8e724ad3eb28534fe0fa28da7178eea4851f42c36f8da2ed9",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "OBSERVED"
+    ],
+    "input_fingerprints": {
+      "ports": "a64b3b7aea72ef0fb710fc320c37e56c0ab8bcfe91c4ba73884c632a4de483b5"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  }
+]

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="21" time="52.027" timestamp="2026-10-22T10:55:30.950756+03:00" hostname="endelap"><testcase classname="tests.test_operations" name="test_weekly_risk_boundaries[None-INSUFFICIENT_HISTORY]" time="0.002" /><testcase classname="tests.test_operations" name="test_weekly_risk_boundaries[0-NORMAL]" time="0.001" /><testcase classname="tests.test_operations" name="test_weekly_risk_boundaries[0.9999-NORMAL]" time="0.001" /><testcase classname="tests.test_operations" name="test_weekly_risk_boundaries[1-ELEVATED]" time="0.001" /><testcase classname="tests.test_operations" name="test_weekly_risk_boundaries[-2-HIGH]" time="0.001" /><testcase classname="tests.test_operations" name="test_weekly_risk_boundaries[2.999-HIGH]" time="0.002" /><testcase classname="tests.test_operations" name="test_weekly_risk_boundaries[3-CRITICAL]" time="0.001" /><testcase classname="tests.test_operations" name="test_weekly_risk_boundaries[-3-CRITICAL]" time="0.001" /><testcase classname="tests.test_operations" name="test_weekly_missing_days_and_reference_lineage" time="0.103" /><testcase classname="tests.test_operations" name="test_canonical_hamad_reference_activity_and_id_pin" time="0.160" /><testcase classname="tests.test_operations" name="test_bronze_silver_gold_persistence_and_workflow_separation" time="4.494" /><testcase classname="tests.test_operations" name="test_ignore_justification_and_action_history" time="4.502" /><testcase classname="tests.test_operations" name="test_escalation_dedup_retry_delivery_and_lease" time="4.020" /><testcase classname="tests.test_operations" name="test_delivery_exception_without_recipients_and_transport_failure[recipients0-RECIPIENTS_NOT_CONFIGURED]" time="3.334" /><testcase classname="tests.test_operations" name="test_delivery_exception_without_recipients_and_transport_failure[recipients1-NOTIFICATION_TRANSPORT_FAILED]" time="4.015" /><testcase classname="tests.test_operations" name="test_medallion_partial_write_cannot_publish" time="7.424" /><testcase classname="tests.test_operations" name="test_operations_api_auth_filters_reporting_and_stale_state" time="4.919" /><testcase classname="tests.test_operations" name="test_workflow_configuration_rejects_invalid_contracts" time="0.096" /><testcase classname="tests.test_operations" name="test_reporting_fields_and_hamad_filter" time="4.043" /><testcase classname="tests.test_operations" name="test_event_transitions_and_stale_pending_are_audited" time="4.182" /><testcase classname="tests.test_operations" name="test_power_platform_artifacts_match_real_contracts" time="1.116"><failure message="KeyError: 'RecipientsConfigured'">tmp_path = WindowsPath('C:/Users/User/OneDrive/文档/ChatGPT/maritime_sla_intelligence/evidence/power-platform-20261022-implementation/ops-temp2/test_power_platform_artifacts_0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001D76B0517D0&gt;
+
+    def test_power_platform_artifacts_match_real_contracts(tmp_path, monkeypatch):
+        import json
+        import runpy
+        from pathlib import Path
+    
+        import jsonschema
+    
+        build = runpy.run_path("scripts/build_power_platform.py")["build"]
+        generated = build(tmp_path / "artifacts")
+        for artifact in generated.rglob("*"):
+            if artifact.is_file():
+                assert (
+                    artifact.read_bytes()
+                    == (Path("power-platform") / artifact.relative_to(generated)).read_bytes()
+                )
+        for schema, artifact in [
+            ("canvas-schema.json", "canvas/OperationsReview.pa.yaml"),
+            ("workflow-definition.json", "automate/GoldRiskEscalation.definition.json"),
+        ]:
+            jsonschema.validate(
+                load_json(generated / artifact), load_json("configs/powerplatform_schemas/" + schema)
+            )
+        monkeypatch.setenv("MARITIME_API_KEY", "reader")
+        api = create_app(tmp_path / "api").openapi()
+        connector = load_json(generated / "connector/openapi.json")
+        for path, methods in connector["paths"].items():
+            for method, operation in methods.items():
+                assert method in api["paths"][path]
+                assert {p["name"] for p in operation["parameters"] if p["in"] != "body"} &lt;= {
+                    p["name"] for p in api["paths"][path][method].get("parameters", [])
+                }
+        assert connector["definitions"]["ReviewAction"]["additionalProperties"] is False
+        assert connector["definitions"]["ReviewAction"]["properties"]["action"]["enum"] == [
+            "IGNORE",
+            "MONITOR",
+            "ESCALATE",
+        ]
+        flow = load_json(generated / "automate/GoldRiskEscalation.definition.json")
+&gt;       actions = flow["actions"]["IfEvent"]["actions"]["RecipientsConfigured"]["actions"]
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'RecipientsConfigured'
+
+tests\test_operations.py:392: KeyError</failure></testcase></testsuite></testsuites>

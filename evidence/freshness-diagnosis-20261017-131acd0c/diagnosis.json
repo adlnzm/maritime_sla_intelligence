@@ -1,0 +1,459 @@
+{
+  "as_of": "2026-10-14",
+  "live_as_of": "2026-10-17",
+  "freshness_days": 10,
+  "retained": [
+    {
+      "port_id": "port1114",
+      "name": "Rotterdam",
+      "raw_date": "2026-10-02",
+      "source_observation_date": "2026-10-02",
+      "canonical_date": "2026-10-02",
+      "age_days": 12,
+      "retrieved_at": "2026-10-14T04:05:14.274318+00:00",
+      "source_url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Ports_Data/FeatureServer/0/query?f=json&where=portid+IN+%28%27port1188%27%2C%27port744%27%2C%27port815%27%2C%27port1114%27%2C%27port664%27%2C%27port1201%27%29+AND+date+%3E%3D+DATE+%272026-02-16%27+AND+date+%3C%3D+DATE+%272026-10-14%27&outFields=%2A&returnGeometry=false&orderByFields=ObjectId&resultOffset=0&resultRecordCount=1000"
+    },
+    {
+      "port_id": "port1188",
+      "name": "Shanghai",
+      "raw_date": "2026-10-02",
+      "source_observation_date": "2026-10-02",
+      "canonical_date": "2026-10-02",
+      "age_days": 12,
+      "retrieved_at": "2026-10-14T04:05:14.274318+00:00",
+      "source_url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Ports_Data/FeatureServer/0/query?f=json&where=portid+IN+%28%27port1188%27%2C%27port744%27%2C%27port815%27%2C%27port1114%27%2C%27port664%27%2C%27port1201%27%29+AND+date+%3E%3D+DATE+%272026-02-16%27+AND+date+%3C%3D+DATE+%272026-10-14%27&outFields=%2A&returnGeometry=false&orderByFields=ObjectId&resultOffset=0&resultRecordCount=1000"
+    },
+    {
+      "port_id": "port1201",
+      "name": "Singapore",
+      "raw_date": "2026-10-02",
+      "source_observation_date": "2026-10-02",
+      "canonical_date": "2026-10-02",
+      "age_days": 12,
+      "retrieved_at": "2026-10-14T04:05:19.181159+00:00",
+      "source_url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Ports_Data/FeatureServer/0/query?f=json&where=portid+IN+%28%27port1188%27%2C%27port744%27%2C%27port815%27%2C%27port1114%27%2C%27port664%27%2C%27port1201%27%29+AND+date+%3E%3D+DATE+%272026-02-16%27+AND+date+%3C%3D+DATE+%272026-10-14%27&outFields=%2A&returnGeometry=false&orderByFields=ObjectId&resultOffset=1000&resultRecordCount=1000"
+    },
+    {
+      "port_id": "port664",
+      "name": "Los Angeles-Long Beach",
+      "raw_date": "2026-10-02",
+      "source_observation_date": "2026-10-02",
+      "canonical_date": "2026-10-02",
+      "age_days": 12,
+      "retrieved_at": "2026-10-14T04:05:19.181159+00:00",
+      "source_url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Ports_Data/FeatureServer/0/query?f=json&where=portid+IN+%28%27port1188%27%2C%27port744%27%2C%27port815%27%2C%27port1114%27%2C%27port664%27%2C%27port1201%27%29+AND+date+%3E%3D+DATE+%272026-02-16%27+AND+date+%3C%3D+DATE+%272026-10-14%27&outFields=%2A&returnGeometry=false&orderByFields=ObjectId&resultOffset=1000&resultRecordCount=1000"
+    },
+    {
+      "port_id": "port744",
+      "name": "Jebel Ali",
+      "raw_date": "2026-10-02",
+      "source_observation_date": "2026-10-02",
+      "canonical_date": "2026-10-02",
+      "age_days": 12,
+      "retrieved_at": "2026-10-14T04:05:14.274318+00:00",
+      "source_url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Ports_Data/FeatureServer/0/query?f=json&where=portid+IN+%28%27port1188%27%2C%27port744%27%2C%27port815%27%2C%27port1114%27%2C%27port664%27%2C%27port1201%27%29+AND+date+%3E%3D+DATE+%272026-02-16%27+AND+date+%3C%3D+DATE+%272026-10-14%27&outFields=%2A&returnGeometry=false&orderByFields=ObjectId&resultOffset=0&resultRecordCount=1000"
+    },
+    {
+      "port_id": "port815",
+      "name": "New York-New Jersey",
+      "raw_date": "2026-10-02",
+      "source_observation_date": "2026-10-02",
+      "canonical_date": "2026-10-02",
+      "age_days": 12,
+      "retrieved_at": "2026-10-14T04:05:14.274318+00:00",
+      "source_url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Ports_Data/FeatureServer/0/query?f=json&where=portid+IN+%28%27port1188%27%2C%27port744%27%2C%27port815%27%2C%27port1114%27%2C%27port664%27%2C%27port1201%27%29+AND+date+%3E%3D+DATE+%272026-02-16%27+AND+date+%3C%3D+DATE+%272026-10-14%27&outFields=%2A&returnGeometry=false&orderByFields=ObjectId&resultOffset=0&resultRecordCount=1000"
+    }
+  ],
+  "retained_events": [
+    {
+      "source_id": "portwatch_ports",
+      "source_url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/PortWatch_ports_database/FeatureServer/0/query?f=json&where=portname+IN+%28%27Singapore%27%2C%27Rotterdam%27%2C%27Shanghai%27%2C%27Los+Angeles-Long+Beach%27%2C%27New+York-New+Jersey%27%2C%27Jebel+Ali%27%29&returnCountOnly=true",
+      "retrieved_at": "2026-10-14T04:05:06.628295+00:00",
+      "checksum": "1fb6f6be8607ab15c04198cba240a52c2ae4524e5d0d79068813f1972f29054c",
+      "request_parameters": {
+        "f": "json",
+        "where": "portname IN ('Singapore','Rotterdam','Shanghai','Los Angeles-Long Beach','New York-New Jersey','Jebel Ali')",
+        "returnCountOnly": "true"
+      },
+      "record_count": 0,
+      "expected_extract_count": 6
+    },
+    {
+      "source_id": "portwatch_ports",
+      "source_url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/PortWatch_ports_database/FeatureServer/0/query?f=json&where=portname+IN+%28%27Singapore%27%2C%27Rotterdam%27%2C%27Shanghai%27%2C%27Los+Angeles-Long+Beach%27%2C%27New+York-New+Jersey%27%2C%27Jebel+Ali%27%29&outFields=%2A&returnGeometry=false&orderByFields=ObjectId&resultOffset=0&resultRecordCount=1000",
+      "retrieved_at": "2026-10-14T04:05:06.647828+00:00",
+      "checksum": "1c44bc66f5f1dcc8e724ad3eb28534fe0fa28da7178eea4851f42c36f8da2ed9",
+      "request_parameters": {
+        "f": "json",
+        "where": "portname IN ('Singapore','Rotterdam','Shanghai','Los Angeles-Long Beach','New York-New Jersey','Jebel Ali')",
+        "outFields": "*",
+        "returnGeometry": "false",
+        "orderByFields": "ObjectId",
+        "resultOffset": 0,
+        "resultRecordCount": 1000
+      },
+      "record_count": 6,
+      "expected_extract_count": null
+    },
+    {
+      "source_id": "portwatch_activity",
+      "source_url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Ports_Data/FeatureServer/0/query?f=json&where=portid+IN+%28%27port1188%27%2C%27port744%27%2C%27port815%27%2C%27port1114%27%2C%27port664%27%2C%27port1201%27%29+AND+date+%3E%3D+DATE+%272026-02-16%27+AND+date+%3C%3D+DATE+%272026-10-14%27&returnCountOnly=true",
+      "retrieved_at": "2026-10-14T04:05:06.990625+00:00",
+      "checksum": "73ed292f4ad58c94e3cf5cdd63881fc831dc76c0d79065e6273c9382f981411b",
+      "request_parameters": {
+        "f": "json",
+        "where": "portid IN ('port1188','port744','port815','port1114','port664','port1201') AND date >= DATE '2026-02-16' AND date <= DATE '2026-10-14'",
+        "returnCountOnly": "true"
+      },
+      "record_count": 0,
+      "expected_extract_count": 1374
+    },
+    {
+      "source_id": "portwatch_activity",
+      "source_url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Ports_Data/FeatureServer/0/query?f=json&where=portid+IN+%28%27port1188%27%2C%27port744%27%2C%27port815%27%2C%27port1114%27%2C%27port664%27%2C%27port1201%27%29+AND+date+%3E%3D+DATE+%272026-02-16%27+AND+date+%3C%3D+DATE+%272026-10-14%27&outFields=%2A&returnGeometry=false&orderByFields=ObjectId&resultOffset=0&resultRecordCount=1000",
+      "retrieved_at": "2026-10-14T04:05:14.274318+00:00",
+      "checksum": "d50b96f99600f923e8a774e809c334fbad6766e8b4d4901f7836772964609b50",
+      "request_parameters": {
+        "f": "json",
+        "where": "portid IN ('port1188','port744','port815','port1114','port664','port1201') AND date >= DATE '2026-02-16' AND date <= DATE '2026-10-14'",
+        "outFields": "*",
+        "returnGeometry": "false",
+        "orderByFields": "ObjectId",
+        "resultOffset": 0,
+        "resultRecordCount": 1000
+      },
+      "record_count": 1000,
+      "expected_extract_count": null
+    },
+    {
+      "source_id": "portwatch_activity",
+      "source_url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Ports_Data/FeatureServer/0/query?f=json&where=portid+IN+%28%27port1188%27%2C%27port744%27%2C%27port815%27%2C%27port1114%27%2C%27port664%27%2C%27port1201%27%29+AND+date+%3E%3D+DATE+%272026-02-16%27+AND+date+%3C%3D+DATE+%272026-10-14%27&outFields=%2A&returnGeometry=false&orderByFields=ObjectId&resultOffset=1000&resultRecordCount=1000",
+      "retrieved_at": "2026-10-14T04:05:19.181159+00:00",
+      "checksum": "8992f41b2d87726fa991a330cb55210813ac7b46191633c318e0c47e851ecf7f",
+      "request_parameters": {
+        "f": "json",
+        "where": "portid IN ('port1188','port744','port815','port1114','port664','port1201') AND date >= DATE '2026-02-16' AND date <= DATE '2026-10-14'",
+        "outFields": "*",
+        "returnGeometry": "false",
+        "orderByFields": "ObjectId",
+        "resultOffset": 1000,
+        "resultRecordCount": 1000
+      },
+      "record_count": 374,
+      "expected_extract_count": null
+    }
+  ],
+  "retained_rows": 1374,
+  "no_persisted_checkpoint_or_publication": true,
+  "git_revision": "4b50f50769b08e763015064c53d91b6bda4ae079",
+  "probes": [
+    {
+      "name": "layer-metadata",
+      "url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Ports_Data/FeatureServer/0?f=json",
+      "retrieved_at": "2026-10-17T07:09:05.592592+00:00",
+      "http_status": 200,
+      "sha256": "06e93fc1057936343589133c6a50559a05b197e35a32556a647b8a61b89e6ece",
+      "headers": {
+        "date": "Sat, 17 Oct 2026 07:09:04 GMT",
+        "cache-control": "public, max-age=30, s-maxage=30",
+        "last-modified": "Thu, 15 Oct 2026 11:11:42 GMT",
+        "etag": "1400502834"
+      }
+    },
+    {
+      "name": "latest-port1114",
+      "url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Ports_Data/FeatureServer/0/query?f=json&where=portid+%3D+%27port1114%27&outFields=portid%2Cdate%2Cportcalls&orderByFields=date+DESC&resultRecordCount=1&returnGeometry=false",
+      "retrieved_at": "2026-10-17T07:09:11.009416+00:00",
+      "http_status": 200,
+      "sha256": "50ac50a14d48ce59479eb09857f8ed1a0312428c6b9eaa4e5f0aa4f558b9dc0b",
+      "headers": {
+        "date": "Sat, 17 Oct 2026 07:09:09 GMT",
+        "cache-control": "public, max-age=30, s-maxage=30",
+        "last-modified": "Thu, 15 Oct 2026 11:11:42 GMT",
+        "etag": "sd2069_532296221"
+      }
+    },
+    {
+      "name": "recent-count-port1114",
+      "url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Ports_Data/FeatureServer/0/query?f=json&where=portid+%3D+%27port1114%27+AND+date+%3E%3D+DATE+%272026-10-07%27+AND+date+%3C%3D+DATE+%272026-10-17%27&returnCountOnly=true",
+      "retrieved_at": "2026-10-17T07:09:11.610248+00:00",
+      "http_status": 200,
+      "sha256": "c52d927fffb7f9c8f0623de618a2ee1a263b00ce9770064d6ef993ac5d093b57",
+      "headers": {
+        "date": "Sat, 17 Oct 2026 07:09:09 GMT",
+        "cache-control": "public, max-age=30, s-maxage=30",
+        "last-modified": "Thu, 15 Oct 2026 11:11:42 GMT",
+        "etag": "sd2069_532296221"
+      }
+    },
+    {
+      "name": "latest-port1188",
+      "url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Ports_Data/FeatureServer/0/query?f=json&where=portid+%3D+%27port1188%27&outFields=portid%2Cdate%2Cportcalls&orderByFields=date+DESC&resultRecordCount=1&returnGeometry=false",
+      "retrieved_at": "2026-10-17T07:09:12.018273+00:00",
+      "http_status": 200,
+      "sha256": "4e7867541acad9b1e485d5fea266a2488d42747977cf04dd7dcc8e86870efb7f",
+      "headers": {
+        "date": "Sat, 17 Oct 2026 07:09:10 GMT",
+        "cache-control": "public, max-age=30, s-maxage=30",
+        "last-modified": "Thu, 15 Oct 2026 11:11:42 GMT",
+        "etag": "sd2069_532296221"
+      }
+    },
+    {
+      "name": "recent-count-port1188",
+      "url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Ports_Data/FeatureServer/0/query?f=json&where=portid+%3D+%27port1188%27+AND+date+%3E%3D+DATE+%272026-10-07%27+AND+date+%3C%3D+DATE+%272026-10-17%27&returnCountOnly=true",
+      "retrieved_at": "2026-10-17T07:09:12.911618+00:00",
+      "http_status": 200,
+      "sha256": "c52d927fffb7f9c8f0623de618a2ee1a263b00ce9770064d6ef993ac5d093b57",
+      "headers": {
+        "date": "Sat, 17 Oct 2026 07:09:11 GMT",
+        "cache-control": "public, max-age=30, s-maxage=30",
+        "last-modified": "Thu, 15 Oct 2026 11:11:42 GMT",
+        "etag": "sd2069_532296221"
+      }
+    },
+    {
+      "name": "latest-port1201",
+      "url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Ports_Data/FeatureServer/0/query?f=json&where=portid+%3D+%27port1201%27&outFields=portid%2Cdate%2Cportcalls&orderByFields=date+DESC&resultRecordCount=1&returnGeometry=false",
+      "retrieved_at": "2026-10-17T07:09:13.774628+00:00",
+      "http_status": 200,
+      "sha256": "30dcb26e75ce2f670b6a3a32b286ecf9cceeac28837589fa8069ad51bae2bc8c",
+      "headers": {
+        "date": "Sat, 17 Oct 2026 07:09:12 GMT",
+        "cache-control": "public, max-age=30, s-maxage=30",
+        "last-modified": "Thu, 15 Oct 2026 11:11:42 GMT",
+        "etag": "sd2069_532296221"
+      }
+    },
+    {
+      "name": "recent-count-port1201",
+      "url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Ports_Data/FeatureServer/0/query?f=json&where=portid+%3D+%27port1201%27+AND+date+%3E%3D+DATE+%272026-10-07%27+AND+date+%3C%3D+DATE+%272026-10-17%27&returnCountOnly=true",
+      "retrieved_at": "2026-10-17T07:09:14.098669+00:00",
+      "http_status": 200,
+      "sha256": "c52d927fffb7f9c8f0623de618a2ee1a263b00ce9770064d6ef993ac5d093b57",
+      "headers": {
+        "date": "Sat, 17 Oct 2026 07:09:12 GMT",
+        "cache-control": "public, max-age=30, s-maxage=30",
+        "last-modified": "Thu, 15 Oct 2026 11:11:42 GMT",
+        "etag": "sd2069_532296221"
+      }
+    },
+    {
+      "name": "latest-port664",
+      "url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Ports_Data/FeatureServer/0/query?f=json&where=portid+%3D+%27port664%27&outFields=portid%2Cdate%2Cportcalls&orderByFields=date+DESC&resultRecordCount=1&returnGeometry=false",
+      "retrieved_at": "2026-10-17T07:09:14.708535+00:00",
+      "http_status": 200,
+      "sha256": "a59b2cac2512f385ccb67aba62afaad2eab4e39ada20ff286a2e90e3f8a60e62",
+      "headers": {
+        "date": "Sat, 17 Oct 2026 07:09:13 GMT",
+        "cache-control": "public, max-age=30, s-maxage=30",
+        "last-modified": "Thu, 15 Oct 2026 11:11:42 GMT",
+        "etag": "sd2069_532296221"
+      }
+    },
+    {
+      "name": "recent-count-port664",
+      "url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Ports_Data/FeatureServer/0/query?f=json&where=portid+%3D+%27port664%27+AND+date+%3E%3D+DATE+%272026-10-07%27+AND+date+%3C%3D+DATE+%272026-10-17%27&returnCountOnly=true",
+      "retrieved_at": "2026-10-17T07:09:15.592251+00:00",
+      "http_status": 200,
+      "sha256": "c52d927fffb7f9c8f0623de618a2ee1a263b00ce9770064d6ef993ac5d093b57",
+      "headers": {
+        "date": "Sat, 17 Oct 2026 07:09:13 GMT",
+        "cache-control": "public, max-age=30, s-maxage=30",
+        "last-modified": "Thu, 15 Oct 2026 11:11:42 GMT",
+        "etag": "sd2069_532296221"
+      }
+    },
+    {
+      "name": "latest-port744",
+      "url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Ports_Data/FeatureServer/0/query?f=json&where=portid+%3D+%27port744%27&outFields=portid%2Cdate%2Cportcalls&orderByFields=date+DESC&resultRecordCount=1&returnGeometry=false",
+      "retrieved_at": "2026-10-17T07:09:15.995570+00:00",
+      "http_status": 200,
+      "sha256": "e8c34e75f60bbc0bead8f4b61937b8d217865b07084fc4eb063fb39af9729fa6",
+      "headers": {
+        "date": "Sat, 17 Oct 2026 07:09:14 GMT",
+        "cache-control": "public, max-age=30, s-maxage=30",
+        "last-modified": "Thu, 15 Oct 2026 11:11:42 GMT",
+        "etag": "sd2069_532296221"
+      }
+    },
+    {
+      "name": "recent-count-port744",
+      "url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Ports_Data/FeatureServer/0/query?f=json&where=portid+%3D+%27port744%27+AND+date+%3E%3D+DATE+%272026-10-07%27+AND+date+%3C%3D+DATE+%272026-10-17%27&returnCountOnly=true",
+      "retrieved_at": "2026-10-17T07:09:16.420287+00:00",
+      "http_status": 200,
+      "sha256": "c52d927fffb7f9c8f0623de618a2ee1a263b00ce9770064d6ef993ac5d093b57",
+      "headers": {
+        "date": "Sat, 17 Oct 2026 07:09:14 GMT",
+        "cache-control": "public, max-age=30, s-maxage=30",
+        "last-modified": "Thu, 15 Oct 2026 11:11:42 GMT",
+        "etag": "sd2069_532296221"
+      }
+    },
+    {
+      "name": "latest-port815",
+      "url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Ports_Data/FeatureServer/0/query?f=json&where=portid+%3D+%27port815%27&outFields=portid%2Cdate%2Cportcalls&orderByFields=date+DESC&resultRecordCount=1&returnGeometry=false",
+      "retrieved_at": "2026-10-17T07:09:16.986971+00:00",
+      "http_status": 200,
+      "sha256": "e898652176c7bf9d9d65fdfef84803a0ee06803bb8039bef0416f57243611475",
+      "headers": {
+        "date": "Sat, 17 Oct 2026 07:09:15 GMT",
+        "cache-control": "public, max-age=30, s-maxage=30",
+        "last-modified": "Thu, 15 Oct 2026 11:11:42 GMT",
+        "etag": "sd2069_532296221"
+      }
+    },
+    {
+      "name": "recent-count-port815",
+      "url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Ports_Data/FeatureServer/0/query?f=json&where=portid+%3D+%27port815%27+AND+date+%3E%3D+DATE+%272026-10-07%27+AND+date+%3C%3D+DATE+%272026-10-17%27&returnCountOnly=true",
+      "retrieved_at": "2026-10-17T07:09:17.884902+00:00",
+      "http_status": 200,
+      "sha256": "c52d927fffb7f9c8f0623de618a2ee1a263b00ce9770064d6ef993ac5d093b57",
+      "headers": {
+        "date": "Sat, 17 Oct 2026 07:09:16 GMT",
+        "cache-control": "public, max-age=30, s-maxage=30",
+        "last-modified": "Thu, 15 Oct 2026 11:11:42 GMT",
+        "etag": "sd2069_532296221"
+      }
+    },
+    {
+      "name": "arcgis-item",
+      "url": "https://www.arcgis.com/sharing/rest/content/items/83b1bbc7b3354c5fb1f40673bb8f852e?f=json",
+      "retrieved_at": "2026-10-17T07:09:18.334769+00:00",
+      "http_status": 200,
+      "sha256": "6d5fe57e78295f558d864738560b635c6a6721fcf01934e6875591f3c0c79b83",
+      "headers": {
+        "date": "Sat, 17 Oct 2026 07:09:16 GMT",
+        "cache-control": "no-cache"
+      }
+    }
+  ],
+  "layer_identity": {
+    "name": "Daily_Ports_Data",
+    "serviceItemId": "83b1bbc7b3354c5fb1f40673bb8f852e",
+    "dateFieldsTimeReference": {
+      "timeZone": "UTC",
+      "timeZoneIANA": "Etc/UTC",
+      "respectsDaylightSaving": false
+    },
+    "editingInfo": {
+      "lastEditDate": 1792062702011,
+      "schemaLastEditDate": 1792062702011,
+      "dataLastEditDate": 1792062702011
+    },
+    "maxRecordCount": 1000,
+    "advancedQueryCapabilities": {
+      "supportsPagination": true,
+      "supportsPaginationOnAggregatedQueries": true,
+      "supportsQueryRelatedPagination": true,
+      "supportsQueryWithDistance": true,
+      "supportsReturningQueryExtent": false,
+      "supportsStatistics": true,
+      "supportsOrderBy": true,
+      "supportsDistinct": true,
+      "supportsQueryWithResultType": true,
+      "supportsSqlExpression": true,
+      "supportsTimeRelation": true,
+      "supportsAdvancedQueryRelated": true,
+      "supportsCountDistinct": true,
+      "supportsPercentileStatistics": true,
+      "supportsApproxPercentileStatistics": true,
+      "supportsSpatialAggregationStatistics": true,
+      "supportedSpatialAggregationStatistics": [
+        "EnvelopeAggregate",
+        "CentroidAggregate",
+        "ConvexHullAggregate"
+      ],
+      "supportsLod": true,
+      "supportsQueryWithLodSR": false,
+      "supportedLodTypes": [
+        "geohash"
+      ],
+      "supportsReturningGeometryCentroid": false,
+      "supportsReturningGeometryEnvelope": true,
+      "supportsQueryWithDatumTransformation": true,
+      "supportsCurrentUserQueries": true,
+      "supportsHavingClause": true,
+      "supportsOutFieldSQLExpression": true,
+      "supportsMaxRecordCountFactor": true,
+      "supportsTopFeaturesQuery": true,
+      "supportsQueryWithCacheHint": true,
+      "supportedOperationsWithCacheHint": [
+        "query",
+        "queryTopFilter",
+        "queryAnalytics",
+        "queryAttachments",
+        "queryRelated",
+        "queryBins",
+        "queryPivot"
+      ],
+      "supportsQueryAnalytic": true,
+      "supportsQueryPivot": true,
+      "supportsQueryBins": true,
+      "supportsDefaultSR": true,
+      "supportsTranslations": false,
+      "supportsAggIds": true,
+      "supportsQueryWithCollation": true,
+      "supportsISODOW": true,
+      "supportsISOWeek": true,
+      "supportsFullTextSearch": true,
+      "fullTextSearchCapabilities": {
+        "supportsAccentSensitivity": true,
+        "supportsStopWords": true,
+        "supportsSearchOperator": true,
+        "supportsOperator": true
+      }
+    }
+  },
+  "live_ports": [
+    {
+      "port_id": "port1114",
+      "name": "Rotterdam",
+      "source_observation_date": "2026-10-09",
+      "age_days": 8,
+      "fresh_window_count": 3,
+      "raw_date": "2026-10-09"
+    },
+    {
+      "port_id": "port1188",
+      "name": "Shanghai",
+      "source_observation_date": "2026-10-09",
+      "age_days": 8,
+      "fresh_window_count": 3,
+      "raw_date": "2026-10-09"
+    },
+    {
+      "port_id": "port1201",
+      "name": "Singapore",
+      "source_observation_date": "2026-10-09",
+      "age_days": 8,
+      "fresh_window_count": 3,
+      "raw_date": "2026-10-09"
+    },
+    {
+      "port_id": "port664",
+      "name": "Los Angeles-Long Beach",
+      "source_observation_date": "2026-10-09",
+      "age_days": 8,
+      "fresh_window_count": 3,
+      "raw_date": "2026-10-09"
+    },
+    {
+      "port_id": "port744",
+      "name": "Jebel Ali",
+      "source_observation_date": "2026-10-09",
+      "age_days": 8,
+      "fresh_window_count": 3,
+      "raw_date": "2026-10-09"
+    },
+    {
+      "port_id": "port815",
+      "name": "New York-New Jersey",
+      "source_observation_date": "2026-10-09",
+      "age_days": 8,
+      "fresh_window_count": 3,
+      "raw_date": "2026-10-09"
+    }
+  ],
+  "freshness_pass": true
+}

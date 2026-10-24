@@ -1,0 +1,1034 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "MaritimeOperations",
+    "version": "1.0"
+  },
+  "host": "configure-api-host.example.invalid",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "securityDefinitions": {
+    "entra": {
+      "type": "oauth2",
+      "flow": "accessCode",
+      "authorizationUrl": "https://login.microsoftonline.com/TENANT_ID/oauth2/v2.0/authorize",
+      "tokenUrl": "https://login.microsoftonline.com/TENANT_ID/oauth2/v2.0/token",
+      "scopes": {
+        "api://API_APP_ID/access_as_user": "Access maritime operations as the signed-in user"
+      }
+    }
+  },
+  "security": [
+    {
+      "entra": [
+        "api://API_APP_ID/access_as_user"
+      ]
+    }
+  ],
+  "definitions": {
+    "SilverWeek": {
+      "additionalProperties": false,
+      "properties": {
+        "port_id": {
+          "type": "string"
+        },
+        "port_name": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+        "unlocode": {
+          "type": "string",
+          "x-nullable": true
+        },
+        "week_start": {
+          "type": "string"
+        },
+        "week_end": {
+          "type": "string"
+        },
+        "observed_days": {
+          "maximum": 7,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "expected_days": {
+          "default": 7,
+          "type": "integer",
+          "enum": [
+            7
+          ]
+        },
+        "observed_calls": {
+          "minimum": 0,
+          "type": "number",
+          "x-nullable": true
+        },
+        "weekly_calls": {
+          "minimum": 0,
+          "type": "number",
+          "x-nullable": true
+        },
+        "missing_dates": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "observation_dates": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "latest_observation": {
+          "type": "string",
+          "x-nullable": true
+        },
+        "source_latest_observation": {
+          "type": "string",
+          "x-nullable": true
+        },
+        "reference_mean": {
+          "type": "number",
+          "x-nullable": true
+        },
+        "reference_std": {
+          "type": "number",
+          "x-nullable": true
+        },
+        "reference_weeks": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "z_score": {
+          "type": "number",
+          "x-nullable": true
+        },
+        "completeness": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "quality_status": {
+          "enum": [
+            "PASS",
+            "INCOMPLETE"
+          ],
+          "type": "string"
+        },
+        "classification": {
+          "enum": [
+            "DERIVED",
+            "SIMULATED"
+          ],
+          "type": "string"
+        },
+        "source_lineage_ids": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "source_ids": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "input_sha256": {
+          "type": "string"
+        },
+        "lineage_id": {
+          "type": "string"
+        },
+        "methodology_version": {
+          "default": "port-week-activity-v1",
+          "type": "string",
+          "enum": [
+            "port-week-activity-v1"
+          ]
+        },
+        "run_id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "port_id",
+        "port_name",
+        "country",
+        "unlocode",
+        "week_start",
+        "week_end",
+        "observed_days",
+        "observed_calls",
+        "weekly_calls",
+        "missing_dates",
+        "observation_dates",
+        "latest_observation",
+        "source_latest_observation",
+        "reference_mean",
+        "reference_std",
+        "reference_weeks",
+        "z_score",
+        "completeness",
+        "quality_status",
+        "classification",
+        "source_lineage_ids",
+        "source_ids",
+        "input_sha256",
+        "lineage_id",
+        "run_id"
+      ],
+      "type": "object"
+    },
+    "GoldWeek": {
+      "additionalProperties": false,
+      "properties": {
+        "port_id": {
+          "type": "string"
+        },
+        "port_name": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+        "unlocode": {
+          "type": "string",
+          "x-nullable": true
+        },
+        "week_start": {
+          "type": "string"
+        },
+        "week_end": {
+          "type": "string"
+        },
+        "observed_days": {
+          "maximum": 7,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "expected_days": {
+          "default": 7,
+          "type": "integer",
+          "enum": [
+            7
+          ]
+        },
+        "observed_calls": {
+          "minimum": 0,
+          "type": "number",
+          "x-nullable": true
+        },
+        "weekly_calls": {
+          "minimum": 0,
+          "type": "number",
+          "x-nullable": true
+        },
+        "missing_dates": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "observation_dates": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "latest_observation": {
+          "type": "string",
+          "x-nullable": true
+        },
+        "source_latest_observation": {
+          "type": "string",
+          "x-nullable": true
+        },
+        "reference_mean": {
+          "type": "number",
+          "x-nullable": true
+        },
+        "reference_std": {
+          "type": "number",
+          "x-nullable": true
+        },
+        "reference_weeks": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "z_score": {
+          "type": "number",
+          "x-nullable": true
+        },
+        "completeness": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "quality_status": {
+          "enum": [
+            "PASS",
+            "INCOMPLETE"
+          ],
+          "type": "string"
+        },
+        "classification": {
+          "enum": [
+            "DERIVED",
+            "SIMULATED"
+          ],
+          "type": "string"
+        },
+        "source_lineage_ids": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "source_ids": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "input_sha256": {
+          "type": "string"
+        },
+        "lineage_id": {
+          "type": "string"
+        },
+        "methodology_version": {
+          "default": "port-week-activity-v1",
+          "type": "string",
+          "enum": [
+            "port-week-activity-v1"
+          ]
+        },
+        "run_id": {
+          "type": "string"
+        },
+        "review_id": {
+          "type": "string"
+        },
+        "gold_id": {
+          "type": "string"
+        },
+        "risk_revision": {
+          "type": "string"
+        },
+        "risk_level": {
+          "type": "string"
+        },
+        "risk_drivers": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "freshness_status": {
+          "enum": [
+            "FRESH",
+            "STALE",
+            "UNAVAILABLE"
+          ],
+          "type": "string"
+        },
+        "freshness_age_days": {
+          "type": "integer",
+          "x-nullable": true
+        },
+        "review_eligible": {
+          "type": "boolean"
+        },
+        "as_of": {
+          "type": "string"
+        },
+        "observation_link": {
+          "type": "string"
+        },
+        "simulated": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "port_id",
+        "port_name",
+        "country",
+        "unlocode",
+        "week_start",
+        "week_end",
+        "observed_days",
+        "observed_calls",
+        "weekly_calls",
+        "missing_dates",
+        "observation_dates",
+        "latest_observation",
+        "source_latest_observation",
+        "reference_mean",
+        "reference_std",
+        "reference_weeks",
+        "z_score",
+        "completeness",
+        "quality_status",
+        "classification",
+        "source_lineage_ids",
+        "source_ids",
+        "input_sha256",
+        "lineage_id",
+        "run_id",
+        "review_id",
+        "gold_id",
+        "risk_revision",
+        "risk_level",
+        "risk_drivers",
+        "freshness_status",
+        "freshness_age_days",
+        "review_eligible",
+        "as_of",
+        "observation_link",
+        "simulated"
+      ],
+      "type": "object"
+    },
+    "ReviewAction": {
+      "additionalProperties": false,
+      "properties": {
+        "request_id": {
+          "pattern": "^[A-Za-z0-9_-]{8,100}$",
+          "type": "string"
+        },
+        "action": {
+          "enum": [
+            "IGNORE",
+            "MONITOR",
+            "ESCALATE"
+          ],
+          "type": "string"
+        },
+        "reason": {
+          "maxLength": 2000,
+          "minLength": 10,
+          "type": "string"
+        },
+        "expected_version": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "risk_revision": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "request_id",
+        "action",
+        "reason",
+        "expected_version",
+        "risk_revision"
+      ],
+      "type": "object"
+    },
+    "DeliveryResult": {
+      "additionalProperties": false,
+      "properties": {
+        "lease_token": {
+          "type": "string"
+        },
+        "outcome": {
+          "enum": [
+            "SENT",
+            "FAILED",
+            "EXCEPTION"
+          ],
+          "type": "string"
+        },
+        "failure_reason": {
+          "default": null,
+          "maxLength": 500,
+          "type": "string",
+          "x-nullable": true
+        }
+      },
+      "required": [
+        "lease_token",
+        "outcome"
+      ],
+      "type": "object"
+    },
+    "QueueItem": {
+      "additionalProperties": false,
+      "properties": {
+        "port_id": {
+          "type": "string"
+        },
+        "port_name": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+        "unlocode": {
+          "type": "string",
+          "x-nullable": true
+        },
+        "week_start": {
+          "type": "string"
+        },
+        "week_end": {
+          "type": "string"
+        },
+        "observed_days": {
+          "maximum": 7,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "expected_days": {
+          "default": 7,
+          "type": "integer",
+          "enum": [
+            7
+          ]
+        },
+        "observed_calls": {
+          "minimum": 0,
+          "type": "number",
+          "x-nullable": true
+        },
+        "weekly_calls": {
+          "minimum": 0,
+          "type": "number",
+          "x-nullable": true
+        },
+        "missing_dates": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "observation_dates": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "latest_observation": {
+          "type": "string",
+          "x-nullable": true
+        },
+        "source_latest_observation": {
+          "type": "string",
+          "x-nullable": true
+        },
+        "reference_mean": {
+          "type": "number",
+          "x-nullable": true
+        },
+        "reference_std": {
+          "type": "number",
+          "x-nullable": true
+        },
+        "reference_weeks": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "z_score": {
+          "type": "number",
+          "x-nullable": true
+        },
+        "completeness": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "quality_status": {
+          "enum": [
+            "PASS",
+            "INCOMPLETE"
+          ],
+          "type": "string"
+        },
+        "classification": {
+          "enum": [
+            "DERIVED",
+            "SIMULATED"
+          ],
+          "type": "string"
+        },
+        "source_lineage_ids": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "source_ids": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "input_sha256": {
+          "type": "string"
+        },
+        "lineage_id": {
+          "type": "string"
+        },
+        "methodology_version": {
+          "default": "port-week-activity-v1",
+          "type": "string",
+          "enum": [
+            "port-week-activity-v1"
+          ]
+        },
+        "run_id": {
+          "type": "string"
+        },
+        "review_id": {
+          "type": "string"
+        },
+        "gold_id": {
+          "type": "string"
+        },
+        "risk_revision": {
+          "type": "string"
+        },
+        "risk_level": {
+          "type": "string"
+        },
+        "risk_drivers": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "freshness_status": {
+          "enum": [
+            "FRESH",
+            "STALE",
+            "UNAVAILABLE"
+          ],
+          "type": "string"
+        },
+        "freshness_age_days": {
+          "type": "integer",
+          "x-nullable": true
+        },
+        "review_eligible": {
+          "type": "boolean"
+        },
+        "as_of": {
+          "type": "string"
+        },
+        "observation_link": {
+          "type": "string"
+        },
+        "simulated": {
+          "type": "boolean"
+        },
+        "review_status": {
+          "type": "string"
+        },
+        "review_version": {
+          "type": "integer"
+        },
+        "owner": {
+          "type": "string",
+          "x-nullable": true
+        },
+        "risk_drivers_text": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "port_id",
+        "port_name",
+        "country",
+        "unlocode",
+        "week_start",
+        "week_end",
+        "observed_days",
+        "observed_calls",
+        "weekly_calls",
+        "missing_dates",
+        "observation_dates",
+        "latest_observation",
+        "source_latest_observation",
+        "reference_mean",
+        "reference_std",
+        "reference_weeks",
+        "z_score",
+        "completeness",
+        "quality_status",
+        "classification",
+        "source_lineage_ids",
+        "source_ids",
+        "input_sha256",
+        "lineage_id",
+        "run_id",
+        "review_id",
+        "gold_id",
+        "risk_revision",
+        "risk_level",
+        "risk_drivers",
+        "freshness_status",
+        "freshness_age_days",
+        "review_eligible",
+        "as_of",
+        "observation_link",
+        "simulated"
+      ],
+      "type": "object"
+    }
+  },
+  "paths": {
+    "/operations/queue": {
+      "get": {
+        "operationId": "ListPortWeeks",
+        "summary": "ListPortWeeks",
+        "parameters": [
+          {
+            "name": "port_id",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "week_start",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "risk_level",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "review_status",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "review_id",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "country",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "type": "integer"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "type": "integer"
+          },
+          {
+            "name": "flagged_only",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "total": {
+                  "type": "integer"
+                },
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/QueueItem"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not authorized"
+          },
+          "409": {
+            "description": "Conflicting review or delivery lease; refresh"
+          },
+          "422": {
+            "description": "Invalid action or justification"
+          },
+          "503": {
+            "description": "Approved data or dependency unavailable"
+          }
+        }
+      }
+    },
+    "/operations/reviews/{review_id}": {
+      "post": {
+        "operationId": "SubmitReview",
+        "summary": "SubmitReview",
+        "parameters": [
+          {
+            "name": "review_id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ReviewAction"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not authorized"
+          },
+          "409": {
+            "description": "Conflicting review or delivery lease; refresh"
+          },
+          "422": {
+            "description": "Invalid action or justification"
+          },
+          "503": {
+            "description": "Approved data or dependency unavailable"
+          }
+        }
+      }
+    },
+    "/operations/history": {
+      "get": {
+        "operationId": "ListHistory",
+        "summary": "ListHistory",
+        "parameters": [
+          {
+            "name": "review_id",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "total": {
+                  "type": "integer"
+                },
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "review_id": {
+                        "type": "string",
+                        "x-nullable": false
+                      },
+                      "action": {
+                        "type": "string",
+                        "x-nullable": false
+                      },
+                      "previous_action": {
+                        "type": "string",
+                        "x-nullable": true
+                      },
+                      "reason": {
+                        "type": "string",
+                        "x-nullable": false
+                      },
+                      "actor": {
+                        "type": "string",
+                        "x-nullable": false
+                      },
+                      "owner": {
+                        "type": "string",
+                        "x-nullable": false
+                      },
+                      "created_at": {
+                        "type": "string",
+                        "x-nullable": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not authorized"
+          },
+          "409": {
+            "description": "Conflicting review or delivery lease; refresh"
+          },
+          "422": {
+            "description": "Invalid action or justification"
+          },
+          "503": {
+            "description": "Approved data or dependency unavailable"
+          }
+        }
+      }
+    },
+    "/operations/events": {
+      "get": {
+        "operationId": "ListEvents",
+        "summary": "ListEvents",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "total": {
+                  "type": "integer"
+                },
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not authorized"
+          },
+          "409": {
+            "description": "Conflicting review or delivery lease; refresh"
+          },
+          "422": {
+            "description": "Invalid action or justification"
+          },
+          "503": {
+            "description": "Approved data or dependency unavailable"
+          }
+        }
+      }
+    },
+    "/operations/events/claim": {
+      "post": {
+        "operationId": "ClaimEvent",
+        "summary": "ClaimEvent",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not authorized"
+          },
+          "409": {
+            "description": "Conflicting review or delivery lease; refresh"
+          },
+          "422": {
+            "description": "Invalid action or justification"
+          },
+          "503": {
+            "description": "Approved data or dependency unavailable"
+          }
+        }
+      }
+    },
+    "/operations/events/{event_id}/result": {
+      "post": {
+        "operationId": "RecordDelivery",
+        "summary": "RecordDelivery",
+        "parameters": [
+          {
+            "name": "event_id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/DeliveryResult"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Role not authorized"
+          },
+          "409": {
+            "description": "Conflicting review or delivery lease; refresh"
+          },
+          "422": {
+            "description": "Invalid action or justification"
+          },
+          "503": {
+            "description": "Approved data or dependency unavailable"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head><title></title><meta name="ROBOTS" content="INDEX,FOLLOW"><meta name="keywords" content=""><meta name="description" content="">
+ <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <style class="main_style">
+.layout-canvas-g {
+  background-color: #fff;
+  border: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  width: 100%;
+}
+.layout-canvas-g > .header,
+.layout-canvas-g > .section,
+.layout-canvas-g > .footer {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  word-wrap: break-word;
+}
+.layout-canvas-g > .section {
+  margin: 10px 0;
+}
+.layout-canvas-g > .section > .columns {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+body {
+  color: #000;
+  font-family: Arial;
+  font-size: 12px;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+@media only screen and (max-width: 480px) {
+  .mobile-hidden {
+    display: none !important;
+  }
+  .responsive-td {
+    width: 100% !important;
+    display: block !important;
+    padding: 0 !important;
+  }
+}
+.layout-canvas-g > .section > .columns {
+  width: 100%;
+}
+
+</style>
+
+</head>
+<body>
+<div class="layout layout-canvas-g">
+ <div class="section">
+  <div class="columns col1">
+   <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0" role="presentation"><tr><td align="left"><img data-assetid="347231" src="https://image.s11.sfmc-content.com/lib/fe3a157175640479721676/m/1/e22a0627-c30f-45a2-92ca-5e1147e03e1e.png" alt="" height="100" width="299" style="display: block; padding: 0px; text-align: left; height: 100px; width: 299px; border: 0px;"></td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><font size="5" face="Verdana" color="blue">
+Newsletter & Dashboard 
+</font>
+</td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" class="stylingblock-content-wrapper" style="min-width: 100%; "><tr><td class="stylingblock-content-wrapper camarker-inner">
+<form id="smartcapture-block-zmwylix51qi" class="smartcapture-content-wrapper fuelux" novalidate="novalidate">
+ 
+<style id="smartcapture-styles-zmwylix51qi">
+	#smartcapture-block-zmwylix51qi {
+		background-color:transparent;margin-top:30px;margin-right:0px;margin-bottom:0px;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;text-align:left;
+	}
+
+	#smartcapture-block-zmwylix51qi .smartcapture-controls {
+		padding-bottom: 10px;
+	}
+
+	#smartcapture-block-zmwylix51qi .smartcapture-controls .sc-formfield-label,
+	#smartcapture-block-zmwylix51qi .smartcapture-controls .sc-formfield-label label,
+	#smartcapture-block-zmwylix51qi .smartcapture-controls .sc-formfield-input label {
+		color:#000000;font-family:Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;font-size:19px;line-height:inherit;margin-bottom:3px;vertical-align:middle;width:215px;display:inline-block;
+	}
+
+	#smartcapture-block-zmwylix51qi input[type="radio"],
+	#smartcapture-block-zmwylix51qi input[type="checkbox"] {
+		margin: 0 0.4em 3px 0;
+		vertical-align: middle;
+	}
+
+	#smartcapture-block-zmwylix51qi input[type="text"],
+	#smartcapture-block-zmwylix51qi input[type="email"],
+	#smartcapture-block-zmwylix51qi input[type="number"] {
+		width:200px;padding:3px;
+	}
+
+	#smartcapture-block-zmwylix51qi .sc-button {
+		background-color:#072266;border-color:#072266;border-radius:3px;border-style:solid;-webkit-border-radius:3px;-moz-border-radius:3px;color:#FFFFFF;font-family:"Arial Black", Gadget, sans-serif;font-size:15px;line-height:normal;padding:10px;
+	}
+
+	#smartcapture-block-zmwylix51qi .smartcapture-submit-button-wrapper {
+		padding-bottom:10px;text-align:left;
+	}
+
+	#smartcapture-block-zmwylix51qi .date-dropdown-select-boxes input {
+		display: none;
+	}
+
+	#smartcapture-block-zmwylix51qi .date-dropdown-select-boxes .select {
+		max-height: 28em;
+		max-width: 6em;
+		overflow: auto;
+	}
+</style>
+
+
+ <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><font size="2" face="Verdana" color="black">
+* Required Information 
+</font>
+<br>
+<br>
+<div class="smartcapture-controls"><div class="sc-formfield-label"><label for="Email">Email *</label></div>
+<input type="email" id="Email" name="Email" data-field-type="EmailAddress" data-validation="email" required="required" data-validation-message="Please enter an email address."></div>
+</td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><div class="smartcapture-controls"><div class="sc-formfield-label"><label for="Company Name">Company Name</label></div>
+<input type="text" id="Company Name" name="Company Name" data-field-type="Text"></div>
+</td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><div class="smartcapture-controls"><div class="sc-formfield-label"><label for="First Name">First Name</label></div>
+<input type="text" id="First Name" name="First Name" data-field-type="Text"></div>
+</td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><div class="smartcapture-controls"><div class="sc-formfield-label"><label for="Last Name">Last Name</label></div>
+<input type="text" id="Last Name" name="Last Name" data-field-type="Text"></div>
+</td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><div class="smartcapture-controls"><div class="sc-formfield-label"><label for="Title">Title</label></div>
+<input type="text" id="Title" name="Title" data-field-type="Text"></div>
+</td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><h2>Newsletter & Dashboard</h2>
+<div class="smartcapture-controls"><div class="sc-formfield-label"></div>
+<div class="sc-formfield-input-wrapper">
+
+ <div class="sc-formfield-input"><label><input type="checkbox" name="Breaking Waves" id="Breaking Waves" data-field-type="Boolean">&nbsp;Breaking Waves</label></div>
+<font size="1" face="Verdana" color="black">
+Breaking Waves delivers news and information about the Port of New York & New Jersey.</font>
+</div>
+</div></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><div class="smartcapture-controls"><div class="sc-formfield-label"></div>
+<div class="sc-formfield-input-wrapper">
+
+ <div class="sc-formfield-input"><label><input type="checkbox" name="Supply Chain Dashboard" id="Supply Chain Dashboard" data-field-type="Boolean">&nbsp;Supply Chain Dashboard</label></div>
+<font size="1" face="Verdana" color="black">
+Supply Chain Dashboard provides weekly activity data for the Port of New York & New Jersey.</font>
+</div>
+</div></td></tr></table>
+ <div class="smartcapture-submit-button-wrapper"><br><br>
+  <button type="submit" class="sc-button">SUBSCRIBE</button>
+ </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<script id="smartcapture-script-zmwylix51qi">
+	var scFormLoaded = function () {
+		window.ScForm.init({"gearID":"zmwylix51qi","smartCaptureFormID":0,"sourceKey":"6AC3BD78-2959-4100-B168-44238C6F4AC9","source":"dataExtension","triggeredSend":"","confirmationMessage":"<br />\n<br />\n<span style=\"font-size:18px;\"><b>Thank you for signing up!</b></span>","buttonText":"SUBSCRIBE","formStyling":{"background-color":"transparent","margin-top":"30px","margin-right":"0px","margin-bottom":"0px","margin-left":"0px","padding-top":"0px","padding-right":"0px","padding-bottom":"0px","padding-left":"0px","text-align":"left"},"fieldStyling":{"width":"200px","padding":"3px"},"buttonStyling":{"background-color":"#072266","border-color":"#072266","border-radius":"3px","border-style":"solid","-webkit-border-radius":"3px","-moz-border-radius":"3px","color":"#FFFFFF","font-family":"\"Arial Black\", Gadget, sans-serif","font-size":"15px","line-height":"normal","padding":"10px"},"onSubmitGotoUrlType":1,"onSubmitGotoUrl":"http://mcw2jc43mc6fk615mg8n9tpf4tmm.pub.sfmc-content.com/jwpu14ktiyc"});
+	};
+	var scAppDomain = 'cloudpages.mc-content.com';
+	var scAppBasePath = '/CloudPages';
+	(function () {
+		var appDomain = 'mc.s11.exacttarget.com';
+		if (appDomain.indexOf('qa') !== -1) {
+			scAppDomain = 'cloudpages-qa.mc-content.com';
+			scAppBasePath = '/CloudPages_V1';
+		}
+	}());
+	window.appDomain = window.appDomain || scAppDomain;
+	window.contentDetail = window.contentDetail || {"isSite":true,"mid":110004726,"eid":110004726,"pageID":6774,"siteID":590039,"isMobile":"false"};
+	if (!window.ScForm || !window.ScForm.init) {
+		var head = document.getElementsByTagName('head')[0];
+		var id = 'smartcapture-formjs-script';
+		var script = document.getElementById(id);
+		var domain = window.appDomain;
+		var el;
+		if (!script) {
+			if (domain) {
+				domain = '//' + domain;
+			}
+			el = document.createElement('script');
+			el.async = true;
+			el.id = id;
+			el.src = domain + scAppBasePath + '/lib/smartcapture-formjs.js';
+			el.onload = scFormLoaded;
+			head.appendChild(el);
+		} else {
+			if (script.addEventListener) {
+				script.addEventListener('load', scFormLoaded);
+			} else if (script.attachEvent) {
+				script.attachEvent('onload', scFormLoaded);
+			}
+		}
+	} else {
+		scFormLoaded();
+	}
+</script>
+
+</form>
+</td></tr></table></td></tr></table>
+  </div>
+ </div>
+</div>
+</body>
+</html>

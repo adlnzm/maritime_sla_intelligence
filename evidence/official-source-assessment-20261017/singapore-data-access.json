@@ -1,0 +1,6 @@
+{
+  "url": "https://data.gov.sg/api/action/datastore_search?resource_id=d_d48c5a038904f6da3c603cd854b6c191&limit=3&sort=month%20desc",
+  "status": 200,
+  "retrieved_at": "2026-10-17T07:10:49.609937+00:00",
+  "sha256": "c0f6ee3bad99bffdbea229109721d0dea5c15a862c6eeb5497ea26464e0e3478"
+}

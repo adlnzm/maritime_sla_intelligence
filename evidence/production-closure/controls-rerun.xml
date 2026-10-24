@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="8" time="12.691" timestamp="2026-10-11T10:24:10.553388+03:00" hostname="endelap"><testcase classname="tests.test_production_controls" name="test_concurrent_business_retry_and_orphan_detection" time="0.302" /><testcase classname="tests.test_production_controls" name="test_empty_legacy_and_future_database_schema" time="0.152" /><testcase classname="tests.test_production_controls" name="test_feedback_real_destination_replay_and_atomic_conflict" time="2.306"><failure message="maritime.governance.GovernanceError: Stage gold BLOCKED: ['dataset_contracts_and_independent_checks']">tmp_path = WindowsPath('C:/Users/User/AppData/Local/Temp/pytest-of-User/pytest-123/test_feedback_real_destination0')
+fixture_path = WindowsPath('C:/Users/User/AppData/Local/Temp/pytest-of-User/pytest-123/test_feedback_real_destination0/fixture.json')
+
+    def test_feedback_real_destination_replay_and_atomic_conflict(tmp_path, fixture_path):
+&gt;       report = run(tmp_path / "source", fixture=fixture_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_production_controls.py:50: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+src\maritime\pipeline.py:621: in run
+    return _run(**bound.arguments)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+src\maritime\pipeline.py:397: in _run
+    gates.finish(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;maritime.governance.Gates object at 0x00000226129B4050&gt;, stage = 'gold'
+checks = {'dataset_contracts_and_independent_checks': False}
+counts = {'ports': {'input': 4, 'persisted_expected': 4, 'invalid': 0}, 'activity': {'input': 360, 'persisted_expected': 360, '...isted_expected': 12, 'invalid': 0}, 'congestion_history': {'input': 360, 'persisted_expected': 360, 'invalid': 0}, ...}
+warnings = ()
+
+    def finish(self, stage, checks, counts=None, warnings=()):
+        failed = [k for k, passed in checks.items() if passed is not True]
+        unauthorized = set(warnings) - set(self.policy["permitted_warnings"])
+        failed.extend(sorted(unauthorized))
+        status = "BLOCKED" if failed else "PASS_WITH_WARNINGS" if warnings else "PASS"
+        value = self.report["governance"]["stages"][stage]
+        value.update(
+            status=status,
+            checks=checks,
+            failed_rules=failed,
+            warnings=list(warnings),
+            counts=counts or {},
+            completed_at=utcnow(),
+            duration_seconds=time.perf_counter() - self.started[stage],
+        )
+        self.store.audit("stage", {"run_id": self.report["run_id"], "stage": stage, **value})
+        if failed:
+&gt;           raise GovernanceError(f"Stage {stage} BLOCKED: {failed}")
+E           maritime.governance.GovernanceError: Stage gold BLOCKED: ['dataset_contracts_and_independent_checks']
+
+src\maritime\governance.py:173: GovernanceError</failure></testcase><testcase classname="tests.test_production_controls" name="test_actual_backup_restore_and_tamper" time="1.955"><failure message="maritime.governance.GovernanceError: Stage gold BLOCKED: ['dataset_contracts_and_independent_checks']">tmp_path = WindowsPath('C:/Users/User/AppData/Local/Temp/pytest-of-User/pytest-123/test_actual_backup_restore_and0')
+fixture_path = WindowsPath('C:/Users/User/AppData/Local/Temp/pytest-of-User/pytest-123/test_actual_backup_restore_and0/fixture.json')
+
+    def test_actual_backup_restore_and_tamper(tmp_path, fixture_path):
+        source = tmp_path / "source"
+&gt;       report = run(source, fixture=fixture_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_production_controls.py:91: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+src\maritime\pipeline.py:621: in run
+    return _run(**bound.arguments)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+src\maritime\pipeline.py:397: in _run
+    gates.finish(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;maritime.governance.Gates object at 0x0000022613BCA410&gt;, stage = 'gold'
+checks = {'dataset_contracts_and_independent_checks': False}
+counts = {'ports': {'input': 4, 'persisted_expected': 4, 'invalid': 0}, 'activity': {'input': 360, 'persisted_expected': 360, '...isted_expected': 12, 'invalid': 0}, 'congestion_history': {'input': 360, 'persisted_expected': 360, 'invalid': 0}, ...}
+warnings = ()
+
+    def finish(self, stage, checks, counts=None, warnings=()):
+        failed = [k for k, passed in checks.items() if passed is not True]
+        unauthorized = set(warnings) - set(self.policy["permitted_warnings"])
+        failed.extend(sorted(unauthorized))
+        status = "BLOCKED" if failed else "PASS_WITH_WARNINGS" if warnings else "PASS"
+        value = self.report["governance"]["stages"][stage]
+        value.update(
+            status=status,
+            checks=checks,
+            failed_rules=failed,
+            warnings=list(warnings),
+            counts=counts or {},
+            completed_at=utcnow(),
+            duration_seconds=time.perf_counter() - self.started[stage],
+        )
+        self.store.audit("stage", {"run_id": self.report["run_id"], "stage": stage, **value})
+        if failed:
+&gt;           raise GovernanceError(f"Stage {stage} BLOCKED: {failed}")
+E           maritime.governance.GovernanceError: Stage gold BLOCKED: ['dataset_contracts_and_independent_checks']
+
+src\maritime\governance.py:173: GovernanceError</failure></testcase><testcase classname="tests.test_production_controls" name="test_api_large_and_chunked_requests_are_rejected" time="0.251" /><testcase classname="tests.test_production_controls" name="test_aoai_bounded_retry_timeout_and_no_fabricated_fallback" time="0.010" /><testcase classname="tests.test_production_controls" name="test_powerbi_schemas_and_governed_field_bindings" time="2.145"><failure message="maritime.governance.GovernanceError: Stage gold BLOCKED: ['dataset_contracts_and_independent_checks']">tmp_path = WindowsPath('C:/Users/User/AppData/Local/Temp/pytest-of-User/pytest-123/test_powerbi_schemas_and_gover0')
+fixture_path = WindowsPath('C:/Users/User/AppData/Local/Temp/pytest-of-User/pytest-123/test_powerbi_schemas_and_gover0/fixture.json')
+
+    def test_powerbi_schemas_and_governed_field_bindings(tmp_path, fixture_path):
+        import runpy
+    
+&gt;       report = run(tmp_path / "data", fixture=fixture_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_production_controls.py:161: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+src\maritime\pipeline.py:621: in run
+    return _run(**bound.arguments)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+src\maritime\pipeline.py:397: in _run
+    gates.finish(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;maritime.governance.Gates object at 0x00000226140D6E10&gt;, stage = 'gold'
+checks = {'dataset_contracts_and_independent_checks': False}
+counts = {'ports': {'input': 4, 'persisted_expected': 4, 'invalid': 0}, 'activity': {'input': 360, 'persisted_expected': 360, '...isted_expected': 12, 'invalid': 0}, 'congestion_history': {'input': 360, 'persisted_expected': 360, 'invalid': 0}, ...}
+warnings = ()
+
+    def finish(self, stage, checks, counts=None, warnings=()):
+        failed = [k for k, passed in checks.items() if passed is not True]
+        unauthorized = set(warnings) - set(self.policy["permitted_warnings"])
+        failed.extend(sorted(unauthorized))
+        status = "BLOCKED" if failed else "PASS_WITH_WARNINGS" if warnings else "PASS"
+        value = self.report["governance"]["stages"][stage]
+        value.update(
+            status=status,
+            checks=checks,
+            failed_rules=failed,
+            warnings=list(warnings),
+            counts=counts or {},
+            completed_at=utcnow(),
+            duration_seconds=time.perf_counter() - self.started[stage],
+        )
+        self.store.audit("stage", {"run_id": self.report["run_id"], "stage": stage, **value})
+        if failed:
+&gt;           raise GovernanceError(f"Stage {stage} BLOCKED: {failed}")
+E           maritime.governance.GovernanceError: Stage gold BLOCKED: ['dataset_contracts_and_independent_checks']
+
+src\maritime\governance.py:173: GovernanceError</failure></testcase><testcase classname="tests.test_production_controls" name="test_release_rejects_source_mismatch" time="0.003" /></testsuite></testsuites>

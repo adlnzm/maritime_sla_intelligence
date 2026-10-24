@@ -13,6 +13,9 @@ class Store:
         self.root.mkdir(parents=True, exist_ok=True)
         self.path = self.root / "maritime.db"
         with self.connect() as con:
+            schema_version = con.execute("PRAGMA user_version").fetchone()[0]
+            if schema_version > 1:
+                raise ValueError("Database schema is newer than this application")
             con.executescript("""
                 PRAGMA journal_mode=WAL;
                 CREATE TABLE IF NOT EXISTS runs (
@@ -38,6 +41,51 @@ class Store:
                 CREATE TRIGGER IF NOT EXISTS released_product_no_update BEFORE UPDATE ON products WHEN EXISTS(SELECT 1 FROM releases WHERE run_id=OLD.run_id) BEGIN SELECT RAISE(ABORT,'approved product is immutable'); END;
                 CREATE TRIGGER IF NOT EXISTS released_product_no_insert BEFORE INSERT ON products WHEN EXISTS(SELECT 1 FROM releases WHERE run_id=NEW.run_id) BEGIN SELECT RAISE(ABORT,'approved product is immutable'); END;
             """)
+            con.execute("PRAGMA user_version=1")
+            for layer in ("silver", "gold"):
+                con.execute(
+                    f"CREATE TABLE IF NOT EXISTS {layer}_datasets "
+                    "(run_id TEXT NOT NULL,dataset TEXT NOT NULL,payload TEXT NOT NULL,"
+                    "PRIMARY KEY(run_id,dataset))"
+                )
+                for operation in ("UPDATE", "DELETE", "INSERT"):
+                    reference = "NEW" if operation == "INSERT" else "OLD"
+                    con.execute(
+                        f"CREATE TRIGGER IF NOT EXISTS {layer}_immutable_{operation} "
+                        f"BEFORE {operation} ON {layer}_datasets WHEN EXISTS "
+                        f"(SELECT 1 FROM releases WHERE run_id={reference}.run_id) "
+                        "BEGIN SELECT RAISE(ABORT,'approved medallion is immutable'); END"
+                    )
+
+    def write_layer(self, layer, dataset, run_id, rows):
+        if layer not in {"silver", "gold"}:
+            raise ValueError("Unknown medallion layer")
+        with self.connect() as con:
+            con.execute(
+                f"INSERT OR REPLACE INTO {layer}_datasets VALUES (?,?,?)",
+                (run_id, dataset, json.dumps(rows, default=json_default, allow_nan=False)),
+            )
+
+    def read_layer(self, layer, dataset, run_id=None, approved=True):
+        from maritime.governance import fingerprint
+
+        if layer not in {"silver", "gold"}:
+            raise ValueError("Unknown medallion layer")
+        run_id = run_id or self.metadata("published_run")
+        with self.connect() as con:
+            row = con.execute(
+                f"SELECT payload FROM {layer}_datasets WHERE run_id=? AND dataset=?",
+                (run_id, dataset),
+            ).fetchone()
+        if row is None:
+            raise ValueError("Medallion dataset unavailable for this run")
+        rows = json.loads(row[0])
+        if approved:
+            manifest = self.release(run_id) or {}
+            expected = manifest.get("medallion", {}).get(f"{layer}.{dataset}")
+            if not expected or expected != {"rows": len(rows), "sha256": fingerprint(rows)}:
+                raise ValueError("Medallion release integrity failure")
+        return rows
 
     def connect(self):
         con = sqlite3.connect(self.path, timeout=30)
@@ -97,9 +145,18 @@ class Store:
         from maritime.governance import fingerprint
 
         at = utcnow()
-        audit_id = stable_id(at, kind, payload)
+        audit_id = (
+            fingerprint(["business-action-v1", kind, payload])
+            if kind in {"review", "outcome"}
+            else stable_id(at, kind, payload)
+        )
         with self.connect() as con:
             con.execute("BEGIN IMMEDIATE")
+            prior = con.execute("SELECT kind,payload FROM audit WHERE id=?", (audit_id,)).fetchone()
+            if prior:
+                if prior["kind"] != kind or json.loads(prior["payload"]) != payload:
+                    raise ValueError("Audit identity conflict")
+                return audit_id
             previous = con.execute(
                 "SELECT digest FROM audit_chain ORDER BY sequence DESC LIMIT 1"
             ).fetchone()
@@ -123,6 +180,11 @@ class Store:
             unchained = con.execute(
                 "SELECT COUNT(*) FROM audit WHERE id NOT IN (SELECT audit_id FROM audit_chain)"
             ).fetchone()[0]
+            orphaned = con.execute(
+                "SELECT COUNT(*) FROM audit_chain c LEFT JOIN audit a ON a.id=c.audit_id WHERE a.id IS NULL"
+            ).fetchone()[0]
+        if orphaned:
+            raise ValueError("Audit chain contains orphaned entries")
         previous = "GENESIS"
         for row in rows:
             if (
@@ -172,6 +234,19 @@ class Store:
                 for n in manifest["datasets"]
             }
             verify_manifest(products, manifest)
+            for key, expected in manifest.get("medallion", {}).items():
+                from maritime.governance import fingerprint
+
+                layer, dataset = key.split(".", 1)
+                if layer not in {"silver", "gold"}:
+                    raise ValueError("Unknown medallion layer")
+                row = con.execute(
+                    f"SELECT payload FROM {layer}_datasets WHERE run_id=? AND dataset=?",
+                    (report["run_id"], dataset),
+                ).fetchone()
+                rows = json.loads(row[0]) if row else None
+                if rows is None or expected != {"rows": len(rows), "sha256": fingerprint(rows)}:
+                    raise ValueError("Medallion persisted readback failed")
             con.execute(
                 "INSERT INTO releases VALUES (?,?)", (report["run_id"], json.dumps(manifest))
             )
@@ -204,9 +279,10 @@ class Store:
     def audits(self, kind):
         with self.connect() as con:
             return [
-                json.loads(r[0])
+                {**json.loads(r["payload"]), "audit_id": r["id"], "created_at": r["created_at"]}
                 for r in con.execute(
-                    "SELECT payload FROM audit WHERE kind=? ORDER BY created_at", (kind,)
+                    "SELECT id,created_at,payload FROM audit WHERE kind=? ORDER BY created_at,id",
+                    (kind,),
                 )
             ]
 

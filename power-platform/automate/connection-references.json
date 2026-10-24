@@ -1,0 +1,11 @@
+{
+  "maritimeoperations": {
+    "connectionId": "CONFIGURE_TENANT_CONNECTION",
+    "api": "MaritimeOperations"
+  },
+  "office365": {
+    "connectionId": "CONFIGURE_APPROVED_MAILBOX_CONNECTION",
+    "api": "office365"
+  },
+  "status": "GENERATED_UNBOUND_NOT_DEPLOYED"
+}

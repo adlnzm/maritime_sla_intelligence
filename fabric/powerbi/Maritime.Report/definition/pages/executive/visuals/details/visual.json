@@ -1,0 +1,141 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "details",
+  "position": {
+    "x": 20,
+    "y": 180,
+    "z": 0,
+    "width": 1560,
+    "height": 690,
+    "tabOrder": 200
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_congestion"
+                    }
+                  },
+                  "Property": "port_id"
+                }
+              },
+              "queryRef": "fact_congestion.port_id"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_congestion"
+                    }
+                  },
+                  "Property": "category"
+                }
+              },
+              "queryRef": "fact_congestion.category"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_congestion"
+                    }
+                  },
+                  "Property": "current_activity"
+                }
+              },
+              "queryRef": "fact_congestion.current_activity"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_congestion"
+                    }
+                  },
+                  "Property": "baseline"
+                }
+              },
+              "queryRef": "fact_congestion.baseline"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_congestion"
+                    }
+                  },
+                  "Property": "stress_score"
+                }
+              },
+              "queryRef": "fact_congestion.stress_score"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_congestion"
+                    }
+                  },
+                  "Property": "evidence_coverage"
+                }
+              },
+              "queryRef": "fact_congestion.evidence_coverage"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_congestion"
+                    }
+                  },
+                  "Property": "classification"
+                }
+              },
+              "queryRef": "fact_congestion.classification"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_congestion"
+                    }
+                  },
+                  "Property": "lineage_id"
+                }
+              },
+              "queryRef": "fact_congestion.lineage_id"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_congestion"
+                    }
+                  },
+                  "Property": "run_id"
+                }
+              },
+              "queryRef": "fact_congestion.run_id"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

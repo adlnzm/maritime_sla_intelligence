@@ -1,0 +1,47 @@
+[
+  {
+    "name": "comtrade-preview",
+    "url": "https://comtradeapi.un.org/public/v1/preview/C/M/HS?period=202608&reporterCode=702&cmdCode=TOTAL&flowCode=X&partnerCode=0&partner2Code=0&customsCode=C00&motCode=0&maxRecords=1",
+    "retrieved_at": "2026-10-17T07:10:30.313890+00:00",
+    "sha256": "521c3442c33af89e73ffef06a0e06631bf52944cd98740a2e527c04641939e08",
+    "bytes": 58,
+    "sandbox_attempt_error": "<urlopen error [Errno 11001] getaddrinfo failed>",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "retained_path": "evidence/official-source-assessment-20261017/comtrade-preview.response",
+    "checksum_verified": true
+  },
+  {
+    "name": "wto-timeseries",
+    "url": "https://api.wto.org/timeseries/v1/indicators?lang=1",
+    "retrieved_at": "2026-10-17T07:10:31.125843+00:00",
+    "sha256": "c90468927fb778dd15b9da44a4dfec94fa8544d9746a59183f1bd413f87ac52a",
+    "bytes": 152,
+    "sandbox_attempt_error": "<urlopen error [Errno 11001] getaddrinfo failed>",
+    "status": 401,
+    "retained_path": "evidence/official-source-assessment-20261017/wto-timeseries.response",
+    "checksum_verified": true
+  },
+  {
+    "name": "comtrade-availability",
+    "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2025&reporterCode=702&cmdCode=TOTAL&flowCode=X&partnerCode=0&partner2Code=0&customsCode=C00&motCode=0&maxRecords=1",
+    "retrieved_at": "2026-10-17T07:10:31.614533+00:00",
+    "sha256": "87b2054653b05cd43aa59af75935bc7ff1294932f43411b8b7b551c563407e96",
+    "bytes": 83,
+    "sandbox_attempt_error": "<urlopen error [Errno 11001] getaddrinfo failed>",
+    "status": 429,
+    "retained_path": "evidence/official-source-assessment-20261017/comtrade-availability.response",
+    "checksum_verified": true
+  },
+  {
+    "name": "comtrade-annual-retry",
+    "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2025&reporterCode=702&cmdCode=TOTAL&flowCode=X&partnerCode=0&partner2Code=0&customsCode=C00&motCode=0&maxRecords=1",
+    "retrieved_at": "2026-10-17T07:10:41.705813+00:00",
+    "sha256": "1d51c14b18c68ad3dea6bf57ae0e622630d06e6b119effa5fcb49efb75fc6dd9",
+    "bytes": 957,
+    "sandbox_attempt_error": "<urlopen error [Errno 11001] getaddrinfo failed>",
+    "status": 200,
+    "retained_path": "evidence/official-source-assessment-20261017/comtrade-annual-retry.response",
+    "checksum_verified": true
+  }
+]

@@ -2,10 +2,12 @@ import hmac
 import json
 import logging
 import os
+import sqlite3
 import time
+import uuid
 
 from fastapi import Depends, FastAPI, Header, HTTPException, Query
-from fastapi.responses import PlainTextResponse
+from fastapi.responses import JSONResponse, PlainTextResponse
 
 from maritime.models import Outcome, Review
 from maritime.store import Store
@@ -18,10 +20,23 @@ def create_app(root=None):
         raise ValueError("Unknown authentication mode")
     if os.getenv("MARITIME_STORAGE_BACKEND", "sqlite") not in {"sqlite", "azure_blob"}:
         raise ValueError("Unknown storage backend")
+    if os.getenv("MARITIME_AUTH_MODE", "key") == "key":
+        if not os.getenv("MARITIME_API_KEY"):
+            raise ValueError("MARITIME_API_KEY is required for key authentication")
+        if os.getenv("MARITIME_OPERATOR_KEY") == os.getenv("MARITIME_API_KEY"):
+            raise ValueError("Reader and operator keys must differ")
+    else:
+        uuid.UUID(os.environ["AZURE_TENANT_ID"])
+        if not os.getenv("AZURE_API_AUDIENCE"):
+            raise ValueError("AZURE_API_AUDIENCE is required for Entra authentication")
     configure_telemetry()
+    dependency_errors = (OSError, sqlite3.Error)
     if os.getenv("MARITIME_STORAGE_BACKEND") == "azure_blob":
+        from azure.core.exceptions import AzureError
+
         from maritime.azure_store import AzureStore
 
+        dependency_errors += (AzureError,)
         store = AzureStore()
     else:
         store = Store(root or os.getenv("MARITIME_DATA_DIR", "data"))
@@ -41,7 +56,7 @@ def create_app(root=None):
                     - date.fromisoformat(min(manifest["source_latest_by_port"].values()))
                 ).days > contract()["freshness_days"]:
                     raise ValueError("Published live snapshot is stale")
-            return store.read_approved(product, run_id)
+            return store.read_approved(product, manifest["run_id"])
         except (ValueError, KeyError) as exc:
             raise HTTPException(503, str(exc)) from exc
 
@@ -51,6 +66,12 @@ def create_app(root=None):
         return store.latest_report()
 
     app = FastAPI(title="Maritime Congestion & SLA Intelligence", version="0.1.0")
+    from maritime.http_limits import BodyLimit
+
+    body_limit = int(os.getenv("MARITIME_MAX_BODY_BYTES", "65536"))
+    if not 1024 <= body_limit <= 1048576:
+        raise ValueError("MARITIME_MAX_BODY_BYTES must be between 1024 and 1048576")
+    app.add_middleware(BodyLimit, maximum=body_limit)
     counters = {"requests": 0, "errors": 0, "duration_seconds": 0.0}
 
     def authenticate(x_api_key: str = Header(default=""), authorization: str = Header(default="")):
@@ -78,10 +99,20 @@ def create_app(root=None):
         if not expected or not hmac.compare_digest(x_api_key, expected):
             raise HTTPException(403, "Operator role required")
 
+    from maritime.operations_api import register_operations
+
+    register_operations(app, store, root, authenticate, authorize_operator)
+
     @app.middleware("http")
     async def measure(request, call_next):
         start = time.perf_counter()
-        response = await call_next(request)
+        correlation_id = uuid.uuid4().hex
+        try:
+            response = await call_next(request)
+        except dependency_errors:
+            # SDK exceptions may include endpoints or credentials; never return their text.
+            response = JSONResponse(status_code=503, content={"detail": "Dependency unavailable"})
+        response.headers["X-Correlation-ID"] = correlation_id
         elapsed = time.perf_counter() - start
         counters["requests"] += 1
         counters["errors"] += response.status_code >= 400
@@ -90,6 +121,7 @@ def create_app(root=None):
             json.dumps(
                 {
                     "event": "request",
+                    "correlation_id": correlation_id,
                     "method": request.method,
                     "path": request.url.path,
                     "status": response.status_code,
@@ -102,6 +134,15 @@ def create_app(root=None):
     @app.get("/health")
     def health():
         return {"status": "alive", "version": "0.1.0"}
+
+    @app.get("/health/ready")
+    def infrastructure_ready():
+        # Probe exposes no dataset, identity, run ID, or failure detail.
+        try:
+            verified_read("ports")
+        except Exception:
+            raise HTTPException(503, "Dependency unavailable") from None
+        return {"status": "ready"}
 
     @app.get("/ready", dependencies=[Depends(authenticate)])
     def ready():
@@ -117,11 +158,12 @@ def create_app(root=None):
             offset: int = Query(0, ge=0),
             run_id: str | None = None,
         ):
-            if not (run_id or store.metadata("published_run")):
+            run_id = run_id or store.metadata("published_run")
+            if not run_id:
                 raise HTTPException(503, "No published data")
             rows = verified_read(product, run_id)
             if product == "decisions":
-                selected_run = run_id or store.metadata("published_run")
+                selected_run = run_id
                 reviews = {
                     a["decision_id"]: a
                     for a in store.audits("review")
@@ -137,7 +179,7 @@ def create_app(root=None):
                             "override": "OVERRIDDEN",
                         }[review["status"]]
             return {
-                "run_id": run_id or store.metadata("published_run"),
+                "run_id": run_id,
                 "release": store.release(run_id),
                 "total": len(rows),
                 "items": rows[offset : offset + limit],
@@ -166,15 +208,16 @@ def create_app(root=None):
 
     @app.post("/decisions/{decision_id}/review", dependencies=[Depends(authorize_operator)])
     def review(decision_id: str, body: Review, actor=Depends(authorize_operator)):
+        run_id = store.metadata("published_run")
         decision = next(
-            (r for r in verified_read("decisions") if r["decision_id"] == decision_id), None
+            (r for r in verified_read("decisions", run_id) if r["decision_id"] == decision_id), None
         )
         if decision is None:
             raise HTTPException(404, "Decision not found")
         if body.status == "override":
             options = [
                 r
-                for r in verified_read("interventions")
+                for r in verified_read("interventions", run_id)
                 if r["shipment_id"] == decision["shipment_id"] and r["feasible"]
             ]
             if body.action not in {r["action"] for r in options}:
@@ -184,7 +227,7 @@ def create_app(root=None):
         payload = {
             **body.model_dump(),
             "decision_id": decision_id,
-            "run_id": store.metadata("published_run"),
+            "run_id": decision["run_id"],
         }
         if actor:
             payload["operator"] = actor["oid"]
@@ -192,7 +235,8 @@ def create_app(root=None):
 
     @app.post("/outcomes")
     def outcome(body: Outcome, actor=Depends(authorize_operator)):
-        decisions = verified_read("decisions")
+        run_id = store.metadata("published_run")
+        decisions = verified_read("decisions", run_id)
         decision = next((d for d in decisions if d["decision_id"] == body.decision_id), None)
         if decision is None:
             raise HTTPException(404, "Decision not found")
@@ -203,7 +247,7 @@ def create_app(root=None):
         action = next(
             (
                 o
-                for o in verified_read("interventions")
+                for o in verified_read("interventions", decision["run_id"])
                 if o["shipment_id"] == decision["shipment_id"]
                 and o["action"] == body.actual_action
                 and o["feasible"]
@@ -215,7 +259,7 @@ def create_app(root=None):
         breach = body.actual_delay_hours > action["sla_buffer_hours"]
         payload = {
             **body.model_dump(mode="json"),
-            "run_id": store.metadata("published_run"),
+            "run_id": decision["run_id"],
             "delay_error": body.actual_delay_hours - action["expected_delay_hours"],
             "loss_error": body.actual_loss - action["expected_loss"],
             "brier_score": (int(breach) - action["breach_probability"]) ** 2,
@@ -231,6 +275,15 @@ def create_app(root=None):
     def audit():
         return {"reviews": store.audits("review"), "outcomes": store.audits("outcome")}
 
+    @app.get("/learning/export", dependencies=[Depends(authorize_operator)])
+    def learning_export():
+        from maritime.feedback import export_feedback
+
+        decisions = verified_read("decisions")
+        if not decisions:
+            raise HTTPException(503, "Published decisions unavailable")
+        return export_feedback(store, decisions[0]["run_id"])
+
     @app.get("/run-report", dependencies=[Depends(authenticate)])
     def run_report():
         return published_report()
@@ -242,6 +295,7 @@ def create_app(root=None):
     @app.get("/metrics", response_class=PlainTextResponse, dependencies=[Depends(authenticate)])
     def metrics():
         report = published_report() or {}
+        latest_attempt = store.latest_report() or {}
         reviews = store.audits("review")
         values = {
             "api_requests_total": counters["requests"],
@@ -251,6 +305,11 @@ def create_app(root=None):
             "dq_score": report.get("data_quality", {}).get("overall_dq_score", 0),
             "scenario_executions": report.get("scenarios", {}).get("executions", 0),
             "decision_count": report.get("decision", {}).get("count", 0),
+            "latest_attempt_failed": int(latest_attempt.get("status") in {"FAILED", "ABANDONED"}),
+            "latest_attempt_retries": latest_attempt.get("reliability", {}).get("retries", 0),
+            "latest_attempt_timeouts": latest_attempt.get("reliability", {}).get("timeouts", 0),
+            "records_processed": report.get("data_quality", {}).get("records_processed", 0),
+            "records_rejected": report.get("data_quality", {}).get("records_rejected", 0),
             "decision_override_rate": sum(r["status"] == "override" for r in reviews)
             / max(1, len(reviews)),
         }

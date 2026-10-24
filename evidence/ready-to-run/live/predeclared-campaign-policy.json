@@ -1,0 +1,11 @@
+{
+  "version": "1.0",
+  "successful_runs_required": 3,
+  "injected_failures_required": 2,
+  "maximum_reconciliation_discrepancies": 0,
+  "maximum_duplicate_publications": 0,
+  "maximum_data_loss_incidents": 0,
+  "failed_run_pointer_changes_allowed": 0,
+  "latency_slo": "REQUIRES_OWNER_AGREEMENT",
+  "production_reliability_claim": "NOT_ESTABLISHED_BY_BOUNDED_LOCAL_CAMPAIGN"
+}

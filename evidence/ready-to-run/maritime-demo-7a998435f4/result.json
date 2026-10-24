@@ -1,0 +1,112 @@
+{
+  "status": "PASS",
+  "project": "maritime-demo-7a998435f4",
+  "started_at": "2026-10-10T13:47:08.900198+00:00",
+  "mode": "RETAINED_PUBLIC_DATA_REPLAY_WITH_SIMULATED_SHIPMENTS",
+  "cloud": "NOT_EXECUTED",
+  "commands": [
+    {
+      "command": [
+        "docker",
+        "compose",
+        "-f",
+        "compose.demo.yml",
+        "-p",
+        "maritime-demo-7a998435f4",
+        "build"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 102.89323499996681
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "-f",
+        "compose.demo.yml",
+        "-p",
+        "maritime-demo-7a998435f4",
+        "up",
+        "-d",
+        "--wait",
+        "--wait-timeout",
+        "300"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 46.893566900049336
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "-f",
+        "compose.demo.yml",
+        "-p",
+        "maritime-demo-7a998435f4",
+        "restart",
+        "api"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 2.783162000006996
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "-f",
+        "compose.demo.yml",
+        "-p",
+        "maritime-demo-7a998435f4",
+        "stop"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 2.0059042000211775
+    }
+  ],
+  "checks": {
+    "unauthenticated": 401,
+    "ready": 200,
+    "ports": 200,
+    "congestion": 200,
+    "network/exposure": 200,
+    "scenarios": 200,
+    "sla-risk": 200,
+    "interventions": 200,
+    "decisions": 200,
+    "lineage": 200,
+    "data-quality": 200,
+    "predictions": 200,
+    "metrics": 200,
+    "signals": 200,
+    "run-report": 200,
+    "reader_cannot_write": 403,
+    "review": 200,
+    "malformed_review": 422,
+    "simulated_outcome": 200,
+    "fabricated_observed_outcome_rejected": 422,
+    "restart_readiness": 200,
+    "persistent_audit": 200
+  },
+  "run_id": "f411dced250f4cdda2f367889074d18b",
+  "files": {
+    "audit.json": "316d2a050be178be0dd16d0d6ea7b00eb04d5c24eff21faeeed3ec8804ab216f",
+    "command-0.log": "329301f78fc8b5a6e873bf5f330ac9dc1edceccfb1a28eceaf486191b85c58a0",
+    "command-1.log": "0eb910848a3139853bd9644a723c202f93e96246f088f6ec377ed8baa7dc27e4",
+    "command-2.log": "38135f917abfcba3ac47af28d83ec97a8d28105d01e810acd3c06527e018e112",
+    "command-3.log": "dfe2ce6a6da0785f0c1a4c9fbae5287bdf9976fb222aaff72c470e172191f5ee",
+    "congestion.json": "1e9b0c4e5503b8b82acf8e3c0ebdc93b65c5b8781d5a7ddfc5cb21a18eb9db78",
+    "data-quality.json": "a82f0b53a9a217ec5ba36f6ca6c70d5618011f79adac75d7952a77c6eab1155b",
+    "decisions.json": "ac850b85e59646823d837e17f3589c3d51165aa8c1183bc1cb44e3849d1f64d7",
+    "interventions.json": "7f48597324a97ccc447c0480d0a315c3252e1a567b5fccbff3bbadd703192133",
+    "lineage.json": "90b4a48ec235c4ae7cf60528ddbf57a379b28a2e012dee36c617434e0b6f7f66",
+    "metrics.json": "fb4e1b225e3a5cbcf8a1ffd88f5a216f61f2d06e3977c985750a2689fb2d4886",
+    "network-exposure.json": "f313d9d9fa84a31f8222e660bb56968a0ff3cffa98c3ef1cd38469061085d8c0",
+    "ports.json": "c082d0073b653bc22136c35843f09321eeaf4bf6806d02cd770eaba994606540",
+    "predictions.json": "d4f919968d2b8b11b1dee3ab8cd974d2de7252002195a5b448f8e539dd1cc28b",
+    "ready.json": "c7dee152625734d8d0fde0647be179b417cae5f5668c0300e8c11ba16e59a38b",
+    "run-report.json": "a203f7d283da7d0a42863cf5c9c99cd1f8ef358c45a3c261a047946ea9284939",
+    "scenarios.json": "115fcaaa56cd5128e96e5a351e7b461e800bdace77ea3408ebdb5be2299c204d",
+    "signals.json": "0f4e032b2605fa1af06a8ec8bfa7f0a142c32002ca16f23817e89d79cf36f75d",
+    "sla-risk.json": "2638e66ae3de507e976dcab0a4cdb4c8097ed08c93c0ea7c2d6a38faad6fb719"
+  }
+}

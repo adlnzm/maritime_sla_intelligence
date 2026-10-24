@@ -1,0 +1,219 @@
+{
+  "Screens": {
+    "OperationsReview": {
+      "Properties": {
+        "OnVisible": "=Set(varOffset,0); Set(varBusy,false); Set(varUnavailable,false); Select(RefreshQueue)",
+        "Fill": "=RGBA(245,247,250,1)"
+      },
+      "Children": [
+        {
+          "Title": {
+            "Control": "Label",
+            "Properties": {
+              "Text": "=\"Maritime operations — weekly activity stress\"",
+              "X": "=20",
+              "Y": "=10",
+              "Width": "=1300",
+              "Size": "=24"
+            }
+          }
+        },
+        {
+          "PortFilter": {
+            "Control": "Classic/TextInput",
+            "Properties": {
+              "Default": "=\"\"",
+              "HintText": "=\"Port identifier (blank = portfolio; Hamad: port2026)\"",
+              "X": "=20",
+              "Y": "=65",
+              "Width": "=410"
+            }
+          }
+        },
+        {
+          "WeekFilter": {
+            "Control": "Classic/TextInput",
+            "Properties": {
+              "Default": "=\"\"",
+              "HintText": "=\"Week start YYYY-MM-DD (blank = all)\"",
+              "X": "=450",
+              "Y": "=65",
+              "Width": "=330"
+            }
+          }
+        },
+        {
+          "RiskFilter": {
+            "Control": "Classic/DropDown",
+            "Properties": {
+              "Items": "=[\"ALL\",\"HIGH\",\"CRITICAL\",\"ELEVATED\",\"NORMAL\",\"INCOMPLETE\",\"INSUFFICIENT_HISTORY\"]",
+              "Default": "=\"ALL\"",
+              "X": "=800",
+              "Y": "=65",
+              "Width": "=240"
+            }
+          }
+        },
+        {
+          "StatusFilter": {
+            "Control": "Classic/DropDown",
+            "Properties": {
+              "Items": "=[\"ALL\",\"UNREVIEWED\",\"IGNORE\",\"MONITOR\",\"ESCALATE\"]",
+              "Default": "=\"ALL\"",
+              "X": "=1060",
+              "Y": "=65",
+              "Width": "=240"
+            }
+          }
+        },
+        {
+          "RefreshQueue": {
+            "Control": "Classic/Button",
+            "Properties": {
+              "Text": "=\"Refresh\"",
+              "OnSelect": "=Set(varBusy,true); IfError(ClearCollect(colQueue,MaritimeOperations.ListPortWeeks({port_id:If(IsBlank(PortFilter.Text),Blank(),PortFilter.Text),week_start:If(IsBlank(WeekFilter.Text),Blank(),WeekFilter.Text),risk_level:If(RiskFilter.Selected.Value=\"ALL\",Blank(),RiskFilter.Selected.Value),review_status:If(StatusFilter.Selected.Value=\"ALL\",Blank(),StatusFilter.Selected.Value),offset:varOffset,limit:100,flagged_only:true}).items); Set(varUnavailable,false),Set(varUnavailable,true); Clear(colQueue)); Set(varBusy,false)",
+              "X": "=1320",
+              "Y": "=65",
+              "Width": "=180"
+            }
+          }
+        },
+        {
+          "State": {
+            "Control": "Label",
+            "Properties": {
+              "Text": "=If(varUnavailable,\"Data unavailable — retry; no review can be saved\",If(varBusy,\"Loading…\",If(IsEmpty(colQueue),\"No matching weekly records\",\"Select a record to review. Activity stress is not measured dwell time.\")))",
+              "X": "=20",
+              "Y": "=120",
+              "Width": "=1480"
+            }
+          }
+        },
+        {
+          "PreviousPage": {
+            "Control": "Classic/Button",
+            "Properties": {
+              "Text": "=\"Previous\"",
+              "OnSelect": "=Set(varOffset,Max(0,varOffset-100)); Select(RefreshQueue)",
+              "X": "=20",
+              "Y": "=800"
+            }
+          }
+        },
+        {
+          "NextPage": {
+            "Control": "Classic/Button",
+            "Properties": {
+              "Text": "=\"Next\"",
+              "OnSelect": "=Set(varOffset,varOffset+100); Select(RefreshQueue)",
+              "X": "=220",
+              "Y": "=800"
+            }
+          }
+        },
+        {
+          "Queue": {
+            "Control": "Gallery",
+            "Properties": {
+              "Items": "=colQueue",
+              "X": "=20",
+              "Y": "=170",
+              "Width": "=760",
+              "Height": "=600",
+              "TemplateSize": "=110",
+              "OnSelect": "=Set(varSelected,ThisItem); Set(varRequestId,Text(GUID())); Reset(Reason); IfError(ClearCollect(colHistory,MaritimeOperations.ListHistory({review_id:ThisItem.review_id}).items),Clear(colHistory))"
+            },
+            "Children": [
+              {
+                "QueueRow": {
+                  "Control": "Label",
+                  "Properties": {
+                    "Text": "=ThisItem.port_name & \" | \" & ThisItem.week_start & \" | \" & ThisItem.risk_level & Char(10) & ThisItem.freshness_status & \" | \" & ThisItem.quality_status & \" | \" & ThisItem.review_status & If(ThisItem.simulated,\" | SIMULATED\",\"\")",
+                    "Width": "=740",
+                    "Height": "=100",
+                    "OnSelect": "=Select(Parent)"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "Evidence": {
+            "Control": "Label",
+            "Properties": {
+              "Text": "=If(IsBlank(varSelected),\"Select a port-week\",varSelected.port_name & \" — \" & varSelected.risk_level & Char(10) & \"Weekly calls: \" & Text(varSelected.weekly_calls) & \" | Reference: \" & Text(varSelected.reference_mean) & \" | z: \" & Text(varSelected.z_score) & Char(10) & Concat(varSelected.risk_drivers,Value,\", \") & Char(10) & \"Freshness: \" & varSelected.freshness_status & \" | Completeness: \" & Text(varSelected.completeness,\"0%\") & Char(10) & \"Source latest: \" & varSelected.source_latest_observation & \" | \" & varSelected.methodology_version)",
+              "X": "=820",
+              "Y": "=170",
+              "Width": "=660",
+              "Height": "=170"
+            }
+          }
+        },
+        {
+          "Action": {
+            "Control": "Classic/DropDown",
+            "Properties": {
+              "Items": "=[\"MONITOR\",\"ESCALATE\",\"IGNORE\"]",
+              "X": "=820",
+              "Y": "=350",
+              "Width": "=240"
+            }
+          }
+        },
+        {
+          "Reason": {
+            "Control": "Classic/TextInput",
+            "Properties": {
+              "Default": "=\"\"",
+              "HintText": "=\"Reason required; ignoring HIGH/CRITICAL requires at least 40 characters\"",
+              "Mode": "=TextMode.MultiLine",
+              "X": "=820",
+              "Y": "=410",
+              "Width": "=660",
+              "Height": "=110"
+            }
+          }
+        },
+        {
+          "SaveReview": {
+            "Control": "Classic/Button",
+            "Properties": {
+              "Text": "=\"Save decision\"",
+              "DisplayMode": "=If(varBusy || varUnavailable || IsBlank(varSelected) || !varSelected.review_eligible || Len(Trim(Reason.Text)) < If(Action.Selected.Value=\"IGNORE\",40,10),DisplayMode.Disabled,DisplayMode.Edit)",
+              "OnSelect": "=Set(varBusy,true); IfError(MaritimeOperations.SubmitReview(varSelected.review_id,{request_id:varRequestId,action:Action.Selected.Value,reason:Trim(Reason.Text),expected_version:varSelected.review_version,risk_revision:varSelected.risk_revision}); Notify(\"Decision recorded\",NotificationType.Success); Set(varSelected,Blank()); Select(RefreshQueue),Notify(\"Save failed or record changed. Refresh before retrying.\",NotificationType.Error)); Set(varBusy,false)",
+              "X": "=820",
+              "Y": "=540",
+              "Width": "=240"
+            }
+          }
+        },
+        {
+          "History": {
+            "Control": "Gallery",
+            "Properties": {
+              "Items": "=colHistory",
+              "X": "=820",
+              "Y": "=610",
+              "Width": "=660",
+              "Height": "=170",
+              "TemplateSize": "=80"
+            },
+            "Children": [
+              {
+                "HistoryRow": {
+                  "Control": "Label",
+                  "Properties": {
+                    "Text": "=ThisItem.action & \" — \" & ThisItem.reason & Char(10) & ThisItem.owner & \" | \" & ThisItem.created_at",
+                    "Width": "=640",
+                    "Height": "=80"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

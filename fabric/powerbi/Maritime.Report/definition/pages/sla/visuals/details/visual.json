@@ -1,0 +1,154 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "details",
+  "position": {
+    "x": 20,
+    "y": 180,
+    "z": 0,
+    "width": 1560,
+    "height": 690,
+    "tabOrder": 200
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_sla_risk"
+                    }
+                  },
+                  "Property": "shipment_id"
+                }
+              },
+              "queryRef": "fact_sla_risk.shipment_id"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_sla_risk"
+                    }
+                  },
+                  "Property": "expected_delay_hours"
+                }
+              },
+              "queryRef": "fact_sla_risk.expected_delay_hours"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_sla_risk"
+                    }
+                  },
+                  "Property": "delay_p10"
+                }
+              },
+              "queryRef": "fact_sla_risk.delay_p10"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_sla_risk"
+                    }
+                  },
+                  "Property": "delay_p90"
+                }
+              },
+              "queryRef": "fact_sla_risk.delay_p90"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_sla_risk"
+                    }
+                  },
+                  "Property": "breach_probability"
+                }
+              },
+              "queryRef": "fact_sla_risk.breach_probability"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_sla_risk"
+                    }
+                  },
+                  "Property": "expected_loss"
+                }
+              },
+              "queryRef": "fact_sla_risk.expected_loss"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_sla_risk"
+                    }
+                  },
+                  "Property": "sla_buffer_hours"
+                }
+              },
+              "queryRef": "fact_sla_risk.sla_buffer_hours"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_sla_risk"
+                    }
+                  },
+                  "Property": "classification"
+                }
+              },
+              "queryRef": "fact_sla_risk.classification"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_sla_risk"
+                    }
+                  },
+                  "Property": "lineage_id"
+                }
+              },
+              "queryRef": "fact_sla_risk.lineage_id"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_sla_risk"
+                    }
+                  },
+                  "Property": "run_id"
+                }
+              },
+              "queryRef": "fact_sla_risk.run_id"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

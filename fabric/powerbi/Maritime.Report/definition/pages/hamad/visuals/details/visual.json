@@ -1,0 +1,180 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "details",
+  "position": {
+    "x": 20,
+    "y": 180,
+    "z": 0,
+    "width": 1560,
+    "height": 690,
+    "tabOrder": 200
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_hamad_port_weeks"
+                    }
+                  },
+                  "Property": "port_name"
+                }
+              },
+              "queryRef": "fact_hamad_port_weeks.port_name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_hamad_port_weeks"
+                    }
+                  },
+                  "Property": "week_start"
+                }
+              },
+              "queryRef": "fact_hamad_port_weeks.week_start"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_hamad_port_weeks"
+                    }
+                  },
+                  "Property": "weekly_calls"
+                }
+              },
+              "queryRef": "fact_hamad_port_weeks.weekly_calls"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_hamad_port_weeks"
+                    }
+                  },
+                  "Property": "reference_mean"
+                }
+              },
+              "queryRef": "fact_hamad_port_weeks.reference_mean"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_hamad_port_weeks"
+                    }
+                  },
+                  "Property": "risk_level"
+                }
+              },
+              "queryRef": "fact_hamad_port_weeks.risk_level"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_hamad_port_weeks"
+                    }
+                  },
+                  "Property": "freshness_status"
+                }
+              },
+              "queryRef": "fact_hamad_port_weeks.freshness_status"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_hamad_port_weeks"
+                    }
+                  },
+                  "Property": "completeness"
+                }
+              },
+              "queryRef": "fact_hamad_port_weeks.completeness"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_hamad_port_weeks"
+                    }
+                  },
+                  "Property": "risk_drivers_text"
+                }
+              },
+              "queryRef": "fact_hamad_port_weeks.risk_drivers_text"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_hamad_port_weeks"
+                    }
+                  },
+                  "Property": "review_status"
+                }
+              },
+              "queryRef": "fact_hamad_port_weeks.review_status"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_hamad_port_weeks"
+                    }
+                  },
+                  "Property": "classification"
+                }
+              },
+              "queryRef": "fact_hamad_port_weeks.classification"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_hamad_port_weeks"
+                    }
+                  },
+                  "Property": "lineage_id"
+                }
+              },
+              "queryRef": "fact_hamad_port_weeks.lineage_id"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_hamad_port_weeks"
+                    }
+                  },
+                  "Property": "run_id"
+                }
+              },
+              "queryRef": "fact_hamad_port_weeks.run_id"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

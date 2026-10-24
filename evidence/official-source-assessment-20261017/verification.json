@@ -1,0 +1,350 @@
+{
+  "LOCAL_RELEASE_READY": "YES",
+  "PRODUCTION_READY": "NO",
+  "git_revision": "4b50f50769b08e763015064c53d91b6bda4ae079",
+  "working_tree": "DIRTY; prior work retained; no commit/reset",
+  "campaign": "evidence\\local-release-20261017-freshness-01",
+  "campaign_status": "LOCAL_READY",
+  "tests": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "63",
+    "time": "127.342",
+    "timestamp": "2026-10-17T10:13:55.796111+03:00",
+    "hostname": "endelap"
+  },
+  "source_files_verified": 146,
+  "evidence_files_verified": 111,
+  "source_integrity": "PASS",
+  "evidence_integrity": "PASS",
+  "freshness_days": 10,
+  "independent_probe_freshness": "PASS",
+  "ports": [
+    {
+      "port_id": "port1114",
+      "name": "Rotterdam",
+      "source_observation_date": "2026-10-09",
+      "age_days": 8,
+      "fresh_window_count": 3,
+      "raw_date": "2026-10-09",
+      "campaign_observation_date": "2026-10-09",
+      "campaign_age_days": 8
+    },
+    {
+      "port_id": "port1188",
+      "name": "Shanghai",
+      "source_observation_date": "2026-10-09",
+      "age_days": 8,
+      "fresh_window_count": 3,
+      "raw_date": "2026-10-09",
+      "campaign_observation_date": "2026-10-09",
+      "campaign_age_days": 8
+    },
+    {
+      "port_id": "port1201",
+      "name": "Singapore",
+      "source_observation_date": "2026-10-09",
+      "age_days": 8,
+      "fresh_window_count": 3,
+      "raw_date": "2026-10-09",
+      "campaign_observation_date": "2026-10-09",
+      "campaign_age_days": 8
+    },
+    {
+      "port_id": "port664",
+      "name": "Los Angeles-Long Beach",
+      "source_observation_date": "2026-10-09",
+      "age_days": 8,
+      "fresh_window_count": 3,
+      "raw_date": "2026-10-09",
+      "campaign_observation_date": "2026-10-09",
+      "campaign_age_days": 8
+    },
+    {
+      "port_id": "port744",
+      "name": "Jebel Ali",
+      "source_observation_date": "2026-10-09",
+      "age_days": 8,
+      "fresh_window_count": 3,
+      "raw_date": "2026-10-09",
+      "campaign_observation_date": "2026-10-09",
+      "campaign_age_days": 8
+    },
+    {
+      "port_id": "port815",
+      "name": "New York-New Jersey",
+      "source_observation_date": "2026-10-09",
+      "age_days": 8,
+      "fresh_window_count": 3,
+      "raw_date": "2026-10-09",
+      "campaign_observation_date": "2026-10-09",
+      "campaign_age_days": 8
+    }
+  ],
+  "docker": "PASS",
+  "live_campaign": {
+    "status": "PASS",
+    "checks": {
+      "successful_runs": true,
+      "expected_failures": true,
+      "prior_snapshot_preserved": true,
+      "accounting": true,
+      "audit_chain": true,
+      "independent_metrics": true
+    },
+    "attempts": [
+      {
+        "run_id": "339cc70c6b5f4ec5bcee5a8b176cae05",
+        "outcome": "PASS",
+        "mode": "LIVE_PUBLIC_DATA",
+        "duration_seconds": 60.848118499998236
+      },
+      {
+        "run_id": "2151c41d9f4347db80b6e476fbe7a281",
+        "outcome": "PASS",
+        "mode": "REPLAY",
+        "duration_seconds": 4.279011800012086
+      },
+      {
+        "run_id": "b06771ba1a2742fbae5eb61b815dbab8",
+        "outcome": "EXPECTED_BLOCK",
+        "injection": "invalid_coordinate",
+        "pointer_preserved": true,
+        "duration_seconds": 0.37602809999953024
+      },
+      {
+        "run_id": "c1c60fa0bdba491e81946a1f964e8bae",
+        "outcome": "EXPECTED_BLOCK",
+        "injection": "partial_persistence",
+        "pointer_preserved": true,
+        "duration_seconds": 4.082986099994741
+      },
+      {
+        "run_id": "af24399487d44b168e5c8c1588314370",
+        "outcome": "PASS",
+        "mode": "RECOVERY_REPLAY",
+        "duration_seconds": 4.171127300010994
+      }
+    ],
+    "elapsed_seconds": 80.15872629999649,
+    "sustained_production_reliability": "NOT_ESTABLISHED"
+  },
+  "archive_sha256": "5385ad96780eb0a0dffbef08d961d3868e2f1a6ff651aeb3de91aa29a2bfd36b",
+  "commands": [
+    {
+      "name": "git-diff",
+      "command": [
+        "git",
+        "diff",
+        "--binary",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-10-17T07:10:59.426632+00:00",
+      "ended_at": "2026-10-17T07:10:59.869632+00:00"
+    },
+    {
+      "name": "clean-install",
+      "command": [
+        "uv",
+        "sync",
+        "--frozen",
+        "--no-editable",
+        "--extra",
+        "dev",
+        "--extra",
+        "fabric",
+        "--extra",
+        "azure",
+        "--extra",
+        "ml"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-10-17T07:10:59.869632+00:00",
+      "ended_at": "2026-10-17T07:13:04.073027+00:00"
+    },
+    {
+      "name": "tests",
+      "command": [
+        "data\\release-environment-7fe770e1cc184daeae3aef13727c5215\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "--junitxml=evidence\\local-release-20261017-freshness-01\\tests.xml"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-10-17T07:13:04.076084+00:00",
+      "ended_at": "2026-10-17T07:16:04.753121+00:00"
+    },
+    {
+      "name": "package-consistency",
+      "command": [
+        "uv",
+        "pip",
+        "check",
+        "--python",
+        "data\\release-environment-7fe770e1cc184daeae3aef13727c5215\\Scripts\\python.exe"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-10-17T07:16:04.758178+00:00",
+      "ended_at": "2026-10-17T07:16:09.600583+00:00"
+    },
+    {
+      "name": "lint",
+      "command": [
+        "data\\release-environment-7fe770e1cc184daeae3aef13727c5215\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "src",
+        "tests",
+        "scripts"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-10-17T07:16:09.600583+00:00",
+      "ended_at": "2026-10-17T07:16:11.416776+00:00"
+    },
+    {
+      "name": "format",
+      "command": [
+        "data\\release-environment-7fe770e1cc184daeae3aef13727c5215\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "format",
+        "--check",
+        "src",
+        "tests",
+        "scripts"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-10-17T07:16:11.416776+00:00",
+      "ended_at": "2026-10-17T07:16:11.713820+00:00"
+    },
+    {
+      "name": "build",
+      "command": [
+        "uv",
+        "build",
+        "--out-dir",
+        "evidence\\local-release-20261017-freshness-01\\dist"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-10-17T07:16:11.715335+00:00",
+      "ended_at": "2026-10-17T07:16:54.063071+00:00"
+    },
+    {
+      "name": "powerbi",
+      "command": [
+        "data\\release-environment-7fe770e1cc184daeae3aef13727c5215\\Scripts\\python.exe",
+        "scripts/build_powerbi.py"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-10-17T07:16:54.063071+00:00",
+      "ended_at": "2026-10-17T07:16:55.008793+00:00"
+    },
+    {
+      "name": "fabric-assets",
+      "command": [
+        "data\\release-environment-7fe770e1cc184daeae3aef13727c5215\\Scripts\\python.exe",
+        "scripts/build_fabric_assets.py"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-10-17T07:16:55.010551+00:00",
+      "ended_at": "2026-10-17T07:16:55.199611+00:00"
+    },
+    {
+      "name": "bicep-version",
+      "command": [
+        "data/tools/bicep.exe",
+        "--version"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-10-17T07:16:55.199611+00:00",
+      "ended_at": "2026-10-17T07:16:56.609650+00:00"
+    },
+    {
+      "name": "bicep",
+      "command": [
+        "data/tools/bicep.exe",
+        "build",
+        "azure/main.bicep",
+        "--outfile",
+        "evidence\\local-release-20261017-freshness-01\\azure-template.json"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-10-17T07:16:56.609650+00:00",
+      "ended_at": "2026-10-17T07:16:59.003522+00:00"
+    },
+    {
+      "name": "dependency-export",
+      "command": [
+        "uv",
+        "export",
+        "--frozen",
+        "--no-dev",
+        "--extra",
+        "azure",
+        "--extra",
+        "ml",
+        "--no-emit-project",
+        "--output-file",
+        "evidence\\local-release-20261017-freshness-01\\requirements.txt"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-10-17T07:16:59.050487+00:00",
+      "ended_at": "2026-10-17T07:16:59.138507+00:00"
+    },
+    {
+      "name": "dependency-audit",
+      "command": [
+        "uv",
+        "tool",
+        "run",
+        "--from",
+        "pip-audit==2.9.0",
+        "pip-audit",
+        "--disable-pip",
+        "--no-deps",
+        "-r",
+        "evidence\\local-release-20261017-freshness-01\\requirements.txt",
+        "-f",
+        "json",
+        "-o",
+        "evidence\\local-release-20261017-freshness-01\\dependency-audit.json"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-10-17T07:16:59.138507+00:00",
+      "ended_at": "2026-10-17T07:17:43.196884+00:00"
+    },
+    {
+      "name": "docker",
+      "command": [
+        "data\\release-environment-7fe770e1cc184daeae3aef13727c5215\\Scripts\\python.exe",
+        "scripts/docker_demo.py",
+        "--output",
+        "evidence\\local-release-20261017-freshness-01\\docker"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-10-17T07:17:43.196884+00:00",
+      "ended_at": "2026-10-17T07:19:56.365101+00:00"
+    },
+    {
+      "name": "live",
+      "command": [
+        "data\\release-environment-7fe770e1cc184daeae3aef13727c5215\\Scripts\\python.exe",
+        "scripts/governance_release.py",
+        "--root",
+        "data\\live-d5e8c6c18863489c850f50caa5e69311",
+        "--output",
+        "evidence\\local-release-20261017-freshness-01\\live",
+        "--as-of",
+        "2026-10-17"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-10-17T07:19:56.365101+00:00",
+      "ended_at": "2026-10-17T07:21:27.089864+00:00"
+    }
+  ]
+}

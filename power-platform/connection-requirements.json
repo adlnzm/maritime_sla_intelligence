@@ -1,0 +1,24 @@
+{
+  "status": "TENANT_CONFIGURATION_REQUIRED",
+  "api_host": "configure-api-host.example.invalid",
+  "auth_mode": "entra",
+  "roles": [
+    "Maritime.Reader",
+    "Maritime.Operator"
+  ],
+  "identity_source": "Verified Entra oid; never client-supplied actor",
+  "required": [
+    "TENANT_ID",
+    "API_APP_ID",
+    "connector OAuth registration/secret in tenant",
+    "API HTTPS endpoint",
+    "durable MARITIME_WORKFLOW_DIR",
+    "approved recipient list",
+    "Office 365 Outlook connection",
+    "Power BI semantic model/refresh identity"
+  ],
+  "limitations": [
+    "Local shared keys are development identities, not named production users",
+    "No tenant connection, deployment, notification or refresh has been executed"
+  ]
+}

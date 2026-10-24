@@ -1,0 +1,4 @@
+{
+  "OnVisible": "=Set(varOffset,0); Set(varBusy,false); Set(varUnavailable,false); Select(RefreshQueue)",
+  "Fill": "=RGBA(245,247,250,1)"
+}

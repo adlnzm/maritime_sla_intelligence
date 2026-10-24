@@ -1,0 +1,9 @@
+{
+  "exit_code": 0,
+  "environment": "LOCAL_STAGED_AZURE_ML_SOURCE_NOT_CLOUD",
+  "files": {
+    ".gitignore": "684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1",
+    "maritime_sla_intelligence-0.1.0-py3-none-any.whl": "c08a7ca8b641b90028c65fa7e05f725d6c02a9c8944208eb1a66122302c1664d",
+    "maritime_sla_intelligence-0.1.0.tar.gz": "02c1e5747a40ac34ccafa0064f9efa821a5232fff93052fd56bc3012570f7659"
+  }
+}

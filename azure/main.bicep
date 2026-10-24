@@ -13,6 +13,9 @@ param apiAudience string
 param openAIAccountName string
 param openAIDeployment string
 param computeSku string = 'Standard_DS3_v2'
+@description('Owner-approved audit retention days. Policy is created Unlocked; test and explicitly lock it before production approval.')
+@minValue(1)
+param auditRetentionDays int
 
 var suffix = uniqueString(resourceGroup().id)
 resource logs 'Microsoft.OperationalInsights/workspaces@2023-09-01' = {
@@ -306,6 +309,17 @@ resource app 'Microsoft.App/containerApps@2024-03-01' = {
 
           probes: [
             {
+              type: 'Readiness'
+              httpGet: {
+                path: '/health/ready'
+                port: 8000
+              }
+              initialDelaySeconds: 10
+              periodSeconds: 10
+              timeoutSeconds: 5
+              failureThreshold: 3
+            }
+            {
               type: 'Liveness'
               httpGet: {
                 path: '/health'
@@ -333,12 +347,38 @@ resource audit 'Microsoft.Storage/storageAccounts/blobServices/containers@2023-0
   properties: { publicAccess: 'None' }
 }
 resource auditRole 'Microsoft.Authorization/roleAssignments@2022-04-01' = {
-  name: guid(audit.id, identity.id, 'audit-contributor')
+  name: guid(audit.id, identity.id, 'audit-writer-no-delete')
   scope: audit
   properties: {
     principalId: identity.properties.principalId
     principalType: 'ServicePrincipal'
-    roleDefinitionId: subscriptionResourceId('Microsoft.Authorization/roleDefinitions', 'ba92f5b4-2d11-453d-a403-e96b0029c9fe')
+    roleDefinitionId: auditWriter.id
+  }
+}
+resource auditWriter 'Microsoft.Authorization/roleDefinitions@2022-04-01' = {
+  name: guid(resourceGroup().id, 'maritime-audit-writer-no-delete')
+  properties: {
+    roleName: '${prefix} Audit writer without delete'
+    description: 'Read and create audit blobs. Locked immutability is additionally required to prevent overwrites.'
+    type: 'CustomRole'
+    assignableScopes: [resourceGroup().id]
+    permissions: [{
+      actions: ['Microsoft.Storage/storageAccounts/blobServices/containers/read']
+      notActions: []
+      dataActions: [
+        'Microsoft.Storage/storageAccounts/blobServices/containers/blobs/read'
+        'Microsoft.Storage/storageAccounts/blobServices/containers/blobs/write'
+      ]
+      notDataActions: []
+    }]
+  }
+}
+resource auditRetention 'Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies@2023-05-01' = {
+  parent: audit
+  name: 'default'
+  properties: {
+    immutabilityPeriodSinceCreationInDays: auditRetentionDays
+    allowProtectedAppendWrites: false
   }
 }
 resource mlStorageRole 'Microsoft.Authorization/roleAssignments@2022-04-01' = {

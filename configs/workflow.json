@@ -1,0 +1,8 @@
+{
+  "schema_version": "1.0",
+  "recipients": [],
+  "focus_port_id": "port2026",
+  "max_attempts": 4,
+  "retry_seconds": 60,
+  "lease_seconds": 300
+}

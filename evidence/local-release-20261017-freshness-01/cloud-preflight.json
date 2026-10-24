@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-10-17T07:16:59.006572+00:00",
+  "configured": {
+    "FABRIC_WORKSPACE_ID": false,
+    "FABRIC_LAKEHOUSE_ID": false,
+    "AZURE_SUBSCRIPTION_ID": false,
+    "AZURE_RESOURCE_GROUP": false,
+    "AZURE_ML_WORKSPACE": false,
+    "AZURE_TENANT_ID": false,
+    "AZURE_API_AUDIENCE": false,
+    "AZURE_STORAGE_ACCOUNT_URL": false,
+    "AZURE_OPENAI_ENDPOINT": false,
+    "AZURE_OPENAI_DEPLOYMENT": false
+  },
+  "azure_cli_available": false,
+  "runtime_acceptance": "NOT_EXECUTED_BY_LOCAL_RUNNER"
+}

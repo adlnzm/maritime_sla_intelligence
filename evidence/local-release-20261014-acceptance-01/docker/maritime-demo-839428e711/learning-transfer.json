@@ -1,0 +1,26 @@
+{
+  "first": {
+    "status": "PASS_SQLITE_READBACK",
+    "sha256": "045f31b6ce63a48e6244a6bf965025908c9254f9bed4f0f8e0978d3895309aa6",
+    "accounting": {
+      "input": 2,
+      "persisted": 2,
+      "duplicate": 0,
+      "rejected": 0,
+      "quarantined": 0,
+      "failed": 0
+    }
+  },
+  "replay": {
+    "status": "PASS_SQLITE_READBACK",
+    "sha256": "045f31b6ce63a48e6244a6bf965025908c9254f9bed4f0f8e0978d3895309aa6",
+    "accounting": {
+      "input": 2,
+      "persisted": 0,
+      "duplicate": 2,
+      "rejected": 0,
+      "quarantined": 0,
+      "failed": 0
+    }
+  }
+}

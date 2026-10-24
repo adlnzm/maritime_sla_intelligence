@@ -217,6 +217,10 @@ def main():
             )
         )
     except Exception as exc:
+        # Failed acquisition/DQ is release evidence too, not merely a traceback.
+        for folder in ("reports", "quarantine", "bronze"):
+            if (root / folder).exists():
+                shutil.copytree(root / folder, output / ("failed-" + folder), dirs_exist_ok=True)
         write_json(
             output / "release-validation.json",
             {

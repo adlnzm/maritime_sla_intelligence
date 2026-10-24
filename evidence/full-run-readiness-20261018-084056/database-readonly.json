@@ -1,0 +1,317 @@
+[
+  {
+    "path": "data/maritime.db",
+    "observed_at": "2026-10-18T05:42:59.288532+00:00",
+    "user_version": 0,
+    "quick_check": "ok",
+    "tables": [
+      "runs",
+      "products",
+      "metadata",
+      "audit",
+      "releases",
+      "audit_chain",
+      "sqlite_sequence"
+    ],
+    "runs": {
+      "FAILED": 1,
+      "SUCCESS": 2
+    },
+    "checkpoints": [
+      {
+        "key": "activity_cache:18a1bde2e1c87621cba1eca1",
+        "rows": 1410,
+        "latest_date": "2026-10-02",
+        "duplicates": 0
+      }
+    ],
+    "published_run": "16effdaddff54827984552d79be03214",
+    "unchained_audits": 0,
+    "orphan_chain_rows": 0,
+    "stable_main_hash": true,
+    "wal_still_empty": true
+  },
+  {
+    "path": "data/acceptance/maritime.db",
+    "observed_at": "2026-10-18T05:42:59.354389+00:00",
+    "user_version": 0,
+    "quick_check": "ok",
+    "tables": [
+      "runs",
+      "products",
+      "metadata",
+      "audit"
+    ],
+    "runs": {
+      "SUCCESS": 2
+    },
+    "checkpoints": [],
+    "published_run": "f74bcdb836d5492daa2c771d40df73ab",
+    "stable_main_hash": true,
+    "wal_still_empty": true
+  },
+  {
+    "path": "data/governance-clean-20261010/maritime.db",
+    "observed_at": "2026-10-18T05:42:59.423275+00:00",
+    "user_version": 0,
+    "quick_check": "ok",
+    "tables": [
+      "runs",
+      "products",
+      "metadata",
+      "audit",
+      "releases",
+      "audit_chain",
+      "sqlite_sequence"
+    ],
+    "runs": {
+      "FAILED": 2,
+      "SUCCESS": 3
+    },
+    "checkpoints": [
+      {
+        "key": "activity_cache:18a1bde2e1c87621cba1eca1",
+        "rows": 1398,
+        "latest_date": "2026-10-02",
+        "duplicates": 0
+      }
+    ],
+    "published_run": "33abcc84414a4d39b80fc391476ceffa",
+    "unchained_audits": 0,
+    "orphan_chain_rows": 0,
+    "stable_main_hash": true,
+    "wal_still_empty": true
+  },
+  {
+    "path": "data/governance-final-20261010/maritime.db",
+    "observed_at": "2026-10-18T05:42:59.562315+00:00",
+    "user_version": 0,
+    "quick_check": "ok",
+    "tables": [
+      "runs",
+      "products",
+      "metadata",
+      "audit",
+      "releases",
+      "audit_chain",
+      "sqlite_sequence"
+    ],
+    "runs": {
+      "FAILED": 2,
+      "SUCCESS": 3
+    },
+    "checkpoints": [
+      {
+        "key": "activity_cache:18a1bde2e1c87621cba1eca1",
+        "rows": 1398,
+        "latest_date": "2026-10-02",
+        "duplicates": 0
+      }
+    ],
+    "published_run": "882cd910685e48e59a921068f1f63a54",
+    "unchained_audits": 0,
+    "orphan_chain_rows": 0,
+    "stable_main_hash": true,
+    "wal_still_empty": true
+  },
+  {
+    "path": "data/historical/maritime.db",
+    "observed_at": "2026-10-18T05:42:59.674390+00:00",
+    "user_version": 0,
+    "quick_check": "ok",
+    "tables": [
+      "runs",
+      "products",
+      "metadata",
+      "audit"
+    ],
+    "runs": {
+      "SUCCESS": 2
+    },
+    "checkpoints": [],
+    "published_run": "28e76098277d48bea621f0f0c34fddbd",
+    "stable_main_hash": true,
+    "wal_still_empty": true
+  },
+  {
+    "path": "data/live-2eb2f69e5afc460ca41026fbdb8e6d57/maritime.db",
+    "observed_at": "2026-10-18T05:42:59.699488+00:00",
+    "user_version": 1,
+    "quick_check": "ok",
+    "tables": [
+      "runs",
+      "products",
+      "metadata",
+      "audit",
+      "releases",
+      "audit_chain",
+      "sqlite_sequence"
+    ],
+    "runs": {
+      "FAILED": 1
+    },
+    "checkpoints": [],
+    "unchained_audits": 0,
+    "orphan_chain_rows": 0,
+    "stable_main_hash": true,
+    "wal_still_empty": true
+  },
+  {
+    "path": "data/live-d5cecef2cbb24491b0869ff0eee86698/maritime.db",
+    "observed_at": "2026-10-18T05:42:59.709799+00:00",
+    "user_version": 1,
+    "quick_check": "ok",
+    "tables": [
+      "runs",
+      "products",
+      "metadata",
+      "audit",
+      "releases",
+      "audit_chain",
+      "sqlite_sequence"
+    ],
+    "runs": {
+      "FAILED": 1
+    },
+    "checkpoints": [],
+    "unchained_audits": 0,
+    "orphan_chain_rows": 0,
+    "stable_main_hash": true,
+    "wal_still_empty": true
+  },
+  {
+    "path": "data/live-d5e8c6c18863489c850f50caa5e69311/maritime.db",
+    "observed_at": "2026-10-18T05:42:59.745163+00:00",
+    "user_version": 1,
+    "quick_check": "ok",
+    "tables": [
+      "runs",
+      "products",
+      "metadata",
+      "audit",
+      "releases",
+      "audit_chain",
+      "sqlite_sequence"
+    ],
+    "runs": {
+      "FAILED": 2,
+      "SUCCESS": 3
+    },
+    "checkpoints": [
+      {
+        "key": "activity_cache:18a1bde2e1c87621cba1eca1",
+        "rows": 1398,
+        "latest_date": "2026-10-09",
+        "duplicates": 0
+      }
+    ],
+    "published_run": "af24399487d44b168e5c8c1588314370",
+    "unchained_audits": 0,
+    "orphan_chain_rows": 0,
+    "stable_main_hash": true,
+    "wal_still_empty": true
+  },
+  {
+    "path": "data/live-ee2bad0126d8493293d1208fa4cd653b/maritime.db",
+    "observed_at": "2026-10-18T05:42:59.847801+00:00",
+    "user_version": 1,
+    "quick_check": "ok",
+    "tables": [
+      "runs",
+      "products",
+      "metadata",
+      "audit",
+      "releases",
+      "audit_chain",
+      "sqlite_sequence"
+    ],
+    "runs": {
+      "FAILED": 1
+    },
+    "checkpoints": [],
+    "unchained_audits": 0,
+    "orphan_chain_rows": 0,
+    "stable_main_hash": true,
+    "wal_still_empty": true
+  },
+  {
+    "path": "data/readiness-live-20261010/maritime.db",
+    "observed_at": "2026-10-18T05:42:59.873555+00:00",
+    "user_version": 0,
+    "quick_check": "ok",
+    "tables": [
+      "runs",
+      "products",
+      "metadata",
+      "audit",
+      "releases",
+      "audit_chain",
+      "sqlite_sequence"
+    ],
+    "runs": {
+      "FAILED": 2,
+      "SUCCESS": 3
+    },
+    "checkpoints": [
+      {
+        "key": "activity_cache:18a1bde2e1c87621cba1eca1",
+        "rows": 1398,
+        "latest_date": "2026-10-02",
+        "duplicates": 0
+      }
+    ],
+    "published_run": "226c9720344f466e8d2e3eacc705d425",
+    "unchained_audits": 0,
+    "orphan_chain_rows": 0,
+    "stable_main_hash": true,
+    "wal_still_empty": true
+  },
+  {
+    "path": "data/release-validation/0ed7a0407e0e404fba31b2ab6e3d389c/acceptance/maritime.db",
+    "observed_at": "2026-10-18T05:42:59.964660+00:00",
+    "user_version": 0,
+    "quick_check": "ok",
+    "tables": [
+      "runs",
+      "products",
+      "metadata",
+      "audit",
+      "releases",
+      "audit_chain",
+      "sqlite_sequence"
+    ],
+    "runs": {
+      "SUCCESS": 1
+    },
+    "checkpoints": [],
+    "published_run": "35c44150de1247d8bca88041a7a756d5",
+    "unchained_audits": 0,
+    "orphan_chain_rows": 0,
+    "stable_main_hash": true,
+    "wal_still_empty": true
+  },
+  {
+    "path": "data/release-validation/0ed7a0407e0e404fba31b2ab6e3d389c/historical/maritime.db",
+    "observed_at": "2026-10-18T05:43:00.000175+00:00",
+    "user_version": 0,
+    "quick_check": "ok",
+    "tables": [
+      "runs",
+      "products",
+      "metadata",
+      "audit",
+      "releases",
+      "audit_chain",
+      "sqlite_sequence"
+    ],
+    "runs": {
+      "SUCCESS": 1
+    },
+    "checkpoints": [],
+    "published_run": "9c8448ff827247b8ac9e6cd52aa26e00",
+    "unchained_audits": 0,
+    "orphan_chain_rows": 0,
+    "stable_main_hash": true,
+    "wal_still_empty": true
+  }
+]

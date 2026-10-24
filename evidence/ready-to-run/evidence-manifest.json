@@ -1,0 +1,1209 @@
+{
+  "readiness": "LOCAL_READY",
+  "scope": "Local analytical API, public replay/live acquisition, explicitly simulated shipment decisions",
+  "production": "BLOCKED_EXTERNAL",
+  "checks": {
+    "quality": true,
+    "tests": true,
+    "docker": true,
+    "live_recovery": true,
+    "security": true,
+    "ml_package": true
+  },
+  "test_suite": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "39",
+    "time": "86.854",
+    "timestamp": "2026-10-10T17:01:32.604568+03:00",
+    "hostname": "endelap"
+  },
+  "docker_evidence": "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+  "live_run": "e0cb54d06e9440328dd005fca57c2857",
+  "audited_dependencies": 104,
+  "requirements": [
+    {
+      "id": "SRC-01",
+      "behavior": "Registered source identity, schema, classification and acquisition provenance",
+      "component_stage": "SRC",
+      "implementation": [
+        "src/maritime/sources.py",
+        "configs/sources.json"
+      ],
+      "dependencies": "Source registry → raw payload",
+      "tests": [
+        "test_foundation.py"
+      ],
+      "status": "VERIFIED",
+      "remaining_work_and_acceptance": "Previous actual live campaign; rerun after source changes",
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ]
+    },
+    {
+      "id": "SRC-02",
+      "behavior": "PortWatch paginated, count-reconciled acquisition with timeout/retry and retained failures",
+      "component_stage": "SRC",
+      "implementation": [
+        "src/maritime/sources.py"
+      ],
+      "dependencies": "Public ArcGIS → Bronze",
+      "tests": [
+        "test_source_contracts.py",
+        "test_governance.py"
+      ],
+      "status": "VERIFIED",
+      "remaining_work_and_acceptance": "Live acquisition retained in governance-final; availability is external",
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ]
+    },
+    {
+      "id": "SRC-03",
+      "behavior": "Incremental overlap, source revisions and expired-row accounting",
+      "component_stage": "SRC",
+      "implementation": [
+        "src/maritime/sources.py"
+      ],
+      "dependencies": "Prior checkpoint → canonical activity",
+      "tests": [
+        "test_source_contracts.py"
+      ],
+      "status": "VERIFIED",
+      "remaining_work_and_acceptance": "Preserve replacement/expiry dispositions",
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ]
+    },
+    {
+      "id": "SRC-04",
+      "behavior": "Optional WPI, UN/LOCODE and reference route adapters",
+      "component_stage": "SRC",
+      "implementation": [
+        "src/maritime/sources.py",
+        "configs/sources.json"
+      ],
+      "dependencies": "Configured source URL → canonical references",
+      "tests": [
+        "test_foundation.py"
+      ],
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "remaining_work_and_acceptance": "Configure approved downloads and execute each source; missing sources remain explicit",
+      "evidence": []
+    },
+    {
+      "id": "SRC-05",
+      "behavior": "Public weather acquisition retained as DERIVED reanalysis",
+      "component_stage": "SRC",
+      "implementation": [
+        "src/maritime/sources.py"
+      ],
+      "dependencies": "Open-Meteo → reference weather",
+      "tests": [
+        "test_foundation.py"
+      ],
+      "status": "VERIFIED",
+      "remaining_work_and_acceptance": "Actual live campaign contains weather; no automatic weather closure claim",
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ]
+    },
+    {
+      "id": "BRZ-01",
+      "behavior": "Immutable-content raw retention, checksum verification and replay",
+      "component_stage": "BRZ",
+      "implementation": [
+        "src/maritime/sources.py",
+        "src/maritime/pipeline.py"
+      ],
+      "dependencies": "Acquisition → Silver",
+      "tests": [
+        "test_governance.py",
+        "test_foundation.py"
+      ],
+      "status": "VERIFIED",
+      "remaining_work_and_acceptance": "Local retention only; cloud WORM is separate",
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ]
+    },
+    {
+      "id": "SLV-01",
+      "behavior": "Canonical types, ranges, coordinates, temporal validity, stable IDs and UTC",
+      "component_stage": "SLV",
+      "implementation": [
+        "src/maritime/models.py",
+        "src/maritime/quality.py"
+      ],
+      "dependencies": "Bronze → canonical records",
+      "tests": [
+        "test_intelligence.py",
+        "test_governance.py"
+      ],
+      "status": "VERIFIED",
+      "remaining_work_and_acceptance": "Invalid input blocks downstream publication",
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ]
+    },
+    {
+      "id": "SLV-02",
+      "behavior": "Exclusive persisted/duplicate/rejected/quarantined/failed dispositions",
+      "component_stage": "SLV",
+      "implementation": [
+        "src/maritime/quality.py",
+        "src/maritime/governance.py"
+      ],
+      "dependencies": "Canonical input → accepted rows and disposition evidence",
+      "tests": [
+        "test_governance.py"
+      ],
+      "status": "VERIFIED",
+      "remaining_work_and_acceptance": "Canonical accepted rows later persisted; stage-specific reconciliation, no double counting",
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ]
+    },
+    {
+      "id": "SLV-03",
+      "behavior": "Completeness, duplicates, FK, freshness and consecutive coverage gates",
+      "component_stage": "SLV",
+      "implementation": [
+        "src/maritime/quality.py"
+      ],
+      "dependencies": "Canonical records → congestion",
+      "tests": [
+        "test_intelligence.py",
+        "test_governance.py"
+      ],
+      "status": "VERIFIED",
+      "remaining_work_and_acceptance": "Missing internal dates and stale data reject; no inferred imputation",
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ]
+    },
+    {
+      "id": "GOV-01",
+      "behavior": "Five classifications preserved across all downstream products",
+      "component_stage": "GOV",
+      "implementation": [
+        "src/maritime/models.py",
+        "src/maritime/governance.py",
+        "src/maritime/ml_contract.py"
+      ],
+      "dependencies": "All inputs → API and reporting",
+      "tests": [
+        "test_governance.py",
+        "test_azure_contracts.py"
+      ],
+      "status": "VERIFIED",
+      "remaining_work_and_acceptance": "SIMULATED dependencies cannot become OBSERVED",
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ]
+    },
+    {
+      "id": "GOV-02",
+      "behavior": "Queryable field lineage and product/feature/config fingerprints",
+      "component_stage": "GOV",
+      "implementation": [
+        "src/maritime/pipeline.py",
+        "src/maritime/governance.py"
+      ],
+      "dependencies": "Raw/canonical → Gold/prediction/decision",
+      "tests": [
+        "test_governance.py"
+      ],
+      "status": "VERIFIED",
+      "remaining_work_and_acceptance": "Lineage identifies table dependencies and methodology, not causal ground truth",
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ]
+    },
+    {
+      "id": "GOV-03",
+      "behavior": "Continuous stage gates and immutable approved publication",
+      "component_stage": "GOV",
+      "implementation": [
+        "src/maritime/governance.py",
+        "src/maritime/store.py",
+        "src/maritime/pipeline.py"
+      ],
+      "dependencies": "Acquisition → publication → API",
+      "tests": [
+        "test_governance.py"
+      ],
+      "status": "VERIFIED",
+      "remaining_work_and_acceptance": "Every required stage must pass; failed attempt leaves previous pointer",
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ]
+    },
+    {
+      "id": "GOV-04",
+      "behavior": "Single writer, replay idempotency, interrupted-run recovery",
+      "component_stage": "GOV",
+      "implementation": [
+        "src/maritime/pipeline.py",
+        "src/maritime/governance.py"
+      ],
+      "dependencies": "Retry → previous run/published pointer",
+      "tests": [
+        "test_governance.py"
+      ],
+      "status": "VERIFIED",
+      "remaining_work_and_acceptance": "New retry ID required after failure; OS lock released on process death",
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ]
+    },
+    {
+      "id": "GOV-05",
+      "behavior": "Append-only audit, hash chain and approved-product SQL protection",
+      "component_stage": "GOV",
+      "implementation": [
+        "src/maritime/store.py"
+      ],
+      "dependencies": "Operator and pipeline actions → audit evidence",
+      "tests": [
+        "test_governance.py"
+      ],
+      "status": "VERIFIED",
+      "remaining_work_and_acceptance": "Database administrators can bypass local triggers; production controls separate",
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ]
+    },
+    {
+      "id": "GOV-06",
+      "behavior": "Production retention enforcement and administrator separation",
+      "component_stage": "GOV",
+      "implementation": [
+        "azure/main.bicep",
+        "docs/governance.md"
+      ],
+      "dependencies": "Raw/audit storage → retention and recovery",
+      "tests": [
+        "test_azure_contracts.py"
+      ],
+      "status": "BLOCKED_EXTERNAL",
+      "remaining_work_and_acceptance": "Owner-approved retention period, cloud immutable storage policy and destructive-permission test required",
+      "evidence": []
+    },
+    {
+      "id": "DET-01",
+      "behavior": "56-day historical baseline, deviation/rank, persistence and stress categories",
+      "component_stage": "DET",
+      "implementation": [
+        "src/maritime/intelligence.py"
+      ],
+      "dependencies": "Activity → current/history congestion",
+      "tests": [
+        "test_intelligence.py"
+      ],
+      "status": "VERIFIED",
+      "remaining_work_and_acceptance": "Activity-deviation proxy only; minimum history required",
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ]
+    },
+    {
+      "id": "DET-02",
+      "behavior": "Independent recomputation prevents corrupt metrics reaching decisions",
+      "component_stage": "DET",
+      "implementation": [
+        "src/maritime/governance.py",
+        "src/maritime/pipeline.py"
+      ],
+      "dependencies": "Congestion → scenario gate",
+      "tests": [
+        "test_governance.py"
+      ],
+      "status": "VERIFIED",
+      "remaining_work_and_acceptance": "Scalar reference rejects altered values before recommendation generation",
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ]
+    },
+    {
+      "id": "NET-01",
+      "behavior": "Time-valid network state, availability, closures, stress and alternatives",
+      "component_stage": "NET",
+      "implementation": [
+        "src/maritime/intelligence.py"
+      ],
+      "dependencies": "Ports/routes/congestion → dynamic graph",
+      "tests": [
+        "test_intelligence.py"
+      ],
+      "status": "VERIFIED",
+      "remaining_work_and_acceptance": "Default routes SIMULATED; optional geometry is reference data",
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ]
+    },
+    {
+      "id": "NET-02",
+      "behavior": "Bounded temporal propagation and downstream exposure with assumptions",
+      "component_stage": "NET",
+      "implementation": [
+        "src/maritime/intelligence.py"
+      ],
+      "dependencies": "Dynamic graph/disruption → exposure and warning",
+      "tests": [
+        "test_intelligence.py",
+        "test_public_replay.py"
+      ],
+      "status": "VERIFIED",
+      "remaining_work_and_acceptance": "No claim of observed cargo flow or calibrated propagation probability",
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ]
+    },
+    {
+      "id": "SCN-01",
+      "behavior": "Seeded synthetic shipments, promised delivery, buffer, priority and cargo",
+      "component_stage": "SCN",
+      "implementation": [
+        "src/maritime/scenarios.py"
+      ],
+      "dependencies": "Network → SIMULATED scenarios",
+      "tests": [
+        "test_intelligence.py"
+      ],
+      "status": "VERIFIED",
+      "remaining_work_and_acceptance": "Reproducible seed, never commercial outcome evidence",
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ]
+    },
+    {
+      "id": "SCN-02",
+      "behavior": "Five counterfactual interventions with paired outcome distributions",
+      "component_stage": "SCN",
+      "implementation": [
+        "src/maritime/scenarios.py"
+      ],
+      "dependencies": "Scenarios/state → interventions",
+      "tests": [
+        "test_intelligence.py"
+      ],
+      "status": "VERIFIED",
+      "remaining_work_and_acceptance": "Feasibility and same-country alternate-port constraints exposed",
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ]
+    },
+    {
+      "id": "SLA-01",
+      "behavior": "Non-ML expected delay, breach probability, loss and priority exposure",
+      "component_stage": "SLA",
+      "implementation": [
+        "src/maritime/scenarios.py",
+        "src/maritime/api.py"
+      ],
+      "dependencies": "Interventions → SLA risk API",
+      "tests": [
+        "test_e2e.py",
+        "test_intelligence.py"
+      ],
+      "status": "VERIFIED",
+      "remaining_work_and_acceptance": "Probabilities are Monte Carlo SIMULATED, not calibrated shipment ML",
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ]
+    },
+    {
+      "id": "SLA-02",
+      "behavior": "Observed shipment SLA training",
+      "component_stage": "SLA",
+      "implementation": [
+        "src/maritime/ml.py",
+        "src/maritime/ml_contract.py"
+      ],
+      "dependencies": "Legitimate observed outcomes → Azure ML",
+      "tests": [
+        "test_ml_genai.py",
+        "test_azure_contracts.py"
+      ],
+      "status": "BLOCKED_EXTERNAL",
+      "remaining_work_and_acceptance": "DEFERRED — INSUFFICIENT OBSERVED OUTCOME DATA; obtain legitimate outcomes and eligibility evidence",
+      "evidence": []
+    },
+    {
+      "id": "ML-01",
+      "behavior": "Lagged/versioned features, preprocessing and provenance",
+      "component_stage": "ML",
+      "implementation": [
+        "src/maritime/ml.py",
+        "src/maritime/ml_contract.py"
+      ],
+      "dependencies": "Observed activity → feature bundle",
+      "tests": [
+        "test_ml_genai.py",
+        "test_azure_contracts.py"
+      ],
+      "status": "VERIFIED",
+      "remaining_work_and_acceptance": "Feature CSV rederived and checksum/classification validated",
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ]
+    },
+    {
+      "id": "ML-02",
+      "behavior": "Candidate search, chronological/walk-forward selection and error evaluation",
+      "component_stage": "ML",
+      "implementation": [
+        "src/maritime/ml.py"
+      ],
+      "dependencies": "Features → persistence/ridge/forest comparison",
+      "tests": [
+        "test_public_replay.py",
+        "test_azure_contracts.py"
+      ],
+      "status": "VERIFIED",
+      "remaining_work_and_acceptance": "Research evaluation only; no commercial SLA accuracy",
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ]
+    },
+    {
+      "id": "ML-03",
+      "behavior": "Calibration intervals, drift and port-call batch predictions",
+      "component_stage": "ML",
+      "implementation": [
+        "src/maritime/ml.py",
+        "src/maritime/azure_ml_job.py"
+      ],
+      "dependencies": "Temporal evaluation → PREDICTED outputs",
+      "tests": [
+        "test_public_replay.py",
+        "test_azure_contracts.py"
+      ],
+      "status": "VERIFIED",
+      "remaining_work_and_acceptance": "Local port-call forecasts marked LOCAL_RESEARCH_ONLY",
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ]
+    },
+    {
+      "id": "ML-04",
+      "behavior": "Azure ML jobs, tracking, registry/version/promotion and monitoring",
+      "component_stage": "ML",
+      "implementation": [
+        "scripts/azure_ml.py",
+        "src/maritime/azure_ml_job.py"
+      ],
+      "dependencies": "Fabric Gold → Azure ML → predictions",
+      "tests": [
+        "test_azure_contracts.py"
+      ],
+      "status": "BLOCKED_EXTERNAL",
+      "remaining_work_and_acceptance": "Azure subscription/workspace/compute/identity and actual completed jobs required",
+      "evidence": []
+    },
+    {
+      "id": "ML-05",
+      "behavior": "Feature/model compatibility and verified predictions returned to Fabric",
+      "component_stage": "ML",
+      "implementation": [
+        "src/maritime/ml_contract.py",
+        "scripts/fabric_ml_bridge.py",
+        "src/maritime/fabric_runtime.py"
+      ],
+      "dependencies": "Registered model + features → Fabric Gold/serving",
+      "tests": [
+        "test_governance.py",
+        "test_azure_contracts.py"
+      ],
+      "status": "BLOCKED_EXTERNAL",
+      "remaining_work_and_acceptance": "Local adverse contracts verified; execute actual AML batch + Fabric readback",
+      "evidence": []
+    },
+    {
+      "id": "GEN-01",
+      "behavior": "AOAI extraction verifies exact quote/event/location/time evidence",
+      "component_stage": "GEN",
+      "implementation": [
+        "src/maritime/genai.py",
+        "src/maritime/cli.py"
+      ],
+      "dependencies": "Untrusted source text → ANTICIPATED signal",
+      "tests": [
+        "test_ml_genai.py",
+        "test_azure_contracts.py"
+      ],
+      "status": "VERIFIED",
+      "remaining_work_and_acceptance": "Local rejection/request-contract tests only; live service is GEN-02",
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ]
+    },
+    {
+      "id": "GEN-02",
+      "behavior": "Authenticated Azure OpenAI service round trip",
+      "component_stage": "GEN",
+      "implementation": [
+        "src/maritime/genai.py",
+        "src/maritime/azure_security.py"
+      ],
+      "dependencies": "AOAI endpoint/deployment → grounded signals",
+      "tests": [
+        "test_azure_contracts.py"
+      ],
+      "status": "BLOCKED_EXTERNAL",
+      "remaining_work_and_acceptance": "Configured endpoint, deployment and authorized identity/API key required",
+      "evidence": []
+    },
+    {
+      "id": "DEC-01",
+      "behavior": "Cost/loss ranked feasible interventions and deterministic explanation",
+      "component_stage": "DEC",
+      "implementation": [
+        "src/maritime/scenarios.py"
+      ],
+      "dependencies": "Intervention evidence → recommendation/rationale",
+      "tests": [
+        "test_intelligence.py",
+        "test_e2e.py"
+      ],
+      "status": "VERIFIED",
+      "remaining_work_and_acceptance": "Available without AI service; no fabricated AI fallback",
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ]
+    },
+    {
+      "id": "DEC-02",
+      "behavior": "Operator accept/reject/feasible override with reason and audit",
+      "component_stage": "DEC",
+      "implementation": [
+        "src/maritime/api.py",
+        "src/maritime/store.py"
+      ],
+      "dependencies": "Decision → audit → API review state",
+      "tests": [
+        "test_e2e.py"
+      ],
+      "status": "VERIFIED",
+      "remaining_work_and_acceptance": "Key-mode claimed operator name; Entra supplies verified oid",
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ]
+    },
+    {
+      "id": "LRN-01",
+      "behavior": "Actual-vs-modeled error, Brier score, recommendation adherence",
+      "component_stage": "LRN",
+      "implementation": [
+        "src/maritime/api.py"
+      ],
+      "dependencies": "Outcome + evaluated intervention → learning audit",
+      "tests": [
+        "test_e2e.py"
+      ],
+      "status": "VERIFIED",
+      "remaining_work_and_acceptance": "Synthetic outcomes explicitly SIMULATED; causal effect remains unobservable",
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ]
+    },
+    {
+      "id": "LRN-02",
+      "behavior": "API learning audit transferred into Fabric analytical marts",
+      "component_stage": "LRN",
+      "implementation": [
+        "src/maritime/feedback.py",
+        "scripts/fabric_feedback.py",
+        "fabric/notebooks/import_feedback.ipynb"
+      ],
+      "dependencies": "Azure audit store → Fabric learning mart",
+      "tests": [
+        "test_azure_contracts.py"
+      ],
+      "status": "BLOCKED_EXTERNAL",
+      "remaining_work_and_acceptance": "Export/contracts implemented and locally tested; execute Azure audit to Fabric Delta import with matching readback",
+      "evidence": []
+    },
+    {
+      "id": "API-01",
+      "behavior": "Authenticated paginated product endpoints and OpenAPI interface",
+      "component_stage": "API",
+      "implementation": [
+        "src/maritime/api.py"
+      ],
+      "dependencies": "Approved store → reader/operator",
+      "tests": [
+        "test_e2e.py",
+        "test_startup.py"
+      ],
+      "status": "VERIFIED",
+      "remaining_work_and_acceptance": "No dedicated web dashboard was implemented; intended local interface is OpenAPI",
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ]
+    },
+    {
+      "id": "API-02",
+      "behavior": "Startup configuration failure and request correlation IDs",
+      "component_stage": "API",
+      "implementation": [
+        "src/maritime/api.py"
+      ],
+      "dependencies": "Environment → startup; HTTP → structured logs",
+      "tests": [
+        "test_startup.py"
+      ],
+      "status": "VERIFIED",
+      "remaining_work_and_acceptance": "Local acceptance passed; retain regression coverage",
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ]
+    },
+    {
+      "id": "API-03",
+      "behavior": "Readiness rejects missing/unapproved/stale/corrupt products",
+      "component_stage": "API",
+      "implementation": [
+        "src/maritime/api.py",
+        "src/maritime/store.py"
+      ],
+      "dependencies": "Release + source dates → readiness",
+      "tests": [
+        "test_governance.py",
+        "test_startup.py"
+      ],
+      "status": "VERIFIED",
+      "remaining_work_and_acceptance": "Public liveness does not imply readiness",
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ]
+    },
+    {
+      "id": "FAB-01",
+      "behavior": "Lakehouse Bronze/Silver/Gold PySpark and governed Delta readback",
+      "component_stage": "FAB",
+      "implementation": [
+        "src/maritime/fabric_runtime.py",
+        "fabric/notebooks"
+      ],
+      "dependencies": "Public acquisition → governed analytical marts",
+      "tests": [
+        "test_fabric_assets.py",
+        "test_azure_contracts.py"
+      ],
+      "status": "BLOCKED_EXTERNAL",
+      "remaining_work_and_acceptance": "Fabric capacity/workspace/lakehouse and executed notebooks required",
+      "evidence": []
+    },
+    {
+      "id": "FAB-02",
+      "behavior": "Data Factory dependencies, parameters, retry gates and deployment",
+      "component_stage": "FAB",
+      "implementation": [
+        "fabric/pipelines",
+        "scripts/deploy_fabric.py"
+      ],
+      "dependencies": "Bronze → Silver → Gold → acceptance",
+      "tests": [
+        "test_fabric_assets.py"
+      ],
+      "status": "BLOCKED_EXTERNAL",
+      "remaining_work_and_acceptance": "Deploy and execute pipeline with real service identity",
+      "evidence": []
+    },
+    {
+      "id": "BI-01",
+      "behavior": "Dimensional marts, SQL views, DAX, Power Query and GIS export",
+      "component_stage": "BI",
+      "implementation": [
+        "src/maritime/pipeline.py",
+        "sql/reporting.sql",
+        "fabric/powerbi"
+      ],
+      "dependencies": "Approved Gold → analytical consumption",
+      "tests": [
+        "test_public_replay.py"
+      ],
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "remaining_work_and_acceptance": "Local marts/GIS verified; SQL/DAX/Power Query require actual Fabric/Power BI runtime",
+      "evidence": []
+    },
+    {
+      "id": "BI-02",
+      "behavior": "Five Power BI report pages and deployed semantic model",
+      "component_stage": "BI",
+      "implementation": [
+        "docs/reporting.md",
+        "fabric/powerbi"
+      ],
+      "dependencies": "Gold marts → report visuals",
+      "tests": [
+        "test_fabric_assets.py"
+      ],
+      "status": "PARTIAL",
+      "remaining_work_and_acceptance": "No PBIX/report deployment exists; author and validate five pages in Power BI",
+      "evidence": []
+    },
+    {
+      "id": "AZ-01",
+      "behavior": "Azure container application, Entra, Key Vault and Monitor",
+      "component_stage": "AZ",
+      "implementation": [
+        "azure/main.bicep",
+        "src/maritime/azure_security.py",
+        "src/maritime/azure_store.py"
+      ],
+      "dependencies": "Identity/storage → hosted API",
+      "tests": [
+        "test_azure_contracts.py"
+      ],
+      "status": "BLOCKED_EXTERNAL",
+      "remaining_work_and_acceptance": "IaC compiled previously; deploy then test IAM, telemetry and recovery",
+      "evidence": []
+    },
+    {
+      "id": "OPS-01",
+      "behavior": "Structured logs, health, pipeline/DQ/API operational metrics",
+      "component_stage": "OPS",
+      "implementation": [
+        "src/maritime/api.py",
+        "src/maritime/pipeline.py"
+      ],
+      "dependencies": "Execution → diagnostics",
+      "tests": [
+        "test_e2e.py",
+        "test_startup.py"
+      ],
+      "status": "VERIFIED",
+      "remaining_work_and_acceptance": "Process counters reset on restart; sustained production monitoring not established",
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ]
+    },
+    {
+      "id": "OPS-02",
+      "behavior": "Actionable cloud alerts and workload-grounded SLOs",
+      "component_stage": "OPS",
+      "implementation": [
+        "docs/operations.md",
+        "azure/main.bicep"
+      ],
+      "dependencies": "Metrics → operator alert and SLO evidence",
+      "tests": [
+        "test_azure_contracts.py"
+      ],
+      "status": "BLOCKED_EXTERNAL",
+      "remaining_work_and_acceptance": "Owner workload/SLO agreement and sustained runtime measurements required",
+      "evidence": []
+    },
+    {
+      "id": "OPS-03",
+      "behavior": "Reproducible locked dependencies and documented startup",
+      "component_stage": "OPS",
+      "implementation": [
+        "uv.lock",
+        "docker/Dockerfile",
+        "scripts/windows-setup.ps1"
+      ],
+      "dependencies": "Fresh runtime → installed application",
+      "tests": [
+        "test_startup.py"
+      ],
+      "status": "VERIFIED",
+      "remaining_work_and_acceptance": "Local acceptance passed; retain regression coverage",
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ]
+    },
+    {
+      "id": "OPS-04",
+      "behavior": "Clean isolated demo, authenticated E2E and restart persistence",
+      "component_stage": "OPS",
+      "implementation": [
+        "compose.demo.yml",
+        "scripts/docker_demo.py"
+      ],
+      "dependencies": "Empty volume → pipeline → API → restart",
+      "tests": [
+        "scripts/docker_demo.py"
+      ],
+      "status": "VERIFIED",
+      "remaining_work_and_acceptance": "Local acceptance passed; retain regression coverage",
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ]
+    },
+    {
+      "id": "OPS-05",
+      "behavior": "Safe shutdown/reset/recovery and retained evidence",
+      "component_stage": "OPS",
+      "implementation": [
+        "docs/operations/READY_TO_RUN.md",
+        "src/maritime/store.py"
+      ],
+      "dependencies": "Interrupted process → retained data/new isolated run",
+      "tests": [
+        "test_governance.py"
+      ],
+      "status": "VERIFIED",
+      "remaining_work_and_acceptance": "Local acceptance passed; retain regression coverage",
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ]
+    },
+    {
+      "id": "OPS-06",
+      "behavior": "Dependency/security checks and reproducible quality evidence",
+      "component_stage": "OPS",
+      "implementation": [
+        "pyproject.toml",
+        "uv.lock",
+        ".github/workflows"
+      ],
+      "dependencies": "Source + dependencies → build/test/security result",
+      "tests": [
+        "tests"
+      ],
+      "status": "VERIFIED",
+      "remaining_work_and_acceptance": "Local acceptance passed; retain regression coverage",
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ]
+    },
+    {
+      "id": "OPS-07",
+      "behavior": "Configuration failures retained before acquisition",
+      "component_stage": "OPS",
+      "implementation": [
+        "src/maritime/pipeline.py"
+      ],
+      "dependencies": "Invalid config → failed run and audit",
+      "tests": [
+        "test_startup.py"
+      ],
+      "status": "VERIFIED",
+      "remaining_work_and_acceptance": "Local acceptance passed; retain regression coverage",
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ]
+    },
+    {
+      "id": "ARCH-01",
+      "behavior": "Fabric data plane / Azure ML / Azure OpenAI / Azure application boundary",
+      "component_stage": "ARCH",
+      "implementation": [
+        "docs/architecture.md",
+        "docs/azure.md"
+      ],
+      "dependencies": "Cloud layers → production deployment",
+      "tests": [
+        "test_azure_contracts.py"
+      ],
+      "status": "IMPLEMENTED_UNVERIFIED",
+      "remaining_work_and_acceptance": "Local contract verification is not cloud runtime validation",
+      "evidence": []
+    },
+    {
+      "id": "ARCH-02",
+      "behavior": "PostgreSQL persistence",
+      "component_stage": "ARCH",
+      "implementation": [
+        "docs/architecture/system_integration_map.md"
+      ],
+      "dependencies": "Not part of established local/Fabric storage architecture",
+      "tests": [
+        "none"
+      ],
+      "status": "NOT_APPLICABLE",
+      "remaining_work_and_acceptance": "Latest mandate names applicable integrations, not a migration requirement; retain SQLite locally and Delta in Fabric",
+      "evidence": []
+    }
+  ],
+  "files": {
+    "aml-staged-build.json": "e38558b789782f1b7a9def6ad736844f1d2e21d86e1e65b9efbe214e4ea4d30b",
+    "aml-staged-build.log": "16f3348bd6a5d879317eb5912f278de565394d911356764cc9bff8a60e158604",
+    "build.log": "4499cabbe073ececb4cf05835188b638aa5fcdd58694c649e996110a51e85d47",
+    "cloud-preflight.json": "c4ffa551f15fc641d26f8ec3af13356b3ae7e46d686377300ae4241cd3ac3bad",
+    "dependency-audit-before.json": "110b728c49b139b3553d4bd49d21c8a860014bf1c1fce95580c3d8231c028edb",
+    "dependency-audit.json": "094f39fc9742d41b65a03512d746d58848de7d9fd079cdcd32f94935928d6da5",
+    "final-tests.log": "b4a01954809d3335b426ccf092133881241a04f459dd526a14c25f26b5d2ba06",
+    "final-tests.xml": "a31d64e56f7aca4a6491ab6096024336d38528c5e772c38feed804fa3f83718e",
+    "format.log": "8139dfe2551079957c776913bbcaf1c768e218314f327bd0bfc1ff416a6cdca0",
+    "lint.log": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0",
+    "live/bronze/portwatch_activity/273d58055d94a51bcea629b60b5b85f571f3b27b4928a8f7456cb9f6859cf148.raw": "273d58055d94a51bcea629b60b5b85f571f3b27b4928a8f7456cb9f6859cf148",
+    "live/bronze/portwatch_activity/58820aa8efed38707a28712197229fccf3b244943c2f379bf8b124cf2c19ce50.raw": "58820aa8efed38707a28712197229fccf3b244943c2f379bf8b124cf2c19ce50",
+    "live/bronze/portwatch_activity/ccd77a1a816f4122f66600bf5d7615e0bf69154490016b903e4a6ea0925e9d94.raw": "ccd77a1a816f4122f66600bf5d7615e0bf69154490016b903e4a6ea0925e9d94",
+    "live/bronze/portwatch_ports/1c44bc66f5f1dcc8e724ad3eb28534fe0fa28da7178eea4851f42c36f8da2ed9.raw": "1c44bc66f5f1dcc8e724ad3eb28534fe0fa28da7178eea4851f42c36f8da2ed9",
+    "live/bronze/portwatch_ports/1fb6f6be8607ab15c04198cba240a52c2ae4524e5d0d79068813f1972f29054c.raw": "1fb6f6be8607ab15c04198cba240a52c2ae4524e5d0d79068813f1972f29054c",
+    "live/bronze/replay/0b046b77456f399aeb43869e.json": "1a4c3f658cf3632619c2c63419f00955cc671139043b81b5ae344392b9adfe55",
+    "live/bronze/replay/c5911730599c68bc2282d154.json": "4800b78d5899e5ebd2ef56924c1e750d67f86183f2537846b0caf73340936a56",
+    "live/bronze/weather/24a1ada7aa3e7d93ce2fca04c835384a38ac58b5b49107658c9397ab090d1980.raw": "24a1ada7aa3e7d93ce2fca04c835384a38ac58b5b49107658c9397ab090d1980",
+    "live/bronze/weather/37336cd8a38d02c3cae65b7c39b6a323355ff2e4ac199148db6ec7a881a0fbbf.raw": "37336cd8a38d02c3cae65b7c39b6a323355ff2e4ac199148db6ec7a881a0fbbf",
+    "live/bronze/weather/38294f7bc1479e5b7f5bbcc43f324a78edb4ac32d04952a0ec00ff7ffbc849de.raw": "38294f7bc1479e5b7f5bbcc43f324a78edb4ac32d04952a0ec00ff7ffbc849de",
+    "live/bronze/weather/6dfbe3428c8422d106b355bdf6ede9ca9d11e2ced045d4fd6567d34307e64ccb.raw": "6dfbe3428c8422d106b355bdf6ede9ca9d11e2ced045d4fd6567d34307e64ccb",
+    "live/bronze/weather/c851e0e0a47dadc316479c4d234f97250471c6000d2505874b79bfba5b73aece.raw": "c851e0e0a47dadc316479c4d234f97250471c6000d2505874b79bfba5b73aece",
+    "live/bronze/weather/e8e977949b0c09092a4ab3d7a3dd9cd5a68d8997f9be3ca4b76fe30c3c02f651.raw": "e8e977949b0c09092a4ab3d7a3dd9cd5a68d8997f9be3ca4b76fe30c3c02f651",
+    "live/contract.json": "64f7b702a489e8e4287d9f8a259bbdcb6c7a69e9be0909d8f6fc8be8d5d777ce",
+    "live/datasets/operational/activity.json": "69719f2674e0746e70653a558b14bad87f52a5b539d8acd4478c893d16fdd0a6",
+    "live/datasets/operational/congestion.json": "8e1987bd3ac1cb6bc267a9072302f2c4b39fc233f5a1a5f69f9761a1165f8c0c",
+    "live/datasets/operational/congestion_history.json": "ecc65ba1f1dcd9b4def29a76705bd0b1011daf725b643b32516adfb665da14b6",
+    "live/datasets/operational/dim_location.json": "1a0305cfdbd5fe244ad0747f7f8ff8574ea9f3708cadc3a125949f19de549ca4",
+    "live/datasets/operational/dim_time.json": "bb3851bd6fb55a1501519e5da69e20ce808ebadd406cfcfea1d61a6c260e6137",
+    "live/datasets/operational/ports.json": "ebf87e39b997eeb9c77f2d52ed8a609235d16ebf570c27ea30b48637af36633c",
+    "live/datasets/operational/reference_weather.json": "a32693ce114be7ba75449a6d855ddc78bd2acc2e8a1cf4ffb41b88e592cc1dd0",
+    "live/datasets/predicted/predictions.json": "b285a55006d4f3da15ed3e241cedd917e14cd53854844279b8234565116de6dd",
+    "live/datasets/simulated/decisions.json": "561b022616fd74f9e44ca17b5c337d8422f6af579ace958045fcd2afdd92e620",
+    "live/datasets/simulated/dim_intervention.json": "41c75db3efc8e92466998f2f135c1869e7c94fa56794e7868d531f448cb3b694",
+    "live/datasets/simulated/interventions.json": "f31e88d66caded639c7d067d0f02a736f7d3193681878c403aa17d749a359330",
+    "live/datasets/simulated/network.json": "d50749c490a73bc642dac91215f8f72157fa6d60008911b297eab65d7bd2e0e1",
+    "live/datasets/simulated/routes.json": "6a350ab8a2ff7a51341e27547c1190813162a6e521c2afa29922c769707e4c58",
+    "live/datasets/simulated/scenarios.json": "f74d124a6e4b26f60c2709545fb9f2e6b24fc7027ebb4fbdc444bad38efecaf0",
+    "live/datasets/simulated/sla_risk.json": "aa7de7641e3d5e3d07db297e15af04cecf0a683d8d166c50d543b2313e3f6aed",
+    "live/evidence-checksums.json": "0a969c025a55096d49a2b2382a109c7e1cea5307eb124dbcedc14cac4973c439",
+    "live/metadata/data_quality.json": "2d077585e46309cf4bab5d79dc81fe3711471aaf26fa0079c6d55edde2c7bde6",
+    "live/metadata/lineage.json": "628e7369b2ba445861f21443872156ea2d9a3bd586b0d16bc1b351af1a24837b",
+    "live/metadata/sources.json": "63dcaaf34135371e5ec532b59282de1198cff1eb2f161b6d2903536d79d8664c",
+    "live/predeclared-campaign-policy.json": "e74f62991926945142f3e4008c2ddacdf201fcec14cfde813a396f7e1c0b830c",
+    "live/quarantine/0c1e1db86f91465faf2f0c0b1a1e0885/dispositions.json": "74f33c2e51762748f16eb5f3ed6aaeb35e9295ff8dfc0918c8ef778c4bcbf8bf",
+    "live/quarantine/226c9720344f466e8d2e3eacc705d425/dispositions.json": "74f33c2e51762748f16eb5f3ed6aaeb35e9295ff8dfc0918c8ef778c4bcbf8bf",
+    "live/quarantine/ae9e059f7ea648cab91a10fdfbce78f9/dispositions.json": "c4235a6103d9d51347f12c3f81e6a4dfca43c5dbdc95d836ee7b66045f4c7672",
+    "live/quarantine/afa599e529ed4c27a36312b11be11b30/dispositions.json": "74f33c2e51762748f16eb5f3ed6aaeb35e9295ff8dfc0918c8ef778c4bcbf8bf",
+    "live/quarantine/e0cb54d06e9440328dd005fca57c2857/dispositions.json": "74f33c2e51762748f16eb5f3ed6aaeb35e9295ff8dfc0918c8ef778c4bcbf8bf",
+    "live/reconciliation.json": "80e5e3460b011aec42754f70e4b12975c32cc5dec5beaa4d5ed3b4208e7a7857",
+    "live/release-manifest.json": "5beb30c93591d387354ca312426f7276e6e1924bf848f171ac67602fe4c80168",
+    "live/release-validation.json": "cd6c89c060b4bf4fd7ba118af7125cc029e0d3c98e3bfaad0c0d6dfce2bf8022",
+    "live/runs/0c1e1db86f91465faf2f0c0b1a1e0885/report.json": "2f790468a0be64c680790ad84a4a56954e5689272b744fd3bd1cc2ba43b90f5c",
+    "live/runs/0c1e1db86f91465faf2f0c0b1a1e0885/report.md": "fc21d79bd9134d15fb7e68c3db17f65b3cb2d269fea68b9b66e531e1b120bc16",
+    "live/runs/226c9720344f466e8d2e3eacc705d425/report.json": "03648648fa6d88654d75441f8d7119d7d6d75075e03c2e18dd14fd3034d46b0f",
+    "live/runs/226c9720344f466e8d2e3eacc705d425/report.md": "b217f60bf27ce9b766b448ed671f8040bfb6c7c0039b826988a57a184d1feb66",
+    "live/runs/ae9e059f7ea648cab91a10fdfbce78f9/report.json": "6dc3146f9c0b9bc35a74802724c8dc0759599b8176c3461ae8beef74f5c07f50",
+    "live/runs/ae9e059f7ea648cab91a10fdfbce78f9/report.md": "f056b7ddd2438585021f9d0f4edada9043c0245aa49ec970292ebb971c92f016",
+    "live/runs/afa599e529ed4c27a36312b11be11b30/report.json": "446c29792fcae52887a0b79655c06d84169ccb28fe91f9b521e0445736648d0d",
+    "live/runs/afa599e529ed4c27a36312b11be11b30/report.md": "34dfe5157afcf0aac62d6fd49741f27da1cc8d2d4a3df0b14bfec7fefdca7d95",
+    "live/runs/e0cb54d06e9440328dd005fca57c2857/report.json": "26aa3f8d3f45ad30d46d2b28ef6ec80a66cd79ade98043e47a537c66a60c9cd3",
+    "live/runs/e0cb54d06e9440328dd005fca57c2857/report.md": "28c65038b754fca603ba4a66a6b9ab49b6e70096961dc11f2711fef7009cc206",
+    "live/source-to-output-lineage.json": "f30a2bd9ef61643169e9b1e8625721e405a91290594cc9e1790d456c3b8b1bbe",
+    "live-campaign.log": "2b727e16f29b8ef50bd7a10c572491ed5828ddce982d0a7532141750c60096fd",
+    "maritime-demo-6a047e0383/command-0.log": "a02f4df21d023d4d34d6ce3874e751e5e9447ebd9a8b5d2aca6c6aa00cbae2cb",
+    "maritime-demo-6a047e0383/command-1.log": "931a897283d06d361d2a6a353df9d78900438077a17f9e9f13c6135531d07f35",
+    "maritime-demo-6a047e0383/command-2.log": "63dc29f9c4dea5cfb90178eaa5b7903f5f0441bea9854448f389b9c7dfef9c03",
+    "maritime-demo-6a047e0383/command-3.log": "2b2a3916e80b455a561686b7d25ec01842d8b24fc305d62c3bb75dd3722569be",
+    "maritime-demo-6a047e0383/congestion.json": "dc8a596c1025c3a07a21358353bc655f8e0cb6cb3c630a9e2d35414625bdf3fc",
+    "maritime-demo-6a047e0383/data-quality.json": "75ed20c69ff6bce438edc949654e4fd9ca227e44578140ff79d02c8613155150",
+    "maritime-demo-6a047e0383/decisions.json": "9b5a358d8cc515257e69c1729bbba4ed61fafdf87dbe0a25cf434f455320c216",
+    "maritime-demo-6a047e0383/interventions.json": "0136b806388e6ee0b3e075ead197c7cf36aafc2e65c28a9b07e74c6e36814d3a",
+    "maritime-demo-6a047e0383/lineage.json": "6804512c0a3b8e39cc73d77c032a5d63d2d33d69a8255b9cf5c2c403a56e4005",
+    "maritime-demo-6a047e0383/metrics.json": "6cfa8fca98b859eee7389ea5af0e7c44256d22aa1a531d982df759b8d4994c03",
+    "maritime-demo-6a047e0383/network-exposure.json": "696bd9dc9060b1649a82f8a0fe9ddbc2a9073f93b403fd7b097379680fbeb9ba",
+    "maritime-demo-6a047e0383/ports.json": "111e055fa213a0e4c618caf9f58248e22b0cedba2da6176a37c0774fa81eb060",
+    "maritime-demo-6a047e0383/predictions.json": "fcea71d1504c6fc84f068d09c417cf363053f75498230c66a634d67169037ad2",
+    "maritime-demo-6a047e0383/ready.json": "91e7b7036a1c2828aefdc3d303375f4f13e27e31d664b882ab1767a8c834e243",
+    "maritime-demo-6a047e0383/result.json": "4ad994fef939ae0fedb25932cc69076c0aee876bd83b551ef08d5fbfcf9f439c",
+    "maritime-demo-6a047e0383/run-report.json": "5f661848da4086f7a2fbb50af65e2b051dfd3974260bcfbf446977119d24bff4",
+    "maritime-demo-6a047e0383/scenarios.json": "8d44c7e3054e7cb28f6f8ae0b58eb07b7d7323e5a731bb525a9544ccc0596ba5",
+    "maritime-demo-6a047e0383/signals.json": "0f4e032b2605fa1af06a8ec8bfa7f0a142c32002ca16f23817e89d79cf36f75d",
+    "maritime-demo-6a047e0383/sla-risk.json": "57526f12f4b7ae61bc54366e743010edca3ff2aee6c3ebe8566194d38b7aaa8e",
+    "maritime-demo-7a998435f4/audit.json": "316d2a050be178be0dd16d0d6ea7b00eb04d5c24eff21faeeed3ec8804ab216f",
+    "maritime-demo-7a998435f4/command-0.log": "329301f78fc8b5a6e873bf5f330ac9dc1edceccfb1a28eceaf486191b85c58a0",
+    "maritime-demo-7a998435f4/command-1.log": "0eb910848a3139853bd9644a723c202f93e96246f088f6ec377ed8baa7dc27e4",
+    "maritime-demo-7a998435f4/command-2.log": "38135f917abfcba3ac47af28d83ec97a8d28105d01e810acd3c06527e018e112",
+    "maritime-demo-7a998435f4/command-3.log": "dfe2ce6a6da0785f0c1a4c9fbae5287bdf9976fb222aaff72c470e172191f5ee",
+    "maritime-demo-7a998435f4/congestion.json": "1e9b0c4e5503b8b82acf8e3c0ebdc93b65c5b8781d5a7ddfc5cb21a18eb9db78",
+    "maritime-demo-7a998435f4/data-quality.json": "a82f0b53a9a217ec5ba36f6ca6c70d5618011f79adac75d7952a77c6eab1155b",
+    "maritime-demo-7a998435f4/decisions.json": "ac850b85e59646823d837e17f3589c3d51165aa8c1183bc1cb44e3849d1f64d7",
+    "maritime-demo-7a998435f4/interventions.json": "7f48597324a97ccc447c0480d0a315c3252e1a567b5fccbff3bbadd703192133",
+    "maritime-demo-7a998435f4/lineage.json": "90b4a48ec235c4ae7cf60528ddbf57a379b28a2e012dee36c617434e0b6f7f66",
+    "maritime-demo-7a998435f4/metrics.json": "fb4e1b225e3a5cbcf8a1ffd88f5a216f61f2d06e3977c985750a2689fb2d4886",
+    "maritime-demo-7a998435f4/network-exposure.json": "f313d9d9fa84a31f8222e660bb56968a0ff3cffa98c3ef1cd38469061085d8c0",
+    "maritime-demo-7a998435f4/ports.json": "c082d0073b653bc22136c35843f09321eeaf4bf6806d02cd770eaba994606540",
+    "maritime-demo-7a998435f4/predictions.json": "d4f919968d2b8b11b1dee3ab8cd974d2de7252002195a5b448f8e539dd1cc28b",
+    "maritime-demo-7a998435f4/ready.json": "c7dee152625734d8d0fde0647be179b417cae5f5668c0300e8c11ba16e59a38b",
+    "maritime-demo-7a998435f4/result.json": "9384879d428d7cd8e3eab3d1df6f85f715d5488422e08ef219921b8c9887de47",
+    "maritime-demo-7a998435f4/run-report.json": "a203f7d283da7d0a42863cf5c9c99cd1f8ef358c45a3c261a047946ea9284939",
+    "maritime-demo-7a998435f4/scenarios.json": "115fcaaa56cd5128e96e5a351e7b461e800bdace77ea3408ebdb5be2299c204d",
+    "maritime-demo-7a998435f4/signals.json": "0f4e032b2605fa1af06a8ec8bfa7f0a142c32002ca16f23817e89d79cf36f75d",
+    "maritime-demo-7a998435f4/sla-risk.json": "2638e66ae3de507e976dcab0a4cdb4c8097ed08c93c0ea7c2d6a38faad6fb719",
+    "maritime-demo-e8f5c6a5f1/audit.json": "c9b0a588889d1762b372f9607ee97c2f31a8198ba5725589e60df2fe63722461",
+    "maritime-demo-e8f5c6a5f1/command-0.log": "323f594640775501b36178aeae8769e6b47fa23223d84fd9afefdec388fbac7d",
+    "maritime-demo-e8f5c6a5f1/command-1.log": "88b20fd158f9f9b38034397f34d63c7e607a151cf5e7c384e6be137f082d4dd4",
+    "maritime-demo-e8f5c6a5f1/command-2.log": "b0ff6afc75c35a1918754a500a1ce73f8d93bb5e3d3d5b77dd3331e67d510b6a",
+    "maritime-demo-e8f5c6a5f1/command-3.log": "d0d188f1707611664d7d3b14cae7cab563018d088b73c137cd4d69507aabf524",
+    "maritime-demo-e8f5c6a5f1/congestion.json": "07b79095831af60141e3888b39bebf3e31c148ab90576fa8a3c038c87ad1198b",
+    "maritime-demo-e8f5c6a5f1/data-quality.json": "11d2ff718d9b8decb771b9fefb7b130caeeac59850ed0cf4f172bd6a438d9604",
+    "maritime-demo-e8f5c6a5f1/decisions.json": "487c184685f374277061c42bbb6f25a2f868f0a96db6c53b5144c82b88f51eeb",
+    "maritime-demo-e8f5c6a5f1/interventions.json": "7bacdd4527a4e7115b8cc019561bce2b6d1785134a783027336a9a7852aebf61",
+    "maritime-demo-e8f5c6a5f1/lineage.json": "227acdadbf383761bba319ad4d91032d9c0b940e4cf1eeb3af094591acccdfb4",
+    "maritime-demo-e8f5c6a5f1/metrics.json": "bf563d58bc878351c6b7e5c0112fe8bf6c78c11aa6a67b1a35abbfb4b256fc1c",
+    "maritime-demo-e8f5c6a5f1/network-exposure.json": "e38ba8b3be89116819e086dbe95981696d8e43bd9d009f7a3df86a65fb2b60cd",
+    "maritime-demo-e8f5c6a5f1/ports.json": "01d45e72cd84aeb82bc16fb62f3be123c8e6225df86dc7e711c0637a1ff620b6",
+    "maritime-demo-e8f5c6a5f1/predictions.json": "a6e6a98cb405f7754dbc69e883a1fe9831b3d2ed0d98999492490294a54e3076",
+    "maritime-demo-e8f5c6a5f1/ready.json": "237506914cc6b7cb63a1d81fdd0046b0bd612133a0c995397c7151a0d8e03f3b",
+    "maritime-demo-e8f5c6a5f1/result.json": "0bd0747959b99544c8a9920845bc757b9411a27880d8da02b2b4890a85181be2",
+    "maritime-demo-e8f5c6a5f1/run-report.json": "f381171bf926cbbf218db016b1f6f178cfa8f4b0a483e660d13176d14bfac73b",
+    "maritime-demo-e8f5c6a5f1/scenarios.json": "ef03c1087a7f326189e0d95655127b798ccba22149455511fef9d843bd82c0d6",
+    "maritime-demo-e8f5c6a5f1/signals.json": "0f4e032b2605fa1af06a8ec8bfa7f0a142c32002ca16f23817e89d79cf36f75d",
+    "maritime-demo-e8f5c6a5f1/sla-risk.json": "2e0c50e9bfaeb07e4543753f00773cbfe942a6cde7a7288378a12b5fa31585f0",
+    "maritime-demo-eed2e571a2/audit.json": "6a46e0682465184f06c86a7a7cdeffdd44e2842e22d7f128bb7a1bbaa4aef710",
+    "maritime-demo-eed2e571a2/command-0.log": "d3c37f18c438b4c883754f0da9b83e17b398ccf78ceecfe65cae1956ac2e3faf",
+    "maritime-demo-eed2e571a2/command-1.log": "879844b846795fe5332b9081c68804fff6a6de95cebd5499dc97f794fc9cda28",
+    "maritime-demo-eed2e571a2/command-2.log": "139c058c35ebf98f022490618649cdce591cb07835514f06c794d3cd2f2189f2",
+    "maritime-demo-eed2e571a2/command-3.log": "60f19e8bf7a7e3edf1c7dd13eac91e6838188b749d3dd5062ca7ffb0a0197649",
+    "maritime-demo-eed2e571a2/congestion.json": "382ec281ce7a1e603e9b7fe77afd8228049c71c669ce4d872baccb58a601251a",
+    "maritime-demo-eed2e571a2/data-quality.json": "d6255887fcb07ee18f25eb2a7bee50c80538f211c150a5b64fdd1178ff991203",
+    "maritime-demo-eed2e571a2/decisions.json": "aac861c37b0b93b32b5bfb866e013857b1bce253939c618adf21506ffb3f8b42",
+    "maritime-demo-eed2e571a2/interventions.json": "e7637aae5bf4fb16f7a98c8fbac3207bcaf327eb7fe9374c34ab495e25efea6e",
+    "maritime-demo-eed2e571a2/lineage.json": "150c162a9711fa2da9ea977d5451f6e998e69c2f859f011c141e0270943207f9",
+    "maritime-demo-eed2e571a2/metrics.json": "72b67d1a6e78f161f2e635d0e5f755a1c11747484a5138f3ac2a6fd809d5106d",
+    "maritime-demo-eed2e571a2/network-exposure.json": "b79835be31c75dd5bcc54c796877844db821b9c98e29f4289e20b9ec6918878b",
+    "maritime-demo-eed2e571a2/ports.json": "0bc3f4b9aef08cec0faa45b071765ea583753bd1f167f3c1a949d0ae8e3a75c9",
+    "maritime-demo-eed2e571a2/predictions.json": "471f255f3fe0ae505a689dc486aa0cb03fdf7987bb34accfd33f6758924c708a",
+    "maritime-demo-eed2e571a2/ready.json": "a8e3f99d37e72bcab92910ed72d2ee1b382f00c2a7fee3cc9d270ec5993f27a5",
+    "maritime-demo-eed2e571a2/result.json": "639892a315380fcaf0c7b7b680b3da9156a0fd28669be1b48d4bf2b0312861bc",
+    "maritime-demo-eed2e571a2/run-report.json": "a3879af435b6db65ab87f3dc2c46b14c7975ab3f431322410227f1a411c14728",
+    "maritime-demo-eed2e571a2/scenarios.json": "9cd5f06dd121964ee55da1b96d57c06f75e2f148519eb47dc214413959cc1c64",
+    "maritime-demo-eed2e571a2/signals.json": "0f4e032b2605fa1af06a8ec8bfa7f0a142c32002ca16f23817e89d79cf36f75d",
+    "maritime-demo-eed2e571a2/sla-risk.json": "7f42c4754a8348e36974b4849b8300ce3e47ceaf48fc8a234f44a71a1f235cb0",
+    "quality-exit-codes.json": "1058bd3cda51f54573efe0c443097157e952d8cb03b99c0c913eb276a3b1acfc",
+    "runtime-requirements.txt": "baf5dda703868730bc1bd0dd3aef5e5b6977647e87acc9f55a168d0690cacc3d",
+    "tests.log": "bda63a92eabb2119c0473f99183c5e8651816b32ef55a53032066ed8e064d562",
+    "tests.xml": "59c66fd5b88ae9b55cc4539a89e5ec795d87f127d2b5bd3ae2af3f9c8ba7b266",
+    "verified-tests.log": "d47bb976e593fa64dbcf38e00ade8f2de69095deb9105d37ea8d0f1ca29e5c53",
+    "verified-tests.xml": "91c05808f01814add73fe8eb88ccd74edb77d29b744541f45c104499e9bf3bb4"
+  },
+  "source_files": {
+    "src/maritime/__init__.py": "8dbe830bf0f1435a103ca7252c2dcca1566abfb052f727d956f22236e24fbcad",
+    "src/maritime/api.py": "aae3dd2f711283278f38c7552f84b3f46be02fa070726166c1f243322bd92c80",
+    "src/maritime/azure_ml_job.py": "4a2e0d62d31b51561f9e8e6021142d554aae208e9bc4004f732bba2154cb3ccc",
+    "src/maritime/azure_security.py": "ed3a0bdbd83ff85608be05dcb707a018effe355b156d1a5ded058e4f0ef7ecb1",
+    "src/maritime/azure_store.py": "c866f1ed8a3b76b62ddfb8ebd051af5d978c91ad2d62d61083166449002644a8",
+    "src/maritime/cli.py": "0f8df3fc5662a311fe3301f3af95964fd8c4a938967e776727a6cc19e687b20e",
+    "src/maritime/fabric_runtime.py": "d1c215673c6ab829a0d674e4f737733e1ed4b3ca1d868743ba1b7962a890ddb5",
+    "src/maritime/feedback.py": "56ceda6bfaa3cf10db04492fb6612d03ec5b45692187f2d0fb543765a66792c1",
+    "src/maritime/genai.py": "a8d3cb1960d6b0c98a69e497f8b18bbf11e5af7b7446c401d6cb616735d51f4a",
+    "src/maritime/governance.py": "069cf2d22a364c1d8b6a37b901462f79697752f00ead2a7abbd6a818425cb5f5",
+    "src/maritime/intelligence.py": "3b62a34b22583df756f922bd540e444ed2bd726ea0f41c3dc223532ee7dd799e",
+    "src/maritime/ml.py": "12d25bf34bbf5c16703fe414ddce18b1a10044a821a981097c1635ad5c3f7dc5",
+    "src/maritime/ml_contract.py": "798940f6c69e171c047189b5742f992b3a8678d739af1b3e9118ce4d0e792b9b",
+    "src/maritime/models.py": "865dceefc76e3e82195d348cddfbbd1c16909b389ddb8e526f76004f478e3f31",
+    "src/maritime/pipeline.py": "7c54ac78c6734cd52a2986105194660b8ca6a9c56fd338e7bf7084a5fd33439c",
+    "src/maritime/quality.py": "08431f9d191406d5f74e1717446f403ab2f05787c94e1d076f7fc3eb47f65cd8",
+    "src/maritime/scenarios.py": "cc919d1047a36193e6ed5ce503ab5c0c09b458ac08df30a4fb48ded94a02605e",
+    "src/maritime/sources.py": "347e0ff0e2d7f2e035b9b62ae7e4aa89c23e9945fd46399ad98c0508e0badf96",
+    "src/maritime/store.py": "d2238c40e78c425aa5f956a35703ccfab0355cfa169470a0a0b1e1d063ec4ff8",
+    "configs/azure.json": "062d448ea1c017f20c9d857f16535c908cb25ab029fa606ab4866584df490a3a",
+    "configs/governance.json": "64f7b702a489e8e4287d9f8a259bbdcb6c7a69e9be0909d8f6fc8be8d5d777ce",
+    "configs/pipeline.json": "1b24e78dfdeffc63cdd73b02b5d16879105ba8e8713e98f041243a1fa62d245f",
+    "configs/sources.json": "5c552ad4442f2b02a6bbcacea6a309eedf966664d9840618746d763c5c0fece6",
+    "scripts/azure_ml.py": "8dc725f371d80232fdd450a09805c41901ac08f4856b3ebc80238e365c919e83",
+    "scripts/build_fabric_assets.py": "a7041e4fb030af8932e8569815f24a6619dc56049796a47a569c1bc135f9e009",
+    "scripts/container_smoke.py": "421e388a6a2593420c553c32fcb8c48e455775a73b07c095a42275d4e1da0e4f",
+    "scripts/deploy_fabric.py": "0be13b7f7e2a7a592a16ac7edef518c73e9c537fd21f855d661a85b6e01953f7",
+    "scripts/discover_ports.py": "7fc0690ebf53b148287245e8a54654581f6fa591704572f0ed42a257aeb76a33",
+    "scripts/docker_demo.py": "9dbddd22f3128fe6ff3d8144d81dc5e258f31a59aede1f7a65429fae0357bdd4",
+    "scripts/export_sample.py": "4276fdfb3d2b72c03577615488d4a597ef267462ecea9588ca3c275b577bdfc7",
+    "scripts/fabric_feedback.py": "b72355820dccd8ab6f290e2c56846c9bd099b82d8959c16c4afe9259805f68d2",
+    "scripts/fabric_ml_bridge.py": "1dcedabac9f4694cfb4188a9a5049c59c525133451dfc92ebce0825c58a4e5ef",
+    "scripts/governance_release.py": "9b89133546d6b15a840aff4221b66ad1d079bf55af97302c8e0394d4cad1ace7",
+    "scripts/package_readiness.py": "e5a070706ee2cc60fb8720b18bef79de838e330174e951fc1e7d1e3d976a41ca",
+    "scripts/publish_azure.py": "2f50cabde663ff1b282aa16d9ff1a6eb109c2d727b427d6eac5df1ed12e0a189",
+    "scripts/run_live.py": "4a30ab3a7f7ab2e8fee9b9ce1950cdb3e5d2bc84e3405989061c0b20708c12f5",
+    "scripts/validate_release.py": "6afe15011a11190dd876157e21cbfb5fad0bc395c4b56cef146c863ab3c39eb8",
+    "scripts/windows-setup.ps1": "e8fb35263f5329282772015cb68b3a7573e5c977da90c4cc340047133b7b9946",
+    "docker/Dockerfile": "c6fe52f811fd98f825a933933df695c831bf8265a19e40f186571b61c2591c30",
+    "docs/architecture/system_integration_map.md": "823842fe2673f6461f64a1a97eb53da26df72b38195be3e831d06a6c4b6955a0",
+    "docs/architecture.md": "38602cadbc512c3d9df26025de923b696f9ecb130a41fa3bbe0602c5ab11de66",
+    "docs/azure.md": "bb3c2e1eead21c57b7e0e8a6d0b55acd123807829b7569d0ef126be6d1125515",
+    "docs/fabric.md": "c44ce4dbdf2b57bdd4b4e61a77171f647a13a895b17d721dce1181e8fec204fe",
+    "docs/governance/pipeline_controls.md": "a33fa46c074312445be887dbd4cf2e5e8064701267c5c972bf9cdc061f682dbf",
+    "docs/governance-gap-analysis.md": "0037353bf9cf7794950022b392aeb41b90b42cf0e1f1428822ea483df3261519",
+    "docs/governance.md": "57e34cf6643c656e76cdc3de104aefa57a32706e2452487dad770ebc5976c0ba",
+    "docs/methodology.md": "530395be7f09efa6026c7786c239f4f7f0c9cb2b1940f37e6e1e948ff716fbff",
+    "docs/operations/known_limitations.md": "306f4ba939902a32b10e6801ebf0a47e0ca93e1f88d8467bd49d8a7cd78bbab7",
+    "docs/operations/READY_TO_RUN.md": "feb1ed37dfeeab73610a75c5a34bcd9531ae2b54dbec387700d503042cacd72b",
+    "docs/operations.md": "ebe689f0ddebb6e3f472116aa5580d09142ec5c52c84c0e39bd842424cbc3606",
+    "docs/reporting.md": "0c76cd8765ca619064d1df64dfe6e0c240bdc4b57d7318e69a842e3e4794075f",
+    "docs/requirements/feature_traceability.md": "5077e8c1248c0679a39d6d2f40511490345daaecb8cfb1fbf42e053a49367492",
+    "docs/requirements/requirements.json": "5b99dce78ae55b84db2966656735d16b8479943a6f5c09e127864906b49ca15e",
+    "docs/sources.md": "320983d8ae8d947b6984119a0ad42938011a3929617caa3fe1db384291638208",
+    "docs/testing/verification_report.md": "039f4f4382e8315afe3b280336b3f67a8da30d3128fcffbb209454012e20956b",
+    "pyproject.toml": "cc4ef211dcf2987073071eb769b9df9733fb4de26c69edf338cbf35d055c8c83",
+    "uv.lock": "7e66bbb53f225ec97a3e3dab3faec0e3a08dbb2fd233df6d83e3497cb2a09a12",
+    "compose.demo.yml": "41af2924af15164358e2d9b510af1afdd2dc67e5a659c358ba19b3525a59c68d",
+    ".env.example": "917e75dedbd7ba1b5c209bbf7c693fcfdd324b918261e4ab021781b67fa2f72d"
+  }
+}

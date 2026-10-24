@@ -8,6 +8,78 @@ from maritime.sources import Fetcher, SourceError, ingest_portwatch
 from maritime.store import Store
 
 
+@pytest.mark.parametrize(
+    "value,expected",
+    [
+        ("2026-10-09", "2026-10-09"),
+        ("2026-10-07T00:30:00+03:00", "2026-10-06"),
+        ("2026-10-06T23:30:00-03:00", "2026-10-07"),
+        ("2026-10-09T00:00:00Z", "2026-10-09"),
+        (1791504000000, "2026-10-09"),
+    ],
+)
+def test_observation_dates_are_parsed_completely_in_utc(value, expected):
+    from maritime.sources import normalize_activity
+
+    row = {
+        "date": value,
+        "portid": "test",
+        "portcalls": 1,
+        "_metadata": {"retrieved_at": "2026-10-17T00:00:00Z", "checksum": "test"},
+    }
+    assert normalize_activity([row])[0]["date"] == expected
+
+
+@pytest.mark.parametrize(
+    "value",
+    [
+        "2026-10-07garbage",
+        "2026-02-30",
+        "2026-10-07T01:00:00",
+        None,
+        True,
+        float("nan"),
+        float("inf"),
+    ],
+)
+def test_malformed_observation_dates_fail_closed(value):
+    from maritime.sources import normalize_activity
+
+    with pytest.raises(SourceError, match="Invalid PortWatch observation date"):
+        normalize_activity([{"date": value}])
+
+
+def test_freshness_uses_each_ports_observation_not_retrieval(bundle, routes):
+    import copy
+    from datetime import timedelta
+
+    from maritime.quality import validate
+
+    as_of = date.fromisoformat(bundle["as_of"]) + timedelta(days=10)
+    activity = copy.deepcopy(bundle["activity"])
+    for row in activity:
+        row["retrieved_at"] = as_of.isoformat() + "T12:00:00Z"
+    _, boundary = validate(bundle["ports"], activity, routes, as_of, freshness_days=10)
+    assert boundary["freshness_status"] == "PASS"
+    # Each individual missing latest observation must fail, even if peers are fresh.
+    for port in bundle["ports"]:
+        stale = [
+            r
+            for r in activity
+            if not (r["port_id"] == port["port_id"] and r["date"] == bundle["as_of"])
+        ]
+        _, result = validate(bundle["ports"], stale, routes, as_of, freshness_days=10)
+        assert {e["port_id"] for e in result["errors"] if e["check"] == "freshness"} == {
+            port["port_id"]
+        }
+    _, old = validate(
+        bundle["ports"], activity, routes, as_of + timedelta(days=1), freshness_days=10
+    )
+    assert {e["port_id"] for e in old["errors"] if e["check"] == "freshness"} == {
+        p["port_id"] for p in bundle["ports"]
+    }
+
+
 def test_pagination_and_arcgis_errors(tmp_path):
     def transport(request):
         offset = int(request.url.params["resultOffset"])

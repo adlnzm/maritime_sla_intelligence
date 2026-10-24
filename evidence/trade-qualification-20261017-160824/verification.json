@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "provider_integrated": false,
+  "source_files_unchanged": 146,
+  "matches_completed_release_source": true,
+  "freshness_days": 10,
+  "retained_http_bodies_verified": 4,
+  "tests": {
+    "tests": 28,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "warnings": 1,
+  "commands": [
+    {
+      "command": ".venv/Scripts/python.exe -m pytest tests/test_source_contracts.py tests/test_governance.py -q --junitxml=evidence/trade-qualification-20261017-160824/tests.xml",
+      "exit_code": 1,
+      "result": "Sandbox attempt stalled without output; interrupted, not a passing test run"
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m pytest tests/test_source_contracts.py tests/test_governance.py -q --junitxml=evidence/trade-qualification-20261017-160824/tests-authorized.xml",
+      "exit_code": 0,
+      "result": "28 passed; 1 Starlette/httpx deprecation warning"
+    },
+    {
+      "command": ".venv/Scripts/python.exe evidence/trade-qualification-20261017-160824/verify.py",
+      "result": "Assertions complete; actual process exit captured in verify.exitcode"
+    }
+  ],
+  "blockers": [
+    "UN Comtrade mixed/external product redistribution applicability unresolved",
+    "WTO authorized usable sample and product-specific rights unverified",
+    "Trade publication/revision metadata, units and broader country coverage not fully qualified"
+  ],
+  "release_claim": "Assessment only; no new deployment or release-readiness claim"
+}

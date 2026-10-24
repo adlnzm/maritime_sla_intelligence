@@ -1,0 +1,180 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "details",
+  "position": {
+    "x": 20,
+    "y": 180,
+    "z": 0,
+    "width": 1560,
+    "height": 690,
+    "tabOrder": 200
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_interventions"
+                    }
+                  },
+                  "Property": "shipment_id"
+                }
+              },
+              "queryRef": "fact_interventions.shipment_id"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_interventions"
+                    }
+                  },
+                  "Property": "action"
+                }
+              },
+              "queryRef": "fact_interventions.action"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_interventions"
+                    }
+                  },
+                  "Property": "feasible"
+                }
+              },
+              "queryRef": "fact_interventions.feasible"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_interventions"
+                    }
+                  },
+                  "Property": "expected_delay_hours"
+                }
+              },
+              "queryRef": "fact_interventions.expected_delay_hours"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_interventions"
+                    }
+                  },
+                  "Property": "breach_probability"
+                }
+              },
+              "queryRef": "fact_interventions.breach_probability"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_interventions"
+                    }
+                  },
+                  "Property": "operational_cost"
+                }
+              },
+              "queryRef": "fact_interventions.operational_cost"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_interventions"
+                    }
+                  },
+                  "Property": "expected_loss"
+                }
+              },
+              "queryRef": "fact_interventions.expected_loss"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_interventions"
+                    }
+                  },
+                  "Property": "total_expected_cost"
+                }
+              },
+              "queryRef": "fact_interventions.total_expected_cost"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_interventions"
+                    }
+                  },
+                  "Property": "explanation"
+                }
+              },
+              "queryRef": "fact_interventions.explanation"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_interventions"
+                    }
+                  },
+                  "Property": "classification"
+                }
+              },
+              "queryRef": "fact_interventions.classification"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_interventions"
+                    }
+                  },
+                  "Property": "lineage_id"
+                }
+              },
+              "queryRef": "fact_interventions.lineage_id"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_interventions"
+                    }
+                  },
+                  "Property": "run_id"
+                }
+              },
+              "queryRef": "fact_interventions.run_id"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

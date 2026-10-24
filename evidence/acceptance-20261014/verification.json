@@ -1,0 +1,73 @@
+{
+  "LOCAL_RELEASE_READY": "NO",
+  "PRODUCTION_READY": "NO",
+  "git_revision": "4b50f50769b08e763015064c53d91b6bda4ae079",
+  "source_state": "DIRTY: preserved tracked modifications and untracked implementation",
+  "source_files_verified": 146,
+  "campaign": "evidence\\local-release-20261014-final",
+  "campaign_status": "NOT_READY",
+  "tests": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "50",
+    "time": "124.656",
+    "timestamp": "2026-10-14T07:00:19.520783+03:00",
+    "hostname": "endelap"
+  },
+  "vulnerabilities_reported": 0,
+  "docker_status": "PASS",
+  "docker_checks": {
+    "runtime_security": "PASS_UID_CAPABILITIES_LIMITS_READONLY",
+    "unauthenticated": 401,
+    "ready": 200,
+    "ports": 200,
+    "congestion": 200,
+    "network/exposure": 200,
+    "scenarios": 200,
+    "sla-risk": 200,
+    "interventions": 200,
+    "decisions": 200,
+    "lineage": 200,
+    "data-quality": 200,
+    "predictions": 200,
+    "metrics": 200,
+    "signals": 200,
+    "run-report": 200,
+    "dependency_unavailable": 503,
+    "liveness_during_outage": 200,
+    "dependency_recovered": 200,
+    "reader_cannot_write": 403,
+    "review": 200,
+    "review_retry": 200,
+    "malformed_review": 422,
+    "simulated_outcome": 200,
+    "outcome_retry": 200,
+    "body_limit": 413,
+    "fabricated_observed_outcome_rejected": 422,
+    "restart_readiness": 200,
+    "persistent_audit": 200,
+    "learning_export": 200
+  },
+  "manifest_files_verified": 74,
+  "archive_sha256": "e88a51ebfb7dd036febe845314513cc07037907dfa4e2860a6f1fd0a2e1ffad1",
+  "source_integrity": "PASS",
+  "evidence_integrity": "PASS",
+  "live_failure": [
+    {
+      "control": "local_campaign",
+      "reason": "Critical DQ failed: 6 checks; inspect run report",
+      "type": "ValueError"
+    }
+  ],
+  "latest_by_port": {
+    "port1114": "2026-10-02",
+    "port815": "2026-10-02",
+    "port1188": "2026-10-02",
+    "port744": "2026-10-02",
+    "port1201": "2026-10-02",
+    "port664": "2026-10-02"
+  },
+  "dependency_lock_sha256": "d1b91f38d8892dc18dc06243876db946021479a7ef4332d88b0394de8e27efd2"
+}

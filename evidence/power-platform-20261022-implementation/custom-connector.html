@@ -1,0 +1,1475 @@
+ <!DOCTYPE html>
+		<html
+			class="layout layout-holy-grail   show-table-of-contents conceptual show-breadcrumb default-focus"
+			lang="en-us"
+			dir="ltr"
+			data-authenticated="false"
+			data-auth-status-determined="false"
+			data-target="docs"
+			x-ms-format-detection="none"
+		>
+			
+		<head>
+			<title>Create a custom connector from an OpenAPI definition | Microsoft Learn</title>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<meta name="color-scheme" content="light dark" />
+
+			<meta name="description" content="Learn how to use an OpenAPI definition to create a custom connector for Azure Logic Apps, Power Automate, Power Apps and Copilot Studio." />
+			<link rel="canonical" href="https://learn.microsoft.com/en-us/connectors/custom-connectors/define-openapi-definition" /> 
+
+			<!-- Non-customizable open graph and sharing-related metadata -->
+			<meta name="twitter:card" content="summary_large_image" />
+			<meta name="twitter:site" content="@MicrosoftLearn" />
+			<meta property="og:type" content="website" />
+			<meta property="og:image:alt" content="Microsoft Learn" />
+			<meta property="og:image" content="https://learn.microsoft.com/en-us/media/open-graph-image.png" />
+			<!-- Page specific open graph and sharing-related metadata -->
+			<meta property="og:title" content="Create a custom connector from an OpenAPI definition" />
+			<meta property="og:url" content="https://learn.microsoft.com/en-us/connectors/custom-connectors/define-openapi-definition" />
+			<meta property="og:description" content="Learn how to use an OpenAPI definition to create a custom connector for Azure Logic Apps, Power Automate, Power Apps and Copilot Studio." />
+			<meta name="platform_id" content="93a42eb3-6bb1-36ca-f35e-235da2ef15e1" /> 
+			<meta name="locale" content="en-us" />
+			 
+			<meta name="uhfHeaderId" content="MSDocsHeader-PowerPlatform" />
+
+			<meta name="page_type" content="conceptual" />
+
+			<!--page specific meta tags-->
+			
+
+			<!-- custom meta tags -->
+			
+		<meta name="ms.subservice" content="connectors" />
+	
+		<meta name="author" content="nravindra-msft" />
+	
+		<meta name="ms.author" content="nravindra" />
+	
+		<meta name="ms.manager" content="jwarner" />
+	
+		<meta name="ms.service" content="power-platform" />
+	
+		<meta name="ms.date" content="2026-06-03T00:00:00Z" />
+	
+		<meta name="breadcrumb_path" content="/connectors/breadcrumb/toc.json" />
+	
+		<meta name="feedback_system" content="None" />
+	
+		<meta name="contributors" content="sunaysv" />
+	
+		<meta name="ms.workload" content="connectors" />
+	
+		<meta name="ms.topic" content="how-to" />
+	
+		<meta name="ms.reviewer" content="ellenwehrle" />
+	
+		<meta name="ms.custom" content="sfi-image-blocked" />
+	
+		<meta name="ai-usage" content="ai-assisted" />
+	
+		<meta name="document_id" content="9659a345-1116-5020-4300-386f3a591c2e" />
+	
+		<meta name="document_version_independent_id" content="e2a3861f-d3d5-f542-28db-1897d4c7feb0" />
+	
+		<meta name="updated_at" content="2026-10-10T01:07:00Z" />
+	
+		<meta name="original_content_git_url" content="https://github.com/MicrosoftDocs/BusinessApplicationPlatform-Connectors/blob/live/docs/custom-connectors/define-openapi-definition.md" />
+	
+		<meta name="gitcommit" content="https://github.com/MicrosoftDocs/BusinessApplicationPlatform-Connectors/blob/281f828cffb3e4dd818abd0999a8166149615a59/docs/custom-connectors/define-openapi-definition.md" />
+	
+		<meta name="git_commit_id" content="281f828cffb3e4dd818abd0999a8166149615a59" />
+	
+		<meta name="site_name" content="Docs" />
+	
+		<meta name="depot_name" content="MSDN.businessplatform-connectors" />
+	
+		<meta name="schema" content="Conceptual" />
+	
+		<meta name="toc_rel" content="../toc.json" />
+	
+		<meta name="feedback_product_url" content="" />
+	
+		<meta name="feedback_help_link_type" content="" />
+	
+		<meta name="feedback_help_link_url" content="" />
+	
+		<meta name="word_count" content="2012" />
+	
+		<meta name="asset_id" content="custom-connectors/define-openapi-definition" />
+	
+		<meta name="moniker_range_name" content="" />
+	
+		<meta name="item_type" content="Content" />
+	
+		<meta name="source_path" content="docs/custom-connectors/define-openapi-definition.md" />
+	
+		<meta name="previous_tlsh_hash" content="AED4DB22324CDB11FFC34E0251327990ACF888482D502FCC2670BE5796896EF30BE24569DB0BA72A033297130166945E59FAD734C8AF33D245561978C1A8EE75BBED3EB7CA" />
+	
+		<meta name="github_feedback_content_git_url" content="https://github.com/MicrosoftDocs/BusinessApplicationPlatform-Connectors/blob/live/docs/custom-connectors/define-openapi-definition.md" />
+	
+		<meta name="markdown_url" content="https://learn.microsoft.com/en-us/connectors/custom-connectors/define-openapi-definition?accept=text/markdown" />
+	 
+		<meta name="cmProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/e60d1924-c4ad-4104-bd1b-973758bbac7a" data-source="generated" />
+	
+		<meta name="cmProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/1ae5c491-970a-4062-8301-6336e69f9026" data-source="generated" />
+	
+		<meta name="cmProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/5bc9163f-0a3f-4ea9-8ac5-a1945a4c162f" data-source="generated" />
+	
+		<meta name="spProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/91d5f984-ee3d-43c4-9daf-bb09a6bc4e1a" data-source="generated" />
+	
+		<meta name="spProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/f2c3e52e-3667-4e8a-bf11-20b9eaccdc8c" data-source="generated" />
+	
+		<meta name="spProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/8c929cae-d11e-42a1-8868-48f7e5aa7c42" data-source="generated" />
+	
+
+			<!-- Apply persisted/system theme before first paint to prevent wrong-theme flash when scripts are deferred. -->
+			<script id="theme-preference">
+				(function () {
+			try {
+				var stored = localStorage.getItem('theme');
+				var theme = /^(light|dark|high-contrast)$/.test(stored)
+					? stored
+					: matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+				document.documentElement.classList.add('theme-' + theme);
+			} catch (e) {}
+		})();;
+			</script>
+
+			<script id="atlas-layout-preferences">
+				(function () {
+			try {
+				var state = JSON.parse(localStorage.getItem('atlas-layout-preferences') || '{}');
+				var view = state["docs-layout-persistence"] || {};
+				var excludesKey = "";
+				var blocked = {};
+				if (excludesKey) {
+					var exclusions = JSON.parse(localStorage.getItem('atlas-layout-exclusions') || '{}');
+					if (Object.prototype.hasOwnProperty.call(exclusions, excludesKey)) {
+						var scoped = exclusions[excludesKey];
+						if (scoped) {
+							if (typeof scoped === 'object') blocked = scoped;
+						}
+					}
+				}
+				var html = document.documentElement;
+				for (var c in view) {
+					if (Object.prototype.hasOwnProperty.call(blocked, c)) continue;
+					if (view[c]) html.classList.add(c);
+					else html.classList.remove(c);
+				}
+			} catch (e) {}
+		})();;
+			</script>
+
+			<!-- assets and js globals -->
+			
+			<link rel="stylesheet" href="/static/assets/0.4.03574.8308-9505b1c8/styles/site.css" />
+			
+			<script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+			<!-- Keep this URL in sync with oneDSScriptSelector in instrumentation/one-ds.ts. -->
+			<script async src="https://js.monitor.azure.com/scripts/c/ms.jsll-4.min.js"></script>
+			
+
+			<!-- msdocs global object -->
+			<script id="msdocs-script">
+		var msDocs = {
+  "environment": {
+    "accessLevel": "online",
+    "azurePortalHostname": "portal.azure.com",
+    "reviewFeatures": false,
+    "supportLevel": "production",
+    "systemContent": true,
+    "siteName": "learn",
+    "legacyHosting": false
+  },
+  "data": {
+    "contentLocale": "en-us",
+    "contentDir": "ltr",
+    "userLocale": "en-us",
+    "userDir": "ltr",
+    "pageTemplate": "Conceptual",
+    "layoutStateStorageKey": "docs-layout-persistence",
+    "brand": "",
+    "context": {},
+    "standardFeedback": false,
+    "showFeedbackReport": false,
+    "feedbackHelpLinkType": "",
+    "feedbackHelpLinkUrl": "",
+    "feedbackSystem": "None",
+    "feedbackGitHubRepo": "",
+    "feedbackProductUrl": "",
+    "extendBreadcrumb": false,
+    "isEditDisplayable": false,
+    "isPrivateUnauthorized": false,
+    "hideViewSource": false,
+    "isPermissioned": false,
+    "hasRecommendations": true
+  },
+  "functions": {}
+};;
+	</script>
+
+			<!-- base scripts, msdocs global should be before this -->
+			<script
+				src="/static/assets/0.4.03574.8308-9505b1c8/scripts/en-us/index-docs.js"
+				async
+			></script>
+			
+
+			<!-- json-ld -->
+			
+		</head>
+	
+			<body
+				id="body"
+				data-bi-name="body"
+				class="layout-body "
+				lang="en-us"
+				dir="ltr"
+			>
+				<header class="layout-body-header background-color-body-medium">
+		<div class="header-holder has-default-focus">
+			
+		<a
+			href="#main"
+			
+			style="z-index: 1070"
+			class="outline-color-text visually-hidden-until-focused position-fixed inner-focus focus-visible top-0 left-0 right-0 padding-xs text-align-center background-color-body"
+			
+		>
+			Skip to main content
+		</a>
+	
+		<a
+			href="#"
+			data-skip-to-ask-learn
+			style="z-index: 1070"
+			class="outline-color-text visually-hidden-until-focused position-fixed inner-focus focus-visible top-0 left-0 right-0 padding-xs text-align-center background-color-body"
+			hidden
+		>
+			Skip to Ask Learn chat experience
+		</a>
+	
+
+			<div hidden id="cookie-consent-holder" data-test-id="cookie-consent-container"></div>
+			<!-- Unsupported browser warning -->
+			<div
+				id="unsupported-browser"
+				style="background-color: white; color: black; padding: 16px; border-bottom: 1px solid grey;"
+				hidden
+			>
+				<div style="max-width: 800px; margin: 0 auto;">
+					<p style="font-size: 24px">This browser is no longer supported.</p>
+					<p style="font-size: 16px; margin-top: 16px;">
+						Upgrade to Microsoft Edge to take advantage of the latest features, security updates, and technical support.
+					</p>
+					<div style="margin-top: 12px;">
+						<a
+							href="https://go.microsoft.com/fwlink/p/?LinkID=2092881 "
+							style="background-color: #0078d4; border: 1px solid #0078d4; color: white; padding: 6px 12px; border-radius: 2px; display: inline-block;"
+						>
+							Download Microsoft Edge
+						</a>
+						<a
+							href="https://learn.microsoft.com/en-us/lifecycle/faq/internet-explorer-microsoft-edge"
+							style="background-color: white; padding: 6px 12px; border: 1px solid #505050; color: #171717; border-radius: 2px; display: inline-block;"
+						>
+							More info about Internet Explorer and Microsoft Edge
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- site header -->
+			<div
+				id="ms--site-header"
+				data-test-id="site-header-wrapper"
+				itemscope="itemscope"
+				itemtype="http://schema.org/Organization"
+			>
+				<div
+					id="ms--mobile-nav"
+					class="site-header display-none-tablet padding-inline-none gap-none"
+					data-bi-name="mobile-header"
+					data-test-id="mobile-header"
+				></div>
+				<div
+					id="ms--primary-nav"
+					class="site-header display-none display-flex-tablet"
+					data-bi-name="L1-header"
+					data-test-id="primary-header"
+				></div>
+				<div
+					id="ms--secondary-nav"
+					class="site-header display-none display-flex-tablet"
+					data-bi-name="L2-header"
+					data-test-id="secondary-header"
+					
+				></div>
+			</div>
+			
+		<!-- banner -->
+		<div data-banner>
+			<div id="disclaimer-holder"></div>
+			
+		</div>
+		<!-- banner end -->
+	
+		</div>
+	</header>
+				 <section
+					id="layout-body-menu"
+					class="layout-body-menu border-right display-flex background-color-body-medium"
+					data-bi-name="menu"
+			  >
+					
+		<div
+			id="left-container"
+			class="left-container display-none padding-none display-block-tablet width-full display-none-until-layout-restored"
+			data-toc-container="true"
+		>
+			<div
+				id="ms--toc-content"
+				class="padding-left-sm padding-right-none padding-bottom-sm height-full"
+			>
+				<nav
+					id="affixed-left-container"
+					class="margin-top-xxs-tablet position-sticky display-flex flex-direction-column width-full"
+					aria-label="Primary"
+					data-bi-name="left-toc"
+					role="navigation"
+				>
+					<div
+						id="ms--collapsible-toc-header"
+						class="display-flex flex-direction-row-reverse justify-content-center align-items-center margin-bottom-xxs margin-right-xxs"
+					>
+						<button
+							type="button"
+							class="button button-clear button-sm inner-focus"
+							data-collapsible-toc-toggle
+							aria-expanded="true"
+							hidden
+							aria-controls="ms--toc-content"
+							aria-label="Table of contents"
+						>
+							<span class="icon icon-mirrored-rtl" aria-hidden="true">
+								<span
+									class="docon docon-panel-left-contract display-none-layout-menu-collapsed"
+								></span>
+								<span
+									class="docon docon-panel-left-expand display-none display-inline-layout-menu-collapsed"
+								></span>
+							</span>
+						</button>
+						<div
+							id="ms--collapsible-toc-moniker-slot"
+							class="flex-grow-1 display-none-layout-menu-collapsed"
+						></div>
+					</div>
+				</nav>
+			</div>
+		</div>
+	
+			  </section>
+
+				<main
+					id="main"
+					role="main"
+					class="layout-body-main "
+					data-bi-name="content"
+					lang="en-us"
+					dir="ltr"
+				>
+					
+			<div
+		id="ms--content-header"
+		class="content-header default-focus border-bottom-none"
+		data-bi-name="content-header"
+	>
+		<div class="content-header-controls margin-xxs margin-inline-sm-tablet">
+			<button
+				type="button"
+				class="contents-button button button-sm margin-right-xxs"
+				data-bi-name="contents-expand"
+				aria-haspopup="true"
+				data-contents-button
+			>
+				<span class="icon" aria-hidden="true"><span class="docon docon-menu"></span></span>
+				<span class="contents-expand-title"> Table of contents </span>
+			</button>
+			<button
+				type="button"
+				class="ap-collapse-behavior ap-expanded button button-sm"
+				data-bi-name="ap-collapse"
+				aria-controls="action-panel"
+			>
+				<span class="icon" aria-hidden="true"><span class="docon docon-exit-mode"></span></span>
+				<span>Exit editor mode</span>
+			</button>
+		</div>
+	</div> 
+		<div
+			id="action-panel"
+			role="region"
+			aria-label="Action Panel"
+			class="action-panel"
+			tabindex="-1"
+		></div>
+	
+			<div
+				data-main-column
+				class="reading-width margin-inline-auto layout-padding padding-top-none padding-top-sm-tablet padding-bottom-sm"
+			>
+				<div>
+					
+		<div id="article-header" class="background-color-body margin-bottom-xs display-none-print">
+			<div class="display-flex align-items-center justify-content-space-between">
+				
+		<details
+			id="article-header-breadcrumbs-overflow-popover"
+			class="popover popover-left"
+			data-for="article-header-breadcrumbs"
+		>
+			<summary
+				class="button button-clear button-primary button-sm inner-focus"
+				aria-label="All breadcrumbs"
+			>
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-more"></span>
+				</span>
+			</summary>
+			<div id="article-header-breadcrumbs-overflow" class="popover-content"></div>
+		</details>
+
+		<bread-crumbs
+			id="article-header-breadcrumbs"
+			role="group"
+			aria-label="Breadcrumbs"
+			data-test-id="article-header-breadcrumbs"
+			class="overflow-hidden flex-grow-1 margin-right-sm margin-right-md-tablet margin-right-lg-desktop margin-left-negative-xxs padding-left-xxs"
+		></bread-crumbs>
+	 
+		<div
+			id="article-header-page-actions"
+			class="opacity-none margin-left-auto display-flex flex-wrap-no-wrap align-items-stretch"
+		>
+			
+		<button
+			class="button button-sm border-none inner-focus display-none-tablet flex-shrink-0 "
+			data-bi-name="ask-learn-assistant-entry"
+			data-test-id="ask-learn-assistant-modal-entry-mobile"
+			data-ask-learn-modal-entry
+			
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-label="Ask Learn"
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+		</button>
+		<button
+			class="button button-sm display-none display-inline-flex-tablet display-none-desktop flex-shrink-0 margin-right-xxs border-color-ask-learn "
+			data-bi-name="ask-learn-assistant-entry"
+			
+			data-test-id="ask-learn-assistant-modal-entry-tablet"
+			data-ask-learn-modal-entry
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+		<button
+			class="button button-sm display-none flex-shrink-0 display-inline-flex-desktop margin-right-xxs border-color-ask-learn "
+			data-bi-name="ask-learn-assistant-entry"
+			
+			data-test-id="ask-learn-assistant-flyout-entry"
+			data-ask-learn-flyout-entry
+			data-flyout-button="toggle"
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-controls="ask-learn-flyout"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+	 
+
+			<details class="popover popover-right" id="article-header-page-actions-overflow">
+				<summary
+					class="justify-content-flex-start button button-clear button-sm button-primary inner-focus"
+					aria-label="More actions"
+					aria-expanded="false"
+					title="More actions"
+				>
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-more-vertical"></span>
+					</span>
+				</summary>
+				<div class="popover-content">
+					
+		<button
+			type="button"
+			id="ms--focus-mode-button"
+			data-focus-mode
+			data-bi-name="focus-mode-entry"
+			data-page-action-item="overflow-all"
+			data-popover-close
+			class="button button-clear button-sm button-block justify-content-flex-start text-align-left inner-focus display-none display-inline-flex-tablet"
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-glasses"></span>
+			</span>
+			<span>Reading mode</span>
+		</button>
+	 
+		<button
+			data-page-action-item="overflow-mobile"
+			type="button"
+			class="display-block-layout-menu-collapsed button-block button-sm inner-focus button button-clear display-none-tablet justify-content-flex-start text-align-left"
+			data-bi-name="contents-expand"
+			data-contents-button
+			data-popover-close
+		>
+			<span class="icon" aria-hidden="true"
+				><span class="docon docon-editor-list-bullet"></span
+			></span>
+			<span class="contents-expand-title">Table of contents</span>
+		</button>
+	 
+		<a
+			id="lang-link-overflow"
+			class="button-sm inner-focus button button-clear button-block justify-content-flex-start text-align-left"
+			data-bi-name="language-toggle"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-read-in-link
+			href="#"
+			hidden
+		>
+			<span class="icon" aria-hidden="true" data-read-in-link-icon>
+				<span class="docon docon-locale-globe"></span>
+			</span>
+			<span data-read-in-link-text>Read in English</span>
+		</a>
+	
+					
+		<button
+			type="button"
+			class="collection button button-clear button-sm button-block justify-content-flex-start text-align-left inner-focus"
+			data-list-type="collection"
+			data-bi-name="collection"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-popover-close
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-circle-addition"></span>
+			</span>
+			<span class="collection-status">Add</span>
+		</button>
+	 
+		<button
+			type="button"
+			class="collection button button-block button-clear button-sm justify-content-flex-start text-align-left inner-focus"
+			data-list-type="plan"
+			data-bi-name="plan"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-popover-close
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-circle-addition"></span>
+			</span>
+			<span class="plan-status">Add to Plans</span>
+		</button>
+	 
+					
+		<a
+			data-contenteditbtn
+			class="button button-clear button-block button-sm inner-focus justify-content-flex-start text-align-left text-decoration-none"
+			data-bi-name="edit"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			hidden
+			href=""
+			data-original_content_git_url="https://github.com/MicrosoftDocs/BusinessApplicationPlatform-Connectors/blob/live/docs/custom-connectors/define-openapi-definition.md"
+			data-original_content_git_url_template="{repo}/blob/{branch}/docs/custom-connectors/define-openapi-definition.md"
+			data-pr_repo=""
+			data-pr_branch=""
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-edit-outline"></span>
+			</span>
+			<span>Edit</span>
+		</a>
+	  
+		<hr class="margin-block-xxs" />
+		
+				<button
+					class="button button-block button-clear button-sm justify-content-flex-start text-align-left inner-focus"
+					type="button"
+					data-bi-name="copy-markdown"
+					data-page-action-item="overflow-all"
+					data-copy-markdown
+					data-copy-state="idle"
+					data-check-hidden="true"
+				>
+					<span class="icon color-primary" aria-hidden="true">
+						<span data-show-when="idle" class="docon docon-code-lang"></span>
+						<span data-show-when="loading" class="loader" hidden></span>
+						<span data-show-when="success" class="docon docon-check-mark" hidden></span>
+					</span>
+					<span>Copy Markdown</span>
+				</button>
+		   
+				<button
+					class="button button-block button-clear button-sm justify-content-flex-start text-align-left inner-focus"
+					type="button"
+					data-bi-name="print"
+					data-page-action-item="overflow-all"
+					data-popover-close
+					data-print-page
+					data-check-hidden="true"
+				>
+					<span class="icon color-primary" aria-hidden="true">
+						<span class="docon docon-print"></span>
+					</span>
+					<span>Print</span>
+				</button>
+		  
+	
+				</div>
+			</details>
+		</div>
+	
+			</div>
+		</div>
+	  
+		<!-- privateUnauthorizedTemplate is hidden by default -->
+		<div unauthorized-private-section data-bi-name="permission-content-unauthorized-private" hidden>
+			<hr class="hr margin-top-xs margin-bottom-sm" />
+			<div class="notification notification-info">
+				<div class="notification-content">
+					<p class="margin-top-none notification-title">
+						<span class="icon" aria-hidden="true"
+							><span class="docon docon-exclamation-circle-solid"></span
+						></span>
+						<span>Note</span>
+					</p>
+					<p class="margin-top-none authentication-determined not-authenticated">
+						Access to this page requires authorization. You can try <a class="docs-sign-in" href="#" data-bi-name="permission-content-sign-in">signing in</a> or <a  class="docs-change-directory" data-bi-name="permisson-content-change-directory">changing directories</a>.
+					</p>
+					<p class="margin-top-none authentication-determined authenticated">
+						Access to this page requires authorization. You can try <a class="docs-change-directory" data-bi-name="permisson-content-change-directory">changing directories</a>.
+					</p>
+				</div>
+			</div>
+		</div>
+	
+					<div class="content"><h1 id="create-a-custom-connector-from-an-openapi-definition">Create a custom connector from an OpenAPI definition</h1></div>
+					
+		<div
+			id="article-metadata"
+			data-bi-name="article-metadata"
+			data-test-id="article-metadata"
+			class="page-metadata-container display-flex gap-xxs justify-content-space-between align-items-center flex-wrap-wrap"
+		>
+			 
+				<div
+					id="user-feedback"
+					class="margin-block-xxs display-none display-none-print"
+					hidden
+					data-hide-on-archived
+				>
+					
+		<button
+			id="user-feedback-button"
+			data-test-id="conceptual-feedback-button"
+			class="button button-sm button-clear button-primary display-none"
+			type="button"
+			data-bi-name="user-feedback-button"
+			data-user-feedback-button
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-like"></span>
+			</span>
+			<span>Feedback</span>
+		</button>
+	
+				</div>
+		  
+		</div>
+	 
+		<div data-id="ai-summary" class="display-none-print">
+			<div id="ms--ai-summary-cta" class="margin-top-xs display-flex align-items-center">
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-sparkle-fill gradient-text-vivid"></span>
+				</span>
+				<button
+					id="ms--ai-summary"
+					type="button"
+					class="tag tag-sm tag-suggestion margin-left-xxs"
+					data-test-id="ai-summary-cta"
+					data-bi-name="ai-summary-cta"
+					data-an="ai-summary"
+				>
+					<span class="ai-summary-cta-text">
+						Summarize this article for me
+					</span>
+				</button>
+			</div>
+			<!-- Slot where the client will render the summary card after the user clicks the CTA -->
+			<div id="ms--ai-summary-header" class="margin-top-xs"></div>
+		</div>
+	 
+		<nav
+			id="center-doc-outline"
+			class="doc-outline display-none-desktop display-none-print margin-bottom-sm"
+			data-bi-name="intopic toc"
+			aria-label="In this article"
+		>
+			<h2 id="ms--in-this-article" class="title is-6 margin-block-xs">
+				In this article
+			</h2>
+		</nav>
+	 <div class="content"><div class="NOTE">
+<p>Note</p>
+<p>This article is part of a tutorial series on creating and using custom connectors in Azure Logic Apps, Microsoft Power Automate and Microsoft Power Apps, and <a href="/en-us/microsoft-copilot-studio/advanced-connectors" data-linktype="absolute-path">calling connectors as tools in Microsoft Copilot Studio</a>. Make sure you read the <a href="./" data-linktype="relative-path">custom connector overview</a> to understand the process.</p>
+</div>
+<p>To create a custom connector, you must describe the API you want to connect to so that the connector understands the API's operations and data structures. In this topic, you create a custom connector using an OpenAPI definition that describes the Cognitive Services Text Analytics Sentiment API (our example for this series).</p>
+<p>For another way to describe an API, go to <a href="define-blank" data-linktype="relative-path">Create a custom connector from scratch</a>.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li><p>An <a href="https://learn.openapis.org/specification/structure.html" data-linktype="external">OpenAPI Definition (OAD)</a> that describes the example API. When creating a custom connector, the OpenAPI definition must be less than 1 MB. The OpenAPI definition needs to be in <a href="https://spec.openapis.org/oas/v2.0.html" data-linktype="external">OpenAPI 2.0</a> (formerly known as Swagger) format.</p>
+<p>If there are multiple security definitions, the custom connector picks the top security definition. Custom connector creation doesn't support client credentials (for example, application and password) in OAuth security definition.</p>
+</li>
+<li><p>An <a href="/en-us/connectors/custom-connectors/#get-an-api-key" data-linktype="absolute-path">API key</a> for the Cognitive Services Text Analytics API.</p>
+</li>
+<li><p>One of the following subscriptions:</p>
+<ul>
+<li><a href="https://azure.microsoft.com/get-started/" data-linktype="external">Azure</a>, if you're using Logic Apps</li>
+<li><a href="/en-us/power-automate/sign-up-sign-in" data-linktype="absolute-path">Power Automate</a></li>
+<li><a href="/en-us/power-apps/maker/signup-for-powerapps" data-linktype="absolute-path">Power Apps</a></li>
+</ul>
+</li>
+<li><p>If you're using Logic Apps, first <a href="create-logic-apps-connector" data-linktype="relative-path">create an Azure Logic Apps custom connector</a>.</p>
+</li>
+</ul>
+<div class="NOTE">
+<p>Note</p>
+<ul>
+<li><p>An OpenAPI definition needs to be in <a href="https://spec.openapis.org/oas/v2.0.html" data-linktype="external">OpenAPI 2.0</a> (formerly known as Swagger) format. OpenAPI definitions that are in OpenAPI 3.0 format are not supported.</p>
+</li>
+<li><p><a href="https://learn.openapis.org/glossary#a-note-on-the-history-of-document-definition-and-description" data-linktype="external">The use of <em>document</em>, <em>definition</em>, and <em>description</em> are evolving in OpenAPI Specifications.</a>. You may see the terms, definition and description, written interchangeably in this article.</p>
+</li>
+</ul>
+</div>
+<div class="IMPORTANT">
+<p>Important</p>
+<p>You can only use American Standard Code for Information Interchange (ASCII) characters for header names and values in connector requests and responses. Using non-ASCII characters might cause validation failures.</p>
+</div>
+<h2 id="import-the-openapi-definition">Import the OpenAPI definition</h2>
+<p>This tutorial uses a sample OpenAPI definition for the Cognitive Services Text Analytics Sentiment API. To follow along, create a local JSON file named <code>SentimentDemo.json</code> and paste in the following OpenAPI 2.0 definition:</p>
+<pre><code class="lang-json">{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "SentimentDemo",
+    "description": "Uses the Cognitive Services Text Analytics Sentiment API to determine whether text is positive or negative"
+  },
+  "host": "westus.api.cognitive.microsoft.com",
+  "basePath": "/",
+  "schemes": ["https"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "securityDefinitions": {
+    "api_key": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "Ocp-Apim-Subscription-Key"
+    }
+  },
+  "security": [{"api_key": []}],
+  "paths": {
+    "/text/analytics/v2.0/sentiment": {
+      "post": {
+        "summary": "Returns a numeric score representing the sentiment detected",
+        "description": "The API returns a numeric score between 0 and 1. Scores close to 1 indicate positive sentiment, while scores close to 0 indicate negative sentiment.",
+        "operationId": "DetectSentiment",
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "documents": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {"type": "string", "x-ms-summary": "id"},
+                    "language": {"type": "string", "x-ms-summary": "language"},
+                    "text": {"type": "string", "x-ms-summary": "text"}
+                  }
+                }
+              }
+            }
+          }
+        }],
+        "responses": {
+          "200": {
+            "description": "200",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "documents": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "score": {"type": "number", "format": "float", "description": "score", "x-ms-summary": "score"},
+                      "id": {"type": "string", "description": "id", "x-ms-summary": "id"}
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+</code></pre>
+<p>You're now ready to import this OpenAPI definition. The definition contains all the required information. You can review and update this information as you go through the custom connector wizard.</p>
+<p>Start by importing the OpenAPI definition for <a href="#import-the-openapi-definition-for-logic-apps" data-linktype="self-bookmark">Logic Apps</a>, or for <a href="#import-the-openapi-definition-for-power-automate-and-power-apps" data-linktype="self-bookmark">Power Automate and Power Apps</a>.</p>
+<h3 id="import-the-openapi-definition-for-logic-apps">Import the OpenAPI definition for Logic Apps</h3>
+<ol>
+<li><p>Go to the <a href="https://portal.azure.com" data-linktype="external">Azure portal</a>, and open the Logic Apps connector you created earlier in <a href="create-logic-apps-connector" data-linktype="relative-path">Create an Azure Logic Apps custom connector</a>.</p>
+</li>
+<li><p>In your connector's menu, select <strong>Logic Apps Connector</strong>, and then select <strong>Edit</strong>.</p>
+<p><img src="media/define-openapi-definition/logic-apps-edit-connector.png" alt="Edit Logic Apps Connector." data-linktype="relative-path"></p>
+</li>
+<li><p>Under <strong>General</strong>, select <strong>Upload an OpenAPI file</strong>, and then go to the OpenAPI definition that you created.</p>
+<p><img src="media/define-openapi-definition/logic-apps-upload-definition.png" alt="Upload OpenAPI file." data-linktype="relative-path"></p>
+</li>
+</ol>
+<div class="NOTE">
+<p>Note</p>
+<p>This tutorial focuses on a REST API, but you can also <a href="create-register-logic-apps-soap-connector" data-linktype="relative-path">use a SOAP API with Logic Apps</a>.</p>
+</div>
+<h3 id="import-the-openapi-definition-for-power-automate-and-power-apps">Import the OpenAPI definition for Power Automate and Power Apps</h3>
+<ol>
+<li><p>Sign in to <a href="https://make.powerapps.com" data-linktype="external">Power Apps</a> or <a href="https://flow.microsoft.com" data-linktype="external">Power Automate</a>.</p>
+</li>
+<li><p>On the left pane, select <strong>Solutions</strong>, then open the solution you want to use, or create a new one.</p>
+</li>
+<li><p>Select <strong>New</strong> &gt; <strong>Automation</strong> &gt; <strong>Custom connector</strong>.</p>
+</li>
+<li><p>Select <strong>Import an OpenAPI file</strong>.</p>
+</li>
+<li><p>Enter a name for the custom connector, select the <code>SentimentDemo.json</code> file you created, and then select <strong>Continue</strong>.</p>
+<p><img src="media/define-openapi-definition/flow-apps-upload-definition.png" alt="Upload a collection." data-linktype="relative-path"></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Custom connector title</td>
+<td>SentimentDemo</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<h2 id="review-general-details">Review general details</h2>
+<p>From this point, we'll show the Power Automate UI, but the steps are largely the same across all three technologies. We'll point out any differences. In this part of the topic, we'll mostly review the UI and show you how the values correspond to sections of the OpenAPI file.</p>
+<ol>
+<li><p>At the top of the wizard, make sure the name is set to <strong>SentimentDemo</strong>, and then select <strong>Create connector</strong>.</p>
+</li>
+<li><p>On the <strong>General</strong> page, review the information that was imported from the OpenAPI definition, including the API host and the base URL for the API. The connector uses the API host and the base URL to determine how to call the API.</p>
+<p><img src="media/define-openapi-definition/page-general.png" alt="Custom connector General page." data-linktype="relative-path"></p>
+<div class="NOTE">
+<p>Note</p>
+<p>For more information about connecting to on-premises APIs, go to <a href="https://go.microsoft.com/fwlink/?linkid=857646" data-linktype="external">Connect to on-premises APIs using the data gateway</a>.</p>
+</div>
+<p>The following section of the OpenAPI definition contains information for this page of the UI:</p>
+<pre><code class="lang-JSON">  "info": {
+    "version": "1.0.0",
+    "title": "SentimentDemo",
+    "description": "Uses the Cognitive Services Text Analytics Sentiment API to determine whether text is positive or negative"
+  },
+  "host": "westus.api.cognitive.microsoft.com",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ]
+</code></pre>
+</li>
+</ol>
+<h2 id="review-authentication-type">Review authentication type</h2>
+<p>There are several options available for authentication in custom connectors. The Cognitive Services APIs use API key authentication, so that's what's specified in the OpenAPI definition.</p>
+<p>On the <strong>Security</strong> page, review the authentication information for the API key.</p>
+<p><img src="media/define-openapi-definition/api-key-parameters.png" alt="API key parameters." data-linktype="relative-path"></p>
+<p>The label is displayed when someone first makes a connection with the custom connector; you can select <strong>Edit</strong> and change this value. The parameter name and location must match what the API expects, in this case <strong>Ocp-Apim-Subscription-Key</strong> and <strong>Header</strong>.</p>
+<p>The following section of the OpenAPI definition contains information for this page of the UI:</p>
+<pre><code class="lang-JSON">  "securityDefinitions": {
+    "api_key": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "Ocp-Apim-Subscription-Key"
+    }
+  }
+</code></pre>
+<h2 id="review-the-connector-definition">Review the connector definition</h2>
+<p>The <strong>Definition</strong> page of the custom connector wizard gives you many options for defining how your connector functions and how it's exposed in logic apps, flows, and apps. We'll explain the UI and cover a few options in this section, but we also encourage you to explore on your own. For information on defining objects from scratch in this UI, go to <a href="define-blank#step-3-create-the-connector-definition" data-linktype="relative-path">Create the connector definition</a>.</p>
+<ol>
+<li><p>The following area displays any actions, triggers (for Logic Apps and Power Automate), and references that are defined for the connector. In this case, the <code>DetectSentiment</code> action from the OpenAPI definition is displayed. There are no triggers in this connector, but you can learn about triggers for custom connectors in <a href="create-webhook-trigger" data-linktype="relative-path">Use webhooks with Azure Logic Apps and Power Automate</a>.</p>
+<p><img src="media/define-openapi-definition/definition-actions-triggers.png" alt="Definition page - actions and triggers." data-linktype="relative-path"></p>
+</li>
+<li><p>The <strong>General</strong> area displays information about the action or trigger currently selected. You can edit the information here, including the <strong>Visibility</strong> property for operations and parameters in a logic app or flow:</p>
+<ul>
+<li><p><strong>none</strong>: displayed normally in the logic app or flow</p>
+</li>
+<li><p><strong>advanced</strong>: hidden under an additional menu</p>
+</li>
+<li><p><strong>internal</strong>: hidden from the user</p>
+</li>
+<li><p><strong>important</strong>: always shown to the user first</p>
+<p><img src="media/define-openapi-definition/definition-general.png" alt="Definition page - general." data-linktype="relative-path"></p>
+</li>
+</ul>
+</li>
+<li><p>The <strong>Request</strong> area displays information based on the HTTP request that's included in the OpenAPI definition. In this case, you see that the HTTP verb is <strong>POST</strong>, and the URL is <strong>/text/analytics/v2.0/sentiment</strong> (the full URL to the API is <code>&lt;https://westus.api.cognitive.microsoft.com//text/analytics/v2.0/sentiment&gt;</code>). We'll look more closely at the <strong>body</strong> parameter shortly.</p>
+<p><img src="media/define-openapi-definition/definition-request.png" alt="Definition page - request." data-linktype="relative-path"></p>
+<p>The following section of the OpenAPI definition contains information for the <strong>General</strong> and <strong>Request</strong> areas of the UI:</p>
+<pre><code class="lang-JSON">"paths": {
+  "/text/analytics/v2.0/sentiment": {
+    "post": {
+      "summary": "Returns a numeric score representing the sentiment detected",
+      "description": "The API returns a numeric score between 0 and 1. Scores close to 1 indicate positive sentiment, while scores close to 0 indicate negative sentiment.",
+      "operationId": "DetectSentiment"
+</code></pre>
+</li>
+<li><p>The <strong>Response</strong> area displays information based on the HTTP response that's included in the OpenAPI definition. In this case, the only response defined is for <strong>200</strong> (a successful response), but you can define additional responses.</p>
+<p><img src="media/define-openapi-definition/definition-response.png" alt="Definition page - response." data-linktype="relative-path"></p>
+<p>The following section of the OpenAPI definition contains some of the information related to the response:</p>
+<pre><code class="lang-JSON">"score": {
+ "type": "number",
+ "format": "float",
+ "description": "score",
+ "x-ms-summary": "score"
+},
+"id": {
+ "type": "string",
+ "description": "id",
+ "x-ms-summary": "id"
+}
+</code></pre>
+<p>This section shows the two values that are returned by the connector: <code>id</code> and <code>score</code>. It includes their data types and the field <code>x-ms-summary</code>, which is an OpenAPI extension. For more information on this and other extensions, go to <a href="openapi-extensions" data-linktype="relative-path">Extend an OpenAPI definition for a custom connector</a>.</p>
+</li>
+<li><p>The <strong>Validation</strong> area displays any issues that are detected in the API definition. Make sure to check this area before you save a connector.</p>
+<p><img src="media/define-openapi-definition/definition-validation.png" alt="Definition page - validation." data-linktype="relative-path"></p>
+</li>
+</ol>
+<h3 id="update-the-definition">Update the definition</h3>
+<p>The OpenAPI definition you downloaded is a good basic example, but you might work with definitions that require much updating so that the connector is more friendly when someone uses it in a logic app, flow, or app. We'll show you how to make a change to the definition.</p>
+<ol>
+<li><p>In the <strong>Request</strong> area, select <strong>body</strong>, and then select <strong>Edit</strong>.</p>
+<p><img src="media/define-openapi-definition/request-body.png" alt="Edit request body." data-linktype="relative-path"></p>
+</li>
+<li><p>In the <strong>Parameter</strong> area, you now see the three parameters that the API expects: <code>ID</code>, <code>Language</code>, and <code>Text</code>. Select <strong>ID</strong>, and then select <strong>Edit</strong>.</p>
+<p><img src="media/define-openapi-definition/request-body-id.png" alt="Edit request body id." data-linktype="relative-path"></p>
+</li>
+<li><p>In the <strong>Schema Property</strong> area, update the description for the parameter, and then select <strong>Back</strong>.</p>
+<p><img src="media/define-openapi-definition/request-edit-schema.png" alt="Edit schema property." data-linktype="relative-path"></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Description</td>
+<td>A numeric identifier for each document that you submit</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>In the <strong>Parameter</strong> area, select <strong>Back</strong> to take you back to the main definition page.</p>
+</li>
+<li><p>In the upper-right corner of the wizard, select <strong>Update connector</strong>.</p>
+</li>
+</ol>
+<h2 id="download-the-updated-openapi-file">Download the updated OpenAPI file</h2>
+<p>You can create a custom connector from an OpenAPI file or from scratch (in Power Automate and Power Apps). Regardless of how you create the connector, you can download the OpenAPI definition that the service uses internally.</p>
+<ul>
+<li><p>In Logic Apps, download from the custom connector.</p>
+<p><img src="media/define-openapi-definition/download-definition-logic-apps.png" alt="Download OpenAPI definition for Logic Apps." data-linktype="relative-path"></p>
+</li>
+<li><p>In Power Automate or Power Apps, download from the list of custom connectors.</p>
+<p><img src="media/define-openapi-definition/download-definition-flow-apps.png" alt="Download OpenAPI definition for Power Automate." data-linktype="relative-path"></p>
+</li>
+</ul>
+<h2 id="test-the-connector">Test the connector</h2>
+<p>Now that you've created the connector, test it to make sure it's working properly. Testing is currently available only in Power Automate and Power Apps.</p>
+<div class="IMPORTANT">
+<p>Important</p>
+<p>When using an API key, we recommend against testing the connector immediately after you create it. It can take a few minutes until the connector is ready to connect to the API.</p>
+</div>
+<ol>
+<li><p>On the <strong>Test</strong> page, select <strong>New connection</strong>.</p>
+</li>
+<li><p>Enter the API key from the Text Analytics API, and then select <strong>Create connection</strong>.</p>
+</li>
+<li><p>Return to the <strong>Test page</strong>, and do one of the following:</p>
+<ul>
+<li><p>In Power Automate, you're taken back to the <strong>Test</strong> page. Select the refresh icon to make sure the connection information is updated.</p>
+<p><img src="media/define-openapi-definition/refresh-connection.png" alt="Refresh connection." data-linktype="relative-path"></p>
+</li>
+<li><p>In Power Apps, you're taken to the list of connections available in the current environment. In the upper-right corner, select the gear icon, and then select <strong>Custom connectors</strong>. Choose the connector you created, and then go back to the <strong>Test</strong> page.</p>
+<p><img src="media/define-openapi-definition/icon-gear.png" alt="Gear icon in service." data-linktype="relative-path"></p>
+</li>
+</ul>
+</li>
+<li><p>On the <strong>Test</strong> page, enter a value for the <strong>text</strong> field (the other fields use the defaults that you set earlier), and then select <strong>Test operation</strong>.</p>
+<p><img src="media/define-openapi-definition/test-operation.png" alt="Test operation." data-linktype="relative-path"></p>
+</li>
+<li><p>The connector calls the API, and you can review the response, which includes the sentiment score.</p>
+<p><img src="media/define-openapi-definition/connector-response.png" alt="Connector response." data-linktype="relative-path"></p>
+</li>
+</ol>
+<h2 id="use-the-custom-connector">Use the custom connector</h2>
+<p>Now that you've created a custom connector and defined its behaviors, you can use the connector.</p>
+<ul>
+<li><a href="use-custom-connector-flow" data-linktype="relative-path">Use a custom connector in Power Automate</a></li>
+<li><a href="use-custom-connector-powerapps" data-linktype="relative-path">Use a custom connector in Power Apps</a></li>
+<li><a href="use-custom-connector-logic-apps" data-linktype="relative-path">Use a custom connector in a Logic Apps</a></li>
+<li><a href="/en-us/microsoft-copilot-studio/copilot-plugins-overview" data-linktype="absolute-path">Use a custom connector and connector action in Copilot Studio</a></li>
+</ul>
+<h2 id="create-a-custom-connector-and-connector-action-for-microsoft-365-copilot-for-sales">Create a custom connector and connector action for Microsoft 365 Copilot for Sales</h2>
+<p>You can create a custom connector from an OpenAPI definition in Power Apps or Power Automate that can then be used for <a href="/en-us/microsoft-sales-copilot/landing" data-linktype="absolute-path">Microsoft 365 Copilot for Sales</a>. Go to <a href="/en-us/microsoft-sales-copilot/custom-connector-action" data-linktype="absolute-path">Create a custom connector and connector action</a> to learn how to get started.</p>
+<p>You can also share a connector within your organization or get the connector certified so that people outside your organization can use it.</p>
+<ul>
+<li><a href="share" data-linktype="relative-path">Share your connector</a></li>
+<li><a href="submit-certification" data-linktype="relative-path">Certify your connector</a></li>
+</ul>
+<h2 id="provide-feedback">Provide feedback</h2>
+<p>We greatly appreciate feedback on issues with our connector platform, or new feature ideas. To provide feedback, go to <a href="/en-us/connectors/custom-connectors/provide-feedback#submit-issues-or-get-help-with-connectors" data-linktype="absolute-path">Submit issues or get help with connectors</a> and select your feedback type.</p>
+</div>
+					
+		<div
+			id="ms--inline-notifications"
+			class="margin-block-xs"
+			data-bi-name="inline-notification"
+		></div>
+	 
+		<div
+			id="assertive-live-region"
+			role="alert"
+			aria-live="assertive"
+			class="visually-hidden"
+			aria-relevant="additions"
+			aria-atomic="true"
+		></div>
+		<div
+			id="polite-live-region"
+			role="status"
+			aria-live="polite"
+			class="visually-hidden"
+			aria-relevant="additions"
+			aria-atomic="true"
+		></div>
+	
+					
+				</div>
+				
+		<div id="ms--additional-resources-mobile" class="display-none-print">
+			<hr class="hr" hidden />
+			<h2 id="ms--additional-resources-mobile-heading" class="title is-3" hidden>
+				Additional resources
+			</h2>
+			
+		<section
+			id="right-rail-recommendations-mobile"
+			class=""
+			data-bi-name="recommendations"
+			hidden
+		></section>
+	 
+		<section
+			id="right-rail-training-mobile"
+			class=""
+			data-bi-name="learning-resource-card"
+			hidden
+		></section>
+	 
+		<section
+			id="right-rail-events-mobile"
+			class=""
+			data-bi-name="events-card"
+			hidden
+		></section>
+	
+		</div>
+	 
+		<div
+			id="article-metadata-footer"
+			data-bi-name="article-metadata-footer"
+			data-test-id="article-metadata-footer"
+			class="page-metadata-container"
+		>
+			<hr class="hr" />
+			<ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
+				<li class="visibility-hidden-visual-diff">
+			<span class="badge badge-sm text-wrap-pretty">
+				<span>Last updated on <local-time format="twoDigitNumeric"
+		datetime="2026-06-03T08:00:00.000Z"
+		data-article-date-source="calculated"
+		class="is-invisible"
+	>
+		2026-06-03
+	</local-time></span>
+			</span>
+		</li>
+			</ul>
+		</div>
+	
+			</div>
+		
+				</main>
+				<aside
+					id="layout-body-aside"
+					class="layout-body-aside  "
+					data-bi-name="aside"
+					aria-label="Additional resources"
+			  >
+					
+		<div
+			id="ms--additional-resources"
+			class="right-container padding-sm display-none display-block-desktop height-full"
+			data-bi-name="pageactions"
+		>
+			<div id="affixed-right-container" data-bi-name="right-column">
+				
+		<nav
+			id="side-doc-outline"
+			class="doc-outline border-bottom padding-bottom-xs margin-bottom-xs scrollbar-width-thin"
+			data-bi-name="intopic toc"
+			aria-label="In this article"
+		>
+			<h3>In this article</h3>
+		</nav>
+	
+				<!-- Feedback -->
+				
+			</div>
+		</div>
+	
+			  </aside> <section
+					id="layout-body-flyout"
+					class="layout-body-flyout "
+					data-bi-name="flyout"
+			  >
+					 <div
+	class="height-full border-left background-color-body-medium"
+	id="ask-learn-flyout"
+></div>
+			  </section> <div class="layout-body-footer " data-bi-name="layout-footer">
+		<footer
+			id="footer"
+			data-test-id="footer"
+			data-bi-name="footer"
+			class="footer-layout padding-xs padding-sm-desktop has-default-focus border-top"
+			role="contentinfo"
+		>
+			<div class="display-flex gap-xs flex-wrap-wrap is-full-height padding-right-lg-desktop">
+				
+		<a
+			data-mscc-ic="false"
+			href="#"
+			data-bi-name="select-locale"
+			class="locale-selector-link flex-shrink-0 button button-sm button-clear external-link-indicator"
+			id=""
+			title=""
+			><span class="icon" aria-hidden="true"
+				><span class="docon docon-world"></span></span
+			><span class="local-selector-link-text">en-us</span></a
+		>
+	 <div class="ccpa-privacy-link" data-ccpa-privacy-link hidden>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://aka.ms/yourcaliforniaprivacychoices"
+			data-bi-name="your-privacy-choices"
+			class="button button-sm button-clear flex-shrink-0 external-link-indicator"
+			id=""
+			title=""
+			>
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 30 14"
+			xml:space="preserve"
+			height="16"
+			width="43"
+			aria-hidden="true"
+			focusable="false"
+		>
+			<path
+				d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z"
+				style="fill-rule:evenodd;clip-rule:evenodd;fill:#fff"
+			></path>
+			<path
+				d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z"
+				style="fill-rule:evenodd;clip-rule:evenodd;fill:#06f"
+			></path>
+			<path
+				d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z"
+				style="fill:#fff"
+			></path>
+			<path
+				d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z"
+				style="fill:#06f"
+			></path>
+		</svg>
+	
+			<span>Your Privacy Choices</span></a
+		>
+	
+	</div>
+				<div class="flex-shrink-0">
+		<div class="dropdown has-caret-up">
+			<button
+				data-test-id="theme-selector-button"
+				class="dropdown-trigger button button-clear button-sm inner-focus theme-dropdown-trigger"
+				aria-controls="{{ themeMenuId }}"
+				aria-haspopup="true"
+				aria-expanded="false"
+				data-bi-name="theme"
+			>
+				<span class="icon" aria-hidden="true"><span class="docon docon-sun"></span></span>
+				<span>Theme</span>
+				<span class="icon expanded-indicator" aria-hidden="true">
+					<span class="docon docon-chevron-down-light"></span>
+				</span>
+			</button>
+			<div class="dropdown-menu" id="{{ themeMenuId }}" role="menu">
+				<ul class="theme-selector padding-xxs" data-test-id="theme-dropdown-menu" role="none">
+					<li class="theme display-block" role="none">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							role="menuitemradio"
+							aria-checked="false"
+							data-theme-to="light"
+							tabindex="-1"
+						>
+							<span class="theme-light margin-right-xxs">
+								<span
+									class="theme-selector-icon border display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span> Light </span>
+						</button>
+					</li>
+					<li class="theme display-block" role="none">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							role="menuitemradio"
+							aria-checked="false"
+							data-theme-to="dark"
+							tabindex="-1"
+						>
+							<span class="theme-dark margin-right-xxs">
+								<span
+									class="border theme-selector-icon display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span> Dark </span>
+						</button>
+					</li>
+					<li class="theme display-block" role="none">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							role="menuitemradio"
+							aria-checked="false"
+							data-theme-to="high-contrast"
+							tabindex="-1"
+						>
+							<span class="theme-high-contrast margin-right-xxs">
+								<span
+									class="border theme-selector-icon display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span> High contrast </span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+			</div>
+			<ul class="links" data-bi-name="footerlinks">
+				<li class="manage-cookies-holder" hidden=""></li>
+				<li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/principles-for-ai-generated-content"
+			data-bi-name="aiDisclaimer"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>AI Disclaimer</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/previous-versions/"
+			data-bi-name="archivelink"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Previous Versions</a
+		>
+	
+	</li> <li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://techcommunity.microsoft.com/t5/microsoft-learn-blog/bg-p/MicrosoftLearnBlog"
+			data-bi-name="bloglink"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Blog</a
+		>
+	
+	</li> <li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/contribute"
+			data-bi-name="contributorGuide"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Contribute</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://go.microsoft.com/fwlink/?LinkId=521839"
+			data-bi-name="privacy"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Privacy</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://go.microsoft.com/fwlink/?linkid=2259814"
+			data-bi-name="consumer-health-privacy"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Consumer Health Privacy</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/legal/termsofuse"
+			data-bi-name="termsofuse"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Terms of Use</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://www.microsoft.com/legal/intellectualproperty/Trademarks/"
+			data-bi-name="trademarks"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Trademarks</a
+		>
+	
+	</li>
+				<li>&copy; Microsoft 2026</li>
+			</ul>
+		</footer>
+	</footer>
+			</body>
+		</html>

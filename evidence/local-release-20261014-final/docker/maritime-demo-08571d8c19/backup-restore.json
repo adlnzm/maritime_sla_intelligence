@@ -1,0 +1,10 @@
+{
+  "status": "PASS_LOCAL_RESTORE",
+  "audit": {
+    "verified_records": 18,
+    "legacy_unchained_records": 0,
+    "status": "PASS"
+  },
+  "approved_releases": 1,
+  "published_run": "2a99d15ba6b94235a9ecfb0c47b8451a"
+}

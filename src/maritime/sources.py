@@ -3,6 +3,7 @@
 import csv
 import hashlib
 import io
+import re
 import time
 import zipfile
 from datetime import date, datetime, timedelta, timezone
@@ -173,7 +174,7 @@ def normalize_ports(rows):
             "country": r["country"],
             "latitude": r["lat"],
             "longitude": r["lon"],
-            "unlocode": r.get("LOCODE"),
+            "unlocode": (r.get("LOCODE") or "").replace(" ", "") or None,
             **provenance(r, "portwatch_ports"),
         }
         for r in rows
@@ -184,11 +185,22 @@ def normalize_activity(rows):
     output = []
     for r in rows:
         value = r["date"]
-        day = (
-            datetime.fromtimestamp(value / 1000, timezone.utc).date().isoformat()
-            if isinstance(value, (int, float))
-            else str(value)[:10]
-        )
+        try:
+            if isinstance(value, bool):
+                raise ValueError("Boolean is not an observation timestamp")
+            if isinstance(value, (int, float)):
+                day = datetime.fromtimestamp(value / 1000, timezone.utc).date().isoformat()
+            elif isinstance(value, str) and re.fullmatch(r"\d{4}-\d{2}-\d{2}", value):
+                day = date.fromisoformat(value).isoformat()
+            elif isinstance(value, str):
+                timestamp = datetime.fromisoformat(value)
+                if timestamp.tzinfo is None:
+                    raise ValueError("Observation timestamps require an explicit timezone")
+                day = timestamp.astimezone(timezone.utc).date().isoformat()
+            else:
+                raise ValueError("Unsupported observation timestamp type")
+        except (ValueError, TypeError, OverflowError, OSError) as exc:
+            raise SourceError("Invalid PortWatch observation date") from exc
         output.append(
             {
                 "port_id": r["portid"],
@@ -211,6 +223,10 @@ def ingest_portwatch(fetcher, registry, config, store, as_of):
     found = {p["name"] for p in ports}
     if set(names) - found:
         raise SourceError(f"Configured ports missing: {set(names) - found}")
+    pins = config.get("port_ids", {})
+    for port in ports:
+        if port["name"] in pins and port["port_id"] != pins[port["name"]]:
+            raise SourceError("Configured canonical port identifier mismatch")
     scope = stable_id(sorted(p["port_id"] for p in ports))
     prior = store.metadata("activity_cache:" + scope, [])
     begin = as_of - timedelta(days=config["history_days"])

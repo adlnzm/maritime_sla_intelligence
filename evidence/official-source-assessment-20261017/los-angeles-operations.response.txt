@@ -1,0 +1,2516 @@
+    <!-- / -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+        <link rel="preconnect" href="https://kentico.portoflosangeles.org" />
+        <link rel="dns-prefetch" href="https://kentico.portoflosangeles.org" />
+    <link rel="preload" as="image" href="https://kentico.portoflosangeles.org/getattachment/c4595e30-fcb7-43eb-b883-1c696ec04f52/attachment.aspx" fetchpriority="high" />
+
+    <title>Cargo Operations Dashboard | Business | Port of Los Angeles | Port of Los Angeles </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <meta name="description" content="This dashboard provides a snapshot of the Port&#39;s current operational status. The data is available as a service of the Port of Los Angeles." />
+    <meta name="keywords" content="dashboard, operations, cargo operations dashboard, cargo operations, cargo update, vessels in port, vessels at anchor, vessel queue, dwell time, gate cameras, chassis, terminal activity, vessel tracking, cargo tracking, daily operations report, import container dwell report, empty containers, fulfilled gate appointments, container terminal gates, mobile truck driver app, chassis data, vessels in los angeles harbor, working container vessels, marine exchange, marine traffic, signal, inbound cargo, return signal, empty returns, control tower, truck turn times, shipping line services, shipping line rotations" />
+
+    <link rel="shortcut icon" href="/content/icons/POLA-Logo-Favicon.png" />
+    <link rel="icon" href="/content/icons/POLA-Logo-Favicon.png" />
+    <!-- Stylesheets
+    ============================================= -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-4123339-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-4123339-1');
+    </script>
+    <style>
+    </style>
+    <link href="/content/css/print-friendly.css" rel="stylesheet" type="text/css" />
+<link href="/Content/calendar/fullcalendar.css" rel="stylesheet" type="text/css" />
+<link href="/content/tableresponsive/css/main.css" rel="stylesheet" type="text/css" />
+<link href="/content/css/responsive.css" rel="stylesheet" type="text/css" />
+<link href="/content/css/jquery-ui.1.12.1.css" rel="stylesheet" type="text/css" />
+<link href="/content/one-page/css/fonts.css" rel="stylesheet" type="text/css" />
+<link href="/content/css/magnific-popup.css" rel="stylesheet" type="text/css" />
+<link href="/content/css/animate.css" rel="stylesheet" type="text/css" />
+<link href="/content/one-page/css/et-line.css" rel="stylesheet" type="text/css" />
+<link href="/content/css/font-icons.css" rel="stylesheet" type="text/css" />
+<link href="/Content/sass/cms-section.css?ds=20210517" rel="stylesheet" type="text/css" />
+<link href="/Content/style/style.css?ds=20260728" rel="stylesheet" type="text/css" />
+<link href="/content/css/dark.css" rel="stylesheet" type="text/css" />
+<link href="/content/sass/cms-modals.css" rel="stylesheet" type="text/css" />
+<link href="/Content/style/swiper.css" rel="stylesheet" type="text/css" />
+<link href="/Content/fontawesome-pro/css/all.min.css" rel="stylesheet" type="text/css" />
+<link href="/content/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="/content/youtube-video-player/packages/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" type="text/css" />
+<link href="/content/youtube-video-player/css/youtube-video-player.min.css" rel="stylesheet" type="text/css" />
+<link href="/content/youtube-video-player/packages/icons/css/icons.min.css" rel="stylesheet" type="text/css" />
+
+    <script src="//navbar.lacity.org/global_nav.js" type="text/javascript"></script>
+<script src="/scripts/jquery-3.7.1.min.js" type="text/javascript"></script>
+
+
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <!-- Google Tag Manager -->
+    <script>
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({
+                    'gtm.start':
+                        new Date().getTime(), event: 'gtm.js'
+                }); var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-5GCXK6P');
+    </script>
+    <!-- End Google Tag Manager -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EMXHJRYLTH"></script>
+    <script>
+            window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-EMXHJRYLTH');
+    </script>
+
+    <script async src="https://docaccess.com/docbox.js"></script>
+</head>
+
+<body class="stretched" onload="">
+
+    <div class="contentpage">
+
+        <div class="body-overlay"></div>
+
+        <div id="side-panel">
+
+
+            <div class="side-panel-wrap">
+
+                <div class="widget widget_links clearfix">
+
+                    <div id="side-panel-trigger-close" class="side-panel-trigger"><a href="#" title="Close"><span class="icon-line-cross"></span></a></div>
+
+                    <h4>Navigation</h4>
+                    <div id="vertical-nav">
+                        <div class="container clearfix">
+
+                            <nav style="background-color: #F5F5F5;">
+                                <ul>
+
+                                        <li>
+                                            <a href="/business">Business</a>
+                                            <ul>
+                                                    <li class="">
+                                                            <a href="/business/operations">Operations</a>
+                                                        <ul>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="">
+                                                            <a href="/business/contracting-opportunities">Contracting Opportunities</a>
+                                                        <ul>
+                                                                <li class="">
+                                                                        <a href="/business/contracting-opportunities/how-to-do-business-with-the-port">How to do Business with the Port</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/business/contracting-opportunities/requests-for-proposals">Requests for Proposals</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/business/contracting-opportunities/purchasing-bids">Purchasing Bids</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/business/contracting-opportunities/construction-bids">Construction Bids</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="removeBottomBorder">
+                                                                        <a href="/business/contracting-opportunities/insurance">Insurance</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="">
+                                                            <a href="/business/cybersecurity">Cybersecurity</a>
+                                                        <ul>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="">
+                                                            <a href="/business/finance">Finance</a>
+                                                        <ul>
+                                                                <li class="">
+                                                                        <a href="/business/finance/adopted-budget">Adopted Budget</a>
+                                                                    <ul>
+                                                                            <li class="removeBottomBorder">
+                                                                                    <a href="/getmedia/345f5799-3f7d-4a2c-823c-26d92d0c6e79/five-year-capital-expenditure-plan-fy-25-26" target="_blank">Five-Year Capital Expenditure Plan</a>
+                                                                                <ul>
+                                                                                </ul>
+                                                                            </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/getmedia/69eedaac-186c-48f3-be57-c0cf8e602264/POLA_Financial_Policies" target="_blank">Financial Policies</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/business/finance/financial-statements">Financial Statements</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="removeBottomBorder">
+                                                                        <a href="/business/finance/investor-relations">Investor Relations</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="">
+                                                            <a href="/business/leasing-property">Leasing Property</a>
+                                                        <ul>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="">
+                                                            <a href="/business/permits">Permits</a>
+                                                        <ul>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="">
+                                                            <a href="/business/pilot-service">Pilot Service</a>
+                                                        <ul>
+                                                                <li class="">
+                                                                        <a href="http://www.mxsocal.org/safety-plan.html" target="_blank">Harbor Safety Plan</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="https://kentico.portoflosangeles.org/getmedia/032862cd-8f0b-4167-8c50-9aa149c34e1f/2026-pola-mariners-guide" target="_blank">Mariners Guide</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="https://kentico.portoflosangeles.org/getmedia/e8422394-263f-4972-8944-666ede90ed0b/SEC03" target="_blank">Pilotage</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="https://lapilot.portla.org/webx/dashb.ashx?db=pola.trafficcontrol" target="_blank">Vessel Traffic</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="removeBottomBorder">
+                                                                        <a href="https://www.noaa.gov/weather" target="_blank">Weather</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="">
+                                                            <a href="/business/terminals">Terminals</a>
+                                                        <ul>
+                                                                <li class="">
+                                                                        <a href="/business/terminals/automobile/wwl-auto" target="_self">Automobile</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/business/terminals/breakbulk">Breakbulk</a>
+                                                                    <ul>
+                                                                            <li class="">
+                                                                                    <a href="/business/terminals/breakbulk/pasha">Pasha</a>
+                                                                                <ul>
+                                                                                </ul>
+                                                                            </li>
+                                                                            <li class="removeBottomBorder">
+                                                                                    <a href="/business/terminals/breakbulk/ssa">SSA</a>
+                                                                                <ul>
+                                                                                </ul>
+                                                                            </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/business/terminals/container">Container</a>
+                                                                    <ul>
+                                                                            <li class="">
+                                                                                    <a href="/business/terminals/container/apm-terminals-pacific">APM Terminals Pacific</a>
+                                                                                <ul>
+                                                                                </ul>
+                                                                            </li>
+                                                                            <li class="">
+                                                                                    <a href="/business/terminals/container/everport-terminal-services">Everport Terminal Services</a>
+                                                                                <ul>
+                                                                                </ul>
+                                                                            </li>
+                                                                            <li class="">
+                                                                                    <a href="/business/terminals/container/fenix-marine-services">Fenix Marine Services</a>
+                                                                                <ul>
+                                                                                </ul>
+                                                                            </li>
+                                                                            <li class="">
+                                                                                    <a href="/business/terminals/container/trapac">TraPac</a>
+                                                                                <ul>
+                                                                                </ul>
+                                                                            </li>
+                                                                            <li class="">
+                                                                                    <a href="/business/terminals/container/yusen-terminals">Yusen Terminals</a>
+                                                                                <ul>
+                                                                                </ul>
+                                                                            </li>
+                                                                            <li class="">
+                                                                                    <a href="/business/terminals/container/wbct-china-shipping">WBCT China Shipping</a>
+                                                                                <ul>
+                                                                                </ul>
+                                                                            </li>
+                                                                            <li class="">
+                                                                                    <a href="/business/terminals/container/wbct-la-til">WBCT LA TiL</a>
+                                                                                <ul>
+                                                                                </ul>
+                                                                            </li>
+                                                                            <li class="removeBottomBorder">
+                                                                                    <a href="/business/terminals/container/gates">Gates</a>
+                                                                                <ul>
+                                                                                </ul>
+                                                                            </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/business/terminals/dry-bulk">Dry Bulk</a>
+                                                                    <ul>
+                                                                            <li class="">
+                                                                                    <a href="/business/terminals/dry-bulk/rio-tinto-minerals">Rio Tinto Minerals</a>
+                                                                                <ul>
+                                                                                </ul>
+                                                                            </li>
+                                                                            <li class="">
+                                                                                    <a href="https://www.calportland.com/" target="_self">CalPortland</a>
+                                                                                <ul>
+                                                                                </ul>
+                                                                            </li>
+                                                                            <li class="removeBottomBorder">
+                                                                                    <a href="/business/terminals/dry-bulk/sa-recycling">SA Recycling</a>
+                                                                                <ul>
+                                                                                </ul>
+                                                                            </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/business/terminals/liquid-bulk">Liquid Bulk</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/business/terminals/maritime-support">Maritime Support</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/business/terminals/multi-use/outer-harbor" target="_self">Multi Use</a>
+                                                                    <ul>
+                                                                            <li class="removeBottomBorder">
+                                                                                    <a href="/business/terminals/multi-use/outer-harbor">Outer Harbor</a>
+                                                                                <ul>
+                                                                                </ul>
+                                                                            </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/business/terminals/passenger">Passenger</a>
+                                                                    <ul>
+                                                                            <li class="">
+                                                                                    <a href="/business/terminals/passenger/catalina">Catalina</a>
+                                                                                <ul>
+                                                                                </ul>
+                                                                            </li>
+                                                                            <li class="removeBottomBorder">
+                                                                                    <a href="/business/terminals/passenger/cruise">Cruise</a>
+                                                                                <ul>
+                                                                                </ul>
+                                                                            </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="removeBottomBorder">
+                                                                        <a href="https://kentico.portoflosangeles.org/getmedia/b1277c2b-c88c-4c1e-aedb-113706d28543/2025-pola-container-terminals-map" target="_blank">Terminal Map</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="">
+                                                            <a href="/business/statistics">Statistics</a>
+                                                        <ul>
+                                                                <li class="">
+                                                                        <a href="/business/statistics/container-statistics">Container Statistics</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/business/statistics/cruise-statistics">Cruise Statistics</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/business/statistics/automobile-statistics">Automobile Statistics</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/business/statistics/breakbulk-statistics">Breakbulk Statistics</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/business/statistics/tonnage-statistics">Tonnage Statistics</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/business/statistics/facts-and-figures">Facts and Figures</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="removeBottomBorder">
+                                                                        <a href="https://ustradenumbers.com/port/port-of-los-angeles/" target="_blank">Trade Data | US TradeNumbers</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="">
+                                                            <a href="/business/strategic-plan">Strategic Plan</a>
+                                                        <ul>
+                                                                <li class="removeBottomBorder">
+                                                                        <a href="/getmedia/0de61d6f-6d67-4704-9d46-729993b289cb/Strategic_Plan_KPIs" target="_blank">Key Performance Indicators</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="">
+                                                            <a href="/business/supply-chain">Supply Chain</a>
+                                                        <ul>
+                                                                <li class="">
+                                                                        <a href="/business/supply-chain/freight-forwarding">Freight Forwarding</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/business/supply-chain/port-optimizer™">Port Optimizer™</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/business/supply-chain/rail">Rail</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/business/supply-chain/ships">Ships</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/business/supply-chain/trucks">Trucks</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/business/supply-chain/warehousing-and-distribution">Warehousing and Distribution</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="removeBottomBorder">
+                                                                        <a href="/business/supply-chain/workforce-development">Workforce Development</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="">
+                                                            <a href="/business/tariff">Tariff</a>
+                                                        <ul>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="removeBottomBorder">
+                                                            <a href="/business/trade-connect">Trade Connect</a>
+                                                        <ul>
+                                                        </ul>
+                                                    </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="/community">Community</a>
+                                            <ul>
+                                                    <li class="">
+                                                            <a href="/community/boaters">Boaters</a>
+                                                        <ul>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="">
+                                                            <a href="/community/civil-rights">Civil Rights</a>
+                                                        <ul>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="">
+                                                            <a href="/community/education">Education</a>
+                                                        <ul>
+                                                                <li class="">
+                                                                        <a href="/community/education/educational-resources">Educational Resources</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="removeBottomBorder">
+                                                                        <a href="/boat-tours" target="_self">School Boat Tour Program</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="">
+                                                            <a href="/community/events">Events</a>
+                                                        <ul>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="">
+                                                            <a href="/community/grants">Grants</a>
+                                                        <ul>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="">
+                                                            <a href="https://www.lawaterfront.org/" target="_blank">LA Waterfront</a>
+                                                        <ul>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="">
+                                                            <a href="/community/los-angeles-port-police">Los Angeles Port Police</a>
+                                                        <ul>
+                                                                <li class="">
+                                                                        <a href="/community/los-angeles-port-police/office-of-the-chief">Office of the Chief</a>
+                                                                    <ul>
+                                                                            <li class="removeBottomBorder">
+                                                                                    <a href="/community/los-angeles-port-police/office-of-the-chief/command-staff">Command Staff</a>
+                                                                                <ul>
+                                                                                </ul>
+                                                                            </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/community/los-angeles-port-police/commendations-and-complaints">Commendations and Complaints</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="https://portoflapolice.nextrequest.com" target="_blank">Port Police Public Records Requests</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="https://app.airdata.com/u/lapp" target="_blank">Drone Flight History Maps</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/community/los-angeles-port-police/police-officers-disclosable-documents-sb-1421">Police Officers Disclosable Documents | SB 1421</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/community/los-angeles-port-police/policies-and-procedures-training-sb-978">Policies and Procedures | Training | SB 978</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/community/los-angeles-port-police/military-equipment-funding">Military Equipment Funding</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="removeBottomBorder">
+                                                                        <a href="/about/employment/join-the-los-angeles-port-police" target="_self">Recruitment</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="">
+                                                            <a href="/community/reporting-fraud">Reporting Fraud</a>
+                                                        <ul>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="">
+                                                            <a href="/community/residents">Residents</a>
+                                                        <ul>
+                                                                <li class="">
+                                                                        <a href="/community/residents/community-planning">Community Planning</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="removeBottomBorder">
+                                                                        <a href="/community/residents/emergency-management">Emergency Management</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="">
+                                                            <a href="/community/sponsorships">Sponsorships</a>
+                                                        <ul>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="">
+                                                            <a href="/community/traffic-interchange">Traffic Interchange</a>
+                                                        <ul>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="removeBottomBorder">
+                                                            <a href="/community/vtb-deck-replacement">VTB Deck Replacement</a>
+                                                        <ul>
+                                                        </ul>
+                                                    </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="/environment">Environment</a>
+                                            <ul>
+                                                    <li class="">
+                                                            <a href="/environment/air-quality">Air Quality</a>
+                                                        <ul>
+                                                                <li class="">
+                                                                        <a href="/environment/air-quality/air-emissions-inventory">Air Emissions Inventory</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/environment/air-quality/air-quality-monitoring">Air Quality Monitoring</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/environment/air-quality/alternative-maritime-power-(amp)">Alternative Maritime Power&#174; (AMP&#174;)</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/environment/air-quality/san-pedro-bay-ports-clean-air-action-plan">Clean Air Action Plan</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/environment/air-quality/clean-ports-program">Clean Ports Program</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/environment/air-quality/clean-truck-program">Clean Truck Program</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/environment/air-quality/cooperative-agreement">Cooperative Agreement</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/environment/air-quality/funding-opportunities">Funding Opportunities</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/environment/air-quality/international-partnerships">International Partnerships</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/environment/air-quality/ocean-going-vessel-emission-reduction">Ocean-Going Vessel Emission Reduction</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="removeBottomBorder">
+                                                                        <a href="/environment/air-quality/zero-emissions-technologies">Zero Emissions Technologies</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="">
+                                                            <a href="/environment/water-and-sediment-quality">Water and Sediment Quality</a>
+                                                        <ul>
+                                                                <li class="">
+                                                                        <a href="/environment/water-and-sediment-quality/stormwater">Stormwater</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/environment/water-and-sediment-quality/water-resources-action-plan">Water Resources Action Plan</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="removeBottomBorder">
+                                                                        <a href="/environment/water-and-sediment-quality/total-maximum-daily-load">Total Maximum Daily Load</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="">
+                                                            <a href="/environment/biological-resources">Biological Resources</a>
+                                                        <ul>
+                                                                <li class="">
+                                                                        <a href="/environment/biological-resources/comprehensive-biological-surveys">Comprehensive Biological Surveys</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="https://laharborhabitats.org/" target="_blank">LA Harbor Habitats</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/environment/biological-resources/biological-mitigation">Biological Mitigation</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/environment/biological-resources/california-least-tern">California Least Tern</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="removeBottomBorder">
+                                                                        <a href="/environment/biological-resources/invasive-species">Invasive Species</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="">
+                                                            <a href="/environment/site-restoration-and-hazmat-services">Site Restoration and Hazmat Services</a>
+                                                        <ul>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="">
+                                                            <a href="/environment/sustainability">Sustainability</a>
+                                                        <ul>
+                                                                <li class="">
+                                                                        <a href="/environment/sustainability/sustainability-reports">Sustainability Reports</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/environment/sustainability/solar-power">Solar Power</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="removeBottomBorder">
+                                                                        <a href="/environment/sustainability/zero-waste">Zero Waste</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="">
+                                                            <a href="/environment/environmental-documents">Environmental Documents</a>
+                                                        <ul>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="">
+                                                            <a href="/environment/environmental-management-policy">Environmental Management Policy</a>
+                                                        <ul>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="removeBottomBorder">
+                                                            <a href="/environment/environmental-management-system">Environmental Management System</a>
+                                                        <ul>
+                                                        </ul>
+                                                    </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="/commission">Commission</a>
+                                            <ul>
+                                                    <li class="">
+                                                            <a href="/commission/addressing-the-board">Addressing the Board</a>
+                                                        <ul>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="">
+                                                            <a href="/commission/agenda-archive-and-videos">Agenda Archive and Videos</a>
+                                                        <ul>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="">
+                                                            <a href="/commission/board-members">Board Members</a>
+                                                        <ul>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="">
+                                                            <a href="/commission/board-committees">Board Committees</a>
+                                                        <ul>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="removeBottomBorder">
+                                                            <a href="https://kentico.portoflosangeles.org/getmedia/39d88381-282b-4bb2-9aa8-cf15aee33127/2026-board-meeting-schedule" target="_blank">Board Meeting Schedule</a>
+                                                        <ul>
+                                                        </ul>
+                                                    </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="/about">About</a>
+                                            <ul>
+                                                    <li class="">
+                                                            <a href="/about/contact">Contact</a>
+                                                        <ul>
+                                                                <li class="">
+                                                                        <a href="/about/contact/division-directory">Division Directory</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/about/contact/submit-a-california-public-records-act-request">Submit a California Public Records Act Request</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="removeBottomBorder">
+                                                                        <a href="/about/contact/alerts">Sign up for News and Agenda Alerts</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="">
+                                                            <a href="/about/employment">Employment</a>
+                                                        <ul>
+                                                                <li class="">
+                                                                        <a href="/about/employment/city-of-los-angeles-employment">City of Los Angeles Employment</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/about/employment/student-employment">Student Employment</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/about/employment/join-the-los-angeles-port-police">Join the Los Angeles Port Police</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="removeBottomBorder">
+                                                                        <a href="/about/employment/other-employment">Other Employment</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="">
+                                                            <a href="/about/history">History</a>
+                                                        <ul>
+                                                                <li class="">
+                                                                        <a href="/about/history/books">Books</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/about/history/films">Films</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/about/history/historical-photo-collection">Historical Photo Collection</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/about/history/historical-port-landmarks">Historical Port Landmarks</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/about/history/los-angeles-harbor-communities">Los Angeles Harbor Communities</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/about/history/port-agreements">Port Agreements</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="removeBottomBorder">
+                                                                        <a href="/about/history/public-trust-doctrine">Public Trust Doctrine</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="">
+                                                            <a href="/about/leadership">Leadership</a>
+                                                        <ul>
+                                                                <li class="">
+                                                                        <a href="https://www.portoflosangeles.org/commission/board-members" target="_self">Harbor Commission</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="">
+                                                                        <a href="/about/leadership/senior-executives">Senior Executives</a>
+                                                                    <ul>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="removeBottomBorder">
+                                                                        <a href="/about/leadership/bureaus-and-divisions">Bureaus and Divisions</a>
+                                                                    <ul>
+                                                                            <li class="">
+                                                                                    <a href="/about/leadership/bureaus-and-divisions/development">Development</a>
+                                                                                <ul>
+                                                                                </ul>
+                                                                            </li>
+                                                                            <li class="">
+                                                                                    <a href="/about/leadership/bureaus-and-divisions/finance-and-administration">Finance and Administration</a>
+                                                                                <ul>
+                                                                                </ul>
+                                                                            </li>
+                                                                            <li class="">
+                                                                                    <a href="/about/leadership/bureaus-and-divisions/marketing-and-customer-relations">Marketing and Customer Relations</a>
+                                                                                <ul>
+                                                                                </ul>
+                                                                            </li>
+                                                                            <li class="">
+                                                                                    <a href="/about/leadership/bureaus-and-divisions/public-safety-and-emergency-management">Public Safety and Emergency Management</a>
+                                                                                <ul>
+                                                                                </ul>
+                                                                            </li>
+                                                                            <li class="">
+                                                                                    <a href="/about/leadership/bureaus-and-divisions/stakeholder-engagement">Stakeholder Engagement</a>
+                                                                                <ul>
+                                                                                </ul>
+                                                                            </li>
+                                                                            <li class="removeBottomBorder">
+                                                                                    <a href="/about/leadership/bureaus-and-divisions/executive-support">Executive Support</a>
+                                                                                <ul>
+                                                                                </ul>
+                                                                            </li>
+                                                                    </ul>
+                                                                </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="">
+                                                            <a href="/about/port-101">Port 101</a>
+                                                        <ul>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="">
+                                                            <a href="/about/port-master-plan">Port Master Plan</a>
+                                                        <ul>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="removeBottomBorder">
+                                                            <a href="/about/ticket-reporting-policy">Ticket Reporting Policy</a>
+                                                        <ul>
+                                                        </ul>
+                                                    </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="/news">News</a>
+                                            <ul>
+                                                    <li class="">
+                                                            <a href="/news/latest-news">Latest News</a>
+                                                        <ul>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="">
+                                                            <a href="/news/cargo-news-briefings">Cargo News Briefings</a>
+                                                        <ul>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="">
+                                                            <a href="/news/news-release-archive">News Release Archive</a>
+                                                        <ul>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="">
+                                                            <a href="/news/photo-gallery">Photo Gallery</a>
+                                                        <ul>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="">
+                                                            <a href="/news/digital-library">Digital Library</a>
+                                                        <ul>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="removeBottomBorder">
+                                                            <a href="/news/livestream">Livestream</a>
+                                                        <ul>
+                                                        </ul>
+                                                    </li>
+                                            </ul>
+                                        </li>
+                                    <li>
+                                        <a href="https://portoflosangeles.org/about/employment/city-of-los-angeles-employment">Jobs</a>
+                                    </li>
+                                </ul>
+                                <p style="margin-top:35px" class="visible-sm visible-xs">
+                                    <a href="/commission/agenda-archive-and-videos" target="_self" class="btn btn-sm btn-success">Board Agenda</a>
+                                </p>
+                            </nav>
+
+                        </div>
+                    </div>
+
+
+                    <div style="font-size: 14px; line-height: 1.7; margin-top:75px">
+
+                        <a href="https://www.google.com/maps/dir//425+S+Palos+Verdes+St,+San+Pedro,+CA+90731" target="_blank">
+                            <span class="far fa-map-marker-alt" style="font-size: 19px;"></span>
+                            <address style="line-height: 1.7;">
+                                425 S. Palos Verdes Street,<br>
+                                San Pedro, California USA 90731<br>
+                            </address>
+                        </a>
+                        <div class="clear topmargin-sm"></div>
+
+                        <abbr title="Phone Number">Phone:</abbr> <a href="tel:1-310-732-3508">(310) 732-3508</a><br>
+                        <abbr title="Email Address">Email:</abbr> <a href="/cdn-cgi/l/email-protection#6f0c0002021a01061b162f1f001d1b030e41001d08"><span class="__cf_email__" data-cfemail="187b7775756d76716c615868776a6c747936776a7f">[email&#160;protected]</span></a>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+        <!-- Document Wrapper
+        ============================================= -->
+        <div id="wrapper" class="clearfix">
+
+            <!-- Header
+            ============================================= -->
+            <!-- #header end -->
+
+
+            
+
+<header id="header" class="full-header transparent-header border-full-header dark static-sticky" data-sticky-class="not-dark" data-sticky-offset="full" data-sticky-offset-negative="100">
+
+    <div id="header-wrap">
+
+        <div class="container clearfix mobileheader">
+
+            
+
+            <!-- Logo
+            ============================================= -->
+            <div id="logo">
+
+                        <a href="/" class="standard-logo">
+                            <img src="/content/images/POLAlogo-horizontal-2C.jpg" alt="Port of Los Angeles Logo" class="standard" />
+                            <img src="/content/images/logo-horizontal-inverse.png" alt="Port of Los Angeles Logo" class="inverse" />
+                        </a>
+
+
+            </div><!-- #logo end -->
+            <!-- Primary Navigation
+            ============================================= -->
+            <nav id="primary-menu">
+
+                <ul class="/content/one-page-menu" data-easing="easeInOutExpo" data-speed="1250" data-offset="65">
+                    <li><a href="/news"><div>News</div></a></li>
+                    <li><a href="/business"><div>Business</div></a></li>
+                    <li><a href="/community"><div>Community</div></a></li>
+                    <li><a href="/environment"><div>Environment</div></a></li>
+                    <li><a href="/commission"><div>Commission</div></a></li>
+                    <li><a href="/about"><div>About</div></a></li>
+                    <li>
+                        <a href="https://portoflosangeles.org/about/employment/city-of-los-angeles-employment">Jobs</a>
+                    </li>
+                    <li><a href="/commission/agenda-archive-and-videos"><div><img src="/Content/images/Agenda_Icon.png" height="22" class="agenda-icon" title="Document with gavel" alt="Document with gavel" /></div></a></li>
+
+                    <li><button class="btnTranslate" type="button"><i class="far fa-language"></i></button></li>
+                    <li><button class="btnUniversal" type="button"><i class="far fa-universal-access"></i></button></li>
+                    <li><a href="#" id="top-search-trigger" title="Search"><span class="icon-search3"></span></a></li>
+                </ul>
+
+                <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+                    }
+                </script>
+
+
+                <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+                <div class="mobileaccessible translate">
+                    <a href="/commission/agenda-archive-and-videos" style="top: -4px;position: relative;"><img src="/Content/images/Agenda_Icon.png" height="17" style="filter: invert(1);" title="Document with gavel" alt="Document with gavel"></a>
+                    <button type="button" class="btnTranslate visible-xs visible-sm" style="
+    display: inline !important;padding-right:0">
+                        <i class="far fa-language"></i>
+                    </button>
+                </div>
+                
+                <div id="side-panel-trigger" class="side-panel-trigger"><span class="sidemenutext">MENU</span><a href="#" title="Menu"> <span class="icon-reorder"></span></a></div>
+                <!-- Top Search
+                ============================================= -->
+                <div id="top-search">
+
+                    <a href="#" id="top-search-trigger-xs" title="Search" class="visible-xs visible-sm"><span class="icon-search3"></span></a>
+
+
+                </div><!-- #top-search end -->
+            </nav><!-- #primary-menu end -->
+
+
+        </div>
+        <div class="container google-search-block">
+
+            <script async src="https://cse.google.com/cse.js?cx=002795381298339986234:snxqixfp1ea"></script>
+            <form class="search-form" style="padding:10px;margin:0">
+                <table width="80%">
+                    <tr>
+                        <td width="80%"><input type="text" name="q" class="form-control search-input" placeholder="SEARCH HERE" /><a href="#" class="close-search"><span class="icon-line-cross position-icon fa fa-times-circle"></span></a></td>
+                        <td valign="top"><button type="submit" class="btn btn-md btn-success btn-search"><i class="fa fa-search"></i></button></td>
+                    </tr>
+                </table>
+
+
+            </form>
+        </div>
+
+    </div>
+
+</header>
+
+            <div class="pagecontent">
+
+                
+    <!-- Main Stylesheet -->
+    <!-- Main Javascript -->
+    <!-- Perfect Scrollbar -->
+
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+    function correctCaptcha() {
+        $("form").each(function () {
+            $(this).find(':input[type="submit"]').prop('disabled', false);
+        });
+    }
+</script>
+<section id="headerImage">
+
+            <div style="background-image: url('https://kentico.portoflosangeles.org/getattachment/c4595e30-fcb7-43eb-b883-1c696ec04f52/attachment.aspx'); background-size: cover; background-position: center center;height:180px">
+                <div class="container">
+                    <h1 class="responsive-h1">Cargo Operations Dashboard</h1>
+                    <hr class="tinyhr" />
+                    
+                        <div class="row">
+                            <div class="breadcrumb">
+                                <a href="/">Home</a> <span>/</span>
+                                                <a href="/business"
+                                                   class="" style="text-transform:capitalize">business</a>
+                                                <span>/</span>
+                                                <a href="/business/operations"
+                                                   class="active" style="text-transform:capitalize">operations</a>
+
+                            </div>
+                        </div>
+
+                </div>
+
+            </div>
+
+</section>
+
+
+
+
+
+<input type="hidden" id="menuItemCount" value="0" />
+<div class="cms-second-nav-container">
+    <div class="container cms-nav-layout">
+        <div class="row">
+            <div class="col-xs-5 col-xs-offset-7">
+                <div class="cms-second-nav-bg cms-second-nav-bg-small">
+
+                        <div class="cms-second-nav-return-bar container-fluid">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <a href="javascript:void(0)" onclick="window.history.go(-1); return false;" id="secondaryNavBackButton"><span class="fa fa-arrow-left"></span> Back</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cms-nav-explore">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <select class="form-control cms-nav-explore-options">
+                        <option value="">Operations</option>
+                            <optgroup label="Return">
+                                <option value="/business">Return to Business</option>
+                            </optgroup>
+
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div id="contentBody">
+
+    <div class="container">
+
+        <div class="row">
+
+            
+
+            
+
+            
+            
+
+
+            <div class="col-md-12 body-content-container">
+
+
+
+<section class="cms-content text-info-block" style="background-color: #FFFFFF;">
+
+	<div class="content-wrap nopadding">
+
+		<div id="section-about" class="page-section">
+
+            <div class="clearfix" style="padding: 0px 0;">
+                
+
+                <p class="lead " style="margin-bottom: 0px;"><div><big>The Port of Los Angeles remains focused on supply chain efficiency and optimization, providing enhanced visibility, efficiency and choice for cargo owners. Offering both current and historical data through&nbsp;2021</big><big>, this dashboard is designed to provide a snapshot of the Port&#39;s current operational status, including real-time cargo-tracking data tools for Port supply chain partners, including marine terminal operators, railroads, chassis providers, truckers, warehouse operators and more. </big></div>
+
+<div>&nbsp;</div>
+
+<div><big>The data is available as a service of the Port of Los Angeles.</big></div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+</p>
+
+                <div class="lead text-center">
+                        <a href="https://tower.portoptimizer.com" target="_blank" class="btn btn-success">monitor cargo movement</a>
+                                            <a href="https://track.portoptimizer.com" target="_blank" class="btn btn-success">track containers</a>
+                </div>
+                <div class="clear"></div>
+            </div>
+		</div>
+	</div>
+</section>
+
+
+<section class="cms-content full-width">
+
+	<div class="content-wrap nopadding">
+		<div class="page-section notoppadding">
+
+
+			<div class="section nomargin separator" style="margin-top:0 !important ;margin-bottom:0 !important">
+				Terminal Activity
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="cms-content text-info-block" style="background-color: #FFFFFF;">
+
+	<div class="content-wrap nopadding">
+
+		<div id="section-about" class="page-section">
+
+            <div class="clearfix" style="padding: 0px 0;">
+                
+
+                <p class="lead " style="margin-bottom: 0px;"><p style="font-size:14px;"><br />
+The Port of Los Angeles provides daily reports Monday-Friday&nbsp;(excluding&nbsp;City of Los Angeles holidays)&nbsp;to share cargo trends and analytics, using data from the&nbsp;<a href="https://tower.portoptimizer.com/" target="_blank">Port of Los Angeles Control Tower</a>. This service delivers real-time and historical shipping data and insights to supply chain stakeholders through a single, secure portal. Registration is open to all. For questions or technical support, please use button below.</p>
+
+<div>&nbsp;</div>
+</p>
+
+                <div class="lead text-center">
+                        <a href="/cdn-cgi/l/email-protection#dd8db2afa992ada9b4b0b4a7b8aff38ea8adadb2afa99daabcbfa9b8bef3beb2b0e2aea8bfb7b8bea9e08db2afa9fdb2bbfd91b2aefd9cb3bab8b1b8aefd8db2afa9fd92ada9b4b0b4a7b8affd89b8beb5b3b4bebcb1fd8ea8adadb2afa9" target="_blank" class="btn btn-success">Technical Support</a>
+                                    </div>
+                <div class="clear"></div>
+            </div>
+		</div>
+	</div>
+</section>
+
+
+<section class="dc-146 cms-content dynamic-content">
+    <div class="animated-image content-wrap nopadding">
+        <div class="page-section notoppadding">
+            <div class="section nomargin section-n-columns" style="margin-top:-60px !important ;margin-bottom:-30px !important">
+                <div class="container clearfix">
+                    <div class="row">
+                            <div class="col-md-3 bottommargin divdc" style="background-color: #FFFFFF;margin-bottom:15px;">
+
+                                    <div class="row">
+                                        <div class="col-sm-12 text-left">
+                                                <a href="/getmedia/f30c3f45-2df9-4830-90ca-2364bfa0484f/operations-report" target="_blank"><img src="https://kentico.portoflosangeles.org/getattachment/b13826b3-6e9e-4496-b0ef-fd1258b1bf4b/attachment.aspx" alt="Daily Operations Report" style="height:auto;max-height:340px" class=""></a>
+                                        </div>
+                                    </div>
+                                                                                                    <div class="row">
+                                        <div class="col-sm-12 text-left">
+                                            <span>
+                                                <div>&nbsp;</div>
+
+<ul>
+	<li>container vessels at berth</li>
+	<li>container vessels within 40 NM</li>
+	<li>cargo, rail, and chassis dwell time</li>
+	<li>export&nbsp;containers on&nbsp;terminals</li>
+	<li>empty containers on terminals</li>
+	<li>updated each business day</li>
+	<li>comparison to&nbsp;previous business day</li>
+</ul>
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                                            </div>
+                            <div class="col-md-3 bottommargin divdc" style="background-color: #FFFFFF;margin-bottom:15px;">
+
+                                    <div class="row">
+                                        <div class="col-sm-12 text-left">
+                                                <a href="/getmedia/6187bcbe-b2ce-41bb-a28e-f5d99372f49e/import-container-dwell-report" target="_blank"><img src="https://kentico.portoflosangeles.org/getattachment/2c809e20-5646-4983-8668-44d026a23a26/attachment.aspx" alt="Import Container Dwell Report" style="height:auto;max-height:340px" class=""></a>
+                                        </div>
+                                    </div>
+                                                                                                    <div class="row">
+                                        <div class="col-sm-12 text-left">
+                                            <span>
+                                                <div>&nbsp;</div>
+
+<ul>
+	<li>import containers by dwell time</li>
+	<li>0-4 day import containers</li>
+	<li>5-8 day import containers</li>
+	<li>9+ day import containers</li>
+	<li>updated each business day</li>
+</ul>
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                                            </div>
+                            <div class="col-md-3 bottommargin divdc" style="background-color: #FFFFFF;margin-bottom:15px;">
+
+                                    <div class="row">
+                                        <div class="col-sm-12 text-left">
+                                                <a href="/getmedia/441d2c33-54e6-4d10-8d22-08a90e37a7b9/empty-containers" target="_blank"><img src="https://kentico.portoflosangeles.org/getattachment/d2c51ffc-102f-43b2-9935-b115e6b5c8f0/attachment.aspx" alt="Empty Container Report" style="height:auto;max-height:340px" class=""></a>
+                                        </div>
+                                    </div>
+                                                                                                    <div class="row">
+                                        <div class="col-sm-12 text-left">
+                                            <span>
+                                                <div>&nbsp;</div>
+
+<ul>
+	<li>empty containers on terminals</li>
+	<li>percentage increase/decrease</li>
+	<li>dating back to November 2021</li>
+	<li>updated each busines day</li>
+</ul>
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                                            </div>
+                            <div class="col-md-3 bottommargin divdc" style="background-color: #FFFFFF;margin-bottom:15px;">
+
+                                    <div class="row">
+                                        <div class="col-sm-12 text-left">
+                                                <a href="/getmedia/e738dff4-39ec-4290-a54c-f3ca57be77f4/import-on-dock-rail-report" target="_blank"><img src="https://kentico.portoflosangeles.org/getattachment/6e43f547-82a2-4627-add2-a2c5a748af46/attachment.aspx" alt="Import On-Dock Rail Awaiting Loading" style="height:auto;max-height:340px" class=""></a>
+                                        </div>
+                                    </div>
+                                                                                                    <div class="row">
+                                        <div class="col-sm-12 text-left">
+                                            <span>
+                                                <div>&nbsp;</div>
+
+<ul>
+	<li>import&nbsp;on-dock rail</li>
+	<li>rail containers awaiting loading</li>
+	<li>total and by rail carrier</li>
+	<li>updated each business day</li>
+</ul>
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                                            </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+
+    $(window).on("load", function () {
+
+            var widths_array = [];
+        var imgClass = ".dc-" + 146 + ".dynamic-content .divdc img";
+            $(imgClass).each(function () {
+                widths_array.push(parseInt($(this).width()));
+            });
+            var largest = Math.max.apply(null, widths_array);
+
+            if ($(document).width() > 991) {
+                var img = sectionClass + " .shadow-longer";
+                $(img).css('height', '230px');
+                if (largest != 0) {
+                    $(img).css('width', largest + 'px');
+                }
+            }
+            var numbers_array = [];
+        var sectionClass = ".dc-" + 146 + ".dynamic-content .divdc";
+            $(sectionClass).each(function () {
+                numbers_array.push(parseInt($(this).height()));
+            });
+        var biggest = Math.max.apply(null, numbers_array);
+        console.log(numbers_array);
+
+
+            if ($(document).width() > 991) {
+                $(sectionClass).css('min-height', (biggest  + 60 )+ 'px');
+            }
+
+    });
+</script>
+
+<section class="cms-content full-width">
+
+	<div class="content-wrap nopadding">
+		<div class="page-section notoppadding">
+
+
+			<div class="section nomargin separator" style="margin-top:0 !important ;margin-bottom:0 !important">
+				Trucking Activity
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="cms-content text-info-block" style="background-color: #FFFFFF;">
+
+	<div class="content-wrap nopadding">
+
+		<div id="section-about" class="page-section">
+
+            <div class="clearfix" style="padding: 0px 0;">
+                
+
+                <p class="lead " style="margin-bottom: 0px;"><div>
+<p style="font-size:14px;"><br />
+The Port of Los Angeles provides daily reports Monday-Friday&nbsp;(excluding City of Los Angeles holidays) to share trucking activity throughout the San Pedro Bay port complex.&nbsp;Truckers dropping off and picking up cargo at the Port of Los Angeles can make appointments&nbsp;through the&nbsp;<a href="https://tower.portoptimizer.com/" target="_blank">Port Optimizer&trade; Control Tower</a>. Registration is open to all. For questions or technical support, please use button below.</p>
+
+<p style="font-size:14px;">&nbsp;</p>
+</div>
+</p>
+
+                <div class="lead text-center">
+                        <a href="/cdn-cgi/l/email-protection#60300f12142f1014090d091a05124e331510100f1214201701021405034e030f0d5f1315020a0503145d300f1214400f06402c0f1340210e07050c051340300f1214402f1014090d091a051240340503080e0903010c40331510100f1214" target="_blank" class="btn btn-success">Technical Support</a>
+                                    </div>
+                <div class="clear"></div>
+            </div>
+		</div>
+	</div>
+</section>
+
+
+<section class="dc-154 cms-content dynamic-content">
+    <div class="animated-image content-wrap nopadding">
+        <div class="page-section notoppadding">
+            <div class="section nomargin section-n-columns" style="margin-top:-60px !important ;margin-bottom:-30px !important">
+                <div class="container clearfix">
+                    <div class="row">
+                            <div class="col-md-3 bottommargin divdc" style="background-color: #FFFFFF;margin-bottom:15px;">
+
+                                    <div class="row">
+                                        <div class="col-sm-12 text-left">
+                                                <a href="/getmedia/129d1d0d-8359-44c9-af8d-aeb858773f63/booked-vs-fulfilled-truck-gates" target="_blank"><img src="https://kentico.portoflosangeles.org/getattachment/8bc55a42-ebfb-49a8-a495-708585076474/attachment.aspx" alt="Daily Booked Versus Fulfilled Appointments by Terminal" style="height:auto;max-height:340px" class=""></a>
+                                        </div>
+                                    </div>
+                                                                                                    <div class="row">
+                                        <div class="col-sm-12 text-left">
+                                            <span>
+                                                <div>
+<div>&nbsp;
+<ul>
+	<li>daily&nbsp;booked appointments vs. fulfilled appointments success rates</li>
+	<li>terminal by terminal data</li>
+	<li>overall average</li>
+	<li>updated each weekday</li>
+	<li>data reflects terminals&rsquo; previous weekday</li>
+</ul>
+</div>
+</div>
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                                            </div>
+                            <div class="col-md-3 bottommargin divdc" style="background-color: #FFFFFF;margin-bottom:15px;">
+
+                                    <div class="row">
+                                        <div class="col-sm-12 text-left">
+                                                <a href="/getmedia/e7e35d31-c560-49fe-be52-f335412879e8/fulfilled-truck-gates" target="_blank"><img src="https://kentico.portoflosangeles.org/getattachment/a851c199-d016-4a0c-9c2d-bca5b66ddb6a/attachment.aspx" alt="Daily Fulfilled Truck Gates By Terminal Capacity" style="height:auto;max-height:340px" class=""></a>
+                                        </div>
+                                    </div>
+                                                                                                    <div class="row">
+                                        <div class="col-sm-12 text-left">
+                                            <span>
+                                                <div>
+<div>&nbsp;
+<ul>
+	<li>daily&nbsp;average success rates by terminal capacity&nbsp;</li>
+	<li>terminal by terminal data&nbsp;</li>
+	<li>overall average&nbsp;</li>
+	<li>updated each weekday</li>
+	<li>data reflects terminals&rsquo; previous weekday</li>
+</ul>
+</div>
+</div>
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                                            </div>
+                            <div class="col-md-3 bottommargin divdc" style="background-color: #FFFFFF;margin-bottom:15px;">
+
+                                    <div class="row">
+                                        <div class="col-sm-12 text-left">
+                                                <a href="/getmedia/e4e7962a-b985-41b0-afd2-b1e6712edb20/container-terminal-gate-hours" target="_blank"><img src="https://kentico.portoflosangeles.org/getattachment/cc68e66f-dafd-45c3-baaf-8370ff3f3744/attachment.aspx" alt="Container Terminal Gates" style="height:auto;max-height:340px" class=""></a>
+                                        </div>
+                                    </div>
+                                                                                                    <div class="row">
+                                        <div class="col-sm-12 text-left">
+                                            <span>
+                                                <div>
+<div>&nbsp;
+<ul>
+	<li><a href="https://portoflosangeles.org/business/terminals/container/gates">24/7 live gate cameras</a></li>
+	<li>gate hours</li>
+	<li>updated regularly</li>
+</ul>
+</div>
+</div>
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                                            </div>
+                            <div class="col-md-3 bottommargin divdc" style="background-color: #FFFFFF;margin-bottom:15px;">
+
+                                    <div class="row">
+                                        <div class="col-sm-12 text-left">
+                                                <a href="http://www.pop-lalb.com/#tf-services" target="_blank"><img src="https://kentico.portoflosangeles.org/getattachment/56263db8-d328-4437-bd85-b91b558ddb6d/attachment.aspx" alt="Pool of Pools Chassis Data" style="height:auto;max-height:340px" class=""></a>
+                                        </div>
+                                    </div>
+                                                                                                    <div class="row">
+                                        <div class="col-sm-12 text-left">
+                                            <span>
+                                                <div>&nbsp;
+<ul>
+	<li>chassis availability</li>
+	<li>dwell time</li>
+</ul>
+</div>
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                                            </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+
+    $(window).on("load", function () {
+
+            var widths_array = [];
+        var imgClass = ".dc-" + 154 + ".dynamic-content .divdc img";
+            $(imgClass).each(function () {
+                widths_array.push(parseInt($(this).width()));
+            });
+            var largest = Math.max.apply(null, widths_array);
+
+            if ($(document).width() > 991) {
+                var img = sectionClass + " .shadow-longer";
+                $(img).css('height', '230px');
+                if (largest != 0) {
+                    $(img).css('width', largest + 'px');
+                }
+            }
+            var numbers_array = [];
+        var sectionClass = ".dc-" + 154 + ".dynamic-content .divdc";
+            $(sectionClass).each(function () {
+                numbers_array.push(parseInt($(this).height()));
+            });
+        var biggest = Math.max.apply(null, numbers_array);
+        console.log(numbers_array);
+
+
+            if ($(document).width() > 991) {
+                $(sectionClass).css('min-height', (biggest  + 60 )+ 'px');
+            }
+
+    });
+</script>
+
+<section class="cms-content full-width">
+
+	<div class="content-wrap nopadding">
+		<div class="page-section notoppadding">
+
+
+			<div class="section nomargin separator" style="margin-top:0 !important ;margin-bottom:0 !important">
+				Vessel Tracking
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="cms-content text-info-block" style="background-color: #FFFFFF;">
+
+	<div class="content-wrap nopadding">
+
+		<div id="section-about" class="page-section">
+
+            <div class="clearfix" style="padding: 0px 0;">
+                
+
+                <p class="lead " style="margin-bottom: 0px;"><p style="font-size:14px;"><br />
+The Port of Los Angeles provides daily reports Monday-Friday (excluding City of Los Angeles holidays) to share vessel activity within Los Angeles Harbor.</p>
+</p>
+
+                <div class="lead text-left">
+                                    </div>
+                <div class="clear"></div>
+            </div>
+		</div>
+	</div>
+</section>
+
+
+<section class="dc-147 cms-content dynamic-content">
+    <div class="animated-image content-wrap nopadding">
+        <div class="page-section notoppadding">
+            <div class="section nomargin section-n-columns" style="margin-top:-60px !important ;margin-bottom:-30px !important">
+                <div class="container clearfix">
+                    <div class="row">
+                            <div class="col-md-3 bottommargin divdc" style="background-color: #FFFFFF;margin-bottom:15px;">
+
+                                    <div class="row">
+                                        <div class="col-sm-12 text-left">
+                                                <a href="/getmedia/d4b7e22d-c26f-452f-9f70-35faf17a0e4c/blank-sailings" target="_blank"><img src="https://kentico.portoflosangeles.org/getattachment/71e10565-d867-48da-acb5-493b8721d2e1/attachment.aspx" alt="Blank Sailings" style="height:auto;max-height:340px" class=""></a>
+                                        </div>
+                                    </div>
+                                                                                                    <div class="row">
+                                        <div class="col-sm-12 text-left">
+                                            <span>
+                                                <div>&nbsp;
+<div>
+<ul>
+	<li>estimated canceled sailings</li>
+	<li>estimated&nbsp;combined volume</li>
+	<li>updated weekly</li>
+</ul>
+</div>
+</div>
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                                            </div>
+                            <div class="col-md-3 bottommargin divdc" style="background-color: #FFFFFF;margin-bottom:15px;">
+
+                                    <div class="row">
+                                        <div class="col-sm-12 text-left">
+                                                <a href="/getmedia/1835359e-4b17-400d-bd67-6c430c651f1a/all-vessels-in-port" target="_blank"><img src="https://kentico.portoflosangeles.org/getattachment/c4ad0cdd-dd46-47b4-9cf8-690b9229bab1/attachment.aspx" alt="Vessels in Los Angeles Harbor" style="height:auto;max-height:340px" class=""></a>
+                                        </div>
+                                    </div>
+                                                                                                    <div class="row">
+                                        <div class="col-sm-12 text-left">
+                                            <span>
+                                                <div>&nbsp;
+<ul>
+	<li>all vessel types&nbsp;at berth</li>
+	<li>updated each weekday</li>
+</ul>
+</div>
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                                            </div>
+                            <div class="col-md-3 bottommargin divdc" style="background-color: #FFFFFF;margin-bottom:15px;">
+
+                                    <div class="row">
+                                        <div class="col-sm-12 text-left">
+                                                <a href="/getmedia/d0e1573d-2242-42fe-9d9d-57ea8bf4fb76/container-vessels-in-port" target="_blank"><img src="https://kentico.portoflosangeles.org/getattachment/7509f541-758c-45f3-94f7-141d1018b905/attachment.aspx" alt="Working Container Vessels" style="height:auto;max-height:340px" class=""></a>
+                                        </div>
+                                    </div>
+                                                                                                    <div class="row">
+                                        <div class="col-sm-12 text-left">
+                                            <span>
+                                                <div>&nbsp;</div>
+
+<ul>
+	<li>container vessels in port</li>
+	<li>vessels within 40 NM</li>
+	<li>historical container vessel activity</li>
+	<li>updated each weekday</li>
+</ul>
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                                            </div>
+                            <div class="col-md-3 bottommargin divdc" style="background-color: #FFFFFF;margin-bottom:15px;">
+
+                                    <div class="row">
+                                        <div class="col-sm-12 text-left">
+                                                <a href="https://mxsocal.org/" target="_blank"><img src="https://kentico.portoflosangeles.org/getattachment/ec1b90d3-d178-4002-a89e-3a48636fc7e0/attachment.aspx" alt="Marine Exchange of Southern California" style="height:auto;max-height:340px" class=""></a>
+                                        </div>
+                                    </div>
+                                                                                                    <div class="row">
+                                        <div class="col-sm-12 text-left">
+                                            <span>
+                                                <div>&nbsp;
+<ul>
+	<li>vessel movement for LA/LB</li>
+	<li>vessel movement for So Cal ports</li>
+</ul>
+</div>
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                                            </div>
+                            <div class="col-md-3 bottommargin divdc" style="background-color: #FFFFFF;margin-bottom:15px;">
+
+                                    <div class="row">
+                                        <div class="col-sm-12 text-left">
+                                                <a href="https://www.marinetraffic.com/en/ais/details/ports/87" target="_blank"><img src="https://kentico.portoflosangeles.org/getattachment/5299eb83-5db2-4a8d-8d9b-1020449b5d6a/attachment.aspx" alt="Marine Traffic" style="height:auto;max-height:340px" class=""></a>
+                                        </div>
+                                    </div>
+                                                                                                    <div class="row">
+                                        <div class="col-sm-12 text-left">
+                                            <span>
+                                                <div>&nbsp;
+<ul>
+	<li>vessel activity for Los Angeles</li>
+	<li>vessel activity for global ports</li>
+	<li>updated in real time</li>
+</ul>
+</div>
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                                            </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+
+    $(window).on("load", function () {
+
+            var widths_array = [];
+        var imgClass = ".dc-" + 147 + ".dynamic-content .divdc img";
+            $(imgClass).each(function () {
+                widths_array.push(parseInt($(this).width()));
+            });
+            var largest = Math.max.apply(null, widths_array);
+
+            if ($(document).width() > 991) {
+                var img = sectionClass + " .shadow-longer";
+                $(img).css('height', '230px');
+                if (largest != 0) {
+                    $(img).css('width', largest + 'px');
+                }
+            }
+            var numbers_array = [];
+        var sectionClass = ".dc-" + 147 + ".dynamic-content .divdc";
+            $(sectionClass).each(function () {
+                numbers_array.push(parseInt($(this).height()));
+            });
+        var biggest = Math.max.apply(null, numbers_array);
+        console.log(numbers_array);
+
+
+            if ($(document).width() > 991) {
+                $(sectionClass).css('min-height', (biggest  + 60 )+ 'px');
+            }
+
+    });
+</script>
+
+<section class="cms-content full-width">
+
+	<div class="content-wrap nopadding">
+		<div class="page-section notoppadding">
+
+
+			<div class="section nomargin separator" style="margin-top:0 !important ;margin-bottom:0 !important">
+				Cargo Tracking
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="cms-content text-info-block" style="background-color: #FFFFFF;">
+
+	<div class="content-wrap nopadding">
+
+		<div id="section-about" class="page-section">
+
+            <div class="clearfix" style="padding: 0px 0;">
+                
+
+                <p class="lead " style="margin-bottom: 0px;"><p style="font-size:14px;"><br />
+The&nbsp;<a href="https://tower.portoptimizer.com/" target="_blank">Port Optimizer&trade; Control Tower</a>&nbsp;delivers real-time shipping data and insights to supply chain stakeholders through a single, secure portal. Registration is open to all. For questions or technical support, please use button below.</p>
+
+<p style="font-size:14px;">&nbsp;</p>
+</p>
+
+                <div class="lead text-center">
+                        <a href="/cdn-cgi/l/email-protection#45152a37310a35312c282c3f20376b163035352a3731053224273120266b262a287a3630272f20263178152a3731652a2365092a3665042b222029203665152a3731650a35312c282c3f2037651120262d2b2c26242965163035352a3731" target="_blank" class="btn btn-success">technical support</a>
+                                    </div>
+                <div class="clear"></div>
+            </div>
+		</div>
+	</div>
+</section>
+
+
+<section class="dc-148 cms-content dynamic-content">
+    <div class="animated-image content-wrap nopadding">
+        <div class="page-section notoppadding">
+            <div class="section nomargin section-n-columns" style="margin-top:-60px !important ;margin-bottom:-30px !important">
+                <div class="container clearfix">
+                    <div class="row">
+                            <div class="col-md-3 bottommargin divdc" style="background-color: #FFFFFF;margin-bottom:15px;">
+
+                                    <div class="row">
+                                        <div class="col-sm-12 text-left">
+                                                <a href="https://signal.portoptimizer.com/" target="_blank"><img src="https://kentico.portoflosangeles.org/getattachment/0baa2ca6-e1ef-48cf-814e-ee904d20f721/attachment.aspx" alt="Signal" style="height:auto;max-height:340px" class=""></a>
+                                        </div>
+                                    </div>
+                                                                                                    <div class="row">
+                                        <div class="col-sm-12 text-left">
+                                            <span>
+                                                <div>&nbsp;
+<ul>
+	<li>containerized import volumes</li>
+	<li>projected container arrivals</li>
+	<li>vessels within 40 NM</li>
+	<li>updated each weekday</li>
+	<li>no registration required</li>
+</ul>
+</div>
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                                            </div>
+                            <div class="col-md-3 bottommargin divdc" style="background-color: #FFFFFF;margin-bottom:15px;">
+
+                                    <div class="row">
+                                        <div class="col-sm-12 text-left">
+                                                <a href="https://track.portoptimizer.com/" target="_blank"><img src="https://kentico.portoflosangeles.org/getattachment/2c487d2e-981a-40a1-a3f9-763cd81578d8/attachment.aspx" alt="Return Signal" style="height:auto;max-height:340px" class=""></a>
+                                        </div>
+                                    </div>
+                                                                                                    <div class="row">
+                                        <div class="col-sm-12 text-left">
+                                            <span>
+                                                <div>&nbsp;
+<ul>
+	<li>track containers</li>
+	<li>empty container returns</li>
+	<li>dual transactions</li>
+	<li>updated every five minutes</li>
+	<li>registration required</li>
+</ul>
+</div>
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                                            </div>
+                            <div class="col-md-3 bottommargin divdc" style="background-color: #FFFFFF;margin-bottom:15px;">
+
+                                    <div class="row">
+                                        <div class="col-sm-12 text-left">
+                                                <a href="https://tower.portoptimizer.com/" target="_blank"><img src="https://kentico.portoflosangeles.org/getattachment/c6254079-96fd-4d91-a375-c13d2250088c/attachment.aspx" alt="Control Tower" style="height:auto;max-height:340px" class=""></a>
+                                        </div>
+                                    </div>
+                                                                                                    <div class="row">
+                                        <div class="col-sm-12 text-left">
+                                            <span>
+                                                <div>&nbsp;
+<ul>
+	<li>truck turn times&nbsp;</li>
+	<li>historical&nbsp;volume data</li>
+	<li>updated in real time</li>
+	<li>registration required</li>
+</ul>
+</div>
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                                            </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+
+    $(window).on("load", function () {
+
+            var widths_array = [];
+        var imgClass = ".dc-" + 148 + ".dynamic-content .divdc img";
+            $(imgClass).each(function () {
+                widths_array.push(parseInt($(this).width()));
+            });
+            var largest = Math.max.apply(null, widths_array);
+
+            if ($(document).width() > 991) {
+                var img = sectionClass + " .shadow-longer";
+                $(img).css('height', '230px');
+                if (largest != 0) {
+                    $(img).css('width', largest + 'px');
+                }
+            }
+            var numbers_array = [];
+        var sectionClass = ".dc-" + 148 + ".dynamic-content .divdc";
+            $(sectionClass).each(function () {
+                numbers_array.push(parseInt($(this).height()));
+            });
+        var biggest = Math.max.apply(null, numbers_array);
+        console.log(numbers_array);
+
+
+            if ($(document).width() > 991) {
+                $(sectionClass).css('min-height', (biggest  + 60 )+ 'px');
+            }
+
+    });
+</script>
+
+<section class="cms-content full-width">
+
+	<div class="content-wrap nopadding">
+		<div class="page-section notoppadding">
+
+
+			<div class="section nomargin separator" style="margin-top:0 !important ;margin-bottom:0 !important">
+				Shipping Line Services, Port Rotations, and More
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="cms-content text-info-block" style="background-color: #FFFFFF;">
+
+	<div class="content-wrap nopadding">
+
+		<div id="section-about" class="page-section">
+
+            <div class="clearfix" style="padding: 0px 0;">
+                
+
+                <p class="lead " style="margin-bottom: 0px;"><p style="font-size:14px;"><br />
+The Port of Los Angeles provides quarterly reports on shipping lines services,&nbsp;port&nbsp;rotations, and vessels.&nbsp;Please check individual terminal websites for current information.</p>
+</p>
+
+                <div class="lead text-left">
+                                    </div>
+                <div class="clear"></div>
+            </div>
+		</div>
+	</div>
+</section>
+
+
+<section class="dc-149 cms-content dynamic-content">
+    <div class="animated-image content-wrap nopadding">
+        <div class="page-section notoppadding">
+            <div class="section nomargin section-n-columns" style="margin-top:-60px !important ;margin-bottom:-30px !important">
+                <div class="container clearfix">
+                    <div class="row">
+                            <div class="col-md-3 bottommargin divdc" style="background-color: #FFFFFF;margin-bottom:15px;">
+
+                                    <div class="row">
+                                        <div class="col-sm-12 text-left">
+                                                <a href="/getmedia/6092f0f7-9e77-4b80-9b65-f6c6b4b5f9e1/shipping-line-services-and-port-rotations-by-terminal" target="_blank"><img src="https://kentico.portoflosangeles.org/getattachment/5b83ff26-d544-47ce-8f67-b7686c27e2a4/attachment.aspx" alt="Services and Rotations by Terminal" style="height:auto;max-height:340px" class=""></a>
+                                        </div>
+                                    </div>
+                                                                                                    <div class="row">
+                                        <div class="col-sm-12 text-left">
+                                            <span>
+                                                <div>&nbsp;
+<ul>
+	<li>container terminals</li>
+	<li>shipping alliance</li>
+	<li>service</li>
+	<li>carriers</li>
+	<li>rotation</li>
+	<li>vessel size</li>
+</ul>
+</div>
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                                            </div>
+                            <div class="col-md-3 bottommargin divdc" style="background-color: #FFFFFF;margin-bottom:15px;">
+
+                                    <div class="row">
+                                        <div class="col-sm-12 text-left">
+                                                <a href="/getmedia/472ff15d-bea9-48bb-aec9-606257a0aae4/shipping-line-services-and-port-rotations-by-alliance" target="_blank"><img src="https://kentico.portoflosangeles.org/getattachment/6c6cfb06-39a2-4e6a-a058-e70cea45c33e/attachment.aspx" alt="Services and Rotations by Alliance" style="height:auto;max-height:340px" class=""></a>
+                                        </div>
+                                    </div>
+                                                                                                    <div class="row">
+                                        <div class="col-sm-12 text-left">
+                                            <span>
+                                                <div>&nbsp;
+<ul>
+	<li>shipping alliance</li>
+	<li>service</li>
+	<li>container terminals</li>
+	<li>rotation</li>
+	<li>vessel size</li>
+</ul>
+</div>
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                                            </div>
+                            <div class="col-md-3 bottommargin divdc" style="background-color: #FFFFFF;margin-bottom:15px;">
+
+                                    <div class="row">
+                                        <div class="col-sm-12 text-left">
+                                                <a href="https://ustradenumbers.com/port/port-of-los-angeles/" target="_blank"><img src="https://kentico.portoflosangeles.org/getattachment/e4fd7de8-3b8c-4acf-883f-efafab2fe1ca/attachment.aspx" alt="U.S. Import/Export Trade Data" style="height:auto;max-height:340px" class=""></a>
+                                        </div>
+                                    </div>
+                                                                                                    <div class="row">
+                                        <div class="col-sm-12 text-left">
+                                            <span>
+                                                <div>&nbsp;</div>
+
+<ul>
+	<li>supplemental&nbsp;trade data</li>
+	<li>generated&nbsp;by WorldCity, Inc.</li>
+	<li>data from U.S. Census Bureau</li>
+	<li>updated monthly</li>
+</ul>
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                                            </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+
+    $(window).on("load", function () {
+
+            var widths_array = [];
+        var imgClass = ".dc-" + 149 + ".dynamic-content .divdc img";
+            $(imgClass).each(function () {
+                widths_array.push(parseInt($(this).width()));
+            });
+            var largest = Math.max.apply(null, widths_array);
+
+            if ($(document).width() > 991) {
+                var img = sectionClass + " .shadow-longer";
+                $(img).css('height', '230px');
+                if (largest != 0) {
+                    $(img).css('width', largest + 'px');
+                }
+            }
+            var numbers_array = [];
+        var sectionClass = ".dc-" + 149 + ".dynamic-content .divdc";
+            $(sectionClass).each(function () {
+                numbers_array.push(parseInt($(this).height()));
+            });
+        var biggest = Math.max.apply(null, numbers_array);
+        console.log(numbers_array);
+
+
+            if ($(document).width() > 991) {
+                $(sectionClass).css('min-height', (biggest  + 60 )+ 'px');
+            }
+
+    });
+</script>
+            </div>
+
+            
+
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+
+    function set_log(title, val) {
+        $(".log").html('<div><span>' + title + '</span>' + val + '</div>' + $(".log").html());
+    }
+
+</script>
+
+
+
+            </div>
+<footer id="footer" class="dark noborder">
+
+    <div class="center container">
+        <div class="footer-widgets-wrap text-left">
+
+            <div class="row divcenter clearfix">
+                <div class="col-xs-12 col-sm-6 col-lg-3">
+                    <div class="widget clearfix">
+                        <p>
+                            <img src="/Content/one-page/images/logo.png" style="opacity:0.5" alt="The Port of Los Angeles" />
+                        <p>
+                        <p>
+                            <a href="https://goo.gl/maps/rzVJuBw4ghwjgqjb8" target="_blank">
+                                425 South Palos Verdes Street<br />
+                                San Pedro, CA, USA 90731
+                            </a>
+                        </p>
+                        <p>
+                            Phone: <a href="tel:1-310-732-3508">(310) 732-3508</a><br />
+                            Email: <a href="/cdn-cgi/l/email-protection#3d5e52505048535449447d4d524f49515c13524f5a"><span class="__cf_email__" data-cfemail="a4c7cbc9c9d1cacdd0dde4d4cbd6d0c8c58acbd6c3">[email&#160;protected]</span></a><br />
+                            <a href="/news">Media Contacts</a>
+                        </p>
+                        <div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <a href="https://www.facebook.com/PortofLA" class="help-social-icon" aria-label="Facebook">
+                                        <img src="/Content/images/social/Facebook.png" height="25" alt="Facebook logo" title="Facebook logo" />
+                                    </a>
+                                    <a href="https://twitter.com/PortofLA" class="help-social-icon" aria-label="X">
+                                        <img src="/Content/images/social/X-Icon.png" alt="X" height="25" title="X logo" />
+                                    </a>
+                                    <a href="https://www.instagram.com/portofla/" class="help-social-icon" aria-label="Instagram">
+                                        <img src="/Content/images/social/Instagram.png" height="25" alt="Instagram logo" title="Instagram logo" />
+                                    </a>
+                                    <a href="https://www.youtube.com/user/ThePortofLosAngeles" class="help-social-icon" aria-label="YouTube">
+                                        <img src="/Content/images/social/YouTube.png" height="25" alt="YouTube logo" title="YouTube logo" />
+                                    </a>
+                                    <a href="https://www.linkedin.com/company/port-of-los-angeles/" class="help-social-icon" aria-label="LinkedIn">
+                                        <img src="/Content/images/social/LinkedIn.png" height="25" alt="LinkedIn logo" title="LinkedIn logo" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                            <br />
+                            <div>
+                                <button class="btn btn-success btn-ealerts" type="button">Sign Up For eAlerts</button>
+                            </div>
+
+
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-lg-2">
+
+                    <div class="widget clearfix">
+                        <h4>SiteMap</h4>
+
+                        <ul class="list-unstyled footer-site-links nobottommargin">
+                            <li><a href="/"><span class="fa fa-angle-right"> </span> Home</a></li>
+                            <li><a href="/news"><span class="fa fa-angle-right"> </span> News</a></li>
+                            <li><a href="/business"><span class="fa fa-angle-right"> </span> Business</a></li>
+                            <li><a href="/community"><span class="fa fa-angle-right"> </span> Community</a></li>
+                            <li><a href="/environment"><span class="fa fa-angle-right"> </span> Environment</a></li>
+                            <li><a href="/commission"><span class="fa fa-angle-right"> </span> Commission</a></li>
+                            <li><a href="/about"><span class="fa fa-angle-right"> </span> About</a></li>
+                            <li><a href="/community/los-angeles-port-police" target="_blank"><span class="fa fa-angle-right"> </span> Los Angeles Port Police</a></li>
+                            <li><a href="/business/operations" target="_blank"><span class="fa fa-angle-right"> </span> Cargo Operations Dashboard</a></li>
+                            <li><a href="https://permits.portoflosangeles.org/application-type" target="_blank"><span class="fa fa-angle-right"> </span> Online Permit Application Portal</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-lg-3">
+
+                    <div class="widget clearfix">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="widget clearfix">
+                                    <h4>OTHER PORT SITES</h4>
+
+                                    <p><a href="http://portoflabonds.org" target="_blank">BondLink Investor Relations</a></p>
+
+
+
+                                    <p>
+                                        <a href="https://www.lafleetweek.com" target="_blank">
+                                            LA Fleet Week<sup>&reg;</sup>
+                                        </a>
+                                    </p>
+
+                                    <p>
+                                        <a href="https://laharborhabitats.org" target="_blank">
+                                            LA Harbor Habitats
+                                        </a>
+                                    </p>
+
+                                    <p>
+                                        <a href="http://lawaterfront.org" target="_blank">
+                                            LA Waterfront
+                                        </a>
+                                    </p>
+                                    
+                                    
+                                    
+                                    <p>
+                                        <a href="https://tower.portoptimizer.com/" target="_blank">
+                                            Port Optimizer<sup>&trade;</sup> Control Tower
+                                        </a>
+                                    </p>
+                                    <p>
+                                        <a href="https://track.portoptimizer.com/" target="_blank">
+                                            Port Optimizer<sup>&trade;</sup> Track & Trace
+                                        </a>
+                                    </p>
+                                    
+
+                                    <p>
+                                        <a href="http://cleanairactionplan.org" target="_blank">
+                                            San Pedro Bay Ports Clean Air Action Plan
+                                        </a>
+                                    </p>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-lg-4">
+
+                    <div class="widget-clearfix">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="widget clearfix">
+                                    <h4>Other City Sites</h4>
+
+                                    <p>
+                                        <a href="https://myla311.lacity.org" target="_blank">
+                                            311
+                                        </a>
+                                    </p>
+
+                                    <p>
+                                        <a href="https://www.lacity.org/" target="_blank">
+                                            City of Los Angeles
+                                        </a>
+                                    </p>
+
+                                    <p>
+                                        <a href="https://www.lamayor.org" target="_blank">
+                                            Mayor of Los Angeles
+                                        </a>
+                                    </p>
+
+                                    <p>
+                                        <a href="https://councildistrict15.lacity.gov/" target="_blank">
+                                            Los Angeles City Council District 15
+                                        </a>
+                                    </p>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <div id="copyrights">
+        <div class="container clearfix">
+            <div class="row">
+                <div class="col-md-6">
+                    &copy;2026 Port of Los Angeles, City of Los Angeles<br />
+                    <a href="/disclaimer">Disclaimer</a> | <a href="/privacy-policy">Privacy Policy</a>
+                </div>
+                <div class="col-md-6">
+                    <span>As a covered entity under Title II of the Americans with Disabilities Act, the City of Los Angeles does not discriminate on the basis of disability and, upon request, will provide reasonable accommodation to ensure equal access to its programs, services, and activities.</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</footer>
+
+<div class="modal fade modal-ealerts" data-backdrop="static" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content" id="modalEAlerts">
+            
+
+
+<form action="/contact/ajax_modalealerts" data-ajax="true" data-ajax-loading="#ajaxLoader" data-ajax-mode="replace" data-ajax-update="#modalEAlerts" id="form0" method="post">    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <h5 class="modal-title">eAlerts</h5>
+    </div>
+    <div class="modal-body">
+
+        <div class="container-fluid">
+
+            <div class="row">
+
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label" for="FirstName">First Name</label>
+                            <input class="form-control" data-val="true" data-val-required="The First Name field is required." id="FirstName" name="FirstName" type="text" value="" />
+                            <span class="field-validation-valid" data-valmsg-for="FirstName" data-valmsg-replace="true"></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="LastName">Last Name</label>
+                            <input class="form-control" data-val="true" data-val-required="The Last Name field is required." id="LastName" name="LastName" type="text" value="" />
+                            <span class="field-validation-valid" data-valmsg-for="LastName" data-valmsg-replace="true"></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="Organization">Organization</label>
+                            <input class="form-control" data-val="true" data-val-required="The Organization field is required." id="Organization" name="Organization" type="text" value="" />
+                            <span class="field-validation-valid" data-valmsg-for="Organization" data-valmsg-replace="true"></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="EmailAddress">Email</label>
+                            <input class="form-control" data-val="true" data-val-required="The Email field is required." id="EmailAddress" name="EmailAddress" type="text" value="" />
+                            <span class="field-validation-valid" data-valmsg-for="EmailAddress" data-valmsg-replace="true"></span>
+                        </div>
+
+                        <div class="form-group topmargin">
+
+                                <div class="g-recaptcha" data-callback="correctCaptcha" data-sitekey="6LelyxAqAAAAANltxwimoyCyV-CACxER9e62JL-O"></div>
+                                <br />
+                                <button type="submit" class="btn btn-success" disabled="disabled">Subscribe</button>
+
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+
+
+                        <div class="checkbox">
+                            <label class="control-label">
+<input data-val="true" data-val-required="The IsBoardMeetingAgendas field is required." id="IsBoardMeetingAgendas" name="IsBoardMeetingAgendas" type="checkbox" value="true" /><input name="IsBoardMeetingAgendas" type="hidden" value="false" />                                Board Agendas
+                                <p>Includes upcoming regular and special meetings of the Los Angeles Board of Harbor Commissioners and Harbor Commission Audit Committee.</p>
+                            </label>
+                        </div>
+
+                        <div class="checkbox">
+                            <label class="control-label">
+<input data-val="true" data-val-required="The IsCargoUpdates field is required." id="IsCargoUpdates" name="IsCargoUpdates" type="checkbox" value="true" /><input name="IsCargoUpdates" type="hidden" value="false" />                                Cargo Updates
+                                <p>Includes monthly container statistics and bunker fuel reports for the Port of Los Angeles.</p>
+                            </label>
+                        </div>
+
+                        <div class="checkbox">
+                            <label class="control-label">
+<input data-val="true" data-val-required="The IsEnvironmentalNotices field is required." id="IsEnvironmentalNotices" name="IsEnvironmentalNotices" type="checkbox" value="true" /><input name="IsEnvironmentalNotices" type="hidden" value="false" />                                Community
+                                <p>Includes upcoming events hosted by the Port of Los Angeles, LA Waterfront development information, and biweekly Currents e-newsletter.</p>
+                            </label>
+                        </div>
+
+                        <div class="checkbox">
+                            <label class="control-label">
+<input data-val="true" data-val-required="The IsNews field is required." id="IsNews" name="IsNews" type="checkbox" value="true" /><input name="IsNews" type="hidden" value="false" />                                News
+                                <p>Includes all news stories from the Port of Los Angeles, covering a range of topics, including business, cargo, community, environment, public safety, and LA Waterfront.</p>
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label class="control-label">
+                                <input data-val="true" data-val-required="The All field is required." id="All" name="All" type="checkbox" value="true" /><input name="All" type="hidden" value="false" />
+                                All of the above
+                                <p>Subscribe to receive all email notifications from the Port of Los Angeles.</p>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <span class="field-validation-valid" data-valmsg-for="IsBoardMeetingAgendas" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+
+            </div>
+
+        </div>
+    </div>
+</form><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+
+    $(function () {
+
+        $eAlerts.initControls();
+    });
+</script>
+
+
+        </div>
+    </div>
+</div>
+
+<div id="translateModal" class="modal fade" data-backdrop="static" tabindex="-1" role="dialog">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" style="color:#000 !important">&times;</span>
+        </button>
+        <h3 class="modal-title" style="color:#000 !important">Google Translate</h3>
+    </div>
+    <div class="modal-body">
+        <div id="google_translate_element"></div>
+    </div>
+</div>
+            
+            <div class="device-xs visible-xs"></div>
+            <div class="device-sm visible-sm"></div>
+            <div class="device-md visible-md"></div>
+            <div class="device-lg visible-lg"></div>
+
+            
+            <script src="/Content/js/page.js?101325" type="text/javascript"></script>
+<script src="/Content/js/metrics.js" type="text/javascript"></script>
+<script src="/content/js/functions.js" type="text/javascript"></script>
+<script src="/content/js/plugins.js" type="text/javascript"></script>
+<script src="/content/js/plugins/jquery.swiper.js" type="text/javascript"></script>
+<script src="/scripts/bootstrap-3.4.1-dist/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/scripts/jquery.unobtrusive-ajax.min.js" type="text/javascript"></script>
+<script src="/scripts/jquery.validate.min.js" type="text/javascript"></script>
+<script src="/scripts/jquery.validate.unobtrusive.min.js" type="text/javascript"></script>
+<script src="/content/js/cms/cms-youtubeGallery.js" type="text/javascript"></script>
+<script src="/Content/youtube-video-player/packages/perfect-scrollbar/perfect-scrollbar.js" type="text/javascript"></script>
+<script src="/Content/youtube-video-player/packages/perfect-scrollbar/jquery.mousewheel.js" type="text/javascript"></script>
+<script src="/Content/youtube-video-player/js/youtube-video-player.jquery.min.js" type="text/javascript"></script>
+<script src="/Content/calendar/moment.min.js" type="text/javascript"></script>
+<script src="/Content/calendar/fullcalendar.min.js" type="text/javascript"></script>
+<script src="/content/js/cms/section-playlist.js" type="text/javascript"></script>
+<script src="/content/js/cms/cms-nav.js" type="text/javascript"></script>
+<script src="/content/js/eAlerts.js" type="text/javascript"></script>
+
+        </div>
+    </div>
+
+    <div id="layoutModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h5 class="modal-title"></h5>
+                </div>
+                <div class="modal-body">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        <!-- Google Tag Manager (noscript) -->
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5GCXK6P"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+
+    <script>
+        (function (d) {
+            var s = d.createElement("script");
+            /* uncomment the following line to override default position*/
+            s.setAttribute("data-position", 2);
+            /* uncomment the following line to override default size (values: small, large)*/
+            s.setAttribute("data-size", "small");
+            /* uncomment the following line to override default language (e.g., fr, de, es, he, nl, etc.)*/
+            /* s.setAttribute("data-language", "language");*/
+            /* uncomment the following line to override color set via widget (e.g., #053F67)*/
+            s.setAttribute("data-color", "#053E67");
+            /* uncomment the following line to override type set via widget (1=person, 2=chair, 3=eye, 4=text)*/
+            /* s.setAttribute("data-type", "1");*/
+            /* s.setAttribute("data-statement_text:", "Our Accessibility Statement");*/
+            /* s.setAttribute("data-statement_url", "http://www.example.com/accessibility")";*/
+            /* uncomment the following line to override support on mobile devices*/
+            s.setAttribute("data-mobile", true);
+            /* uncomment the following line to set custom trigger action for accessibility menu*/
+            /* s.setAttribute("data-trigger", "triggerId")*/
+            s.setAttribute("data-account", "H3YDnBh1tx");
+            s.setAttribute("src", "https://cdn.userway.org/widget.js");
+            (d.body || d.head).appendChild(s);
+        })(document)
+    </script>
+    <noscript>
+        Please ensure Javascript is enabled for purposes of
+        <a href="https://userway.org">website accessibility</a>
+    </noscript>
+
+
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a4bd7b134ab63941',t:'MTc5MjIyMDk5Nw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

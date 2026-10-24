@@ -1,0 +1,4 @@
+Flagged Port Weeks = COUNTROWS(fact_review_queue)
+Unreviewed Flags = CALCULATE(COUNTROWS(fact_review_queue), fact_review_queue[review_status] = "UNREVIEWED")
+Review Actions = COUNTROWS(fact_review_history)
+Unresolved Escalation Exceptions = CALCULATE(COUNTROWS(fact_escalations), fact_escalations[unresolved_exception] = TRUE())

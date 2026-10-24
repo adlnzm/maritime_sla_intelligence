@@ -46,8 +46,8 @@ def main():
         ):
             raise ValueError("Only accepted Fabric runs can be served")
         folder.mkdir(parents=True, exist_ok=True)
-        products = folder / args.run_id
-        products.mkdir(exist_ok=True)
+        products = folder / "gold" / args.run_id
+        products.mkdir(parents=True, exist_ok=True)
         for name in report["serving_products"]:
             if not re.fullmatch(r"[a-z_]+", name):
                 raise ValueError("Invalid product name")
@@ -56,6 +56,20 @@ def main():
             )
             response.raise_for_status()
             (products / (name + ".json")).write_bytes(response.content)
+        for key in report["release"].get("medallion", {}):
+            layer, name = key.split(".", 1)
+            if layer not in {"silver", "gold"} or not re.fullmatch(r"[a-z_]+", name):
+                raise ValueError("Invalid medallion product")
+            relative = (
+                f"gold/{args.run_id}/operations/{name}.json"
+                if layer == "gold"
+                else f"silver/{args.run_id}/{name}.json"
+            )
+            response = client.get(root + "/evidence/" + relative, headers=headers)
+            response.raise_for_status()
+            target = folder / relative
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_bytes(response.content)
         manifest = AzureStore().publish(products, report)
         write_json(folder / "serving-publication.json", manifest)
     elif args.mode == "download-features":

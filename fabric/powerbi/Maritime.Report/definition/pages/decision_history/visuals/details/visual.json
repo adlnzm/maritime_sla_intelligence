@@ -1,0 +1,154 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "details",
+  "position": {
+    "x": 20,
+    "y": 180,
+    "z": 0,
+    "width": 1560,
+    "height": 690,
+    "tabOrder": 200
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_review_history"
+                    }
+                  },
+                  "Property": "port_id"
+                }
+              },
+              "queryRef": "fact_review_history.port_id"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_review_history"
+                    }
+                  },
+                  "Property": "week_start"
+                }
+              },
+              "queryRef": "fact_review_history.week_start"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_review_history"
+                    }
+                  },
+                  "Property": "action"
+                }
+              },
+              "queryRef": "fact_review_history.action"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_review_history"
+                    }
+                  },
+                  "Property": "previous_action"
+                }
+              },
+              "queryRef": "fact_review_history.previous_action"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_review_history"
+                    }
+                  },
+                  "Property": "reason"
+                }
+              },
+              "queryRef": "fact_review_history.reason"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_review_history"
+                    }
+                  },
+                  "Property": "owner"
+                }
+              },
+              "queryRef": "fact_review_history.owner"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_review_history"
+                    }
+                  },
+                  "Property": "created_at"
+                }
+              },
+              "queryRef": "fact_review_history.created_at"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_review_history"
+                    }
+                  },
+                  "Property": "classification"
+                }
+              },
+              "queryRef": "fact_review_history.classification"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_review_history"
+                    }
+                  },
+                  "Property": "lineage_id"
+                }
+              },
+              "queryRef": "fact_review_history.lineage_id"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_review_history"
+                    }
+                  },
+                  "Property": "run_id"
+                }
+              },
+              "queryRef": "fact_review_history.run_id"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

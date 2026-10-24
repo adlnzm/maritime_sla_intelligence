@@ -1,0 +1,180 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "details",
+  "position": {
+    "x": 20,
+    "y": 180,
+    "z": 0,
+    "width": 1560,
+    "height": 690,
+    "tabOrder": 200
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_escalations"
+                    }
+                  },
+                  "Property": "port_name"
+                }
+              },
+              "queryRef": "fact_escalations.port_name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_escalations"
+                    }
+                  },
+                  "Property": "week_start"
+                }
+              },
+              "queryRef": "fact_escalations.week_start"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_escalations"
+                    }
+                  },
+                  "Property": "risk_level"
+                }
+              },
+              "queryRef": "fact_escalations.risk_level"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_escalations"
+                    }
+                  },
+                  "Property": "delivery_status"
+                }
+              },
+              "queryRef": "fact_escalations.delivery_status"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_escalations"
+                    }
+                  },
+                  "Property": "attempts"
+                }
+              },
+              "queryRef": "fact_escalations.attempts"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_escalations"
+                    }
+                  },
+                  "Property": "last_attempt_at"
+                }
+              },
+              "queryRef": "fact_escalations.last_attempt_at"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_escalations"
+                    }
+                  },
+                  "Property": "last_failure_reason"
+                }
+              },
+              "queryRef": "fact_escalations.last_failure_reason"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_escalations"
+                    }
+                  },
+                  "Property": "unresolved_exception"
+                }
+              },
+              "queryRef": "fact_escalations.unresolved_exception"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_escalations"
+                    }
+                  },
+                  "Property": "review_reference"
+                }
+              },
+              "queryRef": "fact_escalations.review_reference"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_escalations"
+                    }
+                  },
+                  "Property": "classification"
+                }
+              },
+              "queryRef": "fact_escalations.classification"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_escalations"
+                    }
+                  },
+                  "Property": "lineage_id"
+                }
+              },
+              "queryRef": "fact_escalations.lineage_id"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_escalations"
+                    }
+                  },
+                  "Property": "run_id"
+                }
+              },
+              "queryRef": "fact_escalations.run_id"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

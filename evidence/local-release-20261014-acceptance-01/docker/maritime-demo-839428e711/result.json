@@ -1,0 +1,262 @@
+{
+  "status": "PASS",
+  "project": "maritime-demo-839428e711",
+  "started_at": "2026-10-14T03:55:26.723897+00:00",
+  "mode": "RETAINED_PUBLIC_DATA_REPLAY_WITH_SIMULATED_SHIPMENTS",
+  "cloud": "NOT_EXECUTED",
+  "commands": [
+    {
+      "command": [
+        "docker",
+        "compose",
+        "-f",
+        "compose.demo.yml",
+        "-p",
+        "maritime-demo-839428e711",
+        "build",
+        "--no-cache",
+        "--pull"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 50.683244300002116
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "-f",
+        "compose.demo.yml",
+        "-p",
+        "maritime-demo-839428e711",
+        "up",
+        "-d",
+        "--wait",
+        "--wait-timeout",
+        "300"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 26.597355499994592
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "-f",
+        "compose.demo.yml",
+        "-p",
+        "maritime-demo-839428e711",
+        "ps",
+        "--format",
+        "json"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 0.7292919999963487
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "-f",
+        "compose.demo.yml",
+        "-p",
+        "maritime-demo-839428e711",
+        "exec",
+        "-T",
+        "api",
+        "python",
+        "-c",
+        "import os; print(os.getuid()); print(open('/proc/self/status').read())"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 0.864944299995841
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "-f",
+        "compose.demo.yml",
+        "-p",
+        "maritime-demo-839428e711",
+        "ps",
+        "-q",
+        "api"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 0.720556399995985
+    },
+    {
+      "command": [
+        "docker",
+        "inspect",
+        "--format",
+        "{{json .HostConfig.Memory}} {{json .HostConfig.NanoCpus}} {{json .HostConfig.PidsLimit}} {{json .HostConfig.ReadonlyRootfs}}",
+        "a1431b5948c6d67dcee782cff3f54ce10b668d4cc605692ae132b7144876f4e1"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 0.3174111999978777
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "-f",
+        "compose.demo.yml",
+        "-p",
+        "maritime-demo-839428e711",
+        "exec",
+        "-T",
+        "api",
+        "python",
+        "-c",
+        "import os; os.rename('/app/data/maritime.db','/app/data/maritime.db.unavailable')"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 0.6542638000028091
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "-f",
+        "compose.demo.yml",
+        "-p",
+        "maritime-demo-839428e711",
+        "exec",
+        "-T",
+        "api",
+        "python",
+        "-c",
+        "import os; os.replace('/app/data/maritime.db.unavailable','/app/data/maritime.db')"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 0.8060038999974495
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "-f",
+        "compose.demo.yml",
+        "-p",
+        "maritime-demo-839428e711",
+        "restart",
+        "api"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 2.3609205999964615
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "-f",
+        "compose.demo.yml",
+        "-p",
+        "maritime-demo-839428e711",
+        "run",
+        "--rm",
+        "--no-deps",
+        "api",
+        "python",
+        "-c",
+        "import json; from maritime.recovery import backup,restore; backup('/app/data','/tmp/snapshot'); print(json.dumps(restore('/tmp/snapshot','/tmp/restored')))"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.077977400003874
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "-f",
+        "compose.demo.yml",
+        "-p",
+        "maritime-demo-839428e711",
+        "logs",
+        "--no-color"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 0.5718464999954449
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "-f",
+        "compose.demo.yml",
+        "-p",
+        "maritime-demo-839428e711",
+        "stop"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 1.5788859999956912
+    }
+  ],
+  "checks": {
+    "runtime_security": "PASS_UID_CAPABILITIES_LIMITS_READONLY",
+    "unauthenticated": 401,
+    "ready": 200,
+    "ports": 200,
+    "congestion": 200,
+    "network/exposure": 200,
+    "scenarios": 200,
+    "sla-risk": 200,
+    "interventions": 200,
+    "decisions": 200,
+    "lineage": 200,
+    "data-quality": 200,
+    "predictions": 200,
+    "metrics": 200,
+    "signals": 200,
+    "run-report": 200,
+    "dependency_unavailable": 503,
+    "liveness_during_outage": 200,
+    "dependency_recovered": 200,
+    "reader_cannot_write": 403,
+    "review": 200,
+    "review_retry": 200,
+    "malformed_review": 422,
+    "simulated_outcome": 200,
+    "outcome_retry": 200,
+    "body_limit": 413,
+    "fabricated_observed_outcome_rejected": 422,
+    "restart_readiness": 200,
+    "persistent_audit": 200,
+    "learning_export": 200
+  },
+  "run_id": "b6bbb7476d6e44588f6a36aa93538abc",
+  "files": {
+    "audit.json": "8ea1b33c0d218dcb5a6cddf31b3779132e9fe6f19f2e7867b1f985a002dd8fcf",
+    "backup-restore.json": "75c6116567202c5b1e61b4c3b2b3392b618736b4e062c2b3ea7d00ab3de728d2",
+    "command-0.log": "447e24ef65726c92ea483f06fe976e5e0745fc16058965b249a84bb6e2fa41d1",
+    "command-1.log": "fa40b4be958bd2074c90617a872f7b66fe3f7d021b8e1c49a4ed0bbdce3527ea",
+    "command-10.log": "3184a2d4106a7affc4e367ed8793a655b2cd8dea4e58d88b525385a5d7077fab",
+    "command-11.log": "28b97ccb9af8b2fa9766caa21a05bf12c2b6897cee9553e64c55dbcf0cec219f",
+    "command-2.log": "f8e63457115978ccb25600e7765ccaef5ea16f2fc6ff958e5814643ceebd9d2b",
+    "command-3.log": "353e9a74d966a5b6861918558dd257a8fa82a7ff8d1de60ac01f63f5eae4c3c0",
+    "command-4.log": "f0cb802728cce5d6784e8b2187890083001bd5e08acbd03e7e2436fa6cf481a2",
+    "command-5.log": "dac69f6c83c1a0341b61a37962f4585ff746fa4802852c29d0f99bd7efbdbb92",
+    "command-6.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "command-7.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "command-8.log": "5b9d2dfeca8c500bb17875c3d1df5c03e12cc1c340306831bf5b4edc68a53ec2",
+    "command-9.log": "18520893daff59b8df899908b1f1c1ec5ac2af7ed9b7cd0035f20a114fba87e4",
+    "congestion.json": "99a8ba7de09680c99b013f53342f7dd9a9b162d0c6eeb546c9d8e9411e8347c0",
+    "data-quality.json": "83d5b204f12391fc644c2ddede51aa8fb8ba87e95243a59a5f68112225122091",
+    "decisions.json": "f64e85028346bccf5a1242042ad6f6e1c0c7c0c95012b1192d80bd511b885d45",
+    "interventions.json": "385b6a364225b0c84c79371ec21deec5bfe1ddc16b941207c6b34e083b910e4b",
+    "learning-destination.db": "e740602313861eef4e284547ce1cb0a9bef41db48b24f9ae82a514489c3859e7",
+    "learning-transfer.json": "623f74902bbe7a42e3a597a7be122b17badda12fb407901f3563b69af620d9f0",
+    "lineage.json": "5e06c058193e619476afbc75204af8cbd9ce18dc064759a657e5e382569b03f1",
+    "metrics.json": "4c4bd57f24d0c11b1a332d51546c87c0e602ddd53772b0530030e2372c3bfb54",
+    "network-exposure.json": "5ff326e53e30500c376583bc743c165b4f0ef8e316a6b9cc5b7fb7c36f589628",
+    "ports.json": "7a62f440927a876ad6fbc8ec5d76d86b015f1f288cbce9aa88ceef563aec6082",
+    "predictions.json": "d1451957007d99d8f1e6cd88f561e677328c271d3013dac69404f5832e62b639",
+    "ready.json": "ebe1728a7693364f7164245223600707aaaec194a515df74d504faa392a538b4",
+    "run-report.json": "c5eec0f086275a4c7120d2260abf7f03d06ac100b488f696a06b4ef2e103316a",
+    "scenarios.json": "ca56d57712d33d2646b6abcf807f6f8bdde5b721a72dd1e148e13bf97c88217f",
+    "service-state.json": "f8e63457115978ccb25600e7765ccaef5ea16f2fc6ff958e5814643ceebd9d2b",
+    "signals.json": "0f4e032b2605fa1af06a8ec8bfa7f0a142c32002ca16f23817e89d79cf36f75d",
+    "sla-risk.json": "835f4a5c3b1fdd090d8c67093176b989aa1ddfcae9d3d79ca4ce0b112ccd4af1"
+  }
+}

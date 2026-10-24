@@ -1,0 +1,1128 @@
+{
+  "assessment_date": "2026-10-11",
+  "baseline": "39 tests passed; existing modifications preserved",
+  "gaps": [
+    {
+      "id": "SRC-01",
+      "requirement": "Registered source identity, schema, classification and acquisition provenance",
+      "implementation": [
+        "src/maritime/sources.py",
+        "configs/sources.json"
+      ],
+      "missing": "Previous actual live campaign; rerun after source changes",
+      "severity": "review",
+      "dependencies": "Source registry \u2192 raw payload",
+      "acceptance": "Previous actual live campaign; rerun after source changes",
+      "verification": [
+        "test_foundation.py"
+      ],
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ],
+      "status": "NOT_ASSESSED"
+    },
+    {
+      "id": "SRC-02",
+      "requirement": "PortWatch paginated, count-reconciled acquisition with timeout/retry and retained failures",
+      "implementation": [
+        "src/maritime/sources.py"
+      ],
+      "missing": "Live acquisition retained in governance-final; availability is external",
+      "severity": "review",
+      "dependencies": "Public ArcGIS \u2192 Bronze",
+      "acceptance": "Live acquisition retained in governance-final; availability is external",
+      "verification": [
+        "test_source_contracts.py",
+        "test_governance.py"
+      ],
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ],
+      "status": "NOT_ASSESSED"
+    },
+    {
+      "id": "SRC-03",
+      "requirement": "Incremental overlap, source revisions and expired-row accounting",
+      "implementation": [
+        "src/maritime/sources.py"
+      ],
+      "missing": "Preserve replacement/expiry dispositions",
+      "severity": "review",
+      "dependencies": "Prior checkpoint \u2192 canonical activity",
+      "acceptance": "Preserve replacement/expiry dispositions",
+      "verification": [
+        "test_source_contracts.py"
+      ],
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ],
+      "status": "NOT_ASSESSED"
+    },
+    {
+      "id": "SRC-04",
+      "requirement": "Optional WPI, UN/LOCODE and reference route adapters",
+      "implementation": [
+        "src/maritime/sources.py",
+        "configs/sources.json"
+      ],
+      "missing": "Configure approved downloads and execute each source; missing sources remain explicit",
+      "severity": "review",
+      "dependencies": "Configured source URL \u2192 canonical references",
+      "acceptance": "Configure approved downloads and execute each source; missing sources remain explicit",
+      "verification": [
+        "test_foundation.py"
+      ],
+      "evidence": [],
+      "status": "NOT_ASSESSED"
+    },
+    {
+      "id": "SRC-05",
+      "requirement": "Public weather acquisition retained as DERIVED reanalysis",
+      "implementation": [
+        "src/maritime/sources.py"
+      ],
+      "missing": "Actual live campaign contains weather; no automatic weather closure claim",
+      "severity": "review",
+      "dependencies": "Open-Meteo \u2192 reference weather",
+      "acceptance": "Actual live campaign contains weather; no automatic weather closure claim",
+      "verification": [
+        "test_foundation.py"
+      ],
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ],
+      "status": "NOT_ASSESSED"
+    },
+    {
+      "id": "BRZ-01",
+      "requirement": "Immutable-content raw retention, checksum verification and replay",
+      "implementation": [
+        "src/maritime/sources.py",
+        "src/maritime/pipeline.py"
+      ],
+      "missing": "Local retention only; cloud WORM is separate",
+      "severity": "review",
+      "dependencies": "Acquisition \u2192 Silver",
+      "acceptance": "Local retention only; cloud WORM is separate",
+      "verification": [
+        "test_governance.py",
+        "test_foundation.py"
+      ],
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ],
+      "status": "NOT_ASSESSED"
+    },
+    {
+      "id": "SLV-01",
+      "requirement": "Canonical types, ranges, coordinates, temporal validity, stable IDs and UTC",
+      "implementation": [
+        "src/maritime/models.py",
+        "src/maritime/quality.py"
+      ],
+      "missing": "Invalid input blocks downstream publication",
+      "severity": "review",
+      "dependencies": "Bronze \u2192 canonical records",
+      "acceptance": "Invalid input blocks downstream publication",
+      "verification": [
+        "test_intelligence.py",
+        "test_governance.py"
+      ],
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ],
+      "status": "NOT_ASSESSED"
+    },
+    {
+      "id": "SLV-02",
+      "requirement": "Exclusive persisted/duplicate/rejected/quarantined/failed dispositions",
+      "implementation": [
+        "src/maritime/quality.py",
+        "src/maritime/governance.py"
+      ],
+      "missing": "Canonical accepted rows later persisted; stage-specific reconciliation, no double counting",
+      "severity": "review",
+      "dependencies": "Canonical input \u2192 accepted rows and disposition evidence",
+      "acceptance": "Canonical accepted rows later persisted; stage-specific reconciliation, no double counting",
+      "verification": [
+        "test_governance.py"
+      ],
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ],
+      "status": "NOT_ASSESSED"
+    },
+    {
+      "id": "SLV-03",
+      "requirement": "Completeness, duplicates, FK, freshness and consecutive coverage gates",
+      "implementation": [
+        "src/maritime/quality.py"
+      ],
+      "missing": "Missing internal dates and stale data reject; no inferred imputation",
+      "severity": "review",
+      "dependencies": "Canonical records \u2192 congestion",
+      "acceptance": "Missing internal dates and stale data reject; no inferred imputation",
+      "verification": [
+        "test_intelligence.py",
+        "test_governance.py"
+      ],
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ],
+      "status": "NOT_ASSESSED"
+    },
+    {
+      "id": "GOV-01",
+      "requirement": "Five classifications preserved across all downstream products",
+      "implementation": [
+        "src/maritime/models.py",
+        "src/maritime/governance.py",
+        "src/maritime/ml_contract.py"
+      ],
+      "missing": "SIMULATED dependencies cannot become OBSERVED",
+      "severity": "review",
+      "dependencies": "All inputs \u2192 API and reporting",
+      "acceptance": "SIMULATED dependencies cannot become OBSERVED",
+      "verification": [
+        "test_governance.py",
+        "test_azure_contracts.py"
+      ],
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ],
+      "status": "NOT_ASSESSED"
+    },
+    {
+      "id": "GOV-02",
+      "requirement": "Queryable field lineage and product/feature/config fingerprints",
+      "implementation": [
+        "src/maritime/pipeline.py",
+        "src/maritime/governance.py"
+      ],
+      "missing": "Lineage identifies table dependencies and methodology, not causal ground truth",
+      "severity": "review",
+      "dependencies": "Raw/canonical \u2192 Gold/prediction/decision",
+      "acceptance": "Lineage identifies table dependencies and methodology, not causal ground truth",
+      "verification": [
+        "test_governance.py"
+      ],
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ],
+      "status": "NOT_ASSESSED"
+    },
+    {
+      "id": "GOV-03",
+      "requirement": "Continuous stage gates and immutable approved publication",
+      "implementation": [
+        "src/maritime/governance.py",
+        "src/maritime/store.py",
+        "src/maritime/pipeline.py"
+      ],
+      "missing": "Every required stage must pass; failed attempt leaves previous pointer",
+      "severity": "review",
+      "dependencies": "Acquisition \u2192 publication \u2192 API",
+      "acceptance": "Every required stage must pass; failed attempt leaves previous pointer",
+      "verification": [
+        "test_governance.py"
+      ],
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ],
+      "status": "NOT_ASSESSED"
+    },
+    {
+      "id": "GOV-04",
+      "requirement": "Single writer, replay idempotency, interrupted-run recovery",
+      "implementation": [
+        "src/maritime/pipeline.py",
+        "src/maritime/governance.py"
+      ],
+      "missing": "New retry ID required after failure; OS lock released on process death",
+      "severity": "review",
+      "dependencies": "Retry \u2192 previous run/published pointer",
+      "acceptance": "New retry ID required after failure; OS lock released on process death",
+      "verification": [
+        "test_governance.py"
+      ],
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ],
+      "status": "NOT_ASSESSED"
+    },
+    {
+      "id": "GOV-05",
+      "requirement": "Append-only audit, hash chain and approved-product SQL protection",
+      "implementation": [
+        "src/maritime/store.py"
+      ],
+      "missing": "Database administrators can bypass local triggers; production controls separate",
+      "severity": "review",
+      "dependencies": "Operator and pipeline actions \u2192 audit evidence",
+      "acceptance": "Database administrators can bypass local triggers; production controls separate",
+      "verification": [
+        "test_governance.py"
+      ],
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ],
+      "status": "NOT_ASSESSED"
+    },
+    {
+      "id": "GOV-06",
+      "requirement": "Production retention enforcement and administrator separation",
+      "implementation": [
+        "azure/main.bicep",
+        "docs/governance.md"
+      ],
+      "missing": "Owner-approved retention period, cloud immutable storage policy and destructive-permission test required",
+      "severity": "production_gate",
+      "dependencies": "Raw/audit storage \u2192 retention and recovery",
+      "acceptance": "Owner-approved retention period, cloud immutable storage policy and destructive-permission test required",
+      "verification": [
+        "test_azure_contracts.py"
+      ],
+      "evidence": [],
+      "status": "BLOCKED_EXTERNAL"
+    },
+    {
+      "id": "DET-01",
+      "requirement": "56-day historical baseline, deviation/rank, persistence and stress categories",
+      "implementation": [
+        "src/maritime/intelligence.py"
+      ],
+      "missing": "Activity-deviation proxy only; minimum history required",
+      "severity": "review",
+      "dependencies": "Activity \u2192 current/history congestion",
+      "acceptance": "Activity-deviation proxy only; minimum history required",
+      "verification": [
+        "test_intelligence.py"
+      ],
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ],
+      "status": "NOT_ASSESSED"
+    },
+    {
+      "id": "DET-02",
+      "requirement": "Independent recomputation prevents corrupt metrics reaching decisions",
+      "implementation": [
+        "src/maritime/governance.py",
+        "src/maritime/pipeline.py"
+      ],
+      "missing": "Scalar reference rejects altered values before recommendation generation",
+      "severity": "review",
+      "dependencies": "Congestion \u2192 scenario gate",
+      "acceptance": "Scalar reference rejects altered values before recommendation generation",
+      "verification": [
+        "test_governance.py"
+      ],
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ],
+      "status": "NOT_ASSESSED"
+    },
+    {
+      "id": "NET-01",
+      "requirement": "Time-valid network state, availability, closures, stress and alternatives",
+      "implementation": [
+        "src/maritime/intelligence.py"
+      ],
+      "missing": "Default routes SIMULATED; optional geometry is reference data",
+      "severity": "review",
+      "dependencies": "Ports/routes/congestion \u2192 dynamic graph",
+      "acceptance": "Default routes SIMULATED; optional geometry is reference data",
+      "verification": [
+        "test_intelligence.py"
+      ],
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ],
+      "status": "NOT_ASSESSED"
+    },
+    {
+      "id": "NET-02",
+      "requirement": "Bounded temporal propagation and downstream exposure with assumptions",
+      "implementation": [
+        "src/maritime/intelligence.py"
+      ],
+      "missing": "No claim of observed cargo flow or calibrated propagation probability",
+      "severity": "review",
+      "dependencies": "Dynamic graph/disruption \u2192 exposure and warning",
+      "acceptance": "No claim of observed cargo flow or calibrated propagation probability",
+      "verification": [
+        "test_intelligence.py",
+        "test_public_replay.py"
+      ],
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ],
+      "status": "NOT_ASSESSED"
+    },
+    {
+      "id": "SCN-01",
+      "requirement": "Seeded synthetic shipments, promised delivery, buffer, priority and cargo",
+      "implementation": [
+        "src/maritime/scenarios.py"
+      ],
+      "missing": "Reproducible seed, never commercial outcome evidence",
+      "severity": "review",
+      "dependencies": "Network \u2192 SIMULATED scenarios",
+      "acceptance": "Reproducible seed, never commercial outcome evidence",
+      "verification": [
+        "test_intelligence.py"
+      ],
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ],
+      "status": "NOT_ASSESSED"
+    },
+    {
+      "id": "SCN-02",
+      "requirement": "Five counterfactual interventions with paired outcome distributions",
+      "implementation": [
+        "src/maritime/scenarios.py"
+      ],
+      "missing": "Feasibility and same-country alternate-port constraints exposed",
+      "severity": "review",
+      "dependencies": "Scenarios/state \u2192 interventions",
+      "acceptance": "Feasibility and same-country alternate-port constraints exposed",
+      "verification": [
+        "test_intelligence.py"
+      ],
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ],
+      "status": "NOT_ASSESSED"
+    },
+    {
+      "id": "SLA-01",
+      "requirement": "Non-ML expected delay, breach probability, loss and priority exposure",
+      "implementation": [
+        "src/maritime/scenarios.py",
+        "src/maritime/api.py"
+      ],
+      "missing": "Probabilities are Monte Carlo SIMULATED, not calibrated shipment ML",
+      "severity": "review",
+      "dependencies": "Interventions \u2192 SLA risk API",
+      "acceptance": "Probabilities are Monte Carlo SIMULATED, not calibrated shipment ML",
+      "verification": [
+        "test_e2e.py",
+        "test_intelligence.py"
+      ],
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ],
+      "status": "NOT_ASSESSED"
+    },
+    {
+      "id": "SLA-02",
+      "requirement": "Observed shipment SLA training",
+      "implementation": [
+        "src/maritime/ml.py",
+        "src/maritime/ml_contract.py"
+      ],
+      "missing": "DEFERRED \u2014 INSUFFICIENT OBSERVED OUTCOME DATA; obtain legitimate outcomes and eligibility evidence",
+      "severity": "review",
+      "dependencies": "Legitimate observed outcomes \u2192 Azure ML",
+      "acceptance": "DEFERRED \u2014 INSUFFICIENT OBSERVED OUTCOME DATA; obtain legitimate outcomes and eligibility evidence",
+      "verification": [
+        "test_ml_genai.py",
+        "test_azure_contracts.py"
+      ],
+      "evidence": [],
+      "status": "DEFERRED_BY_DESIGN"
+    },
+    {
+      "id": "ML-01",
+      "requirement": "Lagged/versioned features, preprocessing and provenance",
+      "implementation": [
+        "src/maritime/ml.py",
+        "src/maritime/ml_contract.py"
+      ],
+      "missing": "Feature CSV rederived and checksum/classification validated",
+      "severity": "review",
+      "dependencies": "Observed activity \u2192 feature bundle",
+      "acceptance": "Feature CSV rederived and checksum/classification validated",
+      "verification": [
+        "test_ml_genai.py",
+        "test_azure_contracts.py"
+      ],
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ],
+      "status": "NOT_ASSESSED"
+    },
+    {
+      "id": "ML-02",
+      "requirement": "Candidate search, chronological/walk-forward selection and error evaluation",
+      "implementation": [
+        "src/maritime/ml.py"
+      ],
+      "missing": "Research evaluation only; no commercial SLA accuracy",
+      "severity": "review",
+      "dependencies": "Features \u2192 persistence/ridge/forest comparison",
+      "acceptance": "Research evaluation only; no commercial SLA accuracy",
+      "verification": [
+        "test_public_replay.py",
+        "test_azure_contracts.py"
+      ],
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ],
+      "status": "NOT_ASSESSED"
+    },
+    {
+      "id": "ML-03",
+      "requirement": "Calibration intervals, drift and port-call batch predictions",
+      "implementation": [
+        "src/maritime/ml.py",
+        "src/maritime/azure_ml_job.py"
+      ],
+      "missing": "Local port-call forecasts marked LOCAL_RESEARCH_ONLY",
+      "severity": "review",
+      "dependencies": "Temporal evaluation \u2192 PREDICTED outputs",
+      "acceptance": "Local port-call forecasts marked LOCAL_RESEARCH_ONLY",
+      "verification": [
+        "test_public_replay.py",
+        "test_azure_contracts.py"
+      ],
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ],
+      "status": "NOT_ASSESSED"
+    },
+    {
+      "id": "ML-04",
+      "requirement": "Azure ML jobs, tracking, registry/version/promotion and monitoring",
+      "implementation": [
+        "scripts/azure_ml.py",
+        "src/maritime/azure_ml_job.py"
+      ],
+      "missing": "Azure subscription/workspace/compute/identity and actual completed jobs required",
+      "severity": "production_gate",
+      "dependencies": "Fabric Gold \u2192 Azure ML \u2192 predictions",
+      "acceptance": "Azure subscription/workspace/compute/identity and actual completed jobs required",
+      "verification": [
+        "test_azure_contracts.py"
+      ],
+      "evidence": [],
+      "status": "BLOCKED_EXTERNAL"
+    },
+    {
+      "id": "ML-05",
+      "requirement": "Feature/model compatibility and verified predictions returned to Fabric",
+      "implementation": [
+        "src/maritime/ml_contract.py",
+        "scripts/fabric_ml_bridge.py",
+        "src/maritime/fabric_runtime.py"
+      ],
+      "missing": "Local adverse contracts verified; execute actual AML batch + Fabric readback",
+      "severity": "production_gate",
+      "dependencies": "Registered model + features \u2192 Fabric Gold/serving",
+      "acceptance": "Local adverse contracts verified; execute actual AML batch + Fabric readback",
+      "verification": [
+        "test_governance.py",
+        "test_azure_contracts.py"
+      ],
+      "evidence": [],
+      "status": "BLOCKED_EXTERNAL"
+    },
+    {
+      "id": "GEN-01",
+      "requirement": "AOAI extraction verifies exact quote/event/location/time evidence",
+      "implementation": [
+        "src/maritime/genai.py",
+        "src/maritime/cli.py"
+      ],
+      "missing": "Local rejection/request-contract tests only; live service is GEN-02",
+      "severity": "review",
+      "dependencies": "Untrusted source text \u2192 ANTICIPATED signal",
+      "acceptance": "Local rejection/request-contract tests only; live service is GEN-02",
+      "verification": [
+        "test_ml_genai.py",
+        "test_azure_contracts.py"
+      ],
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ],
+      "status": "NOT_ASSESSED"
+    },
+    {
+      "id": "GEN-02",
+      "requirement": "Authenticated Azure OpenAI service round trip",
+      "implementation": [
+        "src/maritime/genai.py",
+        "src/maritime/azure_security.py"
+      ],
+      "missing": "Configured endpoint, deployment and authorized identity/API key required",
+      "severity": "production_gate",
+      "dependencies": "AOAI endpoint/deployment \u2192 grounded signals",
+      "acceptance": "Configured endpoint, deployment and authorized identity/API key required",
+      "verification": [
+        "test_azure_contracts.py"
+      ],
+      "evidence": [],
+      "status": "BLOCKED_EXTERNAL"
+    },
+    {
+      "id": "DEC-01",
+      "requirement": "Cost/loss ranked feasible interventions and deterministic explanation",
+      "implementation": [
+        "src/maritime/scenarios.py"
+      ],
+      "missing": "Available without AI service; no fabricated AI fallback",
+      "severity": "review",
+      "dependencies": "Intervention evidence \u2192 recommendation/rationale",
+      "acceptance": "Available without AI service; no fabricated AI fallback",
+      "verification": [
+        "test_intelligence.py",
+        "test_e2e.py"
+      ],
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ],
+      "status": "NOT_ASSESSED"
+    },
+    {
+      "id": "DEC-02",
+      "requirement": "Operator accept/reject/feasible override with reason and audit",
+      "implementation": [
+        "src/maritime/api.py",
+        "src/maritime/store.py"
+      ],
+      "missing": "Key-mode claimed operator name; Entra supplies verified oid",
+      "severity": "review",
+      "dependencies": "Decision \u2192 audit \u2192 API review state",
+      "acceptance": "Key-mode claimed operator name; Entra supplies verified oid",
+      "verification": [
+        "test_e2e.py"
+      ],
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ],
+      "status": "NOT_ASSESSED"
+    },
+    {
+      "id": "LRN-01",
+      "requirement": "Actual-vs-modeled error, Brier score, recommendation adherence",
+      "implementation": [
+        "src/maritime/api.py"
+      ],
+      "missing": "Synthetic outcomes explicitly SIMULATED; causal effect remains unobservable",
+      "severity": "review",
+      "dependencies": "Outcome + evaluated intervention \u2192 learning audit",
+      "acceptance": "Synthetic outcomes explicitly SIMULATED; causal effect remains unobservable",
+      "verification": [
+        "test_e2e.py"
+      ],
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ],
+      "status": "NOT_ASSESSED"
+    },
+    {
+      "id": "LRN-02",
+      "requirement": "API learning audit transferred into Fabric analytical marts",
+      "implementation": [
+        "src/maritime/feedback.py",
+        "scripts/fabric_feedback.py",
+        "fabric/notebooks/import_feedback.ipynb"
+      ],
+      "missing": "Export/contracts implemented and locally tested; execute Azure audit to Fabric Delta import with matching readback",
+      "severity": "production_gate",
+      "dependencies": "Azure audit store \u2192 Fabric learning mart",
+      "acceptance": "Export/contracts implemented and locally tested; execute Azure audit to Fabric Delta import with matching readback",
+      "verification": [
+        "test_azure_contracts.py"
+      ],
+      "evidence": [],
+      "status": "BLOCKED_EXTERNAL"
+    },
+    {
+      "id": "API-01",
+      "requirement": "Authenticated paginated product endpoints and OpenAPI interface",
+      "implementation": [
+        "src/maritime/api.py"
+      ],
+      "missing": "No dedicated web dashboard was implemented; intended local interface is OpenAPI",
+      "severity": "review",
+      "dependencies": "Approved store \u2192 reader/operator",
+      "acceptance": "No dedicated web dashboard was implemented; intended local interface is OpenAPI",
+      "verification": [
+        "test_e2e.py",
+        "test_startup.py"
+      ],
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ],
+      "status": "NOT_ASSESSED"
+    },
+    {
+      "id": "API-02",
+      "requirement": "Startup configuration failure and request correlation IDs",
+      "implementation": [
+        "src/maritime/api.py"
+      ],
+      "missing": "Local acceptance passed; retain regression coverage",
+      "severity": "review",
+      "dependencies": "Environment \u2192 startup; HTTP \u2192 structured logs",
+      "acceptance": "Local acceptance passed; retain regression coverage",
+      "verification": [
+        "test_startup.py"
+      ],
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ],
+      "status": "NOT_ASSESSED"
+    },
+    {
+      "id": "API-03",
+      "requirement": "Readiness rejects missing/unapproved/stale/corrupt products",
+      "implementation": [
+        "src/maritime/api.py",
+        "src/maritime/store.py"
+      ],
+      "missing": "Public liveness does not imply readiness",
+      "severity": "review",
+      "dependencies": "Release + source dates \u2192 readiness",
+      "acceptance": "Public liveness does not imply readiness",
+      "verification": [
+        "test_governance.py",
+        "test_startup.py"
+      ],
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ],
+      "status": "NOT_ASSESSED"
+    },
+    {
+      "id": "FAB-01",
+      "requirement": "Lakehouse Bronze/Silver/Gold PySpark and governed Delta readback",
+      "implementation": [
+        "src/maritime/fabric_runtime.py",
+        "fabric/notebooks"
+      ],
+      "missing": "Fabric capacity/workspace/lakehouse and executed notebooks required",
+      "severity": "production_gate",
+      "dependencies": "Public acquisition \u2192 governed analytical marts",
+      "acceptance": "Fabric capacity/workspace/lakehouse and executed notebooks required",
+      "verification": [
+        "test_fabric_assets.py",
+        "test_azure_contracts.py"
+      ],
+      "evidence": [],
+      "status": "BLOCKED_EXTERNAL"
+    },
+    {
+      "id": "FAB-02",
+      "requirement": "Data Factory dependencies, parameters, retry gates and deployment",
+      "implementation": [
+        "fabric/pipelines",
+        "scripts/deploy_fabric.py"
+      ],
+      "missing": "Deploy and execute pipeline with real service identity",
+      "severity": "production_gate",
+      "dependencies": "Bronze \u2192 Silver \u2192 Gold \u2192 acceptance",
+      "acceptance": "Deploy and execute pipeline with real service identity",
+      "verification": [
+        "test_fabric_assets.py"
+      ],
+      "evidence": [],
+      "status": "BLOCKED_EXTERNAL"
+    },
+    {
+      "id": "BI-01",
+      "requirement": "Dimensional marts, SQL views, DAX, Power Query and GIS export",
+      "implementation": [
+        "src/maritime/pipeline.py",
+        "sql/reporting.sql",
+        "fabric/powerbi"
+      ],
+      "missing": "Local marts/GIS verified; SQL/DAX/Power Query require actual Fabric/Power BI runtime",
+      "severity": "review",
+      "dependencies": "Approved Gold \u2192 analytical consumption",
+      "acceptance": "Local marts/GIS verified; SQL/DAX/Power Query require actual Fabric/Power BI runtime",
+      "verification": [
+        "test_public_replay.py"
+      ],
+      "evidence": [],
+      "status": "NOT_ASSESSED"
+    },
+    {
+      "id": "BI-02",
+      "requirement": "Five Power BI report pages and deployed semantic model",
+      "implementation": [
+        "docs/reporting.md",
+        "fabric/powerbi"
+      ],
+      "missing": "No PBIX/report deployment exists; author and validate five pages in Power BI",
+      "severity": "review",
+      "dependencies": "Gold marts \u2192 report visuals",
+      "acceptance": "No PBIX/report deployment exists; author and validate five pages in Power BI",
+      "verification": [
+        "test_fabric_assets.py"
+      ],
+      "evidence": [],
+      "status": "NOT_ASSESSED"
+    },
+    {
+      "id": "AZ-01",
+      "requirement": "Azure container application, Entra, Key Vault and Monitor",
+      "implementation": [
+        "azure/main.bicep",
+        "src/maritime/azure_security.py",
+        "src/maritime/azure_store.py"
+      ],
+      "missing": "IaC compiled previously; deploy then test IAM, telemetry and recovery",
+      "severity": "production_gate",
+      "dependencies": "Identity/storage \u2192 hosted API",
+      "acceptance": "IaC compiled previously; deploy then test IAM, telemetry and recovery",
+      "verification": [
+        "test_azure_contracts.py"
+      ],
+      "evidence": [],
+      "status": "BLOCKED_EXTERNAL"
+    },
+    {
+      "id": "OPS-01",
+      "requirement": "Structured logs, health, pipeline/DQ/API operational metrics",
+      "implementation": [
+        "src/maritime/api.py",
+        "src/maritime/pipeline.py"
+      ],
+      "missing": "Process counters reset on restart; sustained production monitoring not established",
+      "severity": "review",
+      "dependencies": "Execution \u2192 diagnostics",
+      "acceptance": "Process counters reset on restart; sustained production monitoring not established",
+      "verification": [
+        "test_e2e.py",
+        "test_startup.py"
+      ],
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ],
+      "status": "NOT_ASSESSED"
+    },
+    {
+      "id": "OPS-02",
+      "requirement": "Actionable cloud alerts and workload-grounded SLOs",
+      "implementation": [
+        "docs/operations.md",
+        "azure/main.bicep"
+      ],
+      "missing": "Owner workload/SLO agreement and sustained runtime measurements required",
+      "severity": "production_gate",
+      "dependencies": "Metrics \u2192 operator alert and SLO evidence",
+      "acceptance": "Owner workload/SLO agreement and sustained runtime measurements required",
+      "verification": [
+        "test_azure_contracts.py"
+      ],
+      "evidence": [],
+      "status": "BLOCKED_EXTERNAL"
+    },
+    {
+      "id": "OPS-03",
+      "requirement": "Reproducible locked dependencies and documented startup",
+      "implementation": [
+        "uv.lock",
+        "docker/Dockerfile",
+        "scripts/windows-setup.ps1"
+      ],
+      "missing": "Local acceptance passed; retain regression coverage",
+      "severity": "review",
+      "dependencies": "Fresh runtime \u2192 installed application",
+      "acceptance": "Local acceptance passed; retain regression coverage",
+      "verification": [
+        "test_startup.py"
+      ],
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ],
+      "status": "NOT_ASSESSED"
+    },
+    {
+      "id": "OPS-04",
+      "requirement": "Clean isolated demo, authenticated E2E and restart persistence",
+      "implementation": [
+        "compose.demo.yml",
+        "scripts/docker_demo.py"
+      ],
+      "missing": "Local acceptance passed; retain regression coverage",
+      "severity": "review",
+      "dependencies": "Empty volume \u2192 pipeline \u2192 API \u2192 restart",
+      "acceptance": "Local acceptance passed; retain regression coverage",
+      "verification": [
+        "scripts/docker_demo.py"
+      ],
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ],
+      "status": "NOT_ASSESSED"
+    },
+    {
+      "id": "OPS-05",
+      "requirement": "Safe shutdown/reset/recovery and retained evidence",
+      "implementation": [
+        "docs/operations/READY_TO_RUN.md",
+        "src/maritime/store.py"
+      ],
+      "missing": "Local acceptance passed; retain regression coverage",
+      "severity": "review",
+      "dependencies": "Interrupted process \u2192 retained data/new isolated run",
+      "acceptance": "Local acceptance passed; retain regression coverage",
+      "verification": [
+        "test_governance.py"
+      ],
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ],
+      "status": "NOT_ASSESSED"
+    },
+    {
+      "id": "OPS-06",
+      "requirement": "Dependency/security checks and reproducible quality evidence",
+      "implementation": [
+        "pyproject.toml",
+        "uv.lock",
+        ".github/workflows"
+      ],
+      "missing": "Local acceptance passed; retain regression coverage",
+      "severity": "review",
+      "dependencies": "Source + dependencies \u2192 build/test/security result",
+      "acceptance": "Local acceptance passed; retain regression coverage",
+      "verification": [
+        "tests"
+      ],
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ],
+      "status": "NOT_ASSESSED"
+    },
+    {
+      "id": "OPS-07",
+      "requirement": "Configuration failures retained before acquisition",
+      "implementation": [
+        "src/maritime/pipeline.py"
+      ],
+      "missing": "Local acceptance passed; retain regression coverage",
+      "severity": "review",
+      "dependencies": "Invalid config \u2192 failed run and audit",
+      "acceptance": "Local acceptance passed; retain regression coverage",
+      "verification": [
+        "test_startup.py"
+      ],
+      "evidence": [
+        "evidence/ready-to-run/verified-tests.xml",
+        "evidence/ready-to-run/maritime-demo-e8f5c6a5f1/result.json",
+        "evidence/ready-to-run/live/release-validation.json"
+      ],
+      "status": "NOT_ASSESSED"
+    },
+    {
+      "id": "ARCH-01",
+      "requirement": "Fabric data plane / Azure ML / Azure OpenAI / Azure application boundary",
+      "implementation": [
+        "docs/architecture.md",
+        "docs/azure.md"
+      ],
+      "missing": "Local contract verification is not cloud runtime validation",
+      "severity": "review",
+      "dependencies": "Cloud layers \u2192 production deployment",
+      "acceptance": "Local contract verification is not cloud runtime validation",
+      "verification": [
+        "test_azure_contracts.py"
+      ],
+      "evidence": [],
+      "status": "NOT_ASSESSED"
+    },
+    {
+      "id": "ARCH-02",
+      "requirement": "PostgreSQL persistence",
+      "implementation": [
+        "docs/architecture/system_integration_map.md"
+      ],
+      "missing": "Latest mandate names applicable integrations, not a migration requirement; retain SQLite locally and Delta in Fabric",
+      "severity": "review",
+      "dependencies": "Not part of established local/Fabric storage architecture",
+      "acceptance": "Latest mandate names applicable integrations, not a migration requirement; retain SQLite locally and Delta in Fabric",
+      "verification": [
+        "none"
+      ],
+      "evidence": [],
+      "status": "NOT_ASSESSED"
+    },
+    {
+      "id": "PC-01",
+      "requirement": "Idempotent operator writes and complete audit chain verification",
+      "implementation": [
+        "src/maritime/store.py",
+        "src/maritime/azure_store.py"
+      ],
+      "missing": "Repeated writes duplicate actions; orphan chain entries can escape inner-join verification",
+      "severity": "high",
+      "dependencies": "Local filesystem/runtime; cloud readback separately gated",
+      "acceptance": "Successful and negative tests; final regression and isolated Docker pass",
+      "verification": "tests/test_production_controls.py and release runner",
+      "evidence": [],
+      "status": "FAIL"
+    },
+    {
+      "id": "PC-02",
+      "requirement": "Feedback destination preserves prior events on replay",
+      "implementation": [
+        "src/maritime/feedback.py",
+        "src/maritime/fabric_runtime.py"
+      ],
+      "missing": "Snapshot overwrite can discard feedback",
+      "severity": "high",
+      "dependencies": "Local filesystem/runtime; cloud readback separately gated",
+      "acceptance": "Successful and negative tests; final regression and isolated Docker pass",
+      "verification": "tests/test_production_controls.py and release runner",
+      "evidence": [],
+      "status": "FAIL"
+    },
+    {
+      "id": "PC-03",
+      "requirement": "Executable backup and verified restore",
+      "implementation": [
+        "src/maritime/store.py",
+        "src/maritime/cli.py"
+      ],
+      "missing": "No automated backup/restore path or real recovery verification",
+      "severity": "high",
+      "dependencies": "Local filesystem/runtime; cloud readback separately gated",
+      "acceptance": "Successful and negative tests; final regression and isolated Docker pass",
+      "verification": "tests/test_production_controls.py and release runner",
+      "evidence": [],
+      "status": "FAIL"
+    },
+    {
+      "id": "PC-04",
+      "requirement": "Versioned safe database initialization",
+      "implementation": [
+        "src/maritime/store.py"
+      ],
+      "missing": "No schema version prevents newer schema from being opened by old code",
+      "severity": "high",
+      "dependencies": "Local filesystem/runtime; cloud readback separately gated",
+      "acceptance": "Successful and negative tests; final regression and isolated Docker pass",
+      "verification": "tests/test_production_controls.py and release runner",
+      "evidence": [],
+      "status": "FAIL"
+    },
+    {
+      "id": "PC-05",
+      "requirement": "Bounded GenAI service failures and input/resource limits",
+      "implementation": [
+        "src/maritime/genai.py",
+        "src/maritime/api.py"
+      ],
+      "missing": "No AOAI rate-limit retry, owned client cleanup or API body limit",
+      "severity": "high",
+      "dependencies": "Local filesystem/runtime; cloud readback separately gated",
+      "acceptance": "Successful and negative tests; final regression and isolated Docker pass",
+      "verification": "tests/test_production_controls.py and release runner",
+      "evidence": [],
+      "status": "FAIL"
+    },
+    {
+      "id": "PC-06",
+      "requirement": "Evidence matches source executed by release checks",
+      "implementation": [
+        "scripts/package_readiness.py"
+      ],
+      "missing": "Old passing logs could be packaged beside changed source",
+      "severity": "high",
+      "dependencies": "Local filesystem/runtime; cloud readback separately gated",
+      "acceptance": "Successful and negative tests; final regression and isolated Docker pass",
+      "verification": "tests/test_production_controls.py and release runner",
+      "evidence": [],
+      "status": "FAIL"
+    },
+    {
+      "id": "PC-07",
+      "requirement": "Authored Power BI report assets",
+      "implementation": [
+        "fabric/powerbi"
+      ],
+      "missing": "No authored report pages; proprietary runtime unavailable",
+      "severity": "high",
+      "dependencies": "Local filesystem/runtime; cloud readback separately gated",
+      "acceptance": "Successful and negative tests; final regression and isolated Docker pass",
+      "verification": "tests/test_production_controls.py and release runner",
+      "evidence": [],
+      "status": "FAIL"
+    }
+  ]
+}

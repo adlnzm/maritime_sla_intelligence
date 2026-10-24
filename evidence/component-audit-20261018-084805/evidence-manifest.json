@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "assessed_at": "2026-10-18T08:01:50.0845536+00:00",
+  "timezone": "Asia/Qatar",
+  "repository": "C:\\Users\\User\\OneDrive\\文档\\ChatGPT\\maritime_sla_intelligence",
+  "branch": "codex/build-maritime-platform",
+  "revision": "4b50f50769b08e763015064c53d91b6bda4ae079",
+  "working_tree": "DIRTY; prior work preserved",
+  "scope": "Read-only application/source/configuration/existing-evidence inspection; only new audit artifacts written",
+  "component_count": 49,
+  "counts": {
+    "existence_status": {
+      "PRESENT": 40,
+      "MISSING": 8,
+      "PARTIAL": 1
+    },
+    "configuration_status": {
+      "CONFIGURED": 14,
+      "NOT_CONFIGURED": 19,
+      "PARTIAL": 16
+    },
+    "integration_status": {
+      "CONNECTED": 23,
+      "DISCONNECTED": 9,
+      "PARTIALLY_CONNECTED": 4,
+      "UNKNOWN": 13
+    },
+    "verification_status": {
+      "END_TO_END_VERIFIED": 22,
+      "NOT_TESTED": 5,
+      "BLOCKED": 6,
+      "LOCALLY_TESTED": 9,
+      "STATICALLY_CHECKED": 7
+    }
+  },
+  "files": {
+    "build_inventory.py": "3f859fcb308d32208463a38848a1e26187d964b0a3dac452795115c37cb345db",
+    "COMPONENT_INVENTORY.md": "32ff335f025d928a5e111be072239f705ad96c3ca05eaa626d5b79439d1b5a60",
+    "component-status.json": "6d0c033fefb5889a0693a4992ac1ad6e89b21c56a06edc6e3d7c55d114d3e97f",
+    "git-status-after.txt": "5909b742e6635fdf6bd992589a103411f55584450f74c84ea2ff54ba2e6da992",
+    "git-status-before.txt": "da9978d653da651b89e23da70decf8e47f6d2fa8c7d8b1ce65c56761844ddc8f",
+    "INTEGRATION_MAP.md": "2ee3d3dcaea0db1288c23f0386c16fea2ae24e37a9f1fe55f623b946b9a91d43",
+    "MISSING_AND_UNVERIFIED.md": "46cac57e58401f2c208fd223ad42caf9f5e25affaf2f46001b51d8558de9505e"
+  },
+  "referenced_evidence_sha256": {
+    ".github/workflows/azure-ml.yml": "cafc54cf7abf0c82ec503eaff615c80d890477fac7e3033151bb8f35ba341ed8",
+    ".github/workflows/ci.yml": "98aa28cd458266eae79c0fdc2aa1a00e219ef945181662944421c2a85cc52148",
+    ".github/workflows/fabric.yml": "bd22a16502fa273adf0e9d3a7a4c604b2befe39b6012771580a684f4842cbeb2",
+    "azure/main.bicep": "1dcb8bec9606ea133516c5b187e5b104653d8c9c59d449ad7b0944fcdce938a0",
+    "configs/azure.json": "062d448ea1c017f20c9d857f16535c908cb25ab029fa606ab4866584df490a3a",
+    "configs/sources.json": "5c552ad4442f2b02a6bbcacea6a309eedf966664d9840618746d763c5c0fece6",
+    "docs/operations/production_closure.md": "613594874d2a9ca097b67a66af827f66c85c0a1cdbbb63be2a9b089349ed2890",
+    "docs/requirements/feature_traceability.md": "5077e8c1248c0679a39d6d2f40511490345daaecb8cfb1fbf42e053a49367492",
+    "evidence/full-run-readiness-20261018-084056/database-readonly.json": "a9a25cc408d496e3e5722ec32020d7e0b7e1b74632fb3c260585493aec874465",
+    "evidence/full-run-readiness-20261018-084056/preflight.json": "485063b8d77291035b68793aa5ea6448ae8cdef4134383e0da026451356047dd",
+    "evidence/licensing-readiness-20261017-162403/LICENSING_DECISION.md": "7a1e9e86aac65c9934b5cc350e1d8e0d413f3d4eb1aa101327c620e60b2e0de9",
+    "evidence/local-release-20261017-freshness-01/bicep.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/local-release-20261017-freshness-01/cloud-preflight.json": "275a5ce36b5c535fc9ccc0916169451398fce68568909ff86909368414eae64b",
+    "evidence/local-release-20261017-freshness-01/dependency-audit.log": "113506517eab1caffa6ef19b3636cc6e52ca433915c1a8933ea59961f6192a54",
+    "evidence/local-release-20261017-freshness-01/docker/maritime-demo-4836fad43b/backup-restore.json": "0055797bc426b0622cbd4434f39343790b8f336a199c36e854d2a6ca117baa7d",
+    "evidence/local-release-20261017-freshness-01/docker/maritime-demo-4836fad43b/congestion.json": "a71c4da73ed35df00160e95d0745008fa9f23d0e9dd4638489a5b78bac456a6a",
+    "evidence/local-release-20261017-freshness-01/docker/maritime-demo-4836fad43b/decisions.json": "72fadf807d8e4d205fefe47fa75b015afcfb5c517833a4132b8c5cbca301a838",
+    "evidence/local-release-20261017-freshness-01/docker/maritime-demo-4836fad43b/interventions.json": "bfe32712dafb1fc083cd545779151608f2b7cedd1be31d6132d155698c10f2dd",
+    "evidence/local-release-20261017-freshness-01/docker/maritime-demo-4836fad43b/learning-transfer.json": "eeb9240943ddadee2cb8b4f781a02efcda371322d2ba2bd3d8de14d42bfe841d",
+    "evidence/local-release-20261017-freshness-01/docker/maritime-demo-4836fad43b/lineage.json": "91f410a45e8ebb908735efb432f5da3b73a55185c615bc7b6b0c52b4c02795cd",
+    "evidence/local-release-20261017-freshness-01/docker/maritime-demo-4836fad43b/metrics.json": "db3842aab1ff3ce9d1a7e493d1a913f0c9859dddcc3b6aef814c91b9bea9c839",
+    "evidence/local-release-20261017-freshness-01/docker/maritime-demo-4836fad43b/network-exposure.json": "0dc55c0182931eedf90930ae7586ee671bbb1d8e1a048e8adbd08d57e850266e",
+    "evidence/local-release-20261017-freshness-01/docker/maritime-demo-4836fad43b/predictions.json": "68bcb9ab5786036469189511818bc6951fedab5b89a25823cea3aabdb2ec81f0",
+    "evidence/local-release-20261017-freshness-01/docker/maritime-demo-4836fad43b/result.json": "10145f009ebe610cd5318a501614ba265ca14faa82c237a575875773f16587f1",
+    "evidence/local-release-20261017-freshness-01/docker/maritime-demo-4836fad43b/sla-risk.json": "26143eaa837b35279019b9cb5a082acb81a984d390bec2ed4b9522e0a6a98467",
+    "evidence/local-release-20261017-freshness-01/fabric-assets.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/local-release-20261017-freshness-01/live/release-validation.json": "08300cfe0f9d405f6a55a9cc9a225faa6379d0f3b3a50323b25a7f1085c68775",
+    "evidence/local-release-20261017-freshness-01/powerbi.log": "3f80fbc1d618af50052254ca9a896b5adcc6c47da0e5ce38113a5ec987d804c1",
+    "evidence/local-release-20261017-freshness-01/result.json": "cb9f409818b369e360673d5c2bef11f7114d79cc6136727ff8e21d76dd706884",
+    "evidence/local-release-20261017-freshness-01/tests.xml": "9c31e4e612f224a022e338eb76188c25d7b52f5f5094d7a719f4bedec8e9ca78",
+    "evidence/portfolio-release-20261018-083345/freshness.json": "c4b8d41b9c847d4c5d10185e35cee16eef8fefa0a4a389ef530a5d28274116cf",
+    "evidence/trade-qualification-20261017-160824/sample-verification.json": "6d64a3df483ea375b4234db21fdea41c08d1b7b97513aaad8c47ebb9a895060d",
+    "fabric/powerbi/Maritime.Report/definition.pbir.template": "511675622c2f6f40c976496e9789cc98aaa013758288b9cefbb3d38891b07b73",
+    "scripts/deploy_fabric.py": "0be13b7f7e2a7a592a16ac7edef518c73e9c537fd21f855d661a85b6e01953f7",
+    "sql/reporting.sql": "d62616237e14817c7d21e08e873a54787691f203046750bc73a449633cb550b4",
+    "src/maritime/pipeline.py": "7c54ac78c6734cd52a2986105194660b8ca6a9c56fd338e7bf7084a5fd33439c"
+  },
+  "source_hashes_verified": 146,
+  "reference_paths_verified": true,
+  "status_enums_validated": true,
+  "prior_git_entries_preserved": true,
+  "new_git_entries_confined_to_audit": true,
+  "no_database_or_service_mutation": true,
+  "tests_rerun": false,
+  "runtime_connection_caveat": "CONNECTED/END_TO_END_VERIFIED describe scoped dated evidence, not current continuous operation; unverified external connections UNKNOWN",
+  "generation": {
+    "command": ".venv/Scripts/python.exe evidence/component-audit-20261018-084805/build_inventory.py",
+    "exit_code": 0,
+    "prior_attempt": "Automatic permission review timed out before execution; retry succeeded without escalation"
+  },
+  "self_hash_excluded": true
+}

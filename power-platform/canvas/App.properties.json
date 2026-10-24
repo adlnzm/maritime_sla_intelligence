@@ -1,0 +1,7 @@
+{
+  "StartScreen": "=OperationsReview",
+  "MinScreenWidth": "=1600",
+  "MinScreenHeight": "=900",
+  "data_source_name": "MaritimeOperations",
+  "import_note": "Create the screen and authenticated custom-connector data source in Studio; paste generated controls using code view. Set App.properties.json and Screen.properties.json formulas in Studio. No .msapp or deployed app is claimed."
+}

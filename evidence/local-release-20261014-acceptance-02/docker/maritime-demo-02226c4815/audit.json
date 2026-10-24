@@ -1,0 +1,33 @@
+{
+  "reviews": [
+    {
+      "status": "accept",
+      "action": null,
+      "reason": "Demo simulated decision review",
+      "operator": "demo-validation",
+      "decision_id": "3014232fce0b64575b3586a0",
+      "run_id": "e92526a9225e444d8c23654574c5875d",
+      "audit_id": "4a64a963e53d53308efc878e897b42d4788e0eabd4db6b05c26f2d662b220b7e",
+      "created_at": "2026-10-14T04:02:52.923223+00:00"
+    }
+  ],
+  "outcomes": [
+    {
+      "decision_id": "3014232fce0b64575b3586a0",
+      "actual_action": "NO_ACTION",
+      "actual_delay_hours": 5.0,
+      "actual_loss": 10.0,
+      "classification": "SIMULATED",
+      "evidence": "Explicit demo scenario",
+      "run_id": "e92526a9225e444d8c23654574c5875d",
+      "delay_error": -2.240639439333111,
+      "loss_error": -7.378959964582119,
+      "brier_score": 3.4332275390625e-05,
+      "followed_recommendation": true,
+      "causal_intervention_effectiveness": null,
+      "effectiveness_status": "COUNTERFACTUAL_OUTCOME_UNOBSERVABLE",
+      "audit_id": "536c321fc7e77e1d5c3b5ad79d70b216b6b83284bbf86282b5c8f60daae56ade",
+      "created_at": "2026-10-14T04:02:53.072899+00:00"
+    }
+  ]
+}

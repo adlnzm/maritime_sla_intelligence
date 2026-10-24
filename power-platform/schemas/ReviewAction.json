@@ -1,0 +1,43 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "request_id": {
+      "pattern": "^[A-Za-z0-9_-]{8,100}$",
+      "title": "Request Id",
+      "type": "string"
+    },
+    "action": {
+      "enum": [
+        "IGNORE",
+        "MONITOR",
+        "ESCALATE"
+      ],
+      "title": "Action",
+      "type": "string"
+    },
+    "reason": {
+      "maxLength": 2000,
+      "minLength": 10,
+      "title": "Reason",
+      "type": "string"
+    },
+    "expected_version": {
+      "minimum": 0,
+      "title": "Expected Version",
+      "type": "integer"
+    },
+    "risk_revision": {
+      "title": "Risk Revision",
+      "type": "string"
+    }
+  },
+  "required": [
+    "request_id",
+    "action",
+    "reason",
+    "expected_version",
+    "risk_revision"
+  ],
+  "title": "ReviewAction",
+  "type": "object"
+}

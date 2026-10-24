@@ -1,18 +1,18 @@
 # Validation evidence
 
-Baseline reports predate the stage-governance mandate and are retained for provenance, not reused
-as proof of the new controls. The authoritative governance result is
-`governance-final/release-validation.json` when present. Its declared scope and status govern
-the datasets alongside it; a BLOCKED industrial release must not be described as validated
-production data.
+The current local readiness campaign is documented in
+[verification report](../docs/testing/verification_report.md) and
+[requirements](../docs/requirements/feature_traceability.md).
 
-`governance-tests.xml` records actual expanded test execution. The clean campaign provides
-versioned contracts, source-to-output lineage, disjoint record dispositions, reconciliation,
-independent metric comparisons, failed-run/recovery evidence and separated analytical datasets.
-`tests.xml`, `acceptance.json` and `docker-governance.json` record final local checks when refreshed.
+`ready-to-run/` retains actual test/build/security logs, fresh-volume Docker HTTP and restart
+evidence, and the live governance campaign. `ready-to-run/evidence-manifest.json` maps
+requirements to evidence and hashes retained files. [ready-to-run.zip](ready-to-run.zip) is the
+portable package. These establish local analytical readiness only; industrial acceptance
+remains blocked by mandatory external controls.
 
-See [governance reproduction and acceptance](../docs/governance.md). Cloud checks remain
-NOT_EVALUATED until actual tenant execution supplies their evidence. No Azure/Fabric success,
-regulatory certification, immutable cloud retention or sustained production reliability is implied.
-
-Final pack: [governance-evidence.zip](governance-evidence.zip). Read the [scope and result](governance-final/README.md) before using its data.
+Earlier evidence remains intact for provenance. The
+[governance evidence ZIP](governance-evidence.zip) and
+[governance release scope](governance-final/README.md) record the previous source snapshot.
+Baseline reports predate continuous governance and are not substituted for current checks.
+No Azure/Fabric runtime success, immutable cloud retention, certification or sustained
+production reliability is implied. See [governance](../docs/governance.md) for control details.

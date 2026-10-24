@@ -1,0 +1,140 @@
+{
+  "decision": "NO-GO",
+  "assessed_at": "2026-10-18T05:45:32.7355163+00:00",
+  "timezone": "Asia/Qatar",
+  "unrestricted_run_launched": false,
+  "gates": [
+    {
+      "id": "A",
+      "requirement": "Repository and environment identity",
+      "status": "PASS",
+      "mandatory": true,
+      "evidence": "preflight.json; git-status-before.txt",
+      "command": "git status --porcelain=v1 -uall; git branch --show-current; git rev-parse HEAD; preflight.py source SHA256 comparison",
+      "observation_timestamp": "2026-10-18T08:42:07.104515+03:00",
+      "result": "146 source hashes unchanged; dirty branch preserved",
+      "limitations": "Identity/source binding only; runtime covered separately",
+      "owner_decision": "None for read-only identity",
+      "smallest_next_action": "Retain exact source/interpreter identity"
+    },
+    {
+      "id": "B",
+      "requirement": "Configuration dependencies and runtime",
+      "status": "BLOCKED",
+      "mandatory": true,
+      "evidence": "preflight.json; host.json",
+      "command": "uv pip check --python .venv/Scripts/python.exe; docker version; docker compose ls --all --format json; docker ps -a; docker volume ls",
+      "observation_timestamp": "2026-10-18T08:42:07.104515+03:00",
+      "result": "Dependency check exit 1, two incompatibilities; all four Docker commands exit 1; no API key presence",
+      "limitations": "No installation, service start or secret inspection performed",
+      "owner_decision": "Choose native or Compose and authorize separate environment remediation",
+      "smallest_next_action": "Use new locked environment; dependency/import checks; start Docker only if selected route authorized"
+    },
+    {
+      "id": "C",
+      "requirement": "Database schema compatibility and capacity",
+      "status": "BLOCKED",
+      "mandatory": true,
+      "evidence": "database-readonly.json; host.json",
+      "command": "database_readonly.py; Get-PSDrive -PSProvider FileSystem",
+      "observation_timestamp": "2026-10-18T08:42:07.104515+03:00",
+      "result": "Default DB version 0, quick_check ok; data/live absent; approximately 89 GB free",
+      "limitations": "Immutable main-file reads only with empty WAL; not full audit/release validation or capacity guarantee",
+      "owner_decision": "Select root/volume; approve schema effects and backup scope",
+      "smallest_next_action": "Verify target backup, audit/release integrity, storage and peak memory budget before mutation"
+    },
+    {
+      "id": "D",
+      "requirement": "Complete source contracts and freshness",
+      "status": "NOT_TESTED",
+      "mandatory": true,
+      "evidence": "../portfolio-release-20261018-083345/freshness.json; ../portfolio-release-20261018-083345/latest-port*.json; configs/sources.json",
+      "command": "Six latest-one official PortWatch query URLs recorded in referenced freshness.json",
+      "observation_timestamp": "2026-10-18T08:42:07.104515+03:00",
+      "result": "Each Oct 9, age 9 on Oct 18; latest-date subgate PASS",
+      "limitations": "Requests at 05:35:19-29Z; not full reference schema/history window/count reconciliation or optional-weather readiness",
+      "owner_decision": "Authorize bounded complete-contract preflight and accept optional-source degradation",
+      "smallest_next_action": "Validate full chosen extraction window/DQ in isolated authorized scope; recheck freshness at launch"
+    },
+    {
+      "id": "E",
+      "requirement": "DQ dedup quarantine reconciliation lineage",
+      "status": "NOT_TESTED",
+      "mandatory": true,
+      "evidence": "../local-release-20261017-freshness-01/live/release-validation.json; src/maritime/quality.py; src/maritime/sources.py",
+      "command": "Read existing release-validation.json and source code",
+      "observation_timestamp": "2026-10-18T08:42:07.104515+03:00",
+      "result": "Historical campaign PASS with expected failure isolation; current cache has no duplicate keys",
+      "limitations": "Historical tests do not validate unacquired current candidate dataset",
+      "owner_decision": "Approve isolated acquisition/DQ scope",
+      "smallest_next_action": "Obtain current accepted/rejected/quarantined/replaced/expired reconciliation and lineage receipts"
+    },
+    {
+      "id": "F",
+      "requirement": "Checkpoint rerun and publication safety",
+      "status": "BLOCKED",
+      "mandatory": true,
+      "evidence": "database-readonly.json; EXECUTION_PLAN.md; src/maritime/pipeline.py; src/maritime/store.py",
+      "command": "Read-only checkpoint metadata and source trace",
+      "observation_timestamp": "2026-10-18T08:42:07.104515+03:00",
+      "result": "Cache updates after DQ before later stages; approved publication changes in transaction; CLI UUID is new each run",
+      "limitations": "No current writer exclusion, target full integrity or recovery receipt",
+      "owner_decision": "Select data root and retry/publication policy",
+      "smallest_next_action": "Verify target integrity and writer exclusion; retain backup and checkpoints; no deleting lock/cache"
+    },
+    {
+      "id": "G",
+      "requirement": "Monitoring run identifiers resource capacity",
+      "status": "BLOCKED",
+      "mandatory": true,
+      "evidence": "host.json; EXECUTION_PLAN.md",
+      "command": "Get-Process filtered names; Get-NetTCPConnection selected listeners; Get-PSDrive",
+      "observation_timestamp": "2026-10-18T08:42:07.104515+03:00",
+      "result": "No selected process/listener visible; run UUID/report/log/retry counters implemented",
+      "limitations": "Visibility-limited snapshot; no current ready API, memory budget, run deadline or assigned monitor",
+      "owner_decision": "Assign local operator/stop authority and resource bounds",
+      "smallest_next_action": "Confirm live process/port scope, capture run output, set agreed capacity/time/abort criteria"
+    },
+    {
+      "id": "H",
+      "requirement": "Isolated failure and recovery evidence availability",
+      "status": "PASS",
+      "mandatory": true,
+      "evidence": "../local-release-20261017-freshness-01/docker/maritime-demo-4836fad43b/result.json; ../local-release-20261017-freshness-01/docker/maritime-demo-4836fad43b/backup-restore.json; ../local-release-20261017-freshness-01/live/release-validation.json",
+      "command": "Read retained dated Docker fault/recovery and live failure receipts",
+      "observation_timestamp": "2026-10-18T08:42:07.104515+03:00",
+      "result": "Historical outage readiness 503, recovery/restart 200; restored publication and 18 chained records",
+      "limitations": "PASS only for retained isolated evidence; not current target recovery or RPO/RTO",
+      "owner_decision": "Choose target-specific recovery scope",
+      "smallest_next_action": "Validate backup/restore of exact target separately before operational writes"
+    },
+    {
+      "id": "I",
+      "requirement": "Command side effects and stop/recovery plan",
+      "status": "PASS",
+      "mandatory": true,
+      "evidence": "EXECUTION_PLAN.md; src/maritime/cli.py; src/maritime/pipeline.py; src/maritime/recovery.py",
+      "command": "Read-only source trace",
+      "observation_timestamp": "2026-10-18T08:42:07.104515+03:00",
+      "result": "Native and Compose paths, writes, checkpoint timing, cancellation and recovery limits documented",
+      "limitations": "No launch authorization; abrupt interruption can leave partial artifacts/RUNNING report",
+      "owner_decision": "Approve route/root and persistent effects in future task",
+      "smallest_next_action": "Clear all mandatory blocked/not-tested gates before authorizing run"
+    }
+  ],
+  "timestamp_note": "Per-command host/source/DB times are retained in referenced JSON; gate timestamp is assessment anchor, not a new execution time for historical evidence",
+  "nonmandatory": [
+    {
+      "status": "NOT_APPLICABLE",
+      "id": "CLOUD",
+      "scope": "Explicit local ML backend; no cloud execution"
+    },
+    {
+      "status": "PASS",
+      "id": "D-FRESHNESS",
+      "scope": "Six latest genuine source observations; 2026-10-18 as-of; 10-day rule unchanged",
+      "observed_at": "2026-10-18T05:35:19Z/2026-10-18T05:35:29Z"
+    }
+  ],
+  "no_data_mutation": true
+}

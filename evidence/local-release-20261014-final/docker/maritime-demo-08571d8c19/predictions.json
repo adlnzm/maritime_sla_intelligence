@@ -1,0 +1,584 @@
+{
+  "run_id": "2a99d15ba6b94235a9ecfb0c47b8451a",
+  "release": {
+    "contract_version": "1.0",
+    "run_id": "2a99d15ba6b94235a9ecfb0c47b8451a",
+    "release_id": "8cfaf41a1c7647348ebba40399c15e0d9f2812d64f11cbae3c25a396be9cd72b",
+    "status": "PASS_WITH_WARNINGS",
+    "scope": "LOCAL_ANALYTICAL",
+    "execution_mode": "REPLAY",
+    "as_of": "2026-10-07",
+    "source_latest_by_port": {
+      "port664": "2026-10-02",
+      "port744": "2026-10-02",
+      "port1188": "2026-10-02",
+      "port1114": "2026-10-02",
+      "port815": "2026-10-02",
+      "port1201": "2026-10-02"
+    },
+    "approved_at": "2026-10-14T04:04:26.175305+00:00",
+    "code": {
+      "git_commit": "UNAVAILABLE",
+      "working_tree_dirty": null,
+      "code_fingerprint": "00180a6c6b8c608d0e44506571c0a2e47ee934218e0d5ab53c59dd8c2c67fd85",
+      "python": "3.11.17",
+      "dependencies": {
+        "numpy": "2.4.6",
+        "pandas": "2.3.3",
+        "scikit-learn": "1.9.1",
+        "pydantic": "2.13.5"
+      }
+    },
+    "contract_fingerprint": "6f2853e4a8c2ec8371012e0704bf3b7c13eb1022817823ddf075dfbfe0912e8b",
+    "stage_evidence": {
+      "acquisition": {
+        "status": "PASS_WITH_WARNINGS",
+        "execution_id": "c42cb7261912743396f75ee0",
+        "started_at": "2026-10-14T04:04:22.842158+00:00",
+        "attempt": 1,
+        "checks": {
+          "nonempty_critical_sources": true,
+          "registry_version": true,
+          "source_failure_policy": true
+        },
+        "failed_rules": [],
+        "warnings": [
+          "REPLAY_NOT_LIVE",
+          "OPTIONAL_SOURCE_UNAVAILABLE"
+        ],
+        "counts": {
+          "received_ports": 6,
+          "received_activity": 1416
+        },
+        "completed_at": "2026-10-14T04:04:22.882728+00:00",
+        "duration_seconds": 0.040710277000016504
+      },
+      "bronze": {
+        "status": "PASS",
+        "execution_id": "a55a842b019148b00a8e80f0",
+        "started_at": "2026-10-14T04:04:22.900593+00:00",
+        "attempt": 1,
+        "checks": {
+          "evidence_retained": true,
+          "payload_hashes_verified": true
+        },
+        "failed_rules": [],
+        "warnings": [],
+        "counts": {
+          "payloads": 1
+        },
+        "completed_at": "2026-10-14T04:04:22.917959+00:00",
+        "duration_seconds": 0.017624002000047767
+      },
+      "silver": {
+        "status": "PASS",
+        "execution_id": "c511b1dc129abcbd7265ebed",
+        "started_at": "2026-10-14T04:04:22.927454+00:00",
+        "attempt": 1,
+        "checks": {
+          "canonical_dq": true,
+          "record_accounting": true
+        },
+        "failed_rules": [],
+        "warnings": [],
+        "counts": {
+          "received": 1452,
+          "accepted": 1452,
+          "rejected": 0,
+          "quarantined": 0,
+          "balanced": true
+        },
+        "completed_at": "2026-10-14T04:04:23.011040+00:00",
+        "duration_seconds": 0.08369639800002915
+      },
+      "metrics": {
+        "status": "PASS",
+        "execution_id": "b724cf87ee79e8682afc3b2d",
+        "started_at": "2026-10-14T04:04:23.027801+00:00",
+        "attempt": 1,
+        "checks": {
+          "independent_current_metrics": true,
+          "port_coverage": true
+        },
+        "failed_rules": [],
+        "warnings": [],
+        "counts": {},
+        "completed_at": "2026-10-14T04:04:23.428037+00:00",
+        "duration_seconds": 0.40035705000013877
+      },
+      "scenario": {
+        "status": "PASS",
+        "execution_id": "ec560a6160a54908d735ee58",
+        "started_at": "2026-10-14T04:04:23.453225+00:00",
+        "attempt": 1,
+        "checks": {
+          "shipment_action_accounting": true,
+          "all_outputs_simulated": true
+        },
+        "failed_rules": [],
+        "warnings": [],
+        "counts": {},
+        "completed_at": "2026-10-14T04:04:23.533370+00:00",
+        "duration_seconds": 0.08021515600012208
+      },
+      "features_ml": {
+        "status": "PASS_WITH_WARNINGS",
+        "execution_id": "36ceda9bd5e9782aebd0a3f9",
+        "started_at": "2026-10-14T04:04:23.576818+00:00",
+        "attempt": 1,
+        "checks": {
+          "sla_not_trained": true,
+          "prediction_classification": true
+        },
+        "failed_rules": [],
+        "warnings": [
+          "LOCAL_RESEARCH_MODEL"
+        ],
+        "counts": {
+          "predictions": 6
+        },
+        "completed_at": "2026-10-14T04:04:24.581039+00:00",
+        "duration_seconds": 1.004380172000083
+      },
+      "gold": {
+        "status": "PASS",
+        "execution_id": "cb887dde3627e60f473e770c",
+        "started_at": "2026-10-14T04:04:24.616520+00:00",
+        "attempt": 1,
+        "checks": {
+          "dataset_contracts_and_independent_checks": true
+        },
+        "failed_rules": [],
+        "warnings": [],
+        "counts": {
+          "ports": {
+            "input": 6,
+            "persisted_expected": 6,
+            "invalid": 0
+          },
+          "activity": {
+            "input": 1416,
+            "persisted_expected": 1416,
+            "invalid": 0
+          },
+          "routes": {
+            "input": 30,
+            "persisted_expected": 30,
+            "invalid": 0
+          },
+          "congestion_history": {
+            "input": 1416,
+            "persisted_expected": 1416,
+            "invalid": 0
+          },
+          "congestion": {
+            "input": 6,
+            "persisted_expected": 6,
+            "invalid": 0
+          },
+          "network": {
+            "input": 30,
+            "persisted_expected": 30,
+            "invalid": 0
+          },
+          "exposure": {
+            "input": 0,
+            "persisted_expected": 0,
+            "invalid": 0
+          },
+          "scenarios": {
+            "input": 60,
+            "persisted_expected": 60,
+            "invalid": 0
+          },
+          "interventions": {
+            "input": 300,
+            "persisted_expected": 300,
+            "invalid": 0
+          },
+          "sla_risk": {
+            "input": 60,
+            "persisted_expected": 60,
+            "invalid": 0
+          },
+          "decisions": {
+            "input": 60,
+            "persisted_expected": 60,
+            "invalid": 0
+          },
+          "predictions": {
+            "input": 6,
+            "persisted_expected": 6,
+            "invalid": 0
+          },
+          "disruptions": {
+            "input": 0,
+            "persisted_expected": 0,
+            "invalid": 0
+          },
+          "early_warning": {
+            "input": 0,
+            "persisted_expected": 0,
+            "invalid": 0
+          },
+          "sources": {
+            "input": 6,
+            "persisted_expected": 6,
+            "invalid": 0
+          },
+          "data_quality": {
+            "input": 1,
+            "persisted_expected": 1,
+            "invalid": 0
+          },
+          "lineage": {
+            "input": 215,
+            "persisted_expected": 215,
+            "invalid": 0
+          },
+          "dim_location": {
+            "input": 6,
+            "persisted_expected": 6,
+            "invalid": 0
+          },
+          "dim_time": {
+            "input": 236,
+            "persisted_expected": 236,
+            "invalid": 0
+          },
+          "dim_intervention": {
+            "input": 5,
+            "persisted_expected": 5,
+            "invalid": 0
+          }
+        },
+        "completed_at": "2026-10-14T04:04:24.968891+00:00",
+        "duration_seconds": 0.3525693510000565
+      }
+    },
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "datasets": {
+      "ports": {
+        "rows": 6,
+        "sha256": "1f63d25214d836db61f25b6ba247e05f1bd7919eb0ae2833bdef8bb5212dc87f",
+        "classifications": [
+          "OBSERVED"
+        ]
+      },
+      "activity": {
+        "rows": 1416,
+        "sha256": "6865ad31f9e9c5df76912ea3c6123e61d3758a5e73cc5d728756bd4fa9d46459",
+        "classifications": [
+          "OBSERVED"
+        ]
+      },
+      "routes": {
+        "rows": 30,
+        "sha256": "01ba2aff589419df293c6ff89eceb734da787d96d2558bf18e106436e462ea49",
+        "classifications": [
+          "SIMULATED"
+        ]
+      },
+      "congestion_history": {
+        "rows": 1416,
+        "sha256": "19c849b32253cfcc92902d64bb39c044e374293a4e4c99a0a21f0a8b2a37c7fb",
+        "classifications": [
+          "DERIVED"
+        ]
+      },
+      "congestion": {
+        "rows": 6,
+        "sha256": "efa9266ed85b1d8906c635586858c6929bf6a1ce83ba16ff60247e1bfee3d7ba",
+        "classifications": [
+          "DERIVED"
+        ]
+      },
+      "network": {
+        "rows": 30,
+        "sha256": "126b7e029dfab6cc2f9cbdc7cb2646dc6d3a939e868981fa0f943a6438a925ba",
+        "classifications": [
+          "SIMULATED"
+        ]
+      },
+      "exposure": {
+        "rows": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "classifications": []
+      },
+      "scenarios": {
+        "rows": 60,
+        "sha256": "8dfb001c74a9e7e1855d9edaeda5edcf1d6ba51b44dbabaa5bd7b9536f44bd7c",
+        "classifications": [
+          "SIMULATED"
+        ]
+      },
+      "interventions": {
+        "rows": 300,
+        "sha256": "f280a5431d6c13ae6c2d0a49d6751480d65f7854a71027999b740e9938c02da7",
+        "classifications": [
+          "SIMULATED"
+        ]
+      },
+      "sla_risk": {
+        "rows": 60,
+        "sha256": "f90ceb4b9d6fc5e8d83c65c315d13c0378f9c30bea65b7bb19e5f70c866aec20",
+        "classifications": [
+          "SIMULATED"
+        ]
+      },
+      "decisions": {
+        "rows": 60,
+        "sha256": "5d9d5c046ff9e0f6a351a3fe59c14c28dfb29d2d43f79493465e3a7b0b70720b",
+        "classifications": [
+          "SIMULATED"
+        ]
+      },
+      "predictions": {
+        "rows": 6,
+        "sha256": "a6fa58a5f3c62c2ae6fde4bcfab026ff9b74fe24cef72f458007171066c6348c",
+        "classifications": [
+          "PREDICTED"
+        ]
+      },
+      "disruptions": {
+        "rows": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "classifications": []
+      },
+      "early_warning": {
+        "rows": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "classifications": []
+      },
+      "sources": {
+        "rows": 6,
+        "sha256": "130882b34ebddc7436ab09a981ca9bd2c904a4b16a974c6f78a09200247a333c",
+        "classifications": [
+          "DERIVED"
+        ]
+      },
+      "data_quality": {
+        "rows": 1,
+        "sha256": "376e5cf4ba4b1cdca5e9b82105f75252fad19674572b676ffd828882212ec773",
+        "classifications": [
+          "DERIVED"
+        ]
+      },
+      "lineage": {
+        "rows": 215,
+        "sha256": "688b6602e6c294e7895977961203253e57ab97d014a0fcc8e322000054719edb",
+        "classifications": [
+          "DERIVED"
+        ]
+      },
+      "dim_location": {
+        "rows": 6,
+        "sha256": "779ee5eaa029f6ddd6bd2e384ec3af778201f2f76d06f4efb770290aba579195",
+        "classifications": [
+          "OBSERVED"
+        ]
+      },
+      "dim_time": {
+        "rows": 236,
+        "sha256": "5a57ce7df10deb770890a0ded5b6b83458dca5414e97f204e5d8b7adf6780a20",
+        "classifications": [
+          "DERIVED"
+        ]
+      },
+      "dim_intervention": {
+        "rows": 5,
+        "sha256": "6d17c20c2b724eb12f47f8f8966a2b319c367cac99cf42720e67b4a15b753fc5",
+        "classifications": [
+          "SIMULATED"
+        ]
+      }
+    },
+    "industrial_release": {
+      "status": "BLOCKED",
+      "unevaluated_mandatory_controls": [
+        "fabric_runtime_and_readback",
+        "azure_ml_lifecycle_and_return",
+        "cloud_identity_and_least_privilege",
+        "raw_and_audit_retention_enforcement",
+        "production_slo_agreement_and_sustained_evidence"
+      ]
+    }
+  },
+  "total": 6,
+  "items": [
+    {
+      "port_id": "port1114",
+      "date": "2026-10-03",
+      "vessel_calls": 79.51955421530155,
+      "lower": 59.97792409980076,
+      "upper": 99.06118433080235,
+      "classification": "PREDICTED",
+      "model_version": "dc8151620bbba52e674a8f68",
+      "feature_version": "portcalls-lags-v1",
+      "generated_at": "2026-10-14T04:04:24.567704+00:00",
+      "approval_status": "LOCAL_RESEARCH_ONLY",
+      "lineage_id": "b678186c25a40ac6d29e04ef",
+      "run_id": "2a99d15ba6b94235a9ecfb0c47b8451a",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-14T04:04:22.676124+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [
+        "OBSERVED"
+      ],
+      "input_fingerprints": {
+        "activity": "6865ad31f9e9c5df76912ea3c6123e61d3758a5e73cc5d728756bd4fa9d46459"
+      },
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "port_id": "port1188",
+      "date": "2026-10-03",
+      "vessel_calls": 66.33126376391672,
+      "lower": 46.78963364841593,
+      "upper": 85.87289387941752,
+      "classification": "PREDICTED",
+      "model_version": "dc8151620bbba52e674a8f68",
+      "feature_version": "portcalls-lags-v1",
+      "generated_at": "2026-10-14T04:04:24.570322+00:00",
+      "approval_status": "LOCAL_RESEARCH_ONLY",
+      "lineage_id": "b678186c25a40ac6d29e04ef",
+      "run_id": "2a99d15ba6b94235a9ecfb0c47b8451a",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-14T04:04:22.676124+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [
+        "OBSERVED"
+      ],
+      "input_fingerprints": {
+        "activity": "6865ad31f9e9c5df76912ea3c6123e61d3758a5e73cc5d728756bd4fa9d46459"
+      },
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "port_id": "port1201",
+      "date": "2026-10-03",
+      "vessel_calls": 109.2174796862236,
+      "lower": 89.6758495707228,
+      "upper": 128.75910980172438,
+      "classification": "PREDICTED",
+      "model_version": "dc8151620bbba52e674a8f68",
+      "feature_version": "portcalls-lags-v1",
+      "generated_at": "2026-10-14T04:04:24.572817+00:00",
+      "approval_status": "LOCAL_RESEARCH_ONLY",
+      "lineage_id": "b678186c25a40ac6d29e04ef",
+      "run_id": "2a99d15ba6b94235a9ecfb0c47b8451a",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-14T04:04:22.676124+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [
+        "OBSERVED"
+      ],
+      "input_fingerprints": {
+        "activity": "6865ad31f9e9c5df76912ea3c6123e61d3758a5e73cc5d728756bd4fa9d46459"
+      },
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "port_id": "port664",
+      "date": "2026-10-03",
+      "vessel_calls": 8.827550955461739,
+      "lower": 0,
+      "upper": 28.369181070962533,
+      "classification": "PREDICTED",
+      "model_version": "dc8151620bbba52e674a8f68",
+      "feature_version": "portcalls-lags-v1",
+      "generated_at": "2026-10-14T04:04:24.575458+00:00",
+      "approval_status": "LOCAL_RESEARCH_ONLY",
+      "lineage_id": "b678186c25a40ac6d29e04ef",
+      "run_id": "2a99d15ba6b94235a9ecfb0c47b8451a",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-14T04:04:22.676124+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [
+        "OBSERVED"
+      ],
+      "input_fingerprints": {
+        "activity": "6865ad31f9e9c5df76912ea3c6123e61d3758a5e73cc5d728756bd4fa9d46459"
+      },
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "port_id": "port744",
+      "date": "2026-10-03",
+      "vessel_calls": 3.42594111926892,
+      "lower": 0,
+      "upper": 22.967571234769714,
+      "classification": "PREDICTED",
+      "model_version": "dc8151620bbba52e674a8f68",
+      "feature_version": "portcalls-lags-v1",
+      "generated_at": "2026-10-14T04:04:24.578136+00:00",
+      "approval_status": "LOCAL_RESEARCH_ONLY",
+      "lineage_id": "b678186c25a40ac6d29e04ef",
+      "run_id": "2a99d15ba6b94235a9ecfb0c47b8451a",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-14T04:04:22.676124+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [
+        "OBSERVED"
+      ],
+      "input_fingerprints": {
+        "activity": "6865ad31f9e9c5df76912ea3c6123e61d3758a5e73cc5d728756bd4fa9d46459"
+      },
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    },
+    {
+      "port_id": "port815",
+      "date": "2026-10-03",
+      "vessel_calls": 7.918394430467565,
+      "lower": 0,
+      "upper": 27.46002454596836,
+      "classification": "PREDICTED",
+      "model_version": "dc8151620bbba52e674a8f68",
+      "feature_version": "portcalls-lags-v1",
+      "generated_at": "2026-10-14T04:04:24.580668+00:00",
+      "approval_status": "LOCAL_RESEARCH_ONLY",
+      "lineage_id": "b678186c25a40ac6d29e04ef",
+      "run_id": "2a99d15ba6b94235a9ecfb0c47b8451a",
+      "contract_version": "1.0",
+      "processed_at": "2026-10-14T04:04:22.676124+00:00",
+      "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+      "component_classifications": [
+        "OBSERVED"
+      ],
+      "input_fingerprints": {
+        "activity": "6865ad31f9e9c5df76912ea3c6123e61d3758a5e73cc5d728756bd4fa9d46459"
+      },
+      "degraded_sources": [
+        "routes",
+        "unlocode",
+        "wpi"
+      ],
+      "execution_mode": "REPLAY"
+    }
+  ]
+}

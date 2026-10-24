@@ -1,0 +1,2522 @@
+[
+  {
+    "decision_id": "dc791467af48ba1bcecb220a",
+    "shipment_id": "885fd8e3acf8217d32fd9527",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "ecdacb3dcee803500a6a2ad6",
+    "ranked_alternatives": [
+      "ecdacb3dcee803500a6a2ad6",
+      "3aa46066bab3cc7875b0c6cb",
+      "b9572b25566c408b635570c3",
+      "27c91708354791a7fcefac2b"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -5.792986654860706,
+    "expected_loss": 5.792986654860706,
+    "expected_delay_hours": 7.111188785910306,
+    "breach_probability": 0.001953125,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "ecdacb3dcee803500a6a2ad6",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "b42fb9499f6d68efbd6fe06a",
+    "shipment_id": "52a1599deac17fea2cadb537",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "bf6388301a11807011228352",
+    "ranked_alternatives": [
+      "bf6388301a11807011228352",
+      "fb575936ab9574086130170b",
+      "921ed35284f752c969198252",
+      "3a6acd27fa64636da29c1ac4"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -830.5876279090456,
+    "expected_loss": 830.5876279090456,
+    "expected_delay_hours": 23.137964601133312,
+    "breach_probability": 0.310546875,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "bf6388301a11807011228352",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "b96a24ba05c2b57cd3eec0aa",
+    "shipment_id": "593b473b878e4617fb7615d1",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "cd1c3ff788ec606efc9d31f7",
+    "ranked_alternatives": [
+      "cd1c3ff788ec606efc9d31f7",
+      "06cc8c298fb4b33cd394664a",
+      "f148b8a9131183eadf398ac1",
+      "e9a2d8c64b3d22ce741484c2"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -1215.1983140543143,
+    "expected_loss": 1215.1983140543143,
+    "expected_delay_hours": 10.198249750265397,
+    "breach_probability": 0.623046875,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "cd1c3ff788ec606efc9d31f7",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "a2afd2074c0091f105a74311",
+    "shipment_id": "e6714853fecd3892cac910a8",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "20f4a3d9afaa84d2f3f39832",
+    "ranked_alternatives": [
+      "20f4a3d9afaa84d2f3f39832",
+      "967059bb4b872858efaf7926",
+      "d41be6db440c74d803ebd456",
+      "5dce50a458abb3d172421ecc"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -556.1046444168478,
+    "expected_loss": 556.1046444168478,
+    "expected_delay_hours": 14.31436123448393,
+    "breach_probability": 0.0390625,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "20f4a3d9afaa84d2f3f39832",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "81b949319e5bc12c919f9f07",
+    "shipment_id": "e4ebdce87eedfd2998ea09e5",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "cff0fb0a23129b493faac9c6",
+    "ranked_alternatives": [
+      "cff0fb0a23129b493faac9c6",
+      "7294933d0e4a5c14a43a4bcc",
+      "74ffe962272ba39f3e79798f",
+      "0a927340ccac5414efd0042a"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -0.0,
+    "expected_loss": 0.0,
+    "expected_delay_hours": 4.3976976041164,
+    "breach_probability": 0.0,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "cff0fb0a23129b493faac9c6",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "2916928eb4657c40a9a6b8ff",
+    "shipment_id": "b9892e65ca5232af7655b655",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "598caa04cb557516943f1864",
+    "ranked_alternatives": [
+      "598caa04cb557516943f1864",
+      "f80593c8a1e7cd1e6e9bb81b",
+      "b10b8dfa84f597b8d8b8f159",
+      "d374bdda2fd8af0f9f1bed90"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -64.42026212313684,
+    "expected_loss": 64.42026212313684,
+    "expected_delay_hours": 22.833565536670527,
+    "breach_probability": 0.025390625,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "598caa04cb557516943f1864",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "99e821eae6b0bc2a0be8d1ba",
+    "shipment_id": "26a3e4382c859c2988b8e2d7",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "d91467491eed215f3fff605e",
+    "ranked_alternatives": [
+      "d91467491eed215f3fff605e",
+      "b9702d1fae2285fcd0f55f15",
+      "a1d1d5e8c05214c89e45e6cf",
+      "3d1e3354a8e4107493f0c8ab"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -41.71397465808693,
+    "expected_loss": 41.71397465808693,
+    "expected_delay_hours": 14.287897096434016,
+    "breach_probability": 0.021484375,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "d91467491eed215f3fff605e",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "563d80ebbf4ea0bcb561dbe1",
+    "shipment_id": "782976cc7439d013141a2485",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "48a60a6e293a1c86e8bbff83",
+    "ranked_alternatives": [
+      "48a60a6e293a1c86e8bbff83",
+      "dbdf1df763d3b54797896836",
+      "9c2ee455b171a84e7b7b8e39",
+      "0109ec40d46fa830e1c2d42b"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -135.90808183859727,
+    "expected_loss": 135.90808183859727,
+    "expected_delay_hours": 11.464452456152621,
+    "breach_probability": 0.05859375,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "48a60a6e293a1c86e8bbff83",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "1c666fb93cc04b60df395af5",
+    "shipment_id": "a189f247df34ef10a68b486e",
+    "recommended_action": "EXPEDITE",
+    "scenario_id": "ff1d7b24391ad14c0aeebf25",
+    "ranked_alternatives": [
+      "ff1d7b24391ad14c0aeebf25",
+      "f5ee644c1ec4695dd0926be9",
+      "4b3d33979c630f52c5beca67",
+      "5654dfa287dcdaea211df019"
+    ],
+    "expected_benefit": 1214.470427339531,
+    "expected_delay_avoided": 13.654021998917822,
+    "breach_reduction": 0.58203125,
+    "decision_score": -1800.0,
+    "expected_loss": 0.0,
+    "expected_delay_hours": 0.0,
+    "breach_probability": 0.0,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "ff1d7b24391ad14c0aeebf25",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "199132e41bcb75ab033265a9",
+    "shipment_id": "89805c3448a1ca2e4573c438",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "dd64a16faeac44dd7a226d54",
+    "ranked_alternatives": [
+      "dd64a16faeac44dd7a226d54",
+      "db3f5f97b0649724dd123741",
+      "4075514485d84b9da7d6ca1d",
+      "f2b86161b629b20646cd2fa9"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -164.51039330934356,
+    "expected_loss": 164.51039330934356,
+    "expected_delay_hours": 17.27258849221081,
+    "breach_probability": 0.025390625,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "dd64a16faeac44dd7a226d54",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "0025237087aa835213d4bcc2",
+    "shipment_id": "894792b175547204bd568a93",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "458e03c6c32445847642f95f",
+    "ranked_alternatives": [
+      "458e03c6c32445847642f95f",
+      "875a76994d2fee76c1806cb3",
+      "bb7db8b8201302afb4e20b37",
+      "9e6d06344d9ad70d77c58041"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -0.0,
+    "expected_loss": 0.0,
+    "expected_delay_hours": 7.524966500065148,
+    "breach_probability": 0.0,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "458e03c6c32445847642f95f",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "1687c8cc18b16e3ca5cc4b6d",
+    "shipment_id": "732587d91f14fe8a248fd3f4",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "ae0abe878f65b6bd7d0ed9d1",
+    "ranked_alternatives": [
+      "ae0abe878f65b6bd7d0ed9d1",
+      "f4754b55fe64cbca87b0425d",
+      "2b76f974caa5f95b43dad5bd",
+      "8066eb2e549d6ff4aaffe601"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -168.47602317038414,
+    "expected_loss": 168.47602317038414,
+    "expected_delay_hours": 21.778134910673373,
+    "breach_probability": 0.056640625,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "ae0abe878f65b6bd7d0ed9d1",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "d5a809e8ee358b084ba943ee",
+    "shipment_id": "dfccee72cd6cfeef23069a9e",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "ba64205552d67f4d1021883d",
+    "ranked_alternatives": [
+      "ba64205552d67f4d1021883d",
+      "a28b81d3f191e32da252d8d7",
+      "902633d303b37e6c4787667c",
+      "f02d8554406f9b71bc63fbe3"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -51.28436523925069,
+    "expected_loss": 51.28436523925069,
+    "expected_delay_hours": 4.51103559025872,
+    "breach_probability": 0.083984375,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "ba64205552d67f4d1021883d",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "2702faedd1a854e17765e2ed",
+    "shipment_id": "27083e335a3d3fe5e435c869",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "ac8d5396f08fd85a2488dd03",
+    "ranked_alternatives": [
+      "ac8d5396f08fd85a2488dd03",
+      "b8b9aadfe52ca91baa2cad02",
+      "f0edef1cdd70bfc8e89e1f30",
+      "aa9bdcf14b5c28b148d2769b"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -299.23772066208164,
+    "expected_loss": 299.23772066208164,
+    "expected_delay_hours": 15.730197853416643,
+    "breach_probability": 0.037109375,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "ac8d5396f08fd85a2488dd03",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "f1d291ad61f8c1f6369a6387",
+    "shipment_id": "f84580a9f31b2bd790934a21",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "96f12f8cc34c902dd1c1c3f3",
+    "ranked_alternatives": [
+      "96f12f8cc34c902dd1c1c3f3",
+      "c7791b89a44694da8a883522",
+      "38470a9e73093b756344e79e",
+      "fbc7fdfb5ebf096d69b8fa19"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -0.0,
+    "expected_loss": 0.0,
+    "expected_delay_hours": 4.557086889315445,
+    "breach_probability": 0.0,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "96f12f8cc34c902dd1c1c3f3",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "e0361d3302f3416230dbf732",
+    "shipment_id": "160fc364e1aaa3f1d4692cd0",
+    "recommended_action": "PRIORITIZE",
+    "scenario_id": "458681c933ffbc5d3b3f5705",
+    "ranked_alternatives": [
+      "458681c933ffbc5d3b3f5705",
+      "a0f7cc14a392099d148b403e",
+      "88f45cfb5abfc5fbefe8958e",
+      "c1a03143c8ccf39d20f31ac3"
+    ],
+    "expected_benefit": 204.92701120370407,
+    "expected_delay_avoided": 3.2764959728000154,
+    "breach_reduction": 0.15234375,
+    "decision_score": -1614.2733494575025,
+    "expected_loss": 414.2733494575025,
+    "expected_delay_hours": 7.645157269866701,
+    "breach_probability": 0.044921875,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "458681c933ffbc5d3b3f5705",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "70b2dbc6fe39a0a804fb0e47",
+    "shipment_id": "e3086c0fe438954b9852672d",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "b97d6eb9e5a5f3bcc8c05c88",
+    "ranked_alternatives": [
+      "b97d6eb9e5a5f3bcc8c05c88",
+      "5de81f475c5951b55affe187",
+      "f2a0995040a322a362c9ef83",
+      "afb43831929401785e6e5041"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -814.933429864939,
+    "expected_loss": 814.933429864939,
+    "expected_delay_hours": 22.803533085596044,
+    "breach_probability": 0.998046875,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "b97d6eb9e5a5f3bcc8c05c88",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "528b8951dbcf560c156e3c25",
+    "shipment_id": "ccf0d229edf029fdf2fa42e7",
+    "recommended_action": "EXPEDITE",
+    "scenario_id": "f7abe4243072347f6201599e",
+    "ranked_alternatives": [
+      "f7abe4243072347f6201599e",
+      "f3612900851b80957e1a95b6",
+      "e50381bf02dad61f7b66e8dd",
+      "0a4a93ddc495574f0edc2116"
+    ],
+    "expected_benefit": 370.0109424393231,
+    "expected_delay_avoided": 7.6130316669924065,
+    "breach_reduction": 0.240234375,
+    "decision_score": -1800.0,
+    "expected_loss": 0.0,
+    "expected_delay_hours": 0.0,
+    "breach_probability": 0.0,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "f7abe4243072347f6201599e",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "eebe7480232ae4a8a64208fc",
+    "shipment_id": "663c0ef6109ee874dabcb435",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "bc99fe479880e49630ff7ccc",
+    "ranked_alternatives": [
+      "bc99fe479880e49630ff7ccc",
+      "a380bb5fa0807b4b4a2f5159",
+      "cf7c7ce7ae284d29923cced0",
+      "12997f653935bea0f9a9ed28"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -613.2609747856113,
+    "expected_loss": 613.2609747856113,
+    "expected_delay_hours": 22.969592704528008,
+    "breach_probability": 0.064453125,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "bc99fe479880e49630ff7ccc",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "18aa1fe4beb70ce3b1bba0c1",
+    "shipment_id": "b8e6fc8d8b6f3c4ecf093483",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "e10633115c8aac5f4853daf6",
+    "ranked_alternatives": [
+      "e10633115c8aac5f4853daf6",
+      "4cbeb99b47741b3e2c210387",
+      "cd8b431cf227911e35a88692",
+      "99471062f1de3e6433d2b25f"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -559.5547686551295,
+    "expected_loss": 559.5547686551295,
+    "expected_delay_hours": 11.16230920066661,
+    "breach_probability": 0.0625,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "e10633115c8aac5f4853daf6",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "599ac9e81548ad38785f0000",
+    "shipment_id": "080fe502d31c6779b384d8ce",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "bec8376b2608b17bd0479102",
+    "ranked_alternatives": [
+      "bec8376b2608b17bd0479102",
+      "abed27e02ecc4a19bc59d813",
+      "dc38b836e83ba1449c376834",
+      "3b094d535acf7f23c8eb2a15"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -234.0994383402839,
+    "expected_loss": 234.0994383402839,
+    "expected_delay_hours": 17.490012752814557,
+    "breach_probability": 0.142578125,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "bec8376b2608b17bd0479102",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "07398b879d0eaf635ee2cb99",
+    "shipment_id": "aa35fd6d34a6fca07cbb4919",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "9610981e0a7d2f174d0261a2",
+    "ranked_alternatives": [
+      "9610981e0a7d2f174d0261a2",
+      "0423895de6a46d234e8fc240",
+      "2062c46cd45c27ea94c0d815",
+      "40c4a59b008e47424719564c"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -623.7021663326398,
+    "expected_loss": 623.7021663326398,
+    "expected_delay_hours": 19.311132231052284,
+    "breach_probability": 0.052734375,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "9610981e0a7d2f174d0261a2",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "e9d7e37a3a6dbe6694fc1683",
+    "shipment_id": "499f56e05a410e70dec1f966",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "fa24706ce5557a57db306e68",
+    "ranked_alternatives": [
+      "fa24706ce5557a57db306e68",
+      "fa91cc3f909073ba09653a1f",
+      "a95b3aca19e226c3372d1371",
+      "979cfe55cb83f699688d8eee"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -18.51674901995739,
+    "expected_loss": 18.51674901995739,
+    "expected_delay_hours": 7.696105142093444,
+    "breach_probability": 0.00390625,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "fa24706ce5557a57db306e68",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "4770b6874871c28af2162335",
+    "shipment_id": "9902ca6bf9c03144c6e8cfcb",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "9fc814243a5f08ca5c7f7ad2",
+    "ranked_alternatives": [
+      "9fc814243a5f08ca5c7f7ad2",
+      "559ae2748d1507c95490bc30",
+      "d7dab821633cdfda39a74508",
+      "f7bc751793d226c04251f14b"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -189.60160950501535,
+    "expected_loss": 189.60160950501535,
+    "expected_delay_hours": 22.717384317697977,
+    "breach_probability": 0.103515625,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "9fc814243a5f08ca5c7f7ad2",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "f3b2b0364b12b7d901c81e8f",
+    "shipment_id": "5a364886ae2085f155c956fc",
+    "recommended_action": "EXPEDITE",
+    "scenario_id": "99f092b7048caa241018f7a2",
+    "ranked_alternatives": [
+      "99f092b7048caa241018f7a2",
+      "1ee908834812d552886e8e0a",
+      "017a500a07a8b84205aac166",
+      "a8a493b1b0b0110a823edfe4"
+    ],
+    "expected_benefit": 482.2552325944141,
+    "expected_delay_avoided": 22.43023219240707,
+    "breach_reduction": 0.78125,
+    "decision_score": -1834.2338284889163,
+    "expected_loss": 34.23382848891621,
+    "expected_delay_hours": 0.6147426468817361,
+    "breach_probability": 0.01171875,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "99f092b7048caa241018f7a2",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "2530a304700fcb10cea2e4cb",
+    "shipment_id": "0e0bd8ebca0a54576913e06a",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "a376d0bb32b4bd730f2d089c",
+    "ranked_alternatives": [
+      "a376d0bb32b4bd730f2d089c",
+      "6fa2fd128b7e46c9ad0357ed",
+      "8daa4b087acbddd4016d9c3d",
+      "efbb403cf6160eb137ff679e"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -131.60522588040908,
+    "expected_loss": 131.60522588040908,
+    "expected_delay_hours": 11.150972714154957,
+    "breach_probability": 0.0234375,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "a376d0bb32b4bd730f2d089c",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "84ca0a9cc72dea0ad9be060a",
+    "shipment_id": "c44851791281211f8fd6ee27",
+    "recommended_action": "PRIORITIZE",
+    "scenario_id": "6a793ee30a5efd3e0a360e6a",
+    "ranked_alternatives": [
+      "6a793ee30a5efd3e0a360e6a",
+      "928c5e4477d242d5c3a0b4a5",
+      "21a090f947573ac2a4da67b8",
+      "c1e4bc6a09e8965c24fd469f"
+    ],
+    "expected_benefit": 548.463946260054,
+    "expected_delay_avoided": 5.0591151054149535,
+    "breach_reduction": 0.23828125,
+    "decision_score": -948.3046394395246,
+    "expected_loss": 348.3046394395246,
+    "expected_delay_hours": 11.804601912634887,
+    "breach_probability": 0.072265625,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "6a793ee30a5efd3e0a360e6a",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "024bef41ec9321c101436b32",
+    "shipment_id": "e10e865fd7d4cf2f871646b0",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "f690bf2fb29aad6301ede4e2",
+    "ranked_alternatives": [
+      "f690bf2fb29aad6301ede4e2",
+      "5199eaa607ef1475768fbea2",
+      "ccd419c2560702d22ab05897",
+      "389d8e83c20b625efd4dcbdb"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -219.0461172114169,
+    "expected_loss": 219.0461172114169,
+    "expected_delay_hours": 14.082611674394379,
+    "breach_probability": 0.06640625,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "f690bf2fb29aad6301ede4e2",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "9a8d85027957c96683eeba96",
+    "shipment_id": "62602ce40db7bce0d19a0b54",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "736d4034007a3c827c5ac15b",
+    "ranked_alternatives": [
+      "736d4034007a3c827c5ac15b",
+      "0a4bf3ec5e9ef03caaf627ea",
+      "fa5e1f9b16703de63e13da65",
+      "1a3f881a115ed7e16baa5491"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -0.0,
+    "expected_loss": 0.0,
+    "expected_delay_hours": 4.64068970050559,
+    "breach_probability": 0.0,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "736d4034007a3c827c5ac15b",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "64cd11aa21dba21428ab0811",
+    "shipment_id": "cecbb293710d01cc4e536116",
+    "recommended_action": "EXPEDITE",
+    "scenario_id": "41e9a3a0a78693c075f576cf",
+    "ranked_alternatives": [
+      "41e9a3a0a78693c075f576cf",
+      "0161cbb30ed7fd6bb49903c8",
+      "eb830e34bd6916125264a024",
+      "550195c66f15ae50d5c4ce18"
+    ],
+    "expected_benefit": 6764.254160037959,
+    "expected_delay_avoided": 19.474555276193826,
+    "breach_reduction": 0.7734375,
+    "decision_score": -1821.6269044445403,
+    "expected_loss": 21.6269044445403,
+    "expected_delay_hours": 0.12286151891195396,
+    "breach_probability": 0.001953125,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "41e9a3a0a78693c075f576cf",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "edd9c293208a07c6688c9833",
+    "shipment_id": "e67fb867c6d59220d51f9387",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "9e6745f99ee8663cb5d04308",
+    "ranked_alternatives": [
+      "9e6745f99ee8663cb5d04308",
+      "c12f46d22e4ed0b6e0c3cc9d",
+      "d938ab347b86709be2440cdb",
+      "f286d0623824336901347d56"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -0.0,
+    "expected_loss": 0.0,
+    "expected_delay_hours": 10.475155013224372,
+    "breach_probability": 0.0,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "9e6745f99ee8663cb5d04308",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "d00a8bcacaf5dd4cd6fc9ce7",
+    "shipment_id": "385c9a08d851611e1158b7de",
+    "recommended_action": "PRIORITIZE",
+    "scenario_id": "924dcd1cf6a262a354328ef1",
+    "ranked_alternatives": [
+      "924dcd1cf6a262a354328ef1",
+      "16011773189abfc1e84201e6",
+      "d04b4271cac0ee679a2373ba",
+      "9b61c9f060045e43ebb655f7"
+    ],
+    "expected_benefit": 48.02992757707466,
+    "expected_delay_avoided": 4.2761962490685335,
+    "breach_reduction": 0.26953125,
+    "decision_score": -928.710832828951,
+    "expected_loss": 328.7108328289509,
+    "expected_delay_hours": 9.977791247826588,
+    "breach_probability": 0.13671875,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "924dcd1cf6a262a354328ef1",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "af42bf3a67251deea2f3dd6f",
+    "shipment_id": "b6bc3238041887019181b460",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "7e8c310977d5adf338789566",
+    "ranked_alternatives": [
+      "7e8c310977d5adf338789566",
+      "d409dce9ac72daea1c61afeb",
+      "a2aa2330528abbab47df8c5b",
+      "ad3db9467b1f827208f1e0f2"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -51.34069172699236,
+    "expected_loss": 51.34069172699236,
+    "expected_delay_hours": 17.616543962022444,
+    "breach_probability": 0.01171875,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "7e8c310977d5adf338789566",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "823a96fe4cf32f184fb4869e",
+    "shipment_id": "452a2a5200ac181b7bf53167",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "4c5cd50c37868216a7d42f83",
+    "ranked_alternatives": [
+      "4c5cd50c37868216a7d42f83",
+      "e09f51c0414354df12a29df7",
+      "b8e0ac8eab2113c356bef461",
+      "46e13c362fd6e07855d107fa"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -0.0,
+    "expected_loss": 0.0,
+    "expected_delay_hours": 4.561777332222384,
+    "breach_probability": 0.0,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "4c5cd50c37868216a7d42f83",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "7e5c9ca7eb652ba5a0f6661a",
+    "shipment_id": "9dc56eff42df88a83085054d",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "156b706acd0d773993022d58",
+    "ranked_alternatives": [
+      "156b706acd0d773993022d58",
+      "5bbb3490db5229df3eed222d",
+      "fce6ecc4e11cdab3ce70e906",
+      "e5d4e8fedea399e1a3ec0c49"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -416.1589521313704,
+    "expected_loss": 416.1589521313704,
+    "expected_delay_hours": 22.046646065094244,
+    "breach_probability": 0.41015625,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "156b706acd0d773993022d58",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "f8c8302eabb340f16babbc66",
+    "shipment_id": "ee386ba922ae2ceaa050d70b",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "89e0b99ee4c8abd9e3b8c459",
+    "ranked_alternatives": [
+      "89e0b99ee4c8abd9e3b8c459",
+      "aa7e1862f3715cec970801e5",
+      "169ac99ee8de0b70939ef0d6",
+      "0e48e9b4be515b693d2a9b1d"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -11.304742413551185,
+    "expected_loss": 11.304742413551185,
+    "expected_delay_hours": 7.882879300693114,
+    "breach_probability": 0.037109375,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "89e0b99ee4c8abd9e3b8c459",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "f0e8d5e02033a3cb4e2c280f",
+    "shipment_id": "98a4465ce71d80fd4de3e9e9",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "8ed747fefef9031540919102",
+    "ranked_alternatives": [
+      "8ed747fefef9031540919102",
+      "55742167fb188a71736441c5",
+      "eeaf34f7611e65834c9e1776",
+      "c69ff5982f8f7224de495ade"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -3.7855103914743453,
+    "expected_loss": 3.7855103914743453,
+    "expected_delay_hours": 7.614735735196823,
+    "breach_probability": 0.009765625,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "8ed747fefef9031540919102",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "c59ea45bcd74e01364906b1f",
+    "shipment_id": "35f64d685eac91c1644d9e49",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "b80dd62e5bcd63906fab3672",
+    "ranked_alternatives": [
+      "b80dd62e5bcd63906fab3672",
+      "b3469c97dde619df64624df0",
+      "aa1ba13e3909c2b745570ebf",
+      "19fde538928208c4d5436f70"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -44.535820014600695,
+    "expected_loss": 44.535820014600695,
+    "expected_delay_hours": 11.695839728737752,
+    "breach_probability": 0.005859375,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "b80dd62e5bcd63906fab3672",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "b0c845f73a01fdb0a25ce06a",
+    "shipment_id": "4907c817aa96ae9faf8b6e66",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "3868171ecb4a9fb5f78a703d",
+    "ranked_alternatives": [
+      "3868171ecb4a9fb5f78a703d",
+      "a9a9182f0508a756768d27ac",
+      "126b0b1fe3ffafe373f8513b",
+      "25cfc36fff3ccb6ff743b36b"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -314.98861039349174,
+    "expected_loss": 314.98861039349174,
+    "expected_delay_hours": 26.171552710038704,
+    "breach_probability": 0.83203125,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "3868171ecb4a9fb5f78a703d",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "7a6965ebf884c18626990c4c",
+    "shipment_id": "4c26e02e52c8a5e5412176ec",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "15b2f3562ed9bb476b0d82a7",
+    "ranked_alternatives": [
+      "15b2f3562ed9bb476b0d82a7",
+      "a6998c033f9ce36cf774f00e",
+      "15eed15aebbf53897ea5c175",
+      "3eaa5fd9b2098b5bcd34ed98"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -619.0075917862628,
+    "expected_loss": 619.0075917862628,
+    "expected_delay_hours": 25.91485680403143,
+    "breach_probability": 0.09765625,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "15b2f3562ed9bb476b0d82a7",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "e4e994066965bd0d697ca915",
+    "shipment_id": "15f3a921204452dbb4916e82",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "6406afe37e4a38c23136f693",
+    "ranked_alternatives": [
+      "6406afe37e4a38c23136f693",
+      "8b7dea2b906eab7963aae70b",
+      "e6d39b5d0cff589ea9be6ccb",
+      "b8b306f22029afa9e1a166bc"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -43.41539218511433,
+    "expected_loss": 43.41539218511433,
+    "expected_delay_hours": 14.481805475609143,
+    "breach_probability": 0.015625,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "6406afe37e4a38c23136f693",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "fbcec8f27090321958092e6e",
+    "shipment_id": "3895d8e5a0105ef3fd6ae16c",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "26ed2e7511ee61fc6551b750",
+    "ranked_alternatives": [
+      "26ed2e7511ee61fc6551b750",
+      "5f4b7707ea72a0eae2f92769",
+      "710fe1f7b49f3ff223697366",
+      "216668145e4f9ac1218ff97a"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -7.941072701495999,
+    "expected_loss": 7.941072701495999,
+    "expected_delay_hours": 11.464381979755895,
+    "breach_probability": 0.001953125,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "26ed2e7511ee61fc6551b750",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "67fdc1a094f89122b34040fb",
+    "shipment_id": "7b7d169a951b9d343f514074",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "2dd3f93f90f610894023d57d",
+    "ranked_alternatives": [
+      "2dd3f93f90f610894023d57d",
+      "860943900341b72bb3225991",
+      "cb531699056f941a7760e208",
+      "b485c5eabe83b69cd83d26c9"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -383.87795480172065,
+    "expected_loss": 383.87795480172065,
+    "expected_delay_hours": 21.327317783177662,
+    "breach_probability": 0.02734375,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "2dd3f93f90f610894023d57d",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "a59c88d3fc0be015a589c816",
+    "shipment_id": "de220f1cd9a8cc58e075e50f",
+    "recommended_action": "PRIORITIZE",
+    "scenario_id": "5bff9ee22e6ec4d3de85f367",
+    "ranked_alternatives": [
+      "5bff9ee22e6ec4d3de85f367",
+      "e3d5e57bcfa3bf1086f577ea",
+      "bf4e7d72697d95f22124a6a5",
+      "513e0d529c8ee8731f1f3479"
+    ],
+    "expected_benefit": 343.08117568043167,
+    "expected_delay_avoided": 4.170081835007657,
+    "breach_reduction": 0.189453125,
+    "decision_score": -1438.6208003629533,
+    "expected_loss": 238.62080036295333,
+    "expected_delay_hours": 9.730190948351186,
+    "breach_probability": 0.029296875,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "5bff9ee22e6ec4d3de85f367",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "de0f9e9bc2264f895dc390b7",
+    "shipment_id": "e9b2cb5f2ff3d246c5f50ed1",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "dc7044e4c2715e0e9f00f89b",
+    "ranked_alternatives": [
+      "dc7044e4c2715e0e9f00f89b",
+      "9197fdda77fcfc8802d5e6c1",
+      "b33a0d3051ecd6adf1b51555",
+      "b53d1522b74a3e2cab61fbf7"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -0.0,
+    "expected_loss": 0.0,
+    "expected_delay_hours": 10.66131657618352,
+    "breach_probability": 0.0,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "dc7044e4c2715e0e9f00f89b",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "531403b02b2f3e16358b762e",
+    "shipment_id": "87ae7efb069ec1daf9a38329",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "17e78bf1da1a89c0443f8868",
+    "ranked_alternatives": [
+      "17e78bf1da1a89c0443f8868",
+      "a1e4df34197217cfb668e83c",
+      "8c9b4cb5c8dd71a8d8d9fad5",
+      "6d3ad3566730db4636450d38"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -156.67346149404585,
+    "expected_loss": 156.67346149404585,
+    "expected_delay_hours": 11.441981268740264,
+    "breach_probability": 0.017578125,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "17e78bf1da1a89c0443f8868",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "c3bb2f3ae7829f9948460cbb",
+    "shipment_id": "d61a62b960e757003fa23847",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "726166c14fd13f4fc3242ce6",
+    "ranked_alternatives": [
+      "726166c14fd13f4fc3242ce6",
+      "0cb51997e68c076273650b38",
+      "981d9b07f36a5d21e033e286",
+      "0599a3d480ce50da90a8f495"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -21.972112912445276,
+    "expected_loss": 21.972112912445276,
+    "expected_delay_hours": 14.160747052498301,
+    "breach_probability": 0.001953125,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "726166c14fd13f4fc3242ce6",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "6ccd504fadbf39854fb5da52",
+    "shipment_id": "80dd3968e96ae3195e9a9266",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "c97efb1723c1ac5def2a455a",
+    "ranked_alternatives": [
+      "c97efb1723c1ac5def2a455a",
+      "0464adae2eb14dea9ea1177b",
+      "57fea971bc25a0696f57ba41",
+      "4cd241e762b28b82b55d9ef8"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -30.4904727850651,
+    "expected_loss": 30.4904727850651,
+    "expected_delay_hours": 4.412132595596716,
+    "breach_probability": 0.052734375,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "c97efb1723c1ac5def2a455a",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "5de09e7050d27a6e35299963",
+    "shipment_id": "ca0c5962655631c78b96b868",
+    "recommended_action": "EXPEDITE",
+    "scenario_id": "d624754ecd3a8b9727c52596",
+    "ranked_alternatives": [
+      "d624754ecd3a8b9727c52596",
+      "f6f19f37463d12ecb72855d6",
+      "fb73040013c7779b71fc3a76",
+      "4f7e315e28661a8498db0266"
+    ],
+    "expected_benefit": 390.68331390136996,
+    "expected_delay_avoided": 25.34148483854747,
+    "breach_reduction": 0.97265625,
+    "decision_score": -1813.1968874331408,
+    "expected_loss": 13.196887433140782,
+    "expected_delay_hours": 0.09177197237861323,
+    "breach_probability": 0.005859375,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "d624754ecd3a8b9727c52596",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "fe45fc12936f256840b186da",
+    "shipment_id": "24359da00eaf4c09eddfb570",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "2fa160ca52885428114c2d49",
+    "ranked_alternatives": [
+      "2fa160ca52885428114c2d49",
+      "dfccdd8d9eda94d25fbb65f4",
+      "b2779200c7eb1ead783aa702",
+      "62a13a6ee60267a7ff026e0c"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -0.0,
+    "expected_loss": 0.0,
+    "expected_delay_hours": 10.559995683906378,
+    "breach_probability": 0.0,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "2fa160ca52885428114c2d49",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "83f9ddc3389009141cb1c1b5",
+    "shipment_id": "b7288ed3dbf23baffd1a0084",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "a3806046e3cf016b7fb816e4",
+    "ranked_alternatives": [
+      "a3806046e3cf016b7fb816e4",
+      "e49a90dc5a45388c342f7989",
+      "e9dc2759949c96c50e899cc8",
+      "23498d263033e5f470ffe387"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -89.16138435509839,
+    "expected_loss": 89.16138435509839,
+    "expected_delay_hours": 11.71047474082803,
+    "breach_probability": 0.025390625,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "a3806046e3cf016b7fb816e4",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "f5301d2152f7a62c0f671e5d",
+    "shipment_id": "4f6dd629a731a3cf95f2b61c",
+    "recommended_action": "EXPEDITE",
+    "scenario_id": "d75fa48c23c39d0a714b7771",
+    "ranked_alternatives": [
+      "d75fa48c23c39d0a714b7771",
+      "d9a9d6ba8209837b244d7d57",
+      "9e84f75cb6d11f37968133d1",
+      "5370c6b4d269151a49078b33"
+    ],
+    "expected_benefit": 49.50266885659926,
+    "expected_delay_avoided": 22.30163122953916,
+    "breach_reduction": 0.826171875,
+    "decision_score": -1817.4893869395423,
+    "expected_loss": 17.48938693954231,
+    "expected_delay_hours": 0.49982840847221216,
+    "breach_probability": 0.0078125,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "d75fa48c23c39d0a714b7771",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "8e018ac56f0d8aeafed82b2c",
+    "shipment_id": "d49042947b55174c601804f6",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "620534a2bfcaecdb6506c04a",
+    "ranked_alternatives": [
+      "620534a2bfcaecdb6506c04a",
+      "712f190c9624347a510a2b0a",
+      "9e2721cc7e6307d6a56b09b9",
+      "51a4fc88a2f127ac20e9a739"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -1034.129195558731,
+    "expected_loss": 1034.129195558731,
+    "expected_delay_hours": 14.074476159372928,
+    "breach_probability": 0.173828125,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "620534a2bfcaecdb6506c04a",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "f2fd7a95cfa9f95bd57d3746",
+    "shipment_id": "3b9c343a39c6929d389e9b60",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "b5e8750aeb672e8ef267ace5",
+    "ranked_alternatives": [
+      "b5e8750aeb672e8ef267ace5",
+      "35e6dac47bdebe2ad5eda544",
+      "8ee68431e9d81bd57f24670a",
+      "c296b3110396153d299674bc"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -1100.5415778953845,
+    "expected_loss": 1100.5415778953845,
+    "expected_delay_hours": 13.534151879842014,
+    "breach_probability": 0.673828125,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "b5e8750aeb672e8ef267ace5",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "4b4c9d598ccf2e3f93e36bb1",
+    "shipment_id": "ecb78081e7616dec67495241",
+    "recommended_action": "PRIORITIZE",
+    "scenario_id": "48bb18660f0acf004884c958",
+    "ranked_alternatives": [
+      "48bb18660f0acf004884c958",
+      "b0478709dec269c1a2b16302",
+      "638512843f1114e7d3896be0",
+      "257596fdff1a086ec88d1f54"
+    ],
+    "expected_benefit": 690.0930283680957,
+    "expected_delay_avoided": 7.897244348480925,
+    "breach_reduction": 0.298828125,
+    "decision_score": -1578.1097469980334,
+    "expected_loss": 978.1097469980334,
+    "expected_delay_hours": 18.426903479788827,
+    "breach_probability": 0.2265625,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "48bb18660f0acf004884c958",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "938b3562aaf73986dd4cbf50",
+    "shipment_id": "a7cdf4dc7a754a01a7643f6b",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "cdfff4b9e59587ea34435eec",
+    "ranked_alternatives": [
+      "cdfff4b9e59587ea34435eec",
+      "949bac83105a4956e0894b7a",
+      "9fd3fb66d44cce8da64a28fd",
+      "6eb825e9ce093ff9a638392a"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -10.20020189785793,
+    "expected_loss": 10.20020189785793,
+    "expected_delay_hours": 13.690568217326565,
+    "breach_probability": 0.00390625,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "cdfff4b9e59587ea34435eec",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "5545d9305c77412a07cefb36",
+    "shipment_id": "393878372a286fb85808cfd6",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "b4200fb5cdb518f3f6ccc484",
+    "ranked_alternatives": [
+      "b4200fb5cdb518f3f6ccc484",
+      "583081e7c29fe9c0f6b8d6ee",
+      "9c135d56f252ca61e370eb35",
+      "462b6c4157ecffdac00d951e"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -24.174575340431872,
+    "expected_loss": 24.174575340431872,
+    "expected_delay_hours": 13.895145050118277,
+    "breach_probability": 0.00390625,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "b4200fb5cdb518f3f6ccc484",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "f175d36cae0bf4790d550c5b",
+    "shipment_id": "ac90e9c32fd8cf621c8fb59f",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "fc519dc69d18190b038a62c4",
+    "ranked_alternatives": [
+      "fc519dc69d18190b038a62c4",
+      "bb92881092eb4877a062ab3a",
+      "9e3da53ee5eae4c0664f4136",
+      "9fd02a3b03a05168628cc2ea"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -0.0,
+    "expected_loss": 0.0,
+    "expected_delay_hours": 10.641353107593433,
+    "breach_probability": 0.0,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "fc519dc69d18190b038a62c4",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "2e13b1b692e35d84d1049359",
+    "shipment_id": "522337c7b54d0f5d5ea34566",
+    "recommended_action": "PRIORITIZE",
+    "scenario_id": "13dae270b446cdc9afa7342c",
+    "ranked_alternatives": [
+      "13dae270b446cdc9afa7342c",
+      "c9e8c3e308d999fded3feb6e",
+      "e82de5650593e09a2541c4aa",
+      "8411a829342e4d637b9d392d"
+    ],
+    "expected_benefit": 801.2866297623825,
+    "expected_delay_avoided": 4.178360660254263,
+    "breach_reduction": 0.37109375,
+    "decision_score": -1455.5223634338756,
+    "expected_loss": 855.5223634338756,
+    "expected_delay_hours": 9.749508207259954,
+    "breach_probability": 0.2265625,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "13dae270b446cdc9afa7342c",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  },
+  {
+    "decision_id": "ff6f2822f7a5337f0c39976f",
+    "shipment_id": "681aa5f97c3c35ceed3d3c04",
+    "recommended_action": "NO_ACTION",
+    "scenario_id": "e44262422dd9b45cd51abb80",
+    "ranked_alternatives": [
+      "e44262422dd9b45cd51abb80",
+      "8e739a212c6a2178ba91f1ae",
+      "58bb9346d41438da7cabd21d",
+      "cd8f1ead0cc218ba646ff252"
+    ],
+    "expected_benefit": 0.0,
+    "expected_delay_avoided": 0.0,
+    "breach_reduction": 0.0,
+    "decision_score": -28.210821241476122,
+    "expected_loss": 28.210821241476122,
+    "expected_delay_hours": 7.281595175189455,
+    "breach_probability": 0.00390625,
+    "decision_confidence": null,
+    "confidence_status": "UNVALIDATED_SCENARIO_ASSUMPTIONS",
+    "rationale": "Lowest feasible operational cost plus simulated expected late-delivery penalty; human review required.",
+    "classification": "SIMULATED",
+    "lineage_id": "e44262422dd9b45cd51abb80",
+    "status": "PENDING_REVIEW",
+    "run_id": "e0cb54d06e9440328dd005fca57c2857",
+    "contract_version": "1.0",
+    "processed_at": "2026-10-10T13:58:21.048363+00:00",
+    "configuration_fingerprint": "b2a23fd34be730fa93e49cde0922575c169155fbe310869fa3d57b7eb862b4d3",
+    "component_classifications": [
+      "SIMULATED"
+    ],
+    "input_fingerprints": {
+      "interventions": "2809354e1c3d71178630dde749081479ee54eff16db40bdfa96a22dc4a8bea5f",
+      "sla_risk": "6002c6e0baaab1c238fe567b3050223a1c6849b713b7d0ae90ac276033653487"
+    },
+    "degraded_sources": [
+      "routes",
+      "unlocode",
+      "wpi"
+    ],
+    "execution_mode": "LIVE_PUBLIC_DATA"
+  }
+]

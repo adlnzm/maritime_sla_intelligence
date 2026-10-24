@@ -1,0 +1,37 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "time_filter",
+  "position": {
+    "x": 550,
+    "y": 20,
+    "z": 0,
+    "width": 500,
+    "height": 140,
+    "tabOrder": 570
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_port_weeks"
+                    }
+                  },
+                  "Property": "week_start"
+                }
+              },
+              "queryRef": "fact_port_weeks.week_start"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

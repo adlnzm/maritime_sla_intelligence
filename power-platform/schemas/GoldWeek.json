@@ -1,0 +1,301 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "port_id": {
+      "title": "Port Id",
+      "type": "string"
+    },
+    "port_name": {
+      "title": "Port Name",
+      "type": "string"
+    },
+    "country": {
+      "title": "Country",
+      "type": "string"
+    },
+    "unlocode": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Unlocode"
+    },
+    "week_start": {
+      "title": "Week Start",
+      "type": "string"
+    },
+    "week_end": {
+      "title": "Week End",
+      "type": "string"
+    },
+    "observed_days": {
+      "maximum": 7,
+      "minimum": 0,
+      "title": "Observed Days",
+      "type": "integer"
+    },
+    "expected_days": {
+      "const": 7,
+      "default": 7,
+      "title": "Expected Days",
+      "type": "integer"
+    },
+    "observed_calls": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Observed Calls"
+    },
+    "weekly_calls": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Weekly Calls"
+    },
+    "missing_dates": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Missing Dates",
+      "type": "array"
+    },
+    "observation_dates": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Observation Dates",
+      "type": "array"
+    },
+    "latest_observation": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Latest Observation"
+    },
+    "source_latest_observation": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Source Latest Observation"
+    },
+    "reference_mean": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Reference Mean"
+    },
+    "reference_std": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Reference Std"
+    },
+    "reference_weeks": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Reference Weeks",
+      "type": "array"
+    },
+    "z_score": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Z Score"
+    },
+    "completeness": {
+      "maximum": 1,
+      "minimum": 0,
+      "title": "Completeness",
+      "type": "number"
+    },
+    "quality_status": {
+      "enum": [
+        "PASS",
+        "INCOMPLETE"
+      ],
+      "title": "Quality Status",
+      "type": "string"
+    },
+    "classification": {
+      "enum": [
+        "DERIVED",
+        "SIMULATED"
+      ],
+      "title": "Classification",
+      "type": "string"
+    },
+    "source_lineage_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Source Lineage Ids",
+      "type": "array"
+    },
+    "source_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Source Ids",
+      "type": "array"
+    },
+    "input_sha256": {
+      "title": "Input Sha256",
+      "type": "string"
+    },
+    "lineage_id": {
+      "title": "Lineage Id",
+      "type": "string"
+    },
+    "methodology_version": {
+      "const": "port-week-activity-v1",
+      "default": "port-week-activity-v1",
+      "title": "Methodology Version",
+      "type": "string"
+    },
+    "run_id": {
+      "title": "Run Id",
+      "type": "string"
+    },
+    "review_id": {
+      "title": "Review Id",
+      "type": "string"
+    },
+    "gold_id": {
+      "title": "Gold Id",
+      "type": "string"
+    },
+    "risk_revision": {
+      "title": "Risk Revision",
+      "type": "string"
+    },
+    "risk_level": {
+      "title": "Risk Level",
+      "type": "string"
+    },
+    "risk_drivers": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Risk Drivers",
+      "type": "array"
+    },
+    "freshness_status": {
+      "enum": [
+        "FRESH",
+        "STALE",
+        "UNAVAILABLE"
+      ],
+      "title": "Freshness Status",
+      "type": "string"
+    },
+    "freshness_age_days": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Freshness Age Days"
+    },
+    "review_eligible": {
+      "title": "Review Eligible",
+      "type": "boolean"
+    },
+    "as_of": {
+      "title": "As Of",
+      "type": "string"
+    },
+    "observation_link": {
+      "title": "Observation Link",
+      "type": "string"
+    },
+    "simulated": {
+      "title": "Simulated",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "port_id",
+    "port_name",
+    "country",
+    "unlocode",
+    "week_start",
+    "week_end",
+    "observed_days",
+    "observed_calls",
+    "weekly_calls",
+    "missing_dates",
+    "observation_dates",
+    "latest_observation",
+    "source_latest_observation",
+    "reference_mean",
+    "reference_std",
+    "reference_weeks",
+    "z_score",
+    "completeness",
+    "quality_status",
+    "classification",
+    "source_lineage_ids",
+    "source_ids",
+    "input_sha256",
+    "lineage_id",
+    "run_id",
+    "review_id",
+    "gold_id",
+    "risk_revision",
+    "risk_level",
+    "risk_drivers",
+    "freshness_status",
+    "freshness_age_days",
+    "review_eligible",
+    "as_of",
+    "observation_link",
+    "simulated"
+  ],
+  "title": "GoldWeek",
+  "type": "object"
+}

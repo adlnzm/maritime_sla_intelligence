@@ -13,6 +13,11 @@ benefits are explicitly **SIMULATED**. No carrier/customer shipment history is a
 Default route connectivity is an assumption, not a claim about actual shipping services.
 Consult [validation evidence](evidence/README.md) before drawing deployment conclusions.
 
+For the isolated clean-volume demonstration, startup diagnostics and safe recovery, use
+[READY_TO_RUN](docs/operations/READY_TO_RUN.md). The
+[feature inventory](docs/requirements/feature_traceability.md) separates local verification
+from cloud prerequisites and incomplete report authoring.
+
 ## Local setup
 
 Python 3.11+ and [uv](https://docs.astral.sh/uv/) are required. Commands run from this repository.
@@ -22,7 +27,7 @@ The committed `uv.lock` resolves direct and transitive dependencies.
 # UTF-8 console output; regular wheel install avoids Python 3.11 .pth locale issues.
 $env:PYTHONUTF8 = "1"
 $env:UV_LINK_MODE = "copy"
-uv sync --frozen --no-editable --extra dev --extra fabric
+uv sync --frozen --no-editable --extra dev --extra fabric --extra azure
 uv run --no-editable pytest -q
 uv run --no-editable ruff check src tests scripts
 uv run --no-editable ruff format --check src tests scripts

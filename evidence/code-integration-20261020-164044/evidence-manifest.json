@@ -1,0 +1,202 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-10-22T10:30:40.174145+03:00",
+  "timezone": "Asia/Qatar",
+  "branch": "codex/build-maritime-platform",
+  "commit": "4b50f50769b08e763015064c53d91b6bda4ae079",
+  "verdict": "CODE-INTEGRATED AND VALIDATED",
+  "scope": "Implemented local analytical product and explicitly tested offline adapter contracts; no live runtime, cloud-service, reporting-engine or production certification.",
+  "tests": {
+    "passed": 85,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "source_hashes": "source-hashes.json",
+  "changed_by_this_task": {
+    "src/maritime/api.py": "Map SQLite/OS/Azure dependency exceptions to redacted 503 responses while retaining correlation IDs and liveness.",
+    "src/maritime/azure_store.py": "Validate account/container configuration before identity access; pin approved reads; verify destination content before publication; complete interrupted pointer updates without rolling back newer snapshots.",
+    "src/maritime/fabric_runtime.py": "Validate task run/contract/stage/latest-attempt dependencies; generate, persist and include returned prediction/decision-evidence field lineage in the release.",
+    "src/maritime/pipeline.py": "Declare forecasts unused for recommendation ranking using the existing decision field contract; trace supplemental forecast evidence to predictions.",
+    "scripts/deploy_fabric.py": "Inject real HTTP/identity interfaces for testing, reject unexpected request URLs, bound malformed Retry-After handling, retry safe reads on transport failure, propagate ambiguous mutating-call failures.",
+    "scripts/azure_ml.py": "Validate required cloud configuration before optional SDK import or credential construction.",
+    "pyproject.toml": "Explicit source-distribution inputs prevent retained evidence/environments from entering package builds.",
+    "tests/test_code_integration.py": "22 parameterized integration/regression cases across acquisition, cloud serving, API failure, Fabric tasks/REST/forecast return, ML configuration, freshness and forecast isolation.",
+    "tests/test_fabric_assets.py": "Generate all six notebooks in a temporary directory and compare with retained assets."
+  },
+  "preserved": {
+    "branch": true,
+    "commit": true,
+    "old_evidence": true,
+    "existing_persistent_data_not_mutated": true
+  },
+  "not_performed": [
+    "Git commit/push/tag/release",
+    "application launch",
+    "unrestricted pipeline",
+    "service start/stop/restart",
+    "live cloud/deployment",
+    "production verification"
+  ],
+  "artifact_hashes": {
+    "artifact-inspection.json": {
+      "sha256": "69499be06a216b03f068eb6f4837b51331b15165b9cdc6ffc740d6e4c56753b7",
+      "bytes": 3713
+    },
+    "artifact-inspection.log": {
+      "sha256": "d655fa27d1e21299757025a931ed865f686364d7342a4410510ee4804b0a6048",
+      "bytes": 809
+    },
+    "branch-before.txt": {
+      "sha256": "431d73deb2db24cc17010630f2ff2ec02b0bf4be0532e0cf64626f09c29f393e",
+      "bytes": 31
+    },
+    "build.log": {
+      "sha256": "c1f7121468e6bf5adec66ed0d587b9db4cdd38c589007c5a8d6eba10ff088ff5",
+      "bytes": 362
+    },
+    "CODE_INTEGRATION_REPORT.md": {
+      "sha256": "d43f37f89d875f3795a99851326fdcfc30e0ff80ec80266d06e52aa6052f17ad",
+      "bytes": 7437
+    },
+    "commit-before.txt": {
+      "sha256": "609b6b572df24aaffe95f769230748fe737f927bce14fd3f3aef028a4a084819",
+      "bytes": 42
+    },
+    "COMPONENT_INTEGRATION_MATRIX.json": {
+      "sha256": "fbb2adc0ce4221ebd1593e8079e0eafe27a0cdbe7ce72e02fdf18b28da271447",
+      "bytes": 40529
+    },
+    "create_reports.py": {
+      "sha256": "0e5c83b2189839391b177f6fad6dfbbac98e164012751fa987ba67093d4ec21c",
+      "bytes": 34743
+    },
+    "dependency-check.log": {
+      "sha256": "225f335e957d0ed147b9e38ffeebbe56ccdece95295e2ed694693e0d86bdb788",
+      "bytes": 628
+    },
+    "dependency-clean.log": {
+      "sha256": "6c4720b8bf2e4ed896acac9f4a0b574ea044f974e6631b2603b8c0650d0263ad",
+      "bytes": 164
+    },
+    "END_TO_END_TEST_RESULTS.md": {
+      "sha256": "002d580ecc5a5ef6feda95828315b21c53157faf89d3d308129d9c934e62949d",
+      "bytes": 5559
+    },
+    "environment-copy-setup.log": {
+      "sha256": "ae504b26b5137317717b2f14cbfa44d5d337f61f3888e06f7f3d17d35c299b51",
+      "bytes": 2649
+    },
+    "environment-setup.log": {
+      "sha256": "7071753408a0f31b76b2b971efdbb5eef2387be8071cee892a1fdb1a02511c35",
+      "bytes": 1220
+    },
+    "final-build.log": {
+      "sha256": "afbf76f45abc15b55884758d445ef7adaa47c9c641594b39fbc315a7264994c3",
+      "bytes": 313
+    },
+    "final-tests.log": {
+      "sha256": "a6dfe46c050f325a7dc1d2d92c807e7a16a1fcd425cef7a833ab543725fdb367",
+      "bytes": 134
+    },
+    "format.log": {
+      "sha256": "11a5ed48473251d741a03ec709ddd8345a3b47faec65836638e816aff7ca7fa6",
+      "bytes": 28
+    },
+    "full-tests.log": {
+      "sha256": "ea6abfb569dd8dd66198c2cd0f8fea070cf456282be068150ba9c835c0b77572",
+      "bytes": 859
+    },
+    "full-tests.xml": {
+      "sha256": "3ddc5353f67889d05df79a2ac5a47414f29373d0e211d4707da7a937f899da57",
+      "bytes": 9853
+    },
+    "git-status-after-tracked.txt": {
+      "sha256": "858b8ef205e3d039d3ce308de522abddc5786b0898cb02ef2e81509f91f76a75",
+      "bytes": 776
+    },
+    "git-status-before.txt": {
+      "sha256": "c7c92e49d12c697bdafebde40660a4f1dc51a7f27dbb271baa1a15269814fd72",
+      "bytes": 11149828
+    },
+    "initial-tests.log": {
+      "sha256": "a6dfe46c050f325a7dc1d2d92c807e7a16a1fcd425cef7a833ab543725fdb367",
+      "bytes": 134
+    },
+    "inspect_artifacts.py": {
+      "sha256": "ff1a07e9d41ff0f6d2e97fa10817687a7625fce709dae5cd615972caaaa19a7d",
+      "bytes": 2535
+    },
+    "lint.log": {
+      "sha256": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0",
+      "bytes": 20
+    },
+    "run_validation.py": {
+      "sha256": "aa280f2c5e93d5db9879fecaf3ca73bbe0f4b495091aabcdbb2b62d0ca771baf",
+      "bytes": 1131
+    },
+    "source-hashes.json": {
+      "sha256": "6ccef1afbe5f1a9dba7fa59fe31955176ec6ed02035530d6e80cf1ff6c3a4cc3",
+      "bytes": 13833
+    },
+    "target-clean.log": {
+      "sha256": "65d912bb37c9c04a834ac2ae170bb45d705260ecb142d572db3c681303f8569a",
+      "bytes": 884
+    },
+    "target-clean.xml": {
+      "sha256": "bcdcbc97753d6bb10e5a8871a620327f6df989de9be6d446e76754bc64441720",
+      "bytes": 2702
+    },
+    "targeted-final.log": {
+      "sha256": "3804cfcede2b96c64506df969cc0a53b723f5c76b777540108118dfe25561e15",
+      "bytes": 768
+    },
+    "targeted-isolated.log": {
+      "sha256": "df7084659b3598b16d6a1e3dbbb90ade51d15a6c27415201348f33c678943e10",
+      "bytes": 9057
+    },
+    "targeted-tests.log": {
+      "sha256": "a33c12ea121bf728a72917058e70d566ead56f69e6642e546918f2ec31b5625e",
+      "bytes": 581
+    },
+    "targeted-tests.xml": {
+      "sha256": "14aa80b7dfdf64fc120ed1421e9cc37964c46c9e1a0680e4ca8843daf15b3fe8",
+      "bytes": 2294
+    },
+    "UNRESOLVED_INTEGRATION_GAPS.md": {
+      "sha256": "b7ff6e72e989b441b5f6dc72b96043c80493242ebe64c370f4e19d34d4aa61e3",
+      "bytes": 3464
+    },
+    "verified-build/maritime_sla_intelligence-0.1.0-py3-none-any.whl": {
+      "sha256": "18ea85c05d757559c55999cb361b4cdb62d66e8183fb32df0e718bff285333b9",
+      "bytes": 67567
+    },
+    "verified-build/maritime_sla_intelligence-0.1.0.tar.gz": {
+      "sha256": "0f1bccb13fafd838fd2b61ac8fabe2c5c9cdb9230f4025a73a8b607ccc63f648",
+      "bytes": 334599
+    },
+    "verified-build.log": {
+      "sha256": "2919aea1deb521231fda8990b89ce042d5825b98f3a4a3d08a74f78af2d91139",
+      "bytes": 319
+    },
+    "verified-tests.log": {
+      "sha256": "84a76f13838a3fd34a47bf5715ac5c32161f695c98ce315eafd363148688b381",
+      "bytes": 965
+    },
+    "verified-tests.xml": {
+      "sha256": "464b9c61ee9d6e856f54dc04316b59f64576e1e260c5a32b942f5926fe2f539f",
+      "bytes": 10762
+    }
+  },
+  "manifest_scope": "Top-level evidence and authoritative verified-build archives. Self hash omitted.",
+  "excluded_retained_workspaces": [
+    "validation-venv",
+    "validation-copy",
+    "uv-cache",
+    "pytest-cache",
+    "*temp*",
+    "build",
+    "final-build"
+  ],
+  "exclusion_reason": "Disposable/failed environments, package caches and test roots remain present; authoritative results, source hashes and build archives are individually hashed instead."
+}

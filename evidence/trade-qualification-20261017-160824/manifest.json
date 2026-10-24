@@ -1,0 +1,15 @@
+{
+  "ASSESSMENT.md": "a771fa5e2b526c9478c694efeaac6091a3d5dc548a6b240f6d61594d98ffaace",
+  "branch.txt": "431d73deb2db24cc17010630f2ff2ec02b0bf4be0532e0cf64626f09c29f393e",
+  "git-status-after.txt": "6ba2d7e95ba07b50edb1dc92c433e15023976f1f6c1f8299ded443dbcda453bf",
+  "git-status-before.txt": "cc021ed79925ebf8c0a6c8f57b6a6fdd9732fc20a5cf864037bf92d4987a6fa3",
+  "revision.txt": "609b6b572df24aaffe95f769230748fe737f927bce14fd3f3aef028a4a084819",
+  "sample-verification.json": "6d64a3df483ea375b4234db21fdea41c08d1b7b97513aaad8c47ebb9a895060d",
+  "source-before.json": "dfb98d02dd994c74450363298218795677c4fa3791680a0193d7d3e00f2c3090",
+  "tests-authorized.exitcode": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+  "tests-authorized.log": "4bc75cc112f7f03740c74dc444a32ca123cdaaef794d92fdc2f55b429781922a",
+  "tests-authorized.xml": "2240bdfca8198483d25b87a2093ab95cf01bc148641bd7e4ec58935134b9d3a5",
+  "tests.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "verification.json": "85457a5be5e5fcf69ba7d0dbb319e5d737f94fe7ea58f06b181bd93d0764c501",
+  "verify.py": "2d01758a3d20d2eaa5f851db659b1371e5c54da5e591296e524b4878bbb2ebce"
+}

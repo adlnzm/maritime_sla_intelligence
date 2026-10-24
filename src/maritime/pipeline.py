@@ -83,7 +83,9 @@ def field_lineage(products, run_id):
                     "lineage_id": stable_id(run_id, table, field),
                     "run_id": run_id,
                     "resulting_field": f"{table}.{field}",
-                    "input_tables": dependencies.get(table, ["bronze"]),
+                    "input_tables": ["predictions"]
+                    if table == "decisions" and field == "forecast_evidence"
+                    else dependencies.get(table, ["bronze"]),
                     "source_ids": sorted({r.get("source_id", "pipeline") for r in rows}),
                     "input_lineage_ids": sorted(
                         {str(r["lineage_id"]) for r in rows if "lineage_id" in r}
@@ -244,6 +246,23 @@ def _run(
             store.set_metadata(*checkpoint)
         for name, rows in clean.items():
             write_json(store.root / "silver" / run_id / (name + ".json"), rows)
+            store.write_layer("silver", name, run_id, rows)
+            if store.read_layer("silver", name, run_id, approved=False) != rows:
+                raise GovernanceError("Silver persisted readback failed")
+        # Analytical callers consume the persisted, validated Silver contract.
+        ports, activity, routes = (
+            store.read_layer("silver", name, run_id, approved=False)
+            for name in ("ports", "activity", "routes")
+        )
+        from maritime.medallion import weekly_gold, weekly_silver
+
+        weeks = weekly_silver(ports, activity, as_of, run_id)
+        store.write_layer("silver", "port_weeks", run_id, weeks)
+        write_json(store.root / "silver" / run_id / "port_weeks.json", weeks)
+        persisted_weeks = store.read_layer("silver", "port_weeks", run_id, approved=False)
+        if persisted_weeks != weeks:
+            raise GovernanceError("Weekly Silver persisted readback failed")
+        port_weeks = weekly_gold(persisted_weeks, as_of)
         report["stage_status"]["silver"] = "PASS"
         gates.finish(
             "silver",
@@ -279,7 +298,12 @@ def _run(
                 graph, shipment, config["scenario_assumptions"], config["seed"], config["draws"]
             )
             interventions.extend(outcomes)
-            decisions.append(rank(outcomes))
+            decisions.append(
+                {
+                    **rank(outcomes),
+                    "forecast_usage": "NOT_USED_FOR_RANKING",
+                }
+            )
         baseline = [o for o in interventions if o["action"] == "NO_ACTION"]
         gates.finish(
             "scenario",
@@ -317,6 +341,8 @@ def _run(
             ["LOCAL_RESEARCH_MODEL"] if predictions else [],
         )
         gates.start("gold")
+        store.write_layer("gold", "port_weeks", run_id, port_weeks)
+        write_json(store.root / "gold" / run_id / "operations" / "port_weeks.json", port_weeks)
         disruptions = [
             {**s, "signal_type": "ACTIVITY_DEVIATION_PROXY", "confirmed_disruption": False}
             for s in states
@@ -464,6 +490,7 @@ def _run(
             "expected_benefit": sum(d["expected_benefit"] for d in decisions),
             "expected_delay_avoided": sum(d["expected_delay_avoided"] for d in decisions),
             "decision_confidence": "NOT_CALIBRATED",
+            "forecast_affects_ranking": False,
             "operator_overrides": len(
                 [a for a in store.audits("review") if a["status"] == "override"]
             ),
@@ -493,6 +520,16 @@ def _run(
         }
         gates.start("publication")
         manifest = release_manifest(products, report)
+        manifest["medallion_version"] = "1.0"
+        manifest["medallion"] = {
+            f"silver.{name}": {"rows": len(rows), "sha256": fingerprint(rows)}
+            for name, rows in {**clean, "port_weeks": weeks}.items()
+        }
+        manifest["medallion"]["gold.port_weeks"] = {
+            "rows": len(port_weeks),
+            "sha256": fingerprint(port_weeks),
+        }
+        manifest["release_id"] = fingerprint([manifest["release_id"], manifest["medallion"]])
         from maritime.governance import verify_manifest
 
         verify_manifest({name: store.read(name, run_id) for name in products}, manifest)
@@ -561,10 +598,30 @@ def run(*args, **kwargs):
         for k, v in bound.arguments.items()
         if k not in {"fetcher", "request_fingerprint", "root", "run_id"}
     }
-    for k in ("config_path", "registry_path", "fixture"):
-        path = bound.arguments[k]
-        if path:
-            request[k] = fingerprint(load_json(path))
+    try:
+        for k in ("config_path", "registry_path", "fixture"):
+            path = bound.arguments[k]
+            if path:
+                request[k] = fingerprint(load_json(path))
+    except (OSError, ValueError) as exc:
+        # A configuration failure is an attempted operation, even before ingestion.
+        # Use a fresh ID so invalid retries cannot overwrite an approved run.
+        with exclusive_run(root):
+            store = Store(root)
+            failed = {
+                "run_id": uuid.uuid4().hex,
+                "requested_run_id": run_id,
+                "status": "FAILED",
+                "start_time": utcnow(),
+                "end_time": utcnow(),
+                "stage_status": {"preflight": "BLOCKED"},
+                "failures": [{"type": type(exc).__name__, "message": str(exc)}],
+                "accounting": {"input": 0, "persisted": 0, "failed": 0},
+            }
+            store.run(failed)
+            store.audit("preflight_failure", failed)
+            report_files(store, failed)
+        raise
     request_id = fingerprint(request)
     with exclusive_run(root):
         store = Store(root)
@@ -596,4 +653,25 @@ def run(*args, **kwargs):
                 },
             )
         bound.arguments["request_fingerprint"] = request_id
-        return _run(**bound.arguments)
+        bound.arguments["run_id"] = run_id or uuid.uuid4().hex
+        try:
+            return _run(**bound.arguments)
+        except Exception as exc:
+            # Gate/contract initialization can fail before _run stores its report.
+            with store.connect() as con:
+                existing = con.execute(
+                    "SELECT 1 FROM runs WHERE run_id=?", (bound.arguments["run_id"],)
+                ).fetchone()
+            if not existing:
+                failed = {
+                    "run_id": bound.arguments["run_id"],
+                    "status": "FAILED",
+                    "start_time": utcnow(),
+                    "end_time": utcnow(),
+                    "stage_status": {"preflight": "BLOCKED"},
+                    "failures": [{"type": type(exc).__name__, "message": str(exc)}],
+                }
+                store.run(failed)
+                store.audit("preflight_failure", failed)
+                report_files(store, failed)
+            raise

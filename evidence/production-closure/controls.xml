@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="8" time="17.466" timestamp="2026-10-11T10:19:59.664285+03:00" hostname="endelap"><testcase classname="tests.test_production_controls" name="test_concurrent_business_retry_and_orphan_detection" time="0.329" /><testcase classname="tests.test_production_controls" name="test_empty_legacy_and_future_database_schema" time="0.084" /><testcase classname="tests.test_production_controls" name="test_feedback_real_destination_replay_and_atomic_conflict" time="3.411" /><testcase classname="tests.test_production_controls" name="test_actual_backup_restore_and_tamper" time="4.645" /><testcase classname="tests.test_production_controls" name="test_api_large_and_chunked_requests_are_rejected" time="0.203" /><testcase classname="tests.test_production_controls" name="test_aoai_bounded_retry_timeout_and_no_fabricated_fallback" time="0.007" /><testcase classname="tests.test_production_controls" name="test_powerbi_schemas_and_governed_field_bindings" time="3.550"><failure message="assert False&#10; +  where False = all(&lt;generator object test_powerbi_schemas_and_governed_field_bindings.&lt;locals&gt;.&lt;genexpr&gt; at 0x000002593E2F1F10&gt;)">tmp_path = WindowsPath('C:/Users/User/AppData/Local/Temp/pytest-of-User/pytest-122/test_powerbi_schemas_and_gover0')
+fixture_path = WindowsPath('C:/Users/User/AppData/Local/Temp/pytest-of-User/pytest-122/test_powerbi_schemas_and_gover0/fixture.json')
+
+    def test_powerbi_schemas_and_governed_field_bindings(tmp_path, fixture_path):
+        import runpy
+    
+        report = run(tmp_path / "data", fixture=fixture_path)
+        store = Store(tmp_path / "data")
+        definitions = runpy.run_path("scripts/build_powerbi.py")
+        folder = definitions["build"](tmp_path / "report")
+        assert definitions["validate"](folder)["files"] == 29
+        for _, _, table, date_field, columns in definitions["PAGES"]:
+            rows = store.read_approved(table.removeprefix("fact_"), report["run_id"])
+            assert rows
+&gt;           assert all(
+                set(columns + [date_field, "run_id", "lineage_id", "classification"]) &lt;= row.keys()
+                for row in rows
+            )
+E           assert False
+E            +  where False = all(&lt;generator object test_powerbi_schemas_and_governed_field_bindings.&lt;locals&gt;.&lt;genexpr&gt; at 0x000002593E2F1F10&gt;)
+
+tests\test_production_controls.py:169: AssertionError</failure></testcase><testcase classname="tests.test_production_controls" name="test_release_rejects_source_mismatch" time="0.010" /></testsuite></testsuites>

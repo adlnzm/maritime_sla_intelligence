@@ -1,0 +1,18 @@
+[
+  {
+    "url": "https://portoflosangeles.org/getmedia/f30c3f45-2df9-4830-90ca-2364bfa0484f/operations-report",
+    "status": 200,
+    "retrieved_at": "2026-10-17T07:11:12.689503+00:00",
+    "bytes": 1299200,
+    "sha256": "d1f49379ba9fb9f10fead9ec1315239a2a1b7806a15b36feecc61f0243031ad4",
+    "file": "los-angeles-operations-report.pdf"
+  },
+  {
+    "url": "https://portoflosangeles.org/getmedia/6187bcbe-b2ce-41bb-a28e-f5d99372f49e/import-container-dwell-report",
+    "status": 200,
+    "retrieved_at": "2026-10-17T07:11:17.230261+00:00",
+    "bytes": 1625143,
+    "sha256": "4f97e6b6c3a7d0d4a3b1a2f2162668c53849675eb84757b15e81f7abdbd159d4",
+    "file": "los-angeles-import-dwell.pdf"
+  }
+]

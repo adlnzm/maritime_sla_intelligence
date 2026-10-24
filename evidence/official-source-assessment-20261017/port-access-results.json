@@ -1,0 +1,79 @@
+[
+  {
+    "name": "singapore-collection",
+    "url": "https://api-production.data.gov.sg/v2/public/api/collections/394/metadata",
+    "retrieved_at": "2026-10-17T07:09:58.103944+00:00",
+    "sandbox_attempt_error": "HTTPSConnectionPool(host='api-production.data.gov.sg', port=443): Max retries exceeded with url: /v2/public/api/collections/394/metadata (Caused by NameResolutionError(\"HTTPSConnection(host='api-production.data.gov.sg', port=443): Failed to resolve 'api-production.data.gov.sg' ([Errno 11001] getaddrinfo failed)\"))",
+    "status": 200,
+    "final_url": "https://api-production.data.gov.sg/v2/public/api/collections/394/metadata",
+    "bytes": 737,
+    "sha256": "db56aea0673855cf26549e41d2e60cd57902b8972c8b9fd11d8cbaa51c55dd2b",
+    "path": "evidence\\official-source-assessment-20261017\\singapore-collection.response.txt"
+  },
+  {
+    "name": "los-angeles-operations",
+    "url": "https://portoflosangeles.org/business/operations",
+    "retrieved_at": "2026-10-17T07:09:59.022910+00:00",
+    "sandbox_attempt_error": "HTTPSConnectionPool(host='portoflosangeles.org', port=443): Max retries exceeded with url: /business/operations (Caused by NameResolutionError(\"HTTPSConnection(host='portoflosangeles.org', port=443): Failed to resolve 'portoflosangeles.org' ([Errno 11001] getaddrinfo failed)\"))",
+    "status": 200,
+    "final_url": "https://portoflosangeles.org/business/operations",
+    "bytes": 156917,
+    "sha256": "95929f9be1ed62410ae18e5fc9c51913bc24ee89a40726fa33a6c925b84d6bc7",
+    "path": "evidence\\official-source-assessment-20261017\\los-angeles-operations.response.txt"
+  },
+  {
+    "name": "jebel-ali-vessels",
+    "url": "https://dpwdtjb2.dubaitrade.ae/pmisc1/vessel.do",
+    "retrieved_at": "2026-10-17T07:10:02.199668+00:00",
+    "sandbox_attempt_error": "HTTPSConnectionPool(host='dpwdtjb2.dubaitrade.ae', port=443): Max retries exceeded with url: /pmisc1/vessel.do (Caused by NameResolutionError(\"HTTPSConnection(host='dpwdtjb2.dubaitrade.ae', port=443): Failed to resolve 'dpwdtjb2.dubaitrade.ae' ([Errno 11001] getaddrinfo failed)\"))",
+    "status": 200,
+    "final_url": "https://dpwdtjb2.dubaitrade.ae/pmisc1/vessel.do",
+    "bytes": 245,
+    "sha256": "456cc2324a4531ce07f989ab2828239ebb1a186fe2bb19b375d14cca65824014",
+    "path": "evidence\\official-source-assessment-20261017\\jebel-ali-vessels.response.txt"
+  },
+  {
+    "name": "shanghai-facts",
+    "url": "https://en.portshanghai.com.cn/FactsFigures/index.jhtml",
+    "retrieved_at": "2026-10-17T07:10:02.991912+00:00",
+    "sandbox_attempt_error": "HTTPSConnectionPool(host='en.portshanghai.com.cn', port=443): Max retries exceeded with url: /FactsFigures/index.jhtml (Caused by NameResolutionError(\"HTTPSConnection(host='en.portshanghai.com.cn', port=443): Failed to resolve 'en.portshanghai.com.cn' ([Errno 11001] getaddrinfo failed)\"))",
+    "status": 403,
+    "final_url": "https://en.portshanghai.com.cn/FactsFigures/index.jhtml",
+    "bytes": 7408,
+    "sha256": "b9d4371ba2fbddddaf8053aaf9215c09b9d263e63f196ca9acae058b6b2e976b",
+    "path": "evidence\\official-source-assessment-20261017\\shanghai-facts.response.txt"
+  },
+  {
+    "name": "rotterdam-access",
+    "url": "https://portal.api.portofrotterdam.com/get-started",
+    "retrieved_at": "2026-10-17T07:10:06.065653+00:00",
+    "sandbox_attempt_error": "HTTPSConnectionPool(host='portal.api.portofrotterdam.com', port=443): Max retries exceeded with url: /get-started (Caused by NameResolutionError(\"HTTPSConnection(host='portal.api.portofrotterdam.com', port=443): Failed to resolve 'portal.api.portofrotterdam.com' ([Errno 11001] getaddrinfo failed)\"))",
+    "status": 200,
+    "final_url": "https://portal.api.portofrotterdam.com/get-started",
+    "bytes": 8768,
+    "sha256": "fe280b0c5d5196d5a781161516fb5cd366960c0d4014aeec91349848831b47a3",
+    "path": "evidence\\official-source-assessment-20261017\\rotterdam-access.response.txt"
+  },
+  {
+    "name": "new-york-dashboard",
+    "url": "https://cloud.email.panynj.gov/newsletter",
+    "retrieved_at": "2026-10-17T07:10:07.693410+00:00",
+    "sandbox_attempt_error": "HTTPSConnectionPool(host='cloud.email.panynj.gov', port=443): Max retries exceeded with url: /newsletter (Caused by NameResolutionError(\"HTTPSConnection(host='cloud.email.panynj.gov', port=443): Failed to resolve 'cloud.email.panynj.gov' ([Errno 11001] getaddrinfo failed)\"))",
+    "status": 200,
+    "final_url": "https://cloud.email.panynj.gov/newsletter",
+    "bytes": 10905,
+    "sha256": "46d26ad83a4d48f0617d3bb489c3e19bde855e2ee65040fb45b79b532249331b",
+    "path": "evidence\\official-source-assessment-20261017\\new-york-dashboard.response.txt"
+  },
+  {
+    "name": "singapore-oceans",
+    "url": "https://oceans-x.mpa.gov.sg/",
+    "retrieved_at": "2026-10-17T07:10:09.468437+00:00",
+    "sandbox_attempt_error": "HTTPSConnectionPool(host='oceans-x.mpa.gov.sg', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='oceans-x.mpa.gov.sg', port=443): Failed to resolve 'oceans-x.mpa.gov.sg' ([Errno 11001] getaddrinfo failed)\"))",
+    "status": 200,
+    "final_url": "https://oceans-x.mpa.gov.sg/",
+    "bytes": 4110,
+    "sha256": "212419cae1f0ffee4232c170599265c8d82500c8557b45c82f095580b1ca0fcc",
+    "path": "evidence\\official-source-assessment-20261017\\singapore-oceans.response.txt"
+  }
+]

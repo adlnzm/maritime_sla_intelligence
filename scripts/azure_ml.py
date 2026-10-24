@@ -4,6 +4,7 @@ import argparse
 import json
 import os
 import tempfile
+import time
 from pathlib import Path
 
 from maritime.ml_contract import export_features
@@ -13,9 +14,6 @@ from maritime.store import Store
 
 
 def client(config):
-    from azure.ai.ml import MLClient
-    from azure.identity import DefaultAzureCredential
-
     values = [
         os.getenv(env) or config[key]
         for env, key in (
@@ -28,6 +26,9 @@ def client(config):
         raise ValueError(
             "ENVIRONMENT_DEPENDENT: Azure subscription, resource group and ML workspace required"
         )
+    from azure.ai.ml import MLClient
+    from azure.identity import DefaultAzureCredential
+
     return MLClient(DefaultAzureCredential(), *values)
 
 
@@ -79,6 +80,7 @@ def main():
         shutil.copytree("configs", code / "configs")
         shutil.copy2("pyproject.toml", code / "pyproject.toml")
         shutil.copy2("uv.lock", code / "uv.lock")
+        shutil.copy2("README.md", code / "README.md")
         environment = Environment(
             name="maritime-ml",
             image="mcr.microsoft.com/azureml/openmpi4.1.0-ubuntu22.04:latest",
@@ -88,7 +90,7 @@ def main():
                 "dependencies": [
                     "python=3.11",
                     "pip",
-                    {"pip": ["mlflow>=2.19,<4", "azureml-mlflow>=1.59,<2"]},
+                    {"pip": ["mlflow-skinny>=2.19,<4", "azureml-mlflow>=1.59,<2"]},
                 ],
             },
         )
@@ -133,6 +135,7 @@ def main():
             compute=config["compute"],
             experiment_name=config["experiment_name"],
             display_name="maritime-" + args.mode,
+            limits={"timeout": 3600},
             tags={
                 "feature_version": manifest["feature_version"],
                 "fabric_run_id": manifest["fabric_run_id"],
@@ -140,8 +143,32 @@ def main():
             },
         )
         submitted = ml.jobs.create_or_update(job)
-    ml.jobs.stream(submitted.name)
-    finished = ml.jobs.get(submitted.name)
+    evidence_path = Path(args.output) / "job.json"
+    write_json(evidence_path, {"name": submitted.name, "status": "SUBMITTED", "mode": args.mode})
+    deadline = time.monotonic() + 7200
+    try:
+        while time.monotonic() < deadline:
+            finished = ml.jobs.get(submitted.name)
+            write_json(
+                evidence_path, {"name": finished.name, "status": finished.status, "mode": args.mode}
+            )
+            if finished.status in {"Completed", "Failed", "Canceled", "NotResponding"}:
+                break
+            time.sleep(15)
+        else:
+            ml.jobs.cancel(submitted.name)
+            raise TimeoutError("Azure ML job exceeded two-hour client wait; cancellation requested")
+    except Exception as exc:
+        write_json(
+            evidence_path,
+            {
+                "name": submitted.name,
+                "status": "CLIENT_FAILED",
+                "failure_type": type(exc).__name__,
+                "mode": args.mode,
+            },
+        )
+        raise
     write_json(
         Path(args.output) / "job.json",
         {"name": finished.name, "status": finished.status, "mode": args.mode},

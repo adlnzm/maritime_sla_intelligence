@@ -1,0 +1,98 @@
+ M .env.example
+ M README.md
+ M azure/main.bicep
+ M azure/ml/conda.yml
+ M docker-compose.yml
+ M docker/Dockerfile
+ M docs/azure.md
+ M docs/reporting.md
+ M evidence/README.md
+ M pyproject.toml
+ M scripts/azure_ml.py
+ M scripts/build_fabric_assets.py
+ M scripts/deploy_fabric.py
+ M scripts/governance_release.py
+ M scripts/windows-setup.ps1
+ M src/maritime/api.py
+ M src/maritime/azure_ml_job.py
+ M src/maritime/azure_store.py
+ M src/maritime/cli.py
+ M src/maritime/fabric_runtime.py
+ M src/maritime/genai.py
+ M src/maritime/pipeline.py
+ M src/maritime/scenarios.py
+ M src/maritime/sources.py
+ M src/maritime/store.py
+ M tests/test_azure_contracts.py
+ M tests/test_e2e.py
+ M tests/test_fabric_assets.py
+ M tests/test_source_contracts.py
+ M uv.lock
+?? .gitattributes
+?? compose.demo.yml
+?? configs/powerbi_schemas/
+?? docs/architecture/
+?? docs/governance/
+?? docs/operations/
+?? docs/requirements/
+?? docs/testing/
+?? evidence/acceptance-20261014/
+?? evidence/deployment-preflight-20261014.json
+?? evidence/diagnose_portwatch_freshness.py
+?? evidence/docker-investigation-20261014/
+?? evidence/finalize_freshness_assessment.py
+?? evidence/freshness-diagnosis-20261017-131acd0c/
+?? evidence/licensing-readiness-20261017-162403/
+?? evidence/local-release-20261014-acceptance-01.zip
+?? evidence/local-release-20261014-acceptance-01/
+?? evidence/local-release-20261014-acceptance-02.zip
+?? evidence/local-release-20261014-acceptance-02/
+?? evidence/local-release-20261014-final.zip
+?? evidence/local-release-20261014-final/
+?? evidence/local-release-20261017-freshness-01.zip
+?? evidence/local-release-20261017-freshness-01/
+?? evidence/official-source-assessment-20261017/
+?? evidence/portfolio-release-20261018-083345/
+?? evidence/production-closure/
+?? evidence/production-final-20261011.zip
+?? evidence/production-final-20261011/
+?? evidence/ready-to-run.zip
+?? evidence/ready-to-run/
+?? evidence/trade-qualification-20261017-160824/
+?? evidence/write_final_acceptance.py
+?? fabric/notebooks/import_feedback.ipynb
+?? fabric/powerbi/Maritime.Report/
+?? scripts/build_powerbi.py
+?? scripts/deployment_preflight.ps1
+?? scripts/docker_demo.py
+?? scripts/fabric_feedback.py
+?? scripts/package_readiness.py
+?? scripts/production_release.py
+?? src/maritime/feedback.py
+?? src/maritime/http_limits.py
+?? src/maritime/recovery.py
+?? src/maritime/release_evidence.py
+?? tests/test_production_controls.py
+?? tests/test_startup.py
+!! .pytest_cache/
+!! .ruff_cache/
+!! .venv/
+!! data/
+!! dist/
+!! evidence/docker-investigation-20261014/maritime-demo-8e6eb358f0/learning-destination.db
+!! evidence/docker-investigation-20261014/maritime-demo-8e6eb358f0/learning-destination.db-receipts/
+!! evidence/local-release-20261014-acceptance-01/dist/
+!! evidence/local-release-20261014-acceptance-01/docker/maritime-demo-839428e711/learning-destination.db
+!! evidence/local-release-20261014-acceptance-01/docker/maritime-demo-839428e711/learning-destination.db-receipts/
+!! evidence/local-release-20261014-acceptance-02/dist/
+!! evidence/local-release-20261014-acceptance-02/docker/maritime-demo-02226c4815/learning-destination.db
+!! evidence/local-release-20261014-acceptance-02/docker/maritime-demo-02226c4815/learning-destination.db-receipts/
+!! evidence/local-release-20261014-final/dist/
+!! evidence/local-release-20261014-final/docker/maritime-demo-08571d8c19/learning-destination.db
+!! evidence/local-release-20261014-final/docker/maritime-demo-08571d8c19/learning-destination.db-receipts/
+!! evidence/local-release-20261017-freshness-01/dist/
+!! evidence/local-release-20261017-freshness-01/docker/maritime-demo-4836fad43b/learning-destination.db
+!! evidence/local-release-20261017-freshness-01/docker/maritime-demo-4836fad43b/learning-destination.db-receipts/
+!! evidence/production-final-20261011/dist/
+!! src/maritime/__pycache__/
+!! tests/__pycache__/

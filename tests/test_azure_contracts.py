@@ -32,6 +32,10 @@ def test_azure_ml_job_logic_preserves_model_and_classifications(tmp_path):
         tmp_path / "inference/predictions.json", tmp_path / "features", tmp_path / "monitor"
     )
     assert result["status"] == "AWAITING_SUBSEQUENT_OBSERVATIONS"
+    model_path = tmp_path / "training/model/model.joblib"
+    model_path.write_bytes(b"not a trusted model")
+    with pytest.raises(ValueError, match="integrity"):
+        batch(tmp_path / "features", tmp_path / "training/model", tmp_path / "corrupt-inference")
     report["metrics"]["mae"] = report["metrics"]["persistence_mae"] * 2
     assert not promotion_check(report, load_json("configs/azure.json")["promotion"])["eligible"]
     (tmp_path / "features/activity.json").write_text("[]")

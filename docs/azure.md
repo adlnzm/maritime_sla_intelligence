@@ -46,15 +46,14 @@ role claims are checked by the API. Operator identity comes from the verified `o
 
 ```powershell
 az login
-az deployment group create --resource-group <resource-group> --template-file azure/main.bicep --parameters apiImage=<image-digest> apiAudience=<audience> openAIAccountName=<account> openAIDeployment=<deployment>
+az deployment group create --resource-group <resource-group> --template-file azure/main.bicep --parameters apiImage=<image-digest> apiAudience=<audience> openAIAccountName=<account> openAIDeployment=<deployment> auditRetentionDays=<owner-approved-days>
 uv sync --frozen --no-editable --extra dev --extra azure --extra fabric --extra ml
 ```
 
 The template provisions AML workspace/CPU compute, storage, Key Vault, monitoring and Container
 Apps. API managed identity can read the serving container, write/read the separate audit
 container, read Key Vault secrets and invoke Azure OpenAI. Audit writes use unique blob names
-and disallow overwrite at application level. This is not regulatory immutable retention;
-configure account retention/immutability policy if required. AML workspace identity has storage
+and disallow overwrite at application level. The template creates an unlocked retention policy from the required owner-approved duration and a custom API role without delete. Production requires explicit policy locking and effective-permission/overwrite/delete tests; compilation does not prove retention. AML workspace identity has storage
 and secret permissions. Give the deployment/job runner the required Azure ML job/data/model
 permissions and storage access; the serving publisher needs Blob Data Contributor on
 `maritime-serving`. Keep promotion permission in a controlled release identity/environment.
