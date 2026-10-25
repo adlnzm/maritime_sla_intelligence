@@ -1,0 +1,90 @@
+........................................................................ [ 67%]
+..F................................                                      [100%]
+================================== FAILURES ===================================
+_____________ test_power_platform_artifacts_match_real_contracts ______________
+
+tmp_path = WindowsPath('C:/Users/User/AppData/Local/Temp/pytest-of-User/pytest-145/test_power_platform_artifacts_0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001605D527F90>
+
+    def test_power_platform_artifacts_match_real_contracts(tmp_path, monkeypatch):
+        import json
+        import runpy
+        from pathlib import Path
+    
+        import jsonschema
+    
+        build = runpy.run_path("scripts/build_power_platform.py")["build"]
+        generated = build(tmp_path / "artifacts")
+        for artifact in generated.rglob("*"):
+            if artifact.is_file():
+                assert (
+                    artifact.read_bytes()
+                    == (Path("power-platform") / artifact.relative_to(generated)).read_bytes()
+                )
+        for schema, artifact in [
+            ("canvas-schema.json", "canvas/OperationsReview.pa.yaml"),
+            ("workflow-definition.json", "automate/GoldRiskEscalation.definition.json"),
+        ]:
+            jsonschema.validate(
+                load_json(generated / artifact), load_json("configs/powerplatform_schemas/" + schema)
+            )
+        monkeypatch.setenv("MARITIME_API_KEY", "reader")
+        api = create_app(tmp_path / "api").openapi()
+        connector = load_json(generated / "connector/openapi.json")
+        for path, methods in connector["paths"].items():
+            for method, operation in methods.items():
+                assert method in api["paths"][path]
+                assert {p["name"] for p in operation["parameters"] if p["in"] != "body"} <= {
+                    p["name"] for p in api["paths"][path][method].get("parameters", [])
+                }
+        assert connector["definitions"]["ReviewAction"]["additionalProperties"] is False
+        assert connector["definitions"]["ReviewAction"]["properties"]["action"]["enum"] == [
+            "IGNORE",
+            "MONITOR",
+            "ESCALATE",
+        ]
+        flow = load_json(generated / "automate/GoldRiskEscalation.definition.json")
+        actions = flow["actions"]["IfEvent"]["actions"]["HasRecipients"]["actions"]
+        assert actions["RecordSuccess"]["runAfter"] == {"Send": ["Succeeded"]}
+        assert actions["RecordFailure"]["runAfter"] == {"Send": ["Failed", "TimedOut"]}
+        assert actions["Send"]["inputs"]["retryPolicy"] == {"type": "None"}
+        assert "z_score" not in json.dumps(flow) and "reason" not in actions["Send"]["inputs"]["body"]
+        report = runpy.run_path("scripts/build_powerbi.py")
+        output = report["build"](tmp_path / "report", include_operations=True)
+        assert report["validate"](output)["pages"] == 10
+        import re
+    
+        model = load_json(generated / "reporting/model-contract.json")
+        for table, columns in model["tables"].items():
+            query = (generated / "reporting" / (table + ".pq")).read_text()
+            assert "OperationsSnapshot[" + table + "]" in query
+            assert "MissingField.UseNull" in query
+            assert all(json.dumps(field) in query for field in columns)
+        dax = (generated / "reporting/operations-measures.dax").read_text()
+        for table, field in re.findall(r"(fact_\w+)\[(\w+)\]", dax):
+            assert field in model["tables"][table]
+        assert "z_score" not in dax
+    
+        for artifact in output.rglob("*"):
+            if artifact.is_file():
+>               assert (
+                    artifact.read_bytes()
+                    == (
+                        Path("fabric/powerbi/Maritime.Report") / artifact.relative_to(output)
+                    ).read_bytes()
+                )
+E               assert b'{\r\n  "$sc...ecutive"\r\n}' == b'{\r\n  "$sc...ecutive"\r\n}'
+E                 
+E                 At index 228 diff: b',' != b'\r'
+E                 Use -v to get more diff
+
+tests\test_operations.py:422: AssertionError
+============================== warnings summary ===============================
+data\release-environment-11681371e4444e2dbfc894cdd858ef92\Lib\site-packages\fastapi\testclient.py:1
+  C:\Users\User\.vscode\Projects\maritime_sla_intelligence\data\release-environment-11681371e4444e2dbfc894cdd858ef92\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED tests/test_operations.py::test_power_platform_artifacts_match_real_contracts
+1 failed, 106 passed, 1 warning in 124.61s (0:02:04)
